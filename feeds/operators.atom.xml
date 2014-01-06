@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/operators.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2013-08-09T00:00:00+08:00</updated><entry><title>你好，世界</title><link href="http://blog.zoomquiet.io/operators/hello-world.html" rel="alternate"></link><updated>2013-08-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-08-09:operators/hello-world.html</id><summary type="html">&lt;h1 id="hallo-world"&gt;Hallo World!&lt;/h1&gt;
+&lt;p&gt;俺们的第一篇文章&lt;/p&gt;
+&lt;h2 id="_1"&gt;为毛要这样发布翻译文档?&lt;/h2&gt;
+&lt;p&gt;为了快速完成 &lt;a href="http://pycoders.com/archive.html"&gt;Pycoder's Weekly | Weekly Python Newsletter&lt;/a&gt;的翻译,目测这种形式是必须的!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用 &lt;code&gt;Wordpress&lt;/code&gt; / &lt;code&gt;Drupal&lt;/code&gt; 来自个儿架设一个?! &lt;ul&gt;
+&lt;li&gt;嗯嗯嗯,我们只是想有个快速发布内容的渠道&lt;/li&gt;
+&lt;li&gt;并不想成为 SA+DBA+SEO ...复合角色&lt;/li&gt;
+&lt;li&gt;虽然, SAE 的 &lt;a href="http://www.yunshangdian.com/?a=item&amp;amp;id=23"&gt;云商店&lt;/a&gt; 有 Wordpress 可选,但是,依赖云主机,无法免费使用...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;用 blogger / livejournal ... 明星 blogging 服务?&lt;ul&gt;
+&lt;li&gt;不好意思,都是伟大的墙认证过的,,,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;用 cnblog / csdn / sina ... 国产主流 blogging 服务?&lt;ul&gt;
+&lt;li&gt;OMG! 我们不想同木子美们混在同一域名里&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所以,果断的入了 github 教! 触动我们的文章:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.yangzhiping.com/tech/r-markdown-knitr.html"&gt;为什么Markdown+R有较大概率成为科技写作主流？ ← 阳志平的个人网站::技术&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.yangzhiping.com/tech/wordpress-to-jekyll.html"&gt;告别wordpress，拥抱jekyll ← 阳志平的个人网站::技术&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.yangzhiping.com/tech/writing-space.html"&gt;理想的写作环境：git+github+markdown+jekyll ← 阳志平的个人网站::技术&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.yangzhiping.com/psy/flow.html"&gt;如何提高创作型任务的效率？ ← 阳志平的个人网站::随笔&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://kyle.xlau.org/posts/blogging-like-a-hacker.html"&gt;像黑客一样写博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;舒服参考的文章:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html"&gt;搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门 - 阮一峰的网络日志&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;再从眼花缭乱的 &lt;a href="https://github.com/mojombo/jekyll/wiki/Sites"&gt;Jekll 实例站点&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;选择出心水的:&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://shawhu.org/"&gt;Home - shawhu的blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://benediktmeurer.de/"&gt;Benedikt Meurer » Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;快速完成设计!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;以及 &lt;img alt="logo-21aabb25a8a173a5d7416109123c606e.png（PNG 图像，130x86 像素）|https://gitcafe.com/" src="https://gitcafe.com/assets/logo-d8ae26a77dedc0194107f7836b9c211e.png" /&gt;&lt;ul&gt;
+&lt;li&gt;是另外一种力量感动了我们:&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.gitcafe.com/99.html"&gt;开源在中国需要什么？ | Blog – GitCafe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.gitcafe.com/10.html"&gt;代码托管服务GitCafe正式上线 | Blog – GitCafe&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以,我们来,我们写,我们发布!&lt;/p&gt;
+&lt;h2 id="ps"&gt;ps: 测试语法顔色&lt;/h2&gt;
+&lt;p&gt;{% highlight python %}
+import sys&lt;/p&gt;
+&lt;p&gt;print "Hollo World!-)"
+{% endhighlight %}&lt;/p&gt;</summary><category term="md"></category><category term="hallo"></category></entry></feed>

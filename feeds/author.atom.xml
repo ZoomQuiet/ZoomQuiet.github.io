@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/author.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2013-11-17T00:00:00+08:00</updated><entry><title>Zoom.Quiuet</title><link href="http://blog.zoomquiet.io/author/zoom-quiet.html" rel="alternate"></link><updated>2013-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-17:author/zoom-quiet.html</id><summary type="html">&lt;h1 id="zoomquiet"&gt;Zoom.Quiet (大妈)&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="" src="http://pyconcn.qiniudn.com/images/volunteer/zhouqi.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="zhouqi" src="http://pyconcn.qiniudn.com/images/volunteer/zhouqi.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Python中文社区创始人(之一) / 管理员,
 热心于 Python 等等社区的公益事业, 大家熟知的社区"大妈";&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://code.google.com/p/openbookproject/"&gt;O.B.P&lt;/a&gt;

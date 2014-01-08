@@ -812,4 +812,73 @@ SQL 世界的来客,总是试图先建立起一个完美的关系体系可以兼
 &lt;ul&gt;
 &lt;li&gt;140107 move into Pelican as zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/c161d7036f89"&gt;Collections and Embedded Documents in MongoDB — I. M. H. O. — Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="NoSQL"></category><category term="Mongo"></category><category term="Zh"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="NoSQL"></category><category term="Mongo"></category><category term="Zh"></category></entry><entry><title>reply On literate programming</title><link href="http://blog.zoomquiet.io/imho/reply-yw-on-literate-programming.html" rel="alternate"></link><updated>2012-09-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-09-18:imho/reply-yw-on-literate-programming.html</id><summary type="html">&lt;p&gt;&lt;a href="http://yinwang0.wordpress.com/2011/05/18/literate-programming/"&gt;On Literate Programming | Surely I Am Joking&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对于文学化编程,俺使用的是 Leo :
+   http://wiki.woodpecker.org.cn/moin/LeoEnvironment&lt;/p&gt;
+&lt;p&gt;你提及的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;丢失了全景思考&lt;/li&gt;
+&lt;li&gt;程序不仅仅是文本&lt;/li&gt;
+&lt;li&gt;人的语言/认知 至上&lt;/li&gt;
+&lt;li&gt;痛苦的导航&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;几个观点中,俺非常同意的是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目前并没有一个,可以真正统一人的思想以及程序代码形式的编辑方式/环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是,目前为止,在代码的语法结构维度之上,可以给予我们一个可以自在记录原始思路的编辑方式,应该只有 LP 了;
+从俺使用 Leo 进行各种编辑/编程 的体验而言&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LP 其实是关注包含时间维度的代码的变迁过程,而不是简单的精细化切分&lt;/li&gt;
+&lt;li&gt;其实,到最后看起来是碎片的代码片段,以及关系,并不是从一开始就形成的&lt;/li&gt;
+&lt;li&gt;而是在开发的过程中,逐步抽象/提取而成的&lt;/li&gt;
+&lt;li&gt;也就是説,在 LP 的编辑思想中,人的整体思路是最重要的对象,是必须随时加以记录的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;程序当然不仅仅是文本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;但是,程序只能以文本形式来管理/编辑/传播吼,,,&lt;/li&gt;
+&lt;li&gt;当然的,因为 LP 不关心 程序文本的运行时结构,所以,无法自动跳转到相关定义...&lt;/li&gt;
+&lt;li&gt;不过,俺感受到的是:&lt;/li&gt;
+&lt;li&gt;记不住的就是不重要的&lt;/li&gt;
+&lt;li&gt;不知道的就是不必要的&lt;/li&gt;
+&lt;li&gt;如附件截屏:&lt;/li&gt;
+&lt;li&gt;Leo 通过可视化的树形结点来记录了我对程序的整体思考&lt;/li&gt;
+&lt;li&gt;而右方的编辑区,永远只是当前结点的内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也就是説,通过 Leo 进行文学化编程的整体过程是一系列相同的重构过程串起来的:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;定个文件的框架&lt;/li&gt;
+&lt;li&gt;定个大致的(子)功能流程,每个先以可运行的伪代码记录下来&lt;/li&gt;
+&lt;li&gt;进入对应的结点完成功能&lt;/li&gt;
+&lt;li&gt;每当超过一定的行数 hold 不住了,说明应该进行重构,将重复部分抽象出去了
+  回到第1或是第2步...&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以,如果是 Leo 这种的文学化编程环境&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;并不太需要 IDE 类似的全程自动解析,追踪,导航,以帮助我们快速定位代码&lt;/li&gt;
+&lt;li&gt;因为,每次进行修訂的代码片段都足够小,关注的因素也足够少&lt;/li&gt;
+&lt;li&gt;而每个足够小的片段,都是从足够大的上层逻辑节点演化来的&lt;/li&gt;
+&lt;li&gt;即,有关整体程序的概念,结构,思路,永远在 outline 的节点树中有体验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不过,你点出的工程性问题的确存在&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同 coffeescript , Leo 进行编程调试时,一样麻烦在&lt;/li&gt;
+&lt;li&gt;如果调试运行时,引发错误的代码,超出当前编程的片段范围时&lt;/li&gt;
+&lt;li&gt;错误信息反馈的行数,在 Leo 中找不到精确的对应&lt;/li&gt;
+&lt;li&gt;所以,只能 到输出的正常文本程序中搜索,明确了代码所在代码段后,才能回到 Leo 人工定位到对应的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;期待你的大一统式编程/测试/运行环境!&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;140109 pub. as zoomquiet.io's blog&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;120918 邮件 as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;发件人：     Zoom.Quiet &amp;lt;zoom.quiet@gmail.com&amp;gt;
+发送至：     shredderyin@gmail.com
+日期：  2012年9月18日 下午5:22
+主题：  [via On Literate Programming] 我的体验
+
+很有感觉,但是没有找到评注入口,只好直接邮件了;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry></feed>

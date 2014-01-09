@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title> - Zh
+    <title>    Understanding the yin-yang puzzle
 #是也乎#
 ZoomQuiet.io    </title>
 
@@ -14,10 +14,10 @@ ZoomQuiet.io    </title>
 
     <!-- Open Graph tags -->
 
-            <meta property="og:type" content="website"/>
-            <meta property="og:title" content=""/>
-            <meta property="og:url" content="http://blog.zoomquiet.io"/>
-            <meta property="og:description" content=""/>
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Understanding the yin-yang puzzle"/>
+            <meta property="og:url" content="http://blog.zoomquiet.io/imho/yw-yang-puzzle.html"/>
+            <meta property="og:description" content="I have a friend who is a very fast learner. I introduced him to the Scheme programming language a few days ago and he soon digged into this yin-yang puzzle: :::lisp (let* ((yin ((lambda (cc) (display #\@) cc) (call/cc (lambda (c) c)))) (yang ((lambda (cc) (display #\*) cc) (call/cc (lambda ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -72,35 +72,328 @@ ZoomQuiet.io    </title>
 <div class="container">
     <div class="row">
         <div class="col-lg-9">
-            <article>
-                <h2><a href="http://blog.zoomquiet.io/imho/131224-yw-on-oop.html">On object-oriented programming</a></h2>
-                <div class="summary">
-<h1 id="_1">翻越分享原文</h1>
-<ul>
-<li>via: http://yinwang0.wordpress.com/2013/12/24/on-object-oriented-programming/</li>
-<li>Posted by Yin Wang in <a href="http://yinwang0.wordpress.com/category/oop/">oop</a>,<a href="http://yinwang0.wordpress.com/category/programming-languages/">programming languages</a></li>
-</ul>
-<p><img alt="yw_dark_age_battle.jpg" src="http://zoomq.qiniudn.com/ZQCollection/img/yw_dark_age_battle.jpg"/></p>
-<p>[written at the end of 2013 AD, during the Dark Ages of programming]</p>
-<p>The programmer’s world is full of fads and superstitions. Every now and then there will be somebody who ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/imho/131224-yw-on-oop.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.zoomquiet.io/imho/yw-yang-puzzle.html"
+                       rel="bookmark"
+                       title="Permalink to Understanding the yin-yang puzzle">
+                        Understanding the yin-yang puzzle
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>2012-07-27 00:00
+    </span>
 
-        <ul class="pagination">
-                <li class="prev disabled"><a href="#">&laquo;</a></li>
-                <li class="active"><a
-                        href="http://blog.zoomquiet.io/tag/zh.html">1</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/tag/zh2.html">2</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/tag/zh3.html">3</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/tag/zh4.html">4</a></li>
-                <li class="next"><a
-                        href="http://blog.zoomquiet.io/tag/zh2.html">&raquo;</a></li>
-        </ul>
+
+    <span class="label">By</span>
+    <i class="icon-user"></i>
+    <a href="http://blog.zoomquiet.io/author/zoomquiet.html">Zoom.Quiet</a>
+
+    <span class="label label-default">Category</span>
+    <a href="http://blog.zoomquiet.io/imho/index.html">IMHO</a>
+
+
+
+	<span class="label label-default">Tags</span>
+		<a href="http://blog.zoomquiet.io/tag/think.html">Think</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/yinwang.html">yinwang</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/chinese.html">Chinese</a>
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+                <p><img alt="yinyang.gif" src="http://yinwang0.files.wordpress.com/2012/07/yinyang.gif?w=300" /></p>
+<p>I have a friend who is a very fast learner. I introduced him to the Scheme programming language a few days ago and he soon digged into this <a href="http://stackoverflow.com/questions/2694679/how-does-the-yin-yang-puzzle-work">yin-yang puzzle</a>:</p>
+<pre><code>:::lisp
+(let* ((yin
+        ((lambda (cc) (display #\@) cc) (call/cc (lambda (c) c))))
+       (yang
+        ((lambda (cc) (display #\*) cc) (call/cc (lambda (c) c)))))
+  (yin yang))
+</code></pre>
+<p>This program prints out the infinite string @<em>@<strong>@<strong><em>@</em></strong>*@<strong><em>**@</em></strong></strong></em> …</p>
+<p>Why does this happen? This took me almost a full afternoon to figure out. It is always good to have friends who feed you with questions and challenges. I’m going to document my finding here. I may want to make some animated slides (as is always a good idea) later, but for now a short note may suffice.</p>
+<h2 id="the-plan">The Plan</h2>
+<p>You will probably never understand the program if you examine the contents of the stack. You need their high level semantic meaning to think clearly. The higher level meaning of the stack is the continuation. So instead of frightening you with the details of the stack, I’m going to use functions to show the continuations explicitly.</p>
+<p>Also I will use a little bit of compiler optimizations along the way. The optimizations will simplify the program and show its deeper meanings.</p>
+<p>Here is an overall plan of this article:</p>
+<ol>
+<li>Find the functional representations of the two continuations. Name them c1 and c1.</li>
+<li>Plug in c1 and c2 into the places of the two call/cc’s.</li>
+<li>Simplify the program using compiler optimizations.</li>
+<li>Perform behavioral analysis on the simplified program.</li>
+</ol>
+<h2 id="transform-and-remove-callcc">Transform and Remove Call/cc</h2>
+<p>So here we go. Let’s repeat the original program here:</p>
+<p>:::lisp
+(let* ((yin
+        ((lambda (cc) (display #\@) cc) (call/cc (lambda (c) c))))   ; B1
+       (yang
+        ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))  ; B2
+  (yin yang))</p>
+<p>Note that there are two binding clauses, B1 and B2, each prints a char and binds a continuation to a variable.</p>
+<p>B1 binds yin to the “current continuation” of the first call/cc. Let’s call this continuation c1. Its function representation is:</p>
+<p>:::lisp
+(lambda (k)
+  (let* ((yin
+          ((lambda (cc) (display #\@) cc) k))         <br />
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        <br />
+    (yin yang)))</p>
+<p>We can simplify it using some compiler optimization tricks. I will go very slowly here just in case you are not familiar with compiler optimizations.</p>
+<p>First, since Scheme is a strict language, k will be a pure value (with no side-effects), so we can lift the side-effect (display #\@) out:</p>
+<p>(lambda (k)
+  (display #\@)
+  (let* ((yin
+          ((lambda (cc) cc) k))         <br />
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        <br />
+    (yin yang)))</p>
+<p>Now we can “partial evaluate” ((lambda (cc) cc) k) to k:</p>
+<p>:::lisp
+(lambda (k)
+  (display #\@)
+  (let* ((yin k)         <br />
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        <br />
+    (yin yang)))</p>
+<p>Then we can copy propagate the value of yin, k, to the body of let*, (yin yang). And now we have only one binding left:</p>
+<p>:::lisp
+(lambda (k)
+  (display #\@)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+    (k yang)))</p>
+<p>Now we try to figure out the underlined continuation. It should be:</p>
+<p>:::lisp
+(lambda (j)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) j)))
+    (k yang)))</p>
+<p>You see why? Since the “current continuation” means “what is going to happen with this value”, it doesn’t include the computation before it, namely (display #\@). Now we do a similar optimization on this continuation: lifting out the side-effect (display #*), do some partial evaluation and copy propagation:</p>
+<p>The result of this inner continuation is:</p>
+<p>:::lisp
+(lambda (j)
+  (display #*)
+  (k j))</p>
+<p>Now we can plug it back:</p>
+<p>:::lisp
+(lambda (k)
+  (display #\@)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) 
+          (lambda (j)
+            (display #*)
+            (k j)))))
+    (k yang)))</p>
+<p>Do a similar sequence of optimizations: lifting out the first (display #*), partial evaluation, copy propagation. And we have the final result for the value of yin. Let’s name it c1 with a definition:</p>
+<p>:::lisp
+(define c1
+ (lambda (k)
+   (display #\@)
+   (display #*)
+   (k (lambda (j)
+        (display #*)
+        (k j)))))</p>
+<p>Now, the original program would look like the following. The program would have by now printed a @ before binding yin to c1, so we make a sequence and include the display term in the front of it.</p>
+<p>:::lisp
+(begin
+  (display #\@)
+  (let* ((yin c1)
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
+    (yin yang)))</p>
+<p>Try it. It will behave the same as the original program. Now we do another copy propagation to get rid of the first binding:</p>
+<p>:::lisp
+(begin
+  (display #\@)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
+    (c1 yang)))</p>
+<p>Since the call/cc here will not cause any side-effects (why?), we can lift (display #*) out:</p>
+<p>:::lisp
+(begin
+  (display #\@)
+  (display #*)
+  (let ((yang
+         ((lambda (cc) cc) (call/cc (lambda (c) c)))))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^
+    (c1 yang)))</p>
+<p>Now we just have to find what this underlined continuation is, and it will become the value of yang. It is:</p>
+<p>:::lisp
+(lambda (k)
+  (let ((yang
+         ((lambda (cc) cc) k)))
+    (c1 yang)))</p>
+<p>After our routine sequence of optimizations we have the value of yang. Let’s define it as c2:</p>
+<p>:::lisp
+(define c2
+  (lambda (k)
+    (display #*)
+    (c1 k)))</p>
+<p>Plug c1 and c2 back into the original program:</p>
+<p>:::lisp
+(begin
+  (display #\@)
+  (display #*)
+  (let* ((yin c1)
+         (yang c2))
+    (yin yang)))</p>
+<p>And do a copy propagation:</p>
+<p>:::lisp
+(begin
+  (display #\@)
+  (display #*)
+  (c1 c2))</p>
+<h2 id="transformed-program">Transformed Program</h2>
+<p>Now we have our final transformed and optimized program. Let’s put the definitions of c1 and c2 here for an overview:</p>
+<p>:::lisp
+(define c1
+ (lambda (k)
+   (display #\@)
+   (display #*)
+   (k (lambda (j)
+        (display #*)
+        (k j)))))</p>
+<p>(define c2
+  (lambda (k)
+    (display #*)
+    (c1 k)))</p>
+<p>(begin
+  (display #\@)
+  (display #*)
+  (c1 c2))</p>
+<p>For simplicity, let’s inline c2 into the main program. Now c2 disappears.</p>
+<p>:::lisp
+(define c1
+ (lambda (k)
+   (display #\@)
+   (display #*)
+   (k (lambda (j)
+        (display #*)
+        (k j)))))</p>
+<p>(begin
+  (display #\@)
+  (display #*)
+  (c1 (lambda (k)
+        (display #*)
+        (c1 k))))</p>
+<p>Try it. It will still work the same as the original program.</p>
+<h2 id="behavioral-analysis">Behavioral Analysis</h2>
+<p>Now the program doesn’t contain any call/cc’s and is much easier to understand. Let’s try to figure out how it executes:</p>
+<ol>
+<li>First, @* will be printed, and we will invoke:</li>
+</ol>
+<p>:::lisp
+(c1 (lambda (k)
+      (display #*)
+      (c1 k)))</p>
+<ol>
+<li>Inside the invocation, @* will be printed by the body of c1, and k is now bound to (lambda (k) (display #*) (c1 k)). So the program proceed to:</li>
+</ol>
+<p>:::lisp
+((lambda (k)
+   (display #*)
+   (c1 k))
+ (lambda (j)
+   (display #*)
+   ((lambda (k)
+      (display #*)
+      (c1 k)) 
+    j)))</p>
+<p>It will print a *, and becomes:</p>
+<p>:::lisp
+(c1
+ (lambda (j)
+   (display #*)
+   ((lambda (k)
+      (display #*)
+      (c1 k)) 
+    j)))</p>
+<p>Now we have seen @<em>@</em>*</p>
+<ol>
+<li>Notice that we are back to a call to c1! This is a good sign of recursion. But this time the argument is different. If we simplify it a little, we get:</li>
+</ol>
+<p>:::lisp
+(c1
+ (lambda (j)
+   (display #*)
+   (display #*)
+   (c1 j)))</p>
+<ol>
+<li>I think you see what’s going on here. This time, c1 is called with</li>
+</ol>
+<p>:::lisp
+(lambda (j)
+   (display #*)
+   (display #*)
+   (c1 j))</p>
+<p>which means “When called, display TWO <em>’s, and then behave like c1 on the argument”. If we go on, the argument to c1 will be longer and longer, and each time with an additional (display #*). It will print @<strong><em>, and then @</em></strong></em>, and then @<strong>*</strong>, and so on.</p>
+<ol>
+<li>Let’s introspect a bit. Which part of the program is responsible for creating the ever-longer displays, and why? It is this piece from the definition of c1:</li>
+</ol>
+<p>:::lisp
+(k (lambda (j)
+     (display #*)
+     (k j)))</p>
+<p>Here k is c1′s argument. Notice that k is always of the form:</p>
+<p>:::lisp
+(lambda (j)
+   (display #*)
+   (display #*)
+   ...
+   (c1 j))</p>
+<p>When k is applied, it will print the corresonding number of *’s inside it, and then behave like c1. The argument to k is:</p>
+<p>:::lisp
+(lambda (j)
+  (display #*)
+  (k j))</p>
+<p>What does this mean? It says: “When called, print a * and then behave like k on the argument.” This is how you get a “new k”, with one more display of *.</p>
+<p>This will go on indifinitely. This is why you see the infinite string: @<em>@<strong>@<strong><em>@</em></strong>*@<strong><em>**@</em></strong></strong></em> …</p>
+<h2 id="changelog">Changelog</h2>
+<ul>
+<li>140109 pub. as zoomquiet.io's blog</li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'blogzoomquietio'; // required: replace example with your forum shortname
+            var disqus_identifier = 'IMHO/12-07-27-yw-yang-puzzle';
+            var disqus_url = 'http://blog.zoomquiet.io/imho/yw-yang-puzzle.html';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+
         </div>
         <div class="col-lg-3 well well-sm" id="sidebar">
 <aside>

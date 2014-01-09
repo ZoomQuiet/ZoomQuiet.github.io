@@ -359,7 +359,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 后来又发现,
 &lt;a href="http://en.wikipedia.org/wiki/Peter_Norvig"&gt;Peter Norvig&lt;/a&gt;
  早在1998年就就指出,
-一但你完成了一流的功能,
+一但你完成了 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) ,
 大部分设计模式对你将是 "透明的".
 这证实了俺的发现 - &lt;code&gt;我不需要它们&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;俺也得承认,有些设计模式的确精巧.
@@ -368,12 +368,12 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 但是, 智力=/=智慧.
 即便它们能作到函式语言作到的,也通常要复杂的多.
 选择艰难模式并不能真正证明自个儿的天才.
-当你完成了一流的功能,事儿就变得容易很多,
+当你完成了 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) ,事儿就变得容易很多,
 你甚至于不会注意到用了什么设计模式.
 就象
 &lt;a href="http://en.wikipedia.org/wiki/Peter_Norvig"&gt;Peter Norvig&lt;/a&gt;
 形容的,它们会变得的"透明".
-那么,良好的语言设计者,应该作的是尽可能增加一流的功能到语言,
+那么,良好的语言设计者,应该作的是尽可能增加 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) 到语言,
 而不是提出设计模式作为解决方案.&lt;/p&gt;
 &lt;p&gt;(&lt;code&gt;译注:&lt;/code&gt;无法同意更多!只有减少程序员心智负担的开发语言才是有良心的.)&lt;/p&gt;
 &lt;p&gt;每次俺从代码中中清除一个设计模式时(其它人写进去的),
@@ -491,6 +491,7 @@ OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
 &lt;p&gt;这才,从俺的世界观里彻底放弃了 OOP ,但是,一直没有找到为毛这样的根因,现在 王珢完成了这一结论性描述,收藏之!严正推荐之!&lt;/p&gt;
 &lt;h1 id="changlog"&gt;Changlog ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;140109 获得&lt;code&gt;王珢&lt;/code&gt;授权,得以进行传播.&lt;/li&gt;
 &lt;li&gt;140108 前后7.42小时完成快译.&lt;/li&gt;
 &lt;li&gt;131224 翻越抄录在 medium.com&lt;/li&gt;
 &lt;/ul&gt;
@@ -630,7 +631,7 @@ OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
 以 &lt;code&gt;改善全人类的沟通&lt;/code&gt;!&lt;/p&gt;
 &lt;p&gt;Peter Norvig gave a talk on design patterns in 1998 pointing out most of the design patterns will be “transparent” once you have first-class functions. He was too polite to call design patterns nonsense or stupid, but that’s implied.&lt;/p&gt;
 &lt;p&gt;Peter Norvig 在98年就设计模式指出,
-一但你完成了一流的功能,
+一但你完成了 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) ,
 大部分设计模式对你将是 "透明的".
 他其实就是过于文雅的暗示: 设计模式就是废话或是愚蠢的.&lt;/p&gt;
 &lt;p&gt;Every time I remove a design pattern (some other people made) from PySonar, the code becomes simpler and more manageable. I just removed the last visitor pattern a few days ago, and I felt so relieved. They gave me nothing but extra work when they existed. I can do anything, including a lot more advanced things than those provided by visitor patterns, but without using them.&lt;/p&gt;
@@ -714,119 +715,7 @@ OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
 &lt;li&gt;G+:   https://plus.google.com/+ZoomQuiet/&lt;/li&gt;
 &lt;li&gt;Blog: http://blog.zoomquiet.org/&lt;/li&gt;
 &lt;li&gt;微博:  http://weibo.com/zoomquiet&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="people"></category></entry><entry><title>OSS good for enterprise</title><link href="http://blog.zoomquiet.io/imho/oss-good-4-china-com.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:imho/oss-good-4-china-com.html</id><summary type="html">&lt;h1 id="oss"&gt;企业进行OSS的好处&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;~中国绝大多数IT企业&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="oss" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;&lt;/p&gt;
-&lt;p&gt;其实也是欠稿一篇, 先是忽悠朋友完成了作文:
-&lt;a href="http://zhuanlan.zhihu.com/zhuangbiaowei/19576637"&gt;企业开源杂谈 — 思考IT — 知乎专栏&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;然后,又引发了系列讨论,结果变成了自个儿应该还的一篇文章,,,
-同样的,由大脑自动后台组稿42天,快速输出一版本先:&lt;/p&gt;
-&lt;h2 id="_1"&gt;背景:&lt;/h2&gt;
-&lt;p&gt;首先, 俺自个儿, 社区称号:大妈, 入行以来加入N 多技术社区, 长年混杂在各种企业内外社区中,折腾,再折腾,从来没有什么成型的NB的流传于世或是企业生产系统中的项目…按照 Eric Raymond的著名文章:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;如何成为一名黒客
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;其中的定义,俺属于绝对意义上的大妈式 Hacker, 公布有效信息(文档/翻译)/维护维基/传播Hack 文化本身…&lt;/p&gt;
-&lt;p&gt;然后,从业14年,从前台作到后台,作不动现代的全端工程师,掺合过的公司从4人到4000人的级别都有;近年,基本作 开发者关系管理(DRM), KPI 计算 40%开发,其它是社区活动的组织/筹备/主持/演讲/宣传/推广…&lt;/p&gt;
-&lt;h2 id="_2"&gt;范畴&lt;/h2&gt;
-&lt;p&gt;一篇文章绝对不可能将一个领域的发展问题分析明白的,所以,为了表述的健康/合理, 先定一下讨论的范畴,以免各种扩大化式的乱入.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;只说IT企业,即,主赢收业务是软件/互联网/移动/服务…etc.&lt;/li&gt;
-&lt;li&gt;中国企业,无论注册地/资本来由/管理层国藉, 只论主要业务在中国大陆,主要开发者是中国本土码农…&lt;/li&gt;
-&lt;li&gt;开源,就是标准的 FLOSS ~ 使用标准的许可证以及发布形式/维护过程 的 自由/开源软件, 因为开放源代码,对于 自由软件还是开源软件都是基本要求,只是后续发布的要求有差别,早已被中国媒体给搅合的说不清楚了,所以,一概论之了…&lt;/li&gt;
-&lt;li&gt;因为职业原因,不便对老雇主或是现雇主泄漏什么内部机密,所以,只讨论,如同化学实验,嗯嗯嗯,,,精确的说,就象写 SiFi 小说一样推演,企业推行 OSS 的好处; 试图达到度目标就是能向一般的BOSS/同事,以极其常识的叙述来说明白,为什么应该 OSS, 至于坏处,就当没有吧,反正在中国没有什么正当的追究过程…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="_3"&gt;故事&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;从前有个公司,使用了开源软件,后来,嗯嗯嗯,就没有后来了!&lt;/li&gt;
-&lt;li&gt;从前又一公司,开源了内部系统,然后,嗯嗯嗯,就没有然后了!&lt;/li&gt;
-&lt;li&gt;从前还是一公司,从一开始就用开源软件的形式来专发,嗯嗯嗯,然后也没有然后了…&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="_4"&gt;断语&lt;/h2&gt;
-&lt;p&gt;嗯嗯嗯,共同之处就素:所有公司都玩一朝天子一朝臣,后人废掉前尘事儿! 大家都实在太习惯太顺畅太自说自话太自发自觉的作这类事儿了….其实,追点儿根儿,很简单,无论多重要,多NB 的代码,在公司中除了写那些代码的人,其余根本没有人能够/愿意/喜欢 真正理解这些要命的代码,而且最后竟然,就连代码原作者也都认同了这种”文化”随时抛弃无论当初花多少精力折腾出来的代码了…&lt;/p&gt;
-&lt;p&gt;所以,企业真正进行开源工程式的产品开发,目测至少有这么几个方面是立即可以获得好处的:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;产品安全性立即获得极大的提高,因为所有人知道,代码都特么开源了,服务想安全,就得作到运行时,真正安全了!&lt;/li&gt;
-&lt;li&gt;代码将真正为越来越多的人理解,从而所有工程师的工作将无法简单的通过行政命令抹杀,随着开源项目的不断扩散/衍生/复用,原作者的价值在不断增值!&lt;/li&gt;
-&lt;li&gt;文档将被自主自发的不断完善,因为一个没有好文档的项目,本身再NB 也没人用!
-测试将被自主自发的由开发者自个儿进行了,因为开源后,有太多自动化测试服务可以在外网自在的使用了,再也不用跟测试部的那帮XX叽歪了!&lt;/li&gt;
-&lt;li&gt;开发人员的工作时间立即被自主自发的延长了! 因为开源工程受到关注后,全球用户可不管你们是否下班了,那 Issue 是随时捅过来的!&lt;/li&gt;
-&lt;li&gt;项目维护人员免费增加了! 只要项目真正解决领域问题,那么公司自个儿都没有用到的场景也一定会有人用上,根据开源协议,人家也必须将修订提交回来…好了,免费的比自家公司还NB 的工程师为咱开始工作了!&lt;/li&gt;
-&lt;li&gt;技术团队的业界形象立即加持圣光了! 以后招人,也就不用送MM 之类的下作手法了,只说来了能同 XX项目的原创程序员一起工作!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;等等吧…就不逐一推导了…&lt;/p&gt;
-&lt;h1 id="_5"&gt;但是!&lt;/h1&gt;
-&lt;p&gt;以上的一切好处获得的前题是:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;进行真正的开源项目运行
-坚持以纯粹的开源社区形式运营
-公司的真实业务系统真正使用开源项目的代码
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;以及,其实隐藏在这三项基本坚持之下引发的各种
-&lt;code&gt;管理/组织/绩效/人力&lt;/code&gt; 等等的配套支撑.&lt;/p&gt;
-&lt;p&gt;所以, 只能是SiFi 式的推导了…因为中国IT 企业天生的同开源社区式开发有内在的抵触…具体的,大家都懂的,不用俺费劲分析了卟?!&lt;/p&gt;
-&lt;h2 id="_6"&gt;所以&lt;/h2&gt;
-&lt;p&gt;友人收作业后反馈,肿么没有后续了? 比如遭遇各种反驳，如何进一步攻防之类…&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;图样儿图森破!&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;在公司里,不遭受质疑那是不可能的!&lt;/p&gt;
-&lt;p&gt;但是,有质疑就进行反驳…你以为你是方舟子对韩寒哪!&lt;/p&gt;
-&lt;p&gt;企业进行开源,无非两种推行模式: &lt;code&gt;嬴政式&lt;/code&gt;/&lt;code&gt;吴广式&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;前者,BOSS 就是开源出身,先信了,强行推之,整个公司所有部门为之配合,反正败了BOSS 自个儿负责,然后,慢慢品出了好处,于是更加大力在实践中学习再学习,在学习中感动再感动…慢慢的,公司如果不死,那就真正形成文化传承下去了,否则就变成业界又一SB 传说…&lt;/li&gt;
-&lt;li&gt;后者,习惯了开源开发方式了,瞒着公司,将自个儿一亩三分田先折腾起来,慢慢的,慢慢的对比其它同类团队的同类系统,肿么这么出名呢? 靠! 原来这丫开源了! 然后,没有然后了,不是被掐掉,就是这团队解散了…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;所以? 这些好处,多数情况,要不根本无从质疑 (BOSS稀饭!-) , 要不根本轮不到质疑,也就没有什么反击之说了…&lt;/p&gt;
-&lt;p&gt;其实! 公司里的质疑,根本没有质疑的任何意思在里面,无非是责任推卸:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;”我早就质疑过的哟,只是这丫不听,所以,没俺一毛钱关系!”
-“看吧! 要不是早先我质疑过,他们才改进,现在肿么可能成功?!”
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;所以? 有质疑时,只要你勇敢的担当下来,没人有空跟你分析什么协议的…&lt;/p&gt;
-&lt;p&gt;所以! 在企业里推进OSS, 最最最低程度,你得是个有足够话语权的强力团队头目,或领域技术带头人…&lt;/p&gt;
-&lt;p&gt;不过,一般在这种地位上,都要担营收的KPI, 需要接销售各种奇葩的单子,哪儿有空搞 OSS 运动哪…&lt;/p&gt;
-&lt;p&gt;所以,俺反复说了是 &lt;code&gt;SiFi&lt;/code&gt; 式的推理呢…&lt;/p&gt;
-&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;140107 move into Pelican as zoomquiet.io&lt;/li&gt;
-&lt;li&gt;131114 增补后续地图炮&lt;/li&gt;
-&lt;li&gt;131112 初放 &lt;a href="https://medium.com/i-m-h-o/74caad149e7e"&gt;企业进行OSS的好处 — I. M. H. O. — Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>Letter to a young programmer</title><link href="http://blog.zoomquiet.io/pythonic/oss-good-4-china-com.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:pythonic/oss-good-4-china-com.html</id><summary type="html">&lt;p&gt;&lt;img alt="guido" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;
-~ Guido van Rossum (inventor of Python)&lt;/p&gt;
-&lt;h1 id="letter-to-a-young-programmer"&gt;&lt;a href="http://neopythonic.blogspot.ca/2013/10/letter-to-young-programmer.html"&gt;Letter to a young programmer&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Dear (insert name here),&lt;/p&gt;
-&lt;p&gt;I heard you enjoy a certain programming language named Python. Programming is a wonderful activity. I am a little jealous that you have access to computers at your age; when I grew up I didn’t even know what a computer was! I was an electronics hobbyist though, and my big dream was to build my own electronic calculator from discrete components. I never did do that, but I did build several digital clocks, and it was amazing to build something that complex and see it work. I hope you dream big too — programmers can make computers (and robots!) do amazing things, and this is a great time to become a programmer. Just imagine how much faster computers will be in five or ten years, and what you will be able to do with your skills then!&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;—Guido van Rossum (inventor of Python)
-THURSDAY, OCTOBER 24, 2013
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;从
-&lt;a href="http://us4.campaign-archive1.com/?u=9735795484d2e4c204da82a29&amp;amp;id=c8c36205c4"&gt;Pycoder’s Weekly (Issue #89): Mavericks&lt;/a&gt;
-知道的 Guido 好萌信,`&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;尝试翻译一下:&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;亲:
-
-目测你正在享受一种叫Python 的编程语言.
-编程是种美妙的体验.
-俺很有点羡慕嫉妒恨你们 !在这个年龄就能接触电脑.
-俺那会儿子,甚至不知道什么是计算机!
-俺算一个电子爱好者,那时,最大的梦想是,亲手完成一个计算元件.
-俺从未作到这点.
-不过,倒是完成了几件数字时钟,
-每当见到如此复杂的东西,终于能工作时,哗! 那种感觉,,,
-俺期望你的梦想也足够大 —
-程序可以控制计算机(机械人)做出令人惊叹的事儿,
-这是个令程序员伟大的时代.
-现在就设想,5到10年后,能运用你的功能操作更快的计算机作到什么?!
-
-哗…
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;140107 move into Pelican as zoomquiet.io&lt;/li&gt;
-&lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/e701a9dc714e"&gt;Letter to a young programmer — I. M. H. O. — Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>Letter to a young programmer</title><link href="http://blog.zoomquiet.io/pythonic/oss-good-4-china-com.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:pythonic/oss-good-4-china-com.html</id><summary type="html">&lt;p&gt;&lt;img alt="guido" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;
+&lt;/ul&gt;</summary><category term="people"></category></entry><entry><title>Letter to a young programmer</title><link href="http://blog.zoomquiet.io/pythonic/guido-letter-2-young.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:pythonic/guido-letter-2-young.html</id><summary type="html">&lt;p&gt;&lt;img alt="guido" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;
 ~ Guido van Rossum (inventor of Python)&lt;/p&gt;
 &lt;h1 id="letter-to-a-young-programmer"&gt;&lt;a href="http://neopythonic.blogspot.ca/2013/10/letter-to-young-programmer.html"&gt;Letter to a young programmer&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Dear (insert name here),&lt;/p&gt;
@@ -1219,4 +1108,256 @@ import sys&lt;/p&gt;
 很有感觉,但是没有找到评注入口,只好直接邮件了;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>Understanding the yin-yang puzzle</title><link href="http://blog.zoomquiet.io/imho/yw-yang-puzzle.html" rel="alternate"></link><updated>2012-07-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-07-27:imho/yw-yang-puzzle.html</id><summary type="html">&lt;p&gt;&lt;img alt="yinyang.gif" src="http://yinwang0.files.wordpress.com/2012/07/yinyang.gif?w=300" /&gt;&lt;/p&gt;
+&lt;p&gt;I have a friend who is a very fast learner. I introduced him to the Scheme programming language a few days ago and he soon digged into this &lt;a href="http://stackoverflow.com/questions/2694679/how-does-the-yin-yang-puzzle-work"&gt;yin-yang puzzle&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::lisp
+(let* ((yin
+        ((lambda (cc) (display #\@) cc) (call/cc (lambda (c) c))))
+       (yang
+        ((lambda (cc) (display #\*) cc) (call/cc (lambda (c) c)))))
+  (yin yang))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This program prints out the infinite string @&lt;em&gt;@&lt;strong&gt;@&lt;strong&gt;&lt;em&gt;@&lt;/em&gt;&lt;/strong&gt;*@&lt;strong&gt;&lt;em&gt;**@&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt; …&lt;/p&gt;
+&lt;p&gt;Why does this happen? This took me almost a full afternoon to figure out. It is always good to have friends who feed you with questions and challenges. I’m going to document my finding here. I may want to make some animated slides (as is always a good idea) later, but for now a short note may suffice.&lt;/p&gt;
+&lt;h2 id="the-plan"&gt;The Plan&lt;/h2&gt;
+&lt;p&gt;You will probably never understand the program if you examine the contents of the stack. You need their high level semantic meaning to think clearly. The higher level meaning of the stack is the continuation. So instead of frightening you with the details of the stack, I’m going to use functions to show the continuations explicitly.&lt;/p&gt;
+&lt;p&gt;Also I will use a little bit of compiler optimizations along the way. The optimizations will simplify the program and show its deeper meanings.&lt;/p&gt;
+&lt;p&gt;Here is an overall plan of this article:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Find the functional representations of the two continuations. Name them c1 and c1.&lt;/li&gt;
+&lt;li&gt;Plug in c1 and c2 into the places of the two call/cc’s.&lt;/li&gt;
+&lt;li&gt;Simplify the program using compiler optimizations.&lt;/li&gt;
+&lt;li&gt;Perform behavioral analysis on the simplified program.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="transform-and-remove-callcc"&gt;Transform and Remove Call/cc&lt;/h2&gt;
+&lt;p&gt;So here we go. Let’s repeat the original program here:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(let* ((yin
+        ((lambda (cc) (display #\@) cc) (call/cc (lambda (c) c))))   ; B1
+       (yang
+        ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))  ; B2
+  (yin yang))&lt;/p&gt;
+&lt;p&gt;Note that there are two binding clauses, B1 and B2, each prints a char and binds a continuation to a variable.&lt;/p&gt;
+&lt;p&gt;B1 binds yin to the “current continuation” of the first call/cc. Let’s call this continuation c1. Its function representation is:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (k)
+  (let* ((yin
+          ((lambda (cc) (display #\@) cc) k))         &lt;br /&gt;
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
+    (yin yang)))&lt;/p&gt;
+&lt;p&gt;We can simplify it using some compiler optimization tricks. I will go very slowly here just in case you are not familiar with compiler optimizations.&lt;/p&gt;
+&lt;p&gt;First, since Scheme is a strict language, k will be a pure value (with no side-effects), so we can lift the side-effect (display #\@) out:&lt;/p&gt;
+&lt;p&gt;(lambda (k)
+  (display #\@)
+  (let* ((yin
+          ((lambda (cc) cc) k))         &lt;br /&gt;
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
+    (yin yang)))&lt;/p&gt;
+&lt;p&gt;Now we can “partial evaluate” ((lambda (cc) cc) k) to k:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (k)
+  (display #\@)
+  (let* ((yin k)         &lt;br /&gt;
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
+    (yin yang)))&lt;/p&gt;
+&lt;p&gt;Then we can copy propagate the value of yin, k, to the body of let*, (yin yang). And now we have only one binding left:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (k)
+  (display #\@)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+    (k yang)))&lt;/p&gt;
+&lt;p&gt;Now we try to figure out the underlined continuation. It should be:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (j)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) j)))
+    (k yang)))&lt;/p&gt;
+&lt;p&gt;You see why? Since the “current continuation” means “what is going to happen with this value”, it doesn’t include the computation before it, namely (display #\@). Now we do a similar optimization on this continuation: lifting out the side-effect (display #*), do some partial evaluation and copy propagation:&lt;/p&gt;
+&lt;p&gt;The result of this inner continuation is:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (j)
+  (display #*)
+  (k j))&lt;/p&gt;
+&lt;p&gt;Now we can plug it back:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (k)
+  (display #\@)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) 
+          (lambda (j)
+            (display #*)
+            (k j)))))
+    (k yang)))&lt;/p&gt;
+&lt;p&gt;Do a similar sequence of optimizations: lifting out the first (display #*), partial evaluation, copy propagation. And we have the final result for the value of yin. Let’s name it c1 with a definition:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(define c1
+ (lambda (k)
+   (display #\@)
+   (display #*)
+   (k (lambda (j)
+        (display #*)
+        (k j)))))&lt;/p&gt;
+&lt;p&gt;Now, the original program would look like the following. The program would have by now printed a @ before binding yin to c1, so we make a sequence and include the display term in the front of it.&lt;/p&gt;
+&lt;p&gt;:::lisp
+(begin
+  (display #\@)
+  (let* ((yin c1)
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
+    (yin yang)))&lt;/p&gt;
+&lt;p&gt;Try it. It will behave the same as the original program. Now we do another copy propagation to get rid of the first binding:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(begin
+  (display #\@)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
+    (c1 yang)))&lt;/p&gt;
+&lt;p&gt;Since the call/cc here will not cause any side-effects (why?), we can lift (display #*) out:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(begin
+  (display #\@)
+  (display #*)
+  (let ((yang
+         ((lambda (cc) cc) (call/cc (lambda (c) c)))))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^
+    (c1 yang)))&lt;/p&gt;
+&lt;p&gt;Now we just have to find what this underlined continuation is, and it will become the value of yang. It is:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (k)
+  (let ((yang
+         ((lambda (cc) cc) k)))
+    (c1 yang)))&lt;/p&gt;
+&lt;p&gt;After our routine sequence of optimizations we have the value of yang. Let’s define it as c2:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(define c2
+  (lambda (k)
+    (display #*)
+    (c1 k)))&lt;/p&gt;
+&lt;p&gt;Plug c1 and c2 back into the original program:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(begin
+  (display #\@)
+  (display #*)
+  (let* ((yin c1)
+         (yang c2))
+    (yin yang)))&lt;/p&gt;
+&lt;p&gt;And do a copy propagation:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(begin
+  (display #\@)
+  (display #*)
+  (c1 c2))&lt;/p&gt;
+&lt;h2 id="transformed-program"&gt;Transformed Program&lt;/h2&gt;
+&lt;p&gt;Now we have our final transformed and optimized program. Let’s put the definitions of c1 and c2 here for an overview:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(define c1
+ (lambda (k)
+   (display #\@)
+   (display #*)
+   (k (lambda (j)
+        (display #*)
+        (k j)))))&lt;/p&gt;
+&lt;p&gt;(define c2
+  (lambda (k)
+    (display #*)
+    (c1 k)))&lt;/p&gt;
+&lt;p&gt;(begin
+  (display #\@)
+  (display #*)
+  (c1 c2))&lt;/p&gt;
+&lt;p&gt;For simplicity, let’s inline c2 into the main program. Now c2 disappears.&lt;/p&gt;
+&lt;p&gt;:::lisp
+(define c1
+ (lambda (k)
+   (display #\@)
+   (display #*)
+   (k (lambda (j)
+        (display #*)
+        (k j)))))&lt;/p&gt;
+&lt;p&gt;(begin
+  (display #\@)
+  (display #*)
+  (c1 (lambda (k)
+        (display #*)
+        (c1 k))))&lt;/p&gt;
+&lt;p&gt;Try it. It will still work the same as the original program.&lt;/p&gt;
+&lt;h2 id="behavioral-analysis"&gt;Behavioral Analysis&lt;/h2&gt;
+&lt;p&gt;Now the program doesn’t contain any call/cc’s and is much easier to understand. Let’s try to figure out how it executes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;First, @* will be printed, and we will invoke:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::lisp
+(c1 (lambda (k)
+      (display #*)
+      (c1 k)))&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Inside the invocation, @* will be printed by the body of c1, and k is now bound to (lambda (k) (display #*) (c1 k)). So the program proceed to:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::lisp
+((lambda (k)
+   (display #*)
+   (c1 k))
+ (lambda (j)
+   (display #*)
+   ((lambda (k)
+      (display #*)
+      (c1 k)) 
+    j)))&lt;/p&gt;
+&lt;p&gt;It will print a *, and becomes:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(c1
+ (lambda (j)
+   (display #*)
+   ((lambda (k)
+      (display #*)
+      (c1 k)) 
+    j)))&lt;/p&gt;
+&lt;p&gt;Now we have seen @&lt;em&gt;@&lt;/em&gt;*&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Notice that we are back to a call to c1! This is a good sign of recursion. But this time the argument is different. If we simplify it a little, we get:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::lisp
+(c1
+ (lambda (j)
+   (display #*)
+   (display #*)
+   (c1 j)))&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I think you see what’s going on here. This time, c1 is called with&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::lisp
+(lambda (j)
+   (display #*)
+   (display #*)
+   (c1 j))&lt;/p&gt;
+&lt;p&gt;which means “When called, display TWO &lt;em&gt;’s, and then behave like c1 on the argument”. If we go on, the argument to c1 will be longer and longer, and each time with an additional (display #*). It will print @&lt;strong&gt;&lt;em&gt;, and then @&lt;/em&gt;&lt;/strong&gt;&lt;/em&gt;, and then @&lt;strong&gt;*&lt;/strong&gt;, and so on.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Let’s introspect a bit. Which part of the program is responsible for creating the ever-longer displays, and why? It is this piece from the definition of c1:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::lisp
+(k (lambda (j)
+     (display #*)
+     (k j)))&lt;/p&gt;
+&lt;p&gt;Here k is c1′s argument. Notice that k is always of the form:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (j)
+   (display #*)
+   (display #*)
+   ...
+   (c1 j))&lt;/p&gt;
+&lt;p&gt;When k is applied, it will print the corresonding number of *’s inside it, and then behave like c1. The argument to k is:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (j)
+  (display #*)
+  (k j))&lt;/p&gt;
+&lt;p&gt;What does this mean? It says: “When called, print a * and then behave like k on the argument.” This is how you get a “new k”, with one more display of *.&lt;/p&gt;
+&lt;p&gt;This will go on indifinitely. This is why you see the infinite string: @&lt;em&gt;@&lt;strong&gt;@&lt;strong&gt;&lt;em&gt;@&lt;/em&gt;&lt;/strong&gt;*@&lt;strong&gt;&lt;em&gt;**@&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt; …&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;140109 pub. as zoomquiet.io's blog&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Think"></category><category term="yinwang"></category><category term="Chinese"></category></entry></feed>

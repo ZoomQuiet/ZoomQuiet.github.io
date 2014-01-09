@@ -327,7 +327,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 后来又发现,
 &lt;a href="http://en.wikipedia.org/wiki/Peter_Norvig"&gt;Peter Norvig&lt;/a&gt;
  早在1998年就就指出,
-一但你完成了一流的功能,
+一但你完成了 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) ,
 大部分设计模式对你将是 "透明的".
 这证实了俺的发现 - &lt;code&gt;我不需要它们&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;俺也得承认,有些设计模式的确精巧.
@@ -336,12 +336,12 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 但是, 智力=/=智慧.
 即便它们能作到函式语言作到的,也通常要复杂的多.
 选择艰难模式并不能真正证明自个儿的天才.
-当你完成了一流的功能,事儿就变得容易很多,
+当你完成了 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) ,事儿就变得容易很多,
 你甚至于不会注意到用了什么设计模式.
 就象
 &lt;a href="http://en.wikipedia.org/wiki/Peter_Norvig"&gt;Peter Norvig&lt;/a&gt;
 形容的,它们会变得的"透明".
-那么,良好的语言设计者,应该作的是尽可能增加一流的功能到语言,
+那么,良好的语言设计者,应该作的是尽可能增加 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) 到语言,
 而不是提出设计模式作为解决方案.&lt;/p&gt;
 &lt;p&gt;(&lt;code&gt;译注:&lt;/code&gt;无法同意更多!只有减少程序员心智负担的开发语言才是有良心的.)&lt;/p&gt;
 &lt;p&gt;每次俺从代码中中清除一个设计模式时(其它人写进去的),
@@ -459,6 +459,7 @@ OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
 &lt;p&gt;这才,从俺的世界观里彻底放弃了 OOP ,但是,一直没有找到为毛这样的根因,现在 王珢完成了这一结论性描述,收藏之!严正推荐之!&lt;/p&gt;
 &lt;h1 id="changlog"&gt;Changlog ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;140109 获得&lt;code&gt;王珢&lt;/code&gt;授权,得以进行传播.&lt;/li&gt;
 &lt;li&gt;140108 前后7.42小时完成快译.&lt;/li&gt;
 &lt;li&gt;131224 翻越抄录在 medium.com&lt;/li&gt;
 &lt;/ul&gt;
@@ -598,7 +599,7 @@ OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
 以 &lt;code&gt;改善全人类的沟通&lt;/code&gt;!&lt;/p&gt;
 &lt;p&gt;Peter Norvig gave a talk on design patterns in 1998 pointing out most of the design patterns will be “transparent” once you have first-class functions. He was too polite to call design patterns nonsense or stupid, but that’s implied.&lt;/p&gt;
 &lt;p&gt;Peter Norvig 在98年就设计模式指出,
-一但你完成了一流的功能,
+一但你完成了 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) ,
 大部分设计模式对你将是 "透明的".
 他其实就是过于文雅的暗示: 设计模式就是废话或是愚蠢的.&lt;/p&gt;
 &lt;p&gt;Every time I remove a design pattern (some other people made) from PySonar, the code becomes simpler and more manageable. I just removed the last visitor pattern a few days ago, and I felt so relieved. They gave me nothing but extra work when they existed. I can do anything, including a lot more advanced things than those provided by visitor patterns, but without using them.&lt;/p&gt;
@@ -881,4 +882,256 @@ SQL 世界的来客,总是试图先建立起一个完美的关系体系可以兼
 很有感觉,但是没有找到评注入口,只好直接邮件了;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>Understanding the yin-yang puzzle</title><link href="http://blog.zoomquiet.io/imho/yw-yang-puzzle.html" rel="alternate"></link><updated>2012-07-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-07-27:imho/yw-yang-puzzle.html</id><summary type="html">&lt;p&gt;&lt;img alt="yinyang.gif" src="http://yinwang0.files.wordpress.com/2012/07/yinyang.gif?w=300" /&gt;&lt;/p&gt;
+&lt;p&gt;I have a friend who is a very fast learner. I introduced him to the Scheme programming language a few days ago and he soon digged into this &lt;a href="http://stackoverflow.com/questions/2694679/how-does-the-yin-yang-puzzle-work"&gt;yin-yang puzzle&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::lisp
+(let* ((yin
+        ((lambda (cc) (display #\@) cc) (call/cc (lambda (c) c))))
+       (yang
+        ((lambda (cc) (display #\*) cc) (call/cc (lambda (c) c)))))
+  (yin yang))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This program prints out the infinite string @&lt;em&gt;@&lt;strong&gt;@&lt;strong&gt;&lt;em&gt;@&lt;/em&gt;&lt;/strong&gt;*@&lt;strong&gt;&lt;em&gt;**@&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt; …&lt;/p&gt;
+&lt;p&gt;Why does this happen? This took me almost a full afternoon to figure out. It is always good to have friends who feed you with questions and challenges. I’m going to document my finding here. I may want to make some animated slides (as is always a good idea) later, but for now a short note may suffice.&lt;/p&gt;
+&lt;h2 id="the-plan"&gt;The Plan&lt;/h2&gt;
+&lt;p&gt;You will probably never understand the program if you examine the contents of the stack. You need their high level semantic meaning to think clearly. The higher level meaning of the stack is the continuation. So instead of frightening you with the details of the stack, I’m going to use functions to show the continuations explicitly.&lt;/p&gt;
+&lt;p&gt;Also I will use a little bit of compiler optimizations along the way. The optimizations will simplify the program and show its deeper meanings.&lt;/p&gt;
+&lt;p&gt;Here is an overall plan of this article:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Find the functional representations of the two continuations. Name them c1 and c1.&lt;/li&gt;
+&lt;li&gt;Plug in c1 and c2 into the places of the two call/cc’s.&lt;/li&gt;
+&lt;li&gt;Simplify the program using compiler optimizations.&lt;/li&gt;
+&lt;li&gt;Perform behavioral analysis on the simplified program.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="transform-and-remove-callcc"&gt;Transform and Remove Call/cc&lt;/h2&gt;
+&lt;p&gt;So here we go. Let’s repeat the original program here:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(let* ((yin
+        ((lambda (cc) (display #\@) cc) (call/cc (lambda (c) c))))   ; B1
+       (yang
+        ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))  ; B2
+  (yin yang))&lt;/p&gt;
+&lt;p&gt;Note that there are two binding clauses, B1 and B2, each prints a char and binds a continuation to a variable.&lt;/p&gt;
+&lt;p&gt;B1 binds yin to the “current continuation” of the first call/cc. Let’s call this continuation c1. Its function representation is:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (k)
+  (let* ((yin
+          ((lambda (cc) (display #\@) cc) k))         &lt;br /&gt;
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
+    (yin yang)))&lt;/p&gt;
+&lt;p&gt;We can simplify it using some compiler optimization tricks. I will go very slowly here just in case you are not familiar with compiler optimizations.&lt;/p&gt;
+&lt;p&gt;First, since Scheme is a strict language, k will be a pure value (with no side-effects), so we can lift the side-effect (display #\@) out:&lt;/p&gt;
+&lt;p&gt;(lambda (k)
+  (display #\@)
+  (let* ((yin
+          ((lambda (cc) cc) k))         &lt;br /&gt;
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
+    (yin yang)))&lt;/p&gt;
+&lt;p&gt;Now we can “partial evaluate” ((lambda (cc) cc) k) to k:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (k)
+  (display #\@)
+  (let* ((yin k)         &lt;br /&gt;
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
+    (yin yang)))&lt;/p&gt;
+&lt;p&gt;Then we can copy propagate the value of yin, k, to the body of let*, (yin yang). And now we have only one binding left:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (k)
+  (display #\@)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+    (k yang)))&lt;/p&gt;
+&lt;p&gt;Now we try to figure out the underlined continuation. It should be:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (j)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) j)))
+    (k yang)))&lt;/p&gt;
+&lt;p&gt;You see why? Since the “current continuation” means “what is going to happen with this value”, it doesn’t include the computation before it, namely (display #\@). Now we do a similar optimization on this continuation: lifting out the side-effect (display #*), do some partial evaluation and copy propagation:&lt;/p&gt;
+&lt;p&gt;The result of this inner continuation is:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (j)
+  (display #*)
+  (k j))&lt;/p&gt;
+&lt;p&gt;Now we can plug it back:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (k)
+  (display #\@)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) 
+          (lambda (j)
+            (display #*)
+            (k j)))))
+    (k yang)))&lt;/p&gt;
+&lt;p&gt;Do a similar sequence of optimizations: lifting out the first (display #*), partial evaluation, copy propagation. And we have the final result for the value of yin. Let’s name it c1 with a definition:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(define c1
+ (lambda (k)
+   (display #\@)
+   (display #*)
+   (k (lambda (j)
+        (display #*)
+        (k j)))))&lt;/p&gt;
+&lt;p&gt;Now, the original program would look like the following. The program would have by now printed a @ before binding yin to c1, so we make a sequence and include the display term in the front of it.&lt;/p&gt;
+&lt;p&gt;:::lisp
+(begin
+  (display #\@)
+  (let* ((yin c1)
+         (yang
+          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
+    (yin yang)))&lt;/p&gt;
+&lt;p&gt;Try it. It will behave the same as the original program. Now we do another copy propagation to get rid of the first binding:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(begin
+  (display #\@)
+  (let ((yang
+         ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
+    (c1 yang)))&lt;/p&gt;
+&lt;p&gt;Since the call/cc here will not cause any side-effects (why?), we can lift (display #*) out:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(begin
+  (display #\@)
+  (display #*)
+  (let ((yang
+         ((lambda (cc) cc) (call/cc (lambda (c) c)))))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^
+    (c1 yang)))&lt;/p&gt;
+&lt;p&gt;Now we just have to find what this underlined continuation is, and it will become the value of yang. It is:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (k)
+  (let ((yang
+         ((lambda (cc) cc) k)))
+    (c1 yang)))&lt;/p&gt;
+&lt;p&gt;After our routine sequence of optimizations we have the value of yang. Let’s define it as c2:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(define c2
+  (lambda (k)
+    (display #*)
+    (c1 k)))&lt;/p&gt;
+&lt;p&gt;Plug c1 and c2 back into the original program:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(begin
+  (display #\@)
+  (display #*)
+  (let* ((yin c1)
+         (yang c2))
+    (yin yang)))&lt;/p&gt;
+&lt;p&gt;And do a copy propagation:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(begin
+  (display #\@)
+  (display #*)
+  (c1 c2))&lt;/p&gt;
+&lt;h2 id="transformed-program"&gt;Transformed Program&lt;/h2&gt;
+&lt;p&gt;Now we have our final transformed and optimized program. Let’s put the definitions of c1 and c2 here for an overview:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(define c1
+ (lambda (k)
+   (display #\@)
+   (display #*)
+   (k (lambda (j)
+        (display #*)
+        (k j)))))&lt;/p&gt;
+&lt;p&gt;(define c2
+  (lambda (k)
+    (display #*)
+    (c1 k)))&lt;/p&gt;
+&lt;p&gt;(begin
+  (display #\@)
+  (display #*)
+  (c1 c2))&lt;/p&gt;
+&lt;p&gt;For simplicity, let’s inline c2 into the main program. Now c2 disappears.&lt;/p&gt;
+&lt;p&gt;:::lisp
+(define c1
+ (lambda (k)
+   (display #\@)
+   (display #*)
+   (k (lambda (j)
+        (display #*)
+        (k j)))))&lt;/p&gt;
+&lt;p&gt;(begin
+  (display #\@)
+  (display #*)
+  (c1 (lambda (k)
+        (display #*)
+        (c1 k))))&lt;/p&gt;
+&lt;p&gt;Try it. It will still work the same as the original program.&lt;/p&gt;
+&lt;h2 id="behavioral-analysis"&gt;Behavioral Analysis&lt;/h2&gt;
+&lt;p&gt;Now the program doesn’t contain any call/cc’s and is much easier to understand. Let’s try to figure out how it executes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;First, @* will be printed, and we will invoke:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::lisp
+(c1 (lambda (k)
+      (display #*)
+      (c1 k)))&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Inside the invocation, @* will be printed by the body of c1, and k is now bound to (lambda (k) (display #*) (c1 k)). So the program proceed to:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::lisp
+((lambda (k)
+   (display #*)
+   (c1 k))
+ (lambda (j)
+   (display #*)
+   ((lambda (k)
+      (display #*)
+      (c1 k)) 
+    j)))&lt;/p&gt;
+&lt;p&gt;It will print a *, and becomes:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(c1
+ (lambda (j)
+   (display #*)
+   ((lambda (k)
+      (display #*)
+      (c1 k)) 
+    j)))&lt;/p&gt;
+&lt;p&gt;Now we have seen @&lt;em&gt;@&lt;/em&gt;*&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Notice that we are back to a call to c1! This is a good sign of recursion. But this time the argument is different. If we simplify it a little, we get:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::lisp
+(c1
+ (lambda (j)
+   (display #*)
+   (display #*)
+   (c1 j)))&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I think you see what’s going on here. This time, c1 is called with&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::lisp
+(lambda (j)
+   (display #*)
+   (display #*)
+   (c1 j))&lt;/p&gt;
+&lt;p&gt;which means “When called, display TWO &lt;em&gt;’s, and then behave like c1 on the argument”. If we go on, the argument to c1 will be longer and longer, and each time with an additional (display #*). It will print @&lt;strong&gt;&lt;em&gt;, and then @&lt;/em&gt;&lt;/strong&gt;&lt;/em&gt;, and then @&lt;strong&gt;*&lt;/strong&gt;, and so on.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Let’s introspect a bit. Which part of the program is responsible for creating the ever-longer displays, and why? It is this piece from the definition of c1:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::lisp
+(k (lambda (j)
+     (display #*)
+     (k j)))&lt;/p&gt;
+&lt;p&gt;Here k is c1′s argument. Notice that k is always of the form:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (j)
+   (display #*)
+   (display #*)
+   ...
+   (c1 j))&lt;/p&gt;
+&lt;p&gt;When k is applied, it will print the corresonding number of *’s inside it, and then behave like c1. The argument to k is:&lt;/p&gt;
+&lt;p&gt;:::lisp
+(lambda (j)
+  (display #*)
+  (k j))&lt;/p&gt;
+&lt;p&gt;What does this mean? It says: “When called, print a * and then behave like k on the argument.” This is how you get a “new k”, with one more display of *.&lt;/p&gt;
+&lt;p&gt;This will go on indifinitely. This is why you see the infinite string: @&lt;em&gt;@&lt;strong&gt;@&lt;strong&gt;&lt;em&gt;@&lt;/em&gt;&lt;/strong&gt;*@&lt;strong&gt;&lt;em&gt;**@&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt; …&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;140109 pub. as zoomquiet.io's blog&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Think"></category><category term="yinwang"></category><category term="Chinese"></category></entry></feed>

@@ -4,266 +4,273 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://blog.zoomquiet.io/index.html</loc>
-<lastmod>2014-01-09T15:01:45-00:00</lastmod>
+<loc>/index.html</loc>
+<lastmod>2014-01-09T23:05:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2014-01-09T15:01:45-00:00</lastmod>
+<loc>/archives.html</loc>
+<lastmod>2014-01-09T23:05:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2014-01-09T15:01:45-00:00</lastmod>
+<loc>/tags.html</loc>
+<lastmod>2014-01-09T23:05:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/about.html</loc>
+<loc>/categories.html</loc>
+<lastmod>2014-01-09T23:05:37-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/pages/about.html</loc>
 <lastmod>2014-01-07T16:53:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/designing.html</loc>
+<loc>/pages/designing.html</loc>
 <lastmod>2013-12-19T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/pythonic/140106-pycon2013tee-guido.html</loc>
+<loc>/140106-pycon2013tee-guido.html</loc>
 <lastmod>2014-01-07T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/imho/131224-yw-on-oop.html</loc>
+<loc>/131224-yw-on-oop.html</loc>
 <lastmod>2013-12-24T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/imho/131127-yw-on-test-static-analysis.html</loc>
+<loc>/131127-yw-on-test-static-analysis.html</loc>
 <lastmod>2013-11-27T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/author/zoom-quiet.html</loc>
+<loc>/zoom-quiet.html</loc>
 <lastmod>2013-11-17T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/pythonic/guido-letter-2-young.html</loc>
+<loc>/guido-letter-2-young.html</loc>
 <lastmod>2013-11-11T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/imho/oss-good-4-china-com.html</loc>
+<loc>/oss-good-4-china-com.html</loc>
 <lastmod>2013-11-11T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/pythonic/ekr-selfintro-for-chinese.html</loc>
+<loc>/ekr-selfintro-for-chinese.html</loc>
 <lastmod>2013-11-06T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/imho/mongo-collections-embdded-think.html</loc>
+<loc>/mongo-collections-embdded-think.html</loc>
 <lastmod>2013-10-27T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/operators/hello-world.html</loc>
+<loc>/hello-world.html</loc>
 <lastmod>2013-08-09T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/imho/reply-yw-on-literate-programming.html</loc>
+<loc>/reply-yw-on-literate-programming.html</loc>
 <lastmod>2012-09-18T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/imho/yw-yang-puzzle.html</loc>
+<loc>/yw-yang-puzzle.html</loc>
 <lastmod>2012-07-27T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/author/index.html</loc>
+<loc>/category/author.html</loc>
 <lastmod>2013-11-17T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/imho/index.html</loc>
+<loc>/category/imho.html</loc>
 <lastmod>2013-12-24T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/operators/index.html</loc>
+<loc>/category/operators.html</loc>
 <lastmod>2013-08-09T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/pythonic/index.html</loc>
+<loc>/category/pythonic.html</loc>
 <lastmod>2014-01-07T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/pythonner.html</loc>
+<loc>/tag/pythonner.html</loc>
 <lastmod>2014-01-07T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/md.html</loc>
+<loc>/tag/md.html</loc>
 <lastmod>2013-08-09T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/think.html</loc>
+<loc>/tag/think.html</loc>
 <lastmod>2013-11-11T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/zh.html</loc>
+<loc>/tag/zh.html</loc>
 <lastmod>2013-12-24T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/mongo.html</loc>
+<loc>/tag/mongo.html</loc>
 <lastmod>2013-10-27T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/nosql.html</loc>
+<loc>/tag/nosql.html</loc>
 <lastmod>2013-10-27T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/hallo.html</loc>
+<loc>/tag/hallo.html</loc>
 <lastmod>2013-08-09T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/oss.html</loc>
+<loc>/tag/oss.html</loc>
 <lastmod>2013-11-11T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/people.html</loc>
+<loc>/tag/people.html</loc>
 <lastmod>2013-11-17T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/pyconchina.html</loc>
+<loc>/tag/pyconchina.html</loc>
 <lastmod>2014-01-07T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/leo.html</loc>
+<loc>/tag/leo.html</loc>
 <lastmod>2013-11-06T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/china.html</loc>
+<loc>/tag/china.html</loc>
 <lastmod>2013-11-11T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/lp.html</loc>
+<loc>/tag/lp.html</loc>
 <lastmod>2012-09-18T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/guido.html</loc>
+<loc>/tag/guido.html</loc>
 <lastmod>2014-01-07T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/chinese.html</loc>
+<loc>/tag/chinese.html</loc>
 <lastmod>2012-07-27T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/ekr.html</loc>
+<loc>/tag/ekr.html</loc>
 <lastmod>2013-11-06T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/yinwang.html</loc>
+<loc>/tag/yinwang.html</loc>
 <lastmod>2013-12-24T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/author/zoomquiet.html</loc>
+<loc>/author/zoomquiet.html</loc>
 <lastmod>2014-01-07T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>

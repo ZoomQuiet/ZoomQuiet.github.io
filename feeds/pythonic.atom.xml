@@ -1,47 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/pythonic.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-01-07T00:00:00+08:00</updated><entry><title>PythonisT happy guido ;-)</title><link href="http://blog.zoomquiet.io/pythonic/140106-pycon2013tee-guido.html" rel="alternate"></link><updated>2014-01-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-07:pythonic/140106-pycon2013tee-guido.html</id><summary type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="/" rel="alternate"></link><link href="/feeds/pythonic.atom.xml" rel="self"></link><id>/</id><updated>2014-01-07T00:00:00+08:00</updated><entry><title>PythonisT happy guido ;-)</title><link href="/140106-pycon2013tee-guido.html" rel="alternate"></link><updated>2014-01-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-07:140106-pycon2013tee-guido.html</id><summary type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;起初ZEUUX 作TEE 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for CPUG&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;然后,就没有然后了...&lt;/li&gt;
+&lt;li&gt;起初&lt;span class="caps"&gt;ZEUUX&lt;/span&gt; 作&lt;span class="caps"&gt;TEE&lt;/span&gt; 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for&amp;nbsp;&lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;然后,就没有然后了&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;后来, 好容易一个蠎年了! 为了蠎年的 PyCon2013China, 启动了&lt;/p&gt;
+&lt;p&gt;后来, 好容易一个蠎年了! 为了蠎年的 PyCon2013China,&amp;nbsp;启动了&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://python-china.org/topic/544"&gt;蠎年蠎衫(PythonisT-shirt)设计大赛! — Python China&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;然后,也没有然后了...&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://python-china.org/topic/544"&gt;蠎年蠎衫(PythonisT-shirt)设计大赛! — Python&amp;nbsp;China&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;然后,也没有然后了&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;再然后,&lt;a href="https://twitter.com/stephanie__yu/status/381862928598577152"&gt;Twitter / stephanie__yu: @gvanrossum http://t.co/WSAYnXhbt2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;再然后,&lt;a href="https://twitter.com/stephanie__yu/status/381862928598577152"&gt;Twitter / stephanie__yu: @gvanrossum&amp;nbsp;http://t.co/WSAYnXhbt2&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;我蠎女神搭讪 Gudio 成功&lt;/li&gt;
+&lt;li&gt;我蠎女神搭讪 Gudio&amp;nbsp;成功&lt;/li&gt;
 &lt;li&gt;当年的蠎衫,老爹竟然一直在穿!&lt;/li&gt;
 &lt;li&gt;于是又火了四处求购的呼声!&lt;/li&gt;
-&lt;li&gt;然后,也没有然后了...&lt;/li&gt;
+&lt;li&gt;然后,也没有然后了&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;最终, 金山赞助了PyCon2013China 珠海+北京场, 俺就果断使用了封藏的设计,给所有来参加的行者,送了件:&lt;/p&gt;
+&lt;p&gt;最终, 金山赞助了PyCon2013China 珠海+北京场,&amp;nbsp;俺就果断使用了封藏的设计,给所有来参加的行者,送了件:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.zhgdg.org/2013-12/et16-pycon-zh/"&gt;PyCon2013China 珠海场小结&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;另外,精制了一小批, EMS 给了大会上特别分享了视频的海外 Pythonner&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://v.youku.com/v_show/id_XNjQ1OTMzODQw.html"&gt;HRYR:用Python搭建信号采集分析系统&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://v.youku.com/v_show/id_XNjQ1OTM3MDk2.html"&gt;EKR:Leo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.zhgdg.org/2013-12/et16-pycon-zh/"&gt;PyCon2013China&amp;nbsp;珠海场小结&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;另外,精制了一小批, &lt;span class="caps"&gt;EMS&lt;/span&gt; 给了大会上特别分享了视频的海外 Pythonner&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://v.youku.com/v_show/id_XNjQ1OTMzODQw.html"&gt;&lt;span class="caps"&gt;HRYR&lt;/span&gt;:用Python搭建信号采集分析系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://v.youku.com/v_show/id_XNjQ1OTM3MDk2.html"&gt;&lt;span class="caps"&gt;EKR&lt;/span&gt;:Leo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;当然有 Guido:&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://twitter.com/gvanrossum/status/420249260961968128"&gt;Twitter / gvanrossum: T shift from Chinese user group. ...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/gvanrossum/status/420249260961968128"&gt;Twitter / gvanrossum: T shift from Chinese user group.&amp;nbsp;&amp;#8230;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="140107-guido-twitter.png（PNG 图像，558x580 像素）" src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/140107-guido-twitter.png" /&gt;&lt;/p&gt;
 &lt;p&gt;以上,有关蠎衫的故事,就是这些,再过12年,又能发生什么?!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="design-by zoomquiet " src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/favicon/140101-design-by.png" /&gt;&lt;/p&gt;</summary><category term="Guido"></category><category term="Pythonner"></category><category term="PyConChina"></category></entry><entry><title>Letter to a young programmer</title><link href="http://blog.zoomquiet.io/pythonic/guido-letter-2-young.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:pythonic/guido-letter-2-young.html</id><summary type="html">&lt;p&gt;&lt;img alt="guido" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;
-~ Guido van Rossum (inventor of Python)&lt;/p&gt;
-&lt;h1 id="letter-to-a-young-programmer"&gt;&lt;a href="http://neopythonic.blogspot.ca/2013/10/letter-to-young-programmer.html"&gt;Letter to a young programmer&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Dear (insert name here),&lt;/p&gt;
-&lt;p&gt;I heard you enjoy a certain programming language named Python. Programming is a wonderful activity. I am a little jealous that you have access to computers at your age; when I grew up I didn’t even know what a computer was! I was an electronics hobbyist though, and my big dream was to build my own electronic calculator from discrete components. I never did do that, but I did build several digital clocks, and it was amazing to build something that complex and see it work. I hope you dream big too — programmers can make computers (and robots!) do amazing things, and this is a great time to become a programmer. Just imagine how much faster computers will be in five or ten years, and what you will be able to do with your skills then!&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;—Guido van Rossum (inventor of Python)
-THURSDAY, OCTOBER 24, 2013
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img alt="design-by zoomquiet " src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/favicon/140101-design-by.png" /&gt;&lt;/p&gt;</summary><category term="Guido"></category><category term="Pythonner"></category><category term="PyConChina"></category></entry><entry><title>Letter to a young programmer</title><link href="/guido-letter-2-young.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-11:guido-letter-2-young.html</id><summary type="html">&lt;p&gt;&lt;img alt="guido" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;
+~ Guido van Rossum (inventor of&amp;nbsp;Python)&lt;/p&gt;
+&lt;h1 id="letter-to-a-young-programmer"&gt;&lt;a href="http://neopythonic.blogspot.ca/2013/10/letter-to-young-programmer.html"&gt;Letter to a young&amp;nbsp;programmer&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Dear (insert name&amp;nbsp;here),&lt;/p&gt;
+&lt;p&gt;I heard you enjoy a certain programming language named Python. Programming is a wonderful activity. I am a little jealous that you have access to computers at your age; when I grew up I didn’t even know what a computer was! I was an electronics hobbyist though, and my big dream was to build my own electronic calculator from discrete components. I never did do that, but I did build several digital clocks, and it was amazing to build something that complex and see it work. I hope you dream big too — programmers can make computers (and robots!) do amazing things, and this is a great time to become a programmer. Just imagine how much faster computers will be in five or ten years, and what you will be able to do with your skills&amp;nbsp;then!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;—&lt;/span&gt;&lt;span class="n"&gt;Guido&lt;/span&gt; &lt;span class="n"&gt;van&lt;/span&gt; &lt;span class="n"&gt;Rossum&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inventor&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;&lt;span class="caps"&gt;THURSDAY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;OCTOBER&lt;/span&gt;&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2013&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;从
 &lt;a href="http://us4.campaign-archive1.com/?u=9735795484d2e4c204da82a29&amp;amp;id=c8c36205c4"&gt;Pycoder’s Weekly (Issue #89): Mavericks&lt;/a&gt;
-知道的 Guido 好萌信,`&lt;/p&gt;
+知道的 Guido&amp;nbsp;好萌信,`&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
@@ -49,74 +51,74 @@ THURSDAY, OCTOBER 24, 2013
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;亲:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;亲&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
 
-目测你正在享受一种叫Python 的编程语言.
-编程是种美妙的体验.
-俺很有点羡慕嫉妒恨你们 !在这个年龄就能接触电脑.
-俺那会儿子,甚至不知道什么是计算机!
-俺算一个电子爱好者,那时,最大的梦想是,亲手完成一个计算元件.
-俺从未作到这点.
-不过,倒是完成了几件数字时钟,
-每当见到如此复杂的东西,终于能工作时,哗! 那种感觉,,,
-俺期望你的梦想也足够大 —
-程序可以控制计算机(机械人)做出令人惊叹的事儿,
-这是个令程序员伟大的时代.
-现在就设想,5到10年后,能运用你的功能操作更快的计算机作到什么?!
+&lt;span class="err"&gt;目测你正在享受一种叫&lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="err"&gt;的编程语言&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;编程是种美妙的体验&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;俺很有点羡慕嫉妒恨你们&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="err"&gt;在这个年龄就能接触电脑&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;俺那会儿子&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;甚至不知道什么是计算机&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="err"&gt;俺算一个电子爱好者&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;那时&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;最大的梦想是&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;亲手完成一个计算元件&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;俺从未作到这点&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;不过&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;倒是完成了几件数字时钟&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="err"&gt;每当见到如此复杂的东西&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;终于能工作时&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;哗&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="err"&gt;那种感觉&lt;/span&gt;&lt;span class="p"&gt;,,,&lt;/span&gt;
+&lt;span class="err"&gt;俺期望你的梦想也足够大&lt;/span&gt; &lt;span class="err"&gt;—&lt;/span&gt;
+&lt;span class="err"&gt;程序可以控制计算机&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;机械人&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;做出令人惊叹的事儿&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="err"&gt;这是个令程序员伟大的时代&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;现在就设想&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="err"&gt;到&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="err"&gt;年后&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;能运用你的功能操作更快的计算机作到什么&lt;/span&gt;&lt;span class="o"&gt;?!&lt;/span&gt;
 
-哗…
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class="err"&gt;哗…&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;140107 move into Pelican as zoomquiet.io&lt;/li&gt;
-&lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/e701a9dc714e"&gt;Letter to a young programmer — I. M. H. O. — Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>EKR to Chinese programmer</title><link href="http://blog.zoomquiet.io/pythonic/ekr-selfintro-for-chinese.html" rel="alternate"></link><updated>2013-11-06T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-06:pythonic/ekr-selfintro-for-chinese.html</id><summary type="html">&lt;h1 id="leo"&gt;Leo 作者向中国开发者的自述&lt;/h1&gt;
+&lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
+&lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/e701a9dc714e"&gt;Letter to a young programmer — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>EKR to Chinese programmer</title><link href="/ekr-selfintro-for-chinese.html" rel="alternate"></link><updated>2013-11-06T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-06:ekr-selfintro-for-chinese.html</id><summary type="html">&lt;h1 id="leo"&gt;Leo&amp;nbsp;作者向中国开发者的自述&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="EKR" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*yKVZtcJyfh-FHNEtXrqjPw.jpeg" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://leoeditor.com/"&gt;Leo&lt;/a&gt; is OpenSource,written by Python,can run in M$/Linux/MAC/etc. ,Leo is Literate Environment Outline-oriented ;-)
-EKR is her father.&lt;/p&gt;
-&lt;p&gt;BUT, what is “Literate” ,is hard to explained,
-i try and try and try to show/share to Chinese People, BUT…
-next week,there is another chance for try again, and ask EKR say some abt. self…
-So! EKR writed down his colorful life!&lt;/p&gt;
-&lt;p&gt;​I’ve been interested in computers from the time I was about 10 years old.&lt;/p&gt;
-&lt;p&gt;I studied mathematics at Michigan State University and computer science at the University of Wisconsin, Madison. There I meant my friend and mentor, D.R. (Bob) Fitzwater. Bob encouraged me to focus more on design, less on the “bits”. He died several years ago—he would have enjoyed what has happened since.&lt;/p&gt;
-&lt;p&gt;When I first learned to program, my programs were “brittle”: changing one part would break another. For several years I wanted to know how to solve this problem.&lt;/p&gt;
-&lt;p&gt;My first programming job was at IBM in Kingston New York. This was about 1974. I didn’t like corporate culture. The problem was my own immaturity, not the people at IBM. Still, I’m happy I left.&lt;/p&gt;
-&lt;p&gt;While at IBM I studied the ideas of people like Edsjer Dijkstra and especially the great David L. Parnas. Parnas was writing before languages had classes. In fact, his ideas are the reason that Leo’s classes have remained unchanged in concept even though they have been rewritten many times.&lt;/p&gt;
-&lt;p&gt;I left IBM after less than a year. For a while I owned a computer store in Madison Wisconsin, where I have lived ever since. The store didn’t turn out too well…&lt;/p&gt;
-&lt;p&gt;I married Rebecca in 1980, and we have been a happy team ever since. Leo would not have been born without her. Rebecca and I have two children, James and Linda. James is 30, Linda 23.&lt;/p&gt;
-&lt;p&gt;About this time I started a computer business selling Sherlock, a tracing tool for C programs: 
-https://sourceforge.net/projects/leo/files/Miscellaneous/Sherlock/ &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://leoeditor.com/"&gt;Leo&lt;/a&gt; is OpenSource,written by Python,can run in M$/Linux/&lt;span class="caps"&gt;MAC&lt;/span&gt;/etc. ,Leo is Literate Environment Outline-oriented ;-)
+&lt;span class="caps"&gt;EKR&lt;/span&gt; is her&amp;nbsp;father.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;BUT&lt;/span&gt;, what is “Literate” ,is hard to explained,
+i try and try and try to show/share to Chinese People, &lt;span class="caps"&gt;BUT&lt;/span&gt;…
+next week,there is another chance for try again, and ask &lt;span class="caps"&gt;EKR&lt;/span&gt; say some abt. self…
+So! &lt;span class="caps"&gt;EKR&lt;/span&gt; writed down his colorful&amp;nbsp;life!&lt;/p&gt;
+&lt;p&gt;​I’ve been interested in computers from the time I was about 10 years&amp;nbsp;old.&lt;/p&gt;
+&lt;p&gt;I studied mathematics at Michigan State University and computer science at the University of Wisconsin, Madison. There I meant my friend and mentor, &lt;span class="caps"&gt;D.R.&lt;/span&gt;(Bob) Fitzwater. Bob encouraged me to focus more on design, less on the “bits”. He died several years ago—he would have enjoyed what has happened&amp;nbsp;since.&lt;/p&gt;
+&lt;p&gt;When I first learned to program, my programs were “brittle”: changing one part would break another. For several years I wanted to know how to solve this&amp;nbsp;problem.&lt;/p&gt;
+&lt;p&gt;My first programming job was at &lt;span class="caps"&gt;IBM&lt;/span&gt; in Kingston New York. This was about 1974. I didn’t like corporate culture. The problem was my own immaturity, not the people at &lt;span class="caps"&gt;IBM&lt;/span&gt;. Still, I’m happy I&amp;nbsp;left.&lt;/p&gt;
+&lt;p&gt;While at &lt;span class="caps"&gt;IBM&lt;/span&gt; I studied the ideas of people like Edsjer Dijkstra and especially the great David L. Parnas. Parnas was writing before languages had classes. In fact, his ideas are the reason that Leo’s classes have remained unchanged in concept even though they have been rewritten many&amp;nbsp;times.&lt;/p&gt;
+&lt;p&gt;I left &lt;span class="caps"&gt;IBM&lt;/span&gt; after less than a year. For a while I owned a computer store in Madison Wisconsin, where I have lived ever since. The store didn’t turn out too&amp;nbsp;well…&lt;/p&gt;
+&lt;p&gt;I married Rebecca in 1980, and we have been a happy team ever since. Leo would not have been born without her. Rebecca and I have two children, James and Linda. James is 30, Linda&amp;nbsp;23.&lt;/p&gt;
+&lt;p&gt;About this time I started a computer business selling Sherlock, a tracing tool for C programs:&amp;nbsp;https://sourceforge.net/projects/leo/files/Miscellaneous/Sherlock/ &lt;/p&gt;
 &lt;p&gt;I received a patent for it, but the business went nowhere. Sherlock is not needed for tracing Python programs: the pattern used in Leo suffices.
-The ideas behind Sherlock really ought to be part of Python’s logging framework. Levels of logging are feeble compared to individually named and targeted logs.&lt;/p&gt;
-&lt;p&gt;I worked (from home) for about a year for a company called Tuple in Ballard, Washington. I wrote (in C) a very fast optimizing C compiler, assembler, linker and unix-like file system for them. See the CC2 stuff at: 
-https://sourceforge.net/projects/leo/files/Miscellaneous/CC2%20and%20Psyco/&lt;/p&gt;
-&lt;p&gt;This was before the days of unit tests! At that time, having the compiler compile itself was pretty much how testing was done!&lt;/p&gt;
-&lt;p&gt;I’ve been a fan of Donald Knuth ever since graduate school. I studied his books about TeX:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Volume A, The TeXbook (Reading, Massachusetts: Addison-Wesley, 1984), x+483pp. 
-ISBN 0-201-13447-0
+The ideas behind Sherlock really ought to be part of Python’s logging framework. Levels of logging are feeble compared to individually named and targeted&amp;nbsp;logs.&lt;/p&gt;
+&lt;p&gt;I worked (from home) for about a year for a company called Tuple in Ballard, Washington. I wrote (in C) a very fast optimizing C compiler, assembler, linker and unix-like file system for them. See the &lt;span class="caps"&gt;CC2&lt;/span&gt; stuff at:&amp;nbsp;https://sourceforge.net/projects/leo/files/Miscellaneous/&lt;span class="caps"&gt;CC2&lt;/span&gt;%20and%20Psyco/&lt;/p&gt;
+&lt;p&gt;This was before the days of unit tests! At that time, having the compiler compile itself was pretty much how testing was&amp;nbsp;done!&lt;/p&gt;
+&lt;p&gt;I’ve been a fan of Donald Knuth ever since graduate school. I studied his books about&amp;nbsp;TeX:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;TeXbook&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Reading&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Massachusetts&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1984&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;483&lt;/span&gt;&lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
+&lt;span class="n"&gt;&lt;span class="caps"&gt;ISBN&lt;/span&gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13447&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 
-Volume B, TeX: The Program (Reading, Massachusetts: Addison-Wesley, 1986), xviii+600pp. ISBN 0-201-13437-3
+&lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TeX&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;Program&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Reading&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Massachusetts&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1986&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;xviii&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;600&lt;/span&gt;&lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;ISBN&lt;/span&gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13437&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
 
-Volume B is written in Pascal(!) and organized (if you can call it that) using Knuth’s WEB system. I studied WEB intensely.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Despite understanding bits and pieces of the 600-page code in volume B, I really didn’t understand the code. I asked myself, why is this so hard to understand? After perhaps 6 months of wondering, the basis of Leo came to me: webs are outlines in disguise. Actually, &lt;em&gt;all&lt;/em&gt; programs are outlines in disguise.&lt;/p&gt;
-&lt;p&gt;You can read about the rest of Leo’s history here:
-http://leoeditor.com/appendices.html#history-of-leo&lt;/p&gt;
-&lt;p&gt;I learned about Python in 2001. I was working on the Python version of Leo on September 11.&lt;/p&gt;
-&lt;p&gt;Two years ago I got interested in Guido’s keynote about static type checking. I contacted him and started this project:
-https://groups.google.com/forum/#!forum/python-static-type-checking&lt;/p&gt;
-&lt;p&gt;I spent lots of time learning how to traverse parse trees quickly. That’s not nothing, but it’s only the beginning of the task. Perhaps next year I’ll be able to do for type analysis what I did for traversing parse trees ;-)&lt;/p&gt;
+&lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;written&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Pascal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;organized&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;Knuth&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;WEB&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;studied&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;WEB&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;intensely&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Despite understanding bits and pieces of the 600-page code in volume B, I really didn’t understand the code. I asked myself, why is this so hard to understand? After perhaps 6 months of wondering, the basis of Leo came to me: webs are outlines in disguise. Actually, &lt;em&gt;all&lt;/em&gt; programs are outlines in&amp;nbsp;disguise.&lt;/p&gt;
+&lt;p&gt;You can read about the rest of Leo’s history here:&amp;nbsp;http://leoeditor.com/appendices.html#history-of-leo&lt;/p&gt;
+&lt;p&gt;I learned about Python in 2001. I was working on the Python version of Leo on September&amp;nbsp;11.&lt;/p&gt;
+&lt;p&gt;Two years ago I got interested in Guido’s keynote about static type checking. I contacted him and started this project:&amp;nbsp;https://groups.google.com/forum/#!forum/python-static-type-checking&lt;/p&gt;
+&lt;p&gt;I spent lots of time learning how to traverse parse trees quickly. That’s not nothing, but it’s only the beginning of the task. Perhaps next year I’ll be able to do for type analysis what I did for traversing parse trees&amp;nbsp;;-)&lt;/p&gt;
 &lt;p&gt;​
-And that’s about it. I’ve ever only been interested in programming. I love seeing how other people use Leo, but such excursions are not for me. I remain interested in programming because it has never been easy for me.&lt;/p&gt;
+And that’s about it. I’ve ever only been interested in programming. I love seeing how other people use Leo, but such excursions are not for me. I remain interested in programming because it has never been easy for&amp;nbsp;me.&lt;/p&gt;
 &lt;p&gt;I am a mediocre wei chi player, despite many lessons from Yang Yi-Lun 杨以伦, pro 7 dan: 
 https://en.wikipedia.org/wiki/Yilun_Yang 
-I do know enough to appreciate famous games. &lt;/p&gt;
+I do know enough to appreciate famous&amp;nbsp;games. &lt;/p&gt;
 &lt;p&gt;One of my favorites was played between the two great rivals Go Seigen 吳清源 and Kitani Minoru 木谷 実 on March 20, 1932. 
-Go Seigen won by resignation, despite losing about 25 stones.&lt;/p&gt;
+Go Seigen won by resignation, despite losing about 25&amp;nbsp;stones.&lt;/p&gt;
 &lt;p&gt;I play the piano and take lessons from a great musician, Michael Butkus-Bomier: http://www.michaelbb.info/
-I enjoy painting. About 20 years ago I received a black belt in karate.&lt;/p&gt;
-&lt;p&gt;HTH.&lt;/p&gt;
+I enjoy painting. About 20 years ago I received a black belt in&amp;nbsp;karate.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HTH&lt;/span&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
@@ -126,42 +128,40 @@ I enjoy painting. About 20 years ago I received a black belt in karate.&lt;/p&gt
 &lt;/blockquote&gt;
 &lt;p&gt;10岁开始,俺就对计算机上了心.&lt;/p&gt;
 &lt;p&gt;俺是密歇根州立大学数学系的,也是威斯康星大学麦迪逊学院计算机系的.在那儿,遇到了俺的导师(Bob) Fitzwater教授,他建议俺多关注设计,而不仅仅是”字节”.
-几年前,Bob 已仙去,不过,他要是知道俺在折腾什么一定会很高兴.&lt;/p&gt;
-&lt;p&gt;开始编程时,俺的程序特色是”脆”:某处囧了,另外的也会杯具. 那些年俺一直在想法解决这种事儿!&lt;/p&gt;
-&lt;p&gt;俺第一份程序猿工作是在1974年进入 IBM (Kingston New York). 俺并不喜欢企业文化,当然问题在俺不在 IBM, 总之很高兴俺及时离开了.&lt;/p&gt;
-&lt;p&gt;有IBM 俺接触到象 Edsjer Dijkstra 或是 伟大的 David L. Parnas 们的想法.Parnas写的书面语言类, 诱发了 Leo 的类概念无论怎么重写都不会改变!&lt;/p&gt;
-&lt;p&gt;离开 IBM 快一年时.有一阵子,俺在威斯康星的麦迪逊那儿有个电脑店.事儿并不忙…&lt;/p&gt;
-&lt;p&gt;1980年,俺同 Rebecca 结婚了,从此有了俺自个儿的快乐团队.如果没有她, Leo 也诞生不出来. Rebecca 和俺有两个娃儿,James 和 Linda. 现在 James 30, Linda 23.&lt;/p&gt;
+几年前,Bob&amp;nbsp;已仙去,不过,他要是知道俺在折腾什么一定会很高兴.&lt;/p&gt;
+&lt;p&gt;开始编程时,俺的程序特色是”脆”:某处囧了,另外的也会杯具.&amp;nbsp;那些年俺一直在想法解决这种事儿!&lt;/p&gt;
+&lt;p&gt;俺第一份程序猿工作是在1974年进入 &lt;span class="caps"&gt;IBM&lt;/span&gt; (Kingston New York). 俺并不喜欢企业文化,当然问题在俺不在 &lt;span class="caps"&gt;IBM&lt;/span&gt;,&amp;nbsp;总之很高兴俺及时离开了.&lt;/p&gt;
+&lt;p&gt;有&lt;span class="caps"&gt;IBM&lt;/span&gt; 俺接触到象 Edsjer Dijkstra 或是 伟大的 David L. Parnas 们的想法.Parnas写的书面语言类, 诱发了 Leo&amp;nbsp;的类概念无论怎么重写都不会改变!&lt;/p&gt;
+&lt;p&gt;离开 &lt;span class="caps"&gt;IBM&lt;/span&gt;&amp;nbsp;快一年时.有一阵子,俺在威斯康星的麦迪逊那儿有个电脑店.事儿并不忙…&lt;/p&gt;
+&lt;p&gt;1980年,俺同 Rebecca 结婚了,从此有了俺自个儿的快乐团队.如果没有她, Leo 也诞生不出来. Rebecca 和俺有两个娃儿,James 和 Linda. 现在 James 30, Linda&amp;nbsp;23.&lt;/p&gt;
 &lt;p&gt;大约这时期,俺开始销售 Sherlock, 针对C程序的追踪工具.: https://sourceforge.net/projects/leo/files/Miscellaneous/Sherlock/
 俺拥有相关专科,但是没什么业务.Sherlock 没必要对 Python 程序进行追踪: Leo 足够用了!
-Sherlock背后的想法的确出自Python 的日志框架.分级的日志绝对比苍白的命名式日志要好用的多.&lt;/p&gt;
-&lt;p&gt;俺为华盛顿一家名为”Tuple in Ballard”的公司SOHO 了一年, 写(用C)了些很快的编译器,汇编器,链接器,以及 Unix样的文件系统.参考 CC2: https://sourceforge.net/projects/leo/files/Miscellaneous/CC2%20and%20Psyco/
-这儿是几天前的集成测试结果!当时,编译过编译器自身比跑通测试重要的多.&lt;/p&gt;
-&lt;p&gt;毕业以来,俺一直是高纳德的粉丝. 学习过他有关TeX 的书.包括:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;卷A，TeXbook（阅读，马萨诸塞州：Addison-Wesley出版社，1984），X+483页。 ISBN0-201-13447-0
+Sherlock背后的想法的确出自Python&amp;nbsp;的日志框架.分级的日志绝对比苍白的命名式日志要好用的多.&lt;/p&gt;
+&lt;p&gt;俺为华盛顿一家名为”Tuple in Ballard”的公司&lt;span class="caps"&gt;SOHO&lt;/span&gt; 了一年, 写(用C)了些很快的编译器,汇编器,链接器,以及 Unix样的文件系统.参考 &lt;span class="caps"&gt;CC2&lt;/span&gt;: https://sourceforge.net/projects/leo/files/Miscellaneous/&lt;span class="caps"&gt;CC2&lt;/span&gt;%20and%20Psyco/&amp;nbsp;这儿是几天前的集成测试结果!当时,编译过编译器自身比跑通测试重要的多.&lt;/p&gt;
+&lt;p&gt;毕业以来,俺一直是高纳德的粉丝. 学习过他有关TeX&amp;nbsp;的书.包括:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;卷&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="n"&gt;TeXbook&lt;/span&gt;&lt;span class="err"&gt;（阅读，马萨诸塞州：&lt;/span&gt;&lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="err"&gt;出版社，&lt;/span&gt;&lt;span class="mi"&gt;1984&lt;/span&gt;&lt;span class="err"&gt;），&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;483&lt;/span&gt;&lt;span class="err"&gt;页。&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;ISBN0&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13447&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 
-卷B, TEX:程序（阅读，马萨诸塞州：Addison-Wesley出版社，1986），18+600页。 ISBN0-201-13437-3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;B卷是用 Pascal(!) 完成并组织的(甚至于可以调用它),运用了 高纳德的 WEB 系统.俺立即对 WEB 系统着迷了.&lt;/p&gt;
-&lt;p&gt;尽管对卷B 600多页中散布的代码进行了反复理解,依然一头雾水.俺反问自个儿,有这么难嘛?又过了大约半年, 完成了 Leo 的主要部分后,回过味儿来:&lt;/p&gt;
-&lt;p&gt;WEB 就是变形的大纲
-事实上:&lt;/p&gt;
+&lt;span class="err"&gt;卷&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;TEX&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;程序（阅读，马萨诸塞州：&lt;/span&gt;&lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="err"&gt;出版社，&lt;/span&gt;&lt;span class="mi"&gt;1986&lt;/span&gt;&lt;span class="err"&gt;），&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;600&lt;/span&gt;&lt;span class="err"&gt;页。&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;ISBN0&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13437&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;B卷是用 Pascal(!) 完成并组织的(甚至于可以调用它),运用了 高纳德的 &lt;span class="caps"&gt;WEB&lt;/span&gt; 系统.俺立即对 &lt;span class="caps"&gt;WEB&lt;/span&gt;&amp;nbsp;系统着迷了.&lt;/p&gt;
+&lt;p&gt;尽管对卷B 600多页中散布的代码进行了反复理解,依然一头雾水.俺反问自个儿,有这么难嘛?又过了大约半年, 完成了 Leo&amp;nbsp;的主要部分后,回过味儿来:&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;WEB&lt;/span&gt; 就是变形的大纲&amp;nbsp;事实上:&lt;/p&gt;
 &lt;p&gt;一切程序都是大纲的变形 !
-Leo 其余的历史可以在这儿查阅:
-http://leoeditor.com/appendices.html#history-of-leo&lt;/p&gt;
-&lt;p&gt;俺在2001 年才学的 Python.同年9月11日开始,就用Python 来构建 Leo 了.&lt;/p&gt;
-&lt;p&gt;两年前俺关注到 Guido 有关静态类型检查的报告.于是联系上他启动了这个项目:
-https://groups.google.com/forum/#!forum/python-static-type-checking&lt;/p&gt;
-&lt;p&gt;俺花了大量的时间来学习如何快速遍历语法树.这不算什么事儿,但却是此任务的必然起点. 也许明年俺能基于语法树开展类型分析了 ;-)&lt;/p&gt;
-&lt;p&gt;(嚓! 王珢的 https://github.com/yinwang0/pysonar2 已经折腾很NB ;-)&lt;/p&gt;
-&lt;p&gt;是也乎,俺就是对编程感兴趣.俺喜欢见证大家对 Leo 的喜爱, 但是,这不会是俺的一切.俺保持编程的兴趣,因为对俺这从来不是简单的事儿.&lt;/p&gt;
+Leo 其余的历史可以在这儿查阅:&amp;nbsp;http://leoeditor.com/appendices.html#history-of-leo&lt;/p&gt;
+&lt;p&gt;俺在2001 年才学的 Python.同年9月11日开始,就用Python 来构建 Leo&amp;nbsp;了.&lt;/p&gt;
+&lt;p&gt;两年前俺关注到 Guido 有关静态类型检查的报告.于是联系上他启动了这个项目:&amp;nbsp;https://groups.google.com/forum/#!forum/python-static-type-checking&lt;/p&gt;
+&lt;p&gt;俺花了大量的时间来学习如何快速遍历语法树.这不算什么事儿,但却是此任务的必然起点. 也许明年俺能基于语法树开展类型分析了&amp;nbsp;;-)&lt;/p&gt;
+&lt;p&gt;(嚓! 王珢的 https://github.com/yinwang0/pysonar2 已经折腾很&lt;span class="caps"&gt;NB&lt;/span&gt;&amp;nbsp;;-)&lt;/p&gt;
+&lt;p&gt;是也乎,俺就是对编程感兴趣.俺喜欢见证大家对 Leo 的喜爱,&amp;nbsp;但是,这不会是俺的一切.俺保持编程的兴趣,因为对俺这从来不是简单的事儿.&lt;/p&gt;
 &lt;p&gt;俺是名普通的围棋爱好者, 从 Yang Yi-Lun (杨以伦)那儿学了很多, pro 7 dan: https://en.wikipedia.org/wiki/Yilun_Yang
 俺能欣赏历史上知名的对弈, 其中最喜欢的是 1932年3月20号 吳清源 同 木谷 実(Kitani Minoru)的对战.尽管少了25颗棋子,但吳清源最终赢了!
 俺也弹钢琴,并学习了伟大的 Michael Butkus-Bomier 的课程: http://www.michaelbb.info/
-俺也享受绘画. 另外20年前,俺也拿到了空手道的黒带.&lt;/p&gt;
+俺也享受绘画.&amp;nbsp;另外20年前,俺也拿到了空手道的黒带.&lt;/p&gt;
 &lt;p&gt;以上.&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;140107 move into Pelican as zoomquiet.io&lt;/li&gt;
-&lt;li&gt;131106 pub. &lt;a href="https://medium.com/i-m-h-o/9520fee0b59f"&gt;EKR to Chinese programmer — I. M. H. O. — Medium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
+&lt;li&gt;131106 pub. &lt;a href="https://medium.com/i-m-h-o/9520fee0b59f"&gt;&lt;span class="caps"&gt;EKR&lt;/span&gt; to Chinese programmer — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="EKR"></category><category term="Leo"></category><category term="PyConChina"></category><category term="Zh"></category></entry></feed>

@@ -1,115 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/imho.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2013-12-24T00:00:00+08:00</updated><entry><title>On object-oriented programming</title><link href="http://blog.zoomquiet.io/imho/131224-yw-on-oop.html" rel="alternate"></link><updated>2013-12-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-24:imho/131224-yw-on-oop.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="/" rel="alternate"></link><link href="/feeds/imho.atom.xml" rel="self"></link><id>/</id><updated>2013-12-24T00:00:00+08:00</updated><entry><title>On object-oriented programming</title><link href="/131224-yw-on-oop.html" rel="alternate"></link><updated>2013-12-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-12-24:131224-yw-on-oop.html</id><summary type="html">
 &lt;h1 id="_1"&gt;翻越分享原文&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;via: http://yinwang0.wordpress.com/2013/12/24/on-object-oriented-programming/&lt;/li&gt;
-&lt;li&gt;Posted by Yin Wang in &lt;a href="http://yinwang0.wordpress.com/category/oop/"&gt;oop&lt;/a&gt;,&lt;a href="http://yinwang0.wordpress.com/category/programming-languages/"&gt;programming languages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;via: http://yinwang0.wordpress.com/2013/12/24/on-object-oriented-programming/&lt;/li&gt;
+&lt;li&gt;Posted by Yin Wang in &lt;a href="http://yinwang0.wordpress.com/category/oop/"&gt;oop&lt;/a&gt;,&lt;a href="http://yinwang0.wordpress.com/category/programming-languages/"&gt;programming languages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="yw_dark_age_battle.jpg" src="http://zoomq.qiniudn.com/ZQCollection/img/yw_dark_age_battle.jpg"/&gt;&lt;/p&gt;
-&lt;p&gt;[written at the end of 2013 AD, during the Dark Ages of programming]&lt;/p&gt;
-&lt;p&gt;The programmer’s world is full of fads and superstitions. Every now and then there will be somebody who come up and announce: “I can save the world!” No matter whether the ideas are good or not, there will always be followers, and the ideas soon become their religion. They then develop their community or camp, try to let those ideas dominate the world, and try to make the ideas live forever.&lt;/p&gt;
-&lt;p&gt;Object-oriented programming (OOP) is such a religion which claimed to be able to save the world from the so-called “software crisis”. As a hindsight after so many years since it was introduced, not only didn’t OOP save us, it brought us more confusion and harm than benefits. Unfortunately its dogmas and mispractices have become wide-spread and deeply intrenched. In this article, I hope to provide my viewpoint into this matter and try to find out the lessons that we can learn.&lt;/p&gt;
-&lt;p&gt;Like every article on my blog, the opinions are completely personal and not representing my employers or professors.&lt;/p&gt;
-&lt;h2 id="is-everything-an-object"&gt;Is everything an object?&lt;/h2&gt;
-&lt;p&gt;“Everything is an object” is the core dogma of OOP and deemed as the highest standards of OO language design. Now let’s take a careful look to see if it is true, or if it is a good idea to make things that way.&lt;/p&gt;
-&lt;p&gt;Many people take “everything is an object” for granted because when this sentence is taken literally it matches their everyday experience. Since the word “object” in English basically means “a thing”, how can “everything is an object” be not true? But be careful since the definition of an “object” in OOP has a specific meaning which is very different from what it means in English.&lt;/p&gt;
-&lt;p&gt;OOP’s definition of an 
+&lt;p&gt;[written at the end of 2013 &lt;span class="caps"&gt;AD&lt;/span&gt;, during the Dark Ages of programming]&lt;/p&gt;
+&lt;p&gt;The programmer’s world is full of fads and superstitions. Every now and then there will be somebody who come up and announce: “I can save the world!” No matter whether the ideas are good or not, there will always be followers, and the ideas soon become their religion. They then develop their community or camp, try to let those ideas dominate the world, and try to make the ideas live forever.&lt;/p&gt;
+&lt;p&gt;Object-oriented programming (&lt;span class="caps"&gt;OOP&lt;/span&gt;) is such a religion which claimed to be able to save the world from the so-called “software crisis”. As a hindsight after so many years since it was introduced, not only didn’t &lt;span class="caps"&gt;OOP&lt;/span&gt; save us, it brought us more confusion and harm than benefits. Unfortunately its dogmas and mispractices have become wide-spread and deeply intrenched. In this article, I hope to provide my viewpoint into this matter and try to find out the lessons that we can learn.&lt;/p&gt;
+&lt;p&gt;Like every article on my blog, the opinions are completely personal and not representing my employers or professors.&lt;/p&gt;
+&lt;h2 id="is-everything-an-object"&gt;Is everything an object?&lt;/h2&gt;
+&lt;p&gt;“Everything is an object” is the core dogma of &lt;span class="caps"&gt;OOP&lt;/span&gt; and deemed as the highest standards of &lt;span class="caps"&gt;OO&lt;/span&gt; language design. Now let’s take a careful look to see if it is true, or if it is a good idea to make things that way.&lt;/p&gt;
+&lt;p&gt;Many people take “everything is an object” for granted because when this sentence is taken literally it matches their everyday experience. Since the word “object” in English basically means “a thing”, how can “everything is an object” be not true? But be careful since the definition of an “object” in &lt;span class="caps"&gt;OOP&lt;/span&gt; has a specific meaning which is very different from what it means in English.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OOP&lt;/span&gt;’s definition of an 
 &lt;a href="http://en.wikipedia.org/wiki/Object-oriented_programming"&gt;object&lt;/a&gt;
  is “a combination of 
  &lt;a href="http://en.wikipedia.org/wiki/Field_(computer_science)"&gt;data fields&lt;/a&gt;
   (attributes that describe the object) and associated procedures known as 
 &lt;a href="http://en.wikipedia.org/wiki/Method_(computer_science)"&gt;methods&lt;/a&gt;
-“. Can you really fit everything into this model?&lt;/p&gt;
-&lt;p&gt;First let’s look at the real world and see if this definition can capture everything. Cars, trees, animals may sometimes be thought of as objects, but what about a change of the objects’ position, its velocity and duration? What methods do they have? Well, you may define classes called Velocity or Time, with methods such as addition, but do velocity and time really contain the things that you call “methods”? They don’t. They are just your imagination. You can add the velocities or time, but how can velocities or time contain the addition procedure? This is like saying that the bullets contain the gun.&lt;/p&gt;
-&lt;p&gt;So the most you can say is that “everything is an object” is a good way of thinking, but that is not true either. The definition of an object implies that a method can only belong to one object, but most of the time it doesn’t make sense thinking of functions as belonging to any object. Say we have the expression 1+2, does the operator ‘+’ belong to 1, or does it belong to 2? You have to make some arbitrary choice. Since you can make a choice, this means the ‘+’ operator doesn’t really belong to either of them. It is inherently outside of the objects.&lt;/p&gt;
+“. Can you really fit everything into this model?&lt;/p&gt;
+&lt;p&gt;First let’s look at the real world and see if this definition can capture everything. Cars, trees, animals may sometimes be thought of as objects, but what about a change of the objects’ position, its velocity and duration? What methods do they have? Well, you may define classes called Velocity or Time, with methods such as addition, but do velocity and time really contain the things that you call “methods”? They don’t. They are just your imagination. You can add the velocities or time, but how can velocities or time contain the addition procedure? This is like saying that the bullets contain the gun.&lt;/p&gt;
+&lt;p&gt;So the most you can say is that “everything is an object” is a good way of thinking, but that is not true either. The definition of an object implies that a method can only belong to one object, but most of the time it doesn’t make sense thinking of functions as belonging to any object. Say we have the expression 1+2, does the operator ‘+’ belong to 1, or does it belong to 2? You have to make some arbitrary choice. Since you can make a choice, this means the ‘+’ operator doesn’t really belong to either of them. It is inherently outside of the objects.&lt;/p&gt;
 &lt;p&gt;So thinking of some things as objects may be helpful, but thinking of 
-&lt;code&gt;everything&lt;/code&gt; as an object is neither true nor useful.  Unfortunately “everything is an object” has been taken as a dogma and the highest standard of OO language design. Some OO languages claim that everything is an object in them. Whenever you notice that something is not an object, somebody will try to make it one. They may succeed in that, but things get very complicated that way, because that’s not how things work.&lt;/p&gt;
+&lt;code&gt;everything&lt;/code&gt; as an object is neither true nor useful.  Unfortunately “everything is an object” has been taken as a dogma and the highest standard of &lt;span class="caps"&gt;OO&lt;/span&gt; language design. Some &lt;span class="caps"&gt;OO&lt;/span&gt; languages claim that everything is an object in them. Whenever you notice that something is not an object, somebody will try to make it one. They may succeed in that, but things get very complicated that way, because that’s not how things work.&lt;/p&gt;
 &lt;p&gt;The idealism of “everything is an object” is similar to “everything is a function” in the functional programming world and “everything is a set” in the math world. Before computer science was conceived there was a thing called the 
 &lt;a href="http://en.wikipedia.org/wiki/Lambda_calculus"&gt;lambda calculus&lt;/a&gt;
 . Some people encoded everything including numbers and their operations, various data structures and control structures, … all in lambdas. One of the encodings of numbers is called the 
 &lt;a href="http://en.wikipedia.org/wiki/Church_encoding"&gt;Church numeral&lt;/a&gt;
-. Every programming language researcher has played with them during their training. But unlike “everything is an object”, “everything is a function” has never become a dogma or marketing phrase. Those formulations sometimes provide mental exercises and inspirations to the researchers but nobody really use them for actual computation, because they are inefficient and they are not really how things work. They are just approximations (models) to some essence of computation that we can’t see. If you really use them for practical projects, things become complicated.&lt;/p&gt;
-&lt;p&gt;Mathematicians have a similar thing: set theory. Some geniuses encoded everything — numbers, operations on numbers, mathematical structures, … all in sets. Everything is just sets containing sets containing sets and so on. What’s the problem? But when they really tried to do their proofs using those sets, the proofs fell under their own weights. Too complicated. Even with the complexity, set theory is not expressive enough to capture whatever the mathematicians have to say. Many people tried to fix it, but they all failed.&lt;/p&gt;
-&lt;p&gt;So “everything is an object” is in some sense on the same track of “everything is a function” and “everything is a set”. Good thought exercise, but doesn’t really work well in practice. I don’t think that there is some “one true language”, but this model of OOP is too far from correct or practical. It’s somewhat like the 
+. Every programming language researcher has played with them during their training. But unlike “everything is an object”, “everything is a function” has never become a dogma or marketing phrase. Those formulations sometimes provide mental exercises and inspirations to the researchers but nobody really use them for actual computation, because they are inefficient and they are not really how things work. They are just approximations (models) to some essence of computation that we can’t see. If you really use them for practical projects, things become complicated.&lt;/p&gt;
+&lt;p&gt;Mathematicians have a similar thing: set theory. Some geniuses encoded everything — numbers, operations on numbers, mathematical structures, … all in sets. Everything is just sets containing sets containing sets and so on. What’s the problem? But when they really tried to do their proofs using those sets, the proofs fell under their own weights. Too complicated. Even with the complexity, set theory is not expressive enough to capture whatever the mathematicians have to say. Many people tried to fix it, but they all failed.&lt;/p&gt;
+&lt;p&gt;So “everything is an object” is in some sense on the same track of “everything is a function” and “everything is a set”. Good thought exercise, but doesn’t really work well in practice. I don’t think that there is some “one true language”, but this model of &lt;span class="caps"&gt;OOP&lt;/span&gt; is too far from correct or practical. It’s somewhat like the 
 &lt;a href="http://en.wikipedia.org/wiki/Flat_Earth"&gt;flat earth theory&lt;/a&gt;
 . Until today 
 &lt;a href="http://theflatearthsociety.org/"&gt;some people&lt;/a&gt;
-still believe that the earth is flat and make all kinds of theories to prove it. Some of their arguments look very scientific, but do you believe in their formulas or a picture of the earth from the ISS? When you get the fundamental things wrong and don’t throw them away, you have to patch them endlessly with even more complicated theories. And that’s what happened to OOP.&lt;/p&gt;
+still believe that the earth is flat and make all kinds of theories to prove it. Some of their arguments look very scientific, but do you believe in their formulas or a picture of the earth from the &lt;span class="caps"&gt;ISS&lt;/span&gt;? When you get the fundamental things wrong and don’t throw them away, you have to patch them endlessly with even more complicated theories. And that’s what happened to &lt;span class="caps"&gt;OOP&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="yw_flat-earth.png" src="http://zoomq.qiniudn.com/ZQCollection/img/yw_flat-earth.png"/&gt;&lt;/p&gt;
-&lt;h2 id="are-functions-objects"&gt;Are functions objects?&lt;/h2&gt;
-&lt;p&gt;From what I know, the original motivation of putting functions inside objects was to support GUI applications. You click on a button and some function (a callback) will be invoked. For the convenience of referring to the button, the callback takes the triggered object as its first argument. Since the callback does nothing more than this, it seems to be convenient to just store it inside the button. And thus we had an “object” which combines the attributes of the button and a method (the callback). Indeed this is a good idea, but this limited usage case can’t really justify a universal notion of “everything is an object”, just like a two-mile walk can’t prove that the earth is flat.&lt;/p&gt;
-&lt;p&gt;If you really understand what is abstraction, you may have noticed that even the above story contains a subtle mistake: the callback in the button is not really a method. The true purpose of a method is to provide abstraction to the attributes, but the callback’s purpose is not to provide abstraction. It is just a usual function triggered by the button, which happens to take the button as its first argument.&lt;/p&gt;
-&lt;p&gt;Very few functions should be considered methods of an object. If you look carefully, most of the time the objects just serve as a namespace (or module) in which you can store attributes and functions, but those functions don’t logically belong to the objects. They just take the objects as inputs and produce some output. Only the functions that are most intimately connected to the attributes and provide an abstraction layer to them should be considered methods. Most of those are called “getters”, “setters” or “iterators”.&lt;/p&gt;
-&lt;p&gt;In some languages such as Scala or Python, functions are also treated as objects. But actually they just wrapped the functions into an object, give them some name such as “apply” or “&lt;strong&gt;call&lt;/strong&gt;”, so that when the objects are “invoked” you know which functions to call. But putting a function into an object doesn’t really mean that functions are also objects, just like inviting friends to your house doesn’t make them your family.&lt;/p&gt;
-&lt;p&gt;Functions are fundamental constructs. They don’t belong to objects. They describe a change, transition or transformation of objects. They are not objects and can’t be simulated by objects. They are like a base case of an inductive definition. They are where the illusion of “everything is an object” ends.&lt;/p&gt;
-&lt;h2 id="the-cost-of-excessive-abstraction"&gt;The cost of excessive abstraction&lt;/h2&gt;
-&lt;p&gt;The major appeal of OOP is abstraction (and thus code reusing and DRY), but actually most of those abstraction facilities are already provided by traditional procedural languages and functional languages. Some of them do it even better than OO languages. OO claims its originality by emphasizing abstraction much more strongly than other languages. The result is that OO programmers usually overdo it. Some of them pursue abstraction and code reusing to the degree as if they are everything about programming.&lt;/p&gt;
+&lt;h2 id="are-functions-objects"&gt;Are functions objects?&lt;/h2&gt;
+&lt;p&gt;From what I know, the original motivation of putting functions inside objects was to support &lt;span class="caps"&gt;GUI&lt;/span&gt; applications. You click on a button and some function (a callback) will be invoked. For the convenience of referring to the button, the callback takes the triggered object as its first argument. Since the callback does nothing more than this, it seems to be convenient to just store it inside the button. And thus we had an “object” which combines the attributes of the button and a method (the callback). Indeed this is a good idea, but this limited usage case can’t really justify a universal notion of “everything is an object”, just like a two-mile walk can’t prove that the earth is flat.&lt;/p&gt;
+&lt;p&gt;If you really understand what is abstraction, you may have noticed that even the above story contains a subtle mistake: the callback in the button is not really a method. The true purpose of a method is to provide abstraction to the attributes, but the callback’s purpose is not to provide abstraction. It is just a usual function triggered by the button, which happens to take the button as its first argument.&lt;/p&gt;
+&lt;p&gt;Very few functions should be considered methods of an object. If you look carefully, most of the time the objects just serve as a namespace (or module) in which you can store attributes and functions, but those functions don’t logically belong to the objects. They just take the objects as inputs and produce some output. Only the functions that are most intimately connected to the attributes and provide an abstraction layer to them should be considered methods. Most of those are called “getters”, “setters” or “iterators”.&lt;/p&gt;
+&lt;p&gt;In some languages such as Scala or Python, functions are also treated as objects. But actually they just wrapped the functions into an object, give them some name such as “apply” or “&lt;strong&gt;call&lt;/strong&gt;”, so that when the objects are “invoked” you know which functions to call. But putting a function into an object doesn’t really mean that functions are also objects, just like inviting friends to your house doesn’t make them your family.&lt;/p&gt;
+&lt;p&gt;Functions are fundamental constructs. They don’t belong to objects. They describe a change, transition or transformation of objects. They are not objects and can’t be simulated by objects. They are like a base case of an inductive definition. They are where the illusion of “everything is an object” ends.&lt;/p&gt;
+&lt;h2 id="the-cost-of-excessive-abstraction"&gt;The cost of excessive abstraction&lt;/h2&gt;
+&lt;p&gt;The major appeal of &lt;span class="caps"&gt;OOP&lt;/span&gt; is abstraction (and thus code reusing and &lt;span class="caps"&gt;DRY&lt;/span&gt;), but actually most of those abstraction facilities are already provided by traditional procedural languages and functional languages. Some of them do it even better than &lt;span class="caps"&gt;OO&lt;/span&gt; languages. &lt;span class="caps"&gt;OO&lt;/span&gt; claims its originality by emphasizing abstraction much more strongly than other languages. The result is that &lt;span class="caps"&gt;OO&lt;/span&gt; programmers usually overdo it. Some of them pursue abstraction and code reusing to the degree as if they are everything about programming.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="yw_screen-shot-2014-01-02-at-2-02-38-am.png" src="http://zoomq.qiniudn.com/ZQCollection/img/yw_screen-shot-2014-01-02-at-2-02-38-am.png"/&gt;&lt;/p&gt;
-&lt;p&gt;For the purpose of code reusing, OO encourages a level of abstraction which makes programs hard to understand and hard to analyze. I often see Java programs with multiple levels of inheritance, overloading and design patterns, but actually doing very little. And because there is so much code that doesn’t do useful things, it is really hard to find out which part of the code is doing the thing you want. It is like going through a maze. Another nice word for this is “robustness”. If I have to go into all this trouble to make code reusable or robust, I’d rather just make copies of the code and modify them, but keep each copy simple and easy to understand.&lt;/p&gt;
-&lt;p&gt;Whenever you criticize Java or C++ for their verbosity, OO proponents will tell you that they are not authentic OO languages. They would ask you to look at Smalltalk. If Smalltalk’s ways are that good, why almost nobody is using Smalltalk now? Because there are real problems in its approach. I think Smalltalk is the origin of over-abstraction and over-complication you find in other OO languages.&lt;/p&gt;
-&lt;p&gt;The “authentic” OO style of Smalltalk promotes the notion of “extremely late binding”, which basically means that the meaning of the program constructs is determined as late as possible. Late binding gives you a chance to swap out the underlying implementation without forcing the upper levels to change, but this also means that you are no longer sure what a piece of code means. When I look at expressions such as ’1+2′ and ‘if (t) then … else …’ in Java or C++, I at least know for sure that they mean an integer addition and an usual conditional. But I’m no longer sure about this in an “extremely late binding language”, because the meaning of ‘+’ and ‘if” can be redefined. Giving the programmers the power of defining control structures is a bad idea, because soon your language will be abundant of quirky control structures designed by programmers who try to be clever. It will no longer be the language that you used to know.&lt;/p&gt;
-&lt;p&gt;An example for this feature is Smalltalk’s conditional structure, which looks like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::lisp
-result := a &amp;gt; b
-    ifTrue:[ 'greater' ]
-    ifFalse:[ 'less or equal' ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You send a message ifTrue: to a Boolean object, passing as an argument a block of code to be executed if and only if the Boolean receiver is true.&lt;/p&gt;
-&lt;p&gt;First of all, if you really have a well-designed language, you shouldn’t be wanting to define your own control structures. As a seasoned Lisp/Scheme programmer, I have seen many custom-designed control structures (such as the various looping macros) over the years, but none of them turned out to be good ideas. I’d rather write slightly longer and more verbose code in the vanilla language than to learn those weird control structures. Second, if you are really genius enough to have invented another good control structure, the late binding feature of Smalltalk probably won’t provide you the necessary power for defining it. The power of functions as an abstraction tool is limited. It is strictly less powerful than Lisp/Scheme’s macros. Third, this feature of Smalltalk is not really a novel approach and it has a big problem. A similar but more beautiful conditional construct had been defined in lambda calculus since before computer science was born:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::lisp
-TRUE = λx.λy.x
-FALSE = λx.λy.y
-IF = λb.λt.λf.b t f
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This is very beautiful and can be done in any functional language, but why none of the functional languages implement conditionals this way? Because when you see an expression IF b t f, you will have no idea whether it is a conditional or not, because IF can be redefined in the program. Also because IF is just a function, it may also accept unexpected values other than TRUE or FALSE. This may happen to make the conditional construct work but cause trouble later on. This is called “unintentional semantics”. This kind of bug can be very hard to track down.&lt;/p&gt;
-&lt;p&gt;This approach also makes compiler and static analysis hard. When the compiler sees IF b t f, it no longer knows that it is a conditional and thus optimize it that way. It has to treat it as a usual function call. Similarly when the type checker sees it, it doesn’t know what type to expect for b, because it may not be a conditional at all. The above argument against the lambda calculus can easily be adapted to Smalltalk.&lt;/p&gt;
-&lt;p&gt;So abstraction is a powerful weapon when used moderately, but when you do it in excess, it backfires. Not only does it make it hard for humans to understand the code, it makes automated analysis tools and compiler optimizations difficult or impossible to make.&lt;/p&gt;
-&lt;h2 id="design-patterns-the-brain-eater"&gt;Design patterns, the brain eater&lt;/h2&gt;
-&lt;p&gt;Although OO languages are touted for their ways of abstraction, they are actually not strong in terms of abstraction ability and expressiveness. There are certain things that are very easy to do in traditional procedural languages and functional languages, but was made unnecessarily hard in OO languages. This is why design patterns appeared. Design patterns’ origin was mostly due to the dogma of “everything is an object”, the lack of high-order functions (or the correct implementation of them) and OO’s tendency of mystifying things.&lt;/p&gt;
-&lt;p&gt;When I first heard about design patterns I was already a PhD student at Cornell doing some PL research. I mostly used Standard ML and Haskell. After hearing my friends’ high opinions of the 
+&lt;p&gt;For the purpose of code reusing, &lt;span class="caps"&gt;OO&lt;/span&gt; encourages a level of abstraction which makes programs hard to understand and hard to analyze. I often see Java programs with multiple levels of inheritance, overloading and design patterns, but actually doing very little. And because there is so much code that doesn’t do useful things, it is really hard to find out which part of the code is doing the thing you want. It is like going through a maze. Another nice word for this is “robustness”. If I have to go into all this trouble to make code reusable or robust, I’d rather just make copies of the code and modify them, but keep each copy simple and easy to understand.&lt;/p&gt;
+&lt;p&gt;Whenever you criticize Java or C++ for their verbosity, &lt;span class="caps"&gt;OO&lt;/span&gt; proponents will tell you that they are not authentic &lt;span class="caps"&gt;OO&lt;/span&gt; languages. They would ask you to look at Smalltalk. If Smalltalk’s ways are that good, why almost nobody is using Smalltalk now? Because there are real problems in its approach. I think Smalltalk is the origin of over-abstraction and over-complication you find in other &lt;span class="caps"&gt;OO&lt;/span&gt; languages.&lt;/p&gt;
+&lt;p&gt;The “authentic” &lt;span class="caps"&gt;OO&lt;/span&gt; style of Smalltalk promotes the notion of “extremely late binding”, which basically means that the meaning of the program constructs is determined as late as possible. Late binding gives you a chance to swap out the underlying implementation without forcing the upper levels to change, but this also means that you are no longer sure what a piece of code means. When I look at expressions such as ’1+2′ and ‘if (t) then … else …’ in Java or C++, I at least know for sure that they mean an integer addition and an usual conditional. But I’m no longer sure about this in an “extremely late binding language”, because the meaning of ‘+’ and ‘if” can be redefined. Giving the programmers the power of defining control structures is a bad idea, because soon your language will be abundant of quirky control structures designed by programmers who try to be clever. It will no longer be the language that you used to know.&lt;/p&gt;
+&lt;p&gt;An example for this feature is Smalltalk’s conditional structure, which looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+    &lt;span class="nl"&gt;ifTrue:&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;greater&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="nl"&gt;ifFalse:&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;less&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;equal&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You send a message ifTrue: to a Boolean object, passing as an argument a block of code to be executed if and only if the Boolean receiver is true.&lt;/p&gt;
+&lt;p&gt;First of all, if you really have a well-designed language, you shouldn’t be wanting to define your own control structures. As a seasoned Lisp/Scheme programmer, I have seen many custom-designed control structures (such as the various looping macros) over the years, but none of them turned out to be good ideas. I’d rather write slightly longer and more verbose code in the vanilla language than to learn those weird control structures. Second, if you are really genius enough to have invented another good control structure, the late binding feature of Smalltalk probably won’t provide you the necessary power for defining it. The power of functions as an abstraction tool is limited. It is strictly less powerful than Lisp/Scheme’s macros. Third, this feature of Smalltalk is not really a novel approach and it has a big problem. A similar but more beautiful conditional construct had been defined in lambda calculus since before computer science was born:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;TRUE&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;
+&lt;span class="n"&gt;&lt;span class="caps"&gt;FALSE&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="n"&gt;&lt;span class="caps"&gt;IF&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is very beautiful and can be done in any functional language, but why none of the functional languages implement conditionals this way? Because when you see an expression &lt;span class="caps"&gt;IF&lt;/span&gt; b t f, you will have no idea whether it is a conditional or not, because &lt;span class="caps"&gt;IF&lt;/span&gt; can be redefined in the program. Also because &lt;span class="caps"&gt;IF&lt;/span&gt; is just a function, it may also accept unexpected values other than &lt;span class="caps"&gt;TRUE&lt;/span&gt; or &lt;span class="caps"&gt;FALSE&lt;/span&gt;. This may happen to make the conditional construct work but cause trouble later on. This is called “unintentional semantics”. This kind of bug can be very hard to track down.&lt;/p&gt;
+&lt;p&gt;This approach also makes compiler and static analysis hard. When the compiler sees &lt;span class="caps"&gt;IF&lt;/span&gt; b t f, it no longer knows that it is a conditional and thus optimize it that way. It has to treat it as a usual function call. Similarly when the type checker sees it, it doesn’t know what type to expect for b, because it may not be a conditional at all. The above argument against the lambda calculus can easily be adapted to Smalltalk.&lt;/p&gt;
+&lt;p&gt;So abstraction is a powerful weapon when used moderately, but when you do it in excess, it backfires. Not only does it make it hard for humans to understand the code, it makes automated analysis tools and compiler optimizations difficult or impossible to make.&lt;/p&gt;
+&lt;h2 id="design-patterns-the-brain-eater"&gt;Design patterns, the brain eater&lt;/h2&gt;
+&lt;p&gt;Although &lt;span class="caps"&gt;OO&lt;/span&gt; languages are touted for their ways of abstraction, they are actually not strong in terms of abstraction ability and expressiveness. There are certain things that are very easy to do in traditional procedural languages and functional languages, but was made unnecessarily hard in &lt;span class="caps"&gt;OO&lt;/span&gt; languages. This is why design patterns appeared. Design patterns’ origin was mostly due to the dogma of “everything is an object”, the lack of high-order functions (or the correct implementation of them) and &lt;span class="caps"&gt;OO&lt;/span&gt;’s tendency of mystifying things.&lt;/p&gt;
+&lt;p&gt;When I first heard about design patterns I was already a PhD student at Cornell doing some &lt;span class="caps"&gt;PL&lt;/span&gt; research. I mostly used Standard &lt;span class="caps"&gt;ML&lt;/span&gt; and Haskell. After hearing my friends’ high opinions of the 
 &lt;a href="http://en.wikipedia.org/wiki/Design_Patterns"&gt;Design Patterns&lt;/a&gt;
-book (nicknamed the “GoF” book), I developed curiosity about its fame, so I borrowed one from the library. Within a few hours I found a mapping from all the weird names it introduced to the programming techniques I had been using all the time. Some of them are so fundamental and exist in every high-level language, so they don’t really need names. Most of the advanced ones (such as visitor) are transcriptions of functional programming concepts into a convoluted form in order to get around OO language’s limitations. Later on I found that Peter Norvig already gave a 
+book (nicknamed the “GoF” book), I developed curiosity about its fame, so I borrowed one from the library. Within a few hours I found a mapping from all the weird names it introduced to the programming techniques I had been using all the time. Some of them are so fundamental and exist in every high-level language, so they don’t really need names. Most of the advanced ones (such as visitor) are transcriptions of functional programming concepts into a convoluted form in order to get around &lt;span class="caps"&gt;OO&lt;/span&gt; language’s limitations. Later on I found that Peter Norvig already gave a 
 &lt;a href="http://norvig.com/design-patterns"&gt;talk&lt;/a&gt;
-on design patterns as early as 1998, pointing out that almost all of the design patterns will be “transparent” once you have first-class functions. This confirmed my observations — I don’t need them.&lt;/p&gt;
-&lt;p&gt;I have to admit that some of the design patterns are cleverly designed and contain some ingenuity. You really need to get to the essence of the OO languages’ internal designs and also understand lots of functional programming techniques in order to create them. But intelligence =/= wisdom. Even if they can achieve what functional languages can do, they are usually a lot more complicated. Choosing the hard ways can’t really prove your genius. When you have first-class functions, things become so much easier and you won’t even notice the design patterns’ existence. Like Peter Norvig said, they will become transparent. So what a good language designer should do is to add first-class functions into the language instead of proposing design patterns as workarounds.&lt;/p&gt;
-&lt;p&gt;Every time I remove a design pattern (some other people wrote), the code becomes simpler and more manageable. I just removed the last visitor pattern from my Java code a few days ago and I felt so relieved. They gave me nothing but extra work when they existed. They hindered my progress. By deeply understanding how OO languages are implemented, you can write more advanced things than those provided by visitor patterns but without actually using them. I owe these insights into design patterns to some functional programming people. If you really want to understand the essence of OO design patterns and how NOT to use them, 
+on design patterns as early as 1998, pointing out that almost all of the design patterns will be “transparent” once you have first-class functions. This confirmed my observations — I don’t need them.&lt;/p&gt;
+&lt;p&gt;I have to admit that some of the design patterns are cleverly designed and contain some ingenuity. You really need to get to the essence of the &lt;span class="caps"&gt;OO&lt;/span&gt; languages’ internal designs and also understand lots of functional programming techniques in order to create them. But intelligence =/= wisdom. Even if they can achieve what functional languages can do, they are usually a lot more complicated. Choosing the hard ways can’t really prove your genius. When you have first-class functions, things become so much easier and you won’t even notice the design patterns’ existence. Like Peter Norvig said, they will become transparent. So what a good language designer should do is to add first-class functions into the language instead of proposing design patterns as workarounds.&lt;/p&gt;
+&lt;p&gt;Every time I remove a design pattern (some other people wrote), the code becomes simpler and more manageable. I just removed the last visitor pattern from my Java code a few days ago and I felt so relieved. They gave me nothing but extra work when they existed. They hindered my progress. By deeply understanding how &lt;span class="caps"&gt;OO&lt;/span&gt; languages are implemented, you can write more advanced things than those provided by visitor patterns but without actually using them. I owe these insights into design patterns to some functional programming people. If you really want to understand the essence of &lt;span class="caps"&gt;OO&lt;/span&gt; design patterns and how &lt;span class="caps"&gt;NOT&lt;/span&gt; to use them, 
 &lt;a href="http://www.amazon.com/Little-Java-Few-Patterns/dp/0262561158"&gt;this little book&lt;/a&gt;
-may be a good starting point.&lt;/p&gt;
-&lt;p&gt;Unfortunately design patterns somehow got really popular in companies, to the degree of unbearable. I saw the GoF book on almost every bookshelf when I interned at Google. Even if you don’t write them yourself, there was almost no way you could avoid other people slipping design patterns into your code. Design patterns’ marketing strategy as I perceived was much like weight loss products: “It can burn your fat without you doing any work!” They appeal to some new programmers’ hope that they can write programs without understanding the fundamental concepts of computer science. Just by applying several patterns and patching things together, they hope to have a good program. This is too good to be true. You end up doing more work than you hoped to avoid. Design patterns eat programmers’ brains. After using design patterns for some time, they no longer see things or write programs in clear and straightforward ways.&lt;/p&gt;
-&lt;h2 id="what-is-an-oo-language-any-way"&gt;What is an OO language any way?&lt;/h2&gt;
-&lt;p&gt;To this point we haven’t yet talked about what makes a language an “OO language” and what makes it not. Is it an OO language just because I can put both data fields and functions into a record? Or is it an OO language only if it also provides extremely late binding? How about inheritance, overloading, etc etc? Must I have all of them? Any of them?&lt;/p&gt;
-&lt;p&gt;It turns out that there is no good answer to this question. There really is no such thing as an “object-oriented language”. Objects can be part of a language, but it is just a small part of it. You can’t really say that a language is object-oriented just because it provides objects as a feature. The so-called OO languages are solidly rooted in traditional procedural programming (PP). OOP basically stole everything from PP, renamed the terminologies and acted as if the ideas were its own.&lt;/p&gt;
-&lt;p&gt;Historically the term OO was mainly used for marketing reasons. It could give a language some advantages of attracting people if you claim it to be an OO language, but now this advantage is diminishing because more and more people have realized the problems of OO’s methodology.&lt;/p&gt;
-&lt;h2 id="harm-in-education-and-industry"&gt;Harm in education and industry&lt;/h2&gt;
-&lt;p&gt;Although OO has lots of problems, it is very successful in marketing and has risen to a dominant position over the years. Under social and market pressure, many colleges started using OO languages such as Java as their introductory language, replacing traditional procedural languages such as Pascal and functional languages such as Scheme. This in a large degree caused the students’ failure to learn the most essential concepts of programming. The only thing that OO emphasizes is code reusing, but how can you teach it to the students who can’t even write usable code, not to mention that code reusing is not really as important as some people believe.&lt;/p&gt;
-&lt;p&gt;At both Cornell and Indiana, I have been a TA for introductory programming courses in Java. I did it for multiple semesters. I still remember how confused the students were. Most of them had trouble understanding things such as the meaning of “this”, why everything needs to be put inside classes, why make every field private and use getters, the difference between a method and a static method, etc etc.&lt;/p&gt;
-&lt;p&gt;There is a good reason that they don’t understand — because OO is not how things work. Most of the time I feel that I was teaching design flaws and dogmas. Many of them learned very little in the end. Worse, some of those students really believed in OO. They ended up being proud of writing over-engineered and convoluted code. They no longer see things or write programs in straightforward ways. This is sad. I feel that we are no longer educating students as creative and critical thinkers, but mindless assembly line workers.&lt;/p&gt;
+may be a good starting point.&lt;/p&gt;
+&lt;p&gt;Unfortunately design patterns somehow got really popular in companies, to the degree of unbearable. I saw the GoF book on almost every bookshelf when I interned at Google. Even if you don’t write them yourself, there was almost no way you could avoid other people slipping design patterns into your code. Design patterns’ marketing strategy as I perceived was much like weight loss products: “It can burn your fat without you doing any work!” They appeal to some new programmers’ hope that they can write programs without understanding the fundamental concepts of computer science. Just by applying several patterns and patching things together, they hope to have a good program. This is too good to be true. You end up doing more work than you hoped to avoid. Design patterns eat programmers’ brains. After using design patterns for some time, they no longer see things or write programs in clear and straightforward ways.&lt;/p&gt;
+&lt;h2 id="what-is-an-oo-language-any-way"&gt;What is an &lt;span class="caps"&gt;OO&lt;/span&gt; language any way?&lt;/h2&gt;
+&lt;p&gt;To this point we haven’t yet talked about what makes a language an “&lt;span class="caps"&gt;OO&lt;/span&gt; language” and what makes it not. Is it an &lt;span class="caps"&gt;OO&lt;/span&gt; language just because I can put both data fields and functions into a record? Or is it an &lt;span class="caps"&gt;OO&lt;/span&gt; language only if it also provides extremely late binding? How about inheritance, overloading, etc etc? Must I have all of them? Any of them?&lt;/p&gt;
+&lt;p&gt;It turns out that there is no good answer to this question. There really is no such thing as an “object-oriented language”. Objects can be part of a language, but it is just a small part of it. You can’t really say that a language is object-oriented just because it provides objects as a feature. The so-called &lt;span class="caps"&gt;OO&lt;/span&gt; languages are solidly rooted in traditional procedural programming (&lt;span class="caps"&gt;PP&lt;/span&gt;). &lt;span class="caps"&gt;OOP&lt;/span&gt; basically stole everything from &lt;span class="caps"&gt;PP&lt;/span&gt;, renamed the terminologies and acted as if the ideas were its own.&lt;/p&gt;
+&lt;p&gt;Historically the term &lt;span class="caps"&gt;OO&lt;/span&gt; was mainly used for marketing reasons. It could give a language some advantages of attracting people if you claim it to be an &lt;span class="caps"&gt;OO&lt;/span&gt; language, but now this advantage is diminishing because more and more people have realized the problems of &lt;span class="caps"&gt;OO&lt;/span&gt;’s methodology.&lt;/p&gt;
+&lt;h2 id="harm-in-education-and-industry"&gt;Harm in education and industry&lt;/h2&gt;
+&lt;p&gt;Although &lt;span class="caps"&gt;OO&lt;/span&gt; has lots of problems, it is very successful in marketing and has risen to a dominant position over the years. Under social and market pressure, many colleges started using &lt;span class="caps"&gt;OO&lt;/span&gt; languages such as Java as their introductory language, replacing traditional procedural languages such as Pascal and functional languages such as Scheme. This in a large degree caused the students’ failure to learn the most essential concepts of programming. The only thing that &lt;span class="caps"&gt;OO&lt;/span&gt; emphasizes is code reusing, but how can you teach it to the students who can’t even write usable code, not to mention that code reusing is not really as important as some people believe.&lt;/p&gt;
+&lt;p&gt;At both Cornell and Indiana, I have been a &lt;span class="caps"&gt;TA&lt;/span&gt; for introductory programming courses in Java. I did it for multiple semesters. I still remember how confused the students were. Most of them had trouble understanding things such as the meaning of “this”, why everything needs to be put inside classes, why make every field private and use getters, the difference between a method and a static method, etc etc.&lt;/p&gt;
+&lt;p&gt;There is a good reason that they don’t understand — because &lt;span class="caps"&gt;OO&lt;/span&gt; is not how things work. Most of the time I feel that I was teaching design flaws and dogmas. Many of them learned very little in the end. Worse, some of those students really believed in &lt;span class="caps"&gt;OO&lt;/span&gt;. They ended up being proud of writing over-engineered and convoluted code. They no longer see things or write programs in straightforward ways. This is sad. I feel that we are no longer educating students as creative and critical thinkers, but mindless assembly line workers.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="yw_modern-times.jpg" src="http://zoomq.qiniudn.com/ZQCollection/img/yw_modern-times.jpg"/&gt;&lt;/p&gt;
-&lt;p&gt;In industry, OO hasn’t really proved its effectiveness with evidence. Good systems may be built in a “OO language”, but the code is often written by people who understand the problems of OO and don’t embrace “everything is an object” or “design patterns”. Good programmers usually use workarounds in OO languages and are essentially writing in a traditional procedural style combined with bits from functional programming. So some OO languages and their tools may be pretty widely used, but the OO style doesn’t really have much influence on the advancements of programming as a field.&lt;/p&gt;
-&lt;h2 id="final-word"&gt;Final word&lt;/h2&gt;
-&lt;p&gt;So what does this post has to say? A jihad against OO languages? Advocate functional programming? Neither. As I said, there is no such thing as an “OO language”, so where is the war? Every so-called OO language also contains good elements that it borrowed (or stole) from procedural languages or sometimes functional languages, so they are not completely useless.&lt;/p&gt;
-&lt;p&gt;But honestly, it is the extra features added by OO (in addition to procedural programming, PP) that are causing most of the problems. There is no denial of PP’s value. Those extra “true OO techniques” contain way more confusion than real value, to the point that their value is negligible. In my experience, accepting even one or two of those ideas may put you into a series of troubles and wrong ways of thinking which may take a long time to examine and recover.&lt;/p&gt;
-&lt;p&gt;Thus I suggest not to buy OO’s way of thinking and don’t try to exploit its “features”. They are usually brain eaters that you want to stay away from. By eschewing those problematic features, you can still produce acceptable programs in an “OO language”, because you are basically using it as an non-OO procedural language.&lt;/p&gt;
-&lt;h1 id="-"&gt;试理解 ;-) 快译畅读&lt;/h1&gt;
+&lt;p&gt;In industry, &lt;span class="caps"&gt;OO&lt;/span&gt; hasn’t really proved its effectiveness with evidence. Good systems may be built in a “&lt;span class="caps"&gt;OO&lt;/span&gt; language”, but the code is often written by people who understand the problems of &lt;span class="caps"&gt;OO&lt;/span&gt; and don’t embrace “everything is an object” or “design patterns”. Good programmers usually use workarounds in &lt;span class="caps"&gt;OO&lt;/span&gt; languages and are essentially writing in a traditional procedural style combined with bits from functional programming. So some &lt;span class="caps"&gt;OO&lt;/span&gt; languages and their tools may be pretty widely used, but the &lt;span class="caps"&gt;OO&lt;/span&gt; style doesn’t really have much influence on the advancements of programming as a field.&lt;/p&gt;
+&lt;h2 id="final-word"&gt;Final word&lt;/h2&gt;
+&lt;p&gt;So what does this post has to say? A jihad against &lt;span class="caps"&gt;OO&lt;/span&gt; languages? Advocate functional programming? Neither. As I said, there is no such thing as an “&lt;span class="caps"&gt;OO&lt;/span&gt; language”, so where is the war? Every so-called &lt;span class="caps"&gt;OO&lt;/span&gt; language also contains good elements that it borrowed (or stole) from procedural languages or sometimes functional languages, so they are not completely useless.&lt;/p&gt;
+&lt;p&gt;But honestly, it is the extra features added by &lt;span class="caps"&gt;OO&lt;/span&gt; (in addition to procedural programming, &lt;span class="caps"&gt;PP&lt;/span&gt;) that are causing most of the problems. There is no denial of &lt;span class="caps"&gt;PP&lt;/span&gt;’s value. Those extra “true &lt;span class="caps"&gt;OO&lt;/span&gt; techniques” contain way more confusion than real value, to the point that their value is negligible. In my experience, accepting even one or two of those ideas may put you into a series of troubles and wrong ways of thinking which may take a long time to examine and recover.&lt;/p&gt;
+&lt;p&gt;Thus I suggest not to buy &lt;span class="caps"&gt;OO&lt;/span&gt;’s way of thinking and don’t try to exploit its “features”. They are usually brain eaters that you want to stay away from. By eschewing those problematic features, you can still produce acceptable programs in an “&lt;span class="caps"&gt;OO&lt;/span&gt; language”, because you are basically using it as an non-&lt;span class="caps"&gt;OO&lt;/span&gt; procedural language.&lt;/p&gt;
+&lt;h1 id="-"&gt;试理解 ;-) 快译畅读&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="yw_dark_age_battle.jpg" src="http://zoomq.qiniudn.com/ZQCollection/img/yw_dark_age_battle.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;[写在2013年尾,编程的黑暗时代.]&lt;/p&gt;
 &lt;p&gt;程序猿的世界充斥着各种时髦迷信.不时就有人跳出来吼:”俺能拯救世界!”诡异的是,无论多不靠谱的想法,总有追随者,并快速打造成全站的宗教,结成社区,尽量迫使其它所有人认同,以使这想法永存下去.&lt;/p&gt;
-&lt;p&gt;面向对象编程(OOP)就是宣称能将世界从所谓:"编程危机"中拯救出来的宗教.
+&lt;p&gt;面向对象编程(&lt;span class="caps"&gt;OOP&lt;/span&gt;)就是宣称能将世界从所谓:”编程危机”中拯救出来的宗教.
 然而,
 即便在其引入这么多年以后,
-OOP 不仅没有拯救世界,相比它宣称带来的好处, 带来了更多的混乱以及伤害,
+&lt;span class="caps"&gt;OOP&lt;/span&gt; 不仅没有拯救世界,相比它宣称带来的好处, 带来了更多的混乱以及伤害,
 不幸的是,其教条以及错误,
 已经 根深蒂固的广泛植根于这世界.
-本文,俺希望就此提出俺的观战,
-并尝试指出值得学习的教训.&lt;/p&gt;
+本文,俺希望就此提出俺的观战, 并尝试指出值得学习的教训.&lt;/p&gt;
 &lt;p&gt;正如我的所有blog文章,
-仅仅代表俺个人的意见,
-并不代表我的教授以及雇主的态度.&lt;/p&gt;
-&lt;h2 id="_2"&gt;一切皆对象 ?&lt;/h2&gt;
-&lt;p&gt;~ Is everything an object? &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;一切皆对象&lt;/code&gt; 这是OOP 的核心教条,
-并视为OO语言的最高设计准则.
-现在,让俺,来谈谈这货是否真如其宣称的这么好.&lt;/p&gt;
+仅仅代表俺个人的意见, 并不代表我的教授以及雇主的态度.&lt;/p&gt;
+&lt;h2 id="_2"&gt;一切皆对象 ?&lt;/h2&gt;
+&lt;p&gt;~ Is everything an object? &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;一切皆对象&lt;/code&gt; 这是&lt;span class="caps"&gt;OOP&lt;/span&gt; 的核心教条,
+并视为&lt;span class="caps"&gt;OO&lt;/span&gt;语言的最高设计准则. 现在,让俺,来谈谈这货是否真如其宣称的这么好.&lt;/p&gt;
 &lt;p&gt;很多人将
 &lt;code&gt;一切皆对象&lt;/code&gt;
 视为理所当然的,
@@ -117,26 +112,24 @@ OOP 不仅没有拯救世界,相比它宣称带来的好处, 带来了更多的�
 因为,英语中 &lt;code&gt;对象&lt;/code&gt; 的基本意思就是 &lt;code&gt;事物&lt;/code&gt;,
 那么 &lt;code&gt;一切皆事物&lt;/code&gt; 当然正确了.
 图样图森破,
-在 OOP 中 &lt;code&gt;对象&lt;/code&gt; 可是特殊定义的,和生活英语可是没一毛钱关系.&lt;/p&gt;
-&lt;p&gt;OOP中
+在 &lt;span class="caps"&gt;OOP&lt;/span&gt; 中 &lt;code&gt;对象&lt;/code&gt; 可是特殊定义的,和生活英语可是没一毛钱关系.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OOP&lt;/span&gt;中
 通常接受的
 &lt;a href="http://en.wikipedia.org/wiki/Object-oriented_programming"&gt;对象&lt;/a&gt;
-定义是: "
+定义是: ”
 &lt;a href="http://en.wikipedia.org/wiki/Field_(computer_science)"&gt;数据字段&lt;/a&gt;
 (描述对象的属性)以及关联方法 的结合体.
-"
-你真能在所有情景中适应这种模式嘛?&lt;/p&gt;
-&lt;p&gt;首先来设想一下OOP 模式是否能对真实世界加以解释. 汽车/树木/动物 视作对象的话, 那么它们的位置/速度/时间的 变化 乍说? 有什么对应的方法? 好吧, OOP 信徒可能叫你将类称为 速度 或是 时间 然后将方法增加进去. 可是速度/时间真的含有这种称为”方法”的东西 ? 当然没有, 这不过是想象罢了. 
+“ 你真能在所有情景中适应这种模式嘛?&lt;/p&gt;
+&lt;p&gt;首先来设想一下&lt;span class="caps"&gt;OOP&lt;/span&gt; 模式是否能对真实世界加以解释. 汽车/树木/动物 视作对象的话, 那么它们的位置/速度/时间的 变化 乍说? 有什么对应的方法? 好吧, &lt;span class="caps"&gt;OOP&lt;/span&gt; 信徒可能叫你将类称为 速度 或是 时间 然后将方法增加进去. 可是速度/时间真的含有这种称为”方法”的东西 ? 当然没有, 这不过是想象罢了. 
 你可以追加速度/时间,但是,怎么令其包含&lt;code&gt;加&lt;/code&gt;处理? 
 这就好比说:&lt;code&gt;子弹包含了枪&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;哪,信徒们最常说的:”一切皆对象”只是种好的思维方法,但事实并非如此. 一个对象的定义意味着一个方法只能属于一个对象,但大部分时间此思想并没有作用于任何对象. 当我们论及表达式: 1+2 , 是否得说 “+” 属于 1 ,或是算 2 的? 你必须作出属性方法归属的选择,而选择本身就已经意味着 “+” 操作其实并不真正属于任何一个对象,而是固有在对象之外的.&lt;/p&gt;
+&lt;p&gt;哪,信徒们最常说的:”一切皆对象”只是种好的思维方法,但事实并非如此. 一个对象的定义意味着一个方法只能属于一个对象,但大部分时间此思想并没有作用于任何对象. 当我们论及表达式: 1+2 , 是否得说 “+” 属于 1 ,或是算 2 的? 你必须作出属性方法归属的选择,而选择本身就已经意味着 “+” 操作其实并不真正属于任何一个对象,而是固有在对象之外的.&lt;/p&gt;
 &lt;p&gt;只能说 &lt;code&gt;有些&lt;/code&gt; 事儿上对象是有帮助的,而 一切 皆对象这事儿即不真实也无用. 
 悲摧的是, &lt;code&gt;一切皆对象&lt;/code&gt; 已经成为面向对象语言设计的最高教条. 
 一些面向对象语言声称在其内部真的一切都是对象. 
 若你意识到什么不是对象时,就有人会跳出来将其折腾成对象. 
-当然聪明人可以作到这点,只是事儿就变的复杂起来,
-因为原本事物不是这么工作的.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;一切皆对象&lt;/code&gt; 的理想完全类似 FP 世界里 &lt;code&gt;一切皆函式&lt;/code&gt; . 
+当然聪明人可以作到这点,只是事儿就变的复杂起来, 因为原本事物不是这么工作的.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;一切皆对象&lt;/code&gt; 的理想完全类似 &lt;span class="caps"&gt;FP&lt;/span&gt; 世界里 &lt;code&gt;一切皆函式&lt;/code&gt; . 
 以前计算机科学称这种构想叫 lambda算子(&lt;a href="http://en.wikipedia.org/wiki/Lambda_calculus"&gt;lambda calculus&lt;/a&gt;). &lt;/p&gt;
 &lt;p&gt;有人就在编码时,将所有数字/数据结构都给包含在 lambda 中了.
 而这种包含了一切的东西叫
@@ -145,8 +138,7 @@ OOP 不仅没有拯救世界,相比它宣称带来的好处, 带来了更多的�
 &lt;code&gt;一切皆函式&lt;/code&gt; 好歹没有没有教条化过. 这只是在理论上是可行的,
 但是,在实际工程中没有人这么折腾,因为这会令事儿变的复杂,而且效率低下.
 因为,实际上并不是这么工作的,
-它们只是近似描述(模式)计算机在我们视野外是如何计算的.
-如果你真的将它们用在项目中,只能让事情变的复杂.&lt;/p&gt;
+它们只是近似描述(模式)计算机在我们视野外是如何计算的. 如果你真的将它们用在项目中,只能让事情变的复杂.&lt;/p&gt;
 &lt;p&gt;数学家们其实也有类似的宗教: 
 &lt;a href="http://en.wikipedia.org/wiki/Set_theory"&gt;集(合)论&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;有些天才试图编码掉一切:&lt;/p&gt;
@@ -154,26 +146,24 @@ OOP 不仅没有拯救世界,相比它宣称带来的好处, 带来了更多的�
 &lt;li&gt;数字&lt;/li&gt;
 &lt;li&gt;运算数字&lt;/li&gt;
 &lt;li&gt;数学结构&lt;/li&gt;
-&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;都能 &lt;code&gt;集合&lt;/code&gt; 了.
 一切都想是
-集合包含集合包含集合等等....
+集合包含集合包含集合等等….
 这有什么问题嘛?
 就是当他们真正尝试使用这些 集合 来进行证明时,
 证明自身被掩盖了.
 因为复杂性,
-数学家无法用集合理论进行足够的表述.
-很多人试图修复集合论,但都失败了.&lt;/p&gt;
+数学家无法用集合理论进行足够的表述. 很多人试图修复集合论,但都失败了.&lt;/p&gt;
 &lt;p&gt;因此&lt;code&gt;一切皆对象&lt;/code&gt; 在某种意义上
 和
 &lt;code&gt;一切皆函式&lt;/code&gt;
 以及
 &lt;code&gt;一切皆集合&lt;/code&gt;
-是相同的,
-都是看起来是美的,却从未在实际工程中很好的工作过.&lt;/p&gt;
+是相同的, 都是看起来是美的,却从未在实际工程中很好的工作过.&lt;/p&gt;
 &lt;p&gt;俺不认为存在: &lt;code&gt;唯一正当语言&lt;/code&gt; (one true language),
-何况 OOP 的模式和现实相差太远.
+何况 &lt;span class="caps"&gt;OOP&lt;/span&gt; 的模式和现实相差太远.
 这有点儿象
 &lt;a href="http://en.wikipedia.org/wiki/Flat_Earth"&gt;地球扁平论&lt;/a&gt;,
 .时植今日,依然
@@ -183,24 +173,20 @@ OOP 不仅没有拯救世界,相比它宣称带来的好处, 带来了更多的�
 他们一些论点看起来也很科学,
 但是对比从国际空间站拍下来的照片,你愿意相信他们嘛?
 而每当你发现有根本的东西错了,
-又不想丢弃,
-你就必须用更复杂的理论修补理论本身.&lt;/p&gt;
-&lt;p&gt;而这,正是 OOP 世界正在进行的事儿.&lt;/p&gt;
+又不想丢弃, 你就必须用更复杂的理论修补理论本身.&lt;/p&gt;
+&lt;p&gt;而这,正是 &lt;span class="caps"&gt;OOP&lt;/span&gt; 世界正在进行的事儿.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="yw_flat-earth.png" src="http://zoomq.qiniudn.com/ZQCollection/img/yw_flat-earth.png"/&gt;&lt;/p&gt;
-&lt;h2 id="_3"&gt;对象方法 ?&lt;/h2&gt;
-&lt;p&gt;~ Are functions objects?&lt;/p&gt;
-&lt;p&gt;据俺所知,将函式塞到对象中的原始动机是为了支持 GUI 开发.
+&lt;h2 id="_3"&gt;对象方法 ?&lt;/h2&gt;
+&lt;p&gt;~ Are functions objects?&lt;/p&gt;
+&lt;p&gt;据俺所知,将函式塞到对象中的原始动机是为了支持 &lt;span class="caps"&gt;GUI&lt;/span&gt; 开发.
 点击一个按钮时,一些代码(回调)就应该被触发. 为了指明按了具体哪个按钮,回调的函式就需要触发的对象作为其一个参数.
 因为回调就这么单纯,看起来将其存储在按钮中没有什么不好. 
 于是我们有了个”对象”, 包含了按钮的属性以及方法(回调). 的确挺方便. 
-但 GUI 应用只是个非常有限的情景,并不能真正证明 “一切皆对象”的普世性. 
-就象用两里路的平坦是不能证明地球是平的.&lt;/p&gt;
-&lt;p&gt;如果你真的理解什么是抽象,
-可能已经注意到,上述故事包含一个微妙的错误:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;按钮的回调是不是一个真正的方法.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;方法的本质目的是提供抽象的属性,但回调的目的不是为了提供抽象.
-在这儿,只是刚好按钮包含了一个触发功能.&lt;/p&gt;
+但 &lt;span class="caps"&gt;GUI&lt;/span&gt; 应用只是个非常有限的情景,并不能真正证明 “一切皆对象”的普世性. 就象用两里路的平坦是不能证明地球是平的.&lt;/p&gt;
+&lt;p&gt;如果你真的理解什么是抽象, 可能已经注意到,上述故事包含一个微妙的错误:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;按钮的回调是不是一个真正的方法&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;方法的本质目的是提供抽象的属性,但回调的目的不是为了提供抽象. 在这儿,只是刚好按钮包含了一个触发功能.&lt;/p&gt;
 &lt;p&gt;只有极少数功能应当视作对象的方法.
 如果仔细观察,大部分情况中,对象只是作为一个命名空间(模块),
 以便在其中存储相关属性和功能,
@@ -208,14 +194,12 @@ OOP 不仅没有拯救世界,相比它宣称带来的好处, 带来了更多的�
 他们只是将对象视为输入,并产生一些输出.
 只有那些关系最密切,
 并提供一个抽象层的功能,才应该考虑使用对象方法来封装.
-其中大部分即所谓:
-"getters"/"setters"/"iterators"&lt;/p&gt;
+其中大部分即所谓: “getters”/”setters”/”iterators”&lt;/p&gt;
 &lt;p&gt;在一些语言,比如 Scala/Python, 函式也被视作对象.
 而实际上,只是将一个函式包装成对象,
 然后给予类似 &lt;code&gt;apply&lt;/code&gt; 或是 &lt;code&gt;__call__&lt;/code&gt; 的名称,
 对象就酱紫能 &lt;code&gt;invoked&lt;/code&gt; 了,而大家都知道函式只是调用了而已.&lt;/p&gt;
-&lt;p&gt;但是,将函式塞到对象中,并不等于函式也是对象,
-好比,邀请朋友到家里来也不能令他们变成家人.&lt;/p&gt;
+&lt;p&gt;但是,将函式塞到对象中,并不等于函式也是对象, 好比,邀请朋友到家里来也不能令他们变成家人.&lt;/p&gt;
 &lt;p&gt;函式为程序的基本结构.
 他们不属于对象.
 他们描述变化,转变或是传送对象.
@@ -223,65 +207,57 @@ OOP 不仅没有拯救世界,相比它宣称带来的好处, 带来了更多的�
 他们就像一种基本情况的归纳定义.
 他们是&lt;code&gt;一切皆对象&lt;/code&gt;的幻相的破灭.&lt;/p&gt;
 &lt;h2 id="_4"&gt;过度抽象的代价&lt;/h2&gt;
-&lt;p&gt;~ The cost of excessive abstraction &lt;/p&gt;
-&lt;p&gt;OOP 的主要吸引力就是抽象(以便代码重用以及DRY),
+&lt;p&gt;~ The cost of excessive abstraction &lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OOP&lt;/span&gt; 的主要吸引力就是抽象(以便代码重用以及&lt;span class="caps"&gt;DRY&lt;/span&gt;),
 然而,传统的程序语言以及函式语言提供的抽象设施足够了.
-甚至于,他们中的一些比 OO语言抽象能力还要好.
-OO信徒总是比其它语言更加强调抽象,好象这是OO 独创的.
-结果是, OO程序猿总是作过头.
-他们中有些人追求抽象以及代码复用的程度,就好象编程只是为了抽象.&lt;/p&gt;
+甚至于,他们中的一些比 &lt;span class="caps"&gt;OO&lt;/span&gt;语言抽象能力还要好.
+&lt;span class="caps"&gt;OO&lt;/span&gt;信徒总是比其它语言更加强调抽象,好象这是&lt;span class="caps"&gt;OO&lt;/span&gt; 独创的.
+结果是, &lt;span class="caps"&gt;OO&lt;/span&gt;程序猿总是作过头. 他们中有些人追求抽象以及代码复用的程度,就好象编程只是为了抽象.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="yw_screen-shot-2014-01-02-at-2-02-38-am.png" src="http://zoomq.qiniudn.com/ZQCollection/img/yw_screen-shot-2014-01-02-at-2-02-38-am.png"/&gt;&lt;/p&gt;
-&lt;p&gt;出于代码重用的目标,鼓励以OOP的形式来抽象,其结果却是令程序难以理解/分析.
-俺经常见到有 JAVA 程序动用多层继承/重载,但实际作的事儿不多.
+&lt;p&gt;出于代码重用的目标,鼓励以&lt;span class="caps"&gt;OOP&lt;/span&gt;的形式来抽象,其结果却是令程序难以理解/分析.
+俺经常见到有 &lt;span class="caps"&gt;JAVA&lt;/span&gt; 程序动用多层继承/重载,但实际作的事儿不多.
 更糟的是,正因堆砌了如此多的代码,却没有真正在作事儿,
 以至于难以找到哪部分是你真正想作的东西.就象穿越一个迷宫.
-而对这,有另外一个漂亮的形容词是 "&lt;a href="http://zh.wikipedia.org/wiki/%E9%B2%81%E6%A3%92%E6%80%A7_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)"&gt;鲁棒性&lt;/a&gt;" (健壮性,Robustness)&lt;/p&gt;
-&lt;p&gt;如果俺为了复用以及健壮,宁愿只用代码复制,再修订,
-只要确保每个副本简单,容易理解.&lt;/p&gt;
-&lt;p&gt;每当你抱怨  JAVA/C++ 的冗长时, OO程序猿就会告诉你,那些不是真正的 OO 语言.
+而对这,有另外一个漂亮的形容词是 “&lt;a href="http://zh.wikipedia.org/wiki/%E9%B2%81%E6%A3%92%E6%80%A7_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)"&gt;鲁棒性&lt;/a&gt;“ (健壮性,Robustness)&lt;/p&gt;
+&lt;p&gt;如果俺为了复用以及健壮,宁愿只用代码复制,再修订, 只要确保每个副本简单,容易理解.&lt;/p&gt;
+&lt;p&gt;每当你抱怨  &lt;span class="caps"&gt;JAVA&lt;/span&gt;/C++ 的冗长时, &lt;span class="caps"&gt;OO&lt;/span&gt;程序猿就会告诉你,那些不是真正的 &lt;span class="caps"&gt;OO&lt;/span&gt; 语言.
 一准向你推荐 Smalltalk 的.
 但是,如果 Smalltalk 是好的,为毛现在几乎没有人使用 Smalltalk 进行工程开发?
-俺认为, Smalltalk 就是其它 OO 语言中
-过度抽象以及过度复杂的发源.&lt;/p&gt;
-&lt;p&gt;在"正宗"OO 语言 Smalltalk 中,
-提倡的风格是 "极迟绑定" (extremely late binding),
-意味着,要尽可能晩的确定概念的意义再进行构建.&lt;/p&gt;
+俺认为, Smalltalk 就是其它 &lt;span class="caps"&gt;OO&lt;/span&gt; 语言中 过度抽象以及过度复杂的发源.&lt;/p&gt;
+&lt;p&gt;在”正宗”&lt;span class="caps"&gt;OO&lt;/span&gt; 语言 Smalltalk 中,
+提倡的风格是 “极迟绑定” (extremely late binding), 意味着,要尽可能晩的确定概念的意义再进行构建.&lt;/p&gt;
 &lt;p&gt;这样,你有机会换出(swap out)底层实现,
 而不用强制变更上层.
 但是,同时也意味着你也无法及时明确一段代码究竟会作什么!
-比如,在 JAVA 或是 C++ 中看到诸如
+比如,在 &lt;span class="caps"&gt;JAVA&lt;/span&gt; 或是 C++ 中看到诸如
 &lt;code&gt;1+2&lt;/code&gt; 或是 &lt;code&gt;if (t) then … else …&lt;/code&gt; 的表达式时,
 至少俺知道是作整数相加,以及往常一般的条件判别.
-但是,若在"极迟绑定"语言中就完全一头雾水了!
+但是,若在”极迟绑定”语言中就完全一头雾水了!
 因为 &lt;code&gt;+&lt;/code&gt; 和 &lt;code&gt;if&lt;/code&gt; 都是可以重新定义的.
 类似问题也出现在 Lisp 家族语言的宏体系中.
 事实证明,给予程序猿定义控制结构的能力,
-这主意其实很囧,
-因为立即就会发现,自作聪明的程序猿都在努力向语言里塞满各种特殊的控制结构.&lt;/p&gt;
-&lt;p&gt;这一特性,可以举个 Smalltalk 的著名条件结构为例:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::smalltalk
-result := a &amp;gt; b
-    ifTrue:[ 'greater' ]
-    ifFalse:[ 'less or equal' ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;你发送一消息 &lt;code&gt;ifTrue:&lt;/code&gt; 给一个布尔对象,作为参数传递的代码,
-当且仅当布尔接收器为真时,才执行.&lt;/p&gt;
+这主意其实很囧, 因为立即就会发现,自作聪明的程序猿都在努力向语言里塞满各种特殊的控制结构.&lt;/p&gt;
+&lt;p&gt;这一特性,可以举个 Smalltalk 的著名条件结构为例:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nf"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt;
+    &lt;span class="nb"&gt;ifTrue:&lt;/span&gt;[ &lt;span class="s"&gt;'greater'&lt;/span&gt; ]
+    &lt;span class="nb"&gt;ifFalse:&lt;/span&gt;[ &lt;span class="s"&gt;'less or equal'&lt;/span&gt; ]
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;你发送一消息 &lt;code&gt;ifTrue:&lt;/code&gt; 给一个布尔对象,作为参数传递的代码, 当且仅当布尔接收器为真时,才执行.&lt;/p&gt;
 &lt;p&gt;首先,如果你真正拥有一个良好设计的语言,
 但是,不想设计自个儿的条件控制结构.作为一名经验丰富的 Lisp/Scheme 程序员,
 多年来俺见过各种定制的控制结构(如各种循环宏),
-但是,没有一个证明是靠谱的.
-俺宁愿在更好的语言中写稍稍长点的详细代码,也不愿没接没够的折腾无尽的奇葩控制结构.&lt;/p&gt;
+但是,没有一个证明是靠谱的. 俺宁愿在更好的语言中写稍稍长点的详细代码,也不愿没接没够的折腾无尽的奇葩控制结构.&lt;/p&gt;
 &lt;p&gt;其次,即使你天才到发明了另一种更好的控制结构,
 Smalltalk 的延迟绑定功能,也难以提供足够的能力来定义它.
 函式作为一个抽象工具的能力是有限的.
-比Lisp/Scheme 的宏还要不如.&lt;/p&gt;
+比Lisp/Scheme 的宏还要不如.&lt;/p&gt;
 &lt;p&gt;第三,Smalltalk 这一特性并不是新东西,而且包含了一个重大问题.
 类似的但更加优美的控制结构,
-在计算机科学诞生前就已经由 lambda演算科学定义出来了:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;TRUE = λx.λy.x
-FALSE = λx.λy.y
-IF = λb.λt.λf.b t f
-&lt;/code&gt;&lt;/pre&gt;
+在计算机科学诞生前就已经由 lambda演算科学定义出来了:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;TRUE&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;
+&lt;span class="n"&gt;&lt;span class="caps"&gt;FALSE&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="n"&gt;&lt;span class="caps"&gt;IF&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这是非常漂亮的,可以用任何语言实现的,
 但是为毛没有任何一个函式语言以这种方式来实现条件语句?
 因为当你看着表达式 &lt;code&gt;IF b t f&lt;/code&gt; ,
@@ -289,31 +265,29 @@ IF = λb.λt.λf.b t f
 又,如果 &lt;code&gt;IF&lt;/code&gt; 是个函式,
 它也可以接受额外的值比如 &lt;code&gt;TRUE&lt;/code&gt; 或是 &lt;code&gt;FALSE&lt;/code&gt;.
 这样的条件构造可以工作,但是最后总是造成麻烦.
-这就是所谓 "无意语义"(unintentional semantics).
-而且这种 bug 最难以追查.&lt;/p&gt;
+这就是所谓 “无意语义”(unintentional semantics).
+而且这种 bug 最难以追查.&lt;/p&gt;
 &lt;p&gt;这种实现,也令编译器或是静态分析器以及奏效.
 设想当编译器遇到 &lt;code&gt;IF b t f&lt;/code&gt; 时,它无法得知这是否条件判定,从而进行优化.
 它只能将其视作普通的函式调用.
 同样类型检查器遇到时,它也无从期待 &lt;code&gt;b&lt;/code&gt; 应该是什么类型,
 因为不应该是个条件.
-lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
-&lt;p&gt;因此,适度使用时,抽象是个好主意,
-一但过了,就会事与愿违.&lt;/p&gt;
+lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
+&lt;p&gt;因此,适度使用时,抽象是个好主意, 一但过了,就会事与愿违.&lt;/p&gt;
 &lt;p&gt;(&lt;code&gt;译注:&lt;/code&gt;其实什么事儿不是酱紫的呢?)&lt;/p&gt;
-&lt;p&gt;过度抽象,不仅令代码难以为人理解,
-更加令自动分析工具以及编译器难有作为.&lt;/p&gt;
+&lt;p&gt;过度抽象,不仅令代码难以为人理解, 更加令自动分析工具以及编译器难有作为.&lt;/p&gt;
 &lt;h2 id="_5"&gt;食脑魔:设计模式&lt;/h2&gt;
-&lt;p&gt;~ Design patterns, the brain eater&lt;/p&gt;
-&lt;p&gt;OO 语言自我吹嘘他们的抽象弄清,其实抽象以及表述能力都很一般.
+&lt;p&gt;~ Design patterns, the brain eater&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OO&lt;/span&gt; 语言自我吹嘘他们的抽象弄清,其实抽象以及表述能力都很一般.
 很多事儿,使用传统程序语言或是函式语言中很容易作到,
-但是在 OO 语言中就变得的很折腾.
+但是在 &lt;span class="caps"&gt;OO&lt;/span&gt; 语言中就变得的很折腾.
 这才是为毛出现了 &lt;code&gt;设计模式&lt;/code&gt;.
 其起源的主要原因,就是 &lt;code&gt;一切皆对象&lt;/code&gt; 的教条以及缺乏高阶函式
 (或正确的执行它们),
-还有 OO 的神秘主义倾向.&lt;/p&gt;
+还有 &lt;span class="caps"&gt;OO&lt;/span&gt; 的神秘主义倾向.&lt;/p&gt;
 &lt;p&gt;头一次听说它们时,
-俺已经在康奈尔大学作为博士生在进行一些 PL 研究了.
-平时主要使用 ML 以及 Haskell 语言.
+俺已经在康奈尔大学作为博士生在进行一些 &lt;span class="caps"&gt;PL&lt;/span&gt; 研究了.
+平时主要使用 &lt;span class="caps"&gt;ML&lt;/span&gt; 以及 Haskell 语言.
 在听到朋友有关
 &lt;a href="http://en.wikipedia.org/wiki/Design_Patterns"&gt;设计模式(Design Patterns)&lt;/a&gt;
 (这书绰号&lt;code&gt;GoF&lt;/code&gt; ~Gang of Four, 即 &lt;code&gt;四人帮&lt;/code&gt;)
@@ -323,15 +297,15 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 可以逐一对应到俺一直在使用的各种编程技术上.
 有此是如此基础,其实是存在于每一个高级程序语言中的, 并不需要被命名.
 很多高级模式(比如 访问者)只是将函式编程概念变成一个令人费解的形式,
-以便避开OO 语言的固有局限性.
+以便避开&lt;span class="caps"&gt;OO&lt;/span&gt; 语言的固有局限性.
 后来又发现,
 &lt;a href="http://en.wikipedia.org/wiki/Peter_Norvig"&gt;Peter Norvig&lt;/a&gt;
 早在1998年就指出,
 一但你完成了 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) ,
-大部分设计模式对你将是 "透明的".
+大部分设计模式对你将是 “透明的”.
 这证实了俺的发现 - &lt;code&gt;我不需要它们&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;俺也得承认,有些设计模式的确精巧.
-你真的必须理解 OO 语言的内部设计精髓,
+你真的必须理解 &lt;span class="caps"&gt;OO&lt;/span&gt; 语言的内部设计精髓,
 同时也必须理解许多函式编程技术,才足以创建模式.
 但是, 智力=/=智慧.
 即便它们能作到函式语言作到的,也通常要复杂的多.
@@ -340,179 +314,164 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 你甚至于不会注意到用了什么设计模式.
 就象
 &lt;a href="http://en.wikipedia.org/wiki/Peter_Norvig"&gt;Peter Norvig&lt;/a&gt;
-形容的,它们会变得的"透明".
-那么,良好的语言设计者,应该作的是尽可能增加 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) 到语言,
-而不是提出设计模式作为解决方案.&lt;/p&gt;
+形容的,它们会变得的”透明”.
+那么,良好的语言设计者,应该作的是尽可能增加 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) 到语言, 而不是提出设计模式作为解决方案.&lt;/p&gt;
 &lt;p&gt;(&lt;code&gt;译注:&lt;/code&gt;无法同意更多!只有减少程序员心智负担的开发语言才是有良心的.)&lt;/p&gt;
 &lt;p&gt;每次俺从代码中中清除一个设计模式时(其它人写进去的),
 代码就变得的更加简洁,易于管理.
-前几天,俺终于很欣慰的将最后一个 访问者模式 从俺的 java 代码中给清除了.&lt;/p&gt;
-&lt;p&gt;(&lt;code&gt;译注:&lt;/code&gt;指 &lt;a href="https://github.com/yinwang0/pysonar2"&gt;PySonar&lt;/a&gt; 工程)&lt;/p&gt;
+前几天,俺终于很欣慰的将最后一个 访问者模式 从俺的 java 代码中给清除了.&lt;/p&gt;
+&lt;p&gt;(&lt;code&gt;译注:&lt;/code&gt;指 &lt;a href="https://github.com/yinwang0/pysonar2"&gt;PySonar&lt;/a&gt; 工程)&lt;/p&gt;
 &lt;p&gt;设计模式除了额外的工作,没有赋予俺任何好处.
 俺可以作任何事儿,
 包括所谓 访问者模式 提供的所有先进东西,
 但是,不通过使用神马模式.
 另外,俺欠函式编程者有关设计模式一个说法.
 如果你真想了解设计模式的精髓,以及如何能不用它们,
-&lt;a href="http://www.amazon.com/Little-Java-Few-Patterns/dp/0262561158"&gt;这本分书&lt;/a&gt;
-是个不错的开始.&lt;/p&gt;
+&lt;a href="http://www.amazon.com/Little-Java-Few-Patterns/dp/0262561158"&gt;这本分书&lt;/a&gt; 是个不错的开始.&lt;/p&gt;
 &lt;p&gt;(&lt;code&gt;译注:&lt;/code&gt;指 Dan Friedman 的小字辈儿好书,
-参考:&lt;a href="http://www.yinwang.org/blog-cn/2012/07/04/dan-friedman/"&gt;GTF - Great Teacher Friedman&lt;/a&gt;)&lt;/p&gt;
+参考:&lt;a href="http://www.yinwang.org/blog-cn/2012/07/04/dan-friedman/"&gt;&lt;span class="caps"&gt;GTF&lt;/span&gt; - Great Teacher Friedman&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;摧悲的是, 设计模式在企业里得到了某种程度上无法忍受的追捧.
 当俺在 Google 实习时,在每一个书架上都见到了 &lt;code&gt;GoF&lt;/code&gt;!
 即使你自个儿不用它们,
 但是几乎不可能避免其它人向你的代码中倾倒设计模式代码.
 其营销战略非常象减肥产品:
-"即使你不动,它一样燃烧你的脂肪!"
+“即使你不动,它一样燃烧你的脂肪!”
 他们很是蛊惑了一大批新手,
 以为无需理解计算机科学的基本概念,只要将几种模式折腾在一起,
 就获得了一个漂亮的解决方案.
 这看起来美好的象真的似的!
 而最终,你将作比希望避免的更多的事儿.
 设计模式食空了程序员的大脑!
-一但使用设计模式一段时间,
-他们就再也看不到其它东西,不会使用明确而直接的方式来写代码了.&lt;/p&gt;
-&lt;h2 id="oo"&gt;乜系OO语言?&lt;/h2&gt;
-&lt;p&gt;~ What is an OO language any way?&lt;/p&gt;
-&lt;p&gt;有关这方面,咱还没有论及什么使一门语言 "面向对象",
+一但使用设计模式一段时间, 他们就再也看不到其它东西,不会使用明确而直接的方式来写代码了.&lt;/p&gt;
+&lt;h2 id="oo"&gt;乜系&lt;span class="caps"&gt;OO&lt;/span&gt;语言?&lt;/h2&gt;
+&lt;p&gt;~ What is an &lt;span class="caps"&gt;OO&lt;/span&gt; language any way?&lt;/p&gt;
+&lt;p&gt;有关这方面,咱还没有论及什么使一门语言 “面向对象”,
 又或什么使之不是.
-称其为OO语言,只是因为俺能将两个数据字段和一个方法塞到一个记录中?
-又或是只有当其也提供 &lt;code&gt;极迟绑定&lt;/code&gt; 时才算 OO?
+称其为&lt;span class="caps"&gt;OO&lt;/span&gt;语言,只是因为俺能将两个数据字段和一个方法塞到一个记录中?
+又或是只有当其也提供 &lt;code&gt;极迟绑定&lt;/code&gt; 时才算 &lt;span class="caps"&gt;OO&lt;/span&gt;?
 那么 继承/重载/等等,等等呢?
-是必须同时具有所有特性?还是有任何一个就算OO 了?&lt;/p&gt;
+是必须同时具有所有特性?还是有任何一个就算&lt;span class="caps"&gt;OO&lt;/span&gt; 了?&lt;/p&gt;
 &lt;p&gt;事实上,这一命题没有好答案.
-本质上根本就不存在 "面向对象语言".
+本质上根本就不存在 “面向对象语言”.
 对象可以是语言的一部分,而且只是一小部分.
 你真心不能说因为提供了对象的支持,语言就是面向对象的.
-所谓的 OO语言是深深植根于传统的过程化编程(PP).
-本质上 OOP 的一切都是从 PP 偷走的,
-只是加以改名假装是自个儿创造的.&lt;/p&gt;
-&lt;p&gt;历史上鼓吹OO一直只是市场营销的需要.
-一种语言想吸引人注目,就得宣称是 OO 的,
+所谓的 &lt;span class="caps"&gt;OO&lt;/span&gt;语言是深深植根于传统的过程化编程(&lt;span class="caps"&gt;PP&lt;/span&gt;).
+本质上 &lt;span class="caps"&gt;OOP&lt;/span&gt; 的一切都是从 &lt;span class="caps"&gt;PP&lt;/span&gt; 偷走的, 只是加以改名假装是自个儿创造的.&lt;/p&gt;
+&lt;p&gt;历史上鼓吹&lt;span class="caps"&gt;OO&lt;/span&gt;一直只是市场营销的需要.
+一种语言想吸引人注目,就得宣称是 &lt;span class="caps"&gt;OO&lt;/span&gt; 的,
 目测现在这点在慢慢改变,
-因为越来越多的人意识到了 OO 的问题.&lt;/p&gt;
-&lt;h2 id="oo_1"&gt;OO对教育和产业的伤害&lt;/h2&gt;
-&lt;p&gt;~ Harm in education and industry&lt;/p&gt;
-&lt;p&gt;虽然OO 有很多硬伤,但它在市场上非常成功,而且多年来都处于主导地位.
-因为社会以及市场的压力,许多高校也开始使用 OO语言,
-如JAVA 作为入门语言, 来取代传统的过程语言,比如 Pacsal,
+因为越来越多的人意识到了 &lt;span class="caps"&gt;OO&lt;/span&gt; 的问题.&lt;/p&gt;
+&lt;h2 id="oo_1"&gt;&lt;span class="caps"&gt;OO&lt;/span&gt;对教育和产业的伤害&lt;/h2&gt;
+&lt;p&gt;~ Harm in education and industry&lt;/p&gt;
+&lt;p&gt;虽然&lt;span class="caps"&gt;OO&lt;/span&gt; 有很多硬伤,但它在市场上非常成功,而且多年来都处于主导地位.
+因为社会以及市场的压力,许多高校也开始使用 &lt;span class="caps"&gt;OO&lt;/span&gt;语言,
+如&lt;span class="caps"&gt;JAVA&lt;/span&gt; 作为入门语言, 来取代传统的过程语言,比如 Pacsal,
 又或是函式语言,比如 Scheme .
 这在很大程度上造成了学生根本没有接触到编程最重要的概念.
-OO 强调的唯一重要的事儿就是重用,
-但是,怎么能教无法写出可用代码的学习重用?
-更何况复审并不是如某些人物所言的那么重要.&lt;/p&gt;
-&lt;p&gt;在康奈尔和印第安纳大学,俺都作为 TA 使用JAVA 来进行编程入门课程.
+&lt;span class="caps"&gt;OO&lt;/span&gt; 强调的唯一重要的事儿就是重用,
+但是,怎么能教无法写出可用代码的学习重用? 更何况复审并不是如某些人物所言的那么重要.&lt;/p&gt;
+&lt;p&gt;在康奈尔和印第安纳大学,俺都作为 &lt;span class="caps"&gt;TA&lt;/span&gt; 使用&lt;span class="caps"&gt;JAVA&lt;/span&gt; 来进行编程入门课程.
 用了好几个学期.
 清楚的记得学生们是怎么被绕晕的.
 他们多数无法理解什么是 &lt;code&gt;"this"&lt;/code&gt;,
 为毛一切都要塞进类里,
-为毛每个字段都要私有并使用 &lt;code&gt;getters&lt;/code&gt;,
-方法和静态方法的差异,等等等等...&lt;/p&gt;
-&lt;p&gt;他们无法理解的一个正当理由是 - OO 并不是描述事情怎么运作的.
+为毛每个字段都要私有并使用 &lt;code&gt;getters&lt;/code&gt;, 方法和静态方法的差异,等等等等…&lt;/p&gt;
+&lt;p&gt;他们无法理解的一个正当理由是 - &lt;span class="caps"&gt;OO&lt;/span&gt; 并不是描述事情怎么运作的.
 多数时候,俺感觉,俺在教授设计上的缺陷和教条.
 最终他们只能学到些皮毛.
-更杯具的是,那些真心相信OOP 的学生,
+更杯具的是,那些真心相信&lt;span class="caps"&gt;OOP&lt;/span&gt; 的学生,
 将以为能写出令人费解的代码而自豪.
 他们再也无法用简洁直接的方式来编写程序了.
 这是可悲的.
-俺感觉,我们不再教导学生拥有创造性和批判性思维,
-而只是批量制造流水线工人.&lt;/p&gt;
+俺感觉,我们不再教导学生拥有创造性和批判性思维, 而只是批量制造流水线工人.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="yw_modern-times.jpg" src="http://zoomq.qiniudn.com/ZQCollection/img/yw_modern-times.jpg"/&gt;&lt;/p&gt;
-&lt;p&gt;工程方面,OO 并没有证实它宣称的威力.
-良好的系统,可能用 "OO 语言"来实现,
-但是,往往代码出自真正理解 OOP 的问题,
+&lt;p&gt;工程方面,&lt;span class="caps"&gt;OO&lt;/span&gt; 并没有证实它宣称的威力.
+良好的系统,可能用 “&lt;span class="caps"&gt;OO&lt;/span&gt; 语言”来实现,
+但是,往往代码出自真正理解 &lt;span class="caps"&gt;OOP&lt;/span&gt; 的问题,
 不盲从 &lt;code&gt;一切皆对象&lt;/code&gt;或是&lt;code&gt;设计模式&lt;/code&gt; 的工程师.
-优秀程序员,通常在 OO 语言中进行变通,基本上只写传统的过程式的代码,
+优秀程序员,通常在 &lt;span class="caps"&gt;OO&lt;/span&gt; 语言中进行变通,基本上只写传统的过程式的代码,
 并结合函数式编程风格.
-因此,一些 OOP 语言及其工具可能有非常广泛的应用,
-但是,OO风格其实并没有真正对编程领域施加什么大太的推动.&lt;/p&gt;
+因此,一些 &lt;span class="caps"&gt;OOP&lt;/span&gt; 语言及其工具可能有非常广泛的应用, 但是,&lt;span class="caps"&gt;OO&lt;/span&gt;风格其实并没有真正对编程领域施加什么大太的推动.&lt;/p&gt;
 &lt;h2 id="_6"&gt;终言&lt;/h2&gt;
-&lt;p&gt;~ Final word&lt;/p&gt;
+&lt;p&gt;~ Final word&lt;/p&gt;
 &lt;p&gt;那么终究这篇文章想说什么?
-对OO语言的圣战?
+对&lt;span class="caps"&gt;OO&lt;/span&gt;语言的圣战?
 提倡函数式编程?
 都不是,如俺所言, 根本没有所谓 &lt;code&gt;"面向对象语言"&lt;/code&gt;, 
 所以,神马战争,是不存在的.
-每一个 OO语言,都包含从过程式语言或是函数式语言借(或偷)来的好东西,
-所以,它们也不算完全无用.&lt;/p&gt;
-&lt;p&gt;但是实话哪,大部分问题究其根源,就是追加的那些个 OO 特性
-(死塞到过程编程, PP).
-而这些额外的 "真OO技术" 带来的混乱比价值要多的多.
+每一个 &lt;span class="caps"&gt;OO&lt;/span&gt;语言,都包含从过程式语言或是函数式语言借(或偷)来的好东西, 所以,它们也不算完全无用.&lt;/p&gt;
+&lt;p&gt;但是实话哪,大部分问题究其根源,就是追加的那些个 &lt;span class="caps"&gt;OO&lt;/span&gt; 特性
+(死塞到过程编程, &lt;span class="caps"&gt;PP&lt;/span&gt;).
+而这些额外的 “真&lt;span class="caps"&gt;OO&lt;/span&gt;技术” 带来的混乱比价值要多的多.
 从这点看其价值是微不足道的.
 根据俺的经验,
-一但接受了哪怕只有一两个 OO 思想,
-就将引发一系列麻烦和思维错误中,
-且需要很长时间才能醒悟并摆脱.&lt;/p&gt;
-&lt;p&gt;因此,俺严正建议,表再接受任何 OO方面的想法,
-也表试图使用它的 "特性".
-OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
-但,你依然可以使用 "OO语言" 来生产可用程序,
-因为你基本上是以非OO语言来使用它的.&lt;/p&gt;
+一但接受了哪怕只有一两个 &lt;span class="caps"&gt;OO&lt;/span&gt; 思想,
+就将引发一系列麻烦和思维错误中, 且需要很长时间才能醒悟并摆脱.&lt;/p&gt;
+&lt;p&gt;因此,俺严正建议,表再接受任何 &lt;span class="caps"&gt;OO&lt;/span&gt;方面的想法,
+也表试图使用它的 “特性”.
+&lt;span class="caps"&gt;OO&lt;/span&gt; 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
+但,你依然可以使用 “&lt;span class="caps"&gt;OO&lt;/span&gt;语言” 来生产可用程序, 因为你基本上是以非&lt;span class="caps"&gt;OO&lt;/span&gt;语言来使用它的.&lt;/p&gt;
 &lt;h1 id="_7"&gt;是也乎&lt;/h1&gt;
-&lt;p&gt;对于 &lt;code&gt;王珢&lt;/code&gt; , 关注了太久了,久到成为习惯了…
-但是,认真翻译他翻越后的技术思考成果,还是第一次,可惜也只能用自个儿的语气来快译,真正涉及的所有技术细节,俺还没有能力逐一印证,俺也只是个期望简洁的结论,记忆下来,直接使用的那种知其然,不知所以然的家伙…&lt;/p&gt;
-&lt;p&gt;但是,不得不说,对于 OOP 从第N次使用JAVA 败退后,
-就一直对 OOP 的编程思想抱有深深的焦虑,
+&lt;p&gt;对于 &lt;code&gt;王珢&lt;/code&gt; , 关注了太久了,久到成为习惯了… 但是,认真翻译他翻越后的技术思考成果,还是第一次,可惜也只能用自个儿的语气来快译,真正涉及的所有技术细节,俺还没有能力逐一印证,俺也只是个期望简洁的结论,记忆下来,直接使用的那种知其然,不知所以然的家伙…&lt;/p&gt;
+&lt;p&gt;但是,不得不说,对于 &lt;span class="caps"&gt;OOP&lt;/span&gt; 从第N次使用&lt;span class="caps"&gt;JAVA&lt;/span&gt; 败退后,
+就一直对 &lt;span class="caps"&gt;OOP&lt;/span&gt; 的编程思想抱有深深的焦虑,
 原先总是对自个儿为毛无法自然的对象化所有事物而自我嫌弃,
-然后是奇怪为毛不用 OOP 编程反而更加自然,
-到最后,沈游侠向俺演示,怎么通过清除 class 令Python代码更短,运行更快…&lt;/p&gt;
-&lt;p&gt;这才,从俺的世界观里彻底放弃了 OOP ,但是,一直没有找到为毛这样的根因,现在 王珢完成了这一结论性描述,收藏之!严正推荐之!&lt;/p&gt;
-&lt;h1 id="changlog"&gt;Changlog ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/h1&gt;
+然后是奇怪为毛不用 &lt;span class="caps"&gt;OOP&lt;/span&gt; 编程反而更加自然,
+到最后,沈游侠向俺演示,怎么通过清除 class 令Python代码更短,运行更快…&lt;/p&gt;
+&lt;p&gt;这才,从俺的世界观里彻底放弃了 &lt;span class="caps"&gt;OOP&lt;/span&gt; ,但是,一直没有找到为毛这样的根因,现在 王珢完成了这一结论性描述,收藏之!严正推荐之!&lt;/p&gt;
+&lt;h1 id="changlog"&gt;Changlog ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140109 获得&lt;code&gt;王珢&lt;/code&gt;授权,得以进行传播.&lt;/li&gt;
-&lt;li&gt;140108 前后7.42小时完成快译.&lt;/li&gt;
-&lt;li&gt;131224 翻越抄录在 medium.com&lt;/li&gt;
+&lt;li&gt;140108 前后7.42小时完成快译.&lt;/li&gt;
+&lt;li&gt;131224 翻越抄录在 medium.com&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="-o"&gt;增订:-o回收&lt;/h2&gt;
-&lt;p&gt;review 时发现 yw 增补了原blog ,有些段落已经发生了调整,只有回收了:&lt;/p&gt;
-&lt;p&gt;The programmers’ world is full of fads and superstitions. Every now and then there will be somebody come up and announce: “I can save the world!” No matter how bad the ideas are, there will always be followers, and the ideas soon become their religion. They then develop their community or camp, try to make the rest of the world adopt those ideas, and try to make the ideas live forever.&lt;/p&gt;
+&lt;p&gt;review 时发现 yw 增补了原blog ,有些段落已经发生了调整,只有回收了:&lt;/p&gt;
+&lt;p&gt;The programmers’ world is full of fads and superstitions. Every now and then there will be somebody come up and announce: “I can save the world!” No matter how bad the ideas are, there will always be followers, and the ideas soon become their religion. They then develop their community or camp, try to make the rest of the world adopt those ideas, and try to make the ideas live forever.&lt;/p&gt;
 &lt;p&gt;程序猿的世界充斥着各种时髦迷信.不时就有人跳出来吼:”俺能拯救世界!”诡异的是,无论多不靠谱的想法,总有追随者,并快速打造成全站的宗教,结成社区,尽量迫使其它所有人认同,以史这想法永存下去.&lt;/p&gt;
-&lt;p&gt;Whenever you criticize a programming language or paradigm, people would think you are a proponent of some other language or paradigm. Since I wrote the article pointing out the drawbacks of purely functional programming and monads, some people have apparently taken me as a proponent of object-oriented programming. That’s far from the case. I don’t like OO at all. I use almost none of the OO techniques even when I write programs in Java.&lt;/p&gt;
-&lt;p&gt;当你开始批评某编程语言或是范式时,人们就认为你一定是另外某某党的拥趸. 自从俺写文章黒 纯函式 编程以及单子的问题后, 有的就以为俺已经投入到 OOP 的怀抱中了. 图样图森破,俺从来就没有尿过 OOP, 即便在使用JAVA 编程时.&lt;/p&gt;
-&lt;p&gt;I have a scientific mind. I do research on programming languages and I make some of my own. I have implemented almost every feature in every language. So programming languages have no power upon me. I play with them like toys. I never see a language or a paradigm as a whole. I can dissect them and take the good parts that I liked, and discard the parts that don’t work well.&lt;/p&gt;
-&lt;p&gt;俺具备科学思想.进行过编程语言的研究,而且自行实现过一些. 在任何语言上俺都能实现几乎所有语言特性. 因此,编程语言已经蒙不住俺了.俺能象玩具一般把玩它们, 在俺眼中它们只是一堆零件,可以任意折腾,提取俺喜欢的,丢弃俺不屑的.&lt;/p&gt;
-&lt;p&gt;Actually in the first version of the previous article I also criticized OOP, but I soon realized that it may not be an interesting topic. I have known the shortcomings of OOP and associate design pattens etc for many years and I thought that most programmers know them, and there is no need to write about them. It turns out that I was wrong. I have lived in my nice little world for too long and forgot how confusing the world can be.&lt;/p&gt;
-&lt;p&gt;其实以往文章有部分已经对 OOP 吐糟过了,但是,很快反应过来这可能不是个有趣的话题. 俺以为大多数程序猿已经对 OOP 以及关联的设计模式的缺陷,没必要强调了. 然而,事实证明是俺图样图森破了,在自个儿可爱的小世界中呆久了,容易忘记外面的混沌.&lt;/p&gt;
-&lt;p&gt;I just saw this InfoQ talk by Gilad Bracha today. He dislikes the purely functional cult as much as I do, but unlike me, he has subscribed to another cult that is OOP. Although he made some good points, the general message I got from the talk was that OOP the “one true king” is going to rule the world, and FP will be deconstructed and serve as a subordinate of it. OOP will live forever. This is ridiculous.&lt;/p&gt;
-&lt;p&gt;刚看到今天 InfoQ 上 Gilad Bracha 的访谈 . 他象俺一样不是性能崇拜者, 但是,他已经是邪恶的OOP 教派成员了, 虽然传达了一些很好的意见,但是,整体上对于 OOP 是”真圣”, FP 将解构为 OOP 的下属, 而 OOP 将永存. 这就过了吼!&lt;/p&gt;
-&lt;p&gt;FP has its problems, but it deserves a lot more respect than this. Although I dislike some purely functional language’s cult-like culture, FP in general is highly valued. FP taught me a lot more and contains a lot more value than OOP. The education I received from some of the best FP people made me a better programmer. Even when I use a OO language, I avoid its shortcomings and write in a much cleaner way than the usual OO style. Some OO languages have been learning (or stealing) from FP languages for long and benefitted from it. To make a living, some highly educated FP people work on OO languages, make good compilers or tools for them. I feel terrible that somebody talks about FP that way.&lt;/p&gt;
-&lt;p&gt;FP 当然有自身的固有问题,但是它值得更多的尊重. 虽然俺不喜欢一些 纯函式 语言邪教般的文化, 但是 FP 具有很高的价值. FP 教了俺很多好东西,含有比 OOP 更多价值. 从那些 FP 程序员身上接受的教导令俺成为更好的程序员. 甚至当我使用一个 面向对象 的语言时, 俺也习惯性的在躲避其缺点, 使用更加简洁的方式来完成功能. 一些 面向对象的语言,其实一直在向 FP 窃取思想而从中受惠. 限于生计, 有些受过 FP 高级教育的程序员,却在为 面向对象的语言工作,为其编写更好的编译或其它工具. 这令俺细思恐极.&lt;/p&gt;
-&lt;p&gt;Gilad criticized some bad designs in FP, but highly promoted the bad designs from OOP, to the degree of calling them “the one true way”. Many aspects of OOP have been bringing harm to the software industry and computer science education for long, but he didn’t mentioned them. The more I forget about those ideas from OO, the simpler and better my code becomes. I thought many people have learned these lessons, but it looks that’s not true.&lt;/p&gt;
-&lt;p&gt;Gilad 批评了一些FP 中不好的设计, 但鼓吹 OOP 的设计模式是 “唯一正当”的,这更加要命. 事实上 OOP 对计算机科学的教育以及软件产业已经造成了深远的伤害. 虽然俺自觉的忘记 OOP ,用更加简洁的方式改善代码. 原本以为大家都跟俺一样,但看来现实并非如此.&lt;/p&gt;
-&lt;p&gt;Thus I realized that my original criticism of OOP had some value, and I decided to write a dedicated article about it.&lt;/p&gt;
-&lt;p&gt;故此,俺意识到,俺对OOP 的批评具有一定的价值,决定写下来, 好好聊聊.&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;Whenever you criticize a programming language or paradigm, people would think you are a proponent of some other language or paradigm. Since I wrote the article pointing out the drawbacks of purely functional programming and monads, some people have apparently taken me as a proponent of object-oriented programming. That’s far from the case. I don’t like &lt;span class="caps"&gt;OO&lt;/span&gt; at all. I use almost none of the &lt;span class="caps"&gt;OO&lt;/span&gt; techniques even when I write programs in Java.&lt;/p&gt;
+&lt;p&gt;当你开始批评某编程语言或是范式时,人们就认为你一定是另外某某党的拥趸. 自从俺写文章黒 纯函式 编程以及单子的问题后, 有的就以为俺已经投入到 &lt;span class="caps"&gt;OOP&lt;/span&gt; 的怀抱中了. 图样图森破,俺从来就没有尿过 &lt;span class="caps"&gt;OOP&lt;/span&gt;, 即便在使用&lt;span class="caps"&gt;JAVA&lt;/span&gt; 编程时.&lt;/p&gt;
+&lt;p&gt;I have a scientific mind. I do research on programming languages and I make some of my own. I have implemented almost every feature in every language. So programming languages have no power upon me. I play with them like toys. I never see a language or a paradigm as a whole. I can dissect them and take the good parts that I liked, and discard the parts that don’t work well.&lt;/p&gt;
+&lt;p&gt;俺具备科学思想.进行过编程语言的研究,而且自行实现过一些. 在任何语言上俺都能实现几乎所有语言特性. 因此,编程语言已经蒙不住俺了.俺能象玩具一般把玩它们, 在俺眼中它们只是一堆零件,可以任意折腾,提取俺喜欢的,丢弃俺不屑的.&lt;/p&gt;
+&lt;p&gt;Actually in the first version of the previous article I also criticized &lt;span class="caps"&gt;OOP&lt;/span&gt;, but I soon realized that it may not be an interesting topic. I have known the shortcomings of &lt;span class="caps"&gt;OOP&lt;/span&gt; and associate design pattens etc for many years and I thought that most programmers know them, and there is no need to write about them. It turns out that I was wrong. I have lived in my nice little world for too long and forgot how confusing the world can be.&lt;/p&gt;
+&lt;p&gt;其实以往文章有部分已经对 &lt;span class="caps"&gt;OOP&lt;/span&gt; 吐糟过了,但是,很快反应过来这可能不是个有趣的话题. 俺以为大多数程序猿已经对 &lt;span class="caps"&gt;OOP&lt;/span&gt; 以及关联的设计模式的缺陷,没必要强调了. 然而,事实证明是俺图样图森破了,在自个儿可爱的小世界中呆久了,容易忘记外面的混沌.&lt;/p&gt;
+&lt;p&gt;I just saw this InfoQ talk by Gilad Bracha today. He dislikes the purely functional cult as much as I do, but unlike me, he has subscribed to another cult that is &lt;span class="caps"&gt;OOP&lt;/span&gt;. Although he made some good points, the general message I got from the talk was that &lt;span class="caps"&gt;OOP&lt;/span&gt; the “one true king” is going to rule the world, and &lt;span class="caps"&gt;FP&lt;/span&gt; will be deconstructed and serve as a subordinate of it. &lt;span class="caps"&gt;OOP&lt;/span&gt; will live forever. This is ridiculous.&lt;/p&gt;
+&lt;p&gt;刚看到今天 InfoQ 上 Gilad Bracha 的访谈 . 他象俺一样不是性能崇拜者, 但是,他已经是邪恶的&lt;span class="caps"&gt;OOP&lt;/span&gt; 教派成员了, 虽然传达了一些很好的意见,但是,整体上对于 &lt;span class="caps"&gt;OOP&lt;/span&gt; 是”真圣”, &lt;span class="caps"&gt;FP&lt;/span&gt; 将解构为 &lt;span class="caps"&gt;OOP&lt;/span&gt; 的下属, 而 &lt;span class="caps"&gt;OOP&lt;/span&gt; 将永存. 这就过了吼!&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;FP&lt;/span&gt; has its problems, but it deserves a lot more respect than this. Although I dislike some purely functional language’s cult-like culture, &lt;span class="caps"&gt;FP&lt;/span&gt; in general is highly valued. &lt;span class="caps"&gt;FP&lt;/span&gt; taught me a lot more and contains a lot more value than &lt;span class="caps"&gt;OOP&lt;/span&gt;. The education I received from some of the best &lt;span class="caps"&gt;FP&lt;/span&gt; people made me a better programmer. Even when I use a &lt;span class="caps"&gt;OO&lt;/span&gt; language, I avoid its shortcomings and write in a much cleaner way than the usual &lt;span class="caps"&gt;OO&lt;/span&gt; style. Some &lt;span class="caps"&gt;OO&lt;/span&gt; languages have been learning (or stealing) from &lt;span class="caps"&gt;FP&lt;/span&gt; languages for long and benefitted from it. To make a living, some highly educated &lt;span class="caps"&gt;FP&lt;/span&gt; people work on &lt;span class="caps"&gt;OO&lt;/span&gt; languages, make good compilers or tools for them. I feel terrible that somebody talks about &lt;span class="caps"&gt;FP&lt;/span&gt; that way.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;FP&lt;/span&gt; 当然有自身的固有问题,但是它值得更多的尊重. 虽然俺不喜欢一些 纯函式 语言邪教般的文化, 但是 &lt;span class="caps"&gt;FP&lt;/span&gt; 具有很高的价值. &lt;span class="caps"&gt;FP&lt;/span&gt; 教了俺很多好东西,含有比 &lt;span class="caps"&gt;OOP&lt;/span&gt; 更多价值. 从那些 &lt;span class="caps"&gt;FP&lt;/span&gt; 程序员身上接受的教导令俺成为更好的程序员. 甚至当我使用一个 面向对象 的语言时, 俺也习惯性的在躲避其缺点, 使用更加简洁的方式来完成功能. 一些 面向对象的语言,其实一直在向 &lt;span class="caps"&gt;FP&lt;/span&gt; 窃取思想而从中受惠. 限于生计, 有些受过 &lt;span class="caps"&gt;FP&lt;/span&gt; 高级教育的程序员,却在为 面向对象的语言工作,为其编写更好的编译或其它工具. 这令俺细思恐极.&lt;/p&gt;
+&lt;p&gt;Gilad criticized some bad designs in &lt;span class="caps"&gt;FP&lt;/span&gt;, but highly promoted the bad designs from &lt;span class="caps"&gt;OOP&lt;/span&gt;, to the degree of calling them “the one true way”. Many aspects of &lt;span class="caps"&gt;OOP&lt;/span&gt; have been bringing harm to the software industry and computer science education for long, but he didn’t mentioned them. The more I forget about those ideas from &lt;span class="caps"&gt;OO&lt;/span&gt;, the simpler and better my code becomes. I thought many people have learned these lessons, but it looks that’s not true.&lt;/p&gt;
+&lt;p&gt;Gilad 批评了一些&lt;span class="caps"&gt;FP&lt;/span&gt; 中不好的设计, 但鼓吹 &lt;span class="caps"&gt;OOP&lt;/span&gt; 的设计模式是 “唯一正当”的,这更加要命. 事实上 &lt;span class="caps"&gt;OOP&lt;/span&gt; 对计算机科学的教育以及软件产业已经造成了深远的伤害. 虽然俺自觉的忘记 &lt;span class="caps"&gt;OOP&lt;/span&gt; ,用更加简洁的方式改善代码. 原本以为大家都跟俺一样,但看来现实并非如此.&lt;/p&gt;
+&lt;p&gt;Thus I realized that my original criticism of &lt;span class="caps"&gt;OOP&lt;/span&gt; had some value, and I decided to write a dedicated article about it.&lt;/p&gt;
+&lt;p&gt;故此,俺意识到,俺对&lt;span class="caps"&gt;OOP&lt;/span&gt; 的批评具有一定的价值,决定写下来, 好好聊聊.&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
 &lt;h3 id="_8"&gt;过度抽象的代价&lt;/h3&gt;
-&lt;p&gt;~ The cost of excessive abstraction &lt;/p&gt;
-&lt;p&gt;The major appeal of OOP is abstraction, but OO programmers usually overdo it. I know the value of abstraction. I build abstractions every day, in all kinds of languages. But OOP advocates a level of abstraction which makes programs hard to understand and hard to analyze. I often see Java programs with multiple levels of inheritance and overloading but doing very little. And worse, because there are so much code that doesn’t do real things, it is very hard to find out which part of the code is doing the thing you want.&lt;/p&gt;
-&lt;p&gt;OOP 的主要吸引力就是抽象,
-但是, OO程序猿总是作过头.
+&lt;p&gt;~ The cost of excessive abstraction &lt;/p&gt;
+&lt;p&gt;The major appeal of &lt;span class="caps"&gt;OOP&lt;/span&gt; is abstraction, but &lt;span class="caps"&gt;OO&lt;/span&gt; programmers usually overdo it. I know the value of abstraction. I build abstractions every day, in all kinds of languages. But &lt;span class="caps"&gt;OOP&lt;/span&gt; advocates a level of abstraction which makes programs hard to understand and hard to analyze. I often see Java programs with multiple levels of inheritance and overloading but doing very little. And worse, because there are so much code that doesn’t do real things, it is very hard to find out which part of the code is doing the thing you want.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OOP&lt;/span&gt; 的主要吸引力就是抽象,
+但是, &lt;span class="caps"&gt;OO&lt;/span&gt;程序猿总是作过头.
 俺明白抽象的价值.
 每天俺都在各种语言中实践着抽象.
-但, OOP 主张构建抽象层,这通常使程序难以理解/分析.
-俺经常见到有 JAVA 程序动用多层继承/重载,但实际作的事儿不多.
-更糟的是,正因堆砌了如此多的代码,却没有真正在作事儿,
-以至于难以找到哪部分是你真正想作的东西.&lt;/p&gt;
-&lt;p&gt;Whenever you complain about Java or C++, OO proponents will tell you that they are not authentic OO languages. They would ask you to take a look at Smalltalk. If Smalltalk’s ways are that good, why almost nobody is using Smalltalk now? Because there are real problems in its approach. The “authentic” OO style of Smalltalk promotes the notion of “extremely late binding”, which basically means that the meaning of the program constructs is determined as late as possible.&lt;/p&gt;
-&lt;p&gt;每当你抱怨 JAVA/C++ 时,OO程序猿就说,那些不是真正的 OO 语言.
+但, &lt;span class="caps"&gt;OOP&lt;/span&gt; 主张构建抽象层,这通常使程序难以理解/分析.
+俺经常见到有 &lt;span class="caps"&gt;JAVA&lt;/span&gt; 程序动用多层继承/重载,但实际作的事儿不多.
+更糟的是,正因堆砌了如此多的代码,却没有真正在作事儿, 以至于难以找到哪部分是你真正想作的东西.&lt;/p&gt;
+&lt;p&gt;Whenever you complain about Java or C++, &lt;span class="caps"&gt;OO&lt;/span&gt; proponents will tell you that they are not authentic &lt;span class="caps"&gt;OO&lt;/span&gt; languages. They would ask you to take a look at Smalltalk. If Smalltalk’s ways are that good, why almost nobody is using Smalltalk now? Because there are real problems in its approach. The “authentic” &lt;span class="caps"&gt;OO&lt;/span&gt; style of Smalltalk promotes the notion of “extremely late binding”, which basically means that the meaning of the program constructs is determined as late as possible.&lt;/p&gt;
+&lt;p&gt;每当你抱怨 &lt;span class="caps"&gt;JAVA&lt;/span&gt;/C++ 时,&lt;span class="caps"&gt;OO&lt;/span&gt;程序猿就说,那些不是真正的 &lt;span class="caps"&gt;OO&lt;/span&gt; 语言.
 一准向你推荐 Smalltalk 的.
 但是,如果 Smalltalk 是好的,为毛现在几乎没有人使用 Smalltalk 进行工程开发?
-在"正宗"OO 语言 Smalltalk 中,
-提倡的风格是 "极迟绑定" (extremely late binding),
-意味着,要尽可能晩的确定概念的意义再进行构建.&lt;/p&gt;
-&lt;p&gt;Late binding means that you have a chance to swap out the underlying implementation without forcing the upper levels to change, but it also means that you are no longer sure what a piece of code means! When I look at expressions such as ’1+2′ and ‘if (t) then … else …’ in Java or C++, I at least know for sure that they mean an integer addition and an usual conditional. But I’m not sure about this in an “extremely late binding language”, because even the meaning of ‘+’ and ‘if” can be redefined. A similar problem happens to Lisp family languages’ macro systems. It is bad idea of giving the programmers the power of defining control structures, because soon your language will be abundant of quirky control structures designed by programmers who try to be clever.&lt;/p&gt;
+在”正宗”&lt;span class="caps"&gt;OO&lt;/span&gt; 语言 Smalltalk 中,
+提倡的风格是 “极迟绑定” (extremely late binding), 意味着,要尽可能晩的确定概念的意义再进行构建.&lt;/p&gt;
+&lt;p&gt;Late binding means that you have a chance to swap out the underlying implementation without forcing the upper levels to change, but it also means that you are no longer sure what a piece of code means! When I look at expressions such as ’1+2′ and ‘if (t) then … else …’ in Java or C++, I at least know for sure that they mean an integer addition and an usual conditional. But I’m not sure about this in an “extremely late binding language”, because even the meaning of ‘+’ and ‘if” can be redefined. A similar problem happens to Lisp family languages’ macro systems. It is bad idea of giving the programmers the power of defining control structures, because soon your language will be abundant of quirky control structures designed by programmers who try to be clever.&lt;/p&gt;
 &lt;p&gt;这样,你有机会换出(swap out)底层实现,
 而不用强制变更上层.
 但是,同时也意味着你也无法及时明确一段代码究竟会作什么!
-比如,在 JAVA 或是 C++ 中看到诸如
+比如,在 &lt;span class="caps"&gt;JAVA&lt;/span&gt; 或是 C++ 中看到诸如
 &lt;code&gt;1+2&lt;/code&gt; 或是 &lt;code&gt;if (t) then … else …&lt;/code&gt; 的表达式时,
 至少俺知道是作整数相加,以及往常一般的条件判别.
-但是,若在"极迟绑定"语言中就完全一头雾水了!
+但是,若在”极迟绑定”语言中就完全一头雾水了!
 因为 &lt;code&gt;+&lt;/code&gt; 和 &lt;code&gt;if&lt;/code&gt; 都是可以重新定义的.
 类似问题也出现在 Lisp 家族语言的宏体系中.
-事实证明,给予程序猿定义控制结构的能力,
-这主意很囧,因为立即就会发现,自作聪明的程序猿都在努力向语言里塞满各种特殊的控制结构.&lt;/p&gt;
-&lt;p&gt;Abstraction is a good idea when used moderately, but when you do it in excess, it backfires. Not only does it make it hard for humans to understand the code, it makes automated analysis tools and compiler optimizations difficult or impossible to make. I built an advanced static analysis tool for Python called PySonar. It works okay in general, but under the premise that the programs don’t use the “deep magic” of Python (which are possibly learned from Smalltalk). If you do, there are all sorts of ways you can confuse the analysis, but for that I can do nothing to help. Nothing can analyze or optimize the code if you put expensive or undecidable computations into the abstraction layer.&lt;/p&gt;
+事实证明,给予程序猿定义控制结构的能力, 这主意很囧,因为立即就会发现,自作聪明的程序猿都在努力向语言里塞满各种特殊的控制结构.&lt;/p&gt;
+&lt;p&gt;Abstraction is a good idea when used moderately, but when you do it in excess, it backfires. Not only does it make it hard for humans to understand the code, it makes automated analysis tools and compiler optimizations difficult or impossible to make. I built an advanced static analysis tool for Python called PySonar. It works okay in general, but under the premise that the programs don’t use the “deep magic” of Python (which are possibly learned from Smalltalk). If you do, there are all sorts of ways you can confuse the analysis, but for that I can do nothing to help. Nothing can analyze or optimize the code if you put expensive or undecidable computations into the abstraction layer.&lt;/p&gt;
 &lt;p&gt;适度使用时,抽象是个好主意,
 一但过了,就会事与愿违.(其实什么事儿不是酱紫的呢?)
 过度抽象,不仅令代码难以为人理解,
@@ -524,66 +483,61 @@ OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
 (即前述Smalltalk 中能玩的).
 如果你一定要玩,有太多方法可以弄晕分析器,
 这时,俺也帮不了你什么了.
-你一但将华丽的无法理解的东西塞到抽象层,
-那就没有任何东西能帮你分析或是优化代码了!&lt;/p&gt;
-&lt;p&gt;So is there any value of making those deep abstractions an option but not encouraged to use by usual programmers? There might be, but probably too little to offset the lost safety guarantee and performance.&lt;/p&gt;
-&lt;p&gt;那么,不鼓励普通程序猿使用深层抽象,有什么价值会丧失?
-可能有,但是,一定无法抵消代码失去安全以及性能保障!&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
-&lt;h3 id="are-functions-objects_1"&gt;Are functions objects?&lt;/h3&gt;
-&lt;p&gt;The original motivation of putting functions inside objects was to support GUI applications. You click on a button and some code (a callback) will be invoked. For the convenience of referring to the button that gets clicked, the callback takes the triggered object as its first argument. Since the callback does nothing more than this, it seems to be convenient to just store it inside the button. And thus we had an “object” which combines the attributes of the button and its method (the callback). Indeed it is convenient and a good idea. But the limited usage case of GUI applications can’t really justify a universal notion of “everything is an object”. Computer science often suffers from such over-generalizations.&lt;/p&gt;
-&lt;p&gt;将函式塞到对象中的原始动机是在 GUI 开发中.点击一个按钮时,一些代码(回调)就应该被触发. 为了指明按了具体哪个按钮,回调的函式就想要一个指代的对象. 因为回调就这么单纯,看起来将其存储在按钮中没有什么不好. 于是我们有了个”对象”. 的确挺方便. 但 GUI 应用只是个非常有限的情景,并不能真正证明 “一切皆对象”的普世性. 可惜计算机科学这种过度概括是常态.&lt;/p&gt;
-&lt;p&gt;But even the above contains a subtle mistake: the callback in the button is not really a method. It is just a usual function. Very few procedures should be considered methods of an object, and most others are just functions. If you look carefully, most of the time the objects just serve as a namespace (or module) in which you can put data fields and functions. But those functions can also live on their own (such as addition of velocities or time). They just take the objects as inputs and produce some output. Only the functions that are most intimately connected to the fields and provide an “abstraction layer” should be considered methods. Most of those are “getters”, “setters” or “iterators”. Functions don’t necessarily belong to objects. They are not objects. They describe a change, transition or transformation of objects. They are external to the objects.&lt;/p&gt;
+你一但将华丽的无法理解的东西塞到抽象层, 那就没有任何东西能帮你分析或是优化代码了!&lt;/p&gt;
+&lt;p&gt;So is there any value of making those deep abstractions an option but not encouraged to use by usual programmers? There might be, but probably too little to offset the lost safety guarantee and performance.&lt;/p&gt;
+&lt;p&gt;那么,不鼓励普通程序猿使用深层抽象,有什么价值会丧失? 可能有,但是,一定无法抵消代码失去安全以及性能保障!&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;h3 id="are-functions-objects_1"&gt;Are functions objects?&lt;/h3&gt;
+&lt;p&gt;The original motivation of putting functions inside objects was to support &lt;span class="caps"&gt;GUI&lt;/span&gt; applications. You click on a button and some code (a callback) will be invoked. For the convenience of referring to the button that gets clicked, the callback takes the triggered object as its first argument. Since the callback does nothing more than this, it seems to be convenient to just store it inside the button. And thus we had an “object” which combines the attributes of the button and its method (the callback). Indeed it is convenient and a good idea. But the limited usage case of &lt;span class="caps"&gt;GUI&lt;/span&gt; applications can’t really justify a universal notion of “everything is an object”. Computer science often suffers from such over-generalizations.&lt;/p&gt;
+&lt;p&gt;将函式塞到对象中的原始动机是在 &lt;span class="caps"&gt;GUI&lt;/span&gt; 开发中.点击一个按钮时,一些代码(回调)就应该被触发. 为了指明按了具体哪个按钮,回调的函式就想要一个指代的对象. 因为回调就这么单纯,看起来将其存储在按钮中没有什么不好. 于是我们有了个”对象”. 的确挺方便. 但 &lt;span class="caps"&gt;GUI&lt;/span&gt; 应用只是个非常有限的情景,并不能真正证明 “一切皆对象”的普世性. 可惜计算机科学这种过度概括是常态.&lt;/p&gt;
+&lt;p&gt;But even the above contains a subtle mistake: the callback in the button is not really a method. It is just a usual function. Very few procedures should be considered methods of an object, and most others are just functions. If you look carefully, most of the time the objects just serve as a namespace (or module) in which you can put data fields and functions. But those functions can also live on their own (such as addition of velocities or time). They just take the objects as inputs and produce some output. Only the functions that are most intimately connected to the fields and provide an “abstraction layer” should be considered methods. Most of those are “getters”, “setters” or “iterators”. Functions don’t necessarily belong to objects. They are not objects. They describe a change, transition or transformation of objects. They are external to the objects.&lt;/p&gt;
 &lt;p&gt;但是，即使上述包含一个微妙的错误：在按钮的回调是不是一个真正的方法。这只是一个平常的功能。很少有程序应被视为一个对象的方法，而大多数人都只是功能。如果你仔细观察，大部分时间的对象只是作为一个命名空间（或模块）中，你可以把数据域和功能。但是，这些功能也可以生活在他们自己的（如加速度或时间）。他们只是把对象作为输入，并产生一些输出。只有那些最密切相关的领域，并提供了一个“抽象层”的功能，应考虑方法。其中大部分是“干将”，“二传手”或“迭代器”。功能不一定属于对象。他们不是对象。他们描述的改变，转变或物体的转型。它们是外部的对象。&lt;/p&gt;
-&lt;p&gt;In some languages such as Scala or Python, functions are also treated as objects. But they actually just wrapped the functions into an object, give them some name such as “apply” or “&lt;strong&gt;call&lt;/strong&gt;”, so that when the objects are “invoked”, you know which functions to call. But putting a function into an object doesn’t really mean functions are also objects, just like inviting friends to your house doesn’t make them your family.&lt;/p&gt;
+&lt;p&gt;In some languages such as Scala or Python, functions are also treated as objects. But they actually just wrapped the functions into an object, give them some name such as “apply” or “&lt;strong&gt;call&lt;/strong&gt;”, so that when the objects are “invoked”, you know which functions to call. But putting a function into an object doesn’t really mean functions are also objects, just like inviting friends to your house doesn’t make them your family.&lt;/p&gt;
 &lt;p&gt;在一些语言,比如 Scala/Python, 函式也被视作对象.
 而实际上,只是将一个函式包装成对象,
 然后给予类似 &lt;code&gt;apply&lt;/code&gt; 或是 &lt;code&gt;__call__&lt;/code&gt; 的名称,
 对象就酱紫能 &lt;code&gt;invoked&lt;/code&gt; 了,而大家都知道函式只是调用了而已.&lt;/p&gt;
-&lt;p&gt;但是,将函式塞到对象中,并不等于函式也是对象,
-好比,邀请朋友到家里来也不能令他们变成家人.&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
-&lt;h3 id="actor"&gt;一切皆角色(actor) ?&lt;/h3&gt;
-&lt;p&gt;~ Everything is an actor? &lt;/p&gt;
-&lt;p&gt;In his talk, Gilad Bracha disagrees with the FP hypes such as monads and pattern matching (with some good points), but he over-valued the ways of OOP and the actor model. From the blog posts he refers to, you can see that he thinks of the actor model as the “one true way”.&lt;/p&gt;
+&lt;p&gt;但是,将函式塞到对象中,并不等于函式也是对象, 好比,邀请朋友到家里来也不能令他们变成家人.&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;h3 id="actor"&gt;一切皆角色(actor) ?&lt;/h3&gt;
+&lt;p&gt;~ Everything is an actor? &lt;/p&gt;
+&lt;p&gt;In his talk, Gilad Bracha disagrees with the &lt;span class="caps"&gt;FP&lt;/span&gt; hypes such as monads and pattern matching (with some good points), but he over-valued the ways of &lt;span class="caps"&gt;OOP&lt;/span&gt; and the actor model. From the blog posts he refers to, you can see that he thinks of the actor model as the “one true way”.&lt;/p&gt;
 &lt;p&gt;在 Gilad Bracha 的有关言论中,
-他不认同 FP 的炒作,
+他不认同 &lt;span class="caps"&gt;FP&lt;/span&gt; 的炒作,
 类似 monads 以及 模式匹配(这有点儿好处),
-但他完全高估了 OOP 和角色模式了.
-从他的blog 文章中可以看到,他宣称 角色模式是 "唯一正解".&lt;/p&gt;
-&lt;p&gt;I’m always wary of such notion as “one true way” or “everything is…” I actually read Carl Hewitt’s actor model paper a long time ago and also some of his other concepts such as Direct LogicTM (Yes, there is a trademark sign on it). I didn’t really appreciate the papers and his way of writing, with the “dedicated to some-big-names” headlines, trademark signs and grand claims.&lt;/p&gt;
-&lt;p&gt;俺对任何宣称 "唯一..." 或是 "一切..."
+但他完全高估了 &lt;span class="caps"&gt;OOP&lt;/span&gt; 和角色模式了.
+从他的blog 文章中可以看到,他宣称 角色模式是 ”唯一正解”.&lt;/p&gt;
+&lt;p&gt;I’m always wary of such notion as “one true way” or “everything is…” I actually read Carl Hewitt’s actor model paper a long time ago and also some of his other concepts such as Direct LogicTM (Yes, there is a trademark sign on it). I didn’t really appreciate the papers and his way of writing, with the “dedicated to some-big-names” headlines, trademark signs and grand claims.&lt;/p&gt;
+&lt;p&gt;俺对任何宣称 “唯一…” 或是 “一切…”
 的概念有疑虑.
 其实很久以前,俺就查阅过 Carl Hewitt 的角色模式论文,
-他也描述了其它模式,比如 "Direct LogicTM"
+他也描述了其它模式,比如 “Direct LogicTM”
 (是的,有商标签注的呢).
-这些论文都是标题 "高大上",签注商标以配套宏大的索赔可能性.
-俺真心没体会到他论文这种撰写方法有什么意义.&lt;/p&gt;
-&lt;p&gt;The actor model suffers from the same drawbacks of OOP as I mentioned: over-abstraction and lacking of general expressiveness. There is no way a human being or an automated system can effectively reason about the programs if you build them at way. It hides bugs. Although the actor model may be useful in some cases, it is not really expressive and simple enough to nicely capture all computations. It has too much application-specific logic (which is essentially OOP) built in, thus it is not at the same universal level as lambda calculus or Turing machines.&lt;/p&gt;
-&lt;p&gt;角色模式有同OOP 一样的毛病,
+这些论文都是标题 “高大上”,签注商标以配套宏大的索赔可能性. 俺真心没体会到他论文这种撰写方法有什么意义.&lt;/p&gt;
+&lt;p&gt;The actor model suffers from the same drawbacks of &lt;span class="caps"&gt;OOP&lt;/span&gt; as I mentioned: over-abstraction and lacking of general expressiveness. There is no way a human being or an automated system can effectively reason about the programs if you build them at way. It hides bugs. Although the actor model may be useful in some cases, it is not really expressive and simple enough to nicely capture all computations. It has too much application-specific logic (which is essentially &lt;span class="caps"&gt;OOP&lt;/span&gt;) built in, thus it is not at the same universal level as lambda calculus or Turing machines.&lt;/p&gt;
+&lt;p&gt;角色模式有同&lt;span class="caps"&gt;OOP&lt;/span&gt; 一样的毛病,
 正如俺所言:过度抽象,缺乏正常的表达能力.
 用这种模式创建的程序,
 没办法让一个人或是自动系统对其进行有效的推导.
 当然,有时,角色模式很有用.
 但是,它并不能真正很好的对所有计算进行简洁有效的表述.
 它有太多内建的特殊应用逻辑
-(这是OOP 的通病),
-因此它和 lambda演算以及图灵机 不在一个能力水平上.&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
+(这是&lt;span class="caps"&gt;OOP&lt;/span&gt; 的通病),
+因此它和 lambda演算以及图灵机 不在一个能力水平上.&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
 &lt;h3 id="_9"&gt;面向对象设计模式的傻缺&lt;/h3&gt;
-&lt;p&gt;~ The stupidity of OO design patterns &lt;/p&gt;
-&lt;p&gt;It may not be inherent in all OO languages, but OO design patterns (such names as Factory, Facade, Flyweight, Singleton, Visitor etc) have been the major source of over-complication and confusion. Their origin was mostly due to the dogma of “everything is an object” and the lack of high-order functions (or the correct implementation of them).&lt;/p&gt;
-&lt;p&gt;可能不是所有 OO 语言固有的,
+&lt;p&gt;~ The stupidity of &lt;span class="caps"&gt;OO&lt;/span&gt; design patterns &lt;/p&gt;
+&lt;p&gt;It may not be inherent in all &lt;span class="caps"&gt;OO&lt;/span&gt; languages, but &lt;span class="caps"&gt;OO&lt;/span&gt; design patterns (such names as Factory, Facade, Flyweight, Singleton, Visitor etc) have been the major source of over-complication and confusion. Their origin was mostly due to the dogma of “everything is an object” and the lack of high-order functions (or the correct implementation of them).&lt;/p&gt;
+&lt;p&gt;可能不是所有 &lt;span class="caps"&gt;OO&lt;/span&gt; 语言固有的,
 但 面向对象设计模式 
 (类似 Factory, Facade, Flyweight, Singleton, Visitor 等等)
 就是代码过度复杂/混乱的根源.
-主要原因就是 "一切皆对象" 的教条以及缺乏高阶函式
-(或正确的执行它们).&lt;/p&gt;
-&lt;p&gt;The design patterns are completely nonsense to me and I never used them. When I first heard about them I was already a PhD student at Cornell doing some PL research. I was curious about the book’s fame and borrowed one from the library. But I soon found a mapping from all those weird names to the programming techniques I have been using all the time. I don’t understand how such a book as GoF can ever be published which contains nothing but just giving new and weird names to existing programming techniques that I use every day. If you say the purpose of writing this book is to “improve communication of programmers”, then I would write a book and give new names to air, water and all kinds of food, in order to “improve the communication of all human beings”.&lt;/p&gt;
+主要原因就是 “一切皆对象” 的教条以及缺乏高阶函式 (或正确的执行它们).&lt;/p&gt;
+&lt;p&gt;The design patterns are completely nonsense to me and I never used them. When I first heard about them I was already a PhD student at Cornell doing some &lt;span class="caps"&gt;PL&lt;/span&gt; research. I was curious about the book’s fame and borrowed one from the library. But I soon found a mapping from all those weird names to the programming techniques I have been using all the time. I don’t understand how such a book as GoF can ever be published which contains nothing but just giving new and weird names to existing programming techniques that I use every day. If you say the purpose of writing this book is to “improve communication of programmers”, then I would write a book and give new names to air, water and all kinds of food, in order to “improve the communication of all human beings”.&lt;/p&gt;
 &lt;p&gt;这类设计模式完全是胡说八道,
 俺从未使用过它们.
 头一次听说它们时,
-俺已经在康奈尔大学作为博士生在进行一些 PL 研究了.
+俺已经在康奈尔大学作为博士生在进行一些 &lt;span class="caps"&gt;PL&lt;/span&gt; 研究了.
 (Programming Language research,参考:&lt;a href="http://zoomq.qiniudn.com/ZQScrapBook/ZqSKM/data/20120910004839/index.html"&gt;什么是程序语言的研究&lt;/a&gt;)
 因为好奇这书的名气,
 所以从图书馆借来的.
@@ -597,40 +551,39 @@ OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
 &lt;code&gt;改善程序员的沟通&lt;/code&gt;.
 那俺就应该写本书,来给空气/水/各种食物赋予全新名称,
 以 &lt;code&gt;改善全人类的沟通&lt;/code&gt;!&lt;/p&gt;
-&lt;p&gt;Peter Norvig gave a talk on design patterns in 1998 pointing out most of the design patterns will be “transparent” once you have first-class functions. He was too polite to call design patterns nonsense or stupid, but that’s implied.&lt;/p&gt;
+&lt;p&gt;Peter Norvig gave a talk on design patterns in 1998 pointing out most of the design patterns will be “transparent” once you have first-class functions. He was too polite to call design patterns nonsense or stupid, but that’s implied.&lt;/p&gt;
 &lt;p&gt;Peter Norvig 在98年就设计模式指出,
 一但你完成了 &lt;code&gt;高阶函数&lt;/code&gt;(first-class function) ,
-大部分设计模式对你将是 "透明的".
-他其实就是过于文雅的暗示: 设计模式就是废话或是愚蠢的.&lt;/p&gt;
-&lt;p&gt;Every time I remove a design pattern (some other people made) from PySonar, the code becomes simpler and more manageable. I just removed the last visitor pattern a few days ago, and I felt so relieved. They gave me nothing but extra work when they existed. I can do anything, including a lot more advanced things than those provided by visitor patterns, but without using them.&lt;/p&gt;
+大部分设计模式对你将是 “透明的”.
+他其实就是过于文雅的暗示: 设计模式就是废话或是愚蠢的.&lt;/p&gt;
+&lt;p&gt;Every time I remove a design pattern (some other people made) from PySonar, the code becomes simpler and more manageable. I just removed the last visitor pattern a few days ago, and I felt so relieved. They gave me nothing but extra work when they existed. I can do anything, including a lot more advanced things than those provided by visitor patterns, but without using them.&lt;/p&gt;
 &lt;p&gt;每次俺从 &lt;a href="https://github.com/yinwang0/pysonar2"&gt;PySonar&lt;/a&gt;
 中清除一个设计模式(由某些人物,生造出来的),
 代码就变得的更加简洁,易于管理.
 前几天,俺终于很欣慰的将最后一个 访问者模式 给清除了.
 设计模式除了额外的工作,没有赋予俺任何好处.
 俺可以作任何事儿,
-包括所谓 访问者模式 提供的所有先进东西,
-但是,不通用使用模式.&lt;/p&gt;
-&lt;p&gt;I owe my insights into design patterns to some functional programming people. If you really want to understand the essence of OO design patterns, and how NOT to use them, take a look at this little book other than the GoF one.&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Tests and static analysis</title><link href="http://blog.zoomquiet.io/imho/131127-yw-on-test-static-analysis.html" rel="alternate"></link><updated>2013-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-27:imho/131127-yw-on-test-static-analysis.html</id><summary type="html">&lt;p&gt;via: http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/&lt;/p&gt;
-&lt;p&gt;Ever since I made a static analysis tool for Python called PySonar, I have been asked about the question: “What is the difference between testing and static analysis?” I just replied to a comment asking a similar question, so I think it’s a good time to write down some systematic answer for this question.&lt;/p&gt;
-&lt;h2 id="static-analysis-is-static-tests-are-dynamic"&gt;Static analysis is static, tests are dynamic&lt;/h2&gt;
-&lt;p&gt;Static analysis and tests are similar in their purposes. They are both tools for improving code quality. But they are very different in nature: static analysis is static, but tests are dynamic. “Static” basically means “without running the program”.&lt;/p&gt;
-&lt;p&gt;Static analysis is similar to the compiler’s type checker but usually a lot more powerful. It can find bugs that type checkers cannot find, such as resource leaks, array index out of bounds, security risks etc. Static analysis has the “reasoning power” that tests hasn’t, so static analysis can find problems that testing may never detect. For example, a security static analysis may show you how your website can be hacked after a series of events.&lt;/p&gt;
-&lt;p&gt;Tests just run the programs with certain inputs. They are fully dynamic, so you can’t test all cases but just some of them. But because tests run dynamically, they may detect bugs that static analysis can’t find. For example, tests may find that your algorithm produces wrong results. Static analysis tools are not (yet) intelligent enough for checking this kind of high-level properties.&lt;/p&gt;
-&lt;p&gt;But notice that although tests can tell you that your algorithm is wrong, they can’t tell you that it is correct. To guarantee the correctness of programs is terribly harder than tests or static analysis. You need a mechanical proof of the program’s correctness, which means at the moment that you need a theorem prover such as Coq, Isabelle or ACL2, lots of math/logics knowledge, lots of time, and even with all those you may not be able to prove it, because your program may have encoded the Goldbach conjecture in it. So the program’s passing the tests doesn’t mean it is correct. It only means that you haven’t done terribly stupid things.&lt;/p&gt;
-&lt;h2 id="huge-difference-in-manual-labor"&gt;Huge difference in manual labor&lt;/h2&gt;
-&lt;p&gt;Testing requires lots of manual work. Tests for “silly bugs” (such as null pointer dereference) are very boring and tedious to make. Because of thedesign flaws of lots of programming languages, those things can happen anywhere in the code, so you need a good coverage in order to prevent them.&lt;/p&gt;
-&lt;p&gt;You can’t just make sure that every line of the code is covered by the tests, you need good path coverage. But in the worst case, the number of execution paths of the program is exponential to its size, so it is almost impossible to get good path coverage however careful you are.&lt;/p&gt;
-&lt;p&gt;On the other hand, static analysis is fully automatic. It explores all paths in the program systematically, so you get very high path coverage for free. Because of the exponential algorithm complexity exploring the paths, static analysis tools may use some heuristics to cut down running time, so the coverage may not be 100%, but it’s still enormously higher than any human test writer can get.&lt;/p&gt;
-&lt;h2 id="static-analysis-is-symbolic"&gt;Static analysis is symbolic&lt;/h2&gt;
-&lt;p&gt;Even when you get good path coverage in tests, you may still miss lots of bugs. Because you can only pass specific values into the tests, the code can still crash at the values that you haven’t tested. In comparison, static analysis processes the code symbolically. It doesn’t assume specific values for variables. It reasons about all possible values for every variable.&lt;/p&gt;
-&lt;p&gt;The most powerful static analysis tools can keep track of specific ranges of the numbers that the variables represent, so they may statically detect bugs such as “array index out of bound” etc. (PySonar hasn’t that kind of power yet and I’m working towards that.) Tests may detect those bugs too, but only if you pass them specific values that hits the boundary conditions. Those tests are painful to make, because the indexes may come after a series of arithmetic operations. You will have a hard time finding the cases where the final result can hit the boundary.&lt;/p&gt;
-&lt;h2 id="static-analysis-has-false-positives"&gt;Static analysis has false positives&lt;/h2&gt;
-&lt;p&gt;Some static analysis tools may be designed to be conservative. That is, whenever it is unsure, it can assume that the worst things can happen and issue a warning: “You may have a problem here.” Thus in principle it can tell you whenever some code may cause trouble. But a lot of times the bugs may never happen, this is called a false positive. This is like your doctor misdiagnosed you to have some disease which you don’t have. Lots of the work in building static analysis tools is about how to reduce the false positive rate, so that the users don’t lose faith in the diagnosis reports.&lt;/p&gt;
-&lt;p&gt;Tests don’t have false positives, because when they fail your program will surely fail under those conditions.&lt;/p&gt;
-&lt;h2 id="the-value-of-static-analysis"&gt;The value of static analysis&lt;/h2&gt;
-&lt;p&gt;Although static analysis tools don’t have the power to guarantee the correctness of programs, they are the most powerful bug-finding tools that don’t need lots of manual labor. They can prevent lots of the silly bugs that we spend a lot of time and energy writing tests for. Some of those bugs are so stupid but so easy to make. Once they happen they may crash an airplane or launch a missile. So static analysis is a very useful and valuable tool. It takes over the mindless and tedious jobs from human testers so that they can focus on more intellectual and interesting tests.&lt;/p&gt;
+包括所谓 访问者模式 提供的所有先进东西, 但是,不通用使用模式.&lt;/p&gt;
+&lt;p&gt;I owe my insights into design patterns to some functional programming people. If you really want to understand the essence of &lt;span class="caps"&gt;OO&lt;/span&gt; design patterns, and how &lt;span class="caps"&gt;NOT&lt;/span&gt; to use them, take a look at this little book other than the GoF one.&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Tests and static analysis</title><link href="/131127-yw-on-test-static-analysis.html" rel="alternate"></link><updated>2013-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-27:131127-yw-on-test-static-analysis.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/&lt;/p&gt;
+&lt;p&gt;Ever since I made a static analysis tool for Python called PySonar, I have been asked about the question: “What is the difference between testing and static analysis?” I just replied to a comment asking a similar question, so I think it’s a good time to write down some systematic answer for this&amp;nbsp;question.&lt;/p&gt;
+&lt;h2 id="static-analysis-is-static-tests-are-dynamic"&gt;Static analysis is static, tests are&amp;nbsp;dynamic&lt;/h2&gt;
+&lt;p&gt;Static analysis and tests are similar in their purposes. They are both tools for improving code quality. But they are very different in nature: static analysis is static, but tests are dynamic. “Static” basically means “without running the&amp;nbsp;program”.&lt;/p&gt;
+&lt;p&gt;Static analysis is similar to the compiler’s type checker but usually a lot more powerful. It can find bugs that type checkers cannot find, such as resource leaks, array index out of bounds, security risks etc. Static analysis has the “reasoning power” that tests hasn’t, so static analysis can find problems that testing may never detect. For example, a security static analysis may show you how your website can be hacked after a series of&amp;nbsp;events.&lt;/p&gt;
+&lt;p&gt;Tests just run the programs with certain inputs. They are fully dynamic, so you can’t test all cases but just some of them. But because tests run dynamically, they may detect bugs that static analysis can’t find. For example, tests may find that your algorithm produces wrong results. Static analysis tools are not (yet) intelligent enough for checking this kind of high-level&amp;nbsp;properties.&lt;/p&gt;
+&lt;p&gt;But notice that although tests can tell you that your algorithm is wrong, they can’t tell you that it is correct. To guarantee the correctness of programs is terribly harder than tests or static analysis. You need a mechanical proof of the program’s correctness, which means at the moment that you need a theorem prover such as Coq, Isabelle or &lt;span class="caps"&gt;ACL2&lt;/span&gt;, lots of math/logics knowledge, lots of time, and even with all those you may not be able to prove it, because your program may have encoded the Goldbach conjecture in it. So the program’s passing the tests doesn’t mean it is correct. It only means that you haven’t done terribly stupid&amp;nbsp;things.&lt;/p&gt;
+&lt;h2 id="huge-difference-in-manual-labor"&gt;Huge difference in manual&amp;nbsp;labor&lt;/h2&gt;
+&lt;p&gt;Testing requires lots of manual work. Tests for “silly bugs” (such as null pointer dereference) are very boring and tedious to make. Because of thedesign flaws of lots of programming languages, those things can happen anywhere in the code, so you need a good coverage in order to prevent&amp;nbsp;them.&lt;/p&gt;
+&lt;p&gt;You can’t just make sure that every line of the code is covered by the tests, you need good path coverage. But in the worst case, the number of execution paths of the program is exponential to its size, so it is almost impossible to get good path coverage however careful you&amp;nbsp;are.&lt;/p&gt;
+&lt;p&gt;On the other hand, static analysis is fully automatic. It explores all paths in the program systematically, so you get very high path coverage for free. Because of the exponential algorithm complexity exploring the paths, static analysis tools may use some heuristics to cut down running time, so the coverage may not be 100%, but it’s still enormously higher than any human test writer can&amp;nbsp;get.&lt;/p&gt;
+&lt;h2 id="static-analysis-is-symbolic"&gt;Static analysis is&amp;nbsp;symbolic&lt;/h2&gt;
+&lt;p&gt;Even when you get good path coverage in tests, you may still miss lots of bugs. Because you can only pass specific values into the tests, the code can still crash at the values that you haven’t tested. In comparison, static analysis processes the code symbolically. It doesn’t assume specific values for variables. It reasons about all possible values for every&amp;nbsp;variable.&lt;/p&gt;
+&lt;p&gt;The most powerful static analysis tools can keep track of specific ranges of the numbers that the variables represent, so they may statically detect bugs such as “array index out of bound” etc. (PySonar hasn’t that kind of power yet and I’m working towards that.) Tests may detect those bugs too, but only if you pass them specific values that hits the boundary conditions. Those tests are painful to make, because the indexes may come after a series of arithmetic operations. You will have a hard time finding the cases where the final result can hit the&amp;nbsp;boundary.&lt;/p&gt;
+&lt;h2 id="static-analysis-has-false-positives"&gt;Static analysis has false&amp;nbsp;positives&lt;/h2&gt;
+&lt;p&gt;Some static analysis tools may be designed to be conservative. That is, whenever it is unsure, it can assume that the worst things can happen and issue a warning: “You may have a problem here.” Thus in principle it can tell you whenever some code may cause trouble. But a lot of times the bugs may never happen, this is called a false positive. This is like your doctor misdiagnosed you to have some disease which you don’t have. Lots of the work in building static analysis tools is about how to reduce the false positive rate, so that the users don’t lose faith in the diagnosis&amp;nbsp;reports.&lt;/p&gt;
+&lt;p&gt;Tests don’t have false positives, because when they fail your program will surely fail under those&amp;nbsp;conditions.&lt;/p&gt;
+&lt;h2 id="the-value-of-static-analysis"&gt;The value of static&amp;nbsp;analysis&lt;/h2&gt;
+&lt;p&gt;Although static analysis tools don’t have the power to guarantee the correctness of programs, they are the most powerful bug-finding tools that don’t need lots of manual labor. They can prevent lots of the silly bugs that we spend a lot of time and energy writing tests for. Some of those bugs are so stupid but so easy to make. Once they happen they may crash an airplane or launch a missile. So static analysis is a very useful and valuable tool. It takes over the mindless and tedious jobs from human testers so that they can focus on more intellectual and interesting&amp;nbsp;tests.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
@@ -639,52 +592,53 @@ OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="_1"&gt;测试与静态分析&lt;/h1&gt;
-&lt;p&gt;自从俺折腾了Python静态代码分析工具 PySonar, 俺就问过自个儿这个问题:”究竟测试和静态分析的差异在哪儿?” 这不是一个简单的评注就能回答的了的,现在俺想可以好好解释一下了.&lt;/p&gt;
+&lt;p&gt;自从俺折腾了Python静态代码分析工具 PySonar, 俺就问过自个儿这个问题:”究竟测试和静态分析的差异在哪儿?”&amp;nbsp;这不是一个简单的评注就能回答的了的,现在俺想可以好好解释一下了.&lt;/p&gt;
 &lt;h2 id="_2"&gt;静态分析是静态的,测试是动态的&lt;/h2&gt;
-&lt;p&gt;Static analysis is static, tests are dynamic Static analysis and tests are similar in their purposes. They are both tools for improving code quality. But they are very different in nature: static analysis is static, but tests are dynamic. “Static” basically means “without running the program”.&lt;/p&gt;
-&lt;p&gt;Static analysis is similar to the compiler’s type checker but usually a lot more powerful. It can find bugs that type checkers cannot find, such as resource leaks, array index out of bounds, security risks etc. Static analysis has the “reasoning power” that tests hasn’t, so static analysis can find problems that testing may never detect. For example, a security static analysis may show you how your website can be hacked after a series of events.&lt;/p&gt;
-&lt;p&gt;Tests just run the programs with certain inputs. They are fully dynamic, so you can’t test all cases but just some of them. But because tests run dynamically, they may detect bugs that static analysis can’t find. For example, tests may find that your algorithm produces wrong results. Static analysis tools are not (yet) intelligent enough for checking this kind of high-level properties.&lt;/p&gt;
-&lt;p&gt;But notice that although tests can tell you that your algorithm is wrong, they can’t tell you that it is correct. To guarantee the correctness of programs is terribly harder than tests or static analysis. You need a mechanical proof of the program’s correctness, which means at the moment that you need a theorem prover such as Coq, Isabelle or ACL2, lots of math/logics knowledge, lots of time, and even with all those you may not be able to prove it, because your program may have encoded the Goldbach conjecture in it. So the program’s passing the tests doesn’t mean it is correct. It only means that you haven’t done terribly stupid things.&lt;/p&gt;
+&lt;p&gt;Static analysis is static, tests are dynamic Static analysis and tests are similar in their purposes. They are both tools for improving code quality. But they are very different in nature: static analysis is static, but tests are dynamic. “Static” basically means “without running the&amp;nbsp;program”.&lt;/p&gt;
+&lt;p&gt;Static analysis is similar to the compiler’s type checker but usually a lot more powerful. It can find bugs that type checkers cannot find, such as resource leaks, array index out of bounds, security risks etc. Static analysis has the “reasoning power” that tests hasn’t, so static analysis can find problems that testing may never detect. For example, a security static analysis may show you how your website can be hacked after a series of&amp;nbsp;events.&lt;/p&gt;
+&lt;p&gt;Tests just run the programs with certain inputs. They are fully dynamic, so you can’t test all cases but just some of them. But because tests run dynamically, they may detect bugs that static analysis can’t find. For example, tests may find that your algorithm produces wrong results. Static analysis tools are not (yet) intelligent enough for checking this kind of high-level&amp;nbsp;properties.&lt;/p&gt;
+&lt;p&gt;But notice that although tests can tell you that your algorithm is wrong, they can’t tell you that it is correct. To guarantee the correctness of programs is terribly harder than tests or static analysis. You need a mechanical proof of the program’s correctness, which means at the moment that you need a theorem prover such as Coq, Isabelle or &lt;span class="caps"&gt;ACL2&lt;/span&gt;, lots of math/logics knowledge, lots of time, and even with all those you may not be able to prove it, because your program may have encoded the Goldbach conjecture in it. So the program’s passing the tests doesn’t mean it is correct. It only means that you haven’t done terribly stupid&amp;nbsp;things.&lt;/p&gt;
 &lt;h2 id="_3"&gt;存在巨大的人肉工作量差异&lt;/h2&gt;
-&lt;p&gt;~ Huge difference in manual labor &lt;/p&gt;
-&lt;p&gt;Testing requires lots of manual work. Tests for “silly bugs” (such as null pointer dereference) are very boring and tedious to make. Because of thedesign flaws of lots of programming languages, those things can happen anywhere in the code, so you need a good coverage in order to prevent them.&lt;/p&gt;
-&lt;p&gt;You can’t just make sure that every line of the code is covered by the tests, you need good path coverage. But in the worst case, the number of execution paths of the program is exponential to its size, so it is almost impossible to get good path coverage however careful you are.&lt;/p&gt;
-&lt;p&gt;On the other hand, static analysis is fully automatic. It explores all paths in the program systematically, so you get very high path coverage for free. Because of the exponential algorithm complexity exploring the paths, static analysis tools may use some heuristics to cut down running time, so the coverage may not be 100%, but it’s still enormously higher than any human test writer can get.&lt;/p&gt;
+&lt;p&gt;~ Huge difference in manual&amp;nbsp;labor &lt;/p&gt;
+&lt;p&gt;Testing requires lots of manual work. Tests for “silly bugs” (such as null pointer dereference) are very boring and tedious to make. Because of thedesign flaws of lots of programming languages, those things can happen anywhere in the code, so you need a good coverage in order to prevent&amp;nbsp;them.&lt;/p&gt;
+&lt;p&gt;You can’t just make sure that every line of the code is covered by the tests, you need good path coverage. But in the worst case, the number of execution paths of the program is exponential to its size, so it is almost impossible to get good path coverage however careful you&amp;nbsp;are.&lt;/p&gt;
+&lt;p&gt;On the other hand, static analysis is fully automatic. It explores all paths in the program systematically, so you get very high path coverage for free. Because of the exponential algorithm complexity exploring the paths, static analysis tools may use some heuristics to cut down running time, so the coverage may not be 100%, but it’s still enormously higher than any human test writer can&amp;nbsp;get.&lt;/p&gt;
 &lt;h2 id="_4"&gt;静态分析是符号化的&lt;/h2&gt;
-&lt;p&gt;~ Static analysis is symbolic &lt;/p&gt;
-&lt;p&gt;Even when you get good path coverage in tests, you may still miss lots of bugs. Because you can only pass specific values into the tests, the code can still crash at the values that you haven’t tested. In comparison, static analysis processes the code symbolically. It doesn’t assume specific values for variables. It reasons about all possible values for every variable.&lt;/p&gt;
-&lt;p&gt;The most powerful static analysis tools can keep track of specific ranges of the numbers that the variables represent, so they may statically detect bugs such as “array index out of bound” etc. (PySonar hasn’t that kind of power yet and I’m working towards that.) Tests may detect those bugs too, but only if you pass them specific values that hits the boundary conditions. Those tests are painful to make, because the indexes may come after a series of arithmetic operations. You will have a hard time finding the cases where the final result can hit the boundary.&lt;/p&gt;
+&lt;p&gt;~ Static analysis is&amp;nbsp;symbolic &lt;/p&gt;
+&lt;p&gt;Even when you get good path coverage in tests, you may still miss lots of bugs. Because you can only pass specific values into the tests, the code can still crash at the values that you haven’t tested. In comparison, static analysis processes the code symbolically. It doesn’t assume specific values for variables. It reasons about all possible values for every&amp;nbsp;variable.&lt;/p&gt;
+&lt;p&gt;The most powerful static analysis tools can keep track of specific ranges of the numbers that the variables represent, so they may statically detect bugs such as “array index out of bound” etc. (PySonar hasn’t that kind of power yet and I’m working towards that.) Tests may detect those bugs too, but only if you pass them specific values that hits the boundary conditions. Those tests are painful to make, because the indexes may come after a series of arithmetic operations. You will have a hard time finding the cases where the final result can hit the&amp;nbsp;boundary.&lt;/p&gt;
 &lt;h2 id="_5"&gt;静态分析会误报&lt;/h2&gt;
-&lt;p&gt;~ Static analysis has false positives &lt;/p&gt;
-&lt;p&gt;Some static analysis tools may be designed to be conservative. That is, whenever it is unsure, it can assume that the worst things can happen and issue a warning: “You may have a problem here.” Thus in principle it can tell you whenever some code may cause trouble. But a lot of times the bugs may never happen, this is called a false positive. This is like your doctor misdiagnosed you to have some disease which you don’t have. Lots of the work in building static analysis tools is about how to reduce the false positive rate, so that the users don’t lose faith in the diagnosis reports.&lt;/p&gt;
-&lt;p&gt;Tests don’t have false positives, because when they fail your program will surely fail under those conditions.&lt;/p&gt;
+&lt;p&gt;~ Static analysis has false&amp;nbsp;positives &lt;/p&gt;
+&lt;p&gt;Some static analysis tools may be designed to be conservative. That is, whenever it is unsure, it can assume that the worst things can happen and issue a warning: “You may have a problem here.” Thus in principle it can tell you whenever some code may cause trouble. But a lot of times the bugs may never happen, this is called a false positive. This is like your doctor misdiagnosed you to have some disease which you don’t have. Lots of the work in building static analysis tools is about how to reduce the false positive rate, so that the users don’t lose faith in the diagnosis&amp;nbsp;reports.&lt;/p&gt;
+&lt;p&gt;Tests don’t have false positives, because when they fail your program will surely fail under those&amp;nbsp;conditions.&lt;/p&gt;
 &lt;h2 id="_6"&gt;静态分析的价值&lt;/h2&gt;
-&lt;p&gt;~The value of static analysis &lt;/p&gt;
-&lt;p&gt;虽然静态分析工具并不能确保程序的正确性,但却是最强力的bug调查工具,而且不需要大量的手工劳动. 以往我们花费了巨大工作量编写的测试依然包含极其愚蠢的错误.有的蠢到你无法相信是自个儿写出来的.而这种低级问题一但出现,就可能令飞机坠毁导弹发射! 因此,静态分析是种非常有用以及有价值的工具.能接管测试人员盲目而乏味的工作,使人类测试工程师能专注更加智能/有趣的测试.&lt;/p&gt;
+&lt;p&gt;~The value of static&amp;nbsp;analysis &lt;/p&gt;
+&lt;p&gt;虽然静态分析工具并不能确保程序的正确性,但却是最强力的bug调查工具,而且不需要大量的手工劳动. 以往我们花费了巨大工作量编写的测试依然包含极其愚蠢的错误.有的蠢到你无法相信是自个儿写出来的.而这种低级问题一但出现,就可能令飞机坠毁导弹发射!&amp;nbsp;因此,静态分析是种非常有用以及有价值的工具.能接管测试人员盲目而乏味的工作,使人类测试工程师能专注更加智能/有趣的测试.&lt;/p&gt;
 &lt;h2 id="changlog"&gt;Changlog&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;14010? &lt;/li&gt;
-&lt;li&gt;131212 翻越抄录在 medium.com 开始翻译&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>OSS good for enterprise</title><link href="http://blog.zoomquiet.io/imho/oss-good-4-china-com.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:imho/oss-good-4-china-com.html</id><summary type="html">&lt;h1 id="oss"&gt;企业进行OSS的好处&lt;/h1&gt;
+&lt;li&gt;131212 翻越抄录在 medium.com&amp;nbsp;开始翻译&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>OSS good for enterprise</title><link href="/oss-good-4-china-com.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-11:oss-good-4-china-com.html</id><summary type="html">&lt;h1 id="oss"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;~中国绝大多数IT企业&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="oss" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;&lt;/p&gt;
 &lt;p&gt;其实也是欠稿一篇, 先是忽悠朋友完成了作文:
-&lt;a href="http://zhuanlan.zhihu.com/zhuangbiaowei/19576637"&gt;企业开源杂谈 — 思考IT — 知乎专栏&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;然后,又引发了系列讨论,结果变成了自个儿应该还的一篇文章,,,
-同样的,由大脑自动后台组稿42天,快速输出一版本先:&lt;/p&gt;
+&lt;a href="http://zhuanlan.zhihu.com/zhuangbiaowei/19576637"&gt;企业开源杂谈 — 思考&lt;span class="caps"&gt;IT&lt;/span&gt; — 知乎专栏&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后,又引发了系列讨论,结果变成了自个儿应该还的一篇文章,,,&amp;nbsp;同样的,由大脑自动后台组稿42天,快速输出一版本先:&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景:&lt;/h2&gt;
-&lt;p&gt;首先, 俺自个儿, 社区称号:大妈, 入行以来加入N 多技术社区, 长年混杂在各种企业内外社区中,折腾,再折腾,从来没有什么成型的NB的流传于世或是企业生产系统中的项目…按照 Eric Raymond的著名文章:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;如何成为一名黒客
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;其中的定义,俺属于绝对意义上的大妈式 Hacker, 公布有效信息(文档/翻译)/维护维基/传播Hack 文化本身…&lt;/p&gt;
-&lt;p&gt;然后,从业14年,从前台作到后台,作不动现代的全端工程师,掺合过的公司从4人到4000人的级别都有;近年,基本作 开发者关系管理(DRM), KPI 计算 40%开发,其它是社区活动的组织/筹备/主持/演讲/宣传/推广…&lt;/p&gt;
+&lt;p&gt;首先, 俺自个儿, 社区称号:大妈, 入行以来加入N 多技术社区, 长年混杂在各种企业内外社区中,折腾,再折腾,从来没有什么成型的&lt;span class="caps"&gt;NB&lt;/span&gt;的流传于世或是企业生产系统中的项目…按照 Eric&amp;nbsp;Raymond的著名文章:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;如何成为一名黒客&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;其中的定义,俺属于绝对意义上的大妈式 Hacker, 公布有效信息(文档/翻译)/维护维基/传播Hack&amp;nbsp;文化本身…&lt;/p&gt;
+&lt;p&gt;然后,从业14年,从前台作到后台,作不动现代的全端工程师,掺合过的公司从4人到4000人的级别都有;近年,基本作 开发者关系管理(&lt;span class="caps"&gt;DRM&lt;/span&gt;), &lt;span class="caps"&gt;KPI&lt;/span&gt; 计算&amp;nbsp;40%开发,其它是社区活动的组织/筹备/主持/演讲/宣传/推广…&lt;/p&gt;
 &lt;h2 id="_2"&gt;范畴&lt;/h2&gt;
-&lt;p&gt;一篇文章绝对不可能将一个领域的发展问题分析明白的,所以,为了表述的健康/合理, 先定一下讨论的范畴,以免各种扩大化式的乱入.&lt;/p&gt;
+&lt;p&gt;一篇文章绝对不可能将一个领域的发展问题分析明白的,所以,为了表述的健康/合理,&amp;nbsp;先定一下讨论的范畴,以免各种扩大化式的乱入.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;只说IT企业,即,主赢收业务是软件/互联网/移动/服务…etc.&lt;/li&gt;
-&lt;li&gt;中国企业,无论注册地/资本来由/管理层国藉, 只论主要业务在中国大陆,主要开发者是中国本土码农…&lt;/li&gt;
-&lt;li&gt;开源,就是标准的 FLOSS ~ 使用标准的许可证以及发布形式/维护过程 的 自由/开源软件, 因为开放源代码,对于 自由软件还是开源软件都是基本要求,只是后续发布的要求有差别,早已被中国媒体给搅合的说不清楚了,所以,一概论之了…&lt;/li&gt;
-&lt;li&gt;因为职业原因,不便对老雇主或是现雇主泄漏什么内部机密,所以,只讨论,如同化学实验,嗯嗯嗯,,,精确的说,就象写 SiFi 小说一样推演,企业推行 OSS 的好处; 试图达到度目标就是能向一般的BOSS/同事,以极其常识的叙述来说明白,为什么应该 OSS, 至于坏处,就当没有吧,反正在中国没有什么正当的追究过程…&lt;/li&gt;
+&lt;li&gt;只说&lt;span class="caps"&gt;IT&lt;/span&gt;企业,即,主赢收业务是软件/互联网/移动/服务…etc.&lt;/li&gt;
+&lt;li&gt;中国企业,无论注册地/资本来由/管理层国藉,&amp;nbsp;只论主要业务在中国大陆,主要开发者是中国本土码农…&lt;/li&gt;
+&lt;li&gt;开源,就是标准的 &lt;span class="caps"&gt;FLOSS&lt;/span&gt; ~ 使用标准的许可证以及发布形式/维护过程 的 自由/开源软件, 因为开放源代码,对于&amp;nbsp;自由软件还是开源软件都是基本要求,只是后续发布的要求有差别,早已被中国媒体给搅合的说不清楚了,所以,一概论之了…&lt;/li&gt;
+&lt;li&gt;因为职业原因,不便对老雇主或是现雇主泄漏什么内部机密,所以,只讨论,如同化学实验,嗯嗯嗯,,,精确的说,就象写 SiFi 小说一样推演,企业推行 &lt;span class="caps"&gt;OSS&lt;/span&gt; 的好处; 试图达到度目标就是能向一般的&lt;span class="caps"&gt;BOSS&lt;/span&gt;/同事,以极其常识的叙述来说明白,为什么应该 &lt;span class="caps"&gt;OSS&lt;/span&gt;,&amp;nbsp;至于坏处,就当没有吧,反正在中国没有什么正当的追究过程…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_3"&gt;故事&lt;/h2&gt;
 &lt;ol&gt;
@@ -693,82 +647,85 @@ OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
 &lt;li&gt;从前还是一公司,从一开始就用开源软件的形式来专发,嗯嗯嗯,然后也没有然后了…&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="_4"&gt;断语&lt;/h2&gt;
-&lt;p&gt;嗯嗯嗯,共同之处就素:所有公司都玩一朝天子一朝臣,后人废掉前尘事儿! 大家都实在太习惯太顺畅太自说自话太自发自觉的作这类事儿了….其实,追点儿根儿,很简单,无论多重要,多NB 的代码,在公司中除了写那些代码的人,其余根本没有人能够/愿意/喜欢 真正理解这些要命的代码,而且最后竟然,就连代码原作者也都认同了这种”文化”随时抛弃无论当初花多少精力折腾出来的代码了…&lt;/p&gt;
+&lt;p&gt;嗯嗯嗯,共同之处就素:所有公司都玩一朝天子一朝臣,后人废掉前尘事儿! 大家都实在太习惯太顺畅太自说自话太自发自觉的作这类事儿了….其实,追点儿根儿,很简单,无论多重要,多&lt;span class="caps"&gt;NB&lt;/span&gt; 的代码,在公司中除了写那些代码的人,其余根本没有人能够/愿意/喜欢&amp;nbsp;真正理解这些要命的代码,而且最后竟然,就连代码原作者也都认同了这种”文化”随时抛弃无论当初花多少精力折腾出来的代码了…&lt;/p&gt;
 &lt;p&gt;所以,企业真正进行开源工程式的产品开发,目测至少有这么几个方面是立即可以获得好处的:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;产品安全性立即获得极大的提高,因为所有人知道,代码都特么开源了,服务想安全,就得作到运行时,真正安全了!&lt;/li&gt;
 &lt;li&gt;代码将真正为越来越多的人理解,从而所有工程师的工作将无法简单的通过行政命令抹杀,随着开源项目的不断扩散/衍生/复用,原作者的价值在不断增值!&lt;/li&gt;
-&lt;li&gt;文档将被自主自发的不断完善,因为一个没有好文档的项目,本身再NB 也没人用!
-测试将被自主自发的由开发者自个儿进行了,因为开源后,有太多自动化测试服务可以在外网自在的使用了,再也不用跟测试部的那帮XX叽歪了!&lt;/li&gt;
-&lt;li&gt;开发人员的工作时间立即被自主自发的延长了! 因为开源工程受到关注后,全球用户可不管你们是否下班了,那 Issue 是随时捅过来的!&lt;/li&gt;
-&lt;li&gt;项目维护人员免费增加了! 只要项目真正解决领域问题,那么公司自个儿都没有用到的场景也一定会有人用上,根据开源协议,人家也必须将修订提交回来…好了,免费的比自家公司还NB 的工程师为咱开始工作了!&lt;/li&gt;
-&lt;li&gt;技术团队的业界形象立即加持圣光了! 以后招人,也就不用送MM 之类的下作手法了,只说来了能同 XX项目的原创程序员一起工作!&lt;/li&gt;
+&lt;li&gt;文档将被自主自发的不断完善,因为一个没有好文档的项目,本身再&lt;span class="caps"&gt;NB&lt;/span&gt; 也没人用!&amp;nbsp;测试将被自主自发的由开发者自个儿进行了,因为开源后,有太多自动化测试服务可以在外网自在的使用了,再也不用跟测试部的那帮&lt;span class="caps"&gt;XX&lt;/span&gt;叽歪了!&lt;/li&gt;
+&lt;li&gt;开发人员的工作时间立即被自主自发的延长了! 因为开源工程受到关注后,全球用户可不管你们是否下班了,那 Issue&amp;nbsp;是随时捅过来的!&lt;/li&gt;
+&lt;li&gt;项目维护人员免费增加了! 只要项目真正解决领域问题,那么公司自个儿都没有用到的场景也一定会有人用上,根据开源协议,人家也必须将修订提交回来…好了,免费的比自家公司还&lt;span class="caps"&gt;NB&lt;/span&gt;&amp;nbsp;的工程师为咱开始工作了!&lt;/li&gt;
+&lt;li&gt;技术团队的业界形象立即加持圣光了! 以后招人,也就不用送&lt;span class="caps"&gt;MM&lt;/span&gt; 之类的下作手法了,只说来了能同&amp;nbsp;&lt;span class="caps"&gt;XX&lt;/span&gt;项目的原创程序员一起工作!&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;等等吧…就不逐一推导了…&lt;/p&gt;
 &lt;h1 id="_5"&gt;但是!&lt;/h1&gt;
 &lt;p&gt;以上的一切好处获得的前题是:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;进行真正的开源项目运行
-坚持以纯粹的开源社区形式运营
-公司的真实业务系统真正使用开源项目的代码
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;进行真正的开源项目运行&lt;/span&gt;
+&lt;span class="err"&gt;坚持以纯粹的开源社区形式运营&lt;/span&gt;
+&lt;span class="err"&gt;公司的真实业务系统真正使用开源项目的代码&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;以及,其实隐藏在这三项基本坚持之下引发的各种
 &lt;code&gt;管理/组织/绩效/人力&lt;/code&gt; 等等的配套支撑.&lt;/p&gt;
-&lt;p&gt;所以, 只能是SiFi 式的推导了…因为中国IT 企业天生的同开源社区式开发有内在的抵触…具体的,大家都懂的,不用俺费劲分析了卟?!&lt;/p&gt;
+&lt;p&gt;所以, 只能是SiFi 式的推导了…因为中国&lt;span class="caps"&gt;IT&lt;/span&gt;&amp;nbsp;企业天生的同开源社区式开发有内在的抵触…具体的,大家都懂的,不用俺费劲分析了卟?!&lt;/p&gt;
 &lt;h2 id="_6"&gt;所以&lt;/h2&gt;
-&lt;p&gt;友人收作业后反馈,肿么没有后续了? 比如遭遇各种反驳，如何进一步攻防之类…&lt;/p&gt;
+&lt;p&gt;友人收作业后反馈,肿么没有后续了?&amp;nbsp;比如遭遇各种反驳，如何进一步攻防之类…&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;图样儿图森破!&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;在公司里,不遭受质疑那是不可能的!&lt;/p&gt;
 &lt;p&gt;但是,有质疑就进行反驳…你以为你是方舟子对韩寒哪!&lt;/p&gt;
 &lt;p&gt;企业进行开源,无非两种推行模式: &lt;code&gt;嬴政式&lt;/code&gt;/&lt;code&gt;吴广式&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;前者,BOSS 就是开源出身,先信了,强行推之,整个公司所有部门为之配合,反正败了BOSS 自个儿负责,然后,慢慢品出了好处,于是更加大力在实践中学习再学习,在学习中感动再感动…慢慢的,公司如果不死,那就真正形成文化传承下去了,否则就变成业界又一SB 传说…&lt;/li&gt;
-&lt;li&gt;后者,习惯了开源开发方式了,瞒着公司,将自个儿一亩三分田先折腾起来,慢慢的,慢慢的对比其它同类团队的同类系统,肿么这么出名呢? 靠! 原来这丫开源了! 然后,没有然后了,不是被掐掉,就是这团队解散了…&lt;/li&gt;
+&lt;li&gt;前者,&lt;span class="caps"&gt;BOSS&lt;/span&gt; 就是开源出身,先信了,强行推之,整个公司所有部门为之配合,反正败了&lt;span class="caps"&gt;BOSS&lt;/span&gt; 自个儿负责,然后,慢慢品出了好处,于是更加大力在实践中学习再学习,在学习中感动再感动…慢慢的,公司如果不死,那就真正形成文化传承下去了,否则就变成业界又一&lt;span class="caps"&gt;SB&lt;/span&gt;&amp;nbsp;传说…&lt;/li&gt;
+&lt;li&gt;后者,习惯了开源开发方式了,瞒着公司,将自个儿一亩三分田先折腾起来,慢慢的,慢慢的对比其它同类团队的同类系统,肿么这么出名呢? 靠! 原来这丫开源了!&amp;nbsp;然后,没有然后了,不是被掐掉,就是这团队解散了…&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;所以? 这些好处,多数情况,要不根本无从质疑 (BOSS稀饭!-) , 要不根本轮不到质疑,也就没有什么反击之说了…&lt;/p&gt;
-&lt;p&gt;其实! 公司里的质疑,根本没有质疑的任何意思在里面,无非是责任推卸:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;”我早就质疑过的哟,只是这丫不听,所以,没俺一毛钱关系!”
-“看吧! 要不是早先我质疑过,他们才改进,现在肿么可能成功?!”
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;所以? 有质疑时,只要你勇敢的担当下来,没人有空跟你分析什么协议的…&lt;/p&gt;
-&lt;p&gt;所以! 在企业里推进OSS, 最最最低程度,你得是个有足够话语权的强力团队头目,或领域技术带头人…&lt;/p&gt;
-&lt;p&gt;不过,一般在这种地位上,都要担营收的KPI, 需要接销售各种奇葩的单子,哪儿有空搞 OSS 运动哪…&lt;/p&gt;
+&lt;p&gt;所以? 这些好处,多数情况,要不根本无从质疑 (&lt;span class="caps"&gt;BOSS&lt;/span&gt;稀饭!-) ,&amp;nbsp;要不根本轮不到质疑,也就没有什么反击之说了…&lt;/p&gt;
+&lt;p&gt;其实!&amp;nbsp;公司里的质疑,根本没有质疑的任何意思在里面,无非是责任推卸:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;”我早就质疑过的哟&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;只是这丫不听&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;所以&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;没俺一毛钱关系&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;
+&lt;span class="err"&gt;“看吧&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="err"&gt;要不是早先我质疑过&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;他们才改进&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;现在肿么可能成功&lt;/span&gt;&lt;span class="o"&gt;?!&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;所以?&amp;nbsp;有质疑时,只要你勇敢的担当下来,没人有空跟你分析什么协议的…&lt;/p&gt;
+&lt;p&gt;所以! 在企业里推进&lt;span class="caps"&gt;OSS&lt;/span&gt;,&amp;nbsp;最最最低程度,你得是个有足够话语权的强力团队头目,或领域技术带头人…&lt;/p&gt;
+&lt;p&gt;不过,一般在这种地位上,都要担营收的&lt;span class="caps"&gt;KPI&lt;/span&gt;, 需要接销售各种奇葩的单子,哪儿有空搞 &lt;span class="caps"&gt;OSS&lt;/span&gt;&amp;nbsp;运动哪…&lt;/p&gt;
 &lt;p&gt;所以,俺反复说了是 &lt;code&gt;SiFi&lt;/code&gt; 式的推理呢…&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;140107 move into Pelican as zoomquiet.io&lt;/li&gt;
-&lt;li&gt;131114 增补后续地图炮&lt;/li&gt;
-&lt;li&gt;131112 初放 &lt;a href="https://medium.com/i-m-h-o/74caad149e7e"&gt;企业进行OSS的好处 — I. M. H. O. — Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>Collections and Embedded Documents in MongoDB</title><link href="http://blog.zoomquiet.io/imho/mongo-collections-embdded-think.html" rel="alternate"></link><updated>2013-10-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-10-27:imho/mongo-collections-embdded-think.html</id><summary type="html">&lt;h1 id="mongodb"&gt;MongoDB 中的集合或嵌入式文档&lt;/h1&gt;
+&lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
+&lt;li&gt;131114&amp;nbsp;增补后续地图炮&lt;/li&gt;
+&lt;li&gt;131112 初放 &lt;a href="https://medium.com/i-m-h-o/74caad149e7e"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处 — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>Collections and Embedded Documents in MongoDB</title><link href="/mongo-collections-embdded-think.html" rel="alternate"></link><updated>2013-10-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-10-27:mongo-collections-embdded-think.html</id><summary type="html">&lt;h1 id="mongodb"&gt;MongoDB&amp;nbsp;中的集合或嵌入式文档&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="mongo" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*cwCnTFQEbcUSy1KvoiIqXg.png" /&gt;&lt;/p&gt;
-&lt;p&gt;[via] http://fosterelli.co/collections-and-embedded-documents-in-mongodb.html&lt;/p&gt;
-&lt;p&gt;When someone is approaching MongoDB from the SQL world, a very common confusion regarding database structure is when to use embedded documents, and when to create an entirely new collection. This distinction is very important because, although MongoDB is schemaless in nature, whether or not an element of your database is structured as embedded documents or a separate collection will change your code a fair amount. Making this change later on can represent a fair amount of work, so it helps to get this right the first time.&lt;/p&gt;
-&lt;p&gt;There is no “right answer” to this question, as it depends entirely on the situation at hand. The natural tendency of people coming from the SQL world is to stick everything in separate collections, but often this is very unnecessary and will cause serious performance impacts. However, mistakenly placing something within another document may lead to pain further down the road.&lt;/p&gt;
-&lt;p&gt;A set of rules I have found useful is to ask yourself the following questions:&lt;/p&gt;
+&lt;p&gt;[via]&amp;nbsp;http://fosterelli.co/collections-and-embedded-documents-in-mongodb.html&lt;/p&gt;
+&lt;p&gt;When someone is approaching MongoDB from the &lt;span class="caps"&gt;SQL&lt;/span&gt; world, a very common confusion regarding database structure is when to use embedded documents, and when to create an entirely new collection. This distinction is very important because, although MongoDB is schemaless in nature, whether or not an element of your database is structured as embedded documents or a separate collection will change your code a fair amount. Making this change later on can represent a fair amount of work, so it helps to get this right the first&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;There is no “right answer” to this question, as it depends entirely on the situation at hand. The natural tendency of people coming from the &lt;span class="caps"&gt;SQL&lt;/span&gt; world is to stick everything in separate collections, but often this is very unnecessary and will cause serious performance impacts. However, mistakenly placing something within another document may lead to pain further down the&amp;nbsp;road.&lt;/p&gt;
+&lt;p&gt;A set of rules I have found useful is to ask yourself the following&amp;nbsp;questions:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Does the embedded document relate to one or more other collections?&lt;/li&gt;
-&lt;li&gt;Will you most often need the embedded document without the parent document?&lt;/li&gt;
-&lt;li&gt;Will you most often need the parent document without the embedded document?&lt;/li&gt;
+&lt;li&gt;Does the embedded document relate to one or more other&amp;nbsp;collections?&lt;/li&gt;
+&lt;li&gt;Will you most often need the embedded document without the parent&amp;nbsp;document?&lt;/li&gt;
+&lt;li&gt;Will you most often need the parent document without the embedded&amp;nbsp;document?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If the answer to two or more of these is yes, you likely will want a separate collection. If the answer to only one of these is yes, a separate collection should still be considered, but likely not needed.&lt;/p&gt;
+&lt;p&gt;If the answer to two or more of these is yes, you likely will want a separate collection. If the answer to only one of these is yes, a separate collection should still be considered, but likely not&amp;nbsp;needed.&lt;/p&gt;
 &lt;h2 id="examples"&gt;Examples&lt;/h2&gt;
-&lt;h3 id="comments-on-a-blog"&gt;Comments on a blog&lt;/h3&gt;
-&lt;p&gt;You would like to create a system where people may submit comments on blog posts. The problem is that you are unsure if you should store the comment on the post document, or create a separate collection named comments.&lt;/p&gt;
-&lt;h4 id="does-the-embedded-document-relate-to-one-or-more-other-collections"&gt;Does the embedded document relate to one or more other collections?&lt;/h4&gt;
-&lt;p&gt;No. A comment is typically related to only the post that it is commented on. There may be some situations where this is not true, such as if you provided comment author accounts for editing. However, even this is not a very convincing reason by itself to separate the comment into a separate collection.&lt;/p&gt;
-&lt;h4 id="will-you-most-often-need-the-embedded-document-without-the-parent-document"&gt;Will you most often need the embedded document without the parent document?&lt;/h4&gt;
-&lt;p&gt;Again, the answer is no. You likely will not often need to load a comment without also needing the context of the post.&lt;/p&gt;
-&lt;h4 id="will-you-most-often-need-the-parent-document-without-the-embedded-document"&gt;Will you most often need the parent document without the embedded document?&lt;/h4&gt;
-&lt;p&gt;In the majority of cases, the answer here is no. Most of the time you use this object, someone will be viewing a blog entry. You will want to both display the post and the comments at once, so it makes sense to fetch those together.&lt;/p&gt;
-&lt;p&gt;Overall, comments for a blog is a very good candidate for embedded documents.&lt;/p&gt;
-&lt;h3 id="students-in-a-class"&gt;Students in a class&lt;/h3&gt;
-&lt;p&gt;You have a school management system, and you would like to enable students to enrol in a particular class. You are unsure if you should store the student objects on the class, or create a separate collection named students.&lt;/p&gt;
-&lt;h4 id="does-the-embedded-document-relate-to-one-or-more-other-collections_1"&gt;Does the embedded document relate to one or more other collections?&lt;/h4&gt;
-&lt;p&gt;Typically, we can assume yes. A student will likely relate to other things, such as an assignment or school object. Also, a very important note is that each embedded document will likely relate to multiple documents in the classes collection, which is a very strong hint you need a separate collection.&lt;/p&gt;
-&lt;h3 id="3-will-you-most-often-need-the-embedded-document-without-the-parent-document"&gt;3 Will you most often need the embedded document without the parent document?&lt;/h3&gt;
-&lt;p&gt;The answer here will often be yes. If you want any sort of student information panel or want to have students enrolled in different classes, then you will often want the student document without needing the context of each class.&lt;/p&gt;
-&lt;h4 id="will-you-most-often-need-the-parent-document-without-the-embedded-document_1"&gt;Will you most often need the parent document without the embedded document?&lt;/h4&gt;
-&lt;p&gt;Probably no for this one. It depends on what operation we are doing most often with the class, but I imagine that when we fetch a class we would likely need at least one student as well.&lt;/p&gt;
-&lt;p&gt;Overall, students in a class are probably better suited for a separate collection. It’s important to keep in mind the scope of the problem you are solving with the data, and the operations that will be done most commonly. That said, a student is a very relational piece of data and better fits a separate collection.&lt;/p&gt;
+&lt;h3 id="comments-on-a-blog"&gt;Comments on a&amp;nbsp;blog&lt;/h3&gt;
+&lt;p&gt;You would like to create a system where people may submit comments on blog posts. The problem is that you are unsure if you should store the comment on the post document, or create a separate collection named&amp;nbsp;comments.&lt;/p&gt;
+&lt;h4 id="does-the-embedded-document-relate-to-one-or-more-other-collections"&gt;Does the embedded document relate to one or more other&amp;nbsp;collections?&lt;/h4&gt;
+&lt;p&gt;No. A comment is typically related to only the post that it is commented on. There may be some situations where this is not true, such as if you provided comment author accounts for editing. However, even this is not a very convincing reason by itself to separate the comment into a separate&amp;nbsp;collection.&lt;/p&gt;
+&lt;h4 id="will-you-most-often-need-the-embedded-document-without-the-parent-document"&gt;Will you most often need the embedded document without the parent&amp;nbsp;document?&lt;/h4&gt;
+&lt;p&gt;Again, the answer is no. You likely will not often need to load a comment without also needing the context of the&amp;nbsp;post.&lt;/p&gt;
+&lt;h4 id="will-you-most-often-need-the-parent-document-without-the-embedded-document"&gt;Will you most often need the parent document without the embedded&amp;nbsp;document?&lt;/h4&gt;
+&lt;p&gt;In the majority of cases, the answer here is no. Most of the time you use this object, someone will be viewing a blog entry. You will want to both display the post and the comments at once, so it makes sense to fetch those&amp;nbsp;together.&lt;/p&gt;
+&lt;p&gt;Overall, comments for a blog is a very good candidate for embedded&amp;nbsp;documents.&lt;/p&gt;
+&lt;h3 id="students-in-a-class"&gt;Students in a&amp;nbsp;class&lt;/h3&gt;
+&lt;p&gt;You have a school management system, and you would like to enable students to enrol in a particular class. You are unsure if you should store the student objects on the class, or create a separate collection named&amp;nbsp;students.&lt;/p&gt;
+&lt;h4 id="does-the-embedded-document-relate-to-one-or-more-other-collections_1"&gt;Does the embedded document relate to one or more other&amp;nbsp;collections?&lt;/h4&gt;
+&lt;p&gt;Typically, we can assume yes. A student will likely relate to other things, such as an assignment or school object. Also, a very important note is that each embedded document will likely relate to multiple documents in the classes collection, which is a very strong hint you need a separate&amp;nbsp;collection.&lt;/p&gt;
+&lt;h3 id="3-will-you-most-often-need-the-embedded-document-without-the-parent-document"&gt;3 Will you most often need the embedded document without the parent&amp;nbsp;document?&lt;/h3&gt;
+&lt;p&gt;The answer here will often be yes. If you want any sort of student information panel or want to have students enrolled in different classes, then you will often want the student document without needing the context of each&amp;nbsp;class.&lt;/p&gt;
+&lt;h4 id="will-you-most-often-need-the-parent-document-without-the-embedded-document_1"&gt;Will you most often need the parent document without the embedded&amp;nbsp;document?&lt;/h4&gt;
+&lt;p&gt;Probably no for this one. It depends on what operation we are doing most often with the class, but I imagine that when we fetch a class we would likely need at least one student as&amp;nbsp;well.&lt;/p&gt;
+&lt;p&gt;Overall, students in a class are probably better suited for a separate collection. It’s important to keep in mind the scope of the problem you are solving with the data, and the operations that will be done most commonly. That said, a student is a very relational piece of data and better fits a separate&amp;nbsp;collection.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
@@ -776,189 +733,189 @@ OO 就是&lt;code&gt;食脑魔&lt;/code&gt;,能躲多远躲多远.
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;如果刚刚从SQL 世界进入 MongoDB, 最常见的困惑就是 “嵌入式文档” 以及何时创建新的”集合”?
+&lt;p&gt;如果刚刚从&lt;span class="caps"&gt;SQL&lt;/span&gt; 世界进入 MongoDB, 最常见的困惑就是 “嵌入式文档” 以及何时创建新的”集合”?
 这类困惑的根源就是还没有建立起来 MongoDB 的自由结构世界观 ;-)
-SQL 世界的来客,总是试图先建立起一个完美的关系体系可以兼容以后的所有业务变化, 而 Mongo们,则是更加愿意先将已知的数据舒服的收集起来,随着业务的理解,不断的调整结构,同时代码永远可用!&lt;/p&gt;
+&lt;span class="caps"&gt;SQL&lt;/span&gt; 世界的来客,总是试图先建立起一个完美的关系体系可以兼容以后的所有业务变化, 而&amp;nbsp;Mongo们,则是更加愿意先将已知的数据舒服的收集起来,随着业务的理解,不断的调整结构,同时代码永远可用!&lt;/p&gt;
 &lt;p&gt;那么,这里给出俺知道的判定问题:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;嵌入的文档,同其它集合有一个或以上的关联嘛?&lt;/li&gt;
-&lt;li&gt;你将总会请求嵌入的文档,而 不需要 父文档嘛?&lt;/li&gt;
-&lt;li&gt;你将总会请求父文档,而 不需要 嵌入的文档嘛?&lt;/li&gt;
+&lt;li&gt;你将总会请求嵌入的文档,而 不需要&amp;nbsp;父文档嘛?&lt;/li&gt;
+&lt;li&gt;你将总会请求父文档,而 不需要&amp;nbsp;嵌入的文档嘛?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果以上问题,有两个或以上回答为 yes, 那么最好使用独立的集合.
-如果回答只有一个为 yes, 那么独立集合也应该考虑,但一般不必要了.&lt;/p&gt;
+如果回答只有一个为 yes,&amp;nbsp;那么独立集合也应该考虑,但一般不必要了.&lt;/p&gt;
 &lt;h2 id="_1"&gt;示例&lt;/h2&gt;
-&lt;h3 id="blog"&gt;blog 的评注&lt;/h3&gt;
-&lt;p&gt;你可能创建过类似blog 的系统,允许用户创建评注.问题在于你无法确定这堆评注,是存储在文章对象中呢,还是另外创建集合来保存?
-动用以上问题来考查一下…&lt;/p&gt;
+&lt;h3 id="blog"&gt;blog&amp;nbsp;的评注&lt;/h3&gt;
+&lt;p&gt;你可能创建过类似blog 的系统,允许用户创建评注.问题在于你无法确定这堆评注,是存储在文章对象中呢,还是另外创建集合来保存?&amp;nbsp;动用以上问题来考查一下…&lt;/p&gt;
 &lt;h4 id="_2"&gt;嵌入的文档,同其它集合有一个或以上的关联嘛?&lt;/h4&gt;
-&lt;p&gt;首先呢,评注肯定是先同当前文章有关联的. 同时也有很多其它方案, 比如想支持作者可以修订评注. 但是,这还不足以今评注分离成独立集合.&lt;/p&gt;
-&lt;p&gt;你将总会请求嵌入的文档,而 不需要 父文档嘛?&lt;/p&gt;
-&lt;p&gt;再来,如果这问题的回答是 否. 意味着你并不想加载文章时,一定就显示评注.&lt;/p&gt;
-&lt;h4 id="_3"&gt;你将总会请求父文档,而 不需要 嵌入的文档嘛?&lt;/h4&gt;
-&lt;p&gt;多数情况,这个问题的回答是 否. 一般只是想显示文章, 只是有时,期望同时显示, 那就必须让这一动作简单.&lt;/p&gt;
-&lt;p&gt;综上, 评注作为 嵌入文档 是合理的.&lt;/p&gt;
+&lt;p&gt;首先呢,评注肯定是先同当前文章有关联的. 同时也有很多其它方案, 比如想支持作者可以修订评注.&amp;nbsp;但是,这还不足以今评注分离成独立集合.&lt;/p&gt;
+&lt;p&gt;你将总会请求嵌入的文档,而 不需要&amp;nbsp;父文档嘛?&lt;/p&gt;
+&lt;p&gt;再来,如果这问题的回答是 否.&amp;nbsp;意味着你并不想加载文章时,一定就显示评注.&lt;/p&gt;
+&lt;h4 id="_3"&gt;你将总会请求父文档,而 不需要&amp;nbsp;嵌入的文档嘛?&lt;/h4&gt;
+&lt;p&gt;多数情况,这个问题的回答是 否. 一般只是想显示文章, 只是有时,期望同时显示,&amp;nbsp;那就必须让这一动作简单.&lt;/p&gt;
+&lt;p&gt;综上, 评注作为 嵌入文档&amp;nbsp;是合理的.&lt;/p&gt;
 &lt;h2 id="_4"&gt;班级中的学生&lt;/h2&gt;
-&lt;p&gt;你有个学校管理系统, 想让学生作为特殊的一个类, 但是,不肯定是作为班级的嵌入文档呢, 还是独立集合.&lt;/p&gt;
+&lt;p&gt;你有个学校管理系统, 想让学生作为特殊的一个类, 但是,不肯定是作为班级的嵌入文档呢,&amp;nbsp;还是独立集合.&lt;/p&gt;
 &lt;h4 id="_5"&gt;嵌入的文档,同其它集合有一个或以上的关联嘛?&lt;/h4&gt;
-&lt;p&gt;典型的,我们回答 是 . 每个学生总是会关联各种事物, 比如学校.同时,重要的每个嵌入文档同多个班级有关系时,这是分离为单独集合的重要暗示.&lt;/p&gt;
-&lt;h4 id="_6"&gt;你将总会请求嵌入的文档,而 不需要 父文档嘛?&lt;/h4&gt;
-&lt;p&gt;这问题经常回答为 是. 如果你想对学生进行多种排序,或是不同班级有不同学生参加,所以你总是想使用 学生节点而不是班级的信息.&lt;/p&gt;
-&lt;h4 id="_7"&gt;你将总会请求父文档,而 不需要 嵌入的文档嘛?&lt;/h4&gt;
-&lt;p&gt;这问题可能就是 否了. 这取决于我们经常怎么使用班级的数据, 目测其实我们最常查询班级的数据就是最后那名学生是谁.&lt;/p&gt;
-&lt;p&gt;综上,班级学生最好分离为独立的集合. 重要的是问题域要关注你的数据,并且令数据分布吻合常见事务要求. 即, 学生关联那多数据,最好独立!&lt;/p&gt;
-&lt;p&gt;that all!&lt;/p&gt;
-&lt;p&gt;其实, 使用文档型NoSQL, 特别是 MongoDB, 放弃RMDB 那堆范式的概念,使用我们的直觉,从当前已知的常见操作出现来设计文档结构就对了!&lt;/p&gt;
+&lt;p&gt;典型的,我们回答 是 . 每个学生总是会关联各种事物,&amp;nbsp;比如学校.同时,重要的每个嵌入文档同多个班级有关系时,这是分离为单独集合的重要暗示.&lt;/p&gt;
+&lt;h4 id="_6"&gt;你将总会请求嵌入的文档,而 不需要&amp;nbsp;父文档嘛?&lt;/h4&gt;
+&lt;p&gt;这问题经常回答为 是. 如果你想对学生进行多种排序,或是不同班级有不同学生参加,所以你总是想使用&amp;nbsp;学生节点而不是班级的信息.&lt;/p&gt;
+&lt;h4 id="_7"&gt;你将总会请求父文档,而 不需要&amp;nbsp;嵌入的文档嘛?&lt;/h4&gt;
+&lt;p&gt;这问题可能就是 否了. 这取决于我们经常怎么使用班级的数据,&amp;nbsp;目测其实我们最常查询班级的数据就是最后那名学生是谁.&lt;/p&gt;
+&lt;p&gt;综上,班级学生最好分离为独立的集合. 重要的是问题域要关注你的数据,并且令数据分布吻合常见事务要求. 即,&amp;nbsp;学生关联那多数据,最好独立!&lt;/p&gt;
+&lt;p&gt;that&amp;nbsp;all!&lt;/p&gt;
+&lt;p&gt;其实, 使用文档型NoSQL, 特别是 MongoDB, 放弃&lt;span class="caps"&gt;RMDB&lt;/span&gt;&amp;nbsp;那堆范式的概念,使用我们的直觉,从当前已知的常见操作出现来设计文档结构就对了!&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;140107 move into Pelican as zoomquiet.io&lt;/li&gt;
-&lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/c161d7036f89"&gt;Collections and Embedded Documents in MongoDB — I. M. H. O. — Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="NoSQL"></category><category term="Mongo"></category><category term="Zh"></category></entry><entry><title>reply On literate programming</title><link href="http://blog.zoomquiet.io/imho/reply-yw-on-literate-programming.html" rel="alternate"></link><updated>2012-09-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-09-18:imho/reply-yw-on-literate-programming.html</id><summary type="html">&lt;p&gt;&lt;a href="http://yinwang0.wordpress.com/2011/05/18/literate-programming/"&gt;On Literate Programming | Surely I Am Joking&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;对于文学化编程,俺使用的是 Leo :
-   http://wiki.woodpecker.org.cn/moin/LeoEnvironment&lt;/p&gt;
+&lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
+&lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/c161d7036f89"&gt;Collections and Embedded Documents in MongoDB — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="NoSQL"></category><category term="Mongo"></category><category term="Zh"></category></entry><entry><title>reply On literate programming</title><link href="/reply-yw-on-literate-programming.html" rel="alternate"></link><updated>2012-09-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2012-09-18:reply-yw-on-literate-programming.html</id><summary type="html">&lt;p&gt;&lt;a href="http://yinwang0.wordpress.com/2011/05/18/literate-programming/"&gt;On Literate Programming | Surely I Am&amp;nbsp;Joking&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对于文学化编程,俺使用的是 Leo :&amp;nbsp;http://wiki.woodpecker.org.cn/moin/LeoEnvironment&lt;/p&gt;
 &lt;p&gt;你提及的:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;丢失了全景思考&lt;/li&gt;
 &lt;li&gt;程序不仅仅是文本&lt;/li&gt;
-&lt;li&gt;人的语言/认知 至上&lt;/li&gt;
+&lt;li&gt;人的语言/认知&amp;nbsp;至上&lt;/li&gt;
 &lt;li&gt;痛苦的导航&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;几个观点中,俺非常同意的是:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;目前并没有一个,可以真正统一人的思想以及程序代码形式的编辑方式/环境&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;但是,目前为止,在代码的语法结构维度之上,可以给予我们一个可以自在记录原始思路的编辑方式,应该只有 LP 了;
-从俺使用 Leo 进行各种编辑/编程 的体验而言&lt;/p&gt;
+&lt;p&gt;但是,目前为止,在代码的语法结构维度之上,可以给予我们一个可以自在记录原始思路的编辑方式,应该只有 &lt;span class="caps"&gt;LP&lt;/span&gt; 了;
+从俺使用 Leo 进行各种编辑/编程&amp;nbsp;的体验而言&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;LP 其实是关注包含时间维度的代码的变迁过程,而不是简单的精细化切分&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LP&lt;/span&gt;&amp;nbsp;其实是关注包含时间维度的代码的变迁过程,而不是简单的精细化切分&lt;/li&gt;
 &lt;li&gt;其实,到最后看起来是碎片的代码片段,以及关系,并不是从一开始就形成的&lt;/li&gt;
 &lt;li&gt;而是在开发的过程中,逐步抽象/提取而成的&lt;/li&gt;
-&lt;li&gt;也就是説,在 LP 的编辑思想中,人的整体思路是最重要的对象,是必须随时加以记录的&lt;/li&gt;
+&lt;li&gt;也就是説,在 &lt;span class="caps"&gt;LP&lt;/span&gt;&amp;nbsp;的编辑思想中,人的整体思路是最重要的对象,是必须随时加以记录的&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;程序当然不仅仅是文本&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;但是,程序只能以文本形式来管理/编辑/传播吼,,,&lt;/li&gt;
-&lt;li&gt;当然的,因为 LP 不关心 程序文本的运行时结构,所以,无法自动跳转到相关定义...&lt;/li&gt;
+&lt;li&gt;当然的,因为 &lt;span class="caps"&gt;LP&lt;/span&gt; 不关心&amp;nbsp;程序文本的运行时结构,所以,无法自动跳转到相关定义&amp;#8230;&lt;/li&gt;
 &lt;li&gt;不过,俺感受到的是:&lt;/li&gt;
 &lt;li&gt;记不住的就是不重要的&lt;/li&gt;
 &lt;li&gt;不知道的就是不必要的&lt;/li&gt;
 &lt;li&gt;如附件截屏:&lt;/li&gt;
-&lt;li&gt;Leo 通过可视化的树形结点来记录了我对程序的整体思考&lt;/li&gt;
+&lt;li&gt;Leo&amp;nbsp;通过可视化的树形结点来记录了我对程序的整体思考&lt;/li&gt;
 &lt;li&gt;而右方的编辑区,永远只是当前结点的内容&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;也就是説,通过 Leo 进行文学化编程的整体过程是一系列相同的重构过程串起来的:&lt;/p&gt;
+&lt;p&gt;也就是説,通过 Leo&amp;nbsp;进行文学化编程的整体过程是一系列相同的重构过程串起来的:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;定个文件的框架&lt;/li&gt;
 &lt;li&gt;定个大致的(子)功能流程,每个先以可运行的伪代码记录下来&lt;/li&gt;
 &lt;li&gt;进入对应的结点完成功能&lt;/li&gt;
-&lt;li&gt;每当超过一定的行数 hold 不住了,说明应该进行重构,将重复部分抽象出去了
-  回到第1或是第2步...&lt;/li&gt;
+&lt;li&gt;每当超过一定的行数 hold 不住了,说明应该进行重构,将重复部分抽象出去了&amp;nbsp;回到第1或是第2步&amp;#8230;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;所以,如果是 Leo 这种的文学化编程环境&lt;/p&gt;
+&lt;p&gt;所以,如果是 Leo&amp;nbsp;这种的文学化编程环境&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;并不太需要 IDE 类似的全程自动解析,追踪,导航,以帮助我们快速定位代码&lt;/li&gt;
+&lt;li&gt;并不太需要 &lt;span class="caps"&gt;IDE&lt;/span&gt;&amp;nbsp;类似的全程自动解析,追踪,导航,以帮助我们快速定位代码&lt;/li&gt;
 &lt;li&gt;因为,每次进行修訂的代码片段都足够小,关注的因素也足够少&lt;/li&gt;
 &lt;li&gt;而每个足够小的片段,都是从足够大的上层逻辑节点演化来的&lt;/li&gt;
-&lt;li&gt;即,有关整体程序的概念,结构,思路,永远在 outline 的节点树中有体验&lt;/li&gt;
+&lt;li&gt;即,有关整体程序的概念,结构,思路,永远在 outline&amp;nbsp;的节点树中有体验&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;不过,你点出的工程性问题的确存在&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;同 coffeescript , Leo 进行编程调试时,一样麻烦在&lt;/li&gt;
+&lt;li&gt;同 coffeescript , Leo&amp;nbsp;进行编程调试时,一样麻烦在&lt;/li&gt;
 &lt;li&gt;如果调试运行时,引发错误的代码,超出当前编程的片段范围时&lt;/li&gt;
-&lt;li&gt;错误信息反馈的行数,在 Leo 中找不到精确的对应&lt;/li&gt;
-&lt;li&gt;所以,只能 到输出的正常文本程序中搜索,明确了代码所在代码段后,才能回到 Leo 人工定位到对应的&lt;/li&gt;
+&lt;li&gt;错误信息反馈的行数,在 Leo&amp;nbsp;中找不到精确的对应&lt;/li&gt;
+&lt;li&gt;所以,只能 到输出的正常文本程序中搜索,明确了代码所在代码段后,才能回到 Leo&amp;nbsp;人工定位到对应的&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;期待你的大一统式编程/测试/运行环境!&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;140109 pub. as zoomquiet.io's blog&lt;/li&gt;
+&lt;li&gt;140109 pub. as zoomquiet.io&amp;#8217;s&amp;nbsp;blog&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;120918 邮件 as:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;发件人：     Zoom.Quiet &amp;lt;zoom.quiet@gmail.com&amp;gt;
-发送至：     shredderyin@gmail.com
-日期：  2012年9月18日 下午5:22
-主题：  [via On Literate Programming] 我的体验
+&lt;p&gt;120918 邮件&amp;nbsp;as:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;发件人：&lt;/span&gt;     &lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Quiet&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;zoom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;quiet&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="err"&gt;发送至：&lt;/span&gt;     &lt;span class="n"&gt;shredderyin&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+&lt;span class="err"&gt;日期：&lt;/span&gt;  &lt;span class="mi"&gt;2012&lt;/span&gt;&lt;span class="err"&gt;年&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="err"&gt;月&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="err"&gt;日&lt;/span&gt; &lt;span class="err"&gt;下午&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;22&lt;/span&gt;
+&lt;span class="err"&gt;主题：&lt;/span&gt;  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;via&lt;/span&gt; &lt;span class="n"&gt;On&lt;/span&gt; &lt;span class="n"&gt;Literate&lt;/span&gt; &lt;span class="n"&gt;Programming&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="err"&gt;我的体验&lt;/span&gt;
 
-很有感觉,但是没有找到评注入口,只好直接邮件了;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class="err"&gt;很有感觉&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;但是没有找到评注入口&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;只好直接邮件了&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>Understanding the yin-yang puzzle</title><link href="http://blog.zoomquiet.io/imho/yw-yang-puzzle.html" rel="alternate"></link><updated>2012-07-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-07-27:imho/yw-yang-puzzle.html</id><summary type="html">&lt;p&gt;via: http://yinwang0.wordpress.com/2012/07/27/yin-yang-puzzle/&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>Understanding the yin-yang puzzle</title><link href="/yw-yang-puzzle.html" rel="alternate"></link><updated>2012-07-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2012-07-27:yw-yang-puzzle.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2012/07/27/yin-yang-puzzle/&lt;/p&gt;
 &lt;p&gt;&lt;img alt="yinyang.gif" src="http://yinwang0.files.wordpress.com/2012/07/yinyang.gif?w=300" /&gt;&lt;/p&gt;
 &lt;p&gt;I have a friend who is a very fast learner. I introduced him to the Scheme programming language a few days ago and he soon digged into this &lt;a href="http://stackoverflow.com/questions/2694679/how-does-the-yin-yang-puzzle-work"&gt;yin-yang puzzle&lt;/a&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::lisp
-(let* ((yin
-        ((lambda (cc) (display #\@) cc) (call/cc (lambda (c) c))))
-       (yang
-        ((lambda (cc) (display #\*) cc) (call/cc (lambda (c) c)))))
-  (yin yang))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This program prints out the infinite string @&lt;em&gt;@&lt;strong&gt;@&lt;strong&gt;&lt;em&gt;@&lt;/em&gt;&lt;/strong&gt;*@&lt;strong&gt;&lt;em&gt;**@&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt; …&lt;/p&gt;
-&lt;p&gt;Why does this happen? This took me almost a full afternoon to figure out. It is always good to have friends who feed you with questions and challenges. I’m going to document my finding here. I may want to make some animated slides (as is always a good idea) later, but for now a short note may suffice.&lt;/p&gt;
-&lt;h2 id="the-plan"&gt;The Plan&lt;/h2&gt;
-&lt;p&gt;You will probably never understand the program if you examine the contents of the stack. You need their high level semantic meaning to think clearly. The higher level meaning of the stack is the continuation. So instead of frightening you with the details of the stack, I’m going to use functions to show the continuations explicitly.&lt;/p&gt;
-&lt;p&gt;Also I will use a little bit of compiler optimizations along the way. The optimizations will simplify the program and show its deeper meanings.&lt;/p&gt;
-&lt;p&gt;Here is an overall plan of this article:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;let&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;yin&lt;/span&gt;
+        &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;display&lt;/span&gt; &lt;span class="err"&gt;#\@&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;))))&lt;/span&gt;
+       &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;yang&lt;/span&gt;
+        &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;display&lt;/span&gt; &lt;span class="err"&gt;#\&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)))))&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;yin&lt;/span&gt; &lt;span class="n"&gt;yang&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This program prints out the infinite string @&lt;em&gt;@&lt;strong&gt;@&lt;strong&gt;&lt;em&gt;@&lt;/em&gt;&lt;/strong&gt;*@&lt;strong&gt;&lt;em&gt;**@&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt;&amp;nbsp;…&lt;/p&gt;
+&lt;p&gt;Why does this happen? This took me almost a full afternoon to figure out. It is always good to have friends who feed you with questions and challenges. I’m going to document my finding here. I may want to make some animated slides (as is always a good idea) later, but for now a short note may&amp;nbsp;suffice.&lt;/p&gt;
+&lt;h2 id="the-plan"&gt;The&amp;nbsp;Plan&lt;/h2&gt;
+&lt;p&gt;You will probably never understand the program if you examine the contents of the stack. You need their high level semantic meaning to think clearly. The higher level meaning of the stack is the continuation. So instead of frightening you with the details of the stack, I’m going to use functions to show the continuations&amp;nbsp;explicitly.&lt;/p&gt;
+&lt;p&gt;Also I will use a little bit of compiler optimizations along the way. The optimizations will simplify the program and show its deeper&amp;nbsp;meanings.&lt;/p&gt;
+&lt;p&gt;Here is an overall plan of this&amp;nbsp;article:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Find the functional representations of the two continuations. Name them c1 and c1.&lt;/li&gt;
-&lt;li&gt;Plug in c1 and c2 into the places of the two call/cc’s.&lt;/li&gt;
-&lt;li&gt;Simplify the program using compiler optimizations.&lt;/li&gt;
-&lt;li&gt;Perform behavioral analysis on the simplified program.&lt;/li&gt;
+&lt;li&gt;Find the functional representations of the two continuations. Name them c1 and&amp;nbsp;c1.&lt;/li&gt;
+&lt;li&gt;Plug in c1 and c2 into the places of the two&amp;nbsp;call/cc’s.&lt;/li&gt;
+&lt;li&gt;Simplify the program using compiler&amp;nbsp;optimizations.&lt;/li&gt;
+&lt;li&gt;Perform behavioral analysis on the simplified&amp;nbsp;program.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id="transform-and-remove-callcc"&gt;Transform and Remove Call/cc&lt;/h2&gt;
-&lt;p&gt;So here we go. Let’s repeat the original program here:&lt;/p&gt;
+&lt;h2 id="transform-and-remove-callcc"&gt;Transform and Remove&amp;nbsp;Call/cc&lt;/h2&gt;
+&lt;p&gt;So here we go. Let’s repeat the original program&amp;nbsp;here:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (let* ((yin
         ((lambda (cc) (display #\@) cc) (call/cc (lambda (c) c))))   ; B1
        (yang
         ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))  ; B2
-  (yin yang))&lt;/p&gt;
-&lt;p&gt;Note that there are two binding clauses, B1 and B2, each prints a char and binds a continuation to a variable.&lt;/p&gt;
-&lt;p&gt;B1 binds yin to the “current continuation” of the first call/cc. Let’s call this continuation c1. Its function representation is:&lt;/p&gt;
+  (yin&amp;nbsp;yang))&lt;/p&gt;
+&lt;p&gt;Note that there are two binding clauses, B1 and B2, each prints a char and binds a continuation to a&amp;nbsp;variable.&lt;/p&gt;
+&lt;p&gt;B1 binds yin to the “current continuation” of the first call/cc. Let’s call this continuation c1. Its function representation&amp;nbsp;is:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (lambda (k)
   (let* ((yin
           ((lambda (cc) (display #\@) cc) k))         &lt;br /&gt;
          (yang
           ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
-    (yin yang)))&lt;/p&gt;
-&lt;p&gt;We can simplify it using some compiler optimization tricks. I will go very slowly here just in case you are not familiar with compiler optimizations.&lt;/p&gt;
-&lt;p&gt;First, since Scheme is a strict language, k will be a pure value (with no side-effects), so we can lift the side-effect (display #\@) out:&lt;/p&gt;
+    (yin&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;We can simplify it using some compiler optimization tricks. I will go very slowly here just in case you are not familiar with compiler&amp;nbsp;optimizations.&lt;/p&gt;
+&lt;p&gt;First, since Scheme is a strict language, k will be a pure value (with no side-effects), so we can lift the side-effect (display #\@)&amp;nbsp;out:&lt;/p&gt;
 &lt;p&gt;(lambda (k)
   (display #\@)
   (let* ((yin
           ((lambda (cc) cc) k))         &lt;br /&gt;
          (yang
           ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
-    (yin yang)))&lt;/p&gt;
-&lt;p&gt;Now we can “partial evaluate” ((lambda (cc) cc) k) to k:&lt;/p&gt;
+    (yin&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;Now we can “partial evaluate” ((lambda (cc) cc) k) to&amp;nbsp;k:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (lambda (k)
   (display #\@)
   (let* ((yin k)         &lt;br /&gt;
          (yang
           ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
-    (yin yang)))&lt;/p&gt;
-&lt;p&gt;Then we can copy propagate the value of yin, k, to the body of let*, (yin yang). And now we have only one binding left:&lt;/p&gt;
+    (yin&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;Then we can copy propagate the value of yin, k, to the body of let*, (yin yang). And now we have only one binding&amp;nbsp;left:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (lambda (k)
   (display #\@)
   (let ((yang
          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
                                          ^^^^^^^^^^^^^^^^^^^^^^^^
-    (k yang)))&lt;/p&gt;
-&lt;p&gt;Now we try to figure out the underlined continuation. It should be:&lt;/p&gt;
+    (k&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;Now we try to figure out the underlined continuation. It should&amp;nbsp;be:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (lambda (j)
   (let ((yang
          ((lambda (cc) (display #*) cc) j)))
-    (k yang)))&lt;/p&gt;
-&lt;p&gt;You see why? Since the “current continuation” means “what is going to happen with this value”, it doesn’t include the computation before it, namely (display #\@). Now we do a similar optimization on this continuation: lifting out the side-effect (display #*), do some partial evaluation and copy propagation:&lt;/p&gt;
-&lt;p&gt;The result of this inner continuation is:&lt;/p&gt;
+    (k&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;You see why? Since the “current continuation” means “what is going to happen with this value”, it doesn’t include the computation before it, namely (display #\@). Now we do a similar optimization on this continuation: lifting out the side-effect (display #*), do some partial evaluation and copy&amp;nbsp;propagation:&lt;/p&gt;
+&lt;p&gt;The result of this inner continuation&amp;nbsp;is:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (lambda (j)
   (display #*)
-  (k j))&lt;/p&gt;
-&lt;p&gt;Now we can plug it back:&lt;/p&gt;
+  (k&amp;nbsp;j))&lt;/p&gt;
+&lt;p&gt;Now we can plug it&amp;nbsp;back:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (lambda (k)
   (display #\@)
@@ -967,8 +924,8 @@ SQL 世界的来客,总是试图先建立起一个完美的关系体系可以兼
           (lambda (j)
             (display #*)
             (k j)))))
-    (k yang)))&lt;/p&gt;
-&lt;p&gt;Do a similar sequence of optimizations: lifting out the first (display #*), partial evaluation, copy propagation. And we have the final result for the value of yin. Let’s name it c1 with a definition:&lt;/p&gt;
+    (k&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;Do a similar sequence of optimizations: lifting out the first (display #*), partial evaluation, copy propagation. And we have the final result for the value of yin. Let’s name it c1 with a&amp;nbsp;definition:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (define c1
  (lambda (k)
@@ -976,23 +933,23 @@ SQL 世界的来客,总是试图先建立起一个完美的关系体系可以兼
    (display #*)
    (k (lambda (j)
         (display #*)
-        (k j)))))&lt;/p&gt;
-&lt;p&gt;Now, the original program would look like the following. The program would have by now printed a @ before binding yin to c1, so we make a sequence and include the display term in the front of it.&lt;/p&gt;
+        (k&amp;nbsp;j)))))&lt;/p&gt;
+&lt;p&gt;Now, the original program would look like the following. The program would have by now printed a @ before binding yin to c1, so we make a sequence and include the display term in the front of&amp;nbsp;it.&lt;/p&gt;
 &lt;p&gt;:::lisp
 (begin
   (display #\@)
   (let* ((yin c1)
          (yang
           ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
-    (yin yang)))&lt;/p&gt;
-&lt;p&gt;Try it. It will behave the same as the original program. Now we do another copy propagation to get rid of the first binding:&lt;/p&gt;
+    (yin&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;Try it. It will behave the same as the original program. Now we do another copy propagation to get rid of the first&amp;nbsp;binding:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (begin
   (display #\@)
   (let ((yang
          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
-    (c1 yang)))&lt;/p&gt;
-&lt;p&gt;Since the call/cc here will not cause any side-effects (why?), we can lift (display #*) out:&lt;/p&gt;
+    (c1&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;Since the call/cc here will not cause any side-effects (why?), we can lift (display #*)&amp;nbsp;out:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (begin
   (display #\@)
@@ -1000,35 +957,35 @@ SQL 世界的来客,总是试图先建立起一个完美的关系体系可以兼
   (let ((yang
          ((lambda (cc) cc) (call/cc (lambda (c) c)))))
                            ^^^^^^^^^^^^^^^^^^^^^^^^
-    (c1 yang)))&lt;/p&gt;
-&lt;p&gt;Now we just have to find what this underlined continuation is, and it will become the value of yang. It is:&lt;/p&gt;
+    (c1&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;Now we just have to find what this underlined continuation is, and it will become the value of yang. It&amp;nbsp;is:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (lambda (k)
   (let ((yang
          ((lambda (cc) cc) k)))
-    (c1 yang)))&lt;/p&gt;
-&lt;p&gt;After our routine sequence of optimizations we have the value of yang. Let’s define it as c2:&lt;/p&gt;
+    (c1&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;After our routine sequence of optimizations we have the value of yang. Let’s define it as&amp;nbsp;c2:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (define c2
   (lambda (k)
     (display #*)
-    (c1 k)))&lt;/p&gt;
-&lt;p&gt;Plug c1 and c2 back into the original program:&lt;/p&gt;
+    (c1&amp;nbsp;k)))&lt;/p&gt;
+&lt;p&gt;Plug c1 and c2 back into the original&amp;nbsp;program:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (begin
   (display #\@)
   (display #*)
   (let* ((yin c1)
          (yang c2))
-    (yin yang)))&lt;/p&gt;
-&lt;p&gt;And do a copy propagation:&lt;/p&gt;
+    (yin&amp;nbsp;yang)))&lt;/p&gt;
+&lt;p&gt;And do a copy&amp;nbsp;propagation:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (begin
   (display #\@)
   (display #*)
-  (c1 c2))&lt;/p&gt;
-&lt;h2 id="transformed-program"&gt;Transformed Program&lt;/h2&gt;
-&lt;p&gt;Now we have our final transformed and optimized program. Let’s put the definitions of c1 and c2 here for an overview:&lt;/p&gt;
+  (c1&amp;nbsp;c2))&lt;/p&gt;
+&lt;h2 id="transformed-program"&gt;Transformed&amp;nbsp;Program&lt;/h2&gt;
+&lt;p&gt;Now we have our final transformed and optimized program. Let’s put the definitions of c1 and c2 here for an&amp;nbsp;overview:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (define c1
  (lambda (k)
@@ -1036,16 +993,16 @@ SQL 世界的来客,总是试图先建立起一个完美的关系体系可以兼
    (display #*)
    (k (lambda (j)
         (display #*)
-        (k j)))))&lt;/p&gt;
+        (k&amp;nbsp;j)))))&lt;/p&gt;
 &lt;p&gt;(define c2
   (lambda (k)
     (display #*)
-    (c1 k)))&lt;/p&gt;
+    (c1&amp;nbsp;k)))&lt;/p&gt;
 &lt;p&gt;(begin
   (display #\@)
   (display #*)
-  (c1 c2))&lt;/p&gt;
-&lt;p&gt;For simplicity, let’s inline c2 into the main program. Now c2 disappears.&lt;/p&gt;
+  (c1&amp;nbsp;c2))&lt;/p&gt;
+&lt;p&gt;For simplicity, let’s inline c2 into the main program. Now c2&amp;nbsp;disappears.&lt;/p&gt;
 &lt;p&gt;:::lisp
 (define c1
  (lambda (k)
@@ -1053,25 +1010,25 @@ SQL 世界的来客,总是试图先建立起一个完美的关系体系可以兼
    (display #*)
    (k (lambda (j)
         (display #*)
-        (k j)))))&lt;/p&gt;
+        (k&amp;nbsp;j)))))&lt;/p&gt;
 &lt;p&gt;(begin
   (display #\@)
   (display #*)
   (c1 (lambda (k)
         (display #*)
-        (c1 k))))&lt;/p&gt;
-&lt;p&gt;Try it. It will still work the same as the original program.&lt;/p&gt;
-&lt;h2 id="behavioral-analysis"&gt;Behavioral Analysis&lt;/h2&gt;
-&lt;p&gt;Now the program doesn’t contain any call/cc’s and is much easier to understand. Let’s try to figure out how it executes:&lt;/p&gt;
+        (c1&amp;nbsp;k))))&lt;/p&gt;
+&lt;p&gt;Try it. It will still work the same as the original&amp;nbsp;program.&lt;/p&gt;
+&lt;h2 id="behavioral-analysis"&gt;Behavioral&amp;nbsp;Analysis&lt;/h2&gt;
+&lt;p&gt;Now the program doesn’t contain any call/cc’s and is much easier to understand. Let’s try to figure out how it&amp;nbsp;executes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;First, @* will be printed, and we will invoke:&lt;/li&gt;
+&lt;li&gt;First, @* will be printed, and we will&amp;nbsp;invoke:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;:::lisp
 (c1 (lambda (k)
       (display #*)
-      (c1 k)))&lt;/p&gt;
+      (c1&amp;nbsp;k)))&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Inside the invocation, @* will be printed by the body of c1, and k is now bound to (lambda (k) (display #*) (c1 k)). So the program proceed to:&lt;/li&gt;
+&lt;li&gt;Inside the invocation, @* will be printed by the body of c1, and k is now bound to (lambda (k) (display #*) (c1 k)). So the program proceed&amp;nbsp;to:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;:::lisp
 ((lambda (k)
@@ -1081,58 +1038,56 @@ SQL 世界的来客,总是试图先建立起一个完美的关系体系可以兼
    (display #*)
    ((lambda (k)
       (display #*)
-      (c1 k)) 
-    j)))&lt;/p&gt;
-&lt;p&gt;It will print a *, and becomes:&lt;/p&gt;
+      (c1 k))&amp;nbsp;j)))&lt;/p&gt;
+&lt;p&gt;It will print a *, and&amp;nbsp;becomes:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (c1
  (lambda (j)
    (display #*)
    ((lambda (k)
       (display #*)
-      (c1 k)) 
-    j)))&lt;/p&gt;
+      (c1 k))&amp;nbsp;j)))&lt;/p&gt;
 &lt;p&gt;Now we have seen @&lt;em&gt;@&lt;/em&gt;*&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Notice that we are back to a call to c1! This is a good sign of recursion. But this time the argument is different. If we simplify it a little, we get:&lt;/li&gt;
+&lt;li&gt;Notice that we are back to a call to c1! This is a good sign of recursion. But this time the argument is different. If we simplify it a little, we&amp;nbsp;get:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;:::lisp
 (c1
  (lambda (j)
    (display #*)
    (display #*)
-   (c1 j)))&lt;/p&gt;
+   (c1&amp;nbsp;j)))&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;I think you see what’s going on here. This time, c1 is called with&lt;/li&gt;
+&lt;li&gt;I think you see what’s going on here. This time, c1 is called&amp;nbsp;with&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;:::lisp
 (lambda (j)
    (display #*)
    (display #*)
-   (c1 j))&lt;/p&gt;
-&lt;p&gt;which means “When called, display TWO &lt;em&gt;’s, and then behave like c1 on the argument”. If we go on, the argument to c1 will be longer and longer, and each time with an additional (display #*). It will print @&lt;strong&gt;&lt;em&gt;, and then @&lt;/em&gt;&lt;/strong&gt;&lt;/em&gt;, and then @&lt;strong&gt;*&lt;/strong&gt;, and so on.&lt;/p&gt;
+   (c1&amp;nbsp;j))&lt;/p&gt;
+&lt;p&gt;which means “When called, display &lt;span class="caps"&gt;TWO&lt;/span&gt; &lt;em&gt;’s, and then behave like c1 on the argument”. If we go on, the argument to c1 will be longer and longer, and each time with an additional (display #*). It will print @&lt;strong&gt;&lt;em&gt;, and then @&lt;/em&gt;&lt;/strong&gt;&lt;/em&gt;, and then @&lt;strong&gt;*&lt;/strong&gt;, and so&amp;nbsp;on.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Let’s introspect a bit. Which part of the program is responsible for creating the ever-longer displays, and why? It is this piece from the definition of c1:&lt;/li&gt;
+&lt;li&gt;Let’s introspect a bit. Which part of the program is responsible for creating the ever-longer displays, and why? It is this piece from the definition of&amp;nbsp;c1:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;:::lisp
 (k (lambda (j)
      (display #*)
-     (k j)))&lt;/p&gt;
-&lt;p&gt;Here k is c1′s argument. Notice that k is always of the form:&lt;/p&gt;
+     (k&amp;nbsp;j)))&lt;/p&gt;
+&lt;p&gt;Here k is c1′s argument. Notice that k is always of the&amp;nbsp;form:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (lambda (j)
    (display #*)
    (display #*)
-   ...
-   (c1 j))&lt;/p&gt;
-&lt;p&gt;When k is applied, it will print the corresonding number of *’s inside it, and then behave like c1. The argument to k is:&lt;/p&gt;
+   &amp;#8230;
+   (c1&amp;nbsp;j))&lt;/p&gt;
+&lt;p&gt;When k is applied, it will print the corresonding number of *’s inside it, and then behave like c1. The argument to k&amp;nbsp;is:&lt;/p&gt;
 &lt;p&gt;:::lisp
 (lambda (j)
   (display #*)
-  (k j))&lt;/p&gt;
-&lt;p&gt;What does this mean? It says: “When called, print a * and then behave like k on the argument.” This is how you get a “new k”, with one more display of *.&lt;/p&gt;
-&lt;p&gt;This will go on indifinitely. This is why you see the infinite string: @&lt;em&gt;@&lt;strong&gt;@&lt;strong&gt;&lt;em&gt;@&lt;/em&gt;&lt;/strong&gt;*@&lt;strong&gt;&lt;em&gt;**@&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt; …&lt;/p&gt;
+  (k&amp;nbsp;j))&lt;/p&gt;
+&lt;p&gt;What does this mean? It says: “When called, print a * and then behave like k on the argument.” This is how you get a “new k”, with one more display of&amp;nbsp;*.&lt;/p&gt;
+&lt;p&gt;This will go on indifinitely. This is why you see the infinite string: @&lt;em&gt;@&lt;strong&gt;@&lt;strong&gt;&lt;em&gt;@&lt;/em&gt;&lt;/strong&gt;*@&lt;strong&gt;&lt;em&gt;**@&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt;&amp;nbsp;…&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;140109 pub. as zoomquiet.io's blog&lt;/li&gt;
+&lt;li&gt;140109 pub. as zoomquiet.io&amp;#8217;s&amp;nbsp;blog&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="Think"></category><category term="yinwang"></category><category term="Chinese"></category></entry></feed>

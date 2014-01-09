@@ -25,6 +25,12 @@ ZoomQuiet.io    </title>
     <link href="/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="/theme/css/pygments/github.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+    <!-- add emojify into Pelican -->
+    <link rel="stylesheet" href="/theme/css/emojify.min.css" type="text/css" />
+    <script src="/theme/js/emojify.js"></script>
+
+
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="//code.jquery.com/jquery.min.js"></script>
 
@@ -86,6 +92,7 @@ ZoomQuiet.io    </title>
 <p>&#8230;</p>
 <p>在技术海洋中折腾的程序猿们,也需要好设计,标识自身,展示成果!</p>
 <h2 id="slogen-logo">Slogen <span class="amp">&amp;</span>&nbsp;Logo</h2>
+<p>:octocat:</p>
 <h3 id="stuff">stuff</h3>
 <p>语法高亮</p>
 <div class="highlight"><pre><span class="err">发件人：</span> <span class="n">Zoom</span><span class="o">.</span><span class="n">Quiet</span>
@@ -164,6 +171,11 @@ ZoomQuiet.io    </title>
 
             <li class="list-group-item"><a href="/tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
                 <li class="list-group-item tag-1">
+                    <a href="/tag/zh.html">
+                        Zh
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
                     <a href="/tag/pythonner.html">
                         Pythonner
                     </a>
@@ -178,14 +190,14 @@ ZoomQuiet.io    </title>
                         YinWang
                     </a>
                 </li>
-                <li class="list-group-item tag-1">
-                    <a href="/tag/zh.html">
-                        Zh
-                    </a>
-                </li>
                 <li class="list-group-item tag-2">
                     <a href="/tag/leo.html">
                         Leo
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="/tag/pyconchina.html">
+                        PyConChina
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
@@ -198,19 +210,14 @@ ZoomQuiet.io    </title>
                         OSS
                     </a>
                 </li>
-                <li class="list-group-item tag-2">
-                    <a href="/tag/pyconchina.html">
-                        PyConChina
+                <li class="list-group-item tag-4">
+                    <a href="/tag/md.html">
+                        md
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
                     <a href="/tag/mongo.html">
                         Mongo
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="/tag/md.html">
-                        md
                     </a>
                 </li>
         </ul>
@@ -293,6 +300,20 @@ ZoomQuiet.io    </title>
 <!--
  
 -->
+
+    <!-- add emojify into Pelican -->
+
+    <script>
+        emojify.setConfig({
+            emoticons_enabled: true,
+            people_enabled: true,
+            nature_enabled: true,
+            objects_enabled: true,
+            places_enabled: true,
+            symbols_enabled: true
+        });
+        emojify.run();
+    </script>
 
 </body>
 </html>

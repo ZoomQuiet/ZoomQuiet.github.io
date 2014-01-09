@@ -25,6 +25,12 @@ ZoomQuiet.io    </title>
     <link href="/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="/theme/css/pygments/github.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+    <!-- add emojify into Pelican -->
+    <link rel="stylesheet" href="/theme/css/emojify.min.css" type="text/css" />
+    <script src="/theme/js/emojify.js"></script>
+
+
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="//code.jquery.com/jquery.min.js"></script>
 
@@ -161,6 +167,11 @@ next week,there is another ...</p>
 
             <li class="list-group-item"><a href="/tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
                 <li class="list-group-item tag-1">
+                    <a href="/tag/zh.html">
+                        Zh
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
                     <a href="/tag/pythonner.html">
                         Pythonner
                     </a>
@@ -175,14 +186,14 @@ next week,there is another ...</p>
                         YinWang
                     </a>
                 </li>
-                <li class="list-group-item tag-1">
-                    <a href="/tag/zh.html">
-                        Zh
-                    </a>
-                </li>
                 <li class="list-group-item tag-2">
                     <a href="/tag/leo.html">
                         Leo
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="/tag/pyconchina.html">
+                        PyConChina
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
@@ -195,19 +206,14 @@ next week,there is another ...</p>
                         OSS
                     </a>
                 </li>
-                <li class="list-group-item tag-2">
-                    <a href="/tag/pyconchina.html">
-                        PyConChina
+                <li class="list-group-item tag-4">
+                    <a href="/tag/md.html">
+                        md
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
                     <a href="/tag/mongo.html">
                         Mongo
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="/tag/md.html">
-                        md
                     </a>
                 </li>
         </ul>
@@ -290,6 +296,20 @@ next week,there is another ...</p>
 <!--
  
 -->
+
+    <!-- add emojify into Pelican -->
+
+    <script>
+        emojify.setConfig({
+            emoticons_enabled: true,
+            people_enabled: true,
+            nature_enabled: true,
+            objects_enabled: true,
+            places_enabled: true,
+            symbols_enabled: true
+        });
+        emojify.run();
+    </script>
 
 </body>
 </html>

@@ -140,7 +140,7 @@ ZoomQuiet.io    </title>
 </ul>
 </li>
 <li><a href="#_7">是也乎</a></li>
-<li><a href="#changlog">Changlog ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</a><ul>
+<li><a href="#changlog">Changlog ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</a><ul>
 <li><a href="#-o">增订:-o回收</a><ul>
 <li><a href="#_8">过度抽象的代价</a></li>
 <li><a href="#are-functions-objects_1">Are functions objects?</a></li>
@@ -208,9 +208,9 @@ still believe that the earth is flat and make all kinds of theories to prove it.
 </pre></div>
 <p>You send a message ifTrue: to a Boolean object, passing as an argument a block of code to be executed if and only if the Boolean receiver is true.</p>
 <p>First of all, if you really have a well-designed language, you shouldn’t be wanting to define your own control structures. As a seasoned Lisp/Scheme programmer, I have seen many custom-designed control structures (such as the various looping macros) over the years, but none of them turned out to be good ideas. I’d rather write slightly longer and more verbose code in the vanilla language than to learn those weird control structures. Second, if you are really genius enough to have invented another good control structure, the late binding feature of Smalltalk probably won’t provide you the necessary power for defining it. The power of functions as an abstraction tool is limited. It is strictly less powerful than Lisp/Scheme’s macros. Third, this feature of Smalltalk is not really a novel approach and it has a big problem. A similar but more beautiful conditional construct had been defined in lambda calculus since before computer science was born:</p>
-<div class="highlight"><pre><span class="nc"><span class="caps">TRUE</span></span> <span class="nf">=</span> <span class="err">λ</span><span class="nv">x</span><span class="p">.</span><span class="err">λ</span><span class="nv">y</span><span class="p">.</span><span class="nv">x</span>
-<span class="nf"><span class="caps">FALSE</span></span> <span class="nf">=</span> <span class="err">λ</span><span class="nv">x</span><span class="p">.</span><span class="err">λ</span><span class="nv">y</span><span class="p">.</span><span class="nv">y</span>
-<span class="nf"><span class="caps">IF</span></span> <span class="nf">=</span> <span class="err">λ</span><span class="nv">b</span><span class="p">.</span><span class="err">λ</span><span class="nv">t</span><span class="p">.</span><span class="err">λ</span><span class="nv">f</span><span class="p">.</span><span class="nv">b</span> <span class="nf">t</span> <span class="nf">f</span>
+<div class="highlight"><pre><span class="n"><span class="caps">TRUE</span></span> <span class="o">=</span> <span class="err">λ</span><span class="n">x</span><span class="p">.</span><span class="err">λ</span><span class="n">y</span><span class="p">.</span><span class="n">x</span>
+<span class="n"><span class="caps">FALSE</span></span> <span class="o">=</span> <span class="err">λ</span><span class="n">x</span><span class="p">.</span><span class="err">λ</span><span class="n">y</span><span class="p">.</span><span class="n">y</span>
+<span class="n"><span class="caps">IF</span></span> <span class="o">=</span> <span class="err">λ</span><span class="n">b</span><span class="p">.</span><span class="err">λ</span><span class="n">t</span><span class="p">.</span><span class="err">λ</span><span class="n">f</span><span class="p">.</span><span class="n">b</span> <span class="n">t</span> <span class="n">f</span>
 </pre></div>
 <p>This is very beautiful and can be done in any functional language, but why none of the functional languages implement conditionals this way? Because when you see an expression <span class="caps">IF</span> b t f, you will have no idea whether it is a conditional or not, because <span class="caps">IF</span> can be redefined in the program. Also because <span class="caps">IF</span> is just a function, it may also accept unexpected values other than <span class="caps">TRUE</span> or <span class="caps">FALSE</span>. This may happen to make the conditional construct work but cause trouble later on. This is called “unintentional semantics”. This kind of bug can be very hard to track down.</p>
 <p>This approach also makes compiler and static analysis hard. When the compiler sees <span class="caps">IF</span> b t f, it no longer knows that it is a conditional and thus optimize it that way. It has to treat it as a usual function call. Similarly when the type checker sees it, it doesn’t know what type to expect for b, because it may not be a conditional at all. The above argument against the lambda calculus can easily be adapted to Smalltalk.</p>
@@ -407,9 +407,9 @@ Smalltalk 的延迟绑定功能,也难以提供足够的能力来定义它.
 <p>第三,Smalltalk 这一特性并不是新东西,而且包含了一个重大问题.
 类似的但更加优美的控制结构,
 在计算机科学诞生前就已经由 lambda演算科学定义出来了:</p>
-<div class="highlight"><pre><span class="nc"><span class="caps">TRUE</span></span> <span class="nf">=</span> <span class="err">λ</span><span class="nv">x</span><span class="p">.</span><span class="err">λ</span><span class="nv">y</span><span class="p">.</span><span class="nv">x</span>
-<span class="nf"><span class="caps">FALSE</span></span> <span class="nf">=</span> <span class="err">λ</span><span class="nv">x</span><span class="p">.</span><span class="err">λ</span><span class="nv">y</span><span class="p">.</span><span class="nv">y</span>
-<span class="nf"><span class="caps">IF</span></span> <span class="nf">=</span> <span class="err">λ</span><span class="nv">b</span><span class="p">.</span><span class="err">λ</span><span class="nv">t</span><span class="p">.</span><span class="err">λ</span><span class="nv">f</span><span class="p">.</span><span class="nv">b</span> <span class="nf">t</span> <span class="nf">f</span>
+<div class="highlight"><pre><span class="n"><span class="caps">TRUE</span></span> <span class="o">=</span> <span class="err">λ</span><span class="n">x</span><span class="p">.</span><span class="err">λ</span><span class="n">y</span><span class="p">.</span><span class="n">x</span>
+<span class="n"><span class="caps">FALSE</span></span> <span class="o">=</span> <span class="err">λ</span><span class="n">x</span><span class="p">.</span><span class="err">λ</span><span class="n">y</span><span class="p">.</span><span class="n">y</span>
+<span class="n"><span class="caps">IF</span></span> <span class="o">=</span> <span class="err">λ</span><span class="n">b</span><span class="p">.</span><span class="err">λ</span><span class="n">t</span><span class="p">.</span><span class="err">λ</span><span class="n">f</span><span class="p">.</span><span class="n">b</span> <span class="n">t</span> <span class="n">f</span>
 </pre></div>
 <p>这是非常漂亮的,可以用任何语言实现的,
 但是为毛没有任何一个函式语言以这种方式来实现条件语句?
@@ -572,7 +572,20 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.</p>
 然后是奇怪为毛不用 <span class="caps">OOP</span> 编程反而更加自然,
 到最后,沈游侠向俺演示,怎么通过清除 class 令Python代码更短,运行更快…</p>
 <p>这才,从俺的世界观里彻底放弃了 <span class="caps">OOP</span> ,但是,一直没有找到为毛这样的根因,现在 王珢完成了这一结论性描述,收藏之!严正推荐之!</p>
-<h1 id="changlog">Changlog ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h1>
+<p><span class="caps">PS</span>:</p>
+<ul>
+<li>有关 <code>first-class function</code> 的翻译</li>
+<li>最初俺是图样图森破的译为 <code>一流功能</code></li>
+<li>王珢看了, 建议修订为 <code>高阶函数</code></li>
+<li>很多朋友指出,不对! 应该是 <code>第一类</code>/<code>头等</code>/<code>第一级</code>/<code>一等公民</code>…函数</li>
+<li>我们大汉语的问题,就这样爆发了,多样可重载性…</li>
+<li>参考:<a href="http://en.wikipedia.org/wiki/First-class_function">First-class function - Wikipedia, the free encyclopedia</a><ul>
+<li>以及 <a href="http://www.webdevelopmentmachine.com/blog/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E4%B8%8E%E7%AC%AC%E4%B8%80%E5%9E%8B_higher-order-function-and-first-class-object/">高阶函数与第一型_Higher-order function and First-class object | Web Development Machine</a> 等等吧</li>
+</ul>
+</li>
+<li>俺个人感觉, <code>高阶函数</code> 的意向在这儿没有问题,只是我们过往的翻译习惯感觉哪儿有不对了…</li>
+</ul>
+<h1 id="changlog">Changlog ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h1>
 <ul>
 <li>140109 获得<code>王珢</code>授权,得以进行传播.</li>
 <li>140108 前后7.42小时完成快译.</li>
@@ -773,6 +786,14 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.</p>
                     </a>
                 </li>
                 <li class="list-group-item">
+                    <a href="/category/livin.html">
+                        <i class="icon-folder-open icon-large"></i>Livin
+                    </a>
+                    <a href="/feeds/livin.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
                     <a href="/category/operators.html">
                         <i class="icon-folder-open icon-large"></i>Operators
                     </a>
@@ -801,13 +822,23 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.</p>
                     </a>
                 </li>
                 <li class="list-group-item tag-1">
+                    <a href="/tag/yinwang.html">
+                        YinWang
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
+                    <a href="/tag/leo.html">
+                        Leo
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
                     <a href="/tag/pythonner.html">
                         Pythonner
                     </a>
                 </li>
-                <li class="list-group-item tag-1">
-                    <a href="/tag/yinwang.html">
-                        YinWang
+                <li class="list-group-item tag-2">
+                    <a href="/tag/oss.html">
+                        OSS
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
@@ -820,24 +851,14 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.</p>
                         PyConChina
                     </a>
                 </li>
-                <li class="list-group-item tag-2">
-                    <a href="/tag/leo.html">
-                        Leo
-                    </a>
-                </li>
-                <li class="list-group-item tag-2">
-                    <a href="/tag/oss.html">
-                        OSS
-                    </a>
-                </li>
                 <li class="list-group-item tag-4">
                     <a href="/tag/md.html">
                         md
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
-                    <a href="/tag/mongo.html">
-                        Mongo
+                    <a href="/tag/hallo.html">
+                        hallo
                     </a>
                 </li>
         </ul>

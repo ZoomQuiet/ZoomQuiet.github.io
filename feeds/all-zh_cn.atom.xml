@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="/" rel="alternate"></link><link href="/feeds/all-zh_cn.atom.xml" rel="self"></link><id>/</id><updated>2014-01-27T23:48:00+08:00</updated><entry><title>如何基于CB3构建家庭服务器</title><link href="/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-01-27T23:48:00+08:00</updated><entry><title>如何基于CB3构建家庭服务器</title><link href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h2 id="issue"&gt;Issue&lt;/h2&gt;
@@ -425,7 +425,7 @@ no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:&l
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140127 单立文章追踪&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="/jump-into-7niu.html" rel="alternate"></link><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-19:jump-into-7niu.html</id><summary type="html">&lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="http://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:jump-into-7niu.html</id><summary type="html">&lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;/h1&gt;
 &lt;h2 id="_1"&gt;原先&lt;/h2&gt;
 &lt;h2 id="_2"&gt;现在&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="d005a8bd08c1" src="https://f.cloud.github.com/assets/834231/1538179/849551c2-4cdc-11e3-9759-d005a8bd08c1.jpg" /&gt;&lt;/p&gt;
@@ -441,7 +441,7 @@ no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:&l
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140119&amp;nbsp;开始总结&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="/cbi-zq-install.html" rel="alternate"></link><updated>2014-01-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-11:cbi-zq-install.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="http://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><updated>2014-01-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:cbi-zq-install.html</id><summary type="html">
 &lt;h2 id="cbi"&gt;&lt;span class="caps"&gt;CBI&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://blog.zhgdg.org/2014-01/et-cbi1/"&gt;CBInstall.1 欢乐完成&lt;/a&gt; 记要了现场活动的情况;&lt;/p&gt;
 &lt;p&gt;当然,俺也是学员之一,要交作业的,所以,俺的刷机笔记如下:&lt;/p&gt;
@@ -707,7 +707,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;ul&gt;
 &lt;li&gt;140119 终于汇集了所有唠叨!&lt;/li&gt;
 &lt;li&gt;140111 开始总结&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>PythonisT happy guido ;-)</title><link href="/140106-pycon2013tee-guido.html" rel="alternate"></link><updated>2014-01-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-07:140106-pycon2013tee-guido.html</id><summary type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>PythonisT happy guido ;-)</title><link href="http://blog.zoomquiet.io/140106-pycon2013tee-guido.html" rel="alternate"></link><updated>2014-01-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-07:140106-pycon2013tee-guido.html</id><summary type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;起初&lt;span class="caps"&gt;ZEUUX&lt;/span&gt; 作&lt;span class="caps"&gt;TEE&lt;/span&gt; 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for&amp;nbsp;&lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;然后,就没有然后了&amp;#8230;&lt;/li&gt;
@@ -739,7 +739,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="140107-guido-twitter.png（PNG 图像，558x580 像素）" src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/140107-guido-twitter.png" /&gt;&lt;/p&gt;
 &lt;p&gt;以上,有关蠎衫的故事,就是这些,再过12年,又能发生什么?!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="design-by zoomquiet " src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/favicon/140101-design-by.png" /&gt;&lt;/p&gt;</summary><category term="Guido"></category><category term="Pythonner"></category><category term="PyConChina"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="/jump-into-mavericks.html" rel="alternate"></link><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-12-30:jump-into-mavericks.html</id><summary type="html">&lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="design-by zoomquiet " src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/favicon/140101-design-by.png" /&gt;&lt;/p&gt;</summary><category term="Guido"></category><category term="Pythonner"></category><category term="PyConChina"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="http://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:jump-into-mavericks.html</id><summary type="html">&lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
 &lt;h1 id="_2"&gt;回顾&lt;/h1&gt;
 &lt;h2 id="pyenv"&gt;Pyenv&lt;/h2&gt;
 &lt;h2 id="leo"&gt;Leo&lt;/h2&gt;
@@ -747,7 +747,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140110&amp;nbsp;开始总结&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>On object-oriented programming</title><link href="/131224-yw-on-oop.html" rel="alternate"></link><updated>2013-12-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-12-24:131224-yw-on-oop.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>On object-oriented programming</title><link href="http://blog.zoomquiet.io/131224-yw-on-oop.html" rel="alternate"></link><updated>2013-12-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-24:131224-yw-on-oop.html</id><summary type="html">
 &lt;h1 id="_1"&gt;翻越分享原文&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;via: http://yinwang0.wordpress.com/2013/12/24/on-object-oriented-programming/&lt;/li&gt;
@@ -1326,7 +1326,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 俺可以作任何事儿,
 包括所谓 访问者模式 提供的所有先进东西, 但是,不通用使用模式.&lt;/p&gt;
 &lt;p&gt;I owe my insights into design patterns to some functional programming people. If you really want to understand the essence of &lt;span class="caps"&gt;OO&lt;/span&gt; design patterns, and how &lt;span class="caps"&gt;NOT&lt;/span&gt; to use them, take a look at this little book other than the GoF one.&lt;/p&gt;
-&lt;p&gt;…&lt;/p&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Tests and static analysis</title><link href="/131127-yw-on-test-static-analysis.html" rel="alternate"></link><updated>2013-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-27:131127-yw-on-test-static-analysis.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Tests and static analysis</title><link href="http://blog.zoomquiet.io/131127-yw-on-test-static-analysis.html" rel="alternate"></link><updated>2013-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-27:131127-yw-on-test-static-analysis.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/&lt;/p&gt;
 &lt;p&gt;Ever since I made a static analysis tool for Python called PySonar, I have been asked about the question: “What is the difference between testing and static analysis?” I just replied to a comment asking a similar question, so I think it’s a good time to write down some systematic answer for this&amp;nbsp;question.&lt;/p&gt;
 &lt;h2 id="static-analysis-is-static-tests-are-dynamic"&gt;Static analysis is static, tests are&amp;nbsp;dynamic&lt;/h2&gt;
 &lt;p&gt;Static analysis and tests are similar in their purposes. They are both tools for improving code quality. But they are very different in nature: static analysis is static, but tests are dynamic. “Static” basically means “without running the&amp;nbsp;program”.&lt;/p&gt;
@@ -1379,7 +1379,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;14010? &lt;/li&gt;
 &lt;li&gt;131212 翻越抄录在 medium.com&amp;nbsp;开始翻译&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Python 101: Writing a cleanup script</title><link href="/py101-cleanup-script.html" rel="alternate"></link><updated>2013-11-23T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-23:py101-cleanup-script.html</id><summary type="html">&lt;p&gt;&lt;a href="http://freepythontips.wordpress.com/2014/01/23/python-101-writing-a-cleanup-script/"&gt;Python 101: Writing a cleanup script | Bite Sized Python&amp;nbsp;Tips&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Python 101: Writing a cleanup script</title><link href="http://blog.zoomquiet.io/py101-cleanup-script.html" rel="alternate"></link><updated>2013-11-23T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-23:py101-cleanup-script.html</id><summary type="html">&lt;p&gt;&lt;a href="http://freepythontips.wordpress.com/2014/01/23/python-101-writing-a-cleanup-script/"&gt;Python 101: Writing a cleanup script | Bite Sized Python&amp;nbsp;Tips&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;So hi there guys! I hope you are fine. So what is in this post? Today we will be writing a cleanup script. The idea for this post came from Mike Driscol who recently wrote a very useful post about writing a cleanup script in python. So how is my post different from his post? In my post I will be using path.py. When I used path.py for the first time I just fell in love with&amp;nbsp;it.&lt;/p&gt;
 &lt;h2 id="installing-pathpy"&gt;Installing&amp;nbsp;path.py:&lt;/h2&gt;
 &lt;p&gt;So there are several ways for installing path.py. Path.py may be installed using setuptools or distribute or pip:
@@ -1522,7 +1522,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140125 翻译 Weekly issue:99.5&amp;nbsp;时发现,转抄学习&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="wordpress"></category><category term="101"></category><category term="Zh"></category></entry><entry><title>Zoom.Quiuet</title><link href="/zoom-quiet.html" rel="alternate"></link><updated>2013-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-17:zoom-quiet.html</id><summary type="html">&lt;h1 id="zoomquiet"&gt;Zoom.Quiet&amp;nbsp;(大妈)&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="wordpress"></category><category term="101"></category><category term="Zh"></category></entry><entry><title>Zoom.Quiuet</title><link href="http://blog.zoomquiet.io/zoom-quiet.html" rel="alternate"></link><updated>2013-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-17:zoom-quiet.html</id><summary type="html">&lt;h1 id="zoomquiet"&gt;Zoom.Quiet&amp;nbsp;(大妈)&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="zhouqi" src="http://pyconcn.qiniudn.com/images/volunteer/zhouqi.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Python中文社区创始人(之一) / 管理员,
 热心于 Python 等等社区的公益事业,&amp;nbsp;大家熟知的社区&amp;#8221;大妈&amp;#8221;;&lt;/p&gt;
@@ -1540,7 +1540,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;li&gt;G+:&amp;nbsp;https://plus.google.com/+ZoomQuiet/&lt;/li&gt;
 &lt;li&gt;Blog:&amp;nbsp;http://blog.zoomquiet.org/&lt;/li&gt;
 &lt;li&gt;微博:&amp;nbsp;http://weibo.com/zoomquiet&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="people"></category></entry><entry><title>Letter to a young programmer</title><link href="/guido-letter-2-young.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-11:guido-letter-2-young.html</id><summary type="html">&lt;p&gt;&lt;img alt="guido" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;
+&lt;/ul&gt;</summary><category term="people"></category></entry><entry><title>Letter to a young programmer</title><link href="http://blog.zoomquiet.io/guido-letter-2-young.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:guido-letter-2-young.html</id><summary type="html">&lt;p&gt;&lt;img alt="guido" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;
 ~ Guido van Rossum (inventor of&amp;nbsp;Python)&lt;/p&gt;
 &lt;h1 id="letter-to-a-young-programmer"&gt;&lt;a href="http://neopythonic.blogspot.ca/2013/10/letter-to-young-programmer.html"&gt;Letter to a young&amp;nbsp;programmer&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Dear (insert name&amp;nbsp;here),&lt;/p&gt;
@@ -1583,7 +1583,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;ul&gt;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/e701a9dc714e"&gt;Letter to a young programmer — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>OSS good for enterprise</title><link href="/oss-good-4-china-com.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-11:oss-good-4-china-com.html</id><summary type="html">&lt;h1 id="oss"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>OSS good for enterprise</title><link href="http://blog.zoomquiet.io/oss-good-4-china-com.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:oss-good-4-china-com.html</id><summary type="html">&lt;h1 id="oss"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;~中国绝大多数IT企业&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="oss" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;&lt;/p&gt;
 &lt;p&gt;其实也是欠稿一篇, 先是忽悠朋友完成了作文:
@@ -1660,7 +1660,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131114&amp;nbsp;增补后续地图炮&lt;/li&gt;
 &lt;li&gt;131112 初放 &lt;a href="https://medium.com/i-m-h-o/74caad149e7e"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处 — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>EKR to Chinese programmer</title><link href="/ekr-selfintro-for-chinese.html" rel="alternate"></link><updated>2013-11-06T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-06:ekr-selfintro-for-chinese.html</id><summary type="html">&lt;h1 id="leo"&gt;Leo&amp;nbsp;作者向中国开发者的自述&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>EKR to Chinese programmer</title><link href="http://blog.zoomquiet.io/ekr-selfintro-for-chinese.html" rel="alternate"></link><updated>2013-11-06T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-06:ekr-selfintro-for-chinese.html</id><summary type="html">&lt;h1 id="leo"&gt;Leo&amp;nbsp;作者向中国开发者的自述&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="EKR" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*yKVZtcJyfh-FHNEtXrqjPw.jpeg" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://leoeditor.com/"&gt;Leo&lt;/a&gt; is OpenSource,written by Python,can run in M$/Linux/&lt;span class="caps"&gt;MAC&lt;/span&gt;/etc. ,Leo is Literate Environment Outline-oriented ;-)
 &lt;span class="caps"&gt;EKR&lt;/span&gt; is her&amp;nbsp;father.&lt;/p&gt;
@@ -1750,7 +1750,7 @@ Leo 其余的历史可以在这儿查阅:&amp;nbsp;http://leoeditor.com/appendic
 &lt;ul&gt;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131106 pub. &lt;a href="https://medium.com/i-m-h-o/9520fee0b59f"&gt;&lt;span class="caps"&gt;EKR&lt;/span&gt; to Chinese programmer — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="EKR"></category><category term="Leo"></category><category term="PyConChina"></category><category term="Zh"></category></entry><entry><title>Collections and Embedded Documents in MongoDB</title><link href="/mongo-collections-embdded-think.html" rel="alternate"></link><updated>2013-10-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-10-27:mongo-collections-embdded-think.html</id><summary type="html">&lt;h1 id="mongodb"&gt;MongoDB&amp;nbsp;中的集合或嵌入式文档&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="EKR"></category><category term="Leo"></category><category term="PyConChina"></category><category term="Zh"></category></entry><entry><title>Collections and Embedded Documents in MongoDB</title><link href="http://blog.zoomquiet.io/mongo-collections-embdded-think.html" rel="alternate"></link><updated>2013-10-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-10-27:mongo-collections-embdded-think.html</id><summary type="html">&lt;h1 id="mongodb"&gt;MongoDB&amp;nbsp;中的集合或嵌入式文档&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="mongo" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*cwCnTFQEbcUSy1KvoiIqXg.png" /&gt;&lt;/p&gt;
 &lt;p&gt;[via]&amp;nbsp;http://fosterelli.co/collections-and-embedded-documents-in-mongodb.html&lt;/p&gt;
 &lt;p&gt;When someone is approaching MongoDB from the &lt;span class="caps"&gt;SQL&lt;/span&gt; world, a very common confusion regarding database structure is when to use embedded documents, and when to create an entirely new collection. This distinction is very important because, although MongoDB is schemaless in nature, whether or not an element of your database is structured as embedded documents or a separate collection will change your code a fair amount. Making this change later on can represent a fair amount of work, so it helps to get this right the first&amp;nbsp;time.&lt;/p&gt;
@@ -1824,7 +1824,7 @@ Leo 其余的历史可以在这儿查阅:&amp;nbsp;http://leoeditor.com/appendic
 &lt;ul&gt;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/c161d7036f89"&gt;Collections and Embedded Documents in MongoDB — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="NoSQL"></category><category term="Mongo"></category><category term="Zh"></category></entry><entry><title>你好，世界</title><link href="/hello-world.html" rel="alternate"></link><updated>2013-08-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-08-09:hello-world.html</id><summary type="html">&lt;h1 id="hallo-world"&gt;Hallo&amp;nbsp;World!&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="NoSQL"></category><category term="Mongo"></category><category term="Zh"></category></entry><entry><title>你好，世界</title><link href="http://blog.zoomquiet.io/hello-world.html" rel="alternate"></link><updated>2013-08-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-08-09:hello-world.html</id><summary type="html">&lt;h1 id="hallo-world"&gt;Hallo&amp;nbsp;World!&lt;/h1&gt;
 &lt;p&gt;惯例的第一篇文章&lt;/p&gt;
 &lt;h1 id="blogging"&gt;为毛要这样组织个人Blogging?&lt;/h1&gt;
 &lt;ul&gt;
@@ -1867,7 +1867,7 @@ import&amp;nbsp;sys&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140104&amp;nbsp;re-init.&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="md"></category><category term="hallo"></category></entry><entry><title>reply On literate programming</title><link href="/reply-yw-on-literate-programming.html" rel="alternate"></link><updated>2012-09-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2012-09-18:reply-yw-on-literate-programming.html</id><summary type="html">&lt;p&gt;&lt;a href="http://yinwang0.wordpress.com/2011/05/18/literate-programming/"&gt;On Literate Programming | Surely I Am&amp;nbsp;Joking&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="md"></category><category term="hallo"></category></entry><entry><title>reply On literate programming</title><link href="http://blog.zoomquiet.io/reply-yw-on-literate-programming.html" rel="alternate"></link><updated>2012-09-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-09-18:reply-yw-on-literate-programming.html</id><summary type="html">&lt;p&gt;&lt;a href="http://yinwang0.wordpress.com/2011/05/18/literate-programming/"&gt;On Literate Programming | Surely I Am&amp;nbsp;Joking&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;对于文学化编程,俺使用的是 Leo :&amp;nbsp;http://wiki.woodpecker.org.cn/moin/LeoEnvironment&lt;/p&gt;
 &lt;p&gt;你提及的:&lt;/p&gt;
 &lt;ul&gt;
@@ -1936,7 +1936,7 @@ import&amp;nbsp;sys&lt;/p&gt;
 
 
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>Understanding the yin-yang puzzle</title><link href="/yw-yang-puzzle.html" rel="alternate"></link><updated>2012-07-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2012-07-27:yw-yang-puzzle.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2012/07/27/yin-yang-puzzle/&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>Understanding the yin-yang puzzle</title><link href="http://blog.zoomquiet.io/yw-yang-puzzle.html" rel="alternate"></link><updated>2012-07-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-07-27:yw-yang-puzzle.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2012/07/27/yin-yang-puzzle/&lt;/p&gt;
 &lt;p&gt;&lt;img alt="yinyang.gif" src="http://yinwang0.files.wordpress.com/2012/07/yinyang.gif?w=300" /&gt;&lt;/p&gt;
 &lt;p&gt;I have a friend who is a very fast learner. I introduced him to the Scheme programming language a few days ago and he soon digged into this &lt;a href="http://stackoverflow.com/questions/2694679/how-does-the-yin-yang-puzzle-work"&gt;yin-yang puzzle&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;let&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;yin&lt;/span&gt;

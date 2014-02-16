@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="/" rel="alternate"></link><link href="/feeds/livin.atom.xml" rel="self"></link><id>/</id><updated>2014-01-27T23:48:00+08:00</updated><entry><title>如何基于CB3构建家庭服务器</title><link href="/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-01-27T23:48:00+08:00</updated><entry><title>如何基于CB3构建家庭服务器</title><link href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h2 id="issue"&gt;Issue&lt;/h2&gt;
@@ -425,7 +425,7 @@ no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:&l
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140127 单立文章追踪&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="/jump-into-7niu.html" rel="alternate"></link><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-19:jump-into-7niu.html</id><summary type="html">&lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="http://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:jump-into-7niu.html</id><summary type="html">&lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;/h1&gt;
 &lt;h2 id="_1"&gt;原先&lt;/h2&gt;
 &lt;h2 id="_2"&gt;现在&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="d005a8bd08c1" src="https://f.cloud.github.com/assets/834231/1538179/849551c2-4cdc-11e3-9759-d005a8bd08c1.jpg" /&gt;&lt;/p&gt;
@@ -441,7 +441,7 @@ no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:&l
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140119&amp;nbsp;开始总结&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="/cbi-zq-install.html" rel="alternate"></link><updated>2014-01-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-11:cbi-zq-install.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="http://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><updated>2014-01-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:cbi-zq-install.html</id><summary type="html">
 &lt;h2 id="cbi"&gt;&lt;span class="caps"&gt;CBI&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://blog.zhgdg.org/2014-01/et-cbi1/"&gt;CBInstall.1 欢乐完成&lt;/a&gt; 记要了现场活动的情况;&lt;/p&gt;
 &lt;p&gt;当然,俺也是学员之一,要交作业的,所以,俺的刷机笔记如下:&lt;/p&gt;
@@ -707,7 +707,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;ul&gt;
 &lt;li&gt;140119 终于汇集了所有唠叨!&lt;/li&gt;
 &lt;li&gt;140111 开始总结&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="/jump-into-mavericks.html" rel="alternate"></link><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-12-30:jump-into-mavericks.html</id><summary type="html">&lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="http://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:jump-into-mavericks.html</id><summary type="html">&lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
 &lt;h1 id="_2"&gt;回顾&lt;/h1&gt;
 &lt;h2 id="pyenv"&gt;Pyenv&lt;/h2&gt;
 &lt;h2 id="leo"&gt;Leo&lt;/h2&gt;

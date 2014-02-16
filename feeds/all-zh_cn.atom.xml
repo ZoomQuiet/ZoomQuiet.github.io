@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="/" rel="alternate"></link><link href="/feeds/all-zh_cn.atom.xml" rel="self"></link><id>/</id><updated>2014-01-27T23:48:00+08:00</updated><entry><title>如何基于 CB3 构建家庭服务器</title><link href="/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="/" rel="alternate"></link><link href="/feeds/all-zh_cn.atom.xml" rel="self"></link><id>/</id><updated>2014-01-27T23:48:00+08:00</updated><entry><title>如何基于CB3构建家庭服务器</title><link href="/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h2 id="issue"&gt;Issue&lt;/h2&gt;

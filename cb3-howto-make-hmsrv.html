@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    如何基于 <span class="caps">CB3</span>&nbsp;构建家庭服务器
+#是也乎#
+ZoomQuiet.io    </title>
+
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="如何基于 <span class="caps">CB3</span>&nbsp;构建家庭服务器"/>
+            <meta property="og:url" content="/cb3-howto-make-hmsrv.html"/>
+            <meta property="og:description" content="CBInstallfest 的体验 之后,总是要一步步完成心目中的 家服务器 Issue CB3 lununtu-server-VGA 预装: sshd apt-fast vim mc … 不要: php mysql apache TODO 为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有: 通过 USB 挂接 FreeBSD 格式化的 UFS 分区 通过板载 SATA 接口,加装 2.5吋 1T 新硬盘 安装 Samba 系统,提供空间给其它 M$ 设备使用 安装 netatalk ,支持 Apple Time Machine 安装 ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.readable.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="/theme/css/pygments/github.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+    <!-- add emojify into Pelican -->
+    <link rel="stylesheet" href="/theme/css/emojify.min.css" type="text/css" />
+    <script src="/theme/js/emojify.js"></script>
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title=" ATOM Feed"/>
+
+            <!--
+    { include 'includes/ga.html' }
+            -->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--
+<a href="" class="navbar-brand"></a>
+            -->
+<a href="" class="navbar-brand">
+    <img src="/theme/logo.png"/>
+    
+    <span class="violet-site">.io </span>
+</a>            
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://pychina.org">PyChina</a></li>
+                    <li><a href="http://obp.zoomquiet.io">OBP</a></li>
+                        <li><a href="/pages/about.html">About</a></li>
+                        <li><a href="/pages/designing.html">设计</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/cb3-howto-make-hmsrv.html"
+                       rel="bookmark"
+                       title="Permalink to 如何基于 <span class="caps">CB3</span>&nbsp;构建家庭服务器">
+                        如何基于 <span class="caps">CB3</span>&nbsp;构建家庭服务器
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>2014-01-27 23:48
+    </span>
+
+
+    <span class="label">By</span>
+    <i class="icon-user"></i>
+    <a href="/author/zoomquiet.html">Zoom.Quiet</a>
+
+    <span class="label label-default">Category</span>
+    <a href="/category/livin.html">Livin</a>
+
+
+
+	<span class="label label-default">Tags</span>
+		<a href="/tag/mac.html">MAC</a>
+	        ,
+		<a href="/tag/ct.html">CT</a>
+	        ,
+		<a href="/tag/cubier.html">Cubier</a>
+	        ,
+		<a href="/tag/cubieboard.html">CubieBoard</a>
+	        ,
+		<a href="/tag/howto.html">Howto</a>
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+    <div class="toc">
+<ul>
+<li><a href="#issue">Issue</a></li>
+<li><a href="#todo"><span class="caps">TODO</span></a></li>
+<li><a href="#_1">分析</a></li>
+<li><a href="#_2">过程</a><ul>
+<li><a href="#_3">数据迁移</a></li>
+<li><a href="#nand">nand*</a></li>
+<li><a href="#fdisk">fdisk</a></li>
+<li><a href="#_4">硬盘加挂</a><ul>
+<li><a href="#gpart">gpart</a></li>
+<li><a href="#exfat">exFAT</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#apt-fast-mirror-list-mon-jan-27-164210-utc-2014">apt-fast mirror list: Mon Jan 27 16:42:10 <span class="caps">UTC</span> 2014</a><ul>
+<li><a href="#_5">系统整顿</a><ul>
+<li><a href="#mysql">MySQL</a></li>
+<li><a href="#utf8"><span class="caps">UTF8</span></a></li>
+</ul>
+</li>
+<li><a href="#_6">软件安装</a></li>
+<li><a href="#_7">睡觉维护</a></li>
+<li><a href="#hhd"><span class="caps">HHD</span></a><ul>
+<li><a href="#ufs"><span class="caps">UFS</span></a><ul>
+<li><a href="#_8">外置硬盘盒</a></li>
+</ul>
+</li>
+<li><a href="#sata"><span class="caps">SATA</span></a><ul>
+<li><a href="#1000">################################################################## 100.0%</a></li>
+</ul>
+</li>
+<li><a href="#xfs"><span class="caps">XFS</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+</div>
+                
+<p><a href="http://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest 的体验</a>
+之后,总是要一步步完成心目中的 家服务器</p>
+<h2 id="issue">Issue</h2>
+<p><span class="caps">CB3</span> lununtu-server-<span class="caps">VGA</span></p>
+<ul>
+<li>预装: </li>
+<li>sshd</li>
+<li>apt-fast</li>
+<li>vim</li>
+<li>mc</li>
+<li>
+<p>…</p>
+</li>
+<li>
+<p>不要: </p>
+</li>
+<li>php</li>
+<li>mysql</li>
+<li>apache</li>
+</ul>
+<h2 id="todo"><span class="caps">TODO</span></h2>
+<p>为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有:</p>
+<ol>
+<li>通过 <span class="caps">USB</span> 挂接 FreeBSD 格式化的 <span class="caps">UFS</span> 分区</li>
+<li>通过板载 <span class="caps">SATA</span> 接口,加装 2.5吋 1T 新硬盘</li>
+<li>安装 Samba 系统,提供空间给其它 M$ 设备使用</li>
+<li>安装 netatalk ,支持 <code>Apple Time Machine</code></li>
+<li>安装 MLDonkey 通过网页控制 <code>P2P</code> 下载</li>
+<li>安装 MiniDLNA 发布家庭媒体服务,支持远程播放下载的电影</li>
+</ol>
+<p>…</p>
+<p>总之,要搾干 <span class="caps">CB</span> 的一切潜能!</p>
+<h2 id="_1">分析</h2>
+<h2 id="_2">过程</h2>
+<h3 id="_3">数据迁移</h3>
+<h3 id="nand">nand*</h3>
+<p>$ sudo !!
+sudo fdisk -l /dev/nandc</p>
+<p>Disk /dev/nandc: 5469 <span class="caps">MB</span>, 5469372416 bytes
+255 heads, 63 sectors/track, 664 cylinders, total 10682368 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000</p>
+<p>Disk /dev/nandc doesn’t contain a valid partition table</p>
+<h3 id="fdisk">fdisk</h3>
+<ul>
+<li><a href="http://www.liusuping.com/ubuntu-linux/linux-fdisk-disk.html">使用fdisk命令对linux硬盘进行操作 - Linux/Unix - 刘苏平的博客</a></li>
+<li><a href="http://blog.itpub.net/26686207/viewspace-765782/">多硬盘分区管理fdisk-张丹-leonarding-<span class="caps">ITPUB</span>博客</a></li>
+</ul>
+<h3 id="_4">硬盘加挂</h3>
+<p>$ cat /proc/partitions
+major minor  #blocks name</p>
+<p>93        0    7520256 nand
+  93        1      65536 nanda
+  93        2    2097152 nandb
+  93        3    5341184 nandc
+   8        0  976762584 sda
+   8       16 1953514584 sdb
+   8       17     204800 sdb1
+   8       18  781380608 sdb2
+   8       19 1171928064 sdb3</p>
+<p>sudo mount.exfat-fuse /dev/sdb2 /mnt/bk2wk
+sudo mount.exfat-fuse /dev/sdb3 /mnt/dl4p2p</p>
+<p>但是, 远程 sshfs 后目录只读!?</p>
+<ul>
+<li>只能用 root 的远程用户登录…</li>
+<li>最好用 密匙…</li>
+</ul>
+<p><a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys"><span class="caps">SSH</span>/OpenSSH/Keys - Community Ubuntu Documentation</a></p>
+<p>/etc/ssh/sshd_config contains the following lines, and that they are uncommented;</p>
+<p>PubkeyAuthentication yes
+RSAAuthentication yes</p>
+<p><code>Permission denied (publickey)</code> </p>
+<div class="highlight"><pre><span class="c"># chmod go-w ~/</span>
+<span class="c"># chmod 700 ~/.ssh</span>
+<span class="c"># chmod 600 ~/.ssh/authorized_keys</span>
+</pre></div>
+<h5 id="gpart">gpart</h5>
+<p><a href="http://blog.sunchangming.com/post/47268338621">gpt的悲剧 | A programmer’s life</a></p>
+<p><a href="http://docs.oseems.com/general/operatingsystem/linux/recover-lost-partition-table">How to recover lost partition table using Ubuntu Live <span class="caps">CD</span> and gpart</a></p>
+<p>$ sudo fdisk -l /dev/sdb</p>
+<p><span class="caps">WARNING</span>: <span class="caps">GPT</span> (<span class="caps">GUID</span> Partition Table) detected on ‘/dev/sdb’! The util fdisk doesn’t support <span class="caps">GPT</span>. Use <span class="caps">GNU</span> Parted.</p>
+<p>Disk /dev/sdb: 2000.4 <span class="caps">GB</span>, 2000398934016 bytes
+255 heads, 63 sectors/track, 243201 cylinders, total 3907029168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000</p>
+<p>Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1      409639      204819+  ee  <span class="caps">GPT</span>
+/dev/sdb2          411648  1563172863   781380608    7  <span class="caps">HPFS</span>/<span class="caps">NTFS</span>/exFAT
+/dev/sdb3      1563172864  3907028991  1171928064    7 <span class="caps">HPFS</span>/<span class="caps">NTFS</span>/exFAT</p>
+<p>$ sudo fdisk -l /dev/sda</p>
+<p>Disk /dev/sda: 1000.2 <span class="caps">GB</span>, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk identifier: 0x00000000</p>
+<p>Disk /dev/sda doesn’t contain a valid partition table</p>
+<h4 id="exfat">exFAT</h4>
+<p>$ cat /etc/lsb-release.bk
+DISTRIB_ID=Linaro
+DISTRIB_RELEASE=13.08
+DISTRIB_CODENAME=raring
+DISTRIB_DESCRIPTION=”Linaro 13.08”</p>
+<p>$ sudo vi /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=13.04
+DISTRIB_CODENAME=raring
+DISTRIB_DESCRIPTION=”Ubuntu 13.04”</p>
+<p>$ sudo apt-add-repository ppa:relan/exfat
+你将向系统添加如下 <span class="caps">PPA</span>：
+ <span class="caps">PPA</span> for the free exFAT file system implementation project: http://code.google.com/p/exfat/
+ 更多信息： https://launchpad.net/~relan/+archive/exfat
+按回车继续或者 Ctrl+c 取消添加</p>
+<p>gpg: 钥匙环‘/tmp/tmppjaczn/secring.gpg’已建立
+gpg: 钥匙环‘/tmp/tmppjaczn/pubring.gpg’已建立
+gpg: 下载密钥‘<span class="caps">A252A784</span>’，从 hkp 服务器 keyserver.ubuntu.com
+gpg: /tmp/tmppjaczn/trustdb.gpg：建立了信任度数据库
+gpg: 密钥 <span class="caps">A252A784</span>：公钥“Launchpad Free exFAT file system implementation”已导入
+gpg: 合计被处理的数量：1
+gpg:               已导入：1  (<span class="caps">RSA</span>: 1) <span class="caps">OK</span></p>
+<p>$ acs exfat
+exfat-fuse - read and write exFAT driver for <span class="caps">FUSE</span>
+exfat-utils - utilities to create, check, label and dump exFAT filesystem</p>
+<p>$ agi exfat-fuse</p>
+<p>Working… this may take a while.</p>
+<h1 id="apt-fast-mirror-list-mon-jan-27-164210-utc-2014">apt-fast mirror list: Mon Jan 27 16:42:10 <span class="caps">UTC</span> 2014</h1>
+<p>http://ports.ubuntu.com/ubuntu-ports/pool/universe/f/fuse-exfat/exfat-fuse_1.0.1-1_armhf.deb
+ checksum=md5=fcacfbade2df1f97d72ba9912961883f
+ out=exfat-fuse_1.0.1-1_armhf.deb
+http://ports.ubuntu.com/ubuntu-ports/pool/universe/e/exfat-utils/exfat-utils_1.0.1-1_armhf.deb
+ checksum=md5=ef8bc2e59569645b7140e930e81809f3
+ out=exfat-utils_1.0.1-1_armhf.deb …</p>
+<p>下载结果：
+gid   |stat|avg speed  |path/<span class="caps">URI</span>
+======+====+===========+=======================================================
+07028f|<span class="caps">OK</span>  |    66KiB/s|/var/cache/apt/archives/apt-fast/exfat-fuse_1.0.1-1_armhf.deb
+e4fa30|<span class="caps">OK</span>  | 40KiB/s|/var/cache/apt/archives/apt-fast/exfat-utils_1.0.1-1_armhf.deb</p>
+<p>状态标识：
+(<span class="caps">OK</span>)：完成下载。
+正在读取软件包列表… 完成
+正在分析软件包的依赖关系树
+正在读取状态信息… 完成
+将会安装下列额外的软件包：
+  exfat-utils
+下列【新】软件包将被安装：
+  exfat-fuse exfat-utils
+升级了 0 个软件包，新安装了 2 个软件包，要卸载 0 个软件包，有 1 个软件包未被升级。
+需要下载 0 B/80.7 kB 的软件包。
+解压缩后会消耗掉 248 kB 的额外空间。
+您希望继续执行吗？[Y/n]
+【警告】：下列软件包不能通过验证！
+  exfat-fuse exfat-utils
+忽略了认证警告。
+Selecting previously unselected package exfat-fuse.
+(正在读取数据库 … 系统当前共安装有 27896 个文件和目录。)
+正在解压缩 exfat-fuse (从 …/exfat-fuse_1.0.1-1_armhf.deb) …
+Selecting previously unselected package exfat-utils.
+正在解压缩 exfat-utils (从 …/exfat-utils_1.0.1-1_armhf.deb) …
+正在处理用于 man-db 的触发器…
+正在设置 exfat-fuse (1.0.1-1) …
+正在设置 exfat-utils (1.0.1-1) …</p>
+<h3 id="_5">系统整顿</h3>
+<h4 id="mysql">MySQL</h4>
+<ul>
+<li><a href="http://www.blogjava.net/yjhmily/articles/336926.html">Ubuntu下彻底卸载mysql - yjhmily - BlogJava</a></li>
+<li><a href="http://stackoverflow.com/questions/10853004/removing-mysql-5-5-completely">ubuntu - Removing MySQL 5.5 Completely - Stack Overflow</a></li>
+</ul>
+<p>$ sudo apt-get remove —purge mysql-server mysql-client mysql-common</p>
+<p>(Reading database … 27889 files and directories currently installed.)
+Removing linaro-lamp-server …
+Removing mysql-server …
+Removing mysql-server-5.5 …
+Purging configuration files for mysql-server-5.5 …
+Removing mysql-client-5.5 …
+Removing libdbd-mysql-perl …
+Removing php5-mysql …
+Purging configuration files for php5-mysql …
+Removing libmysqlclient18:armhf …
+Purging configuration files for libmysqlclient18:armhf …
+Removing mysql-common …
+Purging configuration files for mysql-common …
+dpkg: warning: while removing mysql-common, directory ‘/etc/mysql’ not empty so not removed
+Processing triggers for man-db …
+Processing triggers for ureadahead …
+Processing triggers for libapache2-mod-php5 …
+ * Reloading web server config
+   …done.
+Processing triggers for libc-bin …
+ldconfig deferred processing now taking place
+Selecting previously unselected package dmidecode.
+(Reading database … 27705 files and directories currently installed.)
+Unpacking dmidecode (from …/dmidecode_2.12-0linaro1_armhf.deb) …
+Processing triggers for man-db …
+Setting up dmidecode (2.12-0linaro1) …</p>
+<p>$ sudo rm -rf /var/lib/mysql</p>
+<h4 id="utf8"><span class="caps">UTF8</span></h4>
+<p>$ locale
+<span class="caps">LANG</span>=
+<span class="caps">LANGUAGE</span>=
+LC_CTYPE=”<span class="caps">POSIX</span>”
+LC_NUMERIC=”<span class="caps">POSIX</span>”
+LC_TIME=”<span class="caps">POSIX</span>”
+LC_COLLATE=”<span class="caps">POSIX</span>”
+LC_MONETARY=”<span class="caps">POSIX</span>”
+LC_MESSAGES=”<span class="caps">POSIX</span>”
+LC_PAPER=”<span class="caps">POSIX</span>”
+LC_NAME=”<span class="caps">POSIX</span>”
+LC_ADDRESS=”<span class="caps">POSIX</span>”
+LC_TELEPHONE=”<span class="caps">POSIX</span>”
+LC_MEASUREMENT=”<span class="caps">POSIX</span>”
+LC_IDENTIFICATION=”<span class="caps">POSIX</span>” LC_ALL=</p>
+<ul>
+<li><a href="http://fruit.je/utf-8">Using <span class="caps">UTF</span>-8 in Debian</a></li>
+<li><a href="http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale">修改locale - Ubuntu中文</a></li>
+</ul>
+<p>$ locale
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+<span class="caps">LANG</span>=en_US.<span class="caps">UTF</span>-8
+<span class="caps">LANGUAGE</span>=
+LC_CTYPE=”en_US.<span class="caps">UTF</span>-8”
+LC_NUMERIC=”en_US.<span class="caps">UTF</span>-8”
+LC_TIME=”en_US.<span class="caps">UTF</span>-8”
+LC_COLLATE=”en_US.<span class="caps">UTF</span>-8”
+LC_MONETARY=”en_US.<span class="caps">UTF</span>-8”
+LC_MESSAGES=”en_US.<span class="caps">UTF</span>-8”
+LC_PAPER=”en_US.<span class="caps">UTF</span>-8”
+LC_NAME=”en_US.<span class="caps">UTF</span>-8”
+LC_ADDRESS=”en_US.<span class="caps">UTF</span>-8”
+LC_TELEPHONE=”en_US.<span class="caps">UTF</span>-8”
+LC_MEASUREMENT=”en_US.<span class="caps">UTF</span>-8”
+LC_IDENTIFICATION=”en_US.<span class="caps">UTF</span>-8” LC_ALL=</p>
+<p>$ cat /etc/default/locale <span class="caps">LANG</span>=C.<span class="caps">UTF</span>-8</p>
+<p>$ locale -a
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_COLLATE to default locale: No such file or directory
+C
+C.<span class="caps">UTF</span>-8
+<span class="caps">POSIX</span>
+zh_CN.utf8
+zh_HK.utf8
+zh_SG.utf8 zh_TW.utf8</p>
+<p>重启后依然!</p>
+<p>zoomq@cubietruck:~$ locale
+<span class="caps">LANG</span>=
+<span class="caps">LANGUAGE</span>=
+LC_CTYPE=”<span class="caps">POSIX</span>”
+LC_NUMERIC=”<span class="caps">POSIX</span>”
+LC_TIME=”<span class="caps">POSIX</span>”
+LC_COLLATE=”<span class="caps">POSIX</span>”
+LC_MONETARY=”<span class="caps">POSIX</span>”
+LC_MESSAGES=”<span class="caps">POSIX</span>”
+LC_PAPER=”<span class="caps">POSIX</span>”
+LC_NAME=”<span class="caps">POSIX</span>”
+LC_ADDRESS=”<span class="caps">POSIX</span>”
+LC_TELEPHONE=”<span class="caps">POSIX</span>”
+LC_MEASUREMENT=”<span class="caps">POSIX</span>”
+LC_IDENTIFICATION=”<span class="caps">POSIX</span>” LC_ALL=</p>
+<p>但是,从 screen 中进入时,就已经
+$ locale
+<span class="caps">LANG</span>=en_US.<span class="caps">UTF</span>-8
+<span class="caps">LANGUAGE</span>=en_US:en
+LC_CTYPE=”en_US.<span class="caps">UTF</span>-8”
+LC_NUMERIC=”en_US.<span class="caps">UTF</span>-8”
+LC_TIME=”en_US.<span class="caps">UTF</span>-8”
+LC_COLLATE=”en_US.<span class="caps">UTF</span>-8”
+LC_MONETARY=”en_US.<span class="caps">UTF</span>-8”
+LC_MESSAGES=”en_US.<span class="caps">UTF</span>-8”
+LC_PAPER=”en_US.<span class="caps">UTF</span>-8”
+LC_NAME=”en_US.<span class="caps">UTF</span>-8”
+LC_ADDRESS=”en_US.<span class="caps">UTF</span>-8”
+LC_TELEPHONE=”en_US.<span class="caps">UTF</span>-8”
+LC_MEASUREMENT=”en_US.<span class="caps">UTF</span>-8”
+LC_IDENTIFICATION=”en_US.<span class="caps">UTF</span>-8” LC_ALL=</p>
+<h3 id="_6">软件安装</h3>
+<h3 id="_7">睡觉维护</h3>
+<h2 id="hhd"><span class="caps">HHD</span></h2>
+<p>Disk /dev/sda: 1000.2 <span class="caps">GB</span>, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk identifier: 0x00000000</p>
+<p>Disk /dev/sda doesn’t contain a valid partition table</p>
+<p><span class="caps">WARNING</span>: <span class="caps">GPT</span> (<span class="caps">GUID</span> Partition Table) detected on ‘/dev/sdb’! The util fdisk doesn’t support <span class="caps">GPT</span>. Use <span class="caps">GNU</span> Parted.</p>
+<p>Disk /dev/sdb: 2000.4 <span class="caps">GB</span>, 2000398934016 bytes
+256 heads, 63 sectors/track, 242251 cylinders, total 3907029168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000</p>
+<p>Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1   *           1  3907029167  1953514583+  ee <span class="caps">GPT</span></p>
+<p>$ cat /proc/partitions
+major minor  #blocks name</p>
+<p>93        0    7520256 nand
+  93        1      65536 nanda
+  93        2    2097152 nandb
+  93        3    5341184 nandc
+   8        0  976762584 sda
+   8       16 1953514584 sdb
+   8       17         64 sdb1
+   8       18    8388608 sdb2
+   8       19 1943011328 sdb3
+   8       20    2114547 sdb4</p>
+<h3 id="ufs"><span class="caps">UFS</span></h3>
+<p><a href="http://forums.fedoraforum.org/showthread.php?t=285255">mount external partition - FedoraForum.org</a></p>
+<p>$ ll /lib/modules/3.4.61+/kernel/fs/
+total 20
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 exportfs
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 jffs2
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 nfsd
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 squashfs
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 ubifs</p>
+<h4 id="_8">外置硬盘盒</h4>
+<p>$ dmesg |grep umass
+umass0: <norelsys 0="" 0,="" 1.00,="" 2="" 2.10="" addr="" class="" ns1066,="" rev=""> on usbus6
+umass0:  <span class="caps">SCSI</span> over Bulk-Only; quirks = 0x0100
+umass0:6:0:-1: Attached to scbus6
+(probe0:umass-sim0:0:0:0): <span class="caps">REPORT</span> <span class="caps">LUNS</span>. <span class="caps">CDB</span>: a0 0 0 0 0 0 0 0 0 10 0 0
+(probe0:umass-sim0:0:0:0): <span class="caps">CAM</span> status: <span class="caps">SCSI</span> Status Error
+(probe0:umass-sim0:0:0:0): <span class="caps">SCSI</span> status: Check Condition
+(probe0:umass-sim0:0:0:0): <span class="caps">SCSI</span> sense: <span class="caps">ILLEGAL</span> <span class="caps">REQUEST</span> asc:20,0 (Invalid command operation code)
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0</norelsys></p>
+<p>$ dmesg | grep da0
+ada0 at ata4 bus 0 scbus2 target 0 lun 0
+ada0: <st3160815as 3.ada=""> <span class="caps">ATA</span>-7 <span class="caps">SATA</span> 2.x device
+ada0: 300.<span class="caps">000MB</span>/s transfers (<span class="caps">SATA</span> 2.x, <span class="caps">UDMA5</span>, <span class="caps">PIO</span> 8192bytes)
+ada0: <span class="caps">152587MB</span> (312500000 512 byte sectors: 16H 63S/T 16383C)
+ada0: Previously was known as ad8
+Trying to mount root from ufs:/dev/ada0s1a [rw]…
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <ata cc3c="" st2000dl003-9vt1=""> Fixed Direct Access <span class="caps">SCSI</span>-6 device
+da0: 40.<span class="caps">000MB</span>/s transfers
+da0: <span class="caps">1907729MB</span> (3907029168 512 byte sectors: 255H 63S/T 243201C)</ata></st3160815as></p>
+<p>$ gpart show /dev/da0
+=&gt;        34  3907029101  da0  <span class="caps">GPT</span>  (1.8T)
+          34           6       - free -  (3.0k)
+          40         128    1  freebsd-boot  (64k)
+         168    16777216    2  freebsd-ufs  (8.0G)
+    16777384  3886022656    3  freebsd-ufs  (1.8T)
+  3902800040     4229094    4  freebsd-swap  (2.0G)
+  3907029134           1       - free - (512B)</p>
+<h3 id="sata"><span class="caps">SATA</span></h3>
+<p>$ dmesg | grep ada
+ada0 at ata4 bus 0 scbus2 target 0 lun 0
+ada0: <st3160815as 3.ada=""> <span class="caps">ATA</span>-7 <span class="caps">SATA</span> 2.x device
+ada0: 300.<span class="caps">000MB</span>/s transfers (<span class="caps">SATA</span> 2.x, <span class="caps">UDMA5</span>, <span class="caps">PIO</span> 8192bytes)
+ada0: <span class="caps">152587MB</span> (312500000 512 byte sectors: 16H 63S/T 16383C)
+ada0: Previously was known as ad8
+ada1 at ata5 bus 0 scbus3 target 0 lun 0
+ada1: <st2000dl003-9vt166 cc3c=""> <span class="caps">ATA</span>-8 <span class="caps">SATA</span> 3.x device
+ada1: 300.<span class="caps">000MB</span>/s transfers (<span class="caps">SATA</span> 2.x, <span class="caps">UDMA5</span>, <span class="caps">PIO</span> 8192bytes)
+ada1: <span class="caps">1907729MB</span> (3907029168 512 byte sectors: 16H 63S/T 16383C)
+ada1: Previously was known as ad10
+Trying to mount root from ufs:/dev/ada0s1a [rw]…</st2000dl003-9vt166></st3160815as></p>
+<p>$ gpart show /dev/ada1
+=&gt;        34  3907029101  ada1  <span class="caps">GPT</span>  (1.8T)
+          34           6        - free -  (3.0k)
+          40         128     1  freebsd-boot  (64k)
+         168    16777216     2  freebsd-ufs  (8.0G)
+    16777384  3886022656     3  freebsd-ufs  (1.8T)
+  3902800040     4229094     4  freebsd-swap  (2.0G)
+  3907029134           1        - free - (512B)</p>
+<p>$ sudo mount /dev/ada1p3 /mnt/ada1
+mount: /dev/ada1p3 : Operation not permitted</p>
+<p><span class="caps">BIOS</span> 配置好打开对应的 <span class="caps">SATA</span> 接口,
+进入系统后:
+$ gpart show /dev/ada1
+=&gt;        34  3907029101  ada1  <span class="caps">GPT</span>  (1.8T)
+          34           6        - free -  (3.0k)
+          40         128     1  freebsd-boot  (64k)
+         168    16777216     2  freebsd-ufs  (8.0G)
+    16777384  3886022656     3  freebsd-ufs  (1.8T)
+  3902800040     4229094     4  freebsd-swap  (2.0G)
+  3907029134           1        - free - (512B)</p>
+<p>$ ls /dev/ada*
+/dev/ada0     /dev/ada0s1   /dev/ada0s1a  /dev/ada0s1b  /dev/ada1
+/dev/ada1p1   /dev/ada1p2   /dev/ada1p3 /dev/ada1p4</p>
+<p>这是系统盘:
+$ gpart show /dev/ada0
+=&gt;       63  312499937  ada0  <span class="caps">MBR</span>  (149G)
+         63  312475590     1  freebsd  [active]  (149G)
+  312475653      24347        - free - (11M)</p>
+<p>$ sudo mount /dev/ada1p3 /mnt/ada1
+mount: /dev/ada1p3 : Operation not permitted</p>
+<p>这就不明白了,,,
+目测是 <span class="caps">UFS</span> 格式也有不同的?!</p>
+<p>$ brew link fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2… Warning: Could not link fuse4x. Unlinking…</p>
+<p>Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
+Target /usr/local/lib/pkgconfig/fuse.pc already exists. You may need to delete it.
+To force the link and overwrite all other conflicting files, do:
+  brew link —overwrite formula_name</p>
+<p>To list all files that would be deleted:
+  brew link —overwrite —dry-run formula_name</p>
+<p>zoomq @ <span class="caps">MBP111216ZQ</span> in /usr/local/lib
+$ brew link —overwrite fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2… 7 symlinks created</p>
+<p>$ brew install osxfuse
+==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz</p>
+<h6 id="1000">################################################################## 100.0%</h6>
+<p>==&gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
+==&gt; Caveats
+If upgrading from a previous version of osxfuse, the previous kernel extension
+will need to be unloaded before installing the new version. First, check that
+no <span class="caps">FUSE</span>-based file systems are running:</p>
+<p>mount -t osxfusefs</p>
+<p>Unmount all <span class="caps">FUSE</span> file systems and then unload the kernel extension:</p>
+<p>sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs</p>
+<p>The new osxfuse file system bundle needs to be installed by the root user:</p>
+<p>sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.2/Library/Filesystems/osxfusefs.fs /Library/Filesystems
+  sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+==&gt; Summary
+🍺  /usr/local/Cellar/osxfuse/2.6.2: 84 files, 5.0M</p>
+<h3 id="xfs"><span class="caps">XFS</span></h3>
+<h1 id="changelog">Changelog</h1>
+<ul>
+<li>140127 单立文章追踪</li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+
+        </div>
+        <div class="col-lg-3 well well-sm" id="sidebar">
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="https://github.com/PyConChina"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="https://gitcafe.com/CPyUG"><i
+                            class="icon-CPyUG-sign icon-large"></i>CPyUG
+                    </a></li>
+                    <li class="list-group-item"><a href="http://news.pychina.org"><i
+                            class="icon-News-sign icon-large"></i>News
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/CPUG"><i
+                            class="icon-Wiki-sign icon-large"></i>Wiki
+                    </a></li>
+                    <li class="list-group-item"><a href="/feeds/all.atom.xml"><i
+                            class="icon-rss-sign icon-large"></i>rss
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weibo.com/pyconcn"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weibo.com/openbookproject"><i
+                            class="icon-O.B.P-sign icon-large"></i>O.B.P
+                    </a></li>
+
+
+            <li class="list-group-item"><h4>
+                <i class="icon-th icon-large"></i>Categories</h4></li>
+                <li class="list-group-item">
+                    <a href="/category/author.html">
+                        <i class="icon-folder-open icon-large"></i>Author
+                    </a>
+                    <a href="/feeds/author.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/category/imho.html">
+                        <i class="icon-folder-open icon-large"></i>IMHO
+                    </a>
+                    <a href="/feeds/imho.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/category/livin.html">
+                        <i class="icon-folder-open icon-large"></i>Livin
+                    </a>
+                    <a href="/feeds/livin.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/category/operators.html">
+                        <i class="icon-folder-open icon-large"></i>Operators
+                    </a>
+                    <a href="/feeds/operators.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/category/pythonic.html">
+                        <i class="icon-folder-open icon-large"></i>Pythonic
+                    </a>
+                    <a href="/feeds/pythonic.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+
+            <li class="list-group-item"><a href="/tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
+                <li class="list-group-item tag-1">
+                    <a href="/tag/leo.html">
+                        Leo
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
+                    <a href="/tag/zh.html">
+                        Zh
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
+                    <a href="/tag/pythonner.html">
+                        Pythonner
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
+                    <a href="/tag/think.html">
+                        Think
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
+                    <a href="/tag/mac.html">
+                        MAC
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
+                    <a href="/tag/yinwang.html">
+                        YinWang
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="/tag/ct.html">
+                        CT
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="/tag/pyconchina.html">
+                        PyConChina
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="/tag/zq.html">
+                        ZQ
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="/tag/oss.html">
+                        OSS
+                    </a>
+                </li>
+        </ul>
+    </section>
+<section>
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-tint icon-large"></i>Powerded By</h4></li>
+
+    <li class="list-group-item-zip">
+        <a href="http://docs.getpelican.com">
+            Pelican
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <sup>theme base</sup>
+        <a href="https://github.com/DandyDev/pelican-bootstrap3">
+             DandyDev
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.python.org/">
+            Python
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.inkscape.org/">
+            inkscape
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://git-scm.com/">
+            Git
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="https://gitcafe.com/CPyUG">
+            GitCafe
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://www.qiniu.com/about">
+            七牛
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href='http://www.catb.org/hacker-emblem/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAACXBIWXMAAAsSAAALEgHS3X78AAABj0lEQVR4nOWWMYqDQBSGBa1jEbxFwEKwM6VV8AIWWkis9RI5Q1JpYWGb0jLpBDtrc4BgkQMI+y+yQ3BmdBJiNsv+kOHNZJT3+X6fo2y3W+k/ScFvv9//dhpvUhiGisi+uq6zLHNdd7VaTd7xFYnNor6uQsCO41wulzzPm6aZOavZJQSsaRqAMc6dzRskBFwUxfl8tizroVvDQr3DSSD9+Ore+YMV+irSYpjTRyUErKrqZrNBcLvdbNu+Xq/H43HyfabFhKEfCj0dsDEvEZQQMBHqXJYlAvSw3W43uZ/u/7wvwgitxHKBNGuFieBq0zRRYXRskf0DEzJXet1DIpis8NOf0jHg0+kEM+u6Dif37zCmh8MB0yf8zBRJnYk0UlL6oQiKC5ymqe/7sixXVYXTGJyM2oLWMIyu65Ik8TxvEmYykDjvJ2/zyLqguMBt22IEG+oJDyPGiBgr5N+/KC5wEAQYl8vler1GTyYnLdQWtFEUvTHJV4oLvFgs4jjuY3CSnjzu5M8/ln8Df/IB+OX6Ah776L1W8pWtAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+
+    <li class="list-group-item-zip">
+        <a href="http://zh.wikipedia.org/zh-cn/UTF-8">
+<img src="data:image/jpeg;base64,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"/>
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href='http://creativecommons.org/licenses/by-nc-sa/2.5/cn/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAANDQwNDQ0NDg0ODg4PEA8REREZGRkgICAhISEiIiIkJSMnKCcuMC4xMzEzMzM5Ozk7PTtBQkFCQkJDQ0NERERLTEtVVVVbXltmZmZna2dydnF3d3d9gn2AgICGhoaHh4eIiIiPkI+UmZOZmZmqqqqrsaqzuLK6v7q7u7vFxsXGysbIzMjKzsrMzMzd3d3u7u7///+uXr4hAAAA1UlEQVR42q2T2Q6CMBBFR0VUXHCritQFgXGvnf//Oa2ZNEB4UXrTl97enkxmWnAvcioDRKMtJGwJL0V8duEvWWDqGR4TR4iXfUPgbEBWCjaIj1UzYCchFYDQAgJFYoL4PHF/OVTIG7sEMLEKcAdXCtYkpa+znGQH8XL7nvOyed7VGGVgDEqbqaxD+kh6iOc7V2hjfJfxVYNqKxSRr2VGsl2ukNO85/v1hu1hO6Hch0gLCF+0HBd6yLEfe4jTvuMpp62jBS6GDt4hxnBg3rzX9Kc4FTjXG9Q1UZbZlOQyAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+</ul>
+</section>
+
+</aside>        </div>
+    </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+<!--
+ 
+-->
+
+    <!-- add emojify into Pelican -->
+
+    <script>
+        emojify.setConfig({
+            emoticons_enabled: true,
+            people_enabled: true,
+            nature_enabled: true,
+            objects_enabled: true,
+            places_enabled: true,
+            symbols_enabled: true
+        });
+        emojify.run();
+    </script>
+
+</body>
+</html>

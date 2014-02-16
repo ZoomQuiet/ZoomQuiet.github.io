@@ -1,5 +1,431 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="/" rel="alternate"></link><link href="/feeds/all-zh_cn.atom.xml" rel="self"></link><id>/</id><updated>2014-01-19T00:00:00+08:00</updated><entry><title>迁出RTFD.org</title><link href="/jump-into-7niu.html" rel="alternate"></link><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-19:jump-into-7niu.html</id><summary type="html">&lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="/" rel="alternate"></link><link href="/feeds/all-zh_cn.atom.xml" rel="self"></link><id>/</id><updated>2014-01-27T23:48:00+08:00</updated><entry><title>如何基于 CB3 构建家庭服务器</title><link href="/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
+&lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
+之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
+&lt;h2 id="issue"&gt;Issue&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;CB3&lt;/span&gt; lununtu-server-&lt;span class="caps"&gt;VGA&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;预装: &lt;/li&gt;
+&lt;li&gt;sshd&lt;/li&gt;
+&lt;li&gt;apt-fast&lt;/li&gt;
+&lt;li&gt;vim&lt;/li&gt;
+&lt;li&gt;mc&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不要: &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;php&lt;/li&gt;
+&lt;li&gt;mysql&lt;/li&gt;
+&lt;li&gt;apache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="todo"&gt;&lt;span class="caps"&gt;TODO&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;通过 &lt;span class="caps"&gt;USB&lt;/span&gt; 挂接 FreeBSD 格式化的 &lt;span class="caps"&gt;UFS&lt;/span&gt; 分区&lt;/li&gt;
+&lt;li&gt;通过板载 &lt;span class="caps"&gt;SATA&lt;/span&gt; 接口,加装 2.5吋 1T 新硬盘&lt;/li&gt;
+&lt;li&gt;安装 Samba 系统,提供空间给其它 M$ 设备使用&lt;/li&gt;
+&lt;li&gt;安装 netatalk ,支持 &lt;code&gt;Apple Time Machine&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;安装 MLDonkey 通过网页控制 &lt;code&gt;P2P&lt;/code&gt; 下载&lt;/li&gt;
+&lt;li&gt;安装 MiniDLNA 发布家庭媒体服务,支持远程播放下载的电影&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;p&gt;总之,要搾干 &lt;span class="caps"&gt;CB&lt;/span&gt; 的一切潜能!&lt;/p&gt;
+&lt;h2 id="_1"&gt;分析&lt;/h2&gt;
+&lt;h2 id="_2"&gt;过程&lt;/h2&gt;
+&lt;h3 id="_3"&gt;数据迁移&lt;/h3&gt;
+&lt;h3 id="nand"&gt;nand*&lt;/h3&gt;
+&lt;p&gt;$ sudo !!
+sudo fdisk -l /dev/nandc&lt;/p&gt;
+&lt;p&gt;Disk /dev/nandc: 5469 &lt;span class="caps"&gt;MB&lt;/span&gt;, 5469372416 bytes
+255 heads, 63 sectors/track, 664 cylinders, total 10682368 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000&lt;/p&gt;
+&lt;p&gt;Disk /dev/nandc doesn’t contain a valid partition table&lt;/p&gt;
+&lt;h3 id="fdisk"&gt;fdisk&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.liusuping.com/ubuntu-linux/linux-fdisk-disk.html"&gt;使用fdisk命令对linux硬盘进行操作 - Linux/Unix - 刘苏平的博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.itpub.net/26686207/viewspace-765782/"&gt;多硬盘分区管理fdisk-张丹-leonarding-&lt;span class="caps"&gt;ITPUB&lt;/span&gt;博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="_4"&gt;硬盘加挂&lt;/h3&gt;
+&lt;p&gt;$ cat /proc/partitions
+major minor  #blocks name&lt;/p&gt;
+&lt;p&gt;93        0    7520256 nand
+  93        1      65536 nanda
+  93        2    2097152 nandb
+  93        3    5341184 nandc
+   8        0  976762584 sda
+   8       16 1953514584 sdb
+   8       17     204800 sdb1
+   8       18  781380608 sdb2
+   8       19 1171928064 sdb3&lt;/p&gt;
+&lt;p&gt;sudo mount.exfat-fuse /dev/sdb2 /mnt/bk2wk
+sudo mount.exfat-fuse /dev/sdb3 /mnt/dl4p2p&lt;/p&gt;
+&lt;p&gt;但是, 远程 sshfs 后目录只读!?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;只能用 root 的远程用户登录…&lt;/li&gt;
+&lt;li&gt;最好用 密匙…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;/OpenSSH/Keys - Community Ubuntu Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;/etc/ssh/sshd_config contains the following lines, and that they are uncommented;&lt;/p&gt;
+&lt;p&gt;PubkeyAuthentication yes
+RSAAuthentication yes&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Permission denied (publickey)&lt;/code&gt; &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# chmod go-w ~/&lt;/span&gt;
+&lt;span class="c"&gt;# chmod 700 ~/.ssh&lt;/span&gt;
+&lt;span class="c"&gt;# chmod 600 ~/.ssh/authorized_keys&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h5 id="gpart"&gt;gpart&lt;/h5&gt;
+&lt;p&gt;&lt;a href="http://blog.sunchangming.com/post/47268338621"&gt;gpt的悲剧 | A programmer’s life&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://docs.oseems.com/general/operatingsystem/linux/recover-lost-partition-table"&gt;How to recover lost partition table using Ubuntu Live &lt;span class="caps"&gt;CD&lt;/span&gt; and gpart&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ sudo fdisk -l /dev/sdb&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;WARNING&lt;/span&gt;: &lt;span class="caps"&gt;GPT&lt;/span&gt; (&lt;span class="caps"&gt;GUID&lt;/span&gt; Partition Table) detected on ‘/dev/sdb’! The util fdisk doesn’t support &lt;span class="caps"&gt;GPT&lt;/span&gt;. Use &lt;span class="caps"&gt;GNU&lt;/span&gt; Parted.&lt;/p&gt;
+&lt;p&gt;Disk /dev/sdb: 2000.4 &lt;span class="caps"&gt;GB&lt;/span&gt;, 2000398934016 bytes
+255 heads, 63 sectors/track, 243201 cylinders, total 3907029168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000&lt;/p&gt;
+&lt;p&gt;Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1      409639      204819+  ee  &lt;span class="caps"&gt;GPT&lt;/span&gt;
+/dev/sdb2          411648  1563172863   781380608    7  &lt;span class="caps"&gt;HPFS&lt;/span&gt;/&lt;span class="caps"&gt;NTFS&lt;/span&gt;/exFAT
+/dev/sdb3      1563172864  3907028991  1171928064    7 &lt;span class="caps"&gt;HPFS&lt;/span&gt;/&lt;span class="caps"&gt;NTFS&lt;/span&gt;/exFAT&lt;/p&gt;
+&lt;p&gt;$ sudo fdisk -l /dev/sda&lt;/p&gt;
+&lt;p&gt;Disk /dev/sda: 1000.2 &lt;span class="caps"&gt;GB&lt;/span&gt;, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk identifier: 0x00000000&lt;/p&gt;
+&lt;p&gt;Disk /dev/sda doesn’t contain a valid partition table&lt;/p&gt;
+&lt;h4 id="exfat"&gt;exFAT&lt;/h4&gt;
+&lt;p&gt;$ cat /etc/lsb-release.bk
+DISTRIB_ID=Linaro
+DISTRIB_RELEASE=13.08
+DISTRIB_CODENAME=raring
+DISTRIB_DESCRIPTION=”Linaro 13.08”&lt;/p&gt;
+&lt;p&gt;$ sudo vi /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=13.04
+DISTRIB_CODENAME=raring
+DISTRIB_DESCRIPTION=”Ubuntu 13.04”&lt;/p&gt;
+&lt;p&gt;$ sudo apt-add-repository ppa:relan/exfat
+你将向系统添加如下 &lt;span class="caps"&gt;PPA&lt;/span&gt;：
+ &lt;span class="caps"&gt;PPA&lt;/span&gt; for the free exFAT file system implementation project: http://code.google.com/p/exfat/
+ 更多信息： https://launchpad.net/~relan/+archive/exfat
+按回车继续或者 Ctrl+c 取消添加&lt;/p&gt;
+&lt;p&gt;gpg: 钥匙环‘/tmp/tmppjaczn/secring.gpg’已建立
+gpg: 钥匙环‘/tmp/tmppjaczn/pubring.gpg’已建立
+gpg: 下载密钥‘&lt;span class="caps"&gt;A252A784&lt;/span&gt;’，从 hkp 服务器 keyserver.ubuntu.com
+gpg: /tmp/tmppjaczn/trustdb.gpg：建立了信任度数据库
+gpg: 密钥 &lt;span class="caps"&gt;A252A784&lt;/span&gt;：公钥“Launchpad Free exFAT file system implementation”已导入
+gpg: 合计被处理的数量：1
+gpg:               已导入：1  (&lt;span class="caps"&gt;RSA&lt;/span&gt;: 1) &lt;span class="caps"&gt;OK&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;$ acs exfat
+exfat-fuse - read and write exFAT driver for &lt;span class="caps"&gt;FUSE&lt;/span&gt;
+exfat-utils - utilities to create, check, label and dump exFAT filesystem&lt;/p&gt;
+&lt;p&gt;$ agi exfat-fuse&lt;/p&gt;
+&lt;p&gt;Working… this may take a while.&lt;/p&gt;
+&lt;h1 id="apt-fast-mirror-list-mon-jan-27-164210-utc-2014"&gt;apt-fast mirror list: Mon Jan 27 16:42:10 &lt;span class="caps"&gt;UTC&lt;/span&gt; 2014&lt;/h1&gt;
+&lt;p&gt;http://ports.ubuntu.com/ubuntu-ports/pool/universe/f/fuse-exfat/exfat-fuse_1.0.1-1_armhf.deb
+ checksum=md5=fcacfbade2df1f97d72ba9912961883f
+ out=exfat-fuse_1.0.1-1_armhf.deb
+http://ports.ubuntu.com/ubuntu-ports/pool/universe/e/exfat-utils/exfat-utils_1.0.1-1_armhf.deb
+ checksum=md5=ef8bc2e59569645b7140e930e81809f3
+ out=exfat-utils_1.0.1-1_armhf.deb …&lt;/p&gt;
+&lt;p&gt;下载结果：
+gid   |stat|avg speed  |path/&lt;span class="caps"&gt;URI&lt;/span&gt;
+======+====+===========+=======================================================
+07028f|&lt;span class="caps"&gt;OK&lt;/span&gt;  |    66KiB/s|/var/cache/apt/archives/apt-fast/exfat-fuse_1.0.1-1_armhf.deb
+e4fa30|&lt;span class="caps"&gt;OK&lt;/span&gt;  | 40KiB/s|/var/cache/apt/archives/apt-fast/exfat-utils_1.0.1-1_armhf.deb&lt;/p&gt;
+&lt;p&gt;状态标识：
+(&lt;span class="caps"&gt;OK&lt;/span&gt;)：完成下载。
+正在读取软件包列表… 完成
+正在分析软件包的依赖关系树
+正在读取状态信息… 完成
+将会安装下列额外的软件包：
+  exfat-utils
+下列【新】软件包将被安装：
+  exfat-fuse exfat-utils
+升级了 0 个软件包，新安装了 2 个软件包，要卸载 0 个软件包，有 1 个软件包未被升级。
+需要下载 0 B/80.7 kB 的软件包。
+解压缩后会消耗掉 248 kB 的额外空间。
+您希望继续执行吗？[Y/n]
+【警告】：下列软件包不能通过验证！
+  exfat-fuse exfat-utils
+忽略了认证警告。
+Selecting previously unselected package exfat-fuse.
+(正在读取数据库 … 系统当前共安装有 27896 个文件和目录。)
+正在解压缩 exfat-fuse (从 …/exfat-fuse_1.0.1-1_armhf.deb) …
+Selecting previously unselected package exfat-utils.
+正在解压缩 exfat-utils (从 …/exfat-utils_1.0.1-1_armhf.deb) …
+正在处理用于 man-db 的触发器…
+正在设置 exfat-fuse (1.0.1-1) …
+正在设置 exfat-utils (1.0.1-1) …&lt;/p&gt;
+&lt;h3 id="_5"&gt;系统整顿&lt;/h3&gt;
+&lt;h4 id="mysql"&gt;MySQL&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.blogjava.net/yjhmily/articles/336926.html"&gt;Ubuntu下彻底卸载mysql - yjhmily - BlogJava&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/10853004/removing-mysql-5-5-completely"&gt;ubuntu - Removing MySQL 5.5 Completely - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ sudo apt-get remove —purge mysql-server mysql-client mysql-common&lt;/p&gt;
+&lt;p&gt;(Reading database … 27889 files and directories currently installed.)
+Removing linaro-lamp-server …
+Removing mysql-server …
+Removing mysql-server-5.5 …
+Purging configuration files for mysql-server-5.5 …
+Removing mysql-client-5.5 …
+Removing libdbd-mysql-perl …
+Removing php5-mysql …
+Purging configuration files for php5-mysql …
+Removing libmysqlclient18:armhf …
+Purging configuration files for libmysqlclient18:armhf …
+Removing mysql-common …
+Purging configuration files for mysql-common …
+dpkg: warning: while removing mysql-common, directory ‘/etc/mysql’ not empty so not removed
+Processing triggers for man-db …
+Processing triggers for ureadahead …
+Processing triggers for libapache2-mod-php5 …
+ * Reloading web server config
+   …done.
+Processing triggers for libc-bin …
+ldconfig deferred processing now taking place
+Selecting previously unselected package dmidecode.
+(Reading database … 27705 files and directories currently installed.)
+Unpacking dmidecode (from …/dmidecode_2.12-0linaro1_armhf.deb) …
+Processing triggers for man-db …
+Setting up dmidecode (2.12-0linaro1) …&lt;/p&gt;
+&lt;p&gt;$ sudo rm -rf /var/lib/mysql&lt;/p&gt;
+&lt;h4 id="utf8"&gt;&lt;span class="caps"&gt;UTF8&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;$ locale
+&lt;span class="caps"&gt;LANG&lt;/span&gt;=
+&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;=
+LC_CTYPE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_NUMERIC=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_TIME=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_COLLATE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_MONETARY=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_MESSAGES=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_PAPER=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_NAME=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_ADDRESS=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_TELEPHONE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_MEASUREMENT=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_IDENTIFICATION=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;” LC_ALL=&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://fruit.je/utf-8"&gt;Using &lt;span class="caps"&gt;UTF&lt;/span&gt;-8 in Debian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale"&gt;修改locale - Ubuntu中文&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ locale
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+&lt;span class="caps"&gt;LANG&lt;/span&gt;=en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8
+&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;=
+LC_CTYPE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_NUMERIC=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_TIME=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_COLLATE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_MONETARY=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_MESSAGES=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_PAPER=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_NAME=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_ADDRESS=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_TELEPHONE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_MEASUREMENT=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_IDENTIFICATION=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8” LC_ALL=&lt;/p&gt;
+&lt;p&gt;$ cat /etc/default/locale &lt;span class="caps"&gt;LANG&lt;/span&gt;=C.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8&lt;/p&gt;
+&lt;p&gt;$ locale -a
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_COLLATE to default locale: No such file or directory
+C
+C.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8
+&lt;span class="caps"&gt;POSIX&lt;/span&gt;
+zh_CN.utf8
+zh_HK.utf8
+zh_SG.utf8 zh_TW.utf8&lt;/p&gt;
+&lt;p&gt;重启后依然!&lt;/p&gt;
+&lt;p&gt;zoomq@cubietruck:~$ locale
+&lt;span class="caps"&gt;LANG&lt;/span&gt;=
+&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;=
+LC_CTYPE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_NUMERIC=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_TIME=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_COLLATE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_MONETARY=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_MESSAGES=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_PAPER=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_NAME=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_ADDRESS=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_TELEPHONE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_MEASUREMENT=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
+LC_IDENTIFICATION=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;” LC_ALL=&lt;/p&gt;
+&lt;p&gt;但是,从 screen 中进入时,就已经
+$ locale
+&lt;span class="caps"&gt;LANG&lt;/span&gt;=en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8
+&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;=en_US:en
+LC_CTYPE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_NUMERIC=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_TIME=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_COLLATE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_MONETARY=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_MESSAGES=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_PAPER=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_NAME=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_ADDRESS=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_TELEPHONE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_MEASUREMENT=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
+LC_IDENTIFICATION=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8” LC_ALL=&lt;/p&gt;
+&lt;h3 id="_6"&gt;软件安装&lt;/h3&gt;
+&lt;h3 id="_7"&gt;睡觉维护&lt;/h3&gt;
+&lt;h2 id="hhd"&gt;&lt;span class="caps"&gt;HHD&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Disk /dev/sda: 1000.2 &lt;span class="caps"&gt;GB&lt;/span&gt;, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk identifier: 0x00000000&lt;/p&gt;
+&lt;p&gt;Disk /dev/sda doesn’t contain a valid partition table&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;WARNING&lt;/span&gt;: &lt;span class="caps"&gt;GPT&lt;/span&gt; (&lt;span class="caps"&gt;GUID&lt;/span&gt; Partition Table) detected on ‘/dev/sdb’! The util fdisk doesn’t support &lt;span class="caps"&gt;GPT&lt;/span&gt;. Use &lt;span class="caps"&gt;GNU&lt;/span&gt; Parted.&lt;/p&gt;
+&lt;p&gt;Disk /dev/sdb: 2000.4 &lt;span class="caps"&gt;GB&lt;/span&gt;, 2000398934016 bytes
+256 heads, 63 sectors/track, 242251 cylinders, total 3907029168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000&lt;/p&gt;
+&lt;p&gt;Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1   *           1  3907029167  1953514583+  ee &lt;span class="caps"&gt;GPT&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;$ cat /proc/partitions
+major minor  #blocks name&lt;/p&gt;
+&lt;p&gt;93        0    7520256 nand
+  93        1      65536 nanda
+  93        2    2097152 nandb
+  93        3    5341184 nandc
+   8        0  976762584 sda
+   8       16 1953514584 sdb
+   8       17         64 sdb1
+   8       18    8388608 sdb2
+   8       19 1943011328 sdb3
+   8       20    2114547 sdb4&lt;/p&gt;
+&lt;h3 id="ufs"&gt;&lt;span class="caps"&gt;UFS&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://forums.fedoraforum.org/showthread.php?t=285255"&gt;mount external partition - FedoraForum.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ ll /lib/modules/3.4.61+/kernel/fs/
+total 20
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 exportfs
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 jffs2
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 nfsd
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 squashfs
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 ubifs&lt;/p&gt;
+&lt;h4 id="_8"&gt;外置硬盘盒&lt;/h4&gt;
+&lt;p&gt;$ dmesg |grep umass
+umass0: &lt;norelsys 0="" 0,="" 1.00,="" 2="" 2.10="" addr="" class="" ns1066,="" rev=""&gt; on usbus6
+umass0:  &lt;span class="caps"&gt;SCSI&lt;/span&gt; over Bulk-Only; quirks = 0x0100
+umass0:6:0:-1: Attached to scbus6
+(probe0:umass-sim0:0:0:0): &lt;span class="caps"&gt;REPORT&lt;/span&gt; &lt;span class="caps"&gt;LUNS&lt;/span&gt;. &lt;span class="caps"&gt;CDB&lt;/span&gt;: a0 0 0 0 0 0 0 0 0 10 0 0
+(probe0:umass-sim0:0:0:0): &lt;span class="caps"&gt;CAM&lt;/span&gt; status: &lt;span class="caps"&gt;SCSI&lt;/span&gt; Status Error
+(probe0:umass-sim0:0:0:0): &lt;span class="caps"&gt;SCSI&lt;/span&gt; status: Check Condition
+(probe0:umass-sim0:0:0:0): &lt;span class="caps"&gt;SCSI&lt;/span&gt; sense: &lt;span class="caps"&gt;ILLEGAL&lt;/span&gt; &lt;span class="caps"&gt;REQUEST&lt;/span&gt; asc:20,0 (Invalid command operation code)
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0&lt;/norelsys&gt;&lt;/p&gt;
+&lt;p&gt;$ dmesg | grep da0
+ada0 at ata4 bus 0 scbus2 target 0 lun 0
+ada0: &lt;st3160815as 3.ada=""&gt; &lt;span class="caps"&gt;ATA&lt;/span&gt;-7 &lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x device
+ada0: 300.&lt;span class="caps"&gt;000MB&lt;/span&gt;/s transfers (&lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x, &lt;span class="caps"&gt;UDMA5&lt;/span&gt;, &lt;span class="caps"&gt;PIO&lt;/span&gt; 8192bytes)
+ada0: &lt;span class="caps"&gt;152587MB&lt;/span&gt; (312500000 512 byte sectors: 16H 63S/T 16383C)
+ada0: Previously was known as ad8
+Trying to mount root from ufs:/dev/ada0s1a [rw]…
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: &lt;ata cc3c="" st2000dl003-9vt1=""&gt; Fixed Direct Access &lt;span class="caps"&gt;SCSI&lt;/span&gt;-6 device
+da0: 40.&lt;span class="caps"&gt;000MB&lt;/span&gt;/s transfers
+da0: &lt;span class="caps"&gt;1907729MB&lt;/span&gt; (3907029168 512 byte sectors: 255H 63S/T 243201C)&lt;/ata&gt;&lt;/st3160815as&gt;&lt;/p&gt;
+&lt;p&gt;$ gpart show /dev/da0
+=&amp;gt;        34  3907029101  da0  &lt;span class="caps"&gt;GPT&lt;/span&gt;  (1.8T)
+          34           6       - free -  (3.0k)
+          40         128    1  freebsd-boot  (64k)
+         168    16777216    2  freebsd-ufs  (8.0G)
+    16777384  3886022656    3  freebsd-ufs  (1.8T)
+  3902800040     4229094    4  freebsd-swap  (2.0G)
+  3907029134           1       - free - (512B)&lt;/p&gt;
+&lt;h3 id="sata"&gt;&lt;span class="caps"&gt;SATA&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;$ dmesg | grep ada
+ada0 at ata4 bus 0 scbus2 target 0 lun 0
+ada0: &lt;st3160815as 3.ada=""&gt; &lt;span class="caps"&gt;ATA&lt;/span&gt;-7 &lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x device
+ada0: 300.&lt;span class="caps"&gt;000MB&lt;/span&gt;/s transfers (&lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x, &lt;span class="caps"&gt;UDMA5&lt;/span&gt;, &lt;span class="caps"&gt;PIO&lt;/span&gt; 8192bytes)
+ada0: &lt;span class="caps"&gt;152587MB&lt;/span&gt; (312500000 512 byte sectors: 16H 63S/T 16383C)
+ada0: Previously was known as ad8
+ada1 at ata5 bus 0 scbus3 target 0 lun 0
+ada1: &lt;st2000dl003-9vt166 cc3c=""&gt; &lt;span class="caps"&gt;ATA&lt;/span&gt;-8 &lt;span class="caps"&gt;SATA&lt;/span&gt; 3.x device
+ada1: 300.&lt;span class="caps"&gt;000MB&lt;/span&gt;/s transfers (&lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x, &lt;span class="caps"&gt;UDMA5&lt;/span&gt;, &lt;span class="caps"&gt;PIO&lt;/span&gt; 8192bytes)
+ada1: &lt;span class="caps"&gt;1907729MB&lt;/span&gt; (3907029168 512 byte sectors: 16H 63S/T 16383C)
+ada1: Previously was known as ad10
+Trying to mount root from ufs:/dev/ada0s1a [rw]…&lt;/st2000dl003-9vt166&gt;&lt;/st3160815as&gt;&lt;/p&gt;
+&lt;p&gt;$ gpart show /dev/ada1
+=&amp;gt;        34  3907029101  ada1  &lt;span class="caps"&gt;GPT&lt;/span&gt;  (1.8T)
+          34           6        - free -  (3.0k)
+          40         128     1  freebsd-boot  (64k)
+         168    16777216     2  freebsd-ufs  (8.0G)
+    16777384  3886022656     3  freebsd-ufs  (1.8T)
+  3902800040     4229094     4  freebsd-swap  (2.0G)
+  3907029134           1        - free - (512B)&lt;/p&gt;
+&lt;p&gt;$ sudo mount /dev/ada1p3 /mnt/ada1
+mount: /dev/ada1p3 : Operation not permitted&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;BIOS&lt;/span&gt; 配置好打开对应的 &lt;span class="caps"&gt;SATA&lt;/span&gt; 接口,
+进入系统后:
+$ gpart show /dev/ada1
+=&amp;gt;        34  3907029101  ada1  &lt;span class="caps"&gt;GPT&lt;/span&gt;  (1.8T)
+          34           6        - free -  (3.0k)
+          40         128     1  freebsd-boot  (64k)
+         168    16777216     2  freebsd-ufs  (8.0G)
+    16777384  3886022656     3  freebsd-ufs  (1.8T)
+  3902800040     4229094     4  freebsd-swap  (2.0G)
+  3907029134           1        - free - (512B)&lt;/p&gt;
+&lt;p&gt;$ ls /dev/ada*
+/dev/ada0     /dev/ada0s1   /dev/ada0s1a  /dev/ada0s1b  /dev/ada1
+/dev/ada1p1   /dev/ada1p2   /dev/ada1p3 /dev/ada1p4&lt;/p&gt;
+&lt;p&gt;这是系统盘:
+$ gpart show /dev/ada0
+=&amp;gt;       63  312499937  ada0  &lt;span class="caps"&gt;MBR&lt;/span&gt;  (149G)
+         63  312475590     1  freebsd  [active]  (149G)
+  312475653      24347        - free - (11M)&lt;/p&gt;
+&lt;p&gt;$ sudo mount /dev/ada1p3 /mnt/ada1
+mount: /dev/ada1p3 : Operation not permitted&lt;/p&gt;
+&lt;p&gt;这就不明白了,,,
+目测是 &lt;span class="caps"&gt;UFS&lt;/span&gt; 格式也有不同的?!&lt;/p&gt;
+&lt;p&gt;$ brew link fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2… Warning: Could not link fuse4x. Unlinking…&lt;/p&gt;
+&lt;p&gt;Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
+Target /usr/local/lib/pkgconfig/fuse.pc already exists. You may need to delete it.
+To force the link and overwrite all other conflicting files, do:
+  brew link —overwrite formula_name&lt;/p&gt;
+&lt;p&gt;To list all files that would be deleted:
+  brew link —overwrite —dry-run formula_name&lt;/p&gt;
+&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in /usr/local/lib
+$ brew link —overwrite fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2… 7 symlinks created&lt;/p&gt;
+&lt;p&gt;$ brew install osxfuse
+==&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz&lt;/p&gt;
+&lt;h6 id="1000"&gt;################################################################## 100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
+==&amp;gt; Caveats
+If upgrading from a previous version of osxfuse, the previous kernel extension
+will need to be unloaded before installing the new version. First, check that
+no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:&lt;/p&gt;
+&lt;p&gt;mount -t osxfusefs&lt;/p&gt;
+&lt;p&gt;Unmount all &lt;span class="caps"&gt;FUSE&lt;/span&gt; file systems and then unload the kernel extension:&lt;/p&gt;
+&lt;p&gt;sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs&lt;/p&gt;
+&lt;p&gt;The new osxfuse file system bundle needs to be installed by the root user:&lt;/p&gt;
+&lt;p&gt;sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.2/Library/Filesystems/osxfusefs.fs /Library/Filesystems
+  sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+==&amp;gt; Summary
+🍺  /usr/local/Cellar/osxfuse/2.6.2: 84 files, 5.0M&lt;/p&gt;
+&lt;h3 id="xfs"&gt;&lt;span class="caps"&gt;XFS&lt;/span&gt;&lt;/h3&gt;
+&lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;140127 单立文章追踪&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="/jump-into-7niu.html" rel="alternate"></link><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2014-01-19:jump-into-7niu.html</id><summary type="html">&lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;/h1&gt;
 &lt;h2 id="_1"&gt;原先&lt;/h2&gt;
 &lt;h2 id="_2"&gt;现在&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="d005a8bd08c1" src="https://f.cloud.github.com/assets/834231/1538179/849551c2-4cdc-11e3-9759-d005a8bd08c1.jpg" /&gt;&lt;/p&gt;
@@ -953,7 +1379,150 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;14010? &lt;/li&gt;
 &lt;li&gt;131212 翻越抄录在 medium.com&amp;nbsp;开始翻译&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Zoom.Quiuet</title><link href="/zoom-quiet.html" rel="alternate"></link><updated>2013-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-17:zoom-quiet.html</id><summary type="html">&lt;h1 id="zoomquiet"&gt;Zoom.Quiet&amp;nbsp;(大妈)&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Python 101: Writing a cleanup script</title><link href="/py101-cleanup-script.html" rel="alternate"></link><updated>2013-11-23T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-23:py101-cleanup-script.html</id><summary type="html">&lt;p&gt;&lt;a href="http://freepythontips.wordpress.com/2014/01/23/python-101-writing-a-cleanup-script/"&gt;Python 101: Writing a cleanup script | Bite Sized Python&amp;nbsp;Tips&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So hi there guys! I hope you are fine. So what is in this post? Today we will be writing a cleanup script. The idea for this post came from Mike Driscol who recently wrote a very useful post about writing a cleanup script in python. So how is my post different from his post? In my post I will be using path.py. When I used path.py for the first time I just fell in love with&amp;nbsp;it.&lt;/p&gt;
+&lt;h2 id="installing-pathpy"&gt;Installing&amp;nbsp;path.py:&lt;/h2&gt;
+&lt;p&gt;So there are several ways for installing path.py. Path.py may be installed using setuptools or distribute or pip:
+easy_install path.py
+The latest release is always updated to the Python Package Index. The source code is hosted on&amp;nbsp;Github.&lt;/p&gt;
+&lt;h2 id="finding-the-number-of-files-in-a-directory"&gt;Finding the number of files in a&amp;nbsp;directory:&lt;/h2&gt;
+&lt;p&gt;So our first task is to find the number of files present in a directory. In this example we will not iterate over subdirectories instead we will just count the number of files present in the top level directory. This one is simple. Here is my&amp;nbsp;solution:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="cp"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;span class="n"&gt;num_files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;num_files&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In this script we first of all imported the path module. Then we set the num_file variable to 0. This variable is going to keep count for the number of files in our directory. Then we call the path function with a directory name. Firthermore we iterate over the files present in the root of our directory and increment the num_files variable. Finally we print the value of num_files variable. Here is a litle bit modified version of this script which outputs the number of subdirectories present in the root of our&amp;nbsp;directory.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="cp"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;span class="n"&gt;num_dirs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirs&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;num_dirs&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="finding-the-number-of-files-recursively-in-a-directory"&gt;Finding the number of files recursively in a&amp;nbsp;directory:&lt;/h2&gt;
+&lt;p&gt;That was easy! Wasn’t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&amp;nbsp;Python.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;dir_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isdir&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;dir_count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="nl"&gt;else:&lt;/span&gt;
+        &lt;span class="n"&gt;pass&lt;/span&gt;
+    &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;print &amp;#8220;Total number of files == {0}&amp;#8221;.format(file_count)
+print &amp;#8220;Total number of directories == {0}&amp;#8221;.format(dir_count)
+That was again very easy. Now what if we want to pretty print the directory names? I know there are some terminal one-liners but here we are talking about Python only. Lets see how we can achieve&amp;nbsp;that.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;files_loc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;dir_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;()].&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+        &lt;span class="nl"&gt;else:&lt;/span&gt;
+            &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;()]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+            &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;()].&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+        &lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isdir&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;dir_count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="nl"&gt;else:&lt;/span&gt;
+        &lt;span class="n"&gt;pass&lt;/span&gt;
+    &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;|---&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;|   |&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;|   `---&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;|&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There is nothing fancy here. In this script we are just pretty printing a directory and the files it contains. Now lets&amp;nbsp;continue.&lt;/p&gt;
+&lt;h2 id="deleting-a-specific-file-from-a-directory"&gt;Deleting a specific file from a&amp;nbsp;directory:&lt;/h2&gt;
+&lt;p&gt;So lets suppose we have a file called this_file_sucks.py. Now how do we delete it. Lets make this seranio more real by saying that we do not know in which directory it is placed. Its simple to solve this problem as well. Just go to the top level directory and execute this&amp;nbsp;script:&lt;/p&gt;
+&lt;p&gt;from path import path
+d =&amp;nbsp;path(&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;)&lt;/p&gt;
+&lt;h1 id="replace-directory-with-your-desired-directory"&gt;replace directory with your desired&amp;nbsp;directory&lt;/h1&gt;
+&lt;p&gt;for i in d.walk():
+    if i.isfile():
+        if i.name == &amp;#8216;php.py&amp;#8217;:
+            i.remove()
+In the above script I did not implement any logging and error handling. That is left as an exercise for the&amp;nbsp;reader.&lt;/p&gt;
+&lt;h2 id="deleting-files-based-on-their-extension"&gt;Deleting files based on their&amp;nbsp;extension&lt;/h2&gt;
+&lt;p&gt;Just suppose you want to remove all the ‘.pyc’ files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in&amp;nbsp;path.py.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walkfiles&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*.pyc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Removed {} file&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;also&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;which&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;deleted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="deleting-files-based-on-their-size"&gt;Deleting files based on their&amp;nbsp;size:&lt;/h2&gt;
+&lt;p&gt;So another interesting scenario. What if we want to delete those files which exceed 5Mb&amp;nbsp;size?&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;NOTE:&lt;/code&gt; There is a difference between Mb and &lt;span class="caps"&gt;MB&lt;/span&gt;. I will be covering Mb here. 
+Is it possible with path.py? Yes it is! So here is a script which does this&amp;nbsp;work:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;del_size&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4522420&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;del_size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="mi"&gt;4522420&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;approximately&lt;/span&gt; &lt;span class="n"&gt;equal&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="mf"&gt;4.1&lt;/span&gt;&lt;span class="n"&gt;Mb&lt;/span&gt;
+        &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;Change&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;desired&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;
+            &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So we saw how we can remove files based on their&amp;nbsp;size.&lt;/p&gt;
+&lt;h2 id="deleting-files-based-on-their-last-access-time"&gt;Deleting files based on their last access&amp;nbsp;time&lt;/h2&gt;
+&lt;p&gt;In this part we will take a look on how to delete files based on their last access time. I have written the code below to achieve this target. Just change the number of days to anything you like. This script will remove the files which were last modified before the &lt;span class="caps"&gt;DAYS&lt;/span&gt;&amp;nbsp;variable.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;
+
+&lt;span class="cp"&gt;#Change the &lt;span class="caps"&gt;DAYS&lt;/span&gt; to your liking&lt;/span&gt;
+&lt;span class="n"&gt;&lt;span class="caps"&gt;DAYS&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
+&lt;span class="n"&gt;removed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="cp"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;span class="n"&gt;time_in_secs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DAYS&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mtime&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;time_in_secs&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="n"&gt;removed&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;removed&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So we have also learned how to remove files based on their last modified time. If you want to delete files based on last access time just change i.mtime to i.atime and you will be good to&amp;nbsp;go.&lt;/p&gt;
+&lt;h2 id="goodbye"&gt;Goodbye&lt;/h2&gt;
+&lt;p&gt;So that was it. I hope you liked the post. In the end I would like to make a public apology that my English is not good so you may find some grammar mistakes. You are requested to email them to me so that I can improve my English. If you liked this post then don’t forget to follow me on twitter and facebook. A retweet won’t hurt either! If you want to send me a pm then use this&amp;nbsp;email.&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;140125 翻译 Weekly issue:99.5&amp;nbsp;时发现,转抄学习&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="wordpress"></category><category term="101"></category><category term="Zh"></category></entry><entry><title>Zoom.Quiuet</title><link href="/zoom-quiet.html" rel="alternate"></link><updated>2013-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:,2013-11-17:zoom-quiet.html</id><summary type="html">&lt;h1 id="zoomquiet"&gt;Zoom.Quiet&amp;nbsp;(大妈)&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="zhouqi" src="http://pyconcn.qiniudn.com/images/volunteer/zhouqi.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Python中文社区创始人(之一) / 管理员,
 热心于 Python 等等社区的公益事业,&amp;nbsp;大家熟知的社区&amp;#8221;大妈&amp;#8221;;&lt;/p&gt;

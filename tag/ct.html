@@ -79,35 +79,50 @@ ZoomQuiet.io    </title>
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="/cbi-zq-install.html">CBInstallfest&nbsp;的体验</a></h2>
+                <h2><a href="/cb3-howto-make-hmsrv.html">如何基于 <span class="caps">CB3</span>&nbsp;构建家庭服务器</a></h2>
                 <div class="summary">
-<h2 id="cbi"><span class="caps">CBI</span></h2>
-<p><a href="http://blog.zhgdg.org/2014-01/et-cbi1/">CBInstall.1 欢乐完成</a> 记要了现场活动的情况;</p>
-<p>当然,俺也是学员之一,要交作业的,所以,俺的刷机笔记如下:</p>
-<h2 id="_1">目标</h2>
-<p>用<span class="caps">CB3</span> 替代原先的兼容 <span class="caps">PC</span> 机作家庭服务器!</p>
-<h2 id="_2">环境</h2>
+<p><a href="http://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest 的体验</a>
+之后,总是要一步步完成心目中的 家服务器</p>
+<h2 id="issue">Issue</h2>
+<p><span class="caps">CB3</span> lununtu-server-<span class="caps">VGA</span></p>
 <ul>
-<li><span class="caps">MBP</span> 11年下半年版, 15吋</li>
-<li><span class="caps">MAC</span> <span class="caps">OS</span> X 10.9 Mavericks</li>
-<li><span class="caps">CB3</span>(CubieTruck) 以及套件的配件</li>
+<li>预装: </li>
+<li>sshd</li>
+<li>apt-fast</li>
+<li>vim</li>
+<li>mc</li>
+<li>
+<p>…</p>
+</li>
+<li>
+<p>不要: </p>
+</li>
+<li>php</li>
+<li>mysql</li>
+<li>apache</li>
 </ul>
-<h2 id="_3">刷机</h2>
-<p>果然如宣传的,是那么简单!</p>
+<h2 id="todo"><span class="caps">TODO</span></h2>
+<p>为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有:</p>
 <ol>
-<li>准备工具 ~ <a href="http://docs.cubieboard.org/tutorials/common/livesuit_installation_guide">LiveSuit</a> </li>
-<li>下载镜像 ~ <a href="http://dl.cubieboard.org/software"><span class="caps">NAND</span>镜像</a></li>
-<li>刷机</li>
-</ol>
-<p>尝试了 arch linux 的镜像,发觉进入后包管理命令,完全不熟悉,所以,只好坚持使用 Ubuntu了.</p>
-<h3 id="_4">细节</h3>
-<ul>
-<li><a href="http://docs.cubieboard.org/tutorials/common/livesuit_installation_guide">LiveSuit</a> 真心傻瓜 ...</li></ul>
-                    <a class="btn btn-default btn-xs" href="/cbi-zq-install.html">more ...</a>
+<li>通过 <span class="caps">USB</span> 挂接 FreeBSD 格式化的 <span class="caps">UFS</span> 分区</li>
+<li>通过板载 <span class="caps">SATA</span> 接口,加装 2.5吋 1T 新硬盘</li>
+<li>安装 Samba 系统,提供空间给其它 M$ 设备使用</li>
+<li>安装 netatalk ,支持 <code>Apple Time Machine</code></li>
+<li>安装 ...</li></ol>
+                    <a class="btn btn-default btn-xs" href="/cb3-howto-make-hmsrv.html">more ...</a>
                 </div>
             </article>
             <hr/>
 
+        <ul class="pagination">
+                <li class="prev disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a
+                        href="/tag/ct.html">1</a></li>
+                <li class=""><a
+                        href="/tag/ct2.html">2</a></li>
+                <li class="next"><a
+                        href="/tag/ct2.html">&raquo;</a></li>
+        </ul>
         </div>
         <div class="col-lg-3 well well-sm" id="sidebar">
 <aside>
@@ -182,18 +197,8 @@ ZoomQuiet.io    </title>
 
             <li class="list-group-item"><a href="/tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
                 <li class="list-group-item tag-1">
-                    <a href="/tag/yinwang.html">
-                        YinWang
-                    </a>
-                </li>
-                <li class="list-group-item tag-1">
                     <a href="/tag/leo.html">
                         Leo
-                    </a>
-                </li>
-                <li class="list-group-item tag-1">
-                    <a href="/tag/pythonner.html">
-                        Pythonner
                     </a>
                 </li>
                 <li class="list-group-item tag-1">
@@ -202,13 +207,28 @@ ZoomQuiet.io    </title>
                     </a>
                 </li>
                 <li class="list-group-item tag-1">
+                    <a href="/tag/pythonner.html">
+                        Pythonner
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
                     <a href="/tag/think.html">
                         Think
                     </a>
                 </li>
+                <li class="list-group-item tag-1">
+                    <a href="/tag/mac.html">
+                        MAC
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
+                    <a href="/tag/yinwang.html">
+                        YinWang
+                    </a>
+                </li>
                 <li class="list-group-item tag-2">
-                    <a href="/tag/zq.html">
-                        ZQ
+                    <a href="/tag/ct.html">
+                        CT
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
@@ -217,18 +237,13 @@ ZoomQuiet.io    </title>
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
+                    <a href="/tag/zq.html">
+                        ZQ
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
                     <a href="/tag/oss.html">
                         OSS
-                    </a>
-                </li>
-                <li class="list-group-item tag-2">
-                    <a href="/tag/china.html">
-                        China
-                    </a>
-                </li>
-                <li class="list-group-item tag-2">
-                    <a href="/tag/mac.html">
-                        MAC
                     </a>
                 </li>
         </ul>

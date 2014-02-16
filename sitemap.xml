@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2014-01-20T00:12:54-00:00</lastmod>
+<lastmod>2014-02-16T12:28:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2014-01-20T00:12:54-00:00</lastmod>
+<lastmod>2014-02-16T12:28:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2014-01-20T00:12:54-00:00</lastmod>
+<lastmod>2014-02-16T12:28:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2014-01-20T00:12:54-00:00</lastmod>
+<lastmod>2014-02-16T12:28:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -41,6 +41,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/pages/designing.html</loc>
 <lastmod>2013-12-19T00:00:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/cb3-howto-make-hmsrv.html</loc>
+<lastmod>2014-01-27T23:48:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -83,6 +90,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/131127-yw-on-test-static-analysis.html</loc>
 <lastmod>2013-11-27T00:00:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/py101-cleanup-script.html</loc>
+<lastmod>2013-11-23T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -159,7 +173,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/livin.html</loc>
-<lastmod>2014-01-19T00:00:00-00:00</lastmod>
+<lastmod>2014-01-27T23:48:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -236,7 +250,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/ct.html</loc>
-<lastmod>2014-01-11T00:00:00-00:00</lastmod>
+<lastmod>2014-01-27T23:48:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -270,6 +284,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/wordpress.html</loc>
+<lastmod>2013-11-23T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/lp.html</loc>
 <lastmod>2012-09-18T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -278,7 +299,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/cubier.html</loc>
-<lastmod>2014-01-11T00:00:00-00:00</lastmod>
+<lastmod>2014-01-27T23:48:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -298,6 +319,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/howto.html</loc>
+<lastmod>2014-01-27T23:48:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/leo.html</loc>
 <lastmod>2013-12-30T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -306,7 +334,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/mac.html</loc>
-<lastmod>2014-01-11T00:00:00-00:00</lastmod>
+<lastmod>2014-01-27T23:48:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -314,6 +342,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/tag/china.html</loc>
 <lastmod>2013-11-11T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/101.html</loc>
+<lastmod>2013-11-23T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -334,7 +369,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/cubieboard.html</loc>
-<lastmod>2014-01-11T00:00:00-00:00</lastmod>
+<lastmod>2014-01-27T23:48:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -362,7 +397,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/zoomquiet.html</loc>
-<lastmod>2014-01-19T00:00:00-00:00</lastmod>
+<lastmod>2014-01-27T23:48:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

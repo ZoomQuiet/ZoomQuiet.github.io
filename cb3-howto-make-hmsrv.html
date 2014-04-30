@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="cb3-howto-make-hmsrv"/>
             <meta property="og:url" content="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html"/>
-            <meta property="og:description" content="CBInstallfest 的体验 之后,总是要一步步完成心目中的 家服务器 Issue CB3 lununtu-server-VGA 预装: sshd apt-fast vim mc … 不要: php mysql apache TODO 为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有: 通过 USB 挂接 FreeBSD 格式化的 UFS 分区 通过板载 SATA 接口,加装 2.5吋 1T 新硬盘 安装 Samba 系统,提供空间给其它 M$ 设备使用 安装 netatalk ,支持 Apple Time Machine 安装 ..."/>
+            <meta property="og:description" content="CBInstallfest 的体验 之后,总是要一步步完成心目中的 家服务器 Issue CB3 lununtu-server-VGA 环境: .bashrc .inputrc 预装: sshd apt-fast Index of /linux/apt-fast vim mc … 不要: php mysql apache TODO 为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有: 通过 USB 挂接 FreeBSD 格式化的 UFS 分区 通过板载 SATA 接口,加装 2.5吋 1T 新硬盘 安装 Samba 系统,提供空间给其它 M$ 设备使用 ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -131,34 +131,52 @@
 <li><a href="#todo"><span class="caps">TODO</span></a></li>
 <li><a href="#_1">分析</a></li>
 <li><a href="#_2">过程</a><ul>
-<li><a href="#_3">数据迁移</a></li>
 <li><a href="#nand">nand*</a></li>
-<li><a href="#fdisk">fdisk</a></li>
+<li><a href="#_3">数据迁移</a></li>
 <li><a href="#_4">硬盘加挂</a><ul>
 <li><a href="#gpart">gpart</a></li>
+</ul>
+</li>
+<li><a href="#_5">外置硬盘盒</a></li>
+</ul>
+</li>
+<li><a href="#hhd"><span class="caps">HHD</span></a><ul>
+<li><a href="#ufs"><span class="caps">UFS</span></a></li>
+<li><a href="#sata"><span class="caps">SATA</span></a><ul>
+<li><a href="#1000">################################################################## 100.0%</a></li>
+</ul>
+</li>
+<li><a href="#_6">重新外置</a><ul>
 <li><a href="#exfat">exFAT</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#apt-fast-mirror-list-mon-jan-27-164210-utc-2014">apt-fast mirror list: Mon Jan 27 16:42:10 <span class="caps">UTC</span> 2014</a><ul>
-<li><a href="#_5">系统整顿</a><ul>
+<li><a href="#_7">系统硬盘</a><ul>
+<li><a href="#fdisk">fdisk</a></li>
+<li><a href="#etx4">etx4</a></li>
+<li><a href="#_8">自动挂接</a><ul>
+<li><a href="#fatab">fatab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_9">你不能在当前挂载着的分区上扩容的</a><ul>
+<li><a href="#samba">samba</a></li>
+<li><a href="#mac"><span class="caps">MAC</span> 共享</a><ul>
+<li><a href="#netatalk-time-machine">netatalk-&gt;Time Machine</a></li>
+</ul>
+</li>
+<li><a href="#_10">系统整顿</a><ul>
 <li><a href="#mysql">MySQL</a></li>
+<li><a href="#apache2">apache2</a></li>
 <li><a href="#utf8"><span class="caps">UTF8</span></a></li>
 </ul>
 </li>
-<li><a href="#_6">软件安装</a></li>
-<li><a href="#_7">睡觉维护</a></li>
-<li><a href="#hhd"><span class="caps">HHD</span></a><ul>
-<li><a href="#ufs"><span class="caps">UFS</span></a><ul>
-<li><a href="#_8">外置硬盘盒</a></li>
-</ul>
-</li>
-<li><a href="#sata"><span class="caps">SATA</span></a><ul>
-<li><a href="#1000">################################################################## 100.0%</a></li>
-</ul>
-</li>
-<li><a href="#xfs"><span class="caps">XFS</span></a></li>
+<li><a href="#mldonkey">MLDonkey</a></li>
+<li><a href="#_11">家庭影院</a></li>
+<li><a href="#_12">远程维护</a></li>
 </ul>
 </li>
 </ul>
@@ -172,9 +190,19 @@
 <h2 id="issue">Issue</h2>
 <p><span class="caps">CB3</span> lununtu-server-<span class="caps">VGA</span></p>
 <ul>
-<li>预装: </li>
+<li>环境:</li>
+<li>.bashrc</li>
+<li>
+<p>.inputrc</p>
+</li>
+<li>
+<p>预装: </p>
+</li>
 <li>sshd</li>
-<li>apt-fast</li>
+<li>apt-fast<ul>
+<li><a href="http://www.mattparnell.com/linux/apt-fast/">Index of /linux/apt-fast</a></li>
+</ul>
+</li>
 <li>vim</li>
 <li>mc</li>
 <li>
@@ -201,7 +229,6 @@
 <p>总之,要搾干 <span class="caps">CB</span> 的一切潜能!</p>
 <h2 id="_1">分析</h2>
 <h2 id="_2">过程</h2>
-<h3 id="_3">数据迁移</h3>
 <h3 id="nand">nand*</h3>
 <p>$ sudo !!
 sudo fdisk -l /dev/nandc</p>
@@ -212,11 +239,7 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disk identifier: 0x00000000</p>
 <p>Disk /dev/nandc doesn’t contain a valid partition table</p>
-<h3 id="fdisk">fdisk</h3>
-<ul>
-<li><a href="http://www.liusuping.com/ubuntu-linux/linux-fdisk-disk.html">使用fdisk命令对linux硬盘进行操作 - Linux/Unix - 刘苏平的博客</a></li>
-<li><a href="http://blog.itpub.net/26686207/viewspace-765782/">多硬盘分区管理fdisk-张丹-leonarding-<span class="caps">ITPUB</span>博客</a></li>
-</ul>
+<h3 id="_3">数据迁移</h3>
 <h3 id="_4">硬盘加挂</h3>
 <p>$ cat /proc/partitions
 major minor  #blocks name</p>
@@ -268,6 +291,146 @@ Sector size (logical/physical): 512 bytes / 4096 bytes
 I/O size (minimum/optimal): 4096 bytes / 4096 bytes
 Disk identifier: 0x00000000</p>
 <p>Disk /dev/sda doesn’t contain a valid partition table</p>
+<h3 id="_5">外置硬盘盒</h3>
+<p>$ dmesg |grep umass
+umass0: <norelsys 0="" 0,="" 1.00,="" 2="" 2.10="" addr="" class="" ns1066,="" rev=""> on usbus6
+umass0:  <span class="caps">SCSI</span> over Bulk-Only; quirks = 0x0100
+umass0:6:0:-1: Attached to scbus6
+(probe0:umass-sim0:0:0:0): <span class="caps">REPORT</span> <span class="caps">LUNS</span>. <span class="caps">CDB</span>: a0 0 0 0 0 0 0 0 0 10 0 0
+(probe0:umass-sim0:0:0:0): <span class="caps">CAM</span> status: <span class="caps">SCSI</span> Status Error
+(probe0:umass-sim0:0:0:0): <span class="caps">SCSI</span> status: Check Condition
+(probe0:umass-sim0:0:0:0): <span class="caps">SCSI</span> sense: <span class="caps">ILLEGAL</span> <span class="caps">REQUEST</span> asc:20,0 (Invalid command operation code)
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0</norelsys></p>
+<p>$ dmesg | grep da0
+ada0 at ata4 bus 0 scbus2 target 0 lun 0
+ada0: <st3160815as 3.ada=""> <span class="caps">ATA</span>-7 <span class="caps">SATA</span> 2.x device
+ada0: 300.<span class="caps">000MB</span>/s transfers (<span class="caps">SATA</span> 2.x, <span class="caps">UDMA5</span>, <span class="caps">PIO</span> 8192bytes)
+ada0: <span class="caps">152587MB</span> (312500000 512 byte sectors: 16H 63S/T 16383C)
+ada0: Previously was known as ad8
+Trying to mount root from ufs:/dev/ada0s1a [rw]…
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <ata cc3c="" st2000dl003-9vt1=""> Fixed Direct Access <span class="caps">SCSI</span>-6 device
+da0: 40.<span class="caps">000MB</span>/s transfers
+da0: <span class="caps">1907729MB</span> (3907029168 512 byte sectors: 255H 63S/T 243201C)</ata></st3160815as></p>
+<p>$ gpart show /dev/da0
+=&gt;        34  3907029101  da0  <span class="caps">GPT</span>  (1.8T)
+          34           6       - free -  (3.0k)
+          40         128    1  freebsd-boot  (64k)
+         168    16777216    2  freebsd-ufs  (8.0G)
+    16777384  3886022656    3  freebsd-ufs  (1.8T)
+  3902800040     4229094    4  freebsd-swap  (2.0G)
+  3907029134           1       - free - (512B)</p>
+<h2 id="hhd"><span class="caps">HHD</span></h2>
+<p>Disk /dev/sda: 1000.2 <span class="caps">GB</span>, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk identifier: 0x00000000</p>
+<p>Disk /dev/sda doesn’t contain a valid partition table</p>
+<p><span class="caps">WARNING</span>: <span class="caps">GPT</span> (<span class="caps">GUID</span> Partition Table) detected on ‘/dev/sdb’! The util fdisk doesn’t support <span class="caps">GPT</span>. Use <span class="caps">GNU</span> Parted.</p>
+<p>Disk /dev/sdb: 2000.4 <span class="caps">GB</span>, 2000398934016 bytes
+256 heads, 63 sectors/track, 242251 cylinders, total 3907029168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000</p>
+<p>Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1   *           1  3907029167  1953514583+  ee <span class="caps">GPT</span></p>
+<p>$ cat /proc/partitions
+major minor  #blocks name</p>
+<p>93        0    7520256 nand
+  93        1      65536 nanda
+  93        2    2097152 nandb
+  93        3    5341184 nandc
+   8        0  976762584 sda
+   8       16 1953514584 sdb
+   8       17         64 sdb1
+   8       18    8388608 sdb2
+   8       19 1943011328 sdb3
+   8       20    2114547 sdb4</p>
+<h3 id="ufs"><span class="caps">UFS</span></h3>
+<p><a href="http://forums.fedoraforum.org/showthread.php?t=285255">mount external partition - FedoraForum.org</a></p>
+<p>$ ll /lib/modules/3.4.61+/kernel/fs/
+total 20
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 exportfs
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 jffs2
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 nfsd
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 squashfs
+drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 ubifs</p>
+<h3 id="sata"><span class="caps">SATA</span></h3>
+<p>$ dmesg | grep ada
+ada0 at ata4 bus 0 scbus2 target 0 lun 0
+ada0: <st3160815as 3.ada=""> <span class="caps">ATA</span>-7 <span class="caps">SATA</span> 2.x device
+ada0: 300.<span class="caps">000MB</span>/s transfers (<span class="caps">SATA</span> 2.x, <span class="caps">UDMA5</span>, <span class="caps">PIO</span> 8192bytes)
+ada0: <span class="caps">152587MB</span> (312500000 512 byte sectors: 16H 63S/T 16383C)
+ada0: Previously was known as ad8
+ada1 at ata5 bus 0 scbus3 target 0 lun 0
+ada1: <st2000dl003-9vt166 cc3c=""> <span class="caps">ATA</span>-8 <span class="caps">SATA</span> 3.x device
+ada1: 300.<span class="caps">000MB</span>/s transfers (<span class="caps">SATA</span> 2.x, <span class="caps">UDMA5</span>, <span class="caps">PIO</span> 8192bytes)
+ada1: <span class="caps">1907729MB</span> (3907029168 512 byte sectors: 16H 63S/T 16383C)
+ada1: Previously was known as ad10
+Trying to mount root from ufs:/dev/ada0s1a [rw]…</st2000dl003-9vt166></st3160815as></p>
+<p>$ gpart show /dev/ada1
+=&gt;        34  3907029101  ada1  <span class="caps">GPT</span>  (1.8T)
+          34           6        - free -  (3.0k)
+          40         128     1  freebsd-boot  (64k)
+         168    16777216     2  freebsd-ufs  (8.0G)
+    16777384  3886022656     3  freebsd-ufs  (1.8T)
+  3902800040     4229094     4  freebsd-swap  (2.0G)
+  3907029134           1        - free - (512B)</p>
+<p>$ sudo mount /dev/ada1p3 /mnt/ada1
+mount: /dev/ada1p3 : Operation not permitted</p>
+<p><span class="caps">BIOS</span> 配置好打开对应的 <span class="caps">SATA</span> 接口,
+进入系统后:
+$ gpart show /dev/ada1
+=&gt;        34  3907029101  ada1  <span class="caps">GPT</span>  (1.8T)
+          34           6        - free -  (3.0k)
+          40         128     1  freebsd-boot  (64k)
+         168    16777216     2  freebsd-ufs  (8.0G)
+    16777384  3886022656     3  freebsd-ufs  (1.8T)
+  3902800040     4229094     4  freebsd-swap  (2.0G)
+  3907029134           1        - free - (512B)</p>
+<p>$ ls /dev/ada*
+/dev/ada0     /dev/ada0s1   /dev/ada0s1a  /dev/ada0s1b  /dev/ada1
+/dev/ada1p1   /dev/ada1p2   /dev/ada1p3 /dev/ada1p4</p>
+<p>这是系统盘:
+$ gpart show /dev/ada0
+=&gt;       63  312499937  ada0  <span class="caps">MBR</span>  (149G)
+         63  312475590     1  freebsd  [active]  (149G)
+  312475653      24347        - free - (11M)</p>
+<p>$ sudo mount /dev/ada1p3 /mnt/ada1
+mount: /dev/ada1p3 : Operation not permitted</p>
+<p>这就不明白了,,,
+目测是 <span class="caps">UFS</span> 格式也有不同的?!</p>
+<p>$ brew link fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2… Warning: Could not link fuse4x. Unlinking…</p>
+<p>Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
+Target /usr/local/lib/pkgconfig/fuse.pc already exists. You may need to delete it.
+To force the link and overwrite all other conflicting files, do:
+  brew link —overwrite formula_name</p>
+<p>To list all files that would be deleted:
+  brew link —overwrite —dry-run formula_name</p>
+<p>zoomq @ <span class="caps">MBP111216ZQ</span> in /usr/local/lib
+$ brew link —overwrite fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2… 7 symlinks created</p>
+<p>$ brew install osxfuse
+==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz</p>
+<h6 id="1000">################################################################## 100.0%</h6>
+<p>==&gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
+==&gt; Caveats
+If upgrading from a previous version of osxfuse, the previous kernel extension
+will need to be unloaded before installing the new version. First, check that
+no <span class="caps">FUSE</span>-based file systems are running:</p>
+<p>mount -t osxfusefs</p>
+<p>Unmount all <span class="caps">FUSE</span> file systems and then unload the kernel extension:</p>
+<p>sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs</p>
+<p>The new osxfuse file system bundle needs to be installed by the root user:</p>
+<p>sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.2/Library/Filesystems/osxfusefs.fs /Library/Filesystems
+  sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+==&gt; Summary
+🍺  /usr/local/Cellar/osxfuse/2.6.2: 84 files, 5.0M</p>
+<h3 id="_6">重新外置</h3>
 <h4 id="exfat">exFAT</h4>
 <p>$ cat /etc/lsb-release.bk
 DISTRIB_ID=Linaro
@@ -332,7 +495,189 @@ Selecting previously unselected package exfat-utils.
 正在处理用于 man-db 的触发器…
 正在设置 exfat-fuse (1.0.1-1) …
 正在设置 exfat-utils (1.0.1-1) …</p>
-<h3 id="_5">系统整顿</h3>
+<p>$ sudo fdisk -l /dev/sdb</p>
+<p><span class="caps">WARNING</span>: <span class="caps">GPT</span> (<span class="caps">GUID</span> Partition Table) detected on ‘/dev/sdb’! The util fdisk doesn’t support <span class="caps">GPT</span>. Use <span class="caps">GNU</span> Parted.</p>
+<p>Disk /dev/sdb: 2000.4 <span class="caps">GB</span>, 2000398934016 bytes
+255 heads, 63 sectors/track, 243201 cylinders, total 3907029168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000</p>
+<p>Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1      409639      204819+  ee  <span class="caps">GPT</span>
+/dev/sdb2          411648  1563172863   781380608    7  <span class="caps">HPFS</span>/<span class="caps">NTFS</span>/exFAT
+/dev/sdb3      1563172864  3907028991  1171928064    7 <span class="caps">HPFS</span>/<span class="caps">NTFS</span>/exFAT</p>
+<h2 id="_7">系统硬盘</h2>
+<p>$ sudo fdisk -l /dev/sda</p>
+<p>Disk /dev/sda: 1000.2 <span class="caps">GB</span>, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk identifier: 0x00000000</p>
+<p>Disk /dev/sda doesn’t contain a valid partition table</p>
+<h3 id="fdisk">fdisk</h3>
+<ul>
+<li><a href="http://www.liusuping.com/ubuntu-linux/linux-fdisk-disk.html">使用fdisk命令对linux硬盘进行操作 - Linux/Unix - 刘苏平的博客</a></li>
+<li><a href="http://blog.itpub.net/26686207/viewspace-765782/">多硬盘分区管理fdisk-张丹-leonarding-<span class="caps">ITPUB</span>博客</a></li>
+</ul>
+<h3 id="etx4">etx4</h3>
+<p><a href="http://floss.zoomquiet.io/data/20110828225725/index.html">linux下的文件系统选型 | shell’s home</a></p>
+<p>$ sudo mkfs.ext4 /dev/sda3</p>
+<h3 id="_8">自动挂接</h3>
+<div class="highlight"><pre><span class="n">zoomq</span> <span class="err">@</span> <span class="n">cubietruck</span> <span class="n">in</span> <span class="o">/</span><span class="n">mnt</span>
+<span class="err">$</span> <span class="n">ll</span>
+<span class="n">total</span> <span class="mi">20</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Jan</span> <span class="mi">27</span> <span class="mi">16</span><span class="o">:</span><span class="mi">44</span> <span class="n">bk2wk</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Feb</span> <span class="mi">24</span> <span class="mi">15</span><span class="o">:</span><span class="mi">26</span> <span class="n">data</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Jan</span> <span class="mi">27</span> <span class="mi">16</span><span class="o">:</span><span class="mi">44</span> <span class="n">dl4p2p</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">4</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Jan</span> <span class="mi">11</span> <span class="mi">17</span><span class="o">:</span><span class="mi">48</span> <span class="n">nandc</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Feb</span> <span class="mi">24</span> <span class="mi">15</span><span class="o">:</span><span class="mi">22</span> <span class="n">sda3</span>
+</pre></div>
+<p>/dev/sdb2 -&gt; bk2wk
+/dev/sdb3 -&gt; dl4p2p
+/dev/sda3 -&gt; data
+/dev/nandc -&gt; nandc</p>
+<p>sudo mount /dev/nandc /mnt/nandc
+sudo mount /dev/sda3 /mnt/data
+sudo mount /dev/sdb2 /mnt/bk2wk
+sudo mount /dev/sdb3 /mnt/dl4p2p</p>
+<h4 id="fatab">fatab</h4>
+<p>$ cat /proc/partitions
+major minor  #blocks name</p>
+<p>93        0    7520256 nand
+  93        1      65536 nanda
+  93        2    2097152 nandb
+  93        3    5341184 nandc
+   8        0  976762584 sda
+   8        1    8388608 sda1
+   8        2    2097152 sda2
+   8        3  966275800 sda3
+   8       16 1953514584 sdb
+   8       17     204800 sdb1
+   8       18  781380608 sdb2
+   8       19 1171928064 sdb3</p>
+<p>$ sudo blkid
+/dev/nanda: SEC_TYPE=”msdos” <span class="caps">LABEL</span>=”Volumn” <span class="caps">TYPE</span>=”vfat”
+/dev/nandb: <span class="caps">UUID</span>=”d20c81fd-3188-4650-b124-2fa090bb7920” <span class="caps">TYPE</span>=”ext4”
+/dev/nandc: <span class="caps">UUID</span>=”1914bbf8-2641-4b3f-a00e-4afa65d0ed8f” <span class="caps">TYPE</span>=”ext4”</p>
+<p>/dev/sda3: <span class="caps">UUID</span>=”b9db3117-90d7-48a6-8302-0b316b9745fd” <span class="caps">TYPE</span>=”ext4”
+/dev/sdb1: <span class="caps">LABEL</span>=”<span class="caps">EFI</span>” <span class="caps">UUID</span>=”67E3-<span class="caps">17ED</span>” <span class="caps">TYPE</span>=”vfat”
+/dev/sdb2: <span class="caps">LABEL</span>=”bk4wk” <span class="caps">UUID</span>=”52E4-<span class="caps">78FF</span>” <span class="caps">TYPE</span>=”exfat”
+/dev/sdb3: <span class="caps">LABEL</span>=”dl4p2p” <span class="caps">UUID</span>=”52E4-7901” <span class="caps">TYPE</span>=”exfat”</p>
+<p><a href="http://name5566.com/4398.html">Cubieboard 开箱和入门 | Name5566</a>
+$ sudo nand-part -f a20 /dev/nand
+check partition table copy 0: mbr: version 0x00000200, magic softw411
+<span class="caps">OK</span>
+check partition table copy 1: mbr: version 0x00000200, magic softw411
+<span class="caps">BAD</span>!
+check partition table copy 2: mbr: version 0x00000200, magic softw411
+<span class="caps">BAD</span>!
+check partition table copy 3: mbr: version 0x00000200, magic softw411
+<span class="caps">BAD</span>!
+mbr: version 0x00000200, magic softw411
+3 partitions
+partition  1: class =         <span class="caps">DISK</span>, name =   bootloader, partition start =    32768, partition size =   131072 user_type=0
+partition  2: class =         <span class="caps">DISK</span>, name =       rootfs, partition start =   163840, partition size =  4194304 user_type=0
+partition  3: class =         <span class="caps">DISK</span>, name =        <span class="caps">UDISK</span>, partition start =  4358144, partition size = 10584064 user_type=0</p>
+<p><a href="http://forum.cubietech.com/forum.php?mod=viewthread&amp;tid=1772">求助，<span class="caps">CT</span>如何给nand分区，获得8G空间？ - 上手问题 - Cubieboard中文论坛 - Powered by Discuz!</a></p>
+<p>通过nand-part —help查看命令帮助
+得到nand-part的使用方法:
+nand-part nand设备 起始位置 ‘分区名称 长度’ ‘分区名称2 长度2’
+直接运行nand-part，会得到分区信息
+bootloader 起始位置32768 长度131072
+rootfs 起始位置163840 长度4194304
+<span class="caps">UDISK</span> 起始位置4358144 长度10584064</p>
+<p>其中这些数字，都是以512字节为单位。 其中rootfs就是系统文件分区，而<span class="caps">UDISK</span>就是那5G多，而我们的目的就是把这5G的空间，合并到rootfs中，重新计算了一下，得到的命令就是：</p>
+<p>nand-part /dev/nand 32768 ‘bootloader 131072’ ‘rootfs 14778368’</p>
+<p>意思就是把/dev/nand重新分区，bootloader 的起始位置和长度必须保持不变，不然后果就是重新刷系统吧。
+这样的话，rootfs的起始位置也是原来的位置，所要修改的就是它的长度，为14778368。
+容量计算一下就是：14778368*512/1024/1024=<span class="caps">7216MB</span>，也就是7G， 当然因为前面有bootloader分区，以及bootloader之前空出的一块，所以nandb自然是得不到完整的8G</p>
+<p>命令成功执行，reboot，再
+resize2fs /dev/nandb</p>
+<p>就真的成功了</p>
+<p>2 partitions
+partition  1: class =         <span class="caps">DISK</span>, name =   bootloader, partition start =    32768, partition size =   131072 user_type=0
+partition  2: class =         <span class="caps">DISK</span>, name =       rootfs, partition start =   163840, partition size = 14778368 user_type=0</p>
+<p>write new partition tables? (Y/N)
+y
+Failed rereading partition table: Device or resource busy</p>
+<p>verifying new partition tables:
+check partition table copy 0: mbr: version 0xb6fd14fc, magic
+magic          is not softw411
+check partition table copy 1: mbr: version 0xb6fd14fc, magic
+magic          is not softw411
+check partition table copy 2: mbr: version 0xb6fd14fc, magic
+magic          is not softw411
+check partition table copy 3: mbr: version 0xb6fd14fc, magic
+magic          is not softw411
+all partition tables are bad!
+rereading partition table… returned -1</p>
+<p><a href="http://forum.cubietech.com/forum.php?mod=viewthread&amp;tid=1454&amp;extra=page%3D2">求救：释放<span class="caps">CB2</span> <span class="caps">NAND</span> 剩余空间 - 解决 - 上手问题 - Cubieboard中文论坛 - Powered by Discuz!</a></p>
+<h2 id="_9">你不能在当前挂载着的分区上扩容的</h2>
+<p><a href="http://www.bango29.com/cubieboard-part-1/">Cubieboard - Part 1</a>
+/dev/sda1    /media/ext  ext4    defaults    0 2</p>
+<p>/dev/nandc    /mnt/nandc  ext4    defaults    0   2
+/mnt/nandc/swapfile    none    swap    sw  0   0
+/dev/sda3    /mnt/data  ext4    defaults    0   2
+/dev/sdb2    /mnt/bk4wk  exfat    rw,async,umask=0   0   0
+/dev/sdb3    /mnt/dl4p2p  exfat    rw,async,umask=0   0 0</p>
+<p>$ agi  -y exfat-fuse exfat-utils</p>
+<p>/dev/sdb2: <span class="caps">LABEL</span>=”bk4wk” <span class="caps">UUID</span>=”52E4-<span class="caps">78FF</span>” <span class="caps">TYPE</span>=”exfat”
+/dev/sdb3: <span class="caps">LABEL</span>=”dl4p2p” <span class="caps">UUID</span>=”52E4-7901” <span class="caps">TYPE</span>=”exfat”</p>
+<p>/dev/sda1 /media/usbdrive exfat rw,async,umask=0 0 0
+/dev/sda1 /home/cubie/sda1 ntfs defaults,utf8,umask=0000,uid=1001,gid=1002,0 0</p>
+<p>zoomq:x:1001:1002:Zoom.Quiet:/home/zoomq:/bin/bash</p>
+<ul>
+<li><a href="http://00-00-00-00.com/2013/08/13/cubieboard%e8%87%aa%e5%8a%a8%e6%8c%82%e8%bd%bdtf%e5%8d%a1fstab%e8%ae%be%e7%bd%ae%e6%96%b9%e6%b3%95/">Cubieboard自动挂载<span class="caps">TF</span>卡fstab设置方法 | <span class="caps">OPENERP</span>-从零开始!</a></li>
+</ul>
+<h3 id="samba">samba</h3>
+<p>$ agi -y samba</p>
+<h3 id="mac"><span class="caps">MAC</span> 共享</h3>
+<h4 id="netatalk-time-machine">netatalk-&gt;Time Machine</h4>
+<p>/etc/netatalk/AppleVolumes.default</p>
+<p>/mnt/data/timemachine   “TimeCapsule”  options:tm
+/mnt/data     “data”
+/mnt/bk2wk     “bk2wk”
+/mnt/dl4p2p “dl4p2p”</p>
+<p>创建文件 /etc/avahi/services/afpd.service
+<service-group>
+<name replace-wildcards="yes">%h</name>
+<service>
+<type>_afpovertcp._tcp</type>
+<port>548</port>
+</service>
+<service>
+<type>_device-info._tcp</type>
+<port>0</port>
+<txt-record>model=Xserve</txt-record>
+</service>
+</service-group></p>
+<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+
+<service-group>
+<name replace-wildcards="yes">%h</name>
+<service>
+<type>_afpovertcp._tcp</type>
+<port>548</port>
+</service>
+<service>
+<type>_device-info._tcp</type>
+<port>0</port>
+<txt-record>model=TimeCapsule</txt-record>
+</service>
+</service-group>
+<h3 id="_10">系统整顿</h3>
+<p><a href="http://my.oschina.net/sherwayne/blog/108685">Ubuntu卸载Apache+Mysql+<span class="caps">PHP</span> - 徐航的个人页面 - 开源中国社区</a></p>
+<p>1、卸载Apache2都几个命令</p>
+<p>sudo apt-get —purge remove apache2
+sudo apt-get —purge remove apache2.2-common</p>
+<p>或直接使用一条命令
+sudo apt-get autoremove apache2</p>
+<p>2、卸载Mysql
+sudo aptitude purge mysql-server mysql-server-5.0</p>
+<p>sudo apt-get autoremove php5 </p>
 <h4 id="mysql">MySQL</h4>
 <ul>
 <li><a href="http://www.blogjava.net/yjhmily/articles/336926.html">Ubuntu下彻底卸载mysql - yjhmily - BlogJava</a></li>
@@ -366,6 +711,11 @@ Unpacking dmidecode (from …/dmidecode_2.12-0linaro1_armhf.deb) …
 Processing triggers for man-db …
 Setting up dmidecode (2.12-0linaro1) …</p>
 <p>$ sudo rm -rf /var/lib/mysql</p>
+<h4 id="apache2">apache2</h4>
+<p>同理删除 Apache2 这一大恐龙!!!</p>
+<p>$ sudo apt-get —purge remove apache-common
+  $ sudo apt-get —purge remove apache
+  $ sudo apt-get autoremove</p>
 <h4 id="utf8"><span class="caps">UTF8</span></h4>
 <p>$ locale
 <span class="caps">LANG</span>=
@@ -447,148 +797,11 @@ LC_ADDRESS=”en_US.<span class="caps">UTF</span>-8”
 LC_TELEPHONE=”en_US.<span class="caps">UTF</span>-8”
 LC_MEASUREMENT=”en_US.<span class="caps">UTF</span>-8”
 LC_IDENTIFICATION=”en_US.<span class="caps">UTF</span>-8” LC_ALL=</p>
-<h3 id="_6">软件安装</h3>
-<h3 id="_7">睡觉维护</h3>
-<h2 id="hhd"><span class="caps">HHD</span></h2>
-<p>Disk /dev/sda: 1000.2 <span class="caps">GB</span>, 1000204886016 bytes
-255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 4096 bytes
-I/O size (minimum/optimal): 4096 bytes / 4096 bytes
-Disk identifier: 0x00000000</p>
-<p>Disk /dev/sda doesn’t contain a valid partition table</p>
-<p><span class="caps">WARNING</span>: <span class="caps">GPT</span> (<span class="caps">GUID</span> Partition Table) detected on ‘/dev/sdb’! The util fdisk doesn’t support <span class="caps">GPT</span>. Use <span class="caps">GNU</span> Parted.</p>
-<p>Disk /dev/sdb: 2000.4 <span class="caps">GB</span>, 2000398934016 bytes
-256 heads, 63 sectors/track, 242251 cylinders, total 3907029168 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
-Disk identifier: 0x00000000</p>
-<p>Device Boot      Start         End      Blocks   Id  System
-/dev/sdb1   *           1  3907029167  1953514583+  ee <span class="caps">GPT</span></p>
-<p>$ cat /proc/partitions
-major minor  #blocks name</p>
-<p>93        0    7520256 nand
-  93        1      65536 nanda
-  93        2    2097152 nandb
-  93        3    5341184 nandc
-   8        0  976762584 sda
-   8       16 1953514584 sdb
-   8       17         64 sdb1
-   8       18    8388608 sdb2
-   8       19 1943011328 sdb3
-   8       20    2114547 sdb4</p>
-<h3 id="ufs"><span class="caps">UFS</span></h3>
-<p><a href="http://forums.fedoraforum.org/showthread.php?t=285255">mount external partition - FedoraForum.org</a></p>
-<p>$ ll /lib/modules/3.4.61+/kernel/fs/
-total 20
-drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 exportfs
-drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 jffs2
-drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 nfsd
-drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 squashfs
-drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 ubifs</p>
-<h4 id="_8">外置硬盘盒</h4>
-<p>$ dmesg |grep umass
-umass0: <norelsys 0="" 0,="" 1.00,="" 2="" 2.10="" addr="" class="" ns1066,="" rev=""> on usbus6
-umass0:  <span class="caps">SCSI</span> over Bulk-Only; quirks = 0x0100
-umass0:6:0:-1: Attached to scbus6
-(probe0:umass-sim0:0:0:0): <span class="caps">REPORT</span> <span class="caps">LUNS</span>. <span class="caps">CDB</span>: a0 0 0 0 0 0 0 0 0 10 0 0
-(probe0:umass-sim0:0:0:0): <span class="caps">CAM</span> status: <span class="caps">SCSI</span> Status Error
-(probe0:umass-sim0:0:0:0): <span class="caps">SCSI</span> status: Check Condition
-(probe0:umass-sim0:0:0:0): <span class="caps">SCSI</span> sense: <span class="caps">ILLEGAL</span> <span class="caps">REQUEST</span> asc:20,0 (Invalid command operation code)
-da0 at umass-sim0 bus 0 scbus6 target 0 lun 0</norelsys></p>
-<p>$ dmesg | grep da0
-ada0 at ata4 bus 0 scbus2 target 0 lun 0
-ada0: <st3160815as 3.ada=""> <span class="caps">ATA</span>-7 <span class="caps">SATA</span> 2.x device
-ada0: 300.<span class="caps">000MB</span>/s transfers (<span class="caps">SATA</span> 2.x, <span class="caps">UDMA5</span>, <span class="caps">PIO</span> 8192bytes)
-ada0: <span class="caps">152587MB</span> (312500000 512 byte sectors: 16H 63S/T 16383C)
-ada0: Previously was known as ad8
-Trying to mount root from ufs:/dev/ada0s1a [rw]…
-da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
-da0: <ata cc3c="" st2000dl003-9vt1=""> Fixed Direct Access <span class="caps">SCSI</span>-6 device
-da0: 40.<span class="caps">000MB</span>/s transfers
-da0: <span class="caps">1907729MB</span> (3907029168 512 byte sectors: 255H 63S/T 243201C)</ata></st3160815as></p>
-<p>$ gpart show /dev/da0
-=&gt;        34  3907029101  da0  <span class="caps">GPT</span>  (1.8T)
-          34           6       - free -  (3.0k)
-          40         128    1  freebsd-boot  (64k)
-         168    16777216    2  freebsd-ufs  (8.0G)
-    16777384  3886022656    3  freebsd-ufs  (1.8T)
-  3902800040     4229094    4  freebsd-swap  (2.0G)
-  3907029134           1       - free - (512B)</p>
-<h3 id="sata"><span class="caps">SATA</span></h3>
-<p>$ dmesg | grep ada
-ada0 at ata4 bus 0 scbus2 target 0 lun 0
-ada0: <st3160815as 3.ada=""> <span class="caps">ATA</span>-7 <span class="caps">SATA</span> 2.x device
-ada0: 300.<span class="caps">000MB</span>/s transfers (<span class="caps">SATA</span> 2.x, <span class="caps">UDMA5</span>, <span class="caps">PIO</span> 8192bytes)
-ada0: <span class="caps">152587MB</span> (312500000 512 byte sectors: 16H 63S/T 16383C)
-ada0: Previously was known as ad8
-ada1 at ata5 bus 0 scbus3 target 0 lun 0
-ada1: <st2000dl003-9vt166 cc3c=""> <span class="caps">ATA</span>-8 <span class="caps">SATA</span> 3.x device
-ada1: 300.<span class="caps">000MB</span>/s transfers (<span class="caps">SATA</span> 2.x, <span class="caps">UDMA5</span>, <span class="caps">PIO</span> 8192bytes)
-ada1: <span class="caps">1907729MB</span> (3907029168 512 byte sectors: 16H 63S/T 16383C)
-ada1: Previously was known as ad10
-Trying to mount root from ufs:/dev/ada0s1a [rw]…</st2000dl003-9vt166></st3160815as></p>
-<p>$ gpart show /dev/ada1
-=&gt;        34  3907029101  ada1  <span class="caps">GPT</span>  (1.8T)
-          34           6        - free -  (3.0k)
-          40         128     1  freebsd-boot  (64k)
-         168    16777216     2  freebsd-ufs  (8.0G)
-    16777384  3886022656     3  freebsd-ufs  (1.8T)
-  3902800040     4229094     4  freebsd-swap  (2.0G)
-  3907029134           1        - free - (512B)</p>
-<p>$ sudo mount /dev/ada1p3 /mnt/ada1
-mount: /dev/ada1p3 : Operation not permitted</p>
-<p><span class="caps">BIOS</span> 配置好打开对应的 <span class="caps">SATA</span> 接口,
-进入系统后:
-$ gpart show /dev/ada1
-=&gt;        34  3907029101  ada1  <span class="caps">GPT</span>  (1.8T)
-          34           6        - free -  (3.0k)
-          40         128     1  freebsd-boot  (64k)
-         168    16777216     2  freebsd-ufs  (8.0G)
-    16777384  3886022656     3  freebsd-ufs  (1.8T)
-  3902800040     4229094     4  freebsd-swap  (2.0G)
-  3907029134           1        - free - (512B)</p>
-<p>$ ls /dev/ada*
-/dev/ada0     /dev/ada0s1   /dev/ada0s1a  /dev/ada0s1b  /dev/ada1
-/dev/ada1p1   /dev/ada1p2   /dev/ada1p3 /dev/ada1p4</p>
-<p>这是系统盘:
-$ gpart show /dev/ada0
-=&gt;       63  312499937  ada0  <span class="caps">MBR</span>  (149G)
-         63  312475590     1  freebsd  [active]  (149G)
-  312475653      24347        - free - (11M)</p>
-<p>$ sudo mount /dev/ada1p3 /mnt/ada1
-mount: /dev/ada1p3 : Operation not permitted</p>
-<p>这就不明白了,,,
-目测是 <span class="caps">UFS</span> 格式也有不同的?!</p>
-<p>$ brew link fuse4x
-Linking /usr/local/Cellar/fuse4x/0.9.2… Warning: Could not link fuse4x. Unlinking…</p>
-<p>Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
-Target /usr/local/lib/pkgconfig/fuse.pc already exists. You may need to delete it.
-To force the link and overwrite all other conflicting files, do:
-  brew link —overwrite formula_name</p>
-<p>To list all files that would be deleted:
-  brew link —overwrite —dry-run formula_name</p>
-<p>zoomq @ <span class="caps">MBP111216ZQ</span> in /usr/local/lib
-$ brew link —overwrite fuse4x
-Linking /usr/local/Cellar/fuse4x/0.9.2… 7 symlinks created</p>
-<p>$ brew install osxfuse
-==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz</p>
-<h6 id="1000">################################################################## 100.0%</h6>
-<p>==&gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
-==&gt; Caveats
-If upgrading from a previous version of osxfuse, the previous kernel extension
-will need to be unloaded before installing the new version. First, check that
-no <span class="caps">FUSE</span>-based file systems are running:</p>
-<p>mount -t osxfusefs</p>
-<p>Unmount all <span class="caps">FUSE</span> file systems and then unload the kernel extension:</p>
-<p>sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs</p>
-<p>The new osxfuse file system bundle needs to be installed by the root user:</p>
-<p>sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.2/Library/Filesystems/osxfusefs.fs /Library/Filesystems
-  sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
-==&gt; Summary
-🍺  /usr/local/Cellar/osxfuse/2.6.2: 84 files, 5.0M</p>
-<h3 id="xfs"><span class="caps">XFS</span></h3>
+<h3 id="mldonkey">MLDonkey</h3>
+<p>$ agi -y mldonkey-server</p>
+<h3 id="_11">家庭影院</h3>
+<h3 id="_12">远程维护</h3>
+<p><span class="caps">IP</span></p>
 <h1 id="changelog">Changelog</h1>
 <ul>
 <li>140127 单立文章追踪</li>
@@ -650,26 +863,26 @@ no <span class="caps">FUSE</span>-based file systems are running:</p>
     <section>
         <ul class="list-group list-group-flush">
                 <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
-                    <li class="list-group-item"><a href="https://github.com/PyConChina"><i
-                            class="icon-GitHub-sign icon-large"></i>GitHub
-                    </a></li>
-                    <li class="list-group-item"><a href="https://gitcafe.com/CPyUG"><i
-                            class="icon-CPyUG-sign icon-large"></i>CPyUG
-                    </a></li>
-                    <li class="list-group-item"><a href="http://news.pychina.org"><i
-                            class="icon-News-sign icon-large"></i>News
-                    </a></li>
-                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/CPUG"><i
-                            class="icon-Wiki-sign icon-large"></i>Wiki
-                    </a></li>
                     <li class="list-group-item"><a href="http://blog.zoomquiet.io/feeds/all.atom.xml"><i
                             class="icon-rss-sign icon-large"></i>rss
                     </a></li>
-                    <li class="list-group-item"><a href="http://weibo.com/pyconcn"><i
+                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
+                            class="icon-Wiki-sign icon-large"></i>Wiki
+                    </a></li>
+                    <li class="list-group-item"><a href="http://code.google.com/p/openbookproject/"><i
+                            class="icon-O.B.P-sign icon-large"></i>O.B.P
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weekly.pychina.org/"><i
+                            class="icon-Weekly-sign icon-large"></i>Weekly
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet"><i
                             class="icon-weibo-sign icon-large"></i>weibo
                     </a></li>
-                    <li class="list-group-item"><a href="http://weibo.com/openbookproject"><i
-                            class="icon-O.B.P-sign icon-large"></i>O.B.P
+                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧文-sign icon-large"></i>旧文
                     </a></li>
 
 
@@ -718,18 +931,18 @@ no <span class="caps">FUSE</span>-based file systems are running:</p>
 
             <li class="list-group-item"><a href="http://blog.zoomquiet.io/tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
                 <li class="list-group-item tag-1">
+                    <a href="http://blog.zoomquiet.io/tag/yinwang.html">
+                        YinWang
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
                     <a href="http://blog.zoomquiet.io/tag/pythonner.html">
                         Pythonner
                     </a>
                 </li>
                 <li class="list-group-item tag-1">
-                    <a href="http://blog.zoomquiet.io/tag/zh.html">
-                        Zh
-                    </a>
-                </li>
-                <li class="list-group-item tag-1">
-                    <a href="http://blog.zoomquiet.io/tag/yinwang.html">
-                        YinWang
+                    <a href="http://blog.zoomquiet.io/tag/mac.html">
+                        MAC
                     </a>
                 </li>
                 <li class="list-group-item tag-1">
@@ -738,23 +951,18 @@ no <span class="caps">FUSE</span>-based file systems are running:</p>
                     </a>
                 </li>
                 <li class="list-group-item tag-1">
+                    <a href="http://blog.zoomquiet.io/tag/zh.html">
+                        Zh
+                    </a>
+                </li>
+                <li class="list-group-item tag-1">
                     <a href="http://blog.zoomquiet.io/tag/think.html">
                         Think
                     </a>
                 </li>
-                <li class="list-group-item tag-1">
-                    <a href="http://blog.zoomquiet.io/tag/mac.html">
-                        MAC
-                    </a>
-                </li>
                 <li class="list-group-item tag-2">
-                    <a href="http://blog.zoomquiet.io/tag/pyconchina.html">
-                        PyConChina
-                    </a>
-                </li>
-                <li class="list-group-item tag-2">
-                    <a href="http://blog.zoomquiet.io/tag/zq.html">
-                        ZQ
+                    <a href="http://blog.zoomquiet.io/tag/oss.html">
+                        OSS
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
@@ -763,8 +971,13 @@ no <span class="caps">FUSE</span>-based file systems are running:</p>
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
-                    <a href="http://blog.zoomquiet.io/tag/oss.html">
-                        OSS
+                    <a href="http://blog.zoomquiet.io/tag/zq.html">
+                        ZQ
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://blog.zoomquiet.io/tag/qiniu.html">
+                        qiniu
                     </a>
                 </li>
         </ul>
@@ -830,6 +1043,38 @@ no <span class="caps">FUSE</span>-based file systems are running:</p>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAANDQwNDQ0NDg0ODg4PEA8REREZGRkgICAhISEiIiIkJSMnKCcuMC4xMzEzMzM5Ozk7PTtBQkFCQkJDQ0NERERLTEtVVVVbXltmZmZna2dydnF3d3d9gn2AgICGhoaHh4eIiIiPkI+UmZOZmZmqqqqrsaqzuLK6v7q7u7vFxsXGysbIzMjKzsrMzMzd3d3u7u7///+uXr4hAAAA1UlEQVR42q2T2Q6CMBBFR0VUXHCritQFgXGvnf//Oa2ZNEB4UXrTl97enkxmWnAvcioDRKMtJGwJL0V8duEvWWDqGR4TR4iXfUPgbEBWCjaIj1UzYCchFYDQAgJFYoL4PHF/OVTIG7sEMLEKcAdXCtYkpa+znGQH8XL7nvOyed7VGGVgDEqbqaxD+kh6iOc7V2hjfJfxVYNqKxSRr2VGsl2ukNO85/v1hu1hO6Hch0gLCF+0HBd6yLEfe4jTvuMpp62jBS6GDt4hxnBg3rzX9Kc4FTjXG9Q1UZbZlOQyAAAAAElFTkSuQmCC"/>
         </a>
     </li>
+
+</ul>
+</section>
+<section>
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-asterisk icon-large"></i>Links</h4></li>
+
+    <li class="list-group-item-zip">
+        <a href="http://blog.zhgdg.org/about.html">
+            珠海GDG
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://techparty.org/about/">
+            techpary.org
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://devrel.info/about.html">
+            DevRel.info
+        </a>
+    </li>
+    
+    <li class="list-group-item-zip">
+        <a href="http://yuedulinju.com/">
+            阅读邻居
+        </a>
+    </li>
+
 
 </ul>
 </section>

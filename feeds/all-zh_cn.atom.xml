@@ -91,8 +91,8 @@
 &lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
-&lt;h2 id="issue"&gt;Issue&lt;/h2&gt;
-&lt;p&gt;&lt;span class="caps"&gt;CB3&lt;/span&gt; lununtu-server-&lt;span class="caps"&gt;VGA&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id="issue"&gt;Issue&lt;/h1&gt;
+&lt;p&gt;基于&lt;span class="caps"&gt;CB3&lt;/span&gt;使用 lununtu-server-&lt;span class="caps"&gt;VGA&lt;/span&gt; 操作系统&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;环境:&lt;/li&gt;
 &lt;li&gt;.bashrc&lt;/li&gt;
@@ -119,7 +119,7 @@
 &lt;li&gt;mysql&lt;/li&gt;
 &lt;li&gt;apache&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="todo"&gt;&lt;span class="caps"&gt;TODO&lt;/span&gt;&lt;/h2&gt;
+&lt;h1 id="todo"&gt;&lt;span class="caps"&gt;TODO&lt;/span&gt;&lt;/h1&gt;
 &lt;p&gt;为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;通过 &lt;span class="caps"&gt;USB&lt;/span&gt; 挂接 FreeBSD 格式化的 &lt;span class="caps"&gt;UFS&lt;/span&gt; 分区&lt;/li&gt;
@@ -132,345 +132,427 @@
 &lt;p&gt;…&lt;/p&gt;
 &lt;p&gt;总之,要搾干 &lt;span class="caps"&gt;CB&lt;/span&gt; 的一切潜能!&lt;/p&gt;
 &lt;h2 id="_1"&gt;分析&lt;/h2&gt;
-&lt;h2 id="_2"&gt;过程&lt;/h2&gt;
-&lt;h3 id="nand"&gt;nand*&lt;/h3&gt;
-&lt;p&gt;$ sudo !!
-sudo fdisk -l /dev/nandc&lt;/p&gt;
-&lt;p&gt;Disk /dev/nandc: 5469 &lt;span class="caps"&gt;MB&lt;/span&gt;, 5469372416 bytes
-255 heads, 63 sectors/track, 664 cylinders, total 10682368 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
-Disk identifier: 0x00000000&lt;/p&gt;
-&lt;p&gt;Disk /dev/nandc doesn’t contain a valid partition table&lt;/p&gt;
-&lt;h3 id="_3"&gt;数据迁移&lt;/h3&gt;
-&lt;h3 id="_4"&gt;硬盘加挂&lt;/h3&gt;
-&lt;p&gt;$ cat /proc/partitions
-major minor  #blocks name&lt;/p&gt;
-&lt;p&gt;93        0    7520256 nand
-  93        1      65536 nanda
-  93        2    2097152 nandb
-  93        3    5341184 nandc
-   8        0  976762584 sda
-   8       16 1953514584 sdb
-   8       17     204800 sdb1
-   8       18  781380608 sdb2
-   8       19 1171928064 sdb3&lt;/p&gt;
-&lt;p&gt;sudo mount.exfat-fuse /dev/sdb2 /mnt/bk2wk
-sudo mount.exfat-fuse /dev/sdb3 /mnt/dl4p2p&lt;/p&gt;
+&lt;p&gt;之前类似的系统在 Ubuntu/FreeBSD 上都折腾过,应该没有什么问题的…&lt;/p&gt;
+&lt;p&gt;所以,出了各种问题,用了半个月才断断续续的折腾完!&lt;/p&gt;
+&lt;p&gt;背景:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原先家庭服务器是一台兼容&lt;span class="caps"&gt;PC&lt;/span&gt;, FreeBSD8.2, 4G内存,1T硬盘+30G启动盘, 已经死亡&lt;/li&gt;
+&lt;li&gt;目标环境是:&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;CB3&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;2G 内存&lt;/li&gt;
+&lt;li&gt;2G 启动盘&lt;/li&gt;
+&lt;li&gt;1T 近线2吋盘&lt;/li&gt;
+&lt;li&gt;1T U盘,3吋老盘,恢复数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="_2"&gt;过程&lt;/h1&gt;
+&lt;p&gt;宏观回顾一下要点:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;nand 的系统要选择正确,否则 &lt;span class="caps"&gt;VGA&lt;/span&gt; 是支持不能的&lt;/li&gt;
+&lt;li&gt;不作死不会死,千万别折腾不必要的功能/配置&lt;/li&gt;
+&lt;li&gt;外挂硬盘以及历史数据,如果当初没有想到有迁移的这天只能辛苦人肉搬&lt;/li&gt;
+&lt;li&gt;yum 越来越靠谱了,但是,还是相信 apt 为好&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="cb"&gt;&lt;span class="caps"&gt;CB&lt;/span&gt; 初始化&lt;/h2&gt;
+&lt;p&gt;参考: &lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
+之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
+&lt;h2 id="_3"&gt;系统整顿&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;CB&lt;/span&gt; 自制的 lubuntu 系统,最扯的事儿是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;居然&lt;/span&gt;
+&lt;span class="err"&gt;没有&lt;/span&gt;
+&lt;span class="err"&gt;默认&lt;/span&gt;
+&lt;span class="err"&gt;安装&lt;/span&gt;
+&lt;span class="n"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;真心让俺折腾了很久才发现这么奇葩的设计…&lt;/p&gt;
+&lt;p&gt;然后进行一系列习惯环境的配置, 特别是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一时间快速 axel 以及 &lt;a href="http://wiki.ubuntu.org.cn/Apt-fast"&gt;Apt-fast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;习惯的各种 shell 别名:&lt;/p&gt;
+&lt;p&gt;:::bash
+alias ses=’sudo gedit /etc/apt/sources.list’
+alias acs=’apt-cache search’
+alias agu=’sudo apt-fast update’
+alias agg=’sudo apt-fast upgrade’
+alias agi=’sudo apt-fast install’
+alias agclean=’sudo apt-get clean &amp;amp;&amp;amp; sudo apt-get autoclean’
+alias apse=’aptitude search’
+alias apsh=’sudo aptitude show’
+alias apu=’sudo aptitude update’
+alias apg=’sudo aptitude safe-upgrade’
+alias api=’sudo apt-get install’
+alias aprm=’sudo aptitude remove’
+alias apclean=’sudo aptitude autoclean’
+alias ppaddkey=’sudo apt-key adv —keyserver keyserver.ubuntu.com —recv-keys’&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后,第一时间杀灭预安装的 Apache,MySQL,&lt;span class="caps"&gt;PHP&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://my.oschina.net/sherwayne/blog/108685"&gt;Ubuntu卸载Apache+Mysql+&lt;span class="caps"&gt;PHP&lt;/span&gt; - 徐航的个人页面 - 开源中国社区&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;:::bash
+$ sudo apt-get —purge remove apache2
+$ sudo apt-get —purge remove apache2.2-common
+$ sudo apt-get autoremove apache2
+$ sudo aptitude purge mysql-server mysql-server-5.0
+$ sudo apt-get autoremove php5 
+$ sudo rm -rf /var/lib/mysql&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="utf8"&gt;&lt;span class="caps"&gt;UTF8&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;默认的: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;locale
+&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANG&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="nv"&gt;LC_CTYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NUMERIC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_COLLATE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MONETARY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MESSAGES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_PAPER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_ADDRESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_ALL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://fruit.je/utf-8"&gt;Using &lt;span class="caps"&gt;UTF&lt;/span&gt;-8 in Debian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale"&gt;修改locale - Ubuntu中文&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;重启后依然!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;zoomq@cubietruck:~&lt;span class="nv"&gt;$ &lt;/span&gt;locale
+&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANG&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="nv"&gt;LC_CTYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NUMERIC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_COLLATE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MONETARY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MESSAGES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_PAPER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_ADDRESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_ALL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;但是,从 screen 中进入时,就已经&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;locale
+&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANG&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8
+&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;en_US:en
+&lt;span class="nv"&gt;LC_CTYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NUMERIC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_COLLATE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MONETARY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MESSAGES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_PAPER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_ADDRESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_ALL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;好吧,也算解决,
+目测是因为系统默许不加载用户配置,
+但是,一般俺只在 Screen 光辉中生存的,所以,不是问题.&lt;/p&gt;
+&lt;h2 id="_4"&gt;数据迁移&lt;/h2&gt;
+&lt;p&gt;专门问过高人:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;Quiet&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;quiet&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;shlug&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;shlug&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;googlegroups&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;Mon&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jan&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PM&lt;/span&gt;&lt;/span&gt;
+&lt;span class="n"&gt;subject&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;Tb&lt;/span&gt; &lt;span class="err"&gt;的&lt;/span&gt;&lt;span class="mf"&gt;2.5&lt;/span&gt;&lt;span class="err"&gt;吋盘给&lt;/span&gt; &lt;span class="n"&gt;Ubuntu&lt;/span&gt; &lt;span class="err"&gt;用应该选择什么&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;FS&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;参考: &lt;a href="http://floss.zoomquiet.io/data/20110828225725/index.html"&gt;linux下的文件系统选型 | shell’s home&lt;/a&gt; 以及相关的各种文档,&lt;/p&gt;
+&lt;p&gt;进行了各种尝试,只能说那真是千辛万苦哪:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;老硬盘不格式化&lt;/li&gt;
+&lt;li&gt;lununtu 直接/&lt;span class="caps"&gt;USB&lt;/span&gt;加挂3吋盘&lt;ul&gt;
+&lt;li&gt;无法对 &lt;span class="caps"&gt;UFS&lt;/span&gt; 进行读写&lt;/li&gt;
+&lt;li&gt;无解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;老硬盘格式化&lt;/li&gt;
+&lt;li&gt;购买了2吋 1T盘, etx4 格式化,挂好&lt;/li&gt;
+&lt;li&gt;怎么将老盘的 &lt;span class="caps"&gt;BSD&lt;/span&gt; 文件系统中的数据迁移出来?&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MAC&lt;/span&gt; 挂 &lt;span class="caps"&gt;UFS&lt;/span&gt; ~ 无解&lt;/li&gt;
+&lt;li&gt;Linux 挂 &lt;span class="caps"&gt;UFS&lt;/span&gt; ~ 失败&lt;/li&gt;
+&lt;li&gt;FreeBSD 挂 &lt;span class="caps"&gt;UFS&lt;/span&gt; &lt;/li&gt;
+&lt;li&gt;嚓了! 也失败!&lt;/li&gt;
+&lt;li&gt;这不科学,再换一台&lt;span class="caps"&gt;BSD&lt;/span&gt; ,一下子就成功了!&lt;/li&gt;
+&lt;li&gt;原来是 &lt;span class="caps"&gt;BSD&lt;/span&gt; 8.2 和 9.1 的系统不同导致…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;然后,就变成:&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MAC&lt;/span&gt; 接 1T 的专用U盘(原先用作 TimeMachine 空间的)&lt;/li&gt;
+&lt;li&gt;再用 sshfs 远程挂上机房的 &lt;span class="caps"&gt;BSD&lt;/span&gt; 主机&lt;/li&gt;
+&lt;li&gt;人工识别可用数据,逐一复制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;恢复上线&lt;/li&gt;
+&lt;li&gt;所有数据在 &lt;span class="caps"&gt;MAC&lt;/span&gt; 专用U盘中了&lt;/li&gt;
+&lt;li&gt;回家将老盘用外置U盘接上&lt;/li&gt;
+&lt;li&gt;从 lununtu 中重新分区,格式化为 &lt;code&gt;vfat&lt;/code&gt; &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;这是唯一一个所有系统都良好兼容的文件格式，工具又多&lt;/code&gt; ~ shell909090 曰过&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;然后,同样的通过网络 用 sshfs 挂上 &lt;span class="caps"&gt;CB&lt;/span&gt; 中的所有硬盘&lt;/li&gt;
+&lt;li&gt;人工从 &lt;span class="caps"&gt;MAC&lt;/span&gt; 中灌回…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;整个 700多G 数据,就这样迁移到了 &lt;span class="caps"&gt;CB&lt;/span&gt; 控制的两个硬盘共 2T 空间中…&lt;/p&gt;
+&lt;h3 id="_5"&gt;相关片段&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;proc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;partitions&lt;/span&gt;
+&lt;span class="n"&gt;major&lt;/span&gt; &lt;span class="n"&gt;minor&lt;/span&gt;  &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;blocks&lt;/span&gt;  &lt;span class="n"&gt;name&lt;/span&gt;
+
+  &lt;span class="mi"&gt;93&lt;/span&gt;        &lt;span class="mi"&gt;0&lt;/span&gt;    &lt;span class="mi"&gt;7520256&lt;/span&gt; &lt;span class="n"&gt;nand&lt;/span&gt;
+  &lt;span class="mi"&gt;93&lt;/span&gt;        &lt;span class="mi"&gt;1&lt;/span&gt;      &lt;span class="mi"&gt;65536&lt;/span&gt; &lt;span class="n"&gt;nanda&lt;/span&gt;
+  &lt;span class="mi"&gt;93&lt;/span&gt;        &lt;span class="mi"&gt;2&lt;/span&gt;    &lt;span class="mi"&gt;2097152&lt;/span&gt; &lt;span class="n"&gt;nandb&lt;/span&gt;
+  &lt;span class="mi"&gt;93&lt;/span&gt;        &lt;span class="mi"&gt;3&lt;/span&gt;    &lt;span class="mi"&gt;5341184&lt;/span&gt; &lt;span class="n"&gt;nandc&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;        &lt;span class="mi"&gt;0&lt;/span&gt;  &lt;span class="mi"&gt;976762584&lt;/span&gt; &lt;span class="n"&gt;sda&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="mi"&gt;16&lt;/span&gt; &lt;span class="mi"&gt;1953514584&lt;/span&gt; &lt;span class="n"&gt;sdb&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="mi"&gt;17&lt;/span&gt;     &lt;span class="mi"&gt;204800&lt;/span&gt; &lt;span class="n"&gt;sdb1&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="mi"&gt;18&lt;/span&gt;  &lt;span class="mi"&gt;781380608&lt;/span&gt; &lt;span class="n"&gt;sdb2&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="mi"&gt;19&lt;/span&gt; &lt;span class="mi"&gt;1171928064&lt;/span&gt; &lt;span class="n"&gt;sdb3&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mount&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb2&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mnt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bk2wk&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mount&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb3&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mnt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dl4p2p&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;但是, 远程 sshfs 后目录只读!?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;只能用 root 的远程用户登录…&lt;/li&gt;
 &lt;li&gt;最好用 密匙…&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;/OpenSSH/Keys - Community Ubuntu Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;/OpenSSH/Keys - Community Ubuntu Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;/etc/ssh/sshd_config contains the following lines, and that they are uncommented;&lt;/p&gt;
-&lt;p&gt;PubkeyAuthentication yes
-RSAAuthentication yes&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Permission denied (publickey)&lt;/code&gt; &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# chmod go-w ~/&lt;/span&gt;
-&lt;span class="c"&gt;# chmod 700 ~/.ssh&lt;/span&gt;
-&lt;span class="c"&gt;# chmod 600 ~/.ssh/authorized_keys&lt;/span&gt;
+&lt;h3 id="_6"&gt;外置硬盘盒&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;dmesg&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;grep&lt;/span&gt; &lt;span class="n"&gt;da0&lt;/span&gt;
+&lt;span class="n"&gt;ada0&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;ata4&lt;/span&gt; &lt;span class="n"&gt;bus&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;scbus2&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;lun&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="nl"&gt;ada0:&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;ST3160815AS&lt;/span&gt;&lt;/span&gt; &lt;span class="mf"&gt;3.&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;ADA&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;ATA&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;SATA&lt;/span&gt;&lt;/span&gt; &lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;device&lt;/span&gt;
+&lt;span class="nl"&gt;ada0:&lt;/span&gt; &lt;span class="mf"&gt;300.000&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;MB&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;transfers&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;SATA&lt;/span&gt;&lt;/span&gt; &lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;UDMA5&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PIO&lt;/span&gt;&lt;/span&gt; &lt;span class="mi"&gt;8192&lt;/span&gt;&lt;span class="n"&gt;bytes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nl"&gt;ada0:&lt;/span&gt; &lt;span class="mi"&gt;152587&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;MB&lt;/span&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;312500000&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="n"&gt;byte&lt;/span&gt; &lt;span class="n"&gt;sectors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="mi"&gt;63&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="mi"&gt;16383&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nl"&gt;ada0:&lt;/span&gt; &lt;span class="n"&gt;Previously&lt;/span&gt; &lt;span class="n"&gt;was&lt;/span&gt; &lt;span class="n"&gt;known&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ad8&lt;/span&gt;
+&lt;span class="n"&gt;Trying&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;mount&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;ufs&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ada0s1a&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;rw&lt;/span&gt;&lt;span class="p"&gt;]...&lt;/span&gt;
+&lt;span class="n"&gt;da0&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;umass&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;sim0&lt;/span&gt; &lt;span class="n"&gt;bus&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;scbus6&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;lun&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="nl"&gt;da0:&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;ATA&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;ST2000DL003&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;VT1&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;CC3C&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Fixed&lt;/span&gt; &lt;span class="n"&gt;Direct&lt;/span&gt; &lt;span class="n"&gt;Access&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;SCSI&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="n"&gt;device&lt;/span&gt;
+&lt;span class="nl"&gt;da0:&lt;/span&gt; &lt;span class="mf"&gt;40.000&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;MB&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;transfers&lt;/span&gt;
+&lt;span class="nl"&gt;da0:&lt;/span&gt; &lt;span class="mi"&gt;1907729&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;MB&lt;/span&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3907029168&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="n"&gt;byte&lt;/span&gt; &lt;span class="n"&gt;sectors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="mi"&gt;63&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="mi"&gt;243201&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;gpart&lt;/span&gt; &lt;span class="n"&gt;show&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;da0&lt;/span&gt;
+&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;        &lt;span class="mi"&gt;34&lt;/span&gt;  &lt;span class="mi"&gt;3907029101&lt;/span&gt;  &lt;span class="n"&gt;da0&lt;/span&gt;  &lt;span class="n"&gt;&lt;span class="caps"&gt;GPT&lt;/span&gt;&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.8&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+          &lt;span class="mi"&gt;34&lt;/span&gt;           &lt;span class="mi"&gt;6&lt;/span&gt;       &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;free&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3.0&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+          &lt;span class="mi"&gt;40&lt;/span&gt;         &lt;span class="mi"&gt;128&lt;/span&gt;    &lt;span class="mi"&gt;1&lt;/span&gt;  &lt;span class="n"&gt;freebsd&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;boot&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+         &lt;span class="mi"&gt;168&lt;/span&gt;    &lt;span class="mi"&gt;16777216&lt;/span&gt;    &lt;span class="mi"&gt;2&lt;/span&gt;  &lt;span class="n"&gt;freebsd&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ufs&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;8.0&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="mi"&gt;16777384&lt;/span&gt;  &lt;span class="mi"&gt;3886022656&lt;/span&gt;    &lt;span class="mi"&gt;3&lt;/span&gt;  &lt;span class="n"&gt;freebsd&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ufs&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.8&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="mi"&gt;3902800040&lt;/span&gt;     &lt;span class="mi"&gt;4229094&lt;/span&gt;    &lt;span class="mi"&gt;4&lt;/span&gt;  &lt;span class="n"&gt;freebsd&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;swap&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="mi"&gt;3907029134&lt;/span&gt;           &lt;span class="mi"&gt;1&lt;/span&gt;       &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;free&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;512&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h5 id="gpart"&gt;gpart&lt;/h5&gt;
-&lt;p&gt;&lt;a href="http://blog.sunchangming.com/post/47268338621"&gt;gpt的悲剧 | A programmer’s life&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://docs.oseems.com/general/operatingsystem/linux/recover-lost-partition-table"&gt;How to recover lost partition table using Ubuntu Live &lt;span class="caps"&gt;CD&lt;/span&gt; and gpart&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;$ sudo fdisk -l /dev/sdb&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;WARNING&lt;/span&gt;: &lt;span class="caps"&gt;GPT&lt;/span&gt; (&lt;span class="caps"&gt;GUID&lt;/span&gt; Partition Table) detected on ‘/dev/sdb’! The util fdisk doesn’t support &lt;span class="caps"&gt;GPT&lt;/span&gt;. Use &lt;span class="caps"&gt;GNU&lt;/span&gt; Parted.&lt;/p&gt;
-&lt;p&gt;Disk /dev/sdb: 2000.4 &lt;span class="caps"&gt;GB&lt;/span&gt;, 2000398934016 bytes
-255 heads, 63 sectors/track, 243201 cylinders, total 3907029168 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
-Disk identifier: 0x00000000&lt;/p&gt;
-&lt;p&gt;Device Boot      Start         End      Blocks   Id  System
-/dev/sdb1               1      409639      204819+  ee  &lt;span class="caps"&gt;GPT&lt;/span&gt;
-/dev/sdb2          411648  1563172863   781380608    7  &lt;span class="caps"&gt;HPFS&lt;/span&gt;/&lt;span class="caps"&gt;NTFS&lt;/span&gt;/exFAT
-/dev/sdb3      1563172864  3907028991  1171928064    7 &lt;span class="caps"&gt;HPFS&lt;/span&gt;/&lt;span class="caps"&gt;NTFS&lt;/span&gt;/exFAT&lt;/p&gt;
-&lt;p&gt;$ sudo fdisk -l /dev/sda&lt;/p&gt;
-&lt;p&gt;Disk /dev/sda: 1000.2 &lt;span class="caps"&gt;GB&lt;/span&gt;, 1000204886016 bytes
-255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 4096 bytes
-I/O size (minimum/optimal): 4096 bytes / 4096 bytes
-Disk identifier: 0x00000000&lt;/p&gt;
-&lt;p&gt;Disk /dev/sda doesn’t contain a valid partition table&lt;/p&gt;
-&lt;h3 id="_5"&gt;外置硬盘盒&lt;/h3&gt;
-&lt;p&gt;$ dmesg |grep umass
-umass0: &lt;norelsys 0="" 0,="" 1.00,="" 2="" 2.10="" addr="" class="" ns1066,="" rev=""&gt; on usbus6
-umass0:  &lt;span class="caps"&gt;SCSI&lt;/span&gt; over Bulk-Only; quirks = 0x0100
-umass0:6:0:-1: Attached to scbus6
-(probe0:umass-sim0:0:0:0): &lt;span class="caps"&gt;REPORT&lt;/span&gt; &lt;span class="caps"&gt;LUNS&lt;/span&gt;. &lt;span class="caps"&gt;CDB&lt;/span&gt;: a0 0 0 0 0 0 0 0 0 10 0 0
-(probe0:umass-sim0:0:0:0): &lt;span class="caps"&gt;CAM&lt;/span&gt; status: &lt;span class="caps"&gt;SCSI&lt;/span&gt; Status Error
-(probe0:umass-sim0:0:0:0): &lt;span class="caps"&gt;SCSI&lt;/span&gt; status: Check Condition
-(probe0:umass-sim0:0:0:0): &lt;span class="caps"&gt;SCSI&lt;/span&gt; sense: &lt;span class="caps"&gt;ILLEGAL&lt;/span&gt; &lt;span class="caps"&gt;REQUEST&lt;/span&gt; asc:20,0 (Invalid command operation code)
-da0 at umass-sim0 bus 0 scbus6 target 0 lun 0&lt;/norelsys&gt;&lt;/p&gt;
-&lt;p&gt;$ dmesg | grep da0
-ada0 at ata4 bus 0 scbus2 target 0 lun 0
-ada0: &lt;st3160815as 3.ada=""&gt; &lt;span class="caps"&gt;ATA&lt;/span&gt;-7 &lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x device
-ada0: 300.&lt;span class="caps"&gt;000MB&lt;/span&gt;/s transfers (&lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x, &lt;span class="caps"&gt;UDMA5&lt;/span&gt;, &lt;span class="caps"&gt;PIO&lt;/span&gt; 8192bytes)
-ada0: &lt;span class="caps"&gt;152587MB&lt;/span&gt; (312500000 512 byte sectors: 16H 63S/T 16383C)
-ada0: Previously was known as ad8
-Trying to mount root from ufs:/dev/ada0s1a [rw]…
-da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
-da0: &lt;ata cc3c="" st2000dl003-9vt1=""&gt; Fixed Direct Access &lt;span class="caps"&gt;SCSI&lt;/span&gt;-6 device
-da0: 40.&lt;span class="caps"&gt;000MB&lt;/span&gt;/s transfers
-da0: &lt;span class="caps"&gt;1907729MB&lt;/span&gt; (3907029168 512 byte sectors: 255H 63S/T 243201C)&lt;/ata&gt;&lt;/st3160815as&gt;&lt;/p&gt;
-&lt;p&gt;$ gpart show /dev/da0
-=&amp;gt;        34  3907029101  da0  &lt;span class="caps"&gt;GPT&lt;/span&gt;  (1.8T)
-          34           6       - free -  (3.0k)
-          40         128    1  freebsd-boot  (64k)
-         168    16777216    2  freebsd-ufs  (8.0G)
-    16777384  3886022656    3  freebsd-ufs  (1.8T)
-  3902800040     4229094    4  freebsd-swap  (2.0G)
-  3907029134           1       - free - (512B)&lt;/p&gt;
-&lt;h2 id="hhd"&gt;&lt;span class="caps"&gt;HHD&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;Disk /dev/sda: 1000.2 &lt;span class="caps"&gt;GB&lt;/span&gt;, 1000204886016 bytes
-255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 4096 bytes
-I/O size (minimum/optimal): 4096 bytes / 4096 bytes
-Disk identifier: 0x00000000&lt;/p&gt;
-&lt;p&gt;Disk /dev/sda doesn’t contain a valid partition table&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;WARNING&lt;/span&gt;: &lt;span class="caps"&gt;GPT&lt;/span&gt; (&lt;span class="caps"&gt;GUID&lt;/span&gt; Partition Table) detected on ‘/dev/sdb’! The util fdisk doesn’t support &lt;span class="caps"&gt;GPT&lt;/span&gt;. Use &lt;span class="caps"&gt;GNU&lt;/span&gt; Parted.&lt;/p&gt;
-&lt;p&gt;Disk /dev/sdb: 2000.4 &lt;span class="caps"&gt;GB&lt;/span&gt;, 2000398934016 bytes
-256 heads, 63 sectors/track, 242251 cylinders, total 3907029168 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
-Disk identifier: 0x00000000&lt;/p&gt;
-&lt;p&gt;Device Boot      Start         End      Blocks   Id  System
-/dev/sdb1   *           1  3907029167  1953514583+  ee &lt;span class="caps"&gt;GPT&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;$ cat /proc/partitions
-major minor  #blocks name&lt;/p&gt;
-&lt;p&gt;93        0    7520256 nand
-  93        1      65536 nanda
-  93        2    2097152 nandb
-  93        3    5341184 nandc
-   8        0  976762584 sda
-   8       16 1953514584 sdb
-   8       17         64 sdb1
-   8       18    8388608 sdb2
-   8       19 1943011328 sdb3
-   8       20    2114547 sdb4&lt;/p&gt;
-&lt;h3 id="ufs"&gt;&lt;span class="caps"&gt;UFS&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://forums.fedoraforum.org/showthread.php?t=285255"&gt;mount external partition - FedoraForum.org&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;$ ll /lib/modules/3.4.61+/kernel/fs/
-total 20
-drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 exportfs
-drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 jffs2
-drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 nfsd
-drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 squashfs
-drwxrwxr-x 2 1003 1003 4096 Nov 12 12:24 ubifs&lt;/p&gt;
-&lt;h3 id="sata"&gt;&lt;span class="caps"&gt;SATA&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;$ dmesg | grep ada
-ada0 at ata4 bus 0 scbus2 target 0 lun 0
-ada0: &lt;st3160815as 3.ada=""&gt; &lt;span class="caps"&gt;ATA&lt;/span&gt;-7 &lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x device
-ada0: 300.&lt;span class="caps"&gt;000MB&lt;/span&gt;/s transfers (&lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x, &lt;span class="caps"&gt;UDMA5&lt;/span&gt;, &lt;span class="caps"&gt;PIO&lt;/span&gt; 8192bytes)
-ada0: &lt;span class="caps"&gt;152587MB&lt;/span&gt; (312500000 512 byte sectors: 16H 63S/T 16383C)
-ada0: Previously was known as ad8
-ada1 at ata5 bus 0 scbus3 target 0 lun 0
-ada1: &lt;st2000dl003-9vt166 cc3c=""&gt; &lt;span class="caps"&gt;ATA&lt;/span&gt;-8 &lt;span class="caps"&gt;SATA&lt;/span&gt; 3.x device
-ada1: 300.&lt;span class="caps"&gt;000MB&lt;/span&gt;/s transfers (&lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x, &lt;span class="caps"&gt;UDMA5&lt;/span&gt;, &lt;span class="caps"&gt;PIO&lt;/span&gt; 8192bytes)
-ada1: &lt;span class="caps"&gt;1907729MB&lt;/span&gt; (3907029168 512 byte sectors: 16H 63S/T 16383C)
-ada1: Previously was known as ad10
-Trying to mount root from ufs:/dev/ada0s1a [rw]…&lt;/st2000dl003-9vt166&gt;&lt;/st3160815as&gt;&lt;/p&gt;
-&lt;p&gt;$ gpart show /dev/ada1
-=&amp;gt;        34  3907029101  ada1  &lt;span class="caps"&gt;GPT&lt;/span&gt;  (1.8T)
-          34           6        - free -  (3.0k)
-          40         128     1  freebsd-boot  (64k)
-         168    16777216     2  freebsd-ufs  (8.0G)
-    16777384  3886022656     3  freebsd-ufs  (1.8T)
-  3902800040     4229094     4  freebsd-swap  (2.0G)
-  3907029134           1        - free - (512B)&lt;/p&gt;
-&lt;p&gt;$ sudo mount /dev/ada1p3 /mnt/ada1
-mount: /dev/ada1p3 : Operation not permitted&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;BIOS&lt;/span&gt; 配置好打开对应的 &lt;span class="caps"&gt;SATA&lt;/span&gt; 接口,
-进入系统后:
-$ gpart show /dev/ada1
-=&amp;gt;        34  3907029101  ada1  &lt;span class="caps"&gt;GPT&lt;/span&gt;  (1.8T)
-          34           6        - free -  (3.0k)
-          40         128     1  freebsd-boot  (64k)
-         168    16777216     2  freebsd-ufs  (8.0G)
-    16777384  3886022656     3  freebsd-ufs  (1.8T)
-  3902800040     4229094     4  freebsd-swap  (2.0G)
-  3907029134           1        - free - (512B)&lt;/p&gt;
-&lt;p&gt;$ ls /dev/ada*
-/dev/ada0     /dev/ada0s1   /dev/ada0s1a  /dev/ada0s1b  /dev/ada1
-/dev/ada1p1   /dev/ada1p2   /dev/ada1p3 /dev/ada1p4&lt;/p&gt;
-&lt;p&gt;这是系统盘:
-$ gpart show /dev/ada0
-=&amp;gt;       63  312499937  ada0  &lt;span class="caps"&gt;MBR&lt;/span&gt;  (149G)
-         63  312475590     1  freebsd  [active]  (149G)
-  312475653      24347        - free - (11M)&lt;/p&gt;
-&lt;p&gt;$ sudo mount /dev/ada1p3 /mnt/ada1
-mount: /dev/ada1p3 : Operation not permitted&lt;/p&gt;
-&lt;p&gt;这就不明白了,,,
-目测是 &lt;span class="caps"&gt;UFS&lt;/span&gt; 格式也有不同的?!&lt;/p&gt;
-&lt;p&gt;$ brew link fuse4x
-Linking /usr/local/Cellar/fuse4x/0.9.2… Warning: Could not link fuse4x. Unlinking…&lt;/p&gt;
-&lt;p&gt;Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
-Target /usr/local/lib/pkgconfig/fuse.pc already exists. You may need to delete it.
-To force the link and overwrite all other conflicting files, do:
-  brew link —overwrite formula_name&lt;/p&gt;
-&lt;p&gt;To list all files that would be deleted:
-  brew link —overwrite —dry-run formula_name&lt;/p&gt;
-&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in /usr/local/lib
-$ brew link —overwrite fuse4x
-Linking /usr/local/Cellar/fuse4x/0.9.2… 7 symlinks created&lt;/p&gt;
-&lt;p&gt;$ brew install osxfuse
-==&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz&lt;/p&gt;
-&lt;h6 id="1000"&gt;################################################################## 100.0%&lt;/h6&gt;
-&lt;p&gt;==&amp;gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
-==&amp;gt; Caveats
-If upgrading from a previous version of osxfuse, the previous kernel extension
-will need to be unloaded before installing the new version. First, check that
-no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:&lt;/p&gt;
-&lt;p&gt;mount -t osxfusefs&lt;/p&gt;
-&lt;p&gt;Unmount all &lt;span class="caps"&gt;FUSE&lt;/span&gt; file systems and then unload the kernel extension:&lt;/p&gt;
-&lt;p&gt;sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs&lt;/p&gt;
-&lt;p&gt;The new osxfuse file system bundle needs to be installed by the root user:&lt;/p&gt;
-&lt;p&gt;sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.2/Library/Filesystems/osxfusefs.fs /Library/Filesystems
-  sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
-==&amp;gt; Summary
-🍺  /usr/local/Cellar/osxfuse/2.6.2: 84 files, 5.0M&lt;/p&gt;
-&lt;h3 id="_6"&gt;重新外置&lt;/h3&gt;
-&lt;h4 id="exfat"&gt;exFAT&lt;/h4&gt;
-&lt;p&gt;$ cat /etc/lsb-release.bk
-DISTRIB_ID=Linaro
-DISTRIB_RELEASE=13.08
-DISTRIB_CODENAME=raring
-DISTRIB_DESCRIPTION=”Linaro 13.08”&lt;/p&gt;
-&lt;p&gt;$ sudo vi /etc/lsb-release
-DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=13.04
-DISTRIB_CODENAME=raring
-DISTRIB_DESCRIPTION=”Ubuntu 13.04”&lt;/p&gt;
-&lt;p&gt;$ sudo apt-add-repository ppa:relan/exfat
-你将向系统添加如下 &lt;span class="caps"&gt;PPA&lt;/span&gt;：
- &lt;span class="caps"&gt;PPA&lt;/span&gt; for the free exFAT file system implementation project: http://code.google.com/p/exfat/
- 更多信息： https://launchpad.net/~relan/+archive/exfat
-按回车继续或者 Ctrl+c 取消添加&lt;/p&gt;
-&lt;p&gt;gpg: 钥匙环‘/tmp/tmppjaczn/secring.gpg’已建立
-gpg: 钥匙环‘/tmp/tmppjaczn/pubring.gpg’已建立
-gpg: 下载密钥‘&lt;span class="caps"&gt;A252A784&lt;/span&gt;’，从 hkp 服务器 keyserver.ubuntu.com
-gpg: /tmp/tmppjaczn/trustdb.gpg：建立了信任度数据库
-gpg: 密钥 &lt;span class="caps"&gt;A252A784&lt;/span&gt;：公钥“Launchpad Free exFAT file system implementation”已导入
-gpg: 合计被处理的数量：1
-gpg:               已导入：1  (&lt;span class="caps"&gt;RSA&lt;/span&gt;: 1) &lt;span class="caps"&gt;OK&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;$ acs exfat
-exfat-fuse - read and write exFAT driver for &lt;span class="caps"&gt;FUSE&lt;/span&gt;
-exfat-utils - utilities to create, check, label and dump exFAT filesystem&lt;/p&gt;
-&lt;p&gt;$ agi exfat-fuse&lt;/p&gt;
-&lt;p&gt;Working… this may take a while.&lt;/p&gt;
-&lt;h1 id="apt-fast-mirror-list-mon-jan-27-164210-utc-2014"&gt;apt-fast mirror list: Mon Jan 27 16:42:10 &lt;span class="caps"&gt;UTC&lt;/span&gt; 2014&lt;/h1&gt;
-&lt;p&gt;http://ports.ubuntu.com/ubuntu-ports/pool/universe/f/fuse-exfat/exfat-fuse_1.0.1-1_armhf.deb
- checksum=md5=fcacfbade2df1f97d72ba9912961883f
- out=exfat-fuse_1.0.1-1_armhf.deb
-http://ports.ubuntu.com/ubuntu-ports/pool/universe/e/exfat-utils/exfat-utils_1.0.1-1_armhf.deb
- checksum=md5=ef8bc2e59569645b7140e930e81809f3
- out=exfat-utils_1.0.1-1_armhf.deb …&lt;/p&gt;
-&lt;p&gt;下载结果：
-gid   |stat|avg speed  |path/&lt;span class="caps"&gt;URI&lt;/span&gt;
-======+====+===========+=======================================================
-07028f|&lt;span class="caps"&gt;OK&lt;/span&gt;  |    66KiB/s|/var/cache/apt/archives/apt-fast/exfat-fuse_1.0.1-1_armhf.deb
-e4fa30|&lt;span class="caps"&gt;OK&lt;/span&gt;  | 40KiB/s|/var/cache/apt/archives/apt-fast/exfat-utils_1.0.1-1_armhf.deb&lt;/p&gt;
-&lt;p&gt;状态标识：
-(&lt;span class="caps"&gt;OK&lt;/span&gt;)：完成下载。
-正在读取软件包列表… 完成
-正在分析软件包的依赖关系树
-正在读取状态信息… 完成
-将会安装下列额外的软件包：
-  exfat-utils
-下列【新】软件包将被安装：
-  exfat-fuse exfat-utils
-升级了 0 个软件包，新安装了 2 个软件包，要卸载 0 个软件包，有 1 个软件包未被升级。
-需要下载 0 B/80.7 kB 的软件包。
-解压缩后会消耗掉 248 kB 的额外空间。
-您希望继续执行吗？[Y/n]
-【警告】：下列软件包不能通过验证！
-  exfat-fuse exfat-utils
-忽略了认证警告。
-Selecting previously unselected package exfat-fuse.
-(正在读取数据库 … 系统当前共安装有 27896 个文件和目录。)
-正在解压缩 exfat-fuse (从 …/exfat-fuse_1.0.1-1_armhf.deb) …
-Selecting previously unselected package exfat-utils.
-正在解压缩 exfat-utils (从 …/exfat-utils_1.0.1-1_armhf.deb) …
-正在处理用于 man-db 的触发器…
-正在设置 exfat-fuse (1.0.1-1) …
-正在设置 exfat-utils (1.0.1-1) …&lt;/p&gt;
-&lt;p&gt;$ sudo fdisk -l /dev/sdb&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;WARNING&lt;/span&gt;: &lt;span class="caps"&gt;GPT&lt;/span&gt; (&lt;span class="caps"&gt;GUID&lt;/span&gt; Partition Table) detected on ‘/dev/sdb’! The util fdisk doesn’t support &lt;span class="caps"&gt;GPT&lt;/span&gt;. Use &lt;span class="caps"&gt;GNU&lt;/span&gt; Parted.&lt;/p&gt;
-&lt;p&gt;Disk /dev/sdb: 2000.4 &lt;span class="caps"&gt;GB&lt;/span&gt;, 2000398934016 bytes
-255 heads, 63 sectors/track, 243201 cylinders, total 3907029168 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
-Disk identifier: 0x00000000&lt;/p&gt;
-&lt;p&gt;Device Boot      Start         End      Blocks   Id  System
-/dev/sdb1               1      409639      204819+  ee  &lt;span class="caps"&gt;GPT&lt;/span&gt;
-/dev/sdb2          411648  1563172863   781380608    7  &lt;span class="caps"&gt;HPFS&lt;/span&gt;/&lt;span class="caps"&gt;NTFS&lt;/span&gt;/exFAT
-/dev/sdb3      1563172864  3907028991  1171928064    7 &lt;span class="caps"&gt;HPFS&lt;/span&gt;/&lt;span class="caps"&gt;NTFS&lt;/span&gt;/exFAT&lt;/p&gt;
-&lt;h2 id="_7"&gt;系统硬盘&lt;/h2&gt;
-&lt;p&gt;$ sudo fdisk -l /dev/sda&lt;/p&gt;
-&lt;p&gt;Disk /dev/sda: 1000.2 &lt;span class="caps"&gt;GB&lt;/span&gt;, 1000204886016 bytes
-255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 4096 bytes
-I/O size (minimum/optimal): 4096 bytes / 4096 bytes
-Disk identifier: 0x00000000&lt;/p&gt;
-&lt;p&gt;Disk /dev/sda doesn’t contain a valid partition table&lt;/p&gt;
-&lt;h3 id="fdisk"&gt;fdisk&lt;/h3&gt;
+&lt;h3 id="sshfs"&gt;伟光大的 sshfs&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;fuse4x&lt;/span&gt;
+&lt;span class="n"&gt;Linking&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;0.9.2&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Warning&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Could&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Unlinking&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+
+&lt;span class="nl"&gt;Error:&lt;/span&gt; &lt;span class="n"&gt;Could&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;symlink&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;0.9.2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pkgconfig&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pc&lt;/span&gt;
+&lt;span class="n"&gt;Target&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pkgconfig&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pc&lt;/span&gt; &lt;span class="n"&gt;already&lt;/span&gt; &lt;span class="n"&gt;exists&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;may&lt;/span&gt; &lt;span class="n"&gt;need&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;delete&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;force&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;overwrite&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="n"&gt;other&lt;/span&gt; &lt;span class="n"&gt;conflicting&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;overwrite&lt;/span&gt; &lt;span class="n"&gt;formula_name&lt;/span&gt;
+
+&lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;would&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;deleted&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;overwrite&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;dry&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;formula_name&lt;/span&gt;
+
+&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;overwrite&lt;/span&gt; &lt;span class="n"&gt;fuse4x&lt;/span&gt;
+&lt;span class="n"&gt;Linking&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;0.9.2&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="n"&gt;symlinks&lt;/span&gt; &lt;span class="n"&gt;created&lt;/span&gt;
+
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;osxfuse&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Downloading&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Pouring&lt;/span&gt; &lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.6.2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mavericks&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bottle&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Caveats&lt;/span&gt;
+&lt;span class="n"&gt;If&lt;/span&gt; &lt;span class="n"&gt;upgrading&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;previous&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;previous&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="n"&gt;extension&lt;/span&gt;
+&lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;need&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;unloaded&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="n"&gt;installing&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;First&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;check&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt;
+&lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;FUSE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;based&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;systems&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;running&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+
+  &lt;span class="n"&gt;mount&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;osxfusefs&lt;/span&gt;
+
+&lt;span class="n"&gt;Unmount&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;FUSE&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;systems&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;then&lt;/span&gt; &lt;span class="n"&gt;unload&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="n"&gt;extension&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;kextunload&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filesystems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;osxfusefs&lt;/span&gt;
+
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;osxfuse&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt; &lt;span class="n"&gt;bundle&lt;/span&gt; &lt;span class="n"&gt;needs&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cp&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;RfX&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2.6.2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Filesystems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfusefs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Filesystems&lt;/span&gt;
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Filesystems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfusefs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Support&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;load_osxfusefs&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Summary&lt;/span&gt;
+&lt;span class="err"&gt;🍺&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2.6.2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;84&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;5.0&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="exfat"&gt;exFAT&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lsb&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;release&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bk&lt;/span&gt;
+&lt;span class="n"&gt;DISTRIB_ID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Linaro&lt;/span&gt;
+&lt;span class="n"&gt;DISTRIB_RELEASE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;13.08&lt;/span&gt;
+&lt;span class="n"&gt;DISTRIB_CODENAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;raring&lt;/span&gt;
+&lt;span class="n"&gt;DISTRIB_DESCRIPTION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"Linaro 13.08"&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;vi&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lsb&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;release&lt;/span&gt;
+&lt;span class="n"&gt;DISTRIB_ID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Ubuntu&lt;/span&gt;
+&lt;span class="n"&gt;DISTRIB_RELEASE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;13.04&lt;/span&gt;
+&lt;span class="n"&gt;DISTRIB_CODENAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;raring&lt;/span&gt;
+&lt;span class="n"&gt;DISTRIB_DESCRIPTION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"Ubuntu 13.04"&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;repository&lt;/span&gt; &lt;span class="n"&gt;ppa&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;relan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;exfat&lt;/span&gt;
+&lt;span class="err"&gt;你将向系统添加如下&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PPA&lt;/span&gt;&lt;/span&gt;&lt;span class="err"&gt;：&lt;/span&gt;
+ &lt;span class="n"&gt;&lt;span class="caps"&gt;PPA&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;free&lt;/span&gt; &lt;span class="n"&gt;exFAT&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt; &lt;span class="n"&gt;implementation&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//code.google.com/p/exfat/&lt;/span&gt;
+ &lt;span class="err"&gt;更多信息：&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//launchpad.net/~relan/+archive/exfat&lt;/span&gt;
+&lt;span class="err"&gt;按回车继续或者&lt;/span&gt; &lt;span class="n"&gt;Ctrl&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;取消添加&lt;/span&gt;
+
+&lt;span class="nl"&gt;gpg:&lt;/span&gt; &lt;span class="err"&gt;钥匙环‘&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmppjaczn&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;secring&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="err"&gt;’已建立&lt;/span&gt;
+&lt;span class="nl"&gt;gpg:&lt;/span&gt; &lt;span class="err"&gt;钥匙环‘&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmppjaczn&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pubring&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="err"&gt;’已建立&lt;/span&gt;
+&lt;span class="nl"&gt;gpg:&lt;/span&gt; &lt;span class="err"&gt;下载密钥‘&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;A252A784&lt;/span&gt;&lt;/span&gt;&lt;span class="err"&gt;’，从&lt;/span&gt; &lt;span class="n"&gt;hkp&lt;/span&gt; &lt;span class="err"&gt;服务器&lt;/span&gt; &lt;span class="n"&gt;keyserver&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ubuntu&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+&lt;span class="nl"&gt;gpg:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmppjaczn&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trustdb&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="err"&gt;：建立了信任度数据库&lt;/span&gt;
+&lt;span class="nl"&gt;gpg:&lt;/span&gt; &lt;span class="err"&gt;密钥&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;A252A784&lt;/span&gt;&lt;/span&gt;&lt;span class="err"&gt;：公钥“&lt;/span&gt;&lt;span class="n"&gt;Launchpad&lt;/span&gt; &lt;span class="n"&gt;Free&lt;/span&gt; &lt;span class="n"&gt;exFAT&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt; &lt;span class="n"&gt;implementation&lt;/span&gt;&lt;span class="err"&gt;”已导入&lt;/span&gt;
+&lt;span class="nl"&gt;gpg:&lt;/span&gt; &lt;span class="err"&gt;合计被处理的数量：&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nl"&gt;gpg:&lt;/span&gt;               &lt;span class="err"&gt;已导入：&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;&lt;/span&gt;
+
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;acs&lt;/span&gt; &lt;span class="n"&gt;exfat&lt;/span&gt;
+&lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;write&lt;/span&gt; &lt;span class="n"&gt;exFAT&lt;/span&gt; &lt;span class="n"&gt;driver&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;FUSE&lt;/span&gt;&lt;/span&gt;
+&lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;utilities&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;check&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;dump&lt;/span&gt; &lt;span class="n"&gt;exFAT&lt;/span&gt; &lt;span class="n"&gt;filesystem&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;agi&lt;/span&gt; &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt;
+
+ &lt;span class="n"&gt;Working&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;may&lt;/span&gt; &lt;span class="n"&gt;take&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="cp"&gt;# apt-fast mirror list: Mon Jan 27 16:42:10 &lt;span class="caps"&gt;UTC&lt;/span&gt; 2014&lt;/span&gt;
+&lt;span class="nl"&gt;http:&lt;/span&gt;&lt;span class="c1"&gt;//ports.ubuntu.com/ubuntu-ports/pool/universe/f/fuse-exfat/exfat-fuse_1.0.1-1_armhf.deb&lt;/span&gt;
+ &lt;span class="n"&gt;checksum&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;md5&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;fcacfbade2df1f97d72ba9912961883f&lt;/span&gt;
+ &lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse_1&lt;/span&gt;&lt;span class="mf"&gt;.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_armhf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;
+&lt;span class="nl"&gt;http:&lt;/span&gt;&lt;span class="c1"&gt;//ports.ubuntu.com/ubuntu-ports/pool/universe/e/exfat-utils/exfat-utils_1.0.1-1_armhf.deb&lt;/span&gt;
+ &lt;span class="n"&gt;checksum&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;md5&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ef8bc2e59569645b7140e930e81809f3&lt;/span&gt;
+ &lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils_1&lt;/span&gt;&lt;span class="mf"&gt;.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_armhf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+
+&lt;span class="err"&gt;下载结果：&lt;/span&gt;
+&lt;span class="n"&gt;gid&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;stat&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;avg&lt;/span&gt; &lt;span class="n"&gt;speed&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;URI&lt;/span&gt;&lt;/span&gt;
+&lt;span class="o"&gt;======+====+===========+=======================================================&lt;/span&gt;
+&lt;span class="mf"&gt;07028f&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;    &lt;span class="mi"&gt;66&lt;/span&gt;&lt;span class="n"&gt;KiB&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;|/&lt;/span&gt;&lt;span class="n"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;archives&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fast&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse_1&lt;/span&gt;&lt;span class="mf"&gt;.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_armhf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;
+&lt;span class="n"&gt;e4fa30&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;    &lt;span class="mi"&gt;40&lt;/span&gt;&lt;span class="n"&gt;KiB&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;|/&lt;/span&gt;&lt;span class="n"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;archives&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fast&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils_1&lt;/span&gt;&lt;span class="mf"&gt;.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_armhf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;
+
+&lt;span class="err"&gt;状态标识：&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;：完成下载。&lt;/span&gt;
+&lt;span class="err"&gt;正在读取软件包列表&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="err"&gt;完成&lt;/span&gt;
+&lt;span class="err"&gt;正在分析软件包的依赖关系树&lt;/span&gt;
+&lt;span class="err"&gt;正在读取状态信息&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="err"&gt;完成&lt;/span&gt;
+&lt;span class="err"&gt;将会安装下列额外的软件包：&lt;/span&gt;
+  &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils&lt;/span&gt;
+&lt;span class="err"&gt;下列【新】软件包将被安装：&lt;/span&gt;
+  &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt; &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils&lt;/span&gt;
+&lt;span class="err"&gt;升级了&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="err"&gt;个软件包，新安装了&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;个软件包，要卸载&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="err"&gt;个软件包，有&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="err"&gt;个软件包未被升级。&lt;/span&gt;
+&lt;span class="err"&gt;需要下载&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;80.7&lt;/span&gt; &lt;span class="n"&gt;kB&lt;/span&gt; &lt;span class="err"&gt;的软件包。&lt;/span&gt;
+&lt;span class="err"&gt;解压缩后会消耗掉&lt;/span&gt; &lt;span class="mi"&gt;248&lt;/span&gt; &lt;span class="n"&gt;kB&lt;/span&gt; &lt;span class="err"&gt;的额外空间。&lt;/span&gt;
+&lt;span class="err"&gt;您希望继续执行吗？&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="err"&gt;【警告】：下列软件包不能通过验证！&lt;/span&gt;
+  &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt; &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils&lt;/span&gt;
+&lt;span class="err"&gt;忽略了认证警告。&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;正在读取数据库&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="err"&gt;系统当前共安装有&lt;/span&gt; &lt;span class="mi"&gt;27896&lt;/span&gt; &lt;span class="err"&gt;个文件和目录。&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;正在解压缩&lt;/span&gt; &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;从&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse_1&lt;/span&gt;&lt;span class="mf"&gt;.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_armhf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;正在解压缩&lt;/span&gt; &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;从&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils_1&lt;/span&gt;&lt;span class="mf"&gt;.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_armhf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="err"&gt;正在处理用于&lt;/span&gt; &lt;span class="n"&gt;man&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt; &lt;span class="err"&gt;的触发器&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="err"&gt;正在设置&lt;/span&gt; &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="err"&gt;正在设置&lt;/span&gt; &lt;span class="n"&gt;exfat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;fdisk&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb&lt;/span&gt;
+
+&lt;span class="nl"&gt;&lt;span class="caps"&gt;WARNING&lt;/span&gt;:&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;GPT&lt;/span&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;GUID&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;Partition&lt;/span&gt; &lt;span class="n"&gt;Table&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;detected&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;util&lt;/span&gt; &lt;span class="n"&gt;fdisk&lt;/span&gt; &lt;span class="n"&gt;doesn&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;GPT&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Use&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;GNU&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;Parted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+
+&lt;span class="n"&gt;Disk&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;2000.4&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;GB&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2000398934016&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt;
+&lt;span class="mi"&gt;255&lt;/span&gt; &lt;span class="n"&gt;heads&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;63&lt;/span&gt; &lt;span class="n"&gt;sectors&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;track&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;243201&lt;/span&gt; &lt;span class="n"&gt;cylinders&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="mi"&gt;3907029168&lt;/span&gt; &lt;span class="n"&gt;sectors&lt;/span&gt;
+&lt;span class="n"&gt;Units&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sectors&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt;
+&lt;span class="n"&gt;Sector&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;logical&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;physical&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt;
+&lt;span class="n"&gt;I&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;minimum&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;optimal&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt;
+&lt;span class="n"&gt;Disk&lt;/span&gt; &lt;span class="n"&gt;identifier&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;0x00000000&lt;/span&gt;
+
+   &lt;span class="n"&gt;Device&lt;/span&gt; &lt;span class="n"&gt;Boot&lt;/span&gt;      &lt;span class="n"&gt;Start&lt;/span&gt;         &lt;span class="n"&gt;End&lt;/span&gt;      &lt;span class="n"&gt;Blocks&lt;/span&gt;   &lt;span class="n"&gt;Id&lt;/span&gt;  &lt;span class="n"&gt;System&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb1&lt;/span&gt;               &lt;span class="mi"&gt;1&lt;/span&gt;      &lt;span class="mi"&gt;409639&lt;/span&gt;      &lt;span class="mi"&gt;204819&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;  &lt;span class="n"&gt;ee&lt;/span&gt;  &lt;span class="n"&gt;&lt;span class="caps"&gt;GPT&lt;/span&gt;&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb2&lt;/span&gt;          &lt;span class="mi"&gt;411648&lt;/span&gt;  &lt;span class="mi"&gt;1563172863&lt;/span&gt;   &lt;span class="mi"&gt;781380608&lt;/span&gt;    &lt;span class="mi"&gt;7&lt;/span&gt;  &lt;span class="n"&gt;&lt;span class="caps"&gt;HPFS&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;NTFS&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;exFAT&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb3&lt;/span&gt;      &lt;span class="mi"&gt;1563172864&lt;/span&gt;  &lt;span class="mi"&gt;3907028991&lt;/span&gt;  &lt;span class="mi"&gt;1171928064&lt;/span&gt;    &lt;span class="mi"&gt;7&lt;/span&gt;  &lt;span class="n"&gt;&lt;span class="caps"&gt;HPFS&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;NTFS&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;exFAT&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="_7"&gt;系统硬盘&lt;/h3&gt;
+&lt;p&gt;观察:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;fdisk&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sda&lt;/span&gt;
+
+&lt;span class="n"&gt;Disk&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sda&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;1000.2&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;GB&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1000204886016&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt;
+&lt;span class="mi"&gt;255&lt;/span&gt; &lt;span class="n"&gt;heads&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;63&lt;/span&gt; &lt;span class="n"&gt;sectors&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;track&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;121601&lt;/span&gt; &lt;span class="n"&gt;cylinders&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="mi"&gt;1953525168&lt;/span&gt; &lt;span class="n"&gt;sectors&lt;/span&gt;
+&lt;span class="n"&gt;Units&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sectors&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt;
+&lt;span class="n"&gt;Sector&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;logical&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;physical&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;4096&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt;
+&lt;span class="n"&gt;I&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;minimum&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;optimal&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4096&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;4096&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt;
+&lt;span class="n"&gt;Disk&lt;/span&gt; &lt;span class="n"&gt;identifier&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;0x00000000&lt;/span&gt;
+
+&lt;span class="n"&gt;Disk&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sda&lt;/span&gt; &lt;span class="n"&gt;doesn&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;contain&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;valid&lt;/span&gt; &lt;span class="n"&gt;partition&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;参考:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.liusuping.com/ubuntu-linux/linux-fdisk-disk.html"&gt;使用fdisk命令对linux硬盘进行操作 - Linux/Unix - 刘苏平的博客&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://blog.itpub.net/26686207/viewspace-765782/"&gt;多硬盘分区管理fdisk-张丹-leonarding-&lt;span class="caps"&gt;ITPUB&lt;/span&gt;博客&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="etx4"&gt;etx4&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://floss.zoomquiet.io/data/20110828225725/index.html"&gt;linux下的文件系统选型 | shell’s home&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;$ sudo mkfs.ext4 /dev/sda3&lt;/p&gt;
-&lt;h3 id="_8"&gt;自动挂接&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;cubietruck&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mnt&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ll&lt;/span&gt;
-&lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
-&lt;span class="n"&gt;drwxr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="mi"&gt;4096&lt;/span&gt; &lt;span class="n"&gt;Jan&lt;/span&gt; &lt;span class="mi"&gt;27&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;44&lt;/span&gt; &lt;span class="n"&gt;bk2wk&lt;/span&gt;
-&lt;span class="n"&gt;drwxr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="mi"&gt;4096&lt;/span&gt; &lt;span class="n"&gt;Feb&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;
-&lt;span class="n"&gt;drwxr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="mi"&gt;4096&lt;/span&gt; &lt;span class="n"&gt;Jan&lt;/span&gt; &lt;span class="mi"&gt;27&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;44&lt;/span&gt; &lt;span class="n"&gt;dl4p2p&lt;/span&gt;
-&lt;span class="n"&gt;drwxr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="mi"&gt;4096&lt;/span&gt; &lt;span class="n"&gt;Jan&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt; &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;48&lt;/span&gt; &lt;span class="n"&gt;nandc&lt;/span&gt;
-&lt;span class="n"&gt;drwxr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="mi"&gt;4096&lt;/span&gt; &lt;span class="n"&gt;Feb&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;22&lt;/span&gt; &lt;span class="n"&gt;sda3&lt;/span&gt;
+&lt;p&gt;格式化:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mkfs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ext4&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sda3&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;/dev/sdb2 -&amp;gt; bk2wk
-/dev/sdb3 -&amp;gt; dl4p2p
-/dev/sda3 -&amp;gt; data
-/dev/nandc -&amp;gt; nandc&lt;/p&gt;
-&lt;p&gt;sudo mount /dev/nandc /mnt/nandc
-sudo mount /dev/sda3 /mnt/data
-sudo mount /dev/sdb2 /mnt/bk2wk
-sudo mount /dev/sdb3 /mnt/dl4p2p&lt;/p&gt;
 &lt;h4 id="fatab"&gt;fatab&lt;/h4&gt;
-&lt;p&gt;$ cat /proc/partitions
-major minor  #blocks name&lt;/p&gt;
-&lt;p&gt;93        0    7520256 nand
-  93        1      65536 nanda
-  93        2    2097152 nandb
-  93        3    5341184 nandc
-   8        0  976762584 sda
-   8        1    8388608 sda1
-   8        2    2097152 sda2
-   8        3  966275800 sda3
-   8       16 1953514584 sdb
-   8       17     204800 sdb1
-   8       18  781380608 sdb2
-   8       19 1171928064 sdb3&lt;/p&gt;
-&lt;p&gt;$ sudo blkid
-/dev/nanda: SEC_TYPE=”msdos” &lt;span class="caps"&gt;LABEL&lt;/span&gt;=”Volumn” &lt;span class="caps"&gt;TYPE&lt;/span&gt;=”vfat”
-/dev/nandb: &lt;span class="caps"&gt;UUID&lt;/span&gt;=”d20c81fd-3188-4650-b124-2fa090bb7920” &lt;span class="caps"&gt;TYPE&lt;/span&gt;=”ext4”
-/dev/nandc: &lt;span class="caps"&gt;UUID&lt;/span&gt;=”1914bbf8-2641-4b3f-a00e-4afa65d0ed8f” &lt;span class="caps"&gt;TYPE&lt;/span&gt;=”ext4”&lt;/p&gt;
-&lt;p&gt;/dev/sda3: &lt;span class="caps"&gt;UUID&lt;/span&gt;=”b9db3117-90d7-48a6-8302-0b316b9745fd” &lt;span class="caps"&gt;TYPE&lt;/span&gt;=”ext4”
-/dev/sdb1: &lt;span class="caps"&gt;LABEL&lt;/span&gt;=”&lt;span class="caps"&gt;EFI&lt;/span&gt;” &lt;span class="caps"&gt;UUID&lt;/span&gt;=”67E3-&lt;span class="caps"&gt;17ED&lt;/span&gt;” &lt;span class="caps"&gt;TYPE&lt;/span&gt;=”vfat”
-/dev/sdb2: &lt;span class="caps"&gt;LABEL&lt;/span&gt;=”bk4wk” &lt;span class="caps"&gt;UUID&lt;/span&gt;=”52E4-&lt;span class="caps"&gt;78FF&lt;/span&gt;” &lt;span class="caps"&gt;TYPE&lt;/span&gt;=”exfat”
-/dev/sdb3: &lt;span class="caps"&gt;LABEL&lt;/span&gt;=”dl4p2p” &lt;span class="caps"&gt;UUID&lt;/span&gt;=”52E4-7901” &lt;span class="caps"&gt;TYPE&lt;/span&gt;=”exfat”&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://name5566.com/4398.html"&gt;Cubieboard 开箱和入门 | Name5566&lt;/a&gt;
-$ sudo nand-part -f a20 /dev/nand
+&lt;p&gt;观察:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;proc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;partitions&lt;/span&gt;
+&lt;span class="n"&gt;major&lt;/span&gt; &lt;span class="n"&gt;minor&lt;/span&gt;  &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;blocks&lt;/span&gt;  &lt;span class="n"&gt;name&lt;/span&gt;
+
+  &lt;span class="mi"&gt;93&lt;/span&gt;        &lt;span class="mi"&gt;0&lt;/span&gt;    &lt;span class="mi"&gt;7520256&lt;/span&gt; &lt;span class="n"&gt;nand&lt;/span&gt;
+  &lt;span class="mi"&gt;93&lt;/span&gt;        &lt;span class="mi"&gt;1&lt;/span&gt;      &lt;span class="mi"&gt;65536&lt;/span&gt; &lt;span class="n"&gt;nanda&lt;/span&gt;
+  &lt;span class="mi"&gt;93&lt;/span&gt;        &lt;span class="mi"&gt;2&lt;/span&gt;    &lt;span class="mi"&gt;2097152&lt;/span&gt; &lt;span class="n"&gt;nandb&lt;/span&gt;
+  &lt;span class="mi"&gt;93&lt;/span&gt;        &lt;span class="mi"&gt;3&lt;/span&gt;    &lt;span class="mi"&gt;5341184&lt;/span&gt; &lt;span class="n"&gt;nandc&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;        &lt;span class="mi"&gt;0&lt;/span&gt;  &lt;span class="mi"&gt;976762584&lt;/span&gt; &lt;span class="n"&gt;sda&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;        &lt;span class="mi"&gt;1&lt;/span&gt;    &lt;span class="mi"&gt;8388608&lt;/span&gt; &lt;span class="n"&gt;sda1&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;        &lt;span class="mi"&gt;2&lt;/span&gt;    &lt;span class="mi"&gt;2097152&lt;/span&gt; &lt;span class="n"&gt;sda2&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;        &lt;span class="mi"&gt;3&lt;/span&gt;  &lt;span class="mi"&gt;966275800&lt;/span&gt; &lt;span class="n"&gt;sda3&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="mi"&gt;16&lt;/span&gt; &lt;span class="mi"&gt;1953514584&lt;/span&gt; &lt;span class="n"&gt;sdb&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="mi"&gt;17&lt;/span&gt;     &lt;span class="mi"&gt;204800&lt;/span&gt; &lt;span class="n"&gt;sdb1&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="mi"&gt;18&lt;/span&gt;  &lt;span class="mi"&gt;781380608&lt;/span&gt; &lt;span class="n"&gt;sdb2&lt;/span&gt;
+   &lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="mi"&gt;19&lt;/span&gt; &lt;span class="mi"&gt;1171928064&lt;/span&gt; &lt;span class="n"&gt;sdb3&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;blkid&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nanda&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;SEC_TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"msdos"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;LABEL&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"Volumn"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"vfat"&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nandb&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"d20c81fd-3188-4650-b124-2fa090bb7920"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"ext4"&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nandc&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"1914bbf8-2641-4b3f-a00e-4afa65d0ed8f"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"ext4"&lt;/span&gt;
+
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sda3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"b9db3117-90d7-48a6-8302-0b316b9745fd"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"ext4"&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;LABEL&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"&lt;span class="caps"&gt;EFI&lt;/span&gt;"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"67E3-&lt;span class="caps"&gt;17ED&lt;/span&gt;"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"vfat"&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;LABEL&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"bk4wk"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"52E4-&lt;span class="caps"&gt;78FF&lt;/span&gt;"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"exfat"&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;LABEL&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"dl4p2p"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"52E4-7901"&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"exfat"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://name5566.com/4398.html"&gt;Cubieboard 开箱和入门 | Name5566&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.bango29.com/cubieboard-part-1/"&gt;Cubieboard - Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;配置:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sda1&lt;/span&gt;    &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;media&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ext&lt;/span&gt;  &lt;span class="n"&gt;ext4&lt;/span&gt;    &lt;span class="n"&gt;defaults&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;   &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nandc&lt;/span&gt;    &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mnt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nandc&lt;/span&gt;  &lt;span class="n"&gt;ext4&lt;/span&gt;    &lt;span class="n"&gt;defaults&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;   &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mnt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nandc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;swapfile&lt;/span&gt;    &lt;span class="n"&gt;none&lt;/span&gt;    &lt;span class="n"&gt;swap&lt;/span&gt;    &lt;span class="n"&gt;sw&lt;/span&gt;  &lt;span class="mi"&gt;0&lt;/span&gt;   &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sda3&lt;/span&gt;    &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mnt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;  &lt;span class="n"&gt;ext4&lt;/span&gt;    &lt;span class="n"&gt;defaults&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;   &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb2&lt;/span&gt;    &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mnt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bk4wk&lt;/span&gt;  &lt;span class="n"&gt;exfat&lt;/span&gt;    &lt;span class="n"&gt;rw&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;umask&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;   &lt;span class="mi"&gt;0&lt;/span&gt;   &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdb3&lt;/span&gt;    &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mnt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dl4p2p&lt;/span&gt;  &lt;span class="n"&gt;exfat&lt;/span&gt;    &lt;span class="n"&gt;rw&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;async&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;umask&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;   &lt;span class="mi"&gt;0&lt;/span&gt;   &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="_8"&gt;你不能在当前挂载着的分区上扩容的&lt;/h4&gt;
+&lt;p&gt;~ &lt;code&gt;NoZuoNoDieWhyUtry&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://forum.cubietech.com/forum.php?mod=viewthread&amp;amp;tid=1772"&gt;求助，&lt;span class="caps"&gt;CT&lt;/span&gt;如何给nand分区，获得8G空间？ - 上手问题 - Cubieboard中文论坛 - Powered by Discuz!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://forum.cubietech.com/forum.php?mod=viewthread&amp;amp;tid=1454&amp;amp;extra=page%3D2"&gt;求救：释放&lt;span class="caps"&gt;CB2&lt;/span&gt; &lt;span class="caps"&gt;NAND&lt;/span&gt; 剩余空间 - 解决 - 上手问题 - Cubieboard中文论坛 - Powered by Discuz!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ sudo nand-part -f a20 /dev/nand
 check partition table copy 0: mbr: version 0x00000200, magic softw411
 &lt;span class="caps"&gt;OK&lt;/span&gt;
 check partition table copy 1: mbr: version 0x00000200, magic softw411
@@ -484,254 +566,63 @@ mbr: version 0x00000200, magic softw411
 partition  1: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =   bootloader, partition start =    32768, partition size =   131072 user_type=0
 partition  2: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =       rootfs, partition start =   163840, partition size =  4194304 user_type=0
 partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =        &lt;span class="caps"&gt;UDISK&lt;/span&gt;, partition start =  4358144, partition size = 10584064 user_type=0&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://forum.cubietech.com/forum.php?mod=viewthread&amp;amp;tid=1772"&gt;求助，&lt;span class="caps"&gt;CT&lt;/span&gt;如何给nand分区，获得8G空间？ - 上手问题 - Cubieboard中文论坛 - Powered by Discuz!&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;通过nand-part —help查看命令帮助
-得到nand-part的使用方法:
-nand-part nand设备 起始位置 ‘分区名称 长度’ ‘分区名称2 长度2’
-直接运行nand-part，会得到分区信息
-bootloader 起始位置32768 长度131072
-rootfs 起始位置163840 长度4194304
-&lt;span class="caps"&gt;UDISK&lt;/span&gt; 起始位置4358144 长度10584064&lt;/p&gt;
-&lt;p&gt;其中这些数字，都是以512字节为单位。 其中rootfs就是系统文件分区，而&lt;span class="caps"&gt;UDISK&lt;/span&gt;就是那5G多，而我们的目的就是把这5G的空间，合并到rootfs中，重新计算了一下，得到的命令就是：&lt;/p&gt;
-&lt;p&gt;nand-part /dev/nand 32768 ‘bootloader 131072’ ‘rootfs 14778368’&lt;/p&gt;
-&lt;p&gt;意思就是把/dev/nand重新分区，bootloader 的起始位置和长度必须保持不变，不然后果就是重新刷系统吧。
-这样的话，rootfs的起始位置也是原来的位置，所要修改的就是它的长度，为14778368。
-容量计算一下就是：14778368*512/1024/1024=&lt;span class="caps"&gt;7216MB&lt;/span&gt;，也就是7G， 当然因为前面有bootloader分区，以及bootloader之前空出的一块，所以nandb自然是得不到完整的8G&lt;/p&gt;
-&lt;p&gt;命令成功执行，reboot，再
-resize2fs /dev/nandb&lt;/p&gt;
-&lt;p&gt;就真的成功了&lt;/p&gt;
-&lt;p&gt;2 partitions
-partition  1: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =   bootloader, partition start =    32768, partition size =   131072 user_type=0
-partition  2: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =       rootfs, partition start =   163840, partition size = 14778368 user_type=0&lt;/p&gt;
-&lt;p&gt;write new partition tables? (Y/N)
-y
-Failed rereading partition table: Device or resource busy&lt;/p&gt;
-&lt;p&gt;verifying new partition tables:
-check partition table copy 0: mbr: version 0xb6fd14fc, magic
-magic          is not softw411
-check partition table copy 1: mbr: version 0xb6fd14fc, magic
-magic          is not softw411
-check partition table copy 2: mbr: version 0xb6fd14fc, magic
-magic          is not softw411
-check partition table copy 3: mbr: version 0xb6fd14fc, magic
-magic          is not softw411
-all partition tables are bad!
-rereading partition table… returned -1&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://forum.cubietech.com/forum.php?mod=viewthread&amp;amp;tid=1454&amp;amp;extra=page%3D2"&gt;求救：释放&lt;span class="caps"&gt;CB2&lt;/span&gt; &lt;span class="caps"&gt;NAND&lt;/span&gt; 剩余空间 - 解决 - 上手问题 - Cubieboard中文论坛 - Powered by Discuz!&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="_9"&gt;你不能在当前挂载着的分区上扩容的&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.bango29.com/cubieboard-part-1/"&gt;Cubieboard - Part 1&lt;/a&gt;
-/dev/sda1    /media/ext  ext4    defaults    0 2&lt;/p&gt;
-&lt;p&gt;/dev/nandc    /mnt/nandc  ext4    defaults    0   2
-/mnt/nandc/swapfile    none    swap    sw  0   0
-/dev/sda3    /mnt/data  ext4    defaults    0   2
-/dev/sdb2    /mnt/bk4wk  exfat    rw,async,umask=0   0   0
-/dev/sdb3    /mnt/dl4p2p  exfat    rw,async,umask=0   0 0&lt;/p&gt;
-&lt;p&gt;$ agi  -y exfat-fuse exfat-utils&lt;/p&gt;
-&lt;p&gt;/dev/sdb2: &lt;span class="caps"&gt;LABEL&lt;/span&gt;=”bk4wk” &lt;span class="caps"&gt;UUID&lt;/span&gt;=”52E4-&lt;span class="caps"&gt;78FF&lt;/span&gt;” &lt;span class="caps"&gt;TYPE&lt;/span&gt;=”exfat”
-/dev/sdb3: &lt;span class="caps"&gt;LABEL&lt;/span&gt;=”dl4p2p” &lt;span class="caps"&gt;UUID&lt;/span&gt;=”52E4-7901” &lt;span class="caps"&gt;TYPE&lt;/span&gt;=”exfat”&lt;/p&gt;
-&lt;p&gt;/dev/sda1 /media/usbdrive exfat rw,async,umask=0 0 0
-/dev/sda1 /home/cubie/sda1 ntfs defaults,utf8,umask=0000,uid=1001,gid=1002,0 0&lt;/p&gt;
-&lt;p&gt;zoomq:x:1001:1002:Zoom.Quiet:/home/zoomq:/bin/bash&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;等等吧,俺折腾完, &lt;span class="caps"&gt;CB&lt;/span&gt; 变码头了,才见到标题那句话!&lt;/p&gt;
+&lt;p&gt;才明确,想扩展内置&lt;span class="caps"&gt;OS&lt;/span&gt; 空间,要先从 &lt;span class="caps"&gt;SD&lt;/span&gt; 系统重启…所以,就算了吧…&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://00-00-00-00.com/2013/08/13/cubieboard%e8%87%aa%e5%8a%a8%e6%8c%82%e8%bd%bdtf%e5%8d%a1fstab%e8%ae%be%e7%bd%ae%e6%96%b9%e6%b3%95/"&gt;Cubieboard自动挂载&lt;span class="caps"&gt;TF&lt;/span&gt;卡fstab设置方法 | &lt;span class="caps"&gt;OPENERP&lt;/span&gt;-从零开始!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="samba"&gt;samba&lt;/h3&gt;
-&lt;p&gt;$ agi -y samba&lt;/p&gt;
-&lt;h3 id="mac"&gt;&lt;span class="caps"&gt;MAC&lt;/span&gt; 共享&lt;/h3&gt;
-&lt;h4 id="netatalk-time-machine"&gt;netatalk-&amp;gt;Time Machine&lt;/h4&gt;
-&lt;p&gt;/etc/netatalk/AppleVolumes.default&lt;/p&gt;
-&lt;p&gt;/mnt/data/timemachine   “TimeCapsule”  options:tm
-/mnt/data     “data”
-/mnt/bk2wk     “bk2wk”
-/mnt/dl4p2p “dl4p2p”&lt;/p&gt;
-&lt;p&gt;创建文件 /etc/avahi/services/afpd.service
-&lt;service-group&gt;
-&lt;name replace-wildcards="yes"&gt;%h&lt;/name&gt;
-&lt;service&gt;
-&lt;type&gt;_afpovertcp._tcp&lt;/type&gt;
-&lt;port&gt;548&lt;/port&gt;
-&lt;/service&gt;
-&lt;service&gt;
-&lt;type&gt;_device-info._tcp&lt;/type&gt;
-&lt;port&gt;0&lt;/port&gt;
-&lt;txt-record&gt;model=Xserve&lt;/txt-record&gt;
-&lt;/service&gt;
-&lt;/service-group&gt;&lt;/p&gt;
-&lt;?xml version="1.0" standalone='no'?&gt;&lt;!--*-nxml-*--&gt;
-&lt;!DOCTYPE service-group SYSTEM "avahi-service.dtd"&gt;
-
-&lt;service-group&gt;
-&lt;name replace-wildcards="yes"&gt;%h&lt;/name&gt;
-&lt;service&gt;
-&lt;type&gt;_afpovertcp._tcp&lt;/type&gt;
-&lt;port&gt;548&lt;/port&gt;
-&lt;/service&gt;
-&lt;service&gt;
-&lt;type&gt;_device-info._tcp&lt;/type&gt;
-&lt;port&gt;0&lt;/port&gt;
-&lt;txt-record&gt;model=TimeCapsule&lt;/txt-record&gt;
-&lt;/service&gt;
-&lt;/service-group&gt;
-&lt;h3 id="_10"&gt;系统整顿&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://my.oschina.net/sherwayne/blog/108685"&gt;Ubuntu卸载Apache+Mysql+&lt;span class="caps"&gt;PHP&lt;/span&gt; - 徐航的个人页面 - 开源中国社区&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;1、卸载Apache2都几个命令&lt;/p&gt;
-&lt;p&gt;sudo apt-get —purge remove apache2
-sudo apt-get —purge remove apache2.2-common&lt;/p&gt;
-&lt;p&gt;或直接使用一条命令
-sudo apt-get autoremove apache2&lt;/p&gt;
-&lt;p&gt;2、卸载Mysql
-sudo aptitude purge mysql-server mysql-server-5.0&lt;/p&gt;
-&lt;p&gt;sudo apt-get autoremove php5 &lt;/p&gt;
-&lt;h4 id="mysql"&gt;MySQL&lt;/h4&gt;
+&lt;h2 id="_9"&gt;家庭影院&lt;/h2&gt;
+&lt;p&gt;就几点功能:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.blogjava.net/yjhmily/articles/336926.html"&gt;Ubuntu下彻底卸载mysql - yjhmily - BlogJava&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/10853004/removing-mysql-5-5-completely"&gt;ubuntu - Removing MySQL 5.5 Completely - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;自动下载&lt;/li&gt;
+&lt;li&gt;远程加载&lt;/li&gt;
+&lt;li&gt;远程播放&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;$ sudo apt-get remove —purge mysql-server mysql-client mysql-common&lt;/p&gt;
-&lt;p&gt;(Reading database … 27889 files and directories currently installed.)
-Removing linaro-lamp-server …
-Removing mysql-server …
-Removing mysql-server-5.5 …
-Purging configuration files for mysql-server-5.5 …
-Removing mysql-client-5.5 …
-Removing libdbd-mysql-perl …
-Removing php5-mysql …
-Purging configuration files for php5-mysql …
-Removing libmysqlclient18:armhf …
-Purging configuration files for libmysqlclient18:armhf …
-Removing mysql-common …
-Purging configuration files for mysql-common …
-dpkg: warning: while removing mysql-common, directory ‘/etc/mysql’ not empty so not removed
-Processing triggers for man-db …
-Processing triggers for ureadahead …
-Processing triggers for libapache2-mod-php5 …
- * Reloading web server config
-   …done.
-Processing triggers for libc-bin …
-ldconfig deferred processing now taking place
-Selecting previously unselected package dmidecode.
-(Reading database … 27705 files and directories currently installed.)
-Unpacking dmidecode (from …/dmidecode_2.12-0linaro1_armhf.deb) …
-Processing triggers for man-db …
-Setting up dmidecode (2.12-0linaro1) …&lt;/p&gt;
-&lt;p&gt;$ sudo rm -rf /var/lib/mysql&lt;/p&gt;
-&lt;h4 id="apache2"&gt;apache2&lt;/h4&gt;
-&lt;p&gt;同理删除 Apache2 这一大恐龙!!!&lt;/p&gt;
-&lt;p&gt;$ sudo apt-get —purge remove apache-common
-  $ sudo apt-get —purge remove apache
-  $ sudo apt-get autoremove&lt;/p&gt;
-&lt;h4 id="utf8"&gt;&lt;span class="caps"&gt;UTF8&lt;/span&gt;&lt;/h4&gt;
-&lt;p&gt;$ locale
-&lt;span class="caps"&gt;LANG&lt;/span&gt;=
-&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;=
-LC_CTYPE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_NUMERIC=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_TIME=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_COLLATE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_MONETARY=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_MESSAGES=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_PAPER=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_NAME=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_ADDRESS=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_TELEPHONE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_MEASUREMENT=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_IDENTIFICATION=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;” LC_ALL=&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://fruit.je/utf-8"&gt;Using &lt;span class="caps"&gt;UTF&lt;/span&gt;-8 in Debian&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale"&gt;修改locale - Ubuntu中文&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;$ locale
-locale: Cannot set LC_CTYPE to default locale: No such file or directory
-locale: Cannot set LC_MESSAGES to default locale: No such file or directory
-locale: Cannot set LC_ALL to default locale: No such file or directory
-&lt;span class="caps"&gt;LANG&lt;/span&gt;=en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8
-&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;=
-LC_CTYPE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_NUMERIC=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_TIME=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_COLLATE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_MONETARY=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_MESSAGES=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_PAPER=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_NAME=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_ADDRESS=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_TELEPHONE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_MEASUREMENT=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_IDENTIFICATION=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8” LC_ALL=&lt;/p&gt;
-&lt;p&gt;$ cat /etc/default/locale &lt;span class="caps"&gt;LANG&lt;/span&gt;=C.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8&lt;/p&gt;
-&lt;p&gt;$ locale -a
-locale: Cannot set LC_CTYPE to default locale: No such file or directory
-locale: Cannot set LC_MESSAGES to default locale: No such file or directory
-locale: Cannot set LC_COLLATE to default locale: No such file or directory
-C
-C.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8
-&lt;span class="caps"&gt;POSIX&lt;/span&gt;
-zh_CN.utf8
-zh_HK.utf8
-zh_SG.utf8 zh_TW.utf8&lt;/p&gt;
-&lt;p&gt;重启后依然!&lt;/p&gt;
-&lt;p&gt;zoomq@cubietruck:~$ locale
-&lt;span class="caps"&gt;LANG&lt;/span&gt;=
-&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;=
-LC_CTYPE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_NUMERIC=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_TIME=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_COLLATE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_MONETARY=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_MESSAGES=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_PAPER=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_NAME=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_ADDRESS=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_TELEPHONE=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_MEASUREMENT=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;”
-LC_IDENTIFICATION=”&lt;span class="caps"&gt;POSIX&lt;/span&gt;” LC_ALL=&lt;/p&gt;
-&lt;p&gt;但是,从 screen 中进入时,就已经
-$ locale
-&lt;span class="caps"&gt;LANG&lt;/span&gt;=en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8
-&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;=en_US:en
-LC_CTYPE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_NUMERIC=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_TIME=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_COLLATE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_MONETARY=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_MESSAGES=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_PAPER=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_NAME=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_ADDRESS=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_TELEPHONE=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_MEASUREMENT=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8”
-LC_IDENTIFICATION=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8” LC_ALL=&lt;/p&gt;
 &lt;h3 id="mldonkey"&gt;MLDonkey&lt;/h3&gt;
-&lt;p&gt;$ agi -y mldonkey-server&lt;/p&gt;
-&lt;h3 id="_11"&gt;家庭影院&lt;/h3&gt;
-&lt;h3 id="_12"&gt;远程维护&lt;/h3&gt;
-&lt;p&gt;&lt;span class="caps"&gt;IP&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;安装:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;agi&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;mldonkey&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;就没有然后了,
+启动,远程用网页控制就好,
+唯一要注意的是怎么提升内网的 edonkey 为 &lt;code&gt;HIGH IP&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="samba"&gt;samba&lt;/h3&gt;
+&lt;p&gt;这是标准的跨平台文件分享服务了:&lt;/p&gt;
+&lt;p&gt;安装:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;agi&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;samba&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;配置也非常直接..&lt;/p&gt;
+&lt;h3 id="minidlna"&gt;MiniDLNA&lt;/h3&gt;
+&lt;p&gt;还没有折腾…&lt;/p&gt;
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;140505 快速完结&lt;/li&gt;
 &lt;li&gt;140127 单立文章追踪&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="http://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:jump-into-7niu.html</id><summary type="html">&lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="http://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:jump-into-7niu.html</id><summary type="html">
+&lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;正名&amp;nbsp;readthedocs.org&lt;/li&gt;
+&lt;li&gt;正名 readthedocs.org&lt;/li&gt;
 &lt;li&gt;别名儿 &lt;code&gt;RTFD&lt;/code&gt;.org&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;是一个良心服务, 自动将指定的任何一个仓库中的 Sphinx 工程,&amp;nbsp;根据提交事件,自动同步,编译,发布.&lt;/p&gt;
-&lt;p&gt;完全 0&amp;nbsp;配置,以及不占用大家的任何网络资源,完全免费!&lt;/p&gt;
+&lt;p&gt;是一个良心服务, 自动将指定的任何一个仓库中的 Sphinx 工程, 根据提交事件,自动同步,编译,发布.&lt;/p&gt;
+&lt;p&gt;完全 0 配置,以及不占用大家的任何网络资源,完全免费!&lt;/p&gt;
 &lt;h2 id="_1"&gt;原先&lt;/h2&gt;
-&lt;p&gt;发现后,高兴的大规模使用中,并配置了 Disqus&amp;nbsp;等等好物&amp;#8230;&lt;/p&gt;
+&lt;p&gt;发现后,高兴的大规模使用中,并配置了 Disqus 等等好物…&lt;/p&gt;
 &lt;h2 id="_2"&gt;现在&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="d005a8bd08c1" src="https://f.cloud.github.com/assets/834231/1538179/849551c2-4cdc-11e3-9759-d005a8bd08c1.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="d005a8bd08c1" src="https://f.cloud.github.com/assets/834231/1538179/849551c2-4cdc-11e3-9759-d005a8bd08c1.jpg"/&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/rtfd/readthedocs.org/issues/435"&gt;Many builds stuck in &amp;#8220;triggered&amp;#8221; state · Issue #435 ·&amp;nbsp;rtfd/readthedocs.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/rtfd/readthedocs.org/issues/592"&gt;how stop a build triggered from long time ago with finish · Issue #592 ·&amp;nbsp;rtfd/readthedocs.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/rtfd/readthedocs.org/issues/435"&gt;Many builds stuck in “triggered” state · Issue #435 · rtfd/readthedocs.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/rtfd/readthedocs.org/issues/592"&gt;how stop a build triggered from long time ago with finish · Issue #592 · rtfd/readthedocs.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;突然有一天,所有图书都不编译了,卡在了哪儿,
-四处一问才发现是大规模事件,&amp;nbsp;一时解决不了.&lt;/p&gt;
+四处一问才发现是大规模事件, 一时解决不了.&lt;/p&gt;
 &lt;h2 id="_3"&gt;然后&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://techparty.org/events/2013/12/29/et-ecugcon-sz/"&gt;无责任报道~ECUG2013Con&lt;/a&gt;
-知道了 7牛,&amp;nbsp;自然的就想从国外的良心服务,迁移到国内的良心服务;&lt;/p&gt;
+知道了 7牛, 自然的就想从国外的良心服务,迁移到国内的良心服务;&lt;/p&gt;
 &lt;h3 id="_4"&gt;迁移是愉快的&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;开辟&amp;nbsp;bucket&lt;/li&gt;
+&lt;li&gt;开辟 bucket&lt;/li&gt;
 &lt;li&gt;配置本地 &lt;code&gt;.conf&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;配置本地自动同步脚本&lt;/li&gt;
 &lt;/ul&gt;
@@ -745,20 +636,18 @@ LC_IDENTIFICATION=”en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8” LC_AL
 &lt;p&gt;这样的,想使用自个儿的域名,结果: &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://segmentfault.com/q/1010000000386448"&gt;无法使用交通银行支持!&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://segmentfault.com/q/1010000000386461"&gt;是否可能支持大目录的 Bucket 间迁移? - 七牛云存储问答 -&amp;nbsp;SegmentFault&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://segmentfault.com/q/1010000000386461"&gt;是否可能支持大目录的 Bucket 间迁移? - 七牛云存储问答 - SegmentFault&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;更加杯具的是:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;chaos&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zoomquiet&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;  &lt;span class="err"&gt;自定义&lt;/span&gt;     &lt;span class="err"&gt;审核失败&lt;/span&gt;    &lt;span class="err"&gt;京&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;ICP&lt;/span&gt;&lt;/span&gt;&lt;span class="err"&gt;备&lt;/span&gt;&lt;span class="mi"&gt;09067992&lt;/span&gt;&lt;span class="err"&gt;号&lt;/span&gt;  
 &lt;span class="err"&gt;状态说明&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;01&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt; &lt;span class="err"&gt;审核失败。域名未备案&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;绑定的域名必须有备案!&lt;/p&gt;
 &lt;h2 id="_6"&gt;是也乎&lt;/h2&gt;
-&lt;p&gt;好吧,,,俺只有在自个儿的主机上用 Nginx&amp;nbsp;进行反向代理了&amp;#8230;&lt;/p&gt;
+&lt;p&gt;好吧,,,俺只有在自个儿的主机上用 Nginx 进行反向代理了…&lt;/p&gt;
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;140119&amp;nbsp;开始总结&lt;/li&gt;
+&lt;li&gt;140119 开始总结&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="http://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><updated>2014-01-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:cbi-zq-install.html</id><summary type="html">
 &lt;h2 id="cbi"&gt;&lt;span class="caps"&gt;CBI&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://blog.zhgdg.org/2014-01/et-cbi1/"&gt;CBInstall.1 欢乐完成&lt;/a&gt; 记要了现场活动的情况;&lt;/p&gt;

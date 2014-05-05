@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-02-26T00:00:00+08:00</updated><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">&lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-02-26T00:00:00+08:00</updated><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">
+&lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
 &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
 &lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;    &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="n"&gt;niu&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;devrel&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;
@@ -12,12 +13,81 @@
  &lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;    &lt;span class="n"&gt;scraotools_ZqFLOSS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pkl&lt;/span&gt;
 &lt;span class="mf"&gt;1.6&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;    &lt;span class="n"&gt;scraotools_ZqSKM&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pkl&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2 id="_1"&gt;是也乎&lt;/h2&gt;
+&lt;h2 id="_1"&gt;背景&lt;/h2&gt;
+&lt;p&gt;很久以前, 俺和大家一样,收集整理网络资源的习惯组织方式是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目录 (htm 抓网页)&lt;/li&gt;
+&lt;li&gt;刻光盘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后,发觉目录/内容超过两屏后基本什么也找不到了,
+当然,后来使用了 google 的桌面搜索,
+当然,那时还是 M$ 时代,&lt;/p&gt;
+&lt;p&gt;不过,在这个折腾的过程中,也明确了:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;资料的收集要配合自个儿的知识框架&lt;/li&gt;
+&lt;li&gt;搜索也必须知道搜索什么,而中文的岐义/复义/多义 太多,基本不可用作搜索关键词&lt;/li&gt;
+&lt;li&gt;pdf/word/ppt 之类的专用格式文档基本是废的,无法快速使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以,后来上了 FireFox 后,用上了 ScrapBook 这一杀手级扩展, 资料的收集过程变成:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;浏览过程中,自然的挖掘,随手抓取到临时分类中&lt;/li&gt;
+&lt;li&gt;快速精读一遍,用内置高亮工具,标注重点&lt;/li&gt;
+&lt;li&gt;合理移动到对应的分类中&lt;/li&gt;
+&lt;li&gt;使用时,直接进入对应分类,或是用标题关键词搜索出来&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ScrapBook 是结合了本地目录管理+内置全文搜索的浏览器扩展工具.&lt;/p&gt;
+&lt;p&gt;一切安定了起来&lt;/p&gt;
+&lt;h2 id="_2"&gt;发展&lt;/h2&gt;
+&lt;p&gt;慢慢的,快速收集整理了上万个网页,才发现,好的网页内容:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一般不长久,原始网站总是很快死亡&lt;/li&gt;
+&lt;li&gt;而相同的内容在多次转抄过程中总是有丢失&lt;/li&gt;
+&lt;li&gt;Google 的搜索镜像也不一定靠谱&lt;/li&gt;
+&lt;li&gt;大家通过书签记录的网页,基本上90天后就很难点击开了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以,就有了将个人收集分享出来的想法:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ScrapBook 有导出目录树的功能&lt;/li&gt;
+&lt;li&gt;所以,一开始就是简单的进行导出&lt;/li&gt;
+&lt;li&gt;然后,用 rsync 同步到自个儿的官网空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是,慢慢的,网络数量突破3万时,根索引的目录树就超过了10M!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大家就反应首页很难打开了&lt;/li&gt;
+&lt;li&gt;这才知道真的有人在俺的分享网站中找东西!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;于是有了: &lt;a href="https://github.com/ZoomQuiet/scrapbooktools/blob/master/expidxlevels.py"&gt;scrapbooktools/expidxlevels.py at master · ZoomQuiet/scrapbooktools&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;单纯的原样分享就变成了:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://floss.zoomquiet.io/tree/"&gt;{ZqFLOSS} index tree exp. As &lt;span class="caps"&gt;HTML&lt;/span&gt; - ScrapBook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://skm.zoomquiet.io/tree/"&gt;{ZqSKM} index tree exp. As &lt;span class="caps"&gt;HTML&lt;/span&gt; - ScrapBook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_3"&gt;问题&lt;/h2&gt;
+&lt;p&gt;但是,突然有一天,无法在常用的 ScrapBook 界面中对标题进行搜索了 能将整个浏览器都卡死…&lt;/p&gt;
+&lt;p&gt;再查, &lt;code&gt;ZqFLOSS&lt;/code&gt; 目录已经突破5万页面,索引 xml 也超过了 25 M!&lt;/p&gt;
+&lt;p&gt;不得以再次分库,并分享:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://devrel.zoomquiet.io/tree/"&gt;{ZqDevRel} index tree exp. As &lt;span class="caps"&gt;HTML&lt;/span&gt; - ScrapBook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可是,奇怪的是分离了本地 ScrapBook 数据仓库后,问题依旧,
+而且, &lt;code&gt;ZqFLOSS&lt;/code&gt; 分离前有 &lt;code&gt;7.7G&lt;/code&gt;;
+可是拆分为两个仓库后,体积相互加,竟然几近 double !&lt;/p&gt;
+&lt;p&gt;于是怀疑多次手工批量删除时,造成了孤悬文件,然后就有了:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/ZoomQuiet/scrapbooktools/blob/master/chkscrap.py"&gt;scrapbooktools/chkscrap.py at master · ZoomQuiet/scrapbooktools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ZoomQuiet/scrapbooktools/blob/master/scrap_re_rdf.py"&gt;scrapbooktools/scrap_re_rdf.py at master · ZoomQuiet/scrapbooktools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分别对数据目录,以及索引 xml 进行清查&lt;/p&gt;
+&lt;p&gt;但是,只有几个丢失…&lt;/p&gt;
+&lt;h2 id="_4"&gt;分析&lt;/h2&gt;
+&lt;p&gt;目测是 FireFox 升级,强行切换了&lt;span class="caps"&gt;JS&lt;/span&gt; 解析内核后,带来的少数不兼容,
+导致了对一定体积的 &lt;span class="caps"&gt;XML&lt;/span&gt; 进行内存调度时,出了问题…&lt;/p&gt;
+&lt;p&gt;暂时无法解决.&lt;/p&gt;
+&lt;p&gt;已经向作者吼过,看&lt;span class="caps"&gt;RP&lt;/span&gt; 了…&lt;/p&gt;
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;140217&amp;nbsp;开始回顾&lt;/li&gt;
+&lt;li&gt;140405 无解的快速总结&lt;/li&gt;
+&lt;li&gt;140217 开始回顾&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;

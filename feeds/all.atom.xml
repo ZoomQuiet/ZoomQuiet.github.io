@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-02-26T00:00:00+08:00</updated><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">&lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-02-26T00:00:00+08:00</updated><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">
+&lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
 &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
 &lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;    &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="n"&gt;niu&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;devrel&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;
@@ -12,12 +13,81 @@
  &lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;    &lt;span class="n"&gt;scraotools_ZqFLOSS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pkl&lt;/span&gt;
 &lt;span class="mf"&gt;1.6&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;    &lt;span class="n"&gt;scraotools_ZqSKM&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pkl&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2 id="_1"&gt;是也乎&lt;/h2&gt;
+&lt;h2 id="_1"&gt;背景&lt;/h2&gt;
+&lt;p&gt;很久以前, 俺和大家一样,收集整理网络资源的习惯组织方式是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目录 (htm 抓网页)&lt;/li&gt;
+&lt;li&gt;刻光盘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后,发觉目录/内容超过两屏后基本什么也找不到了,
+当然,后来使用了 google 的桌面搜索,
+当然,那时还是 M$ 时代,&lt;/p&gt;
+&lt;p&gt;不过,在这个折腾的过程中,也明确了:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;资料的收集要配合自个儿的知识框架&lt;/li&gt;
+&lt;li&gt;搜索也必须知道搜索什么,而中文的岐义/复义/多义 太多,基本不可用作搜索关键词&lt;/li&gt;
+&lt;li&gt;pdf/word/ppt 之类的专用格式文档基本是废的,无法快速使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以,后来上了 FireFox 后,用上了 ScrapBook 这一杀手级扩展, 资料的收集过程变成:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;浏览过程中,自然的挖掘,随手抓取到临时分类中&lt;/li&gt;
+&lt;li&gt;快速精读一遍,用内置高亮工具,标注重点&lt;/li&gt;
+&lt;li&gt;合理移动到对应的分类中&lt;/li&gt;
+&lt;li&gt;使用时,直接进入对应分类,或是用标题关键词搜索出来&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ScrapBook 是结合了本地目录管理+内置全文搜索的浏览器扩展工具.&lt;/p&gt;
+&lt;p&gt;一切安定了起来&lt;/p&gt;
+&lt;h2 id="_2"&gt;发展&lt;/h2&gt;
+&lt;p&gt;慢慢的,快速收集整理了上万个网页,才发现,好的网页内容:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一般不长久,原始网站总是很快死亡&lt;/li&gt;
+&lt;li&gt;而相同的内容在多次转抄过程中总是有丢失&lt;/li&gt;
+&lt;li&gt;Google 的搜索镜像也不一定靠谱&lt;/li&gt;
+&lt;li&gt;大家通过书签记录的网页,基本上90天后就很难点击开了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以,就有了将个人收集分享出来的想法:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ScrapBook 有导出目录树的功能&lt;/li&gt;
+&lt;li&gt;所以,一开始就是简单的进行导出&lt;/li&gt;
+&lt;li&gt;然后,用 rsync 同步到自个儿的官网空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是,慢慢的,网络数量突破3万时,根索引的目录树就超过了10M!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大家就反应首页很难打开了&lt;/li&gt;
+&lt;li&gt;这才知道真的有人在俺的分享网站中找东西!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;于是有了: &lt;a href="https://github.com/ZoomQuiet/scrapbooktools/blob/master/expidxlevels.py"&gt;scrapbooktools/expidxlevels.py at master · ZoomQuiet/scrapbooktools&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;单纯的原样分享就变成了:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://floss.zoomquiet.io/tree/"&gt;{ZqFLOSS} index tree exp. As &lt;span class="caps"&gt;HTML&lt;/span&gt; - ScrapBook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://skm.zoomquiet.io/tree/"&gt;{ZqSKM} index tree exp. As &lt;span class="caps"&gt;HTML&lt;/span&gt; - ScrapBook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_3"&gt;问题&lt;/h2&gt;
+&lt;p&gt;但是,突然有一天,无法在常用的 ScrapBook 界面中对标题进行搜索了 能将整个浏览器都卡死…&lt;/p&gt;
+&lt;p&gt;再查, &lt;code&gt;ZqFLOSS&lt;/code&gt; 目录已经突破5万页面,索引 xml 也超过了 25 M!&lt;/p&gt;
+&lt;p&gt;不得以再次分库,并分享:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://devrel.zoomquiet.io/tree/"&gt;{ZqDevRel} index tree exp. As &lt;span class="caps"&gt;HTML&lt;/span&gt; - ScrapBook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可是,奇怪的是分离了本地 ScrapBook 数据仓库后,问题依旧,
+而且, &lt;code&gt;ZqFLOSS&lt;/code&gt; 分离前有 &lt;code&gt;7.7G&lt;/code&gt;;
+可是拆分为两个仓库后,体积相互加,竟然几近 double !&lt;/p&gt;
+&lt;p&gt;于是怀疑多次手工批量删除时,造成了孤悬文件,然后就有了:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/ZoomQuiet/scrapbooktools/blob/master/chkscrap.py"&gt;scrapbooktools/chkscrap.py at master · ZoomQuiet/scrapbooktools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ZoomQuiet/scrapbooktools/blob/master/scrap_re_rdf.py"&gt;scrapbooktools/scrap_re_rdf.py at master · ZoomQuiet/scrapbooktools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分别对数据目录,以及索引 xml 进行清查&lt;/p&gt;
+&lt;p&gt;但是,只有几个丢失…&lt;/p&gt;
+&lt;h2 id="_4"&gt;分析&lt;/h2&gt;
+&lt;p&gt;目测是 FireFox 升级,强行切换了&lt;span class="caps"&gt;JS&lt;/span&gt; 解析内核后,带来的少数不兼容,
+导致了对一定体积的 &lt;span class="caps"&gt;XML&lt;/span&gt; 进行内存调度时,出了问题…&lt;/p&gt;
+&lt;p&gt;暂时无法解决.&lt;/p&gt;
+&lt;p&gt;已经向作者吼过,看&lt;span class="caps"&gt;RP&lt;/span&gt; 了…&lt;/p&gt;
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;140217&amp;nbsp;开始回顾&lt;/li&gt;
+&lt;li&gt;140405 无解的快速总结&lt;/li&gt;
+&lt;li&gt;140217 开始回顾&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
@@ -2150,256 +2220,4 @@ import&amp;nbsp;sys&lt;/p&gt;
 
 
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>Understanding the yin-yang puzzle</title><link href="http://blog.zoomquiet.io/yw-yang-puzzle.html" rel="alternate"></link><updated>2012-07-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-07-27:yw-yang-puzzle.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2012/07/27/yin-yang-puzzle/&lt;/p&gt;
-&lt;p&gt;&lt;img alt="yinyang.gif" src="http://yinwang0.files.wordpress.com/2012/07/yinyang.gif?w=300" /&gt;&lt;/p&gt;
-&lt;p&gt;I have a friend who is a very fast learner. I introduced him to the Scheme programming language a few days ago and he soon digged into this &lt;a href="http://stackoverflow.com/questions/2694679/how-does-the-yin-yang-puzzle-work"&gt;yin-yang puzzle&lt;/a&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;let&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;yin&lt;/span&gt;
-        &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;display&lt;/span&gt; &lt;span class="err"&gt;#\@&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;))))&lt;/span&gt;
-       &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;yang&lt;/span&gt;
-        &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;display&lt;/span&gt; &lt;span class="err"&gt;#\&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)))))&lt;/span&gt;
-  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;yin&lt;/span&gt; &lt;span class="n"&gt;yang&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This program prints out the infinite string @&lt;em&gt;@&lt;strong&gt;@&lt;strong&gt;&lt;em&gt;@&lt;/em&gt;&lt;/strong&gt;*@&lt;strong&gt;&lt;em&gt;**@&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt;&amp;nbsp;…&lt;/p&gt;
-&lt;p&gt;Why does this happen? This took me almost a full afternoon to figure out. It is always good to have friends who feed you with questions and challenges. I’m going to document my finding here. I may want to make some animated slides (as is always a good idea) later, but for now a short note may&amp;nbsp;suffice.&lt;/p&gt;
-&lt;h2 id="the-plan"&gt;The&amp;nbsp;Plan&lt;/h2&gt;
-&lt;p&gt;You will probably never understand the program if you examine the contents of the stack. You need their high level semantic meaning to think clearly. The higher level meaning of the stack is the continuation. So instead of frightening you with the details of the stack, I’m going to use functions to show the continuations&amp;nbsp;explicitly.&lt;/p&gt;
-&lt;p&gt;Also I will use a little bit of compiler optimizations along the way. The optimizations will simplify the program and show its deeper&amp;nbsp;meanings.&lt;/p&gt;
-&lt;p&gt;Here is an overall plan of this&amp;nbsp;article:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Find the functional representations of the two continuations. Name them c1 and&amp;nbsp;c1.&lt;/li&gt;
-&lt;li&gt;Plug in c1 and c2 into the places of the two&amp;nbsp;call/cc’s.&lt;/li&gt;
-&lt;li&gt;Simplify the program using compiler&amp;nbsp;optimizations.&lt;/li&gt;
-&lt;li&gt;Perform behavioral analysis on the simplified&amp;nbsp;program.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="transform-and-remove-callcc"&gt;Transform and Remove&amp;nbsp;Call/cc&lt;/h2&gt;
-&lt;p&gt;So here we go. Let’s repeat the original program&amp;nbsp;here:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(let* ((yin
-        ((lambda (cc) (display #\@) cc) (call/cc (lambda (c) c))))   ; B1
-       (yang
-        ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))  ; B2
-  (yin&amp;nbsp;yang))&lt;/p&gt;
-&lt;p&gt;Note that there are two binding clauses, B1 and B2, each prints a char and binds a continuation to a&amp;nbsp;variable.&lt;/p&gt;
-&lt;p&gt;B1 binds yin to the “current continuation” of the first call/cc. Let’s call this continuation c1. Its function representation&amp;nbsp;is:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(lambda (k)
-  (let* ((yin
-          ((lambda (cc) (display #\@) cc) k))         &lt;br /&gt;
-         (yang
-          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
-    (yin&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;We can simplify it using some compiler optimization tricks. I will go very slowly here just in case you are not familiar with compiler&amp;nbsp;optimizations.&lt;/p&gt;
-&lt;p&gt;First, since Scheme is a strict language, k will be a pure value (with no side-effects), so we can lift the side-effect (display #\@)&amp;nbsp;out:&lt;/p&gt;
-&lt;p&gt;(lambda (k)
-  (display #\@)
-  (let* ((yin
-          ((lambda (cc) cc) k))         &lt;br /&gt;
-         (yang
-          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
-    (yin&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;Now we can “partial evaluate” ((lambda (cc) cc) k) to&amp;nbsp;k:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(lambda (k)
-  (display #\@)
-  (let* ((yin k)         &lt;br /&gt;
-         (yang
-          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))        &lt;br /&gt;
-    (yin&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;Then we can copy propagate the value of yin, k, to the body of let*, (yin yang). And now we have only one binding&amp;nbsp;left:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(lambda (k)
-  (display #\@)
-  (let ((yang
-         ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
-                                         ^^^^^^^^^^^^^^^^^^^^^^^^
-    (k&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;Now we try to figure out the underlined continuation. It should&amp;nbsp;be:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(lambda (j)
-  (let ((yang
-         ((lambda (cc) (display #*) cc) j)))
-    (k&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;You see why? Since the “current continuation” means “what is going to happen with this value”, it doesn’t include the computation before it, namely (display #\@). Now we do a similar optimization on this continuation: lifting out the side-effect (display #*), do some partial evaluation and copy&amp;nbsp;propagation:&lt;/p&gt;
-&lt;p&gt;The result of this inner continuation&amp;nbsp;is:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(lambda (j)
-  (display #*)
-  (k&amp;nbsp;j))&lt;/p&gt;
-&lt;p&gt;Now we can plug it&amp;nbsp;back:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(lambda (k)
-  (display #\@)
-  (let ((yang
-         ((lambda (cc) (display #*) cc) 
-          (lambda (j)
-            (display #*)
-            (k j)))))
-    (k&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;Do a similar sequence of optimizations: lifting out the first (display #*), partial evaluation, copy propagation. And we have the final result for the value of yin. Let’s name it c1 with a&amp;nbsp;definition:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(define c1
- (lambda (k)
-   (display #\@)
-   (display #*)
-   (k (lambda (j)
-        (display #*)
-        (k&amp;nbsp;j)))))&lt;/p&gt;
-&lt;p&gt;Now, the original program would look like the following. The program would have by now printed a @ before binding yin to c1, so we make a sequence and include the display term in the front of&amp;nbsp;it.&lt;/p&gt;
-&lt;p&gt;:::lisp
-(begin
-  (display #\@)
-  (let* ((yin c1)
-         (yang
-          ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
-    (yin&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;Try it. It will behave the same as the original program. Now we do another copy propagation to get rid of the first&amp;nbsp;binding:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(begin
-  (display #\@)
-  (let ((yang
-         ((lambda (cc) (display #*) cc) (call/cc (lambda (c) c)))))
-    (c1&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;Since the call/cc here will not cause any side-effects (why?), we can lift (display #*)&amp;nbsp;out:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(begin
-  (display #\@)
-  (display #*)
-  (let ((yang
-         ((lambda (cc) cc) (call/cc (lambda (c) c)))))
-                           ^^^^^^^^^^^^^^^^^^^^^^^^
-    (c1&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;Now we just have to find what this underlined continuation is, and it will become the value of yang. It&amp;nbsp;is:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(lambda (k)
-  (let ((yang
-         ((lambda (cc) cc) k)))
-    (c1&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;After our routine sequence of optimizations we have the value of yang. Let’s define it as&amp;nbsp;c2:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(define c2
-  (lambda (k)
-    (display #*)
-    (c1&amp;nbsp;k)))&lt;/p&gt;
-&lt;p&gt;Plug c1 and c2 back into the original&amp;nbsp;program:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(begin
-  (display #\@)
-  (display #*)
-  (let* ((yin c1)
-         (yang c2))
-    (yin&amp;nbsp;yang)))&lt;/p&gt;
-&lt;p&gt;And do a copy&amp;nbsp;propagation:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(begin
-  (display #\@)
-  (display #*)
-  (c1&amp;nbsp;c2))&lt;/p&gt;
-&lt;h2 id="transformed-program"&gt;Transformed&amp;nbsp;Program&lt;/h2&gt;
-&lt;p&gt;Now we have our final transformed and optimized program. Let’s put the definitions of c1 and c2 here for an&amp;nbsp;overview:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(define c1
- (lambda (k)
-   (display #\@)
-   (display #*)
-   (k (lambda (j)
-        (display #*)
-        (k&amp;nbsp;j)))))&lt;/p&gt;
-&lt;p&gt;(define c2
-  (lambda (k)
-    (display #*)
-    (c1&amp;nbsp;k)))&lt;/p&gt;
-&lt;p&gt;(begin
-  (display #\@)
-  (display #*)
-  (c1&amp;nbsp;c2))&lt;/p&gt;
-&lt;p&gt;For simplicity, let’s inline c2 into the main program. Now c2&amp;nbsp;disappears.&lt;/p&gt;
-&lt;p&gt;:::lisp
-(define c1
- (lambda (k)
-   (display #\@)
-   (display #*)
-   (k (lambda (j)
-        (display #*)
-        (k&amp;nbsp;j)))))&lt;/p&gt;
-&lt;p&gt;(begin
-  (display #\@)
-  (display #*)
-  (c1 (lambda (k)
-        (display #*)
-        (c1&amp;nbsp;k))))&lt;/p&gt;
-&lt;p&gt;Try it. It will still work the same as the original&amp;nbsp;program.&lt;/p&gt;
-&lt;h2 id="behavioral-analysis"&gt;Behavioral&amp;nbsp;Analysis&lt;/h2&gt;
-&lt;p&gt;Now the program doesn’t contain any call/cc’s and is much easier to understand. Let’s try to figure out how it&amp;nbsp;executes:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;First, @* will be printed, and we will&amp;nbsp;invoke:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::lisp
-(c1 (lambda (k)
-      (display #*)
-      (c1&amp;nbsp;k)))&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Inside the invocation, @* will be printed by the body of c1, and k is now bound to (lambda (k) (display #*) (c1 k)). So the program proceed&amp;nbsp;to:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::lisp
-((lambda (k)
-   (display #*)
-   (c1 k))
- (lambda (j)
-   (display #*)
-   ((lambda (k)
-      (display #*)
-      (c1 k))&amp;nbsp;j)))&lt;/p&gt;
-&lt;p&gt;It will print a *, and&amp;nbsp;becomes:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(c1
- (lambda (j)
-   (display #*)
-   ((lambda (k)
-      (display #*)
-      (c1 k))&amp;nbsp;j)))&lt;/p&gt;
-&lt;p&gt;Now we have seen @&lt;em&gt;@&lt;/em&gt;*&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Notice that we are back to a call to c1! This is a good sign of recursion. But this time the argument is different. If we simplify it a little, we&amp;nbsp;get:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::lisp
-(c1
- (lambda (j)
-   (display #*)
-   (display #*)
-   (c1&amp;nbsp;j)))&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;I think you see what’s going on here. This time, c1 is called&amp;nbsp;with&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::lisp
-(lambda (j)
-   (display #*)
-   (display #*)
-   (c1&amp;nbsp;j))&lt;/p&gt;
-&lt;p&gt;which means “When called, display &lt;span class="caps"&gt;TWO&lt;/span&gt; &lt;em&gt;’s, and then behave like c1 on the argument”. If we go on, the argument to c1 will be longer and longer, and each time with an additional (display #*). It will print @&lt;strong&gt;&lt;em&gt;, and then @&lt;/em&gt;&lt;/strong&gt;&lt;/em&gt;, and then @&lt;strong&gt;*&lt;/strong&gt;, and so&amp;nbsp;on.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Let’s introspect a bit. Which part of the program is responsible for creating the ever-longer displays, and why? It is this piece from the definition of&amp;nbsp;c1:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::lisp
-(k (lambda (j)
-     (display #*)
-     (k&amp;nbsp;j)))&lt;/p&gt;
-&lt;p&gt;Here k is c1′s argument. Notice that k is always of the&amp;nbsp;form:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(lambda (j)
-   (display #*)
-   (display #*)
-   &amp;#8230;
-   (c1&amp;nbsp;j))&lt;/p&gt;
-&lt;p&gt;When k is applied, it will print the corresonding number of *’s inside it, and then behave like c1. The argument to k&amp;nbsp;is:&lt;/p&gt;
-&lt;p&gt;:::lisp
-(lambda (j)
-  (display #*)
-  (k&amp;nbsp;j))&lt;/p&gt;
-&lt;p&gt;What does this mean? It says: “When called, print a * and then behave like k on the argument.” This is how you get a “new k”, with one more display of&amp;nbsp;*.&lt;/p&gt;
-&lt;p&gt;This will go on indifinitely. This is why you see the infinite string: @&lt;em&gt;@&lt;strong&gt;@&lt;strong&gt;&lt;em&gt;@&lt;/em&gt;&lt;/strong&gt;*@&lt;strong&gt;&lt;em&gt;**@&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt;&amp;nbsp;…&lt;/p&gt;
-&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;140109 pub. as zoomquiet.io&amp;#8217;s&amp;nbsp;blog&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Think"></category><category term="yinwang"></category><category term="Chinese"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry></feed>

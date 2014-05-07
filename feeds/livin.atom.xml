@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-05-07T00:00:00+08:00</updated><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:rst2s5-upgraded.html</id><summary type="html">&lt;h1 id="_1"&gt;背景&lt;/h1&gt;
-&lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet&amp;#8217;s PyBlosxom&amp;nbsp;blogging&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5&amp;nbsp;生成的了:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-05-07T00:00:00+08:00</updated><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:rst2s5-upgraded.html</id><summary type="html">
+&lt;h1 id="_1"&gt;背景&lt;/h1&gt;
+&lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://s5.zoomquiet.io/"&gt;s5.zoomquiet.io&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="_2"&gt;问题&lt;/h1&gt;
 &lt;p&gt;忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见&lt;/p&gt;
 &lt;h1 id="_3"&gt;分析&lt;/h1&gt;
-&lt;p&gt;4年前的生成脚本,和最新 pygments&amp;nbsp;接口不匹配了,,,&lt;/p&gt;
+&lt;p&gt;4年前的生成脚本,和最新 pygments 接口不匹配了,,,&lt;/p&gt;
 &lt;h1 id="_4"&gt;解决&lt;/h1&gt;
 &lt;p&gt;参考:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://pygments.org/docs/rstdirective/"&gt;Using Pygments in ReST documents —&amp;nbsp;Pygments&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/"&gt;Using rst for&amp;nbsp;presentations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html"&gt;rst2s5 with syntax&amp;nbsp;highlighting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files"&gt;python - Where can I find a gallery of Pygments &lt;span class="caps"&gt;CSS&lt;/span&gt; files - Super&amp;nbsp;User&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pygments.org/docs/rstdirective/"&gt;Using Pygments in ReST documents — Pygments&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/"&gt;Using rst for presentations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html"&gt;rst2s5 with syntax highlighting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files"&gt;python - Where can I find a gallery of Pygments &lt;span class="caps"&gt;CSS&lt;/span&gt; files - Super User&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;对比:&lt;/p&gt;
 &lt;ul&gt;
@@ -23,27 +24,23 @@
 &lt;p&gt;发现就是样式的声明问题:
 于是就追加了一个参数: &lt;code&gt;style="monokai"&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# ...&lt;/span&gt;
-&lt;span class="n"&gt;formatter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_formatter_by_name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;html&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;formatter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_formatter_by_name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'html'&lt;/span&gt;
 &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;noclasses&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;
-&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;monokai&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"monokai"&lt;/span&gt;
 &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;搞掂!&lt;/p&gt;
-&lt;p&gt;另外,也随手变更了一下注册的 &lt;code&gt;directive&lt;/code&gt; ~&amp;nbsp;指令:&lt;/p&gt;
+&lt;p&gt;另外,也随手变更了一下注册的 &lt;code&gt;directive&lt;/code&gt; ~ 指令:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Register the directive with docutils.&lt;/span&gt;
-&lt;span class="c"&gt;#rst.directives.register_directive(&amp;#39;code-block&amp;#39;, code_block)&lt;/span&gt;
-&lt;span class="c"&gt;#rst.roles.register_local_role(&amp;#39;code-block&amp;#39;, code_role)&lt;/span&gt;
-&lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;directives&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_directive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;sourcecode&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;code_block&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;roles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_local_role&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;sourcecode&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;code_role&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;#rst.directives.register_directive('code-block', code_block)&lt;/span&gt;
+&lt;span class="c"&gt;#rst.roles.register_local_role('code-block', code_role)&lt;/span&gt;
+&lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;directives&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_directive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'sourcecode'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;code_block&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;roles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_local_role&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'sourcecode'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;code_role&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;这样俺在 Leo&amp;nbsp;中写:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png" /&gt;&lt;/p&gt;
+&lt;p&gt;这样俺在 Leo 中写:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png"/&gt;&lt;/p&gt;
 &lt;p&gt;就可以一键生成为幻灯中的:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png" /&gt;&lt;/p&gt;</summary><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">
+&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/&gt;&lt;/p&gt;</summary><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">
 &lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
 &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;

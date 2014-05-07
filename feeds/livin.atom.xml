@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-02-26T00:00:00+08:00</updated><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-05-07T00:00:00+08:00</updated><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:rst2s5-upgraded.html</id><summary type="html">&lt;h1 id="_1"&gt;背景&lt;/h1&gt;
+&lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet&amp;#8217;s PyBlosxom&amp;nbsp;blogging&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5&amp;nbsp;生成的了:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://s5.zoomquiet.io/"&gt;s5.zoomquiet.io&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="_2"&gt;问题&lt;/h1&gt;
+&lt;p&gt;忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见&lt;/p&gt;
+&lt;h1 id="_3"&gt;分析&lt;/h1&gt;
+&lt;p&gt;4年前的生成脚本,和最新 pygments&amp;nbsp;接口不匹配了,,,&lt;/p&gt;
+&lt;h1 id="_4"&gt;解决&lt;/h1&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://pygments.org/docs/rstdirective/"&gt;Using Pygments in ReST documents —&amp;nbsp;Pygments&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/"&gt;Using rst for&amp;nbsp;presentations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files"&gt;python - Where can I find a gallery of Pygments &lt;span class="caps"&gt;CSS&lt;/span&gt; files - Super&amp;nbsp;User&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对比:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://matt-good.net/files/software-dev-with-trac/rst2s5"&gt;rst2s5.py&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bpgeo.googlecode.com/svn/trunk/rst2s5_template/rst-directive.py"&gt;rst-directive.py&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;发现就是样式的声明问题:
+于是就追加了一个参数: &lt;code&gt;style="monokai"&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# ...&lt;/span&gt;
+&lt;span class="n"&gt;formatter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_formatter_by_name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;html&amp;#39;&lt;/span&gt;
+&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;noclasses&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;monokai&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;搞掂!&lt;/p&gt;
+&lt;p&gt;另外,也随手变更了一下注册的 &lt;code&gt;directive&lt;/code&gt; ~&amp;nbsp;指令:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Register the directive with docutils.&lt;/span&gt;
+&lt;span class="c"&gt;#rst.directives.register_directive(&amp;#39;code-block&amp;#39;, code_block)&lt;/span&gt;
+&lt;span class="c"&gt;#rst.roles.register_local_role(&amp;#39;code-block&amp;#39;, code_role)&lt;/span&gt;
+&lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;directives&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_directive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;sourcecode&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;code_block&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;roles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_local_role&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;sourcecode&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;code_role&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这样俺在 Leo&amp;nbsp;中写:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png" /&gt;&lt;/p&gt;
+&lt;p&gt;就可以一键生成为幻灯中的:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png" /&gt;&lt;/p&gt;</summary><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">
 &lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
 &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
@@ -915,11 +958,123 @@ Writing superblocks and filesystem accounting information: done
 &lt;li&gt;140119 终于汇集了所有唠叨!&lt;/li&gt;
 &lt;li&gt;140111 开始总结&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="http://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:jump-into-mavericks.html</id><summary type="html">&lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
+&lt;p&gt;得承认是被 老池的文章忽悠到了, 
+而且, 10.9 免费了, 进一步的通过&lt;span class="caps"&gt;OS&lt;/span&gt; 提高了电池/内存的使用效率,
+最关键的,在 &lt;a href="http://techparty.org/events/2013/12/29/et-ecugcon-sz/"&gt;无责任报道~ECUG2013Con&lt;/a&gt; 中提及过的,
+有好基友,已经折腾过,明确从 10.7&amp;nbsp;直升没有问题!&lt;/p&gt;
+&lt;p&gt;于是一个月黑风高的晚上&amp;#8230;&lt;/p&gt;
 &lt;h1 id="_2"&gt;回顾&lt;/h1&gt;
-&lt;h2 id="pyenv"&gt;Pyenv&lt;/h2&gt;
 &lt;h2 id="leo"&gt;Leo&lt;/h2&gt;
+&lt;p&gt;About X11 and &lt;span class="caps"&gt;OS&lt;/span&gt; X 
+    http://support.apple.com/kb/&lt;span class="caps"&gt;HT5293&lt;/span&gt;
+XQuartz&amp;nbsp;http://xquartz.macosforge.org/landing/&lt;/p&gt;
+&lt;p&gt;$ brew install pyqt
+==&amp;gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
+Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
+==&amp;gt; Patching
+patching file configure.py
+==&amp;gt; /usr/local/opt/python/bin/python2 configure.py &amp;#8212;confirm-license &amp;#8212;bindir=/usr/local/Cellar/pyqt/4.10.3/bin &amp;#8212;destdir=/usr/local/Cellar/
+Error: Unable to find the qmake configuration file
+/usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
+Use the &lt;span class="caps"&gt;QMAKESPEC&lt;/span&gt; environment variable to specify the correct platform.
+Determining the layout of your Qt&amp;nbsp;installation&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;:&amp;nbsp;https://github.com/Homebrew/homebrew/wiki/troubleshooting&lt;/p&gt;
+&lt;h2 id="pyenv"&gt;Pyenv&lt;/h2&gt;
+&lt;p&gt;==&amp;gt; Upgrading python3
+==&amp;gt; Installing python3 dependency: sqlite
+==&amp;gt; Downloading&amp;nbsp;https://downloads.sf.net/project/machomebrew/Bottles/sqlite-3.8.2.mavericks.bottle.tar.gz&lt;/p&gt;
+&lt;h6 id="269"&gt;#############&amp;nbsp;26.9%&lt;/h6&gt;
+&lt;p&gt;curl: (56) Recv failure: Connection reset by peer
+Warning: Bottle installation failed: building from source.
+==&amp;gt; Downloading&amp;nbsp;http://www.sqlite.org/2013/sqlite-autoconf-3080200.tar.gz&lt;/p&gt;
+&lt;h6 id="1000"&gt;##################################################################&amp;nbsp;100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; ./configure &amp;#8212;prefix=/usr/local/Cellar/sqlite/3.8.2 &amp;#8212;enable-dynamic-extensions
+==&amp;gt; make install
+==&amp;gt; Caveats
+This formula is keg-only, so it was not symlinked into&amp;nbsp;/usr/local.&lt;/p&gt;
+&lt;p&gt;Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X already provides this software and installing another version in
+parallel can cause all kinds of&amp;nbsp;trouble.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OS&lt;/span&gt; X provides an older&amp;nbsp;sqlite3.&lt;/p&gt;
+&lt;p&gt;Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you&amp;#8217;ll need to add to your
+build&amp;nbsp;variables:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;&lt;span class="caps"&gt;LDFLAGS&lt;/span&gt;:&lt;/span&gt;  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sqlite&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;
+&lt;span class="nl"&gt;&lt;span class="caps"&gt;CPPFLAGS&lt;/span&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;I&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sqlite&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;include&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;==&amp;gt; Summary
+🍺  /usr/local/Cellar/sqlite/3.8.2: 9 files, 2.0M, built in 48&amp;nbsp;seconds&lt;/p&gt;
+&lt;p&gt;==&amp;gt; Installing python3
+==&amp;gt; Downloading&amp;nbsp;http://python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2&lt;/p&gt;
+&lt;h6 id="1000_1"&gt;##################################################################&amp;nbsp;100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; ./configure &amp;#8212;prefix=/usr/local/Cellar/python3/3.3.3 &amp;#8212;enable-ipv6 &amp;#8212;datarootdir=/usr/local/Cellar/python3/3.3.3/share &amp;#8212;datadir=/usr/lo
+==&amp;gt; make
+==&amp;gt; make install &lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;=/usr/local/Cellar/python3/3.3.3
+==&amp;gt; make frameworkinstallextras &lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;=/usr/local/Cellar/python3/3.3.3/share/python3
+Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
+ValueError: list.remove(x): x not in&amp;nbsp;list&lt;/p&gt;
+&lt;h2 id="sshfs"&gt;伟光大的&amp;nbsp;sshfs&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;fuse4x&lt;/span&gt;
+&lt;span class="n"&gt;Linking&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;0.9.2&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Warning&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Could&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Unlinking&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+
+&lt;span class="nl"&gt;Error:&lt;/span&gt; &lt;span class="n"&gt;Could&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;symlink&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;0.9.2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pkgconfig&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pc&lt;/span&gt;
+&lt;span class="n"&gt;Target&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pkgconfig&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pc&lt;/span&gt; &lt;span class="n"&gt;already&lt;/span&gt; &lt;span class="n"&gt;exists&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;may&lt;/span&gt; &lt;span class="n"&gt;need&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;delete&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;force&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;overwrite&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="n"&gt;other&lt;/span&gt; &lt;span class="n"&gt;conflicting&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;overwrite&lt;/span&gt; &lt;span class="n"&gt;formula_name&lt;/span&gt;
+
+&lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;would&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;deleted&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;overwrite&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;dry&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;formula_name&lt;/span&gt;
+
+&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;overwrite&lt;/span&gt; &lt;span class="n"&gt;fuse4x&lt;/span&gt;
+&lt;span class="n"&gt;Linking&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;0.9.2&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="n"&gt;symlinks&lt;/span&gt; &lt;span class="n"&gt;created&lt;/span&gt;
+
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;osxfuse&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Downloading&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Pouring&lt;/span&gt; &lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.6.2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mavericks&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bottle&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Caveats&lt;/span&gt;
+&lt;span class="n"&gt;If&lt;/span&gt; &lt;span class="n"&gt;upgrading&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;previous&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;previous&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="n"&gt;extension&lt;/span&gt;
+&lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;need&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;unloaded&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="n"&gt;installing&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;First&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;check&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt;
+&lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;FUSE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;based&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;systems&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;running&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+
+  &lt;span class="n"&gt;mount&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;osxfusefs&lt;/span&gt;
+
+&lt;span class="n"&gt;Unmount&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;FUSE&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;systems&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;then&lt;/span&gt; &lt;span class="n"&gt;unload&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="n"&gt;extension&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;kextunload&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filesystems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;osxfusefs&lt;/span&gt;
+
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;osxfuse&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt; &lt;span class="n"&gt;bundle&lt;/span&gt; &lt;span class="n"&gt;needs&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cp&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;RfX&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2.6.2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Filesystems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfusefs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Filesystems&lt;/span&gt;
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Filesystems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfusefs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Support&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;load_osxfusefs&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Summary&lt;/span&gt;
+&lt;span class="err"&gt;🍺&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2.6.2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;84&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;5.0&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2 id="displaylink"&gt;DisplayLink&lt;/h2&gt;
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;140110&amp;nbsp;开始总结&lt;/li&gt;
+&lt;li&gt;140505&amp;nbsp;快速简述完成&lt;/li&gt;
+&lt;li&gt;140110&amp;nbsp;起意,总结&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry></feed>

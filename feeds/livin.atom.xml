@@ -1071,6 +1071,37 @@ ValueError: list.remove(x): x not in&amp;nbsp;list&lt;/p&gt;
 
 
 &lt;h2 id="displaylink"&gt;DisplayLink&lt;/h2&gt;
+&lt;h2 id="140518"&gt;140518&lt;/h2&gt;
+&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~
+$ brew upgrade
+==&amp;gt; Upgrading 32 outdated packages, with result:
+autojump 21.7.1, brew-cask 0.35.0, doxygen 1.8.7, ffmpeg 2.2.2, fftw 3.3.4, fribidi 0.19.6, ghc 7.6.3_2, git 1.9.3, glib 2.40.0_1, gmp 6.0.0a, gnupg2 2.0.22_1, go 1.2.2, harfbuzz 0.9.28, imagemagick 6.8.9-1, lftp 4.4.16, libass 0.11.2, libgpg-error 1.13, libtasn1 3.5, little-cms2 2.6, mongodb 2.6.1, mpc 0.25, mpd 0.18.11, nginx 1.6.0_1, node 0.10.28, orc 0.4.19, qt 4.8.6, readline 6.3.5, redis 2.8.9, rtmpdump 2.4+20131018, tree 1.7.0, wavpack 4.70.0, x264 r2412
+==&amp;gt; Upgrading&amp;nbsp;autojump&lt;/p&gt;
+&lt;p&gt;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;==&amp;gt; Downloading&amp;nbsp;https://storage.googleapis.com/golang/go1.2.2.src.tar.gz&lt;/p&gt;
+&lt;h6 id="1000_2"&gt;##################################################################&amp;nbsp;100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; ./make.bash &amp;#8212;no-clean
+==&amp;gt; Caveats
+As of go 1.2, a valid &lt;span class="caps"&gt;GOPATH&lt;/span&gt; is required to use the &lt;code&gt;go get&lt;/code&gt; command:&amp;nbsp;http://golang.org/doc/code.html#&lt;span class="caps"&gt;GOPATH&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;go vet&lt;/code&gt; and &lt;code&gt;go doc&lt;/code&gt; are now part of the go.tools sub repo:&amp;nbsp;http://golang.org/doc/go1.2#go_tools_godoc&lt;/p&gt;
+&lt;p&gt;To get &lt;code&gt;go vet&lt;/code&gt; and &lt;code&gt;go doc&lt;/code&gt; run:
+  go get code.google.com/p/go.tools/cmd/godoc
+  go get&amp;nbsp;code.google.com/p/go.tools/cmd/vet&lt;/p&gt;
+&lt;p&gt;You may wish to add the &lt;span class="caps"&gt;GOROOT&lt;/span&gt;-based install location to your &lt;span class="caps"&gt;PATH&lt;/span&gt;:
+  export&amp;nbsp;&lt;span class="caps"&gt;PATH&lt;/span&gt;=$&lt;span class="caps"&gt;PATH&lt;/span&gt;:/usr/local/opt/go/libexec/bin&lt;/p&gt;
+&lt;p&gt;Bash completion has been installed to:&amp;nbsp;/usr/local/etc/bash_completion.d&lt;/p&gt;
+&lt;p&gt;zsh completion has been installed to:&amp;nbsp;/usr/local/share/zsh/site-functions&lt;/p&gt;
+&lt;p&gt;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;==&amp;gt; Pouring nginx-1.6.0_1.mavericks.bottle.tar.gz
+==&amp;gt; Caveats
+Docroot is:&amp;nbsp;/usr/local/var/www&lt;/p&gt;
+&lt;p&gt;The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
+nginx can run without&amp;nbsp;sudo.&lt;/p&gt;
+&lt;p&gt;To have launchd start nginx at login:
+    ln -sfv /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents
+Then to load nginx now:
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
+Or, if you don&amp;#8217;t want/need launchctl, you can just run:&amp;nbsp;nginx&lt;/p&gt;
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140505&amp;nbsp;快速简述完成&lt;/li&gt;

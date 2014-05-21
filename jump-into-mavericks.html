@@ -243,6 +243,37 @@ ValueError: list.remove(x): x not in&nbsp;list</p>
 
 
 <h2 id="displaylink">DisplayLink</h2>
+<h2 id="140518">140518</h2>
+<p>zoomq @ <span class="caps">MBP111216ZQ</span> in ~
+$ brew upgrade
+==&gt; Upgrading 32 outdated packages, with result:
+autojump 21.7.1, brew-cask 0.35.0, doxygen 1.8.7, ffmpeg 2.2.2, fftw 3.3.4, fribidi 0.19.6, ghc 7.6.3_2, git 1.9.3, glib 2.40.0_1, gmp 6.0.0a, gnupg2 2.0.22_1, go 1.2.2, harfbuzz 0.9.28, imagemagick 6.8.9-1, lftp 4.4.16, libass 0.11.2, libgpg-error 1.13, libtasn1 3.5, little-cms2 2.6, mongodb 2.6.1, mpc 0.25, mpd 0.18.11, nginx 1.6.0_1, node 0.10.28, orc 0.4.19, qt 4.8.6, readline 6.3.5, redis 2.8.9, rtmpdump 2.4+20131018, tree 1.7.0, wavpack 4.70.0, x264 r2412
+==&gt; Upgrading&nbsp;autojump</p>
+<p>&#8230;</p>
+<p>==&gt; Downloading&nbsp;https://storage.googleapis.com/golang/go1.2.2.src.tar.gz</p>
+<h6 id="1000_2">##################################################################&nbsp;100.0%</h6>
+<p>==&gt; ./make.bash &#8212;no-clean
+==&gt; Caveats
+As of go 1.2, a valid <span class="caps">GOPATH</span> is required to use the <code>go get</code> command:&nbsp;http://golang.org/doc/code.html#<span class="caps">GOPATH</span></p>
+<p><code>go vet</code> and <code>go doc</code> are now part of the go.tools sub repo:&nbsp;http://golang.org/doc/go1.2#go_tools_godoc</p>
+<p>To get <code>go vet</code> and <code>go doc</code> run:
+  go get code.google.com/p/go.tools/cmd/godoc
+  go get&nbsp;code.google.com/p/go.tools/cmd/vet</p>
+<p>You may wish to add the <span class="caps">GOROOT</span>-based install location to your <span class="caps">PATH</span>:
+  export&nbsp;<span class="caps">PATH</span>=$<span class="caps">PATH</span>:/usr/local/opt/go/libexec/bin</p>
+<p>Bash completion has been installed to:&nbsp;/usr/local/etc/bash_completion.d</p>
+<p>zsh completion has been installed to:&nbsp;/usr/local/share/zsh/site-functions</p>
+<p>&#8230;</p>
+<p>==&gt; Pouring nginx-1.6.0_1.mavericks.bottle.tar.gz
+==&gt; Caveats
+Docroot is:&nbsp;/usr/local/var/www</p>
+<p>The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
+nginx can run without&nbsp;sudo.</p>
+<p>To have launchd start nginx at login:
+    ln -sfv /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents
+Then to load nginx now:
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
+Or, if you don&#8217;t want/need launchctl, you can just run:&nbsp;nginx</p>
 <h1 id="changelog">Changelog</h1>
 <ul>
 <li>140505&nbsp;快速简述完成</li>

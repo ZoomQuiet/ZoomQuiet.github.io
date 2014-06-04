@@ -1,5 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-05-07T00:00:00+08:00</updated><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:rst2s5-upgraded.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-06-03T00:00:00+08:00</updated><entry><title>pydata笔记:环境配置</title><link href="http://blog.zoomquiet.io/pydata-0-mavericks.html" rel="alternate"></link><updated>2014-06-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-06-03:pydata-0-mavericks.html</id><summary type="html">
+&lt;h2 id="_1"&gt;背景&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="s27157694.jpg（JPEG 图像，300x300 像素）" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;是本好书…&lt;/p&gt;
+&lt;p&gt;为什么知道这书呢? 因为翻译 &lt;a href="http://weekly.pychina.org/"&gt;|蠎周刊 |汇集全球蠎事儿 !-)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;经常见到各种 Pandas 配合其它纯Python 模块折腾出来的大数据可视化分析作品/文章,
+而且从 &lt;a href="http://book.douban.com/subject/7175280/"&gt;Python科学计算 (豆瓣)&lt;/a&gt; 中很早
+也知道了各种 Python 在数据分析方面的方便, 所以,一直想有机会能实战性的系统折腾一下…&lt;/p&gt;
+&lt;p&gt;这书当然注意到了,虽然不是 &lt;span class="caps"&gt;OBP&lt;/span&gt; 项目组织翻译的, 但是,好书就是好书,有点小贵,&lt;/p&gt;
+&lt;p&gt;最近有了台 &lt;span class="caps"&gt;GALAXY&lt;/span&gt; &lt;span class="caps"&gt;TAB3&lt;/span&gt;, 所以,能上 Kindle 了,于是,发现 z.cn 上电子书有了,
+响应 @老赵的号召,立即收入!&lt;/p&gt;
+&lt;h2 id="_2"&gt;探索&lt;/h2&gt;
+&lt;p&gt;正如,Python 所有领域的自学,有一个稳定,随时有反馈的环境是最重要的…&lt;/p&gt;
+&lt;p&gt;但是,作者的话,真心不能都相信哪!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="err"&gt;如果你恰好使用&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mf"&gt;3.2&lt;/span&gt; &lt;span class="err"&gt;大部分示例是可以完整运行的&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;&lt;span class="caps"&gt;MAC&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;OS&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="err"&gt;环境推荐安装&lt;/span&gt; &lt;span class="n"&gt;epd_free&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;7.3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;macosx&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i386&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dmg&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;于是…&lt;/p&gt;
+&lt;h3 id="pyenv"&gt;pyenv&lt;/h3&gt;
+&lt;p&gt;先尝试 Python 3.2 环境:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ pyenv install 3.2&lt;/code&gt; 成功&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ pyenv virtualenv --distribute 3.2 32IPy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ pyenc local 32IPy2&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ pip install ipython&lt;/code&gt;,成功&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ pip install pandas&lt;/code&gt;, 失败&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后回到书中作者的 2.7.3 环境,重新尝试&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一样败在 &lt;code&gt;$ pip install pandas&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;宏大的 &lt;code&gt;Matplotlib&lt;/code&gt; 手工安装成功了的哪….&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="epd-free"&gt;&lt;span class="caps"&gt;EPD&lt;/span&gt; free&lt;/h3&gt;
+&lt;p&gt;好吧,看来数据分析的系列模块也不是那么简单可以安装的, 所以,&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://enthought.com/products/epd/free/"&gt;Enthought Python Distribution Free&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;嗯嗯嗯? &lt;/p&gt;
+&lt;p&gt;&lt;img alt="canopy-logo" src="https://enthought.com/static/img/canopy-logo.png"/&gt;&lt;/p&gt;
+&lt;p&gt;什么东西,不是说 &lt;code&gt;EPD free&lt;/code&gt; 嘛?&lt;/p&gt;
+&lt;p&gt;直接搜索:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;epd_free-7.3-2-macosx-i386.dmg&lt;/li&gt;
+&lt;li&gt;果断还有: &lt;a href="https://enthought.com/repo/free/"&gt;Index of /repo/free&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;果断下载,安装…&lt;/p&gt;
+&lt;p&gt;各种不对味儿,原来自动在 &lt;code&gt;~/.bash_profile&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# Setting PATH for EPD_free-7.3-2
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;"
+export &lt;span class="caps"&gt;PATH&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;而且是按照系统框架来安装到 &lt;code&gt;/Library/Frameworks/Python.framework&lt;/code&gt; 的
+可是, Mavericks 以后,没有默认Python 了哪,俺已经同时用 &lt;code&gt;brew&lt;/code&gt; 管理系统 Python,
+&lt;code&gt;pyenv&lt;/code&gt; 管理开发 Python ,先不说体积:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Frameworks&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Versions&lt;/span&gt;
+&lt;span class="mi"&gt;425&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;    &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Frameworks&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Versions&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;居然第一个案例就跑不起来!&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;import pandas&lt;/code&gt; 有报错…&lt;/p&gt;
+&lt;h3 id="canopy"&gt;Canopy&lt;/h3&gt;
+&lt;p&gt;回到官方下载: &lt;a href="https://enthought.com/store/"&gt;Enthought Store&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;老老实实的下载推荐的 &lt;code&gt;canopy-1.4.0-osx-64.dmg&lt;/code&gt;
+体积也从 74M 爆涨为 &lt;code&gt;235Mb&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不过,是一派标准的 &lt;span class="caps"&gt;MAC&lt;/span&gt; 软件包了,非常流畅,也有&lt;span class="caps"&gt;GUI&lt;/span&gt; 的引导界面,&lt;/p&gt;
+&lt;p&gt;然后 &lt;code&gt;~/.bash_profile&lt;/code&gt; 追加的是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Added by Canopy installer on 2014-06-03&lt;/span&gt;
+&lt;span class="cp"&gt;# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1&lt;/span&gt;
+&lt;span class="n"&gt;VIRTUAL_ENV_DISABLE_PROMPT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="err"&gt;\&lt;/span&gt; 
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Enthought&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Canopy_64bit&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;那就简单了,使用标准的 &lt;code&gt;VirtualEnv&lt;/code&gt; 来包装的话,就不用将系统Python 环境永久性的迁移为
+&lt;code&gt;Canopy&lt;/code&gt; 的了,&lt;/p&gt;
+&lt;p&gt;简单的 在 &lt;code&gt;~/.bashrc&lt;/code&gt; 定义一个别称:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Added by Canopy installer on 2014-06-03&lt;/span&gt;
+&lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="n"&gt;canopy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"source \&lt;/span&gt;
+&lt;span class="s"&gt;/Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;随时调用 &lt;code&gt;canopy&lt;/code&gt; 就可以进入了..&lt;/p&gt;
+&lt;h2 id="_3"&gt;结论&lt;/h2&gt;
+&lt;p&gt;最终拥有了和书中有一致反应的环境:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="140604-pydata-canopy.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140604-pydata-canopy.png"/&gt;&lt;/p&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/3819449/how-to-uninstall-python-2-7-on-a-mac-os-x-10-6-4"&gt;osx - How to uninstall Python 2.7 on a Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X 10.6.4? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.python-guide.org/en/latest/starting/install/osx/"&gt;Installing Python on Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X — The Hitchhiker’s Guide to Python&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://wolfpaulus.com/jounal/mac/installing_python_osx/"&gt;Installing / Updating Python on &lt;span class="caps"&gt;OS&lt;/span&gt; X | Wolf Paulus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/goldsmith/7163055"&gt;When I upgraded my Mac to &lt;span class="caps"&gt;OS&lt;/span&gt; X Mavericks, a lot of utilities (like Python, virtualenv, Xcode) broke, and it was pretty stressful trying to get it all set back up. Hopefully this guide can spare you some of that pain.Note: I’m by no means a Linux or Mac ex&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mavericks 对 Python 框架的调整,也的确有其原由的…&lt;/p&gt;
+&lt;p&gt;当然,好书要配合好代码,&lt;/p&gt;
+&lt;p&gt;及时 fork 一个自个儿可以折腾的: &lt;a href="https://github.com/OpenBookProjects/pydata-book"&gt;OpenBookProjects/pydata-book&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;140603 完成环境探索,总结&lt;/li&gt;
+&lt;li&gt;140527 &lt;a href="http://www.amazon.cn/gp/product/B00KD7Q7U2/ref=oh_d__o00_details_o00__i00?ie=UTF8&amp;amp;psc=1"&gt;《利用Python进行数据分析》 Wes McKinney, 唐学韬 (Kindle电子书)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="pandas"></category><category term="ipython"></category><category term="pydata"></category><category term="mavericks"></category></entry><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:rst2s5-upgraded.html</id><summary type="html">
 &lt;h1 id="_1"&gt;背景&lt;/h1&gt;
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:&lt;/p&gt;

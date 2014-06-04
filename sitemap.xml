@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/index.html</loc>
-<lastmod>2014-05-21T18:33:50-00:00</lastmod>
+<lastmod>2014-06-04T09:59:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2014-05-21T18:33:50-00:00</lastmod>
+<lastmod>2014-06-04T09:59:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2014-05-21T18:33:50-00:00</lastmod>
+<lastmod>2014-06-04T09:59:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2014-05-21T18:33:50-00:00</lastmod>
+<lastmod>2014-06-04T09:59:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -41,6 +41,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/pages/designing.html</loc>
 <lastmod>2013-12-19T00:00:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/pydata-0-mavericks.html</loc>
+<lastmod>2014-06-03T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -194,7 +201,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/category/pythonic.html</loc>
-<lastmod>2014-01-07T00:00:00-00:00</lastmod>
+<lastmod>2014-06-03T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -277,6 +284,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/pydata.html</loc>
+<lastmod>2014-06-03T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/pyconchina.html</loc>
 <lastmod>2014-01-07T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -307,6 +321,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/tag/cubier.html</loc>
 <lastmod>2014-01-27T23:48:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/tag/pandas.html</loc>
+<lastmod>2014-06-03T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -361,6 +382,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/ipython.html</loc>
+<lastmod>2014-06-03T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/101.html</loc>
 <lastmod>2013-11-23T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -377,6 +405,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/tag/md.html</loc>
 <lastmod>2013-08-09T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/tag/mavericks.html</loc>
+<lastmod>2014-06-03T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -411,7 +446,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2014-05-07T00:00:00-00:00</lastmod>
+<lastmod>2014-06-03T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

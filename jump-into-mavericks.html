@@ -139,9 +139,6 @@
 <li><a href="#qt-for-leo">Qt for Leo</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#bashrc-for-running-leo">~/.bashrc for running Leo</a><ul>
 <li><a href="#sshfs">伟光大的 sshfs</a></li>
 </ul>
 </li>
@@ -181,9 +178,8 @@ Qt 当然从来也没有内置过. 所以,</p>
   通过环境变量的自动配置 形成复合Python版本共存</p>
 <p>VirtualEnv 有 Pyenv 的插件
 所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:</p>
-<p>:::bash
-$ pyenv versions
-* system (set by /Users/zoomq/.pyenv/version)
+<div class="highlight"><pre><span class="nv">$ </span>pyenv versions
+* system <span class="o">(</span><span class="nb">set </span>by /Users/zoomq/.pyenv/version<span class="o">)</span>
   2.7.3
   2.7.5
   2.7.6
@@ -197,7 +193,9 @@ $ pyenv versions
   3.3.2
   32IPy
   ipynotebook
-  pypy-2.2.1 pypy221chaos</p>
+  pypy-2.2.1
+  pypy221chaos
+</pre></div>
 <p>主要遇到的问题是:</p>
 <div class="highlight"><pre><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">python3</span>
 <span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">http</span><span class="o">:</span><span class="c1">//python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2</span>
@@ -240,23 +238,24 @@ $ pyenv versions
 <li><a href="http://xquartz.macosforge.org/landing/">XQuartz</a></li>
 </ul>
 <p>以及:</p>
-<p>:::bash
-$ brew install pyqt
-==&gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
+<div class="highlight"><pre><span class="nv">$ </span>brew install <span class="nv">pyqt</span>
+<span class="o">==</span>&gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
 Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
-==&gt; Patching
+<span class="o">==</span>&gt; Patching
 patching file configure.py
-==&gt; /usr/local/opt/python/bin/python2 configure.py —confirm-license —bindir=/usr/local/Cellar/pyqt/4.10.3/bin —destdir=/usr/local/Cellar/
+<span class="o">==</span>&gt; /usr/local/opt/python/bin/python2 configure.py --confirm-license --bindir<span class="o">=</span>/usr/local/Cellar/pyqt/4.10.3/bin --destdir<span class="o">=</span>/usr/local/Cellar/
 Error: Unable to find the qmake configuration file
 /usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
 Use the <span class="caps">QMAKESPEC</span> environment variable to specify the correct platform.
-Determining the layout of your Qt installation…</p>
-<p><span class="caps">READ</span> <span class="caps">THIS</span>: https://github.com/Homebrew/homebrew/wiki/troubleshooting</p>
+Determining the layout of your Qt installation...
+
+<span class="caps">READ</span> <span class="caps">THIS</span>: https://github.com/Homebrew/homebrew/wiki/troubleshooting
+</pre></div>
 <p>多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,</p>
 <p>然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:</p>
-<p>:::bash</p>
-<h1 id="bashrc-for-running-leo">~/.bashrc for running Leo</h1>
-<p>alias leolanch=”python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;”</p>
+<div class="highlight"><pre><span class="c"># ~/.bashrc for running Leo</span>
+<span class="nb">alias </span><span class="nv">leolanch</span><span class="o">=</span><span class="s2">"python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"</span>
+</pre></div>
 <h2 id="sshfs">伟光大的 sshfs</h2>
 <div class="highlight"><pre><span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="n">fuse4x</span>
 <span class="n">Linking</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="p">...</span> <span class="n">Warning</span><span class="o">:</span> <span class="n">Could</span> <span class="n">not</span> <span class="n">link</span> <span class="n">fuse4x</span><span class="p">.</span> <span class="n">Unlinking</span><span class="p">...</span>

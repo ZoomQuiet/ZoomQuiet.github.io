@@ -988,9 +988,8 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
   通过环境变量的自动配置 形成复合Python版本共存&lt;/p&gt;
 &lt;p&gt;VirtualEnv 有 Pyenv 的插件
 所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:&lt;/p&gt;
-&lt;p&gt;:::bash
-$ pyenv versions
-* system (set by /Users/zoomq/.pyenv/version)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pyenv versions
+* system &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set &lt;/span&gt;by /Users/zoomq/.pyenv/version&lt;span class="o"&gt;)&lt;/span&gt;
   2.7.3
   2.7.5
   2.7.6
@@ -1004,7 +1003,9 @@ $ pyenv versions
   3.3.2
   32IPy
   ipynotebook
-  pypy-2.2.1 pypy221chaos&lt;/p&gt;
+  pypy-2.2.1
+  pypy221chaos
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;主要遇到的问题是:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Installing&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt;
 &lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Downloading&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2&lt;/span&gt;
@@ -1047,23 +1048,24 @@ $ pyenv versions
 &lt;li&gt;&lt;a href="http://xquartz.macosforge.org/landing/"&gt;XQuartz&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以及:&lt;/p&gt;
-&lt;p&gt;:::bash
-$ brew install pyqt
-==&amp;gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew install &lt;span class="nv"&gt;pyqt&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
 Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
-==&amp;gt; Patching
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Patching
 patching file configure.py
-==&amp;gt; /usr/local/opt/python/bin/python2 configure.py —confirm-license —bindir=/usr/local/Cellar/pyqt/4.10.3/bin —destdir=/usr/local/Cellar/
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; /usr/local/opt/python/bin/python2 configure.py --confirm-license --bindir&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/Cellar/pyqt/4.10.3/bin --destdir&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/Cellar/
 Error: Unable to find the qmake configuration file
 /usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
 Use the &lt;span class="caps"&gt;QMAKESPEC&lt;/span&gt; environment variable to specify the correct platform.
-Determining the layout of your Qt installation…&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://github.com/Homebrew/homebrew/wiki/troubleshooting&lt;/p&gt;
+Determining the layout of your Qt installation...
+
+&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://github.com/Homebrew/homebrew/wiki/troubleshooting
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,&lt;/p&gt;
 &lt;p&gt;然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:&lt;/p&gt;
-&lt;p&gt;:::bash&lt;/p&gt;
-&lt;h1 id="bashrc-for-running-leo"&gt;~/.bashrc for running Leo&lt;/h1&gt;
-&lt;p&gt;alias leolanch=”python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;”&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# ~/.bashrc for running Leo&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;leolanch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="sshfs"&gt;伟光大的 sshfs&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;fuse4x&lt;/span&gt;
 &lt;span class="n"&gt;Linking&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;0.9.2&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Warning&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Could&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Unlinking&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;

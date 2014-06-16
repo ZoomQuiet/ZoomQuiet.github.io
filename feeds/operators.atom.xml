@@ -36,9 +36,12 @@
 &lt;/ul&gt;
 &lt;p&gt;所以,我来,我写,我发布!&lt;/p&gt;
 &lt;h2 id="ps"&gt;ps:&amp;nbsp;测试语法顔色&lt;/h2&gt;
-&lt;p&gt;:::python
-import&amp;nbsp;sys&lt;/p&gt;
-&lt;p&gt;print &amp;#8220;Hollo&amp;nbsp;World!-)&amp;#8221;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Hollo World!-)&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140104&amp;nbsp;re-init.&lt;/li&gt;

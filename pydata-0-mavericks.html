@@ -225,8 +225,17 @@ export <span class="caps">PATH</span>
 <p><img alt="140604-pydata-canopy.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140604-pydata-canopy.png"/></p>
 <p>参考:</p>
 <ul>
-<li><a href="http://stackoverflow.com/questions/3819449/how-to-uninstall-python-2-7-on-a-mac-os-x-10-6-4">osx - How to uninstall Python 2.7 on a Mac <span class="caps">OS</span> X 10.6.4? - Stack Overflow</a></li>
-<li><a href="http://docs.python-guide.org/en/latest/starting/install/osx/">Installing Python on Mac <span class="caps">OS</span> X — The Hitchhiker’s Guide to Python</a><ul>
+<li>
+<p><a href="http://stackoverflow.com/questions/3819449/how-to-uninstall-python-2-7-on-a-mac-os-x-10-6-4">osx - How to uninstall Python 2.7 on a Mac <span class="caps">OS</span> X 10.6.4? - Stack Overflow</a></p>
+<ul>
+<li>sudo rm -rf /Library/Frameworks/Python.framework/Versions/2.7</li>
+<li>sudo rm -rf “/Applications/Python 2.7”</li>
+<li>remove the symbolic links in /usr/local/bin that point to this python version see ls -l /usr/local/bin</li>
+</ul>
+</li>
+<li>
+<p><a href="http://docs.python-guide.org/en/latest/starting/install/osx/">Installing Python on Mac <span class="caps">OS</span> X — The Hitchhiker’s Guide to Python</a></p>
+<ul>
 <li><a href="http://wolfpaulus.com/jounal/mac/installing_python_osx/">Installing / Updating Python on <span class="caps">OS</span> X | Wolf Paulus</a></li>
 <li><a href="https://gist.github.com/goldsmith/7163055">When I upgraded my Mac to <span class="caps">OS</span> X Mavericks, a lot of utilities (like Python, virtualenv, Xcode) broke, and it was pretty stressful trying to get it all set back up. Hopefully this guide can spare you some of that pain.Note: I’m by no means a Linux or Mac ex</a></li>
 </ul>

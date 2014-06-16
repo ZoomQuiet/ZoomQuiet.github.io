@@ -84,8 +84,17 @@ export &lt;span class="caps"&gt;PATH&lt;/span&gt;
 &lt;p&gt;&lt;img alt="140604-pydata-canopy.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140604-pydata-canopy.png"/&gt;&lt;/p&gt;
 &lt;p&gt;参考:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/3819449/how-to-uninstall-python-2-7-on-a-mac-os-x-10-6-4"&gt;osx - How to uninstall Python 2.7 on a Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X 10.6.4? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://docs.python-guide.org/en/latest/starting/install/osx/"&gt;Installing Python on Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X — The Hitchhiker’s Guide to Python&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/3819449/how-to-uninstall-python-2-7-on-a-mac-os-x-10-6-4"&gt;osx - How to uninstall Python 2.7 on a Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X 10.6.4? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sudo rm -rf /Library/Frameworks/Python.framework/Versions/2.7&lt;/li&gt;
+&lt;li&gt;sudo rm -rf “/Applications/Python 2.7”&lt;/li&gt;
+&lt;li&gt;remove the symbolic links in /usr/local/bin that point to this python version see ls -l /usr/local/bin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://docs.python-guide.org/en/latest/starting/install/osx/"&gt;Installing Python on Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X — The Hitchhiker’s Guide to Python&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href="http://wolfpaulus.com/jounal/mac/installing_python_osx/"&gt;Installing / Updating Python on &lt;span class="caps"&gt;OS&lt;/span&gt; X | Wolf Paulus&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://gist.github.com/goldsmith/7163055"&gt;When I upgraded my Mac to &lt;span class="caps"&gt;OS&lt;/span&gt; X Mavericks, a lot of utilities (like Python, virtualenv, Xcode) broke, and it was pretty stressful trying to get it all set back up. Hopefully this guide can spare you some of that pain.Note: I’m by no means a Linux or Mac ex&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1086,82 +1095,116 @@ Writing superblocks and filesystem accounting information: done
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="140107-guido-twitter.png（PNG 图像，558x580 像素）" src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/140107-guido-twitter.png" /&gt;&lt;/p&gt;
 &lt;p&gt;以上,有关蠎衫的故事,就是这些,再过12年,又能发生什么?!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="design-by zoomquiet " src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/favicon/140101-design-by.png" /&gt;&lt;/p&gt;</summary><category term="Guido"></category><category term="Pythonner"></category><category term="PyConChina"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="http://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:jump-into-mavericks.html</id><summary type="html">&lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="design-by zoomquiet " src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/favicon/140101-design-by.png" /&gt;&lt;/p&gt;</summary><category term="Guido"></category><category term="Pythonner"></category><category term="PyConChina"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="http://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:jump-into-mavericks.html</id><summary type="html">
+&lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
 &lt;p&gt;得承认是被 老池的文章忽悠到了, 
 而且, 10.9 免费了, 进一步的通过&lt;span class="caps"&gt;OS&lt;/span&gt; 提高了电池/内存的使用效率,
 最关键的,在 &lt;a href="http://techparty.org/events/2013/12/29/et-ecugcon-sz/"&gt;无责任报道~ECUG2013Con&lt;/a&gt; 中提及过的,
-有好基友,已经折腾过,明确从 10.7&amp;nbsp;直升没有问题!&lt;/p&gt;
-&lt;p&gt;于是一个月黑风高的晚上&amp;#8230;&lt;/p&gt;
+有好基友,已经折腾过,明确从 10.7 直升没有问题!&lt;/p&gt;
+&lt;p&gt;于是一个月黑风高的晚上…&lt;/p&gt;
 &lt;h1 id="_2"&gt;回顾&lt;/h1&gt;
-&lt;h2 id="leo"&gt;Leo&lt;/h2&gt;
-&lt;p&gt;About X11 and &lt;span class="caps"&gt;OS&lt;/span&gt; X 
-    http://support.apple.com/kb/&lt;span class="caps"&gt;HT5293&lt;/span&gt;
-XQuartz&amp;nbsp;http://xquartz.macosforge.org/landing/&lt;/p&gt;
-&lt;p&gt;$ brew install pyqt
+&lt;p&gt;宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾!&lt;/p&gt;
+&lt;p&gt;唯三的折腾:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Python 环境&lt;/li&gt;
+&lt;li&gt;Qt 环境&lt;/li&gt;
+&lt;li&gt;sshfs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;严正推荐:&lt;/p&gt;
+&lt;p&gt;&lt;a href="file:///Users/zoomq/mnt/%E5%BF%AB%E7%9B%98/zScrapBook/ZqFLOSS/data/20131230190257/index.html"&gt;Mavericksでbrew upgradeしたらハマった話&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;等等日文的相关纪要非常实在,直觉,顺序合理,值得,多参考.&lt;/p&gt;
+&lt;h2 id="python-qt-for-leo"&gt;Python + Qt for Leo&lt;/h2&gt;
+&lt;p&gt;大家知道俺是 &lt;a href="http://wiki.woodpecker.org.cn/moin/LiterateProgramming"&gt;文学化编程&lt;/a&gt;
+的拥趸,
+所以,一直使用 &lt;a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment"&gt;Leo&lt;/a&gt; 作为主要编程环境的,&lt;/p&gt;
+&lt;p&gt;10.9 以后 Python 不内置安装了,
+Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
+&lt;h3 id="python"&gt;Python&lt;/h3&gt;
+&lt;p&gt;当然,系统的用 &lt;code&gt;brew install python&lt;/code&gt; 了,&lt;/p&gt;
+&lt;p&gt;而其它各种项目开发时,就要综合使用&lt;/p&gt;
+&lt;h4 id="pyenvvirtualenv"&gt;Pyenv+VirtualEnv&lt;/h4&gt;
+&lt;p&gt;Pyenv 是这样一种神器:&lt;/p&gt;
+&lt;p&gt;完全的面向shell
+  通过环境变量的自动配置 形成复合Python版本共存&lt;/p&gt;
+&lt;p&gt;VirtualEnv 有 Pyenv 的插件
+所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:&lt;/p&gt;
+&lt;p&gt;:::bash
+$ pyenv versions
+* system (set by /Users/zoomq/.pyenv/version)
+  2.7.3
+  2.7.5
+  2.7.6
+  &lt;span class="caps"&gt;273SAE&lt;/span&gt;
+  275lbTC
+  275pelican
+  276SphinxOBP
+  276chaos
+  276uliweb
+  3.2
+  3.3.2
+  32IPy
+  ipynotebook
+  pypy-2.2.1 pypy221chaos&lt;/p&gt;
+&lt;p&gt;主要遇到的问题是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Installing&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Downloading&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2&lt;/span&gt;
+&lt;span class="cp"&gt;######################################################################## 100.0%&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;configure&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;prefix&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;3.3.3&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;enable&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ipv6&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;datarootdir&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;3.3.3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;datadir&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lo&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;3.3.3&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;frameworkinstallextras&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;3.3.3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sitecustomize&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nl"&gt;ValueError:&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sitecustomize&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nl"&gt;ValueError:&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sitecustomize&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nl"&gt;ValueError:&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sitecustomize&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nl"&gt;ValueError:&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sitecustomize&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nl"&gt;ValueError:&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sitecustomize&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nl"&gt;ValueError:&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sitecustomize&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nl"&gt;ValueError:&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sitecustomize&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nl"&gt;ValueError:&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sitecustomize&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nl"&gt;ValueError:&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sitecustomize&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nl"&gt;ValueError:&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;指定具体版本,尝试,直到可以顺利安装出可用的就好.&lt;/p&gt;
+&lt;p&gt;严正表扬一下 ‘Yamashita, Yuu`&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/yyuu/pyenv/issues/95#issuecomment-31392999"&gt;How to config pyenv’s pip ? · Issue #95 · yyuu/pyenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;绝对认真的回答了俺的提问,虽然不了了之,但是,一个常用工具的作者,可以如此关注一个不是问题的问题,实在太勤勉了,必须学习!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="qt-for-leo"&gt;Qt for Leo&lt;/h3&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://support.apple.com/kb/HT5293"&gt;About X11 and &lt;span class="caps"&gt;OS&lt;/span&gt; X&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://xquartz.macosforge.org/landing/"&gt;XQuartz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以及:&lt;/p&gt;
+&lt;p&gt;:::bash
+$ brew install pyqt
 ==&amp;gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
 Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
 ==&amp;gt; Patching
 patching file configure.py
-==&amp;gt; /usr/local/opt/python/bin/python2 configure.py &amp;#8212;confirm-license &amp;#8212;bindir=/usr/local/Cellar/pyqt/4.10.3/bin &amp;#8212;destdir=/usr/local/Cellar/
+==&amp;gt; /usr/local/opt/python/bin/python2 configure.py —confirm-license —bindir=/usr/local/Cellar/pyqt/4.10.3/bin —destdir=/usr/local/Cellar/
 Error: Unable to find the qmake configuration file
 /usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
 Use the &lt;span class="caps"&gt;QMAKESPEC&lt;/span&gt; environment variable to specify the correct platform.
-Determining the layout of your Qt&amp;nbsp;installation&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;:&amp;nbsp;https://github.com/Homebrew/homebrew/wiki/troubleshooting&lt;/p&gt;
-&lt;h2 id="pyenv"&gt;Pyenv&lt;/h2&gt;
-&lt;p&gt;==&amp;gt; Upgrading python3
-==&amp;gt; Installing python3 dependency: sqlite
-==&amp;gt; Downloading&amp;nbsp;https://downloads.sf.net/project/machomebrew/Bottles/sqlite-3.8.2.mavericks.bottle.tar.gz&lt;/p&gt;
-&lt;h6 id="269"&gt;#############&amp;nbsp;26.9%&lt;/h6&gt;
-&lt;p&gt;curl: (56) Recv failure: Connection reset by peer
-Warning: Bottle installation failed: building from source.
-==&amp;gt; Downloading&amp;nbsp;http://www.sqlite.org/2013/sqlite-autoconf-3080200.tar.gz&lt;/p&gt;
-&lt;h6 id="1000"&gt;##################################################################&amp;nbsp;100.0%&lt;/h6&gt;
-&lt;p&gt;==&amp;gt; ./configure &amp;#8212;prefix=/usr/local/Cellar/sqlite/3.8.2 &amp;#8212;enable-dynamic-extensions
-==&amp;gt; make install
-==&amp;gt; Caveats
-This formula is keg-only, so it was not symlinked into&amp;nbsp;/usr/local.&lt;/p&gt;
-&lt;p&gt;Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X already provides this software and installing another version in
-parallel can cause all kinds of&amp;nbsp;trouble.&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;OS&lt;/span&gt; X provides an older&amp;nbsp;sqlite3.&lt;/p&gt;
-&lt;p&gt;Generally there are no consequences of this for you. If you build your
-own software and it requires this formula, you&amp;#8217;ll need to add to your
-build&amp;nbsp;variables:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;&lt;span class="caps"&gt;LDFLAGS&lt;/span&gt;:&lt;/span&gt;  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sqlite&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;
-&lt;span class="nl"&gt;&lt;span class="caps"&gt;CPPFLAGS&lt;/span&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;I&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sqlite&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;include&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;==&amp;gt; Summary
-🍺  /usr/local/Cellar/sqlite/3.8.2: 9 files, 2.0M, built in 48&amp;nbsp;seconds&lt;/p&gt;
-&lt;p&gt;==&amp;gt; Installing python3
-==&amp;gt; Downloading&amp;nbsp;http://python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2&lt;/p&gt;
-&lt;h6 id="1000_1"&gt;##################################################################&amp;nbsp;100.0%&lt;/h6&gt;
-&lt;p&gt;==&amp;gt; ./configure &amp;#8212;prefix=/usr/local/Cellar/python3/3.3.3 &amp;#8212;enable-ipv6 &amp;#8212;datarootdir=/usr/local/Cellar/python3/3.3.3/share &amp;#8212;datadir=/usr/lo
-==&amp;gt; make
-==&amp;gt; make install &lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;=/usr/local/Cellar/python3/3.3.3
-==&amp;gt; make frameworkinstallextras &lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;=/usr/local/Cellar/python3/3.3.3/share/python3
-Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set &lt;span class="caps"&gt;PYTHONVERBOSE&lt;/span&gt; for traceback:
-ValueError: list.remove(x): x not in&amp;nbsp;list&lt;/p&gt;
-&lt;h2 id="sshfs"&gt;伟光大的&amp;nbsp;sshfs&lt;/h2&gt;
+Determining the layout of your Qt installation…&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://github.com/Homebrew/homebrew/wiki/troubleshooting&lt;/p&gt;
+&lt;p&gt;多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,&lt;/p&gt;
+&lt;p&gt;然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:&lt;/p&gt;
+&lt;p&gt;:::bash&lt;/p&gt;
+&lt;h1 id="bashrc-for-running-leo"&gt;~/.bashrc for running Leo&lt;/h1&gt;
+&lt;p&gt;alias leolanch=”python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;”&lt;/p&gt;
+&lt;h2 id="sshfs"&gt;伟光大的 sshfs&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;fuse4x&lt;/span&gt;
 &lt;span class="n"&gt;Linking&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;0.9.2&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Warning&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Could&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;fuse4x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Unlinking&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
 
@@ -1199,44 +1242,14 @@ ValueError: list.remove(x): x not in&amp;nbsp;list&lt;/p&gt;
 &lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Summary&lt;/span&gt;
 &lt;span class="err"&gt;🍺&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2.6.2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;84&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;5.0&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2 id="displaylink"&gt;DisplayLink&lt;/h2&gt;
-&lt;h2 id="140518"&gt;140518&lt;/h2&gt;
-&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~
-$ brew upgrade
-==&amp;gt; Upgrading 32 outdated packages, with result:
-autojump 21.7.1, brew-cask 0.35.0, doxygen 1.8.7, ffmpeg 2.2.2, fftw 3.3.4, fribidi 0.19.6, ghc 7.6.3_2, git 1.9.3, glib 2.40.0_1, gmp 6.0.0a, gnupg2 2.0.22_1, go 1.2.2, harfbuzz 0.9.28, imagemagick 6.8.9-1, lftp 4.4.16, libass 0.11.2, libgpg-error 1.13, libtasn1 3.5, little-cms2 2.6, mongodb 2.6.1, mpc 0.25, mpd 0.18.11, nginx 1.6.0_1, node 0.10.28, orc 0.4.19, qt 4.8.6, readline 6.3.5, redis 2.8.9, rtmpdump 2.4+20131018, tree 1.7.0, wavpack 4.70.0, x264 r2412
-==&amp;gt; Upgrading&amp;nbsp;autojump&lt;/p&gt;
-&lt;p&gt;&amp;#8230;&lt;/p&gt;
-&lt;p&gt;==&amp;gt; Downloading&amp;nbsp;https://storage.googleapis.com/golang/go1.2.2.src.tar.gz&lt;/p&gt;
-&lt;h6 id="1000_2"&gt;##################################################################&amp;nbsp;100.0%&lt;/h6&gt;
-&lt;p&gt;==&amp;gt; ./make.bash &amp;#8212;no-clean
-==&amp;gt; Caveats
-As of go 1.2, a valid &lt;span class="caps"&gt;GOPATH&lt;/span&gt; is required to use the &lt;code&gt;go get&lt;/code&gt; command:&amp;nbsp;http://golang.org/doc/code.html#&lt;span class="caps"&gt;GOPATH&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;go vet&lt;/code&gt; and &lt;code&gt;go doc&lt;/code&gt; are now part of the go.tools sub repo:&amp;nbsp;http://golang.org/doc/go1.2#go_tools_godoc&lt;/p&gt;
-&lt;p&gt;To get &lt;code&gt;go vet&lt;/code&gt; and &lt;code&gt;go doc&lt;/code&gt; run:
-  go get code.google.com/p/go.tools/cmd/godoc
-  go get&amp;nbsp;code.google.com/p/go.tools/cmd/vet&lt;/p&gt;
-&lt;p&gt;You may wish to add the &lt;span class="caps"&gt;GOROOT&lt;/span&gt;-based install location to your &lt;span class="caps"&gt;PATH&lt;/span&gt;:
-  export&amp;nbsp;&lt;span class="caps"&gt;PATH&lt;/span&gt;=$&lt;span class="caps"&gt;PATH&lt;/span&gt;:/usr/local/opt/go/libexec/bin&lt;/p&gt;
-&lt;p&gt;Bash completion has been installed to:&amp;nbsp;/usr/local/etc/bash_completion.d&lt;/p&gt;
-&lt;p&gt;zsh completion has been installed to:&amp;nbsp;/usr/local/share/zsh/site-functions&lt;/p&gt;
-&lt;p&gt;&amp;#8230;&lt;/p&gt;
-&lt;p&gt;==&amp;gt; Pouring nginx-1.6.0_1.mavericks.bottle.tar.gz
-==&amp;gt; Caveats
-Docroot is:&amp;nbsp;/usr/local/var/www&lt;/p&gt;
-&lt;p&gt;The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
-nginx can run without&amp;nbsp;sudo.&lt;/p&gt;
-&lt;p&gt;To have launchd start nginx at login:
-    ln -sfv /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents
-Then to load nginx now:
-    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
-Or, if you don&amp;#8217;t want/need launchctl, you can just run:&amp;nbsp;nginx&lt;/p&gt;
+&lt;p&gt;具体哪个管用,俺也没整明白,
+反正,怎么折腾,
+都是可以正当加载上 &lt;code&gt;Plan&lt;/code&gt; 的内核库, 然后就可以对家庭服务器的所有硬盘,远程加载为本地目录了..&lt;/p&gt;
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;140505&amp;nbsp;快速简述完成&lt;/li&gt;
-&lt;li&gt;140110&amp;nbsp;起意,总结&lt;/li&gt;
+&lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
+&lt;li&gt;140505 快速简述完成&lt;/li&gt;
+&lt;li&gt;140110 起意,总结&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>On object-oriented programming</title><link href="http://blog.zoomquiet.io/131224-yw-on-oop.html" rel="alternate"></link><updated>2013-12-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-24:131224-yw-on-oop.html</id><summary type="html">
 &lt;h1 id="_1"&gt;翻越分享原文&lt;/h1&gt;
 &lt;ul&gt;

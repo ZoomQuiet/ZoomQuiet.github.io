@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="jump-into-mavericks"/>
             <meta property="og:url" content="http://blog.zoomquiet.io/jump-into-mavericks.html"/>
-            <meta property="og:description" content="为毛 得承认是被 老池的文章忽悠到了, 而且, 10.9 免费了, 进一步的通过OS 提高了电池/内存的使用效率, 最关键的,在 无责任报道~ECUG2013Con 中提及过的, 有好基友,已经折腾过,明确从 10.7 直升没有问题! 于是一个月黑风高的晚上… 回顾 Leo About X11 and OS X http://support.apple.com/kb/HT5293 XQuartz http://xquartz.macosforge.org/landing/ $ brew install pyqt ==&gt; Downloading http://downloads.sf.net ..."/>
+            <meta property="og:description" content="为毛 得承认是被 老池的文章忽悠到了, 而且, 10.9 免费了, 进一步的通过OS 提高了电池/内存的使用效率, 最关键的,在 无责任报道~ECUG2013Con 中提及过的, 有好基友,已经折腾过,明确从 10.7 直升没有问题! 于是一个月黑风高的晚上… 回顾 宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾! 唯三的折腾: Python 环境 Qt 环境 sshfs 严正推荐: Mavericksでbrew upgradeしたらハマった話 等等日文的相关纪要非常实在,直觉,顺序合理,值得,多参考. Python + Qt for Leo 大家知道俺是 文学化编程 的拥趸, 所以 ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -127,82 +127,137 @@
 </footer><!-- /.post-info -->                    </div>
                 </div>
 
-                <h1 id="_1">为毛</h1>
+    <div class="toc">
+<ul>
+<li><a href="#_1">为毛</a></li>
+<li><a href="#_2">回顾</a><ul>
+<li><a href="#python-qt-for-leo">Python + Qt for Leo</a><ul>
+<li><a href="#python">Python</a><ul>
+<li><a href="#pyenvvirtualenv">Pyenv+VirtualEnv</a></li>
+</ul>
+</li>
+<li><a href="#qt-for-leo">Qt for Leo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#bashrc-for-running-leo">~/.bashrc for running Leo</a><ul>
+<li><a href="#sshfs">伟光大的 sshfs</a></li>
+</ul>
+</li>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+</div>
+                
+<h1 id="_1">为毛</h1>
 <p>得承认是被 老池的文章忽悠到了, 
 而且, 10.9 免费了, 进一步的通过<span class="caps">OS</span> 提高了电池/内存的使用效率,
 最关键的,在 <a href="http://techparty.org/events/2013/12/29/et-ecugcon-sz/">无责任报道~ECUG2013Con</a> 中提及过的,
-有好基友,已经折腾过,明确从 10.7&nbsp;直升没有问题!</p>
-<p>于是一个月黑风高的晚上&#8230;</p>
+有好基友,已经折腾过,明确从 10.7 直升没有问题!</p>
+<p>于是一个月黑风高的晚上…</p>
 <h1 id="_2">回顾</h1>
-<h2 id="leo">Leo</h2>
-<p>About X11 and <span class="caps">OS</span> X 
-    http://support.apple.com/kb/<span class="caps">HT5293</span>
-XQuartz&nbsp;http://xquartz.macosforge.org/landing/</p>
-<p>$ brew install pyqt
+<p>宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾!</p>
+<p>唯三的折腾:</p>
+<ol>
+<li>Python 环境</li>
+<li>Qt 环境</li>
+<li>sshfs</li>
+</ol>
+<p>严正推荐:</p>
+<p><a href="file:///Users/zoomq/mnt/%E5%BF%AB%E7%9B%98/zScrapBook/ZqFLOSS/data/20131230190257/index.html">Mavericksでbrew upgradeしたらハマった話</a></p>
+<p>等等日文的相关纪要非常实在,直觉,顺序合理,值得,多参考.</p>
+<h2 id="python-qt-for-leo">Python + Qt for Leo</h2>
+<p>大家知道俺是 <a href="http://wiki.woodpecker.org.cn/moin/LiterateProgramming">文学化编程</a>
+的拥趸,
+所以,一直使用 <a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">Leo</a> 作为主要编程环境的,</p>
+<p>10.9 以后 Python 不内置安装了,
+Qt 当然从来也没有内置过. 所以,</p>
+<h3 id="python">Python</h3>
+<p>当然,系统的用 <code>brew install python</code> 了,</p>
+<p>而其它各种项目开发时,就要综合使用</p>
+<h4 id="pyenvvirtualenv">Pyenv+VirtualEnv</h4>
+<p>Pyenv 是这样一种神器:</p>
+<p>完全的面向shell
+  通过环境变量的自动配置 形成复合Python版本共存</p>
+<p>VirtualEnv 有 Pyenv 的插件
+所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:</p>
+<p>:::bash
+$ pyenv versions
+* system (set by /Users/zoomq/.pyenv/version)
+  2.7.3
+  2.7.5
+  2.7.6
+  <span class="caps">273SAE</span>
+  275lbTC
+  275pelican
+  276SphinxOBP
+  276chaos
+  276uliweb
+  3.2
+  3.3.2
+  32IPy
+  ipynotebook
+  pypy-2.2.1 pypy221chaos</p>
+<p>主要遇到的问题是:</p>
+<div class="highlight"><pre><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">python3</span>
+<span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">http</span><span class="o">:</span><span class="c1">//python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2</span>
+<span class="cp">######################################################################## 100.0%</span>
+<span class="o">==&gt;</span> <span class="p">.</span><span class="o">/</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">ipv6</span> <span class="o">--</span><span class="n">datarootdir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span><span class="o">/</span><span class="n">share</span> <span class="o">--</span><span class="n">datadir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">lo</span>
+<span class="o">==&gt;</span> <span class="n">make</span>
+<span class="o">==&gt;</span> <span class="n">make</span> <span class="n">install</span> <span class="n"><span class="caps">PYTHONAPPSDIR</span></span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span>
+<span class="o">==&gt;</span> <span class="n">make</span> <span class="n">frameworkinstallextras</span> <span class="n"><span class="caps">PYTHONAPPSDIR</span></span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">python3</span>
+<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
+<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
+<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
+<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
+<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
+<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
+<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
+<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
+<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
+<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
+<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+</pre></div>
+<p>指定具体版本,尝试,直到可以顺利安装出可用的就好.</p>
+<p>严正表扬一下 ‘Yamashita, Yuu`</p>
+<ul>
+<li><a href="https://github.com/yyuu/pyenv/issues/95#issuecomment-31392999">How to config pyenv’s pip ? · Issue #95 · yyuu/pyenv</a></li>
+<li>绝对认真的回答了俺的提问,虽然不了了之,但是,一个常用工具的作者,可以如此关注一个不是问题的问题,实在太勤勉了,必须学习!</li>
+</ul>
+<h3 id="qt-for-leo">Qt for Leo</h3>
+<p>参考:</p>
+<ul>
+<li><a href="http://support.apple.com/kb/HT5293">About X11 and <span class="caps">OS</span> X</a></li>
+<li><a href="http://xquartz.macosforge.org/landing/">XQuartz</a></li>
+</ul>
+<p>以及:</p>
+<p>:::bash
+$ brew install pyqt
 ==&gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
 Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
 ==&gt; Patching
 patching file configure.py
-==&gt; /usr/local/opt/python/bin/python2 configure.py &#8212;confirm-license &#8212;bindir=/usr/local/Cellar/pyqt/4.10.3/bin &#8212;destdir=/usr/local/Cellar/
+==&gt; /usr/local/opt/python/bin/python2 configure.py —confirm-license —bindir=/usr/local/Cellar/pyqt/4.10.3/bin —destdir=/usr/local/Cellar/
 Error: Unable to find the qmake configuration file
 /usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
 Use the <span class="caps">QMAKESPEC</span> environment variable to specify the correct platform.
-Determining the layout of your Qt&nbsp;installation&#8230;</p>
-<p><span class="caps">READ</span> <span class="caps">THIS</span>:&nbsp;https://github.com/Homebrew/homebrew/wiki/troubleshooting</p>
-<h2 id="pyenv">Pyenv</h2>
-<p>==&gt; Upgrading python3
-==&gt; Installing python3 dependency: sqlite
-==&gt; Downloading&nbsp;https://downloads.sf.net/project/machomebrew/Bottles/sqlite-3.8.2.mavericks.bottle.tar.gz</p>
-<h6 id="269">#############&nbsp;26.9%</h6>
-<p>curl: (56) Recv failure: Connection reset by peer
-Warning: Bottle installation failed: building from source.
-==&gt; Downloading&nbsp;http://www.sqlite.org/2013/sqlite-autoconf-3080200.tar.gz</p>
-<h6 id="1000">##################################################################&nbsp;100.0%</h6>
-<p>==&gt; ./configure &#8212;prefix=/usr/local/Cellar/sqlite/3.8.2 &#8212;enable-dynamic-extensions
-==&gt; make install
-==&gt; Caveats
-This formula is keg-only, so it was not symlinked into&nbsp;/usr/local.</p>
-<p>Mac <span class="caps">OS</span> X already provides this software and installing another version in
-parallel can cause all kinds of&nbsp;trouble.</p>
-<p><span class="caps">OS</span> X provides an older&nbsp;sqlite3.</p>
-<p>Generally there are no consequences of this for you. If you build your
-own software and it requires this formula, you&#8217;ll need to add to your
-build&nbsp;variables:</p>
-<div class="highlight"><pre><span class="nl"><span class="caps">LDFLAGS</span>:</span>  <span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">sqlite</span><span class="o">/</span><span class="n">lib</span>
-<span class="nl"><span class="caps">CPPFLAGS</span>:</span> <span class="o">-</span><span class="n">I</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">sqlite</span><span class="o">/</span><span class="n">include</span>
-</pre></div>
-
-
-<p>==&gt; Summary
-🍺  /usr/local/Cellar/sqlite/3.8.2: 9 files, 2.0M, built in 48&nbsp;seconds</p>
-<p>==&gt; Installing python3
-==&gt; Downloading&nbsp;http://python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2</p>
-<h6 id="1000_1">##################################################################&nbsp;100.0%</h6>
-<p>==&gt; ./configure &#8212;prefix=/usr/local/Cellar/python3/3.3.3 &#8212;enable-ipv6 &#8212;datarootdir=/usr/local/Cellar/python3/3.3.3/share &#8212;datadir=/usr/lo
-==&gt; make
-==&gt; make install <span class="caps">PYTHONAPPSDIR</span>=/usr/local/Cellar/python3/3.3.3
-==&gt; make frameworkinstallextras <span class="caps">PYTHONAPPSDIR</span>=/usr/local/Cellar/python3/3.3.3/share/python3
-Error in sitecustomize; set <span class="caps">PYTHONVERBOSE</span> for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set <span class="caps">PYTHONVERBOSE</span> for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set <span class="caps">PYTHONVERBOSE</span> for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set <span class="caps">PYTHONVERBOSE</span> for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set <span class="caps">PYTHONVERBOSE</span> for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set <span class="caps">PYTHONVERBOSE</span> for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set <span class="caps">PYTHONVERBOSE</span> for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set <span class="caps">PYTHONVERBOSE</span> for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set <span class="caps">PYTHONVERBOSE</span> for traceback:
-ValueError: list.remove(x): x not in list
-Error in sitecustomize; set <span class="caps">PYTHONVERBOSE</span> for traceback:
-ValueError: list.remove(x): x not in&nbsp;list</p>
-<h2 id="sshfs">伟光大的&nbsp;sshfs</h2>
+Determining the layout of your Qt installation…</p>
+<p><span class="caps">READ</span> <span class="caps">THIS</span>: https://github.com/Homebrew/homebrew/wiki/troubleshooting</p>
+<p>多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,</p>
+<p>然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:</p>
+<p>:::bash</p>
+<h1 id="bashrc-for-running-leo">~/.bashrc for running Leo</h1>
+<p>alias leolanch=”python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;”</p>
+<h2 id="sshfs">伟光大的 sshfs</h2>
 <div class="highlight"><pre><span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="n">fuse4x</span>
 <span class="n">Linking</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="p">...</span> <span class="n">Warning</span><span class="o">:</span> <span class="n">Could</span> <span class="n">not</span> <span class="n">link</span> <span class="n">fuse4x</span><span class="p">.</span> <span class="n">Unlinking</span><span class="p">...</span>
 
@@ -240,44 +295,14 @@ ValueError: list.remove(x): x not in&nbsp;list</p>
 <span class="o">==&gt;</span> <span class="n">Summary</span>
 <span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="mf">2.6.2</span><span class="o">:</span> <span class="mi">84</span> <span class="n">files</span><span class="p">,</span> <span class="mf">5.0</span><span class="n">M</span>
 </pre></div>
-
-
-<h2 id="displaylink">DisplayLink</h2>
-<h2 id="140518">140518</h2>
-<p>zoomq @ <span class="caps">MBP111216ZQ</span> in ~
-$ brew upgrade
-==&gt; Upgrading 32 outdated packages, with result:
-autojump 21.7.1, brew-cask 0.35.0, doxygen 1.8.7, ffmpeg 2.2.2, fftw 3.3.4, fribidi 0.19.6, ghc 7.6.3_2, git 1.9.3, glib 2.40.0_1, gmp 6.0.0a, gnupg2 2.0.22_1, go 1.2.2, harfbuzz 0.9.28, imagemagick 6.8.9-1, lftp 4.4.16, libass 0.11.2, libgpg-error 1.13, libtasn1 3.5, little-cms2 2.6, mongodb 2.6.1, mpc 0.25, mpd 0.18.11, nginx 1.6.0_1, node 0.10.28, orc 0.4.19, qt 4.8.6, readline 6.3.5, redis 2.8.9, rtmpdump 2.4+20131018, tree 1.7.0, wavpack 4.70.0, x264 r2412
-==&gt; Upgrading&nbsp;autojump</p>
-<p>&#8230;</p>
-<p>==&gt; Downloading&nbsp;https://storage.googleapis.com/golang/go1.2.2.src.tar.gz</p>
-<h6 id="1000_2">##################################################################&nbsp;100.0%</h6>
-<p>==&gt; ./make.bash &#8212;no-clean
-==&gt; Caveats
-As of go 1.2, a valid <span class="caps">GOPATH</span> is required to use the <code>go get</code> command:&nbsp;http://golang.org/doc/code.html#<span class="caps">GOPATH</span></p>
-<p><code>go vet</code> and <code>go doc</code> are now part of the go.tools sub repo:&nbsp;http://golang.org/doc/go1.2#go_tools_godoc</p>
-<p>To get <code>go vet</code> and <code>go doc</code> run:
-  go get code.google.com/p/go.tools/cmd/godoc
-  go get&nbsp;code.google.com/p/go.tools/cmd/vet</p>
-<p>You may wish to add the <span class="caps">GOROOT</span>-based install location to your <span class="caps">PATH</span>:
-  export&nbsp;<span class="caps">PATH</span>=$<span class="caps">PATH</span>:/usr/local/opt/go/libexec/bin</p>
-<p>Bash completion has been installed to:&nbsp;/usr/local/etc/bash_completion.d</p>
-<p>zsh completion has been installed to:&nbsp;/usr/local/share/zsh/site-functions</p>
-<p>&#8230;</p>
-<p>==&gt; Pouring nginx-1.6.0_1.mavericks.bottle.tar.gz
-==&gt; Caveats
-Docroot is:&nbsp;/usr/local/var/www</p>
-<p>The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
-nginx can run without&nbsp;sudo.</p>
-<p>To have launchd start nginx at login:
-    ln -sfv /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents
-Then to load nginx now:
-    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
-Or, if you don&#8217;t want/need launchctl, you can just run:&nbsp;nginx</p>
+<p>具体哪个管用,俺也没整明白,
+反正,怎么折腾,
+都是可以正当加载上 <code>Plan</code> 的内核库, 然后就可以对家庭服务器的所有硬盘,远程加载为本地目录了..</p>
 <h1 id="changelog">Changelog</h1>
 <ul>
-<li>140505&nbsp;快速简述完成</li>
-<li>140110&nbsp;起意,总结</li>
+<li>140616 再次精简,算是发布</li>
+<li>140505 快速简述完成</li>
+<li>140110 起意,总结</li>
 </ul>
             </div>
             <!-- /.entry-content -->

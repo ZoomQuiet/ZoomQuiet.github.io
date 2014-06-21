@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title> - people
+    <title>    091110_jacob-what2write
 | #是也乎#
 | ZoomQuiet.io    </title>
 
@@ -14,10 +14,10 @@
 
     <!-- Open Graph tags -->
 
-            <meta property="og:type" content="website"/>
-            <meta property="og:title" content=""/>
-            <meta property="og:url" content="http://blog.zoomquiet.io"/>
-            <meta property="og:description" content=""/>
+            <meta property="og:type" content="article"/>
+            <meta property="og:slug" content="091110_jacob-what2write"/>
+            <meta property="og:url" content="http://blog.zoomquiet.io/091110_jacob-what2write.html"/>
+            <meta property="og:description" content="Tech docs can take a bunch of different forms ranging from high-level overviews, to step-by-step walkthroughs, to auto-generated API documentation. Unfortunately, no single format works for all users; there’s huge differences in the way that people learn, so a well-documented project needs to provide many different forms of documentation ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -85,30 +85,149 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-9">
-            <article>
-                <h2><a href="http://blog.zoomquiet.io/zoom-quiet.html">Zoom.Quiuet</a></h2>
-                <div class="summary"><h1 id="zoomquiet">Zoom.Quiet&nbsp;(大妈)</h1>
-<p><img alt="zhouqi" src="http://pyconcn.qiniudn.com/images/volunteer/zhouqi.png" /></p>
-<p>Python中文社区创始人(之一) / 管理员,
-热心于 Python 等等社区的公益事业,&nbsp;大家熟知的社区&#8221;大妈&#8221;;</p>
-<p><a href="http://code.google.com/p/openbookproject/"><span class="caps">O.B.</span>P</a>
-(Open Book Proj.~中文蟒样开放图书计划)
-及
-蟒营(<a href="http://code.google.com/p/kcpycamp/wiki/PythoniCamp">PythoniCamp</a>)
-工程设计者 /主持人;
-参与并主持各种线上 / 线下活动;
-主持编撰了
-<a href="http://book.douban.com/subject/3884108/">&lt;&lt;可爱的Python&gt;&gt;</a>
-坚持用 Pythonic 感化国人进入 <span class="caps">FLOSS</span>世界进行学习 / 分享 /&nbsp;创造&#8230;</p>
-<p>目前就职于金山网络。</p>
-<ul>
-<li>G+:&nbsp;https://plus.google.com/+ZoomQuiet/</li>
-<li>Blog:&nbsp;http://blog.zoomquiet.org/</li>
-<li>微博:&nbsp;http://weibo.com ...</li></ul>
-                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/zoom-quiet.html">more ...</a>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.zoomquiet.io/091110_jacob-what2write.html">
+                        What to&nbsp;write
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+<!--
+    <span class="label label-default">Date</span>
+-->
+    <span class="published">
+        <i class="icon-calendar"></i>2009-11-10 00:00
+    </span>
+
+<!--
+    <span class="label">By</span>
+    <i class="icon-user"></i>
+    <a href="http://blog.zoomquiet.io/author/zoomquiet.html">Zoom.Quiet</a>
+
+    <span class="label label-default">Category</span>
+    <a href="http://blog.zoomquiet.io/category/imho.html">IMHO</a>
+-->
+
+
+
+
+	<span class="label label-default">Tags</span>
+		<a href="http://blog.zoomquiet.io/tag/jacob.html">Jacob</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/pythoneer.html">Pythoneer</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/zh.html">Zh</a>
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
+
+    <div class="toc">
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+<li><a href="#topical-guides">Topical guides</a></li>
+<li><a href="#reference">Reference</a></li>
+<li><a href="#dont">Don’t.</a></li>
+<li><a href="#whats-next">What’s next</a></li>
+<li><a href="#changlog">Changlog</a></li>
+</ul>
+</div>
+                
+<p>Tech docs can take a bunch of different forms ranging from high-level overviews, to step-by-step walkthroughs, to auto-generated <span class="caps">API</span> documentation. Unfortunately, no single format works for all users; there’s huge differences in the way that people learn, so a well-documented project needs to provide many different forms of documentation.</p>
+<p>At a high level, you can break down the different types of documentation you need to provide into three different formats:</p>
+<ul>
+<li>step-by-step tutorials,</li>
+<li>overviews and topical guides to the various conceptual areas of your project, and
+-low-level, deep-dive reference material.</li>
+</ul>
+<p>Let’s look at each in turn.</p>
+<h2 id="tutorials">Tutorials</h2>
+<p>Good tutorials are a must as they’re usually the first thing someone sees when trying out a new piece of tech. First impressions are incredibly important: that rush of success as you work through a good tutorial will likely color your future opinions about the project.</p>
+<p>Django’s tutorial is frankly a bit musty at this point and is probably due for at least a light refresh, but it hits all the important points. A good tutorial should:</p>
+<ul>
+<li>
+<p><code>Be quick.</code> At some conference or another I heard someone – I think it was <a href="http://headrush.typepad.com/">Kathy Sierra</a> – say that, as a rule of thumb, a new user should be able to experience success within thirty minutes. That’s a great rule: thirty minutes is nothing – think “half a lunch hour.” If your project can give new users the warm fuzzies that quickly, they’ll come away wondering about all the awesome successes a deeper dive might give.</p>
+</li>
+<li>
+<p><code>Be easy.</code> Remember: you want success to be the outcome of the tutorial. This means you need to playtest the tutorial under all sorts of different circumstances, making sure that it always works (even on Windows).</p>
+</li>
+<li>
+<p><code>But not too easy.</code> There’s always going to be a class of users who aren’t really qualified to use your project. Someone who’s never written any code before isn’t going to get very far with Django; those types of users should fail quickly. Don’t get them through the tutorial only to run into a wall later on.</p>
+</li>
+</ul>
+<p>Another similar anti-pattern is glossing over bad choices made in the interest of expediency. Django’s tutorial makes this mistake: we gloss over the project/app distinction in a way that bites users later on. (It’ll get fixed soon, I promise!)</p>
+<p>The best way of thinking about a tutorial’s ease is that it’s the on-ramp onto your project’s learning curve. This means the slope can be more gradual than later tasks, but no so much so that things suddenly get much much harder after the tutorial’s finished.</p>
+<ul>
+<li><code>Demonstrate how your project “feels.”</code> More than anything, people are using your tutorial to get a sense of how your project is going to “feel” in the long term. This means you that it should be pretty cross-sectional; a good tutorial should show off most of the different areas of the project.</li>
+</ul>
+<p>A couple of projects with really good tutorials to check out for inspiration are 
+<a href="http://love2d.org/documentation?page=documentation"><span class="caps">LOVE</span></a> and 
+<a href="http://lamsonproject.com/docs/getting_started.html">Lamson</a>.</p>
+<h2 id="topical-guides">Topical guides</h2>
+<p>This is the meat of your documentation. Once somebody’s learned (from a tutorial) the high-level concepts, they’re going to need to dive into the details of some area or another. Any documentation worth its salt is going to have a whole bunch of these – Django’s got about 35 different topical guides, covering each conceptual area (e.g. models, sessions, testing, etc.)</p>
+<p>These don’t need to cover every single configuration option or function argument – that’s what reference material is for – but each guide (or section, or chapter, depending on how things are organized) needs to take a pretty deep dive into its respective area.</p>
+<p>The main goal for topical coverage should be <code>comprehensiveness</code>. The reader ought to come away from a close read feeling very comfortable with the topic in question. They should feel that they know the vast majority of the possible options, and more importantly they should understand how all the concepts fit together.</p>
+<p>Unfortunately there aren’t a lot of projects that do these very well. Most have reasonable tutorials, many have okay-to-good reference material, but most seem to leave the topical guides to books.</p>
+<p>While it’s true that books shine in the “topical guide” area, they’re not really a great substitute for guides as part of the official documentation. Official docs, even when done poorly, are usually much more up-to-date; books, even when done well, are often out of date the day they hit the shelves.</p>
+<p>Books-as-guides can be done well – the 
+<a href="http://svnbook.red-bean.com/">Subversion Book</a>
+is a great example – but only when the book is continuously maintained available for free.</p>
+<p>There’s a particularly pernicious anti-pattern in documentation where tutorials are provided for free but the real documentation is only available for purchase. At best that’s lazy and sloppy; at worst it’s downright evil. Free software needs free documentation. If you’ve got otherwise you should be ashamed of yourself.</p>
+<h2 id="reference">Reference</h2>
+<p>Finally, you need complete reference for all the public APIs your project provides. These should be designed for those who already know how to use some <span class="caps">API</span>, but need to look up the exact arguments some function takes, or how a particular setting influences behavior, etc.</p>
+<p>It’s important to point out that reference material is not in any way a substitute for good tutorials and guides! Great reference material on the foo.baz package does readers no good whatsoever if they don’t know the name of the package they’re looking for.</p>
+<p><a href="http://docs.python.org/">Python’s documentation</a></p>
+<p>is a perfect case in point. The individual standard library modules tend to have incredibly good documentation, but there’s no high-level overviews to help you discover which module you might actually want! Take for example the 
+<a href="http://docs.python.org/library/collections.html">collections</a>
+module: it’s great reference material, explaining exactly what’s in the module, how to use it, and what all the options are. But if you don’t know that Python ships with a 
+<a href="http://en.wikipedia.org/wiki/Double-ended_queue">deque</a>
+implementation in collections.deque you’ll probably end up missing the library entirely.</p>
+<p>Think of guides and reference as partners: guides give you the “why,” and reference gives you the “how.” Following the deque example, some sort of “guide to data structures in Python” could give an overview of all the different types of data structures in Python (be they built-in or standard library), linking off to the documentation for each module and type for the complete details.</p>
+<p>It’s really tempting to use an auto-documentation tool like Javadoc or RDoc for reference material.</p>
+<h2 id="dont">Don’t.</h2>
+<p>Auto-generated documentation is almost worthless. At best it’s a slightly improved version of simply browsing through the source, but most of the time it’s easier just to read the source than to navigate the bullshit that these autodoc tools produce. About the only thing auto-generated documentation is good for is filling printed pages when contracts dictate delivery of a certain number of pages of documentation. I feel a particularly deep form of rage every time I click on a “documentation” link and see auto-generated documentation.</p>
+<p>There’s no substitute for documentation written, organized, and edited by hand.</p>
+<p>I’ll even go further and say that auto-generated documentation is worse than useless: it lets maintainers fool themselves into thinking they have documentation, thus putting off actually writing good reference by hand. If you don’t have documentation just admit to it. Maybe a volunteer will offer to write some! But don’t lie and give me that auto-documentation crap.</p>
+<h2 id="whats-next">What’s next</h2>
+<p>Now that I’ve covered what to write, I’ll move into how to write. Tomorrow I’ll start going into the actual mechanics of writing good, readable technical prose.</p>
+<h2 id="changlog">Changlog</h2>
+<ul>
+<li>1406?? </li>
+<li>140618 偶遇抄转</li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'blogzoomquietio'; // required: replace example with your forum shortname
+            var disqus_identifier = 'IMHO/09-11-10-091110_jacob-what2write';
+            var disqus_url = 'http://blog.zoomquiet.io/091110_jacob-what2write.html';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
 
 
     <hr/>

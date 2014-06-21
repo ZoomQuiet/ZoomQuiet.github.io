@@ -851,4 +851,121 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 
 
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>CI is hard!</title><link href="http://blog.zoomquiet.io/101028_jacob-ci-is-hard.html" rel="alternate"></link><updated>2010-10-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2010-10-09:101028_jacob-ci-is-hard.html</id><summary type="html">
+&lt;p&gt;&lt;a href="http://buildbot.net/"&gt;Buildbot&lt;/a&gt;, 
+the venerable Python 
+&lt;a href="http://en.wikipedia.org/wiki/Continuous_integration"&gt;continuous integration&lt;/a&gt;
+server, has the reputation of being complex and difficult to set up.&lt;/p&gt;
+&lt;p&gt;After spending a couple of weeks deep in Buildbot land, I’ve come to the conclusion that this reputation, while true, is only partially deserved. That is, Buildbot is complex, but only if you’re trying to view it as an out-of-the-box &lt;span class="caps"&gt;CI&lt;/span&gt; solution. Buildbot suddenly starts to make much more sense if you view it as a framework for creating your own &lt;span class="caps"&gt;CI&lt;/span&gt; solution, not a &lt;span class="caps"&gt;CI&lt;/span&gt; server in its own right.&lt;/p&gt;
+&lt;p&gt;You won’t find this revelation anywhere in the Buildbot docs, nor in any of the books or online material that cover the tool. There are some good tutorials out there showing how to set up a simple Buildbot instance – Jeff Younker’s 
+&lt;a href="http://www.amazon.com/dp/1590599810/?tag=jacobian-20"&gt;Foundations of Agile Python Development&lt;/a&gt;
+has the best one I’ve run across – but none of these examples make much sense when setting up a complex buildfarm with complicated requirements.&lt;/p&gt;
+&lt;p&gt;So I’m here to fill that gap. In this series of posts – I think I’m looking at five parts – I’ll explain this “Buildbot is a &lt;span class="caps"&gt;CI&lt;/span&gt; framework” view, delve into Buildbot’s architecture, and then walk through the complicated-but-worth-the-effort &lt;span class="caps"&gt;CI&lt;/span&gt; sever I’ve built for Django.&lt;/p&gt;
+&lt;p&gt;By way of disclaimer I should mention I’m anything but a Buildbot expert. I’m almost certainly Doing Things Entirely Wrong. I may or may not be using public APIs as I’ve simply trolled through Buildbot’s source until I found something that did what I wanted. However, what I’ve got here on the other side makes me pretty damn happy, and I want to show it off.&lt;/p&gt;
+&lt;p&gt;Here, then, is&lt;/p&gt;
+&lt;h2 id="part-1-background"&gt;Part 1: Background&lt;/h2&gt;
+&lt;p&gt;We’ve been looking for a &lt;span class="caps"&gt;CI&lt;/span&gt; solution for Django for quite some time. Over the years we’ve tried a bunch of different tools: Buildbot, 
+&lt;a href="http://cruisecontrol.sourceforge.net/"&gt;CruiseControl&lt;/a&gt;
+, 
+&lt;a href="http://hudson-ci.org/"&gt;Hudson&lt;/a&gt;, and even some home-grown solutions.&lt;/p&gt;
+&lt;p&gt;Nothing’s worked out. That is, nothing’s been able to provide the “continuous” part: builds only continue working as long as there’s someone dedicated around to babysit the system. This sucks: it’s meant that at times Django’s been broken on supported platforms simply because nobody’s been bothering to run the tests.&lt;/p&gt;
+&lt;p&gt;A few weeks ago a few of us started banging on this problem again, determined to get it right this time. Eric set up a new Hudson instance (modeled after the one he’d been using at work), and I dove headlong into Buildbot again. I’m not really going to talk much about Hudson here, but I’ll note that it’s actually been really instructive working on two different systems in parallel. It’s forced us to really think through and formalize our &lt;span class="caps"&gt;CI&lt;/span&gt; needs.&lt;/p&gt;
+&lt;p&gt;This led me to my first big &lt;span class="caps"&gt;CI&lt;/span&gt; revelation: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;CI&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;hard&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There’s any number of “simple” &lt;span class="caps"&gt;CI&lt;/span&gt; tools out there… and they appear to work for exactly two projects (the project the tool was built to test, and the &lt;span class="caps"&gt;CI&lt;/span&gt; server itself, natch). The general purpose tools – Hudson, Buildbot, CruiseControl, etc. – are big, complicated, and heavily opinionated. This is a clear sign that we’re in a space where even the basic tenets of the problem can’t be agreed upon by all parties. &lt;span class="caps"&gt;CI&lt;/span&gt; is one of those problems that’s hard because there really isn’t a good core set of needs to be abstracted. Nearly every project has very different &lt;span class="caps"&gt;CI&lt;/span&gt; needs.&lt;/p&gt;
+&lt;p&gt;[This is part of what makes Buildbot so complicated: I think it’s actually trying pretty hard to be completely agnostic and allow any kind of continuous integration system you could think up. If Buildbot was more opinionated it could drop some of the layers of abstraction, but because it’s trying so hard to be everything to everyone it ends up being crazy complex. I’ve not decided if this is admirable or crazy. Both, perhaps.]&lt;/p&gt;
+&lt;p&gt;So what are Django’s needs? What make &lt;span class="caps"&gt;CI&lt;/span&gt; hard for us?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Django’s big. The test suite is around 40,000 lines of code in something like 3,000 individual tests. We work constantly to speed up the test suite, but best case it still takes about 5 minutes to run.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This means that our &lt;span class="caps"&gt;CI&lt;/span&gt; absolutely needs to be distributed – a single test server won’t cut it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Our test suite isn’t just unit tests; in fact, it’s mostly integration tests. We run most tests against real databases and attempt to simulate as much of the &lt;span class="caps"&gt;HTTP&lt;/span&gt; request/response cycle as we can.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This means that our build system needs to be heterogeneous: since we test against real databases, we need to have lots of different ones to test against. We can’t just run a farm of Linux buildslaves running Python 2.6 and SQLite. Since slaves are heterogeneous, the build system needs to be highly targeted. We can’t treat each build slave identically, but we’ll need to target certain types of tests to the slaves that support ‘em.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We’re ambitious in what we support: Django supports four versions of Python (2.4, 2.5, 2.6, and 2.7), three Python implementations (CPython, Jython, and PyPy), four database engines (PostgreSQL, MySQL, SQLite, and Oracle), multiple versions of each database (for example, we support six versions of PostgreSQL: 8.0, 8.1, 8.2, 8.3, 8.4, and 9.0), and a bunch of OSes (Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X, Windows, and most Linux and &lt;span class="caps"&gt;BSD&lt;/span&gt; flavors).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We need the capability to run all sorts of crazy combinations. In an ideal world, we’d actually be able to test against every single unique python/db/os combination.&lt;/p&gt;
+&lt;p&gt;This means that our build system needs to be capable of getting really big, potentially spanning dozens or even hundreds of machines. We’re clearly talking cloud computing here: there’s no way a bunch of volunteers can afford the money and time to keep a rack of dozens of heterogeneous hardware all running smoothly.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As I mentioned, we’re all volunteers. Nobody gets paid to babysit the &lt;span class="caps"&gt;CI&lt;/span&gt; server, which means it needs to be highly autonomous. Builds need to happen without any intervention. Most critically, build servers can’t disappear, go “stale” or break because /tmp gets full.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After a bunch of playing with these requirements, I sketched out a dream system that looked something like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We’ve got a bunch of (dormant) &lt;span class="caps"&gt;VM&lt;/span&gt; images for a cloud computing service or platform.&lt;/li&gt;
+&lt;li&gt;Each image “knows” which kinds of configs it can build. For example, one image might have Python 2.4 and SQLite, while another might have Python 2.7 and PostgreSQL 9.0.&lt;/li&gt;
+&lt;li&gt;When new requests are made the build master spins up some VMs, hands them build jobs (based on the types of builds the &lt;span class="caps"&gt;VM&lt;/span&gt; can support).&lt;/li&gt;
+&lt;li&gt;When no more builds are in the queue for a particular &lt;span class="caps"&gt;VM&lt;/span&gt;, the build master shuts down the image and saves us money.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Every out-of-the-box &lt;span class="caps"&gt;CI&lt;/span&gt; system I examined failed to give me that workflow. Most failed on the “heterogeneous” requirement. That includes Buildbot. I knew, however, that a few projects – PyPy, Chrome, and Python itself – were using Buildbot to some success against similar issues, and I knew that Buildbot had recently gained the ability to deal with cloud computing. Finally, since Buildbot’s written in Python I was fairly confidant in my own ability to hack it to pieces if necessary.&lt;/p&gt;
+&lt;p&gt;Well, a couple of weeks later, I’m there: I have a Buildbot-based system that’s doing exactly what I described above. I’m still not 100% sure this is the solution, but it’s a solution, and it’s working.&lt;/p&gt;
+&lt;p&gt;The rest of this series will dive into the code. Next time, we’ll look at an overview of Buildbot’s architecture and configuration, and I’ll explain my Buildbot-is-a-framework revelation in more detail.&lt;/p&gt;
+&lt;h2 id="changlog"&gt;Changlog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1406?? &lt;/li&gt;
+&lt;li&gt;140618 偶遇抄转&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>What to write</title><link href="http://blog.zoomquiet.io/091110_jacob-what2write.html" rel="alternate"></link><updated>2009-11-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2009-11-10:091110_jacob-what2write.html</id><summary type="html">
+&lt;p&gt;Tech docs can take a bunch of different forms ranging from high-level overviews, to step-by-step walkthroughs, to auto-generated &lt;span class="caps"&gt;API&lt;/span&gt; documentation. Unfortunately, no single format works for all users; there’s huge differences in the way that people learn, so a well-documented project needs to provide many different forms of documentation.&lt;/p&gt;
+&lt;p&gt;At a high level, you can break down the different types of documentation you need to provide into three different formats:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;step-by-step tutorials,&lt;/li&gt;
+&lt;li&gt;overviews and topical guides to the various conceptual areas of your project, and
+-low-level, deep-dive reference material.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s look at each in turn.&lt;/p&gt;
+&lt;h2 id="tutorials"&gt;Tutorials&lt;/h2&gt;
+&lt;p&gt;Good tutorials are a must as they’re usually the first thing someone sees when trying out a new piece of tech. First impressions are incredibly important: that rush of success as you work through a good tutorial will likely color your future opinions about the project.&lt;/p&gt;
+&lt;p&gt;Django’s tutorial is frankly a bit musty at this point and is probably due for at least a light refresh, but it hits all the important points. A good tutorial should:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Be quick.&lt;/code&gt; At some conference or another I heard someone – I think it was &lt;a href="http://headrush.typepad.com/"&gt;Kathy Sierra&lt;/a&gt; – say that, as a rule of thumb, a new user should be able to experience success within thirty minutes. That’s a great rule: thirty minutes is nothing – think “half a lunch hour.” If your project can give new users the warm fuzzies that quickly, they’ll come away wondering about all the awesome successes a deeper dive might give.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Be easy.&lt;/code&gt; Remember: you want success to be the outcome of the tutorial. This means you need to playtest the tutorial under all sorts of different circumstances, making sure that it always works (even on Windows).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;But not too easy.&lt;/code&gt; There’s always going to be a class of users who aren’t really qualified to use your project. Someone who’s never written any code before isn’t going to get very far with Django; those types of users should fail quickly. Don’t get them through the tutorial only to run into a wall later on.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another similar anti-pattern is glossing over bad choices made in the interest of expediency. Django’s tutorial makes this mistake: we gloss over the project/app distinction in a way that bites users later on. (It’ll get fixed soon, I promise!)&lt;/p&gt;
+&lt;p&gt;The best way of thinking about a tutorial’s ease is that it’s the on-ramp onto your project’s learning curve. This means the slope can be more gradual than later tasks, but no so much so that things suddenly get much much harder after the tutorial’s finished.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Demonstrate how your project “feels.”&lt;/code&gt; More than anything, people are using your tutorial to get a sense of how your project is going to “feel” in the long term. This means you that it should be pretty cross-sectional; a good tutorial should show off most of the different areas of the project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A couple of projects with really good tutorials to check out for inspiration are 
+&lt;a href="http://love2d.org/documentation?page=documentation"&gt;&lt;span class="caps"&gt;LOVE&lt;/span&gt;&lt;/a&gt; and 
+&lt;a href="http://lamsonproject.com/docs/getting_started.html"&gt;Lamson&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="topical-guides"&gt;Topical guides&lt;/h2&gt;
+&lt;p&gt;This is the meat of your documentation. Once somebody’s learned (from a tutorial) the high-level concepts, they’re going to need to dive into the details of some area or another. Any documentation worth its salt is going to have a whole bunch of these – Django’s got about 35 different topical guides, covering each conceptual area (e.g. models, sessions, testing, etc.)&lt;/p&gt;
+&lt;p&gt;These don’t need to cover every single configuration option or function argument – that’s what reference material is for – but each guide (or section, or chapter, depending on how things are organized) needs to take a pretty deep dive into its respective area.&lt;/p&gt;
+&lt;p&gt;The main goal for topical coverage should be &lt;code&gt;comprehensiveness&lt;/code&gt;. The reader ought to come away from a close read feeling very comfortable with the topic in question. They should feel that they know the vast majority of the possible options, and more importantly they should understand how all the concepts fit together.&lt;/p&gt;
+&lt;p&gt;Unfortunately there aren’t a lot of projects that do these very well. Most have reasonable tutorials, many have okay-to-good reference material, but most seem to leave the topical guides to books.&lt;/p&gt;
+&lt;p&gt;While it’s true that books shine in the “topical guide” area, they’re not really a great substitute for guides as part of the official documentation. Official docs, even when done poorly, are usually much more up-to-date; books, even when done well, are often out of date the day they hit the shelves.&lt;/p&gt;
+&lt;p&gt;Books-as-guides can be done well – the 
+&lt;a href="http://svnbook.red-bean.com/"&gt;Subversion Book&lt;/a&gt;
+is a great example – but only when the book is continuously maintained available for free.&lt;/p&gt;
+&lt;p&gt;There’s a particularly pernicious anti-pattern in documentation where tutorials are provided for free but the real documentation is only available for purchase. At best that’s lazy and sloppy; at worst it’s downright evil. Free software needs free documentation. If you’ve got otherwise you should be ashamed of yourself.&lt;/p&gt;
+&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
+&lt;p&gt;Finally, you need complete reference for all the public APIs your project provides. These should be designed for those who already know how to use some &lt;span class="caps"&gt;API&lt;/span&gt;, but need to look up the exact arguments some function takes, or how a particular setting influences behavior, etc.&lt;/p&gt;
+&lt;p&gt;It’s important to point out that reference material is not in any way a substitute for good tutorials and guides! Great reference material on the foo.baz package does readers no good whatsoever if they don’t know the name of the package they’re looking for.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://docs.python.org/"&gt;Python’s documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;is a perfect case in point. The individual standard library modules tend to have incredibly good documentation, but there’s no high-level overviews to help you discover which module you might actually want! Take for example the 
+&lt;a href="http://docs.python.org/library/collections.html"&gt;collections&lt;/a&gt;
+module: it’s great reference material, explaining exactly what’s in the module, how to use it, and what all the options are. But if you don’t know that Python ships with a 
+&lt;a href="http://en.wikipedia.org/wiki/Double-ended_queue"&gt;deque&lt;/a&gt;
+implementation in collections.deque you’ll probably end up missing the library entirely.&lt;/p&gt;
+&lt;p&gt;Think of guides and reference as partners: guides give you the “why,” and reference gives you the “how.” Following the deque example, some sort of “guide to data structures in Python” could give an overview of all the different types of data structures in Python (be they built-in or standard library), linking off to the documentation for each module and type for the complete details.&lt;/p&gt;
+&lt;p&gt;It’s really tempting to use an auto-documentation tool like Javadoc or RDoc for reference material.&lt;/p&gt;
+&lt;h2 id="dont"&gt;Don’t.&lt;/h2&gt;
+&lt;p&gt;Auto-generated documentation is almost worthless. At best it’s a slightly improved version of simply browsing through the source, but most of the time it’s easier just to read the source than to navigate the bullshit that these autodoc tools produce. About the only thing auto-generated documentation is good for is filling printed pages when contracts dictate delivery of a certain number of pages of documentation. I feel a particularly deep form of rage every time I click on a “documentation” link and see auto-generated documentation.&lt;/p&gt;
+&lt;p&gt;There’s no substitute for documentation written, organized, and edited by hand.&lt;/p&gt;
+&lt;p&gt;I’ll even go further and say that auto-generated documentation is worse than useless: it lets maintainers fool themselves into thinking they have documentation, thus putting off actually writing good reference by hand. If you don’t have documentation just admit to it. Maybe a volunteer will offer to write some! But don’t lie and give me that auto-documentation crap.&lt;/p&gt;
+&lt;h2 id="whats-next"&gt;What’s next&lt;/h2&gt;
+&lt;p&gt;Now that I’ve covered what to write, I’ll move into how to write. Tomorrow I’ll start going into the actual mechanics of writing good, readable technical prose.&lt;/p&gt;
+&lt;h2 id="changlog"&gt;Changlog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1406?? &lt;/li&gt;
+&lt;li&gt;140618 偶遇抄转&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry></feed>

@@ -1,5 +1,396 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-06-03T00:00:00+08:00</updated><entry><title>pydata笔记:环境配置</title><link href="http://blog.zoomquiet.io/pydata-0-mavericks.html" rel="alternate"></link><updated>2014-06-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-06-03:pydata-0-mavericks.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-07-11T00:00:00+08:00</updated><entry><title>pydata笔记:环境配置</title><link href="http://blog.zoomquiet.io/zq-chk4scrapbook.html" rel="alternate"></link><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:zq-chk4scrapbook.html</id><summary type="html">
+&lt;h2 id="_1"&gt;背景&lt;/h2&gt;
+&lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill"&gt;我的学习&amp;amp;工具&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;从06年,就将个人网络资料收集/整理/发布,
+切换为主力使用 &lt;a href="http://www.xuldev.org/scrapbook/"&gt;ScrapBook&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;这一下子就8年过去了,常用系统也从 Ubuntu 切换为 &lt;span class="caps"&gt;MAC&lt;/span&gt;, 收集的本地网页也超过了8万个,早已被迫进行了分库.&lt;/p&gt;
+&lt;p&gt;自动发布的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://floss.zoomquiet.io&lt;/li&gt;
+&lt;li&gt;http://skm.zoomquiet.io&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也成为一些朋友常常挖掘的资料库.&lt;/p&gt;
+&lt;p&gt;可以说, ScrapBook 在 everynote 流行之前,就成功的解决了俺主要的在线网页资料为主的,
+外部知识仓库的收集/整理/组合/复用/发布 等等基本功能/服务.&lt;/p&gt;
+&lt;p&gt;而且, 也通过Python ,完成了辅助的小脚本工具,配合 个人主机/7牛&lt;span class="caps"&gt;CDN&lt;/span&gt;, 完成了自动化的差异发布.&lt;/p&gt;
+&lt;h3 id="_2"&gt;可是!&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;从去年开始, 本地 &lt;code&gt;FLOSS&lt;/code&gt; 仓库,就已经无法正常进行标准搜索了,一搜索,整个 FireFox 就僵死.&lt;/li&gt;
+&lt;li&gt;而且,从其它仓库切换进入 &lt;span class="caps"&gt;FLOSS&lt;/span&gt; 时,要等待半分钟以上…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_3"&gt;期待&lt;/h2&gt;
+&lt;p&gt;实在太常用,所以,无法忍,而且也不打算切换到 everynote 什么的其它平台上, 作为一头合格的程序猿,就是要自个儿折腾通透哪!&lt;/p&gt;
+&lt;p&gt;所以,先决定目标:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;通过进一步拿合理分仓库,有效减少每个仓库包含的网页数量&lt;/li&gt;
+&lt;li&gt;通过脚本分析 &lt;code&gt;scrapbook.rdf&lt;/code&gt; 数据库来清除多余节点(隐藏的无效的)&lt;/li&gt;
+&lt;li&gt;通过脚本分析 对应 &lt;code&gt;data/&lt;/code&gt; 目录中的网页子目录,清除多余的&lt;/li&gt;
+&lt;li&gt;针对全新的分仓库,建立对应的 7牛 空间,以及对应的 &lt;code&gt;*.zoomquiet.io&lt;/code&gt; 子站发布&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总之就是要加速,无论本地/远程&lt;/p&gt;
+&lt;h2 id="_4"&gt;折腾&lt;/h2&gt;
+&lt;p&gt;纪要一下折腾的过程中,要命的关键过程/代码&lt;/p&gt;
+&lt;h3 id="_5"&gt;清查&lt;/h3&gt;
+&lt;h3 id="_6"&gt;解析&lt;/h3&gt;
+&lt;h3 id="_7"&gt;重构&lt;/h3&gt;
+&lt;h3 id="_8"&gt;删除&lt;/h3&gt;
+&lt;h2 id="_9"&gt;回顾&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 在 FireFox 的确不给力哪…&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;957&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;  &lt;span class="n"&gt;ZqDevRel&lt;/span&gt;
+&lt;span class="mi"&gt;866&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;  &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;
+&lt;span class="mi"&gt;349&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;  &lt;span class="n"&gt;ZqKss&lt;/span&gt;
+&lt;span class="mf"&gt;3.4&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;ZqSKM&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;_chaos&lt;/span&gt;
+&lt;span class="mf"&gt;5.2&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;_stuff&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;424&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;  &lt;span class="n"&gt;scrapbooktools&lt;/span&gt;
+&lt;span class="mi"&gt;766&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;  &lt;span class="n"&gt;zqCoder&lt;/span&gt;
+&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;zqDevRes&lt;/span&gt;
+&lt;span class="mf"&gt;1.4&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;zqPythonic&lt;/span&gt;
+&lt;span class="mf"&gt;1.4&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;zqSCM&lt;/span&gt;
+&lt;span class="mi"&gt;564&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;  &lt;span class="n"&gt;zqSMM&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;为什么,在 700M 的 zqCoder 仓库中无法搜索,但是, 3.4G 的ZqSKM 中就可以?!&lt;/p&gt;
+&lt;p&gt;认真对比,从重建的空仓库的 .rdf 中,发现:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:search"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;而其它意外折腾出来的,这个节点都都有几万条记录! 10行代码解决!&lt;/p&gt;
+&lt;h3 id="_10"&gt;数据结构&lt;/h3&gt;
+&lt;h3 id="_11"&gt;功能开关&lt;/h3&gt;
+&lt;h2 id="_12"&gt;时间帐单&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;3.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;用&lt;/span&gt;&lt;span class="n"&gt;pax&lt;/span&gt; &lt;span class="err"&gt;复制&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;手工清除多余树&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;重新理解自个儿的脚本&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;加载自制数据结构到湿件&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;追加走查功能&lt;/span&gt; 
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;调试走查&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;优化输出&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;明确可清除无效节点的数量级&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;尝试用&lt;/span&gt; &lt;span class="n"&gt;click&lt;/span&gt; &lt;span class="err"&gt;改进功能开关&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;未果&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;对比测试不同的解析库&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;用&lt;/span&gt;&lt;span class="n"&gt;xmltodict&lt;/span&gt; &lt;span class="err"&gt;重构原先的&lt;/span&gt; &lt;span class="err"&gt;走查功能&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;根据比对的需求&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;改进&lt;/span&gt; &lt;span class="n"&gt;xmltodict&lt;/span&gt; &lt;span class="err"&gt;的数据结构&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;追加&lt;/span&gt; &lt;span class="n"&gt;K&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;V&lt;/span&gt; &lt;span class="err"&gt;复用&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;再复制测试仓库&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;用&lt;/span&gt; &lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="err"&gt;小心的测试实际删除行为&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;通测&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;批量处置&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="err"&gt;个新旧仓库&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;清删除&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="err"&gt;万&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;个无用目标&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;近&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;空间释放&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;整理代码&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;组织文档&lt;/span&gt;
+
+&lt;span class="mf"&gt;21.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;自然时间&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="err"&gt;天&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;业余时间&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id="140708-scrapbook"&gt;140708 ScrapBook 分库&lt;/h1&gt;
+&lt;p&gt;5.6G    ZqDevRel
+$ ls ZqDevRel/data/ | wc
+   26214   26214 393210&lt;/p&gt;
+&lt;p&gt;-&amp;gt; zqCoder 
+-&amp;gt; zqSMM&lt;/p&gt;
+&lt;p&gt;6.5G    ZqFLOSS
+$ ls ZqFLOSS/data/ | wc
+   30767   30767 461505&lt;/p&gt;
+&lt;p&gt;-&amp;gt; zqDevRes
+-&amp;gt; zqSCM &lt;br/&gt;
+-&amp;gt; zqPythonic&lt;/p&gt;
+&lt;p&gt;3.7G    ZqSKM
+$ ls ZqSKM/data/ | wc
+    9486    9486 142290&lt;/p&gt;
+&lt;h2 id="pm1500-pax"&gt;&lt;span class="caps"&gt;PM15&lt;/span&gt;:00 pax 复制所有数据&lt;/h2&gt;
+&lt;p&gt;5.7G    ZqDevRel
+6.5G    ZqFLOSS
+351M    ZqKss
+3.7G ZqSKM&lt;/p&gt;
+&lt;p&gt;290M    backup
+4.0K scraptools&lt;/p&gt;
+&lt;p&gt;5.7G    zqCoder
+6.5G    zqDevRes
+6.5G    zqPythonic
+6.5G    zqSCM
+5.7G zqSMM&lt;/p&gt;
+&lt;p&gt;手工删除目录树:::&lt;/p&gt;
+&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook/zqSCM
+$ ls data/ | wc -l 25320&lt;/p&gt;
+&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook/zqSCM
+$ du -hs *
+…
+5.3G data&lt;/p&gt;
+&lt;h2 id="2h"&gt;+2H 严正的不科学!&lt;/h2&gt;
+&lt;p&gt;已经拆分的仓库:&lt;/p&gt;
+&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook
+$ ls zqDevRes/data/ | wc -l
+   24045
+zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook
+$ ls zqPythonic/data/ | wc -l
+   24294
+zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook
+$ ls zqSCM/data/ | wc -l 25319&lt;/p&gt;
+&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook
+$ ls ZqFLOSS/data/ | wc -l 30767&lt;/p&gt;
+&lt;p&gt;好象总是有 20000 左右,不存在的东西….&lt;/p&gt;
+&lt;h2 id="2h-click"&gt;+2H click&lt;/h2&gt;
+&lt;p&gt;果然,清查出有大量, &lt;span class="caps"&gt;FLOSS&lt;/span&gt; 中当初没有合理清除的节点
+从 &lt;span class="caps"&gt;ROOT&lt;/span&gt; 引发的树中挂不上的&lt;/p&gt;
+&lt;h2 id="2h_1"&gt;+2H 实际清减&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://amoffat.github.io/sh/"&gt;sh 1.08 — sh v1.08 documentation&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;rm&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"-Rfv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;del_dir&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用 sh 删除目录&lt;/p&gt;
+&lt;p&gt;tree_nodes:  3574
+exp_items:  4164
+dirs:  590
+&lt;span class="caps"&gt;DESC&lt;/span&gt; : 24190
+chaos: 20616
+有效: 3574
+$ ls reDevRel/data/ | wc -l 2996&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用 lxml/模板 重构 rdf&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;人肉来总是感觉不对,&lt;/p&gt;
+&lt;p&gt;尝试:&lt;/p&gt;
+&lt;h3 id="lxml"&gt;lxml&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;忒复杂&lt;/span&gt;&lt;span class="o"&gt;!!!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="untangle"&gt;untangle&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/stchris/untangle"&gt;stchris/untangle&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
+RDF_Description     24190
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+&lt;open '_chaos="" 'wb'="" 0x100666ed0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+        exp_level_idx() RUNed~ 2263.57079 ms&lt;/open&gt;&lt;/p&gt;
+&lt;p&gt;快,但是,无法Dump,而且书写不直觉, 要将 “:” 变成 “_” obj.RDF_RDF.RDF_Description&lt;/p&gt;
+&lt;p&gt;&lt;open '_chaos="" 'wb'="" 0x100769ed0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+Traceback (most recent call last):
+  File “scraptools/zq_chk4scrap.py”, line 457, in &lt;module&gt;
+&lt;span class="caps"&gt;RDFD&lt;/span&gt; = exp_level_idx(&lt;span class="caps"&gt;MYBOOK&lt;/span&gt;)
+  File “scraptools/zq_chk4scrap.py”, line 161, in cal_time
+    result = func(*args)
+  File “scraptools/zq_chk4scrap.py”, line 205, in exp_level_idx
+    pickle.dump(obj.RDF_RDF, output)
+  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 1370, in dump
+    Pickler(file, protocol).dump(obj)
+  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 224, in dump
+    self.save(obj)
+  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 719, in save_inst
+    getstate = obj.&lt;strong&gt;getstate&lt;/strong&gt;
+  File “/Users/zoomq/.pyenv/versions/276chaos/lib/python2.7/site-packages/untangle.py”, line 66, in &lt;strong&gt;getattr&lt;/strong&gt;
+    raise IndexError(‘Unknown key &amp;lt;%s&amp;gt;’ % key)
+IndexError: Unknown key &amp;lt;&lt;strong&gt;getstate&lt;/strong&gt;&amp;gt;&lt;/module&gt;&lt;/open&gt;&lt;/p&gt;
+&lt;h3 id="xmltodict"&gt;xmltodict&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/martinblech/xmltodict"&gt;martinblech/xmltodict&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[u’&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’]
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+        exp_level_idx() RUNed~ 4997.31612 ms&lt;/p&gt;
+&lt;p&gt;慢,但是,能 dump 而且书写直觉 doc[‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’][‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq’]&lt;/p&gt;
+&lt;p&gt;[u’&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’]
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+&lt;open '_chaos="" 'wb'="" 0x10f26d420="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+        exp_level_idx() RUNed~ 16878.75390 ms&lt;/open&gt;&lt;/p&gt;
+&lt;p&gt;同时,能反写出&lt;span class="caps"&gt;XML&lt;/span&gt; 来!&lt;/p&gt;
+&lt;p&gt;主要问题是行为不统一!
+  &lt;rdf:seq rdf:about="urn:scrapbook:item20070113201921"&gt;
+&lt;rdf:li rdf:resource="urn:scrapbook:item20070113201940"&gt;&lt;/rdf:li&gt;
+&lt;rdf:li rdf:resource="urn:scrapbook:item20070113201941"&gt;&lt;/rdf:li&gt;
+&lt;/rdf:seq&gt;
+时 唯一的 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Li 不是 List!!&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id]&amp;gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Li OrderedDict([(u’@&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource’, u’urn:scrapbook:item20070113201921’)])
+&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id][‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:li’].len:: 1
+    &lt;class 'collections.ordereddict'=""&gt;
+&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id]&amp;gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Li @&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource
+     try crt_node.keys:
+@&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource
+&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id]&amp;gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Li OrderedDict([(u’@&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource’, u’urn:scrapbook:item20070527160000’)])
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id]&amp;gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Li OrderedDict([(u’@&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource’, u’urn:scrapbook:item20061006133550’)])
+&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id][‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:li’].len:: 9
+    &lt;type 'list'=""&gt;&lt;/type&gt;&lt;/class&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/martinblech/xmltodict/issues/67"&gt;odd parse for same xml structure · Issue #67 · martinblech/xmltodict&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="4h"&gt;4H 折腾明白了:&lt;/h3&gt;
+&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+/Users/zoomq/mnt/快盘/zScrapBook/reDevRel/scrapbook.rdf
+[u’&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’]
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+&lt;open '_chaos="" 'wb'="" 0x10f17a660="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+        exp_level_idx() RUNed~ 17073.48084 ms&lt;/open&gt;&lt;/p&gt;
+&lt;p&gt;_chaos/scraotools_reDevRel.pkl
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;            13
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+        _load_pkl() RUNed~ 7872.95103 ms&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
+ &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+    &lt;span class="n"&gt;re_xmltodict_rdf&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;RUNed&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="mf"&gt;191.21003&lt;/span&gt; &lt;span class="n"&gt;ms&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;有这么多垃圾!
+24190 vs 3631 !!!!&lt;/p&gt;
+&lt;p&gt;但是,居然无法一次性清理干净?!&lt;/p&gt;
+&lt;p&gt;一扫::&lt;/p&gt;
+&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+/Users/zoomq/mnt/快盘/zScrapBook/reDevRel/scrapbook.rdf
+[u’&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’]
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+&lt;open '_chaos="" 'wb'="" 0x10f2376f0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+        exp_level_idx() RUNed~ 17013.92913 ms&lt;/open&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
+ &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;clean notes:    11153
+cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  13037
+&lt;open '_chaos="" 'wb'="" 0x10eecff60="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 131239.34913 ms&lt;/open&gt;&lt;/p&gt;
+&lt;p&gt;2扫:&lt;/p&gt;
+&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     13037
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+        _load_pkl() RUNed~ 4292.33599 ms&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
+ &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;clean notes:    5506
+cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  7531
+&lt;open '_chaos="" 'wb'="" 0x108874f60="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 44531.90279 ms&lt;/open&gt;&lt;/p&gt;
+&lt;p&gt;3扫::&lt;/p&gt;
+&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     7531
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+        _load_pkl() RUNed~ 3115.18502 ms&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
+ &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;clean notes:    2616
+cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  4915
+&lt;open '_chaos="" 'wb'="" 0x105d1edb0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 19026.94511 ms&lt;/open&gt;&lt;/p&gt;
+&lt;p&gt;4扫::&lt;/p&gt;
+&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     4915
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+        _load_pkl() RUNed~ 2528.49293 ms&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
+ &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;clean notes:    1045
+cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3870
+&lt;open '_chaos="" 'wb'="" 0x10429ced0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 11538.43212 ms&lt;/open&gt;&lt;/p&gt;
+&lt;p&gt;5扫:&lt;/p&gt;
+&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3870
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+        _load_pkl() RUNed~ 2422.85681 ms&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
+ &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;clean notes:    286
+cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3584
+&lt;open '_chaos="" 'wb'="" 0x102c5d300="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 9368.47901 ms&lt;/open&gt;&lt;/p&gt;
+&lt;p&gt;6扫::&lt;/p&gt;
+&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3584
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+        _load_pkl() RUNed~ 2225.17014 ms&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
+ &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;clean notes:    10
+cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3574
+&lt;open '_chaos="" 'wb'="" 0x102c2af60="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 8464.92100 ms&lt;/open&gt;&lt;/p&gt;
+&lt;p&gt;7扫:&lt;/p&gt;
+&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
+&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3574
+&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+        _load_pkl() RUNed~ 2317.77310 ms&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
+ &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;clean notes:    0
+cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3574
+&lt;open '_chaos="" 'wb'="" 0x1021b3030="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 8694.52500 ms&lt;/open&gt;&lt;/p&gt;
+&lt;h3 id="2"&gt;2小时 目录对比&lt;/h3&gt;
+&lt;p&gt;sh-&amp;gt;ls 出来时,
+是 &lt;span class="caps"&gt;STDOUT&lt;/span&gt; 有隐藏字符! 兰色…居然没有意识到!&lt;/p&gt;
+&lt;p&gt;20041214101930
+&lt;type 'str'=""&gt;
+Traceback (most recent call last):
+  File “scraptools/zq_chk4scrap.py”, line 724, in &lt;module&gt;
+    mv_chaos_data(REPO_NAME, &lt;span class="caps"&gt;XRDF&lt;/span&gt;)
+  File “scraptools/zq_chk4scrap.py”, line 524, in mv_chaos_data
+    print len(int(li)) #.strip()
+ValueError: invalid literal for int() with base 10: ’\x1b[1m\x1b[34m20041214101930\x1b[39;49m\x1b[0m’&lt;/module&gt;&lt;/type&gt;&lt;/p&gt;
+&lt;h3 id="140710-1804"&gt;140710 18:04&lt;/h3&gt;
+&lt;p&gt;完成初步完备流程:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从原始 scrapbook.rdf 读入为 Py 对象&lt;/li&gt;
+&lt;li&gt;模拟肉眼巡查, walk 出显示的合法内容数据集&lt;/li&gt;
+&lt;li&gt;加入其它辅助&lt;span class="caps"&gt;KV&lt;/span&gt; 节点,写为中间工作 .pkl&lt;/li&gt;
+&lt;li&gt;加载 工作 .pkl 到内存&lt;/li&gt;
+&lt;li&gt;对比原始 .rdf 数据中的节点和 walk 出来有效的,逐一清除无效的&lt;ul&gt;
+&lt;li&gt;必须,尝试多次,直到清除干净&lt;/li&gt;
+&lt;li&gt;为毛…?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对比实际目录和有效节点&lt;span class="caps"&gt;ID&lt;/span&gt; 的关系,将无效的,mv 到其它目录完成净化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="todo"&gt;&lt;span class="caps"&gt;TODO&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;解决反复清查的问题&lt;/li&gt;
+&lt;li&gt;提高效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ du -hs *
+5.1G    ZqDevRel
+950M    reDevRel
+    5.2G    zqCoder
+    4.9G    zqSMM
+8.0M    _chaos
+4.2G _stuff&lt;/p&gt;
+&lt;p&gt;6.5G    ZqFLOSS
+    5.2G    zqDevRes
+    5.2G    zqPythonic
+    5.3G    zqSCM
+3.7G ZqSKM&lt;/p&gt;</summary><category term="scrapbook"></category><category term="python"></category><category term="howto"></category><category term="mavericks"></category></entry><entry><title>pydata笔记:环境配置</title><link href="http://blog.zoomquiet.io/pydata-0-mavericks.html" rel="alternate"></link><updated>2014-06-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-06-03:pydata-0-mavericks.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="s27157694.jpg（JPEG 图像，300x300 像素）" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;

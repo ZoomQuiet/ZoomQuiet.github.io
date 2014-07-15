@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    zq-chk4scrapbook
+| #是也乎#
+| ZoomQuiet.io    </title>
+
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:slug" content="zq-chk4scrapbook"/>
+            <meta property="og:url" content="http://blog.zoomquiet.io/zq-chk4scrapbook.html"/>
+            <meta property="og:description" content="背景 参考:我的学习&amp;工具 从06年,就将个人网络资料收集/整理/发布, 切换为主力使用 ScrapBook . 这一下子就8年过去了,常用系统也从 Ubuntu 切换为 MAC, 收集的本地网页也超过了8万个,早已被迫进行了分库. 自动发布的 http://floss.zoomquiet.io http://skm.zoomquiet.io 也成为一些朋友常常挖掘的资料库. 可以说, ScrapBook 在 everynote 流行之前,就成功的解决了俺主要的在线网页资料为主的, 外部知识仓库的收集/整理/组合/复用/发布 等等基本功能/服务. 而且, 也通过Python ,完成了辅助的小脚本工具,配合 个人主机/7牛CDN, 完成了自动化的差异发布. 可是! 从去年开始 ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
+    <link href="http://blog.zoomquiet.io/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://blog.zoomquiet.io/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="http://blog.zoomquiet.io/theme/css/pygments/github.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/style.css" type="text/css"/>
+
+    <!-- add emojify into Pelican 
+    <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/emojify.min.css" type="text/css" />
+    <script src="http://blog.zoomquiet.io/theme/js/emojify.js"></script>
+
+-->
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+        <link href="http://blog.zoomquiet.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title=" ATOM Feed"/>
+
+            <!--
+    { include 'includes/ga.html' }
+            -->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--
+<a href="http://blog.zoomquiet.io" class="navbar-brand"></a>
+            -->
+<a href="http://blog.zoomquiet.io" class="navbar-brand">
+    <img src="http://blog.zoomquiet.io/theme/logo.png"/>
+    
+    <span class="violet-site">.io </span>
+</a>            
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://pychina.org">PyChina</a></li>
+                    <li><a href="http://obp.zoomquiet.io">OBP</a></li>
+              
+                        <li><a href="http://blog.zoomquiet.io/pages/about.html">About</a></li>
+                        <li><a href="http://blog.zoomquiet.io/pages/designing.html">设计</a></li>
+                        <li><a href="http://blog.zoomquiet.io/pages/hello-world.html">你好，世界</a></li>
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
+
+                <li><a href="http://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.zoomquiet.io/zq-chk4scrapbook.html">
+                        pydata笔记:环境配置
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+<!--
+    <span class="label label-default">Date</span>
+-->
+    <span class="published">
+        <i class="icon-calendar"></i>2014-07-11 00:00
+    </span>
+
+<!--
+    <span class="label">By</span>
+    <i class="icon-user"></i>
+    <a href="http://blog.zoomquiet.io/author/zoomquiet.html">Zoom.Quiet</a>
+
+    <span class="label label-default">Category</span>
+    <a href="http://blog.zoomquiet.io/category/pythonic.html">Pythonic</a>
+-->
+
+
+
+
+	<span class="label label-default">Tags</span>
+		<a href="http://blog.zoomquiet.io/tag/scrapbook.html">scrapbook</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/python.html">python</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/howto.html">howto</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/mavericks.html">mavericks</a>
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+    <div class="toc">
+<ul>
+<li><a href="#_1">背景</a><ul>
+<li><a href="#_2">可是!</a></li>
+</ul>
+</li>
+<li><a href="#_3">期待</a></li>
+<li><a href="#_4">折腾</a><ul>
+<li><a href="#_5">清查</a></li>
+<li><a href="#_6">解析</a></li>
+<li><a href="#_7">重构</a></li>
+<li><a href="#_8">删除</a></li>
+</ul>
+</li>
+<li><a href="#_9">回顾</a><ul>
+<li><a href="#_10">数据结构</a></li>
+<li><a href="#_11">功能开关</a></li>
+</ul>
+</li>
+<li><a href="#_12">时间帐单</a></li>
+<li><a href="#140708-scrapbook">140708 ScrapBook 分库</a><ul>
+<li><a href="#pm1500-pax"><span class="caps">PM15</span>:00 pax 复制所有数据</a></li>
+<li><a href="#2h">+2H 严正的不科学!</a></li>
+<li><a href="#2h-click">+2H click</a></li>
+<li><a href="#2h_1">+2H 实际清减</a><ul>
+<li><a href="#lxml">lxml</a></li>
+<li><a href="#untangle">untangle</a></li>
+<li><a href="#xmltodict">xmltodict</a></li>
+<li><a href="#4h">4H 折腾明白了:</a></li>
+<li><a href="#2">2小时 目录对比</a></li>
+<li><a href="#140710-1804">140710 18:04</a></li>
+</ul>
+</li>
+<li><a href="#todo"><span class="caps">TODO</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+                
+<h2 id="_1">背景</h2>
+<p>参考:<a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill">我的学习&amp;工具</a></p>
+<p>从06年,就将个人网络资料收集/整理/发布,
+切换为主力使用 <a href="http://www.xuldev.org/scrapbook/">ScrapBook</a> .</p>
+<p>这一下子就8年过去了,常用系统也从 Ubuntu 切换为 <span class="caps">MAC</span>, 收集的本地网页也超过了8万个,早已被迫进行了分库.</p>
+<p>自动发布的</p>
+<ul>
+<li>http://floss.zoomquiet.io</li>
+<li>http://skm.zoomquiet.io</li>
+</ul>
+<p>也成为一些朋友常常挖掘的资料库.</p>
+<p>可以说, ScrapBook 在 everynote 流行之前,就成功的解决了俺主要的在线网页资料为主的,
+外部知识仓库的收集/整理/组合/复用/发布 等等基本功能/服务.</p>
+<p>而且, 也通过Python ,完成了辅助的小脚本工具,配合 个人主机/7牛<span class="caps">CDN</span>, 完成了自动化的差异发布.</p>
+<h3 id="_2">可是!</h3>
+<ul>
+<li>从去年开始, 本地 <code>FLOSS</code> 仓库,就已经无法正常进行标准搜索了,一搜索,整个 FireFox 就僵死.</li>
+<li>而且,从其它仓库切换进入 <span class="caps">FLOSS</span> 时,要等待半分钟以上…</li>
+</ul>
+<h2 id="_3">期待</h2>
+<p>实在太常用,所以,无法忍,而且也不打算切换到 everynote 什么的其它平台上, 作为一头合格的程序猿,就是要自个儿折腾通透哪!</p>
+<p>所以,先决定目标:</p>
+<ol>
+<li>通过进一步拿合理分仓库,有效减少每个仓库包含的网页数量</li>
+<li>通过脚本分析 <code>scrapbook.rdf</code> 数据库来清除多余节点(隐藏的无效的)</li>
+<li>通过脚本分析 对应 <code>data/</code> 目录中的网页子目录,清除多余的</li>
+<li>针对全新的分仓库,建立对应的 7牛 空间,以及对应的 <code>*.zoomquiet.io</code> 子站发布</li>
+</ol>
+<p>总之就是要加速,无论本地/远程</p>
+<h2 id="_4">折腾</h2>
+<p>纪要一下折腾的过程中,要命的关键过程/代码</p>
+<h3 id="_5">清查</h3>
+<h3 id="_6">解析</h3>
+<h3 id="_7">重构</h3>
+<h3 id="_8">删除</h3>
+<h2 id="_9">回顾</h2>
+<p><span class="caps">JS</span> 在 FireFox 的确不给力哪…</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
+<span class="p">...</span>
+<span class="mi">957</span><span class="n">M</span>  <span class="n">ZqDevRel</span>
+<span class="mi">866</span><span class="n">M</span>  <span class="n">ZqFLOSS</span>
+<span class="mi">349</span><span class="n">M</span>  <span class="n">ZqKss</span>
+<span class="mf">3.4</span><span class="n">G</span>  <span class="n">ZqSKM</span>
+<span class="p">...</span>
+<span class="mf">1.0</span><span class="n">G</span>  <span class="n">_chaos</span>
+<span class="mf">5.2</span><span class="n">G</span>  <span class="n">_stuff</span>
+<span class="p">...</span>
+<span class="mi">424</span><span class="n">K</span>  <span class="n">scrapbooktools</span>
+<span class="mi">766</span><span class="n">M</span>  <span class="n">zqCoder</span>
+<span class="mf">1.0</span><span class="n">G</span>  <span class="n">zqDevRes</span>
+<span class="mf">1.4</span><span class="n">G</span>  <span class="n">zqPythonic</span>
+<span class="mf">1.4</span><span class="n">G</span>  <span class="n">zqSCM</span>
+<span class="mi">564</span><span class="n">M</span>  <span class="n">zqSMM</span>
+</pre></div>
+<p>为什么,在 700M 的 zqCoder 仓库中无法搜索,但是, 3.4G 的ZqSKM 中就可以?!</p>
+<p>认真对比,从重建的空仓库的 .rdf 中,发现:</p>
+<div class="highlight"><pre><span class="nt">&lt;<span class="caps">RDF</span>:Seq</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/<span class="caps">RDF</span>:Seq&gt;</span>
+</pre></div>
+<p>而其它意外折腾出来的,这个节点都都有几万条记录! 10行代码解决!</p>
+<h3 id="_10">数据结构</h3>
+<h3 id="_11">功能开关</h3>
+<h2 id="_12">时间帐单</h2>
+<div class="highlight"><pre><span class="o">+</span> <span class="mf">3.5</span><span class="n">H</span> <span class="err">用</span><span class="n">pax</span> <span class="err">复制</span><span class="p">,</span><span class="err">手工清除多余树</span>
+<span class="o">+</span> <span class="mf">1.5</span><span class="n">H</span> <span class="err">重新理解自个儿的脚本</span><span class="p">,</span><span class="err">加载自制数据结构到湿件</span>
+<span class="o">+</span> <span class="mf">1.0</span><span class="n">H</span> <span class="err">追加走查功能</span> 
+<span class="o">+</span> <span class="mf">2.0</span><span class="n">H</span> <span class="err">调试走查</span><span class="p">,</span><span class="err">优化输出</span><span class="p">,</span><span class="err">明确可清除无效节点的数量级</span>
+<span class="o">+</span> <span class="mf">1.5</span><span class="n">H</span> <span class="err">尝试用</span> <span class="n">click</span> <span class="err">改进功能开关</span><span class="p">,</span><span class="err">未果</span>
+<span class="o">+</span> <span class="mf">2.0</span><span class="n">H</span> <span class="err">对比测试不同的解析库</span>
+<span class="o">+</span> <span class="mf">1.0</span><span class="n">H</span> <span class="err">用</span><span class="n">xmltodict</span> <span class="err">重构原先的</span> <span class="err">走查功能</span>
+<span class="o">+</span> <span class="mf">1.5</span><span class="n">H</span> <span class="err">根据比对的需求</span><span class="p">,</span><span class="err">改进</span> <span class="n">xmltodict</span> <span class="err">的数据结构</span><span class="p">,</span><span class="err">追加</span> <span class="n">K</span><span class="o">/</span><span class="n">V</span> <span class="err">复用</span>
+<span class="o">+</span> <span class="mf">2.0</span><span class="n">H</span> <span class="err">再复制测试仓库</span><span class="p">,</span><span class="err">用</span> <span class="n">sh</span> <span class="err">小心的测试实际删除行为</span>
+<span class="o">+</span> <span class="mf">1.0</span><span class="n">H</span> <span class="err">通测</span>
+<span class="o">+</span> <span class="mf">2.5</span><span class="n">H</span> <span class="err">批量处置</span><span class="mi">7</span> <span class="err">个新旧仓库</span><span class="p">,</span><span class="err">清删除</span> <span class="mi">16</span><span class="err">万</span><span class="o">+</span> <span class="err">个无用目标</span><span class="p">,</span> <span class="err">近</span><span class="mi">25</span><span class="n">G</span><span class="o">+</span> <span class="err">空间释放</span>
+<span class="o">+</span> <span class="mf">2.0</span><span class="n">H</span> <span class="err">整理代码</span><span class="p">,</span> <span class="err">组织文档</span>
+
+<span class="mf">21.5</span><span class="n">H</span><span class="o">+</span> <span class="err">自然时间</span><span class="mi">3</span><span class="err">天</span><span class="o">+</span> <span class="err">业余时间</span>
+</pre></div>
+<h1 id="140708-scrapbook">140708 ScrapBook 分库</h1>
+<p>5.6G    ZqDevRel
+$ ls ZqDevRel/data/ | wc
+   26214   26214 393210</p>
+<p>-&gt; zqCoder 
+-&gt; zqSMM</p>
+<p>6.5G    ZqFLOSS
+$ ls ZqFLOSS/data/ | wc
+   30767   30767 461505</p>
+<p>-&gt; zqDevRes
+-&gt; zqSCM <br/>
+-&gt; zqPythonic</p>
+<p>3.7G    ZqSKM
+$ ls ZqSKM/data/ | wc
+    9486    9486 142290</p>
+<h2 id="pm1500-pax"><span class="caps">PM15</span>:00 pax 复制所有数据</h2>
+<p>5.7G    ZqDevRel
+6.5G    ZqFLOSS
+351M    ZqKss
+3.7G ZqSKM</p>
+<p>290M    backup
+4.0K scraptools</p>
+<p>5.7G    zqCoder
+6.5G    zqDevRes
+6.5G    zqPythonic
+6.5G    zqSCM
+5.7G zqSMM</p>
+<p>手工删除目录树:::</p>
+<p>zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook/zqSCM
+$ ls data/ | wc -l 25320</p>
+<p>zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook/zqSCM
+$ du -hs *
+…
+5.3G data</p>
+<h2 id="2h">+2H 严正的不科学!</h2>
+<p>已经拆分的仓库:</p>
+<p>zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook
+$ ls zqDevRes/data/ | wc -l
+   24045
+zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook
+$ ls zqPythonic/data/ | wc -l
+   24294
+zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook
+$ ls zqSCM/data/ | wc -l 25319</p>
+<p>zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook
+$ ls ZqFLOSS/data/ | wc -l 30767</p>
+<p>好象总是有 20000 左右,不存在的东西….</p>
+<h2 id="2h-click">+2H click</h2>
+<p>果然,清查出有大量, <span class="caps">FLOSS</span> 中当初没有合理清除的节点
+从 <span class="caps">ROOT</span> 引发的树中挂不上的</p>
+<h2 id="2h_1">+2H 实际清减</h2>
+<p><a href="http://amoffat.github.io/sh/">sh 1.08 — sh v1.08 documentation</a></p>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">sh</span> <span class="n">import</span> <span class="n">rm</span>
+<span class="p">...</span>
+<span class="n">print</span><span class="p">(</span><span class="n">rm</span><span class="p">(</span><span class="s">"-Rfv"</span><span class="p">,</span> <span class="n">del_dir</span><span class="p">))</span>
+</pre></div>
+<ul>
+<li>
+<p>用 sh 删除目录</p>
+<p>tree_nodes:  3574
+exp_items:  4164
+dirs:  590
+<span class="caps">DESC</span> : 24190
+chaos: 20616
+有效: 3574
+$ ls reDevRel/data/ | wc -l 2996</p>
+</li>
+<li>
+<p>用 lxml/模板 重构 rdf</p>
+</li>
+</ul>
+<p>人肉来总是感觉不对,</p>
+<p>尝试:</p>
+<h3 id="lxml">lxml</h3>
+<div class="highlight"><pre><span class="err">忒复杂</span><span class="o">!!!</span>
+</pre></div>
+<h3 id="untangle">untangle</h3>
+<p><a href="https://github.com/stchris/untangle">stchris/untangle</a></p>
+<p><span class="caps">RDF</span>:Seq         579
+RDF_Description     24190
+<span class="caps">NC</span>:BookmarkSeparator    57
+<open '_chaos="" 'wb'="" 0x100666ed0="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+        exp_level_idx() RUNed~ 2263.57079 ms</open></p>
+<p>快,但是,无法Dump,而且书写不直觉, 要将 “:” 变成 “_” obj.RDF_RDF.RDF_Description</p>
+<p><open '_chaos="" 'wb'="" 0x100769ed0="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+Traceback (most recent call last):
+  File “scraptools/zq_chk4scrap.py”, line 457, in <module>
+<span class="caps">RDFD</span> = exp_level_idx(<span class="caps">MYBOOK</span>)
+  File “scraptools/zq_chk4scrap.py”, line 161, in cal_time
+    result = func(*args)
+  File “scraptools/zq_chk4scrap.py”, line 205, in exp_level_idx
+    pickle.dump(obj.RDF_RDF, output)
+  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 1370, in dump
+    Pickler(file, protocol).dump(obj)
+  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 224, in dump
+    self.save(obj)
+  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 719, in save_inst
+    getstate = obj.<strong>getstate</strong>
+  File “/Users/zoomq/.pyenv/versions/276chaos/lib/python2.7/site-packages/untangle.py”, line 66, in <strong>getattr</strong>
+    raise IndexError(‘Unknown key &lt;%s&gt;’ % key)
+IndexError: Unknown key &lt;<strong>getstate</strong>&gt;</module></open></p>
+<h3 id="xmltodict">xmltodict</h3>
+<p><a href="https://github.com/martinblech/xmltodict">martinblech/xmltodict</a></p>
+<p>[u’<span class="caps">RDF</span>:<span class="caps">RDF</span>’]
+<span class="caps">RDF</span>:Seq         579
+<span class="caps">RDF</span>:Description     24190
+<span class="caps">NC</span>:BookmarkSeparator    57
+        exp_level_idx() RUNed~ 4997.31612 ms</p>
+<p>慢,但是,能 dump 而且书写直觉 doc[‘<span class="caps">RDF</span>:<span class="caps">RDF</span>’][‘<span class="caps">RDF</span>:Seq’]</p>
+<p>[u’<span class="caps">RDF</span>:<span class="caps">RDF</span>’]
+<span class="caps">RDF</span>:Seq         579
+<span class="caps">RDF</span>:Description     24190
+<span class="caps">NC</span>:BookmarkSeparator    57
+<open '_chaos="" 'wb'="" 0x10f26d420="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+        exp_level_idx() RUNed~ 16878.75390 ms</open></p>
+<p>同时,能反写出<span class="caps">XML</span> 来!</p>
+<p>主要问题是行为不统一!
+  <rdf:seq rdf:about="urn:scrapbook:item20070113201921">
+<rdf:li rdf:resource="urn:scrapbook:item20070113201940"></rdf:li>
+<rdf:li rdf:resource="urn:scrapbook:item20070113201941"></rdf:li>
+</rdf:seq>
+时 唯一的 <span class="caps">RDF</span>:Li 不是 List!!</p>
+<p><span class="caps">K2SEQ</span>[crt_id]&gt;<span class="caps">RDF</span>:Li OrderedDict([(u’@<span class="caps">RDF</span>:resource’, u’urn:scrapbook:item20070113201921’)])
+<span class="caps">K2SEQ</span>[crt_id][‘<span class="caps">RDF</span>:li’].len:: 1
+    <class 'collections.ordereddict'="">
+<span class="caps">K2SEQ</span>[crt_id]&gt;<span class="caps">RDF</span>:Li @<span class="caps">RDF</span>:resource
+     try crt_node.keys:
+@<span class="caps">RDF</span>:resource
+<span class="caps">K2SEQ</span>[crt_id]&gt;<span class="caps">RDF</span>:Li OrderedDict([(u’@<span class="caps">RDF</span>:resource’, u’urn:scrapbook:item20070527160000’)])
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="caps">K2SEQ</span>[crt_id]&gt;<span class="caps">RDF</span>:Li OrderedDict([(u’@<span class="caps">RDF</span>:resource’, u’urn:scrapbook:item20061006133550’)])
+<span class="caps">K2SEQ</span>[crt_id][‘<span class="caps">RDF</span>:li’].len:: 9
+    <type 'list'=""></type></class></p>
+<p><a href="https://github.com/martinblech/xmltodict/issues/67">odd parse for same xml structure · Issue #67 · martinblech/xmltodict</a></p>
+<h3 id="4h">4H 折腾明白了:</h3>
+<p>$ python scraptools/zq_chk4scrap.py reDevRel/
+/Users/zoomq/mnt/快盘/zScrapBook/reDevRel/scrapbook.rdf
+[u’<span class="caps">RDF</span>:<span class="caps">RDF</span>’]
+<span class="caps">RDF</span>:Seq         579
+<span class="caps">RDF</span>:Description     24190
+<span class="caps">NC</span>:BookmarkSeparator    57
+<open '_chaos="" 'wb'="" 0x10f17a660="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+        exp_level_idx() RUNed~ 17073.48084 ms</open></p>
+<p>_chaos/scraotools_reDevRel.pkl
+<span class="caps">RDF</span>:<span class="caps">ROOT</span>            13
+<span class="caps">RDF</span>:Seq         578
+<span class="caps">RDF</span>:Description     24190
+<span class="caps">NC</span>:BookmarkSeparator    57
+        _load_pkl() RUNed~ 7872.95103 ms</p>
+<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
+ <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+    <span class="n">re_xmltodict_rdf</span><span class="p">()</span> <span class="n">RUNed</span><span class="o">~</span> <span class="mf">191.21003</span> <span class="n">ms</span>
+</pre></div>
+<p>有这么多垃圾!
+24190 vs 3631 !!!!</p>
+<p>但是,居然无法一次性清理干净?!</p>
+<p>一扫::</p>
+<p>$ python scraptools/zq_chk4scrap.py reDevRel/
+/Users/zoomq/mnt/快盘/zScrapBook/reDevRel/scrapbook.rdf
+[u’<span class="caps">RDF</span>:<span class="caps">RDF</span>’]
+<span class="caps">RDF</span>:Seq         579
+<span class="caps">RDF</span>:Description     24190
+<span class="caps">NC</span>:BookmarkSeparator    57
+<open '_chaos="" 'wb'="" 0x10f2376f0="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+        exp_level_idx() RUNed~ 17013.92913 ms</open></p>
+<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
+ <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+</pre></div>
+<p>clean notes:    11153
+cleanned <span class="caps">DESC</span>:  13037
+<open '_chaos="" 'wb'="" 0x10eecff60="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 131239.34913 ms</open></p>
+<p>2扫:</p>
+<p>$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
+<span class="caps">RDF</span>:Seq         578
+<span class="caps">RDF</span>:Description     13037
+<span class="caps">NC</span>:BookmarkSeparator    57
+        _load_pkl() RUNed~ 4292.33599 ms</p>
+<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
+ <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+</pre></div>
+<p>clean notes:    5506
+cleanned <span class="caps">DESC</span>:  7531
+<open '_chaos="" 'wb'="" 0x108874f60="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 44531.90279 ms</open></p>
+<p>3扫::</p>
+<p>$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
+<span class="caps">RDF</span>:Seq         578
+<span class="caps">RDF</span>:Description     7531
+<span class="caps">NC</span>:BookmarkSeparator    57
+        _load_pkl() RUNed~ 3115.18502 ms</p>
+<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
+ <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+</pre></div>
+<p>clean notes:    2616
+cleanned <span class="caps">DESC</span>:  4915
+<open '_chaos="" 'wb'="" 0x105d1edb0="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 19026.94511 ms</open></p>
+<p>4扫::</p>
+<p>$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
+<span class="caps">RDF</span>:Seq         578
+<span class="caps">RDF</span>:Description     4915
+<span class="caps">NC</span>:BookmarkSeparator    57
+        _load_pkl() RUNed~ 2528.49293 ms</p>
+<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
+ <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+</pre></div>
+<p>clean notes:    1045
+cleanned <span class="caps">DESC</span>:  3870
+<open '_chaos="" 'wb'="" 0x10429ced0="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 11538.43212 ms</open></p>
+<p>5扫:</p>
+<p>$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
+<span class="caps">RDF</span>:Seq         578
+<span class="caps">RDF</span>:Description     3870
+<span class="caps">NC</span>:BookmarkSeparator    57
+        _load_pkl() RUNed~ 2422.85681 ms</p>
+<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
+ <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+</pre></div>
+<p>clean notes:    286
+cleanned <span class="caps">DESC</span>:  3584
+<open '_chaos="" 'wb'="" 0x102c5d300="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 9368.47901 ms</open></p>
+<p>6扫::</p>
+<p>$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
+<span class="caps">RDF</span>:Seq         578
+<span class="caps">RDF</span>:Description     3584
+<span class="caps">NC</span>:BookmarkSeparator    57
+        _load_pkl() RUNed~ 2225.17014 ms</p>
+<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
+ <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+</pre></div>
+<p>clean notes:    10
+cleanned <span class="caps">DESC</span>:  3574
+<open '_chaos="" 'wb'="" 0x102c2af60="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 8464.92100 ms</open></p>
+<p>7扫:</p>
+<p>$ python scraptools/zq_chk4scrap.py reDevRel/
+_chaos/scraotools_reDevRel.pkl
+<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
+<span class="caps">RDF</span>:Seq         578
+<span class="caps">RDF</span>:Description     3574
+<span class="caps">NC</span>:BookmarkSeparator    57
+        _load_pkl() RUNed~ 2317.77310 ms</p>
+<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
+ <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+</pre></div>
+<p>clean notes:    0
+cleanned <span class="caps">DESC</span>:  3574
+<open '_chaos="" 'wb'="" 0x1021b3030="" at="" file="" mode="" scraotools_redevrel.pkl',="">
+_chaos/scrapbook_reDevRel.rdf
+        re_xmltodict_rdf() RUNed~ 8694.52500 ms</open></p>
+<h3 id="2">2小时 目录对比</h3>
+<p>sh-&gt;ls 出来时,
+是 <span class="caps">STDOUT</span> 有隐藏字符! 兰色…居然没有意识到!</p>
+<p>20041214101930
+<type 'str'="">
+Traceback (most recent call last):
+  File “scraptools/zq_chk4scrap.py”, line 724, in <module>
+    mv_chaos_data(REPO_NAME, <span class="caps">XRDF</span>)
+  File “scraptools/zq_chk4scrap.py”, line 524, in mv_chaos_data
+    print len(int(li)) #.strip()
+ValueError: invalid literal for int() with base 10: ’\x1b[1m\x1b[34m20041214101930\x1b[39;49m\x1b[0m’</module></type></p>
+<h3 id="140710-1804">140710 18:04</h3>
+<p>完成初步完备流程:</p>
+<ul>
+<li>从原始 scrapbook.rdf 读入为 Py 对象</li>
+<li>模拟肉眼巡查, walk 出显示的合法内容数据集</li>
+<li>加入其它辅助<span class="caps">KV</span> 节点,写为中间工作 .pkl</li>
+<li>加载 工作 .pkl 到内存</li>
+<li>对比原始 .rdf 数据中的节点和 walk 出来有效的,逐一清除无效的<ul>
+<li>必须,尝试多次,直到清除干净</li>
+<li>为毛…?</li>
+</ul>
+</li>
+<li>对比实际目录和有效节点<span class="caps">ID</span> 的关系,将无效的,mv 到其它目录完成净化</li>
+</ul>
+<h2 id="todo"><span class="caps">TODO</span></h2>
+<ul>
+<li>解决反复清查的问题</li>
+<li>提高效率</li>
+</ul>
+<p>$ du -hs *
+5.1G    ZqDevRel
+950M    reDevRel
+    5.2G    zqCoder
+    4.9G    zqSMM
+8.0M    _chaos
+4.2G _stuff</p>
+<p>6.5G    ZqFLOSS
+    5.2G    zqDevRes
+    5.2G    zqPythonic
+    5.3G    zqSCM
+3.7G ZqSKM</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'blogzoomquietio'; // required: replace example with your forum shortname
+            var disqus_identifier = 'Pythonic/14-07-11-zq-chk4scrapbook';
+            var disqus_url = 'http://blog.zoomquiet.io/zq-chk4scrapbook.html';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+
+
+    <hr/>
+    <sub>
+        © Copyright 2014 by Zoom.Quiet 
+        <br/>
+        Content licensed under the Creative Commons 
+        <b>attribution-noncommercial-sharealike</b> License.
+        <br/>
+        Contact me via 
+        , <code><a href="mailto:i@zoomquiet.io">mail</a> 
+            </code>
+        ,<code><a href="http://github.com/ZoomQuiet">github</a>
+            </code>
+        or
+        <code><a href="http://bitbucket.org/ZoomQuiet">bitbucket</a>
+            </code>.
+        Tip me via 
+        <code><a href="https://www.gittip.com/ZoomQuiet/">gittip</a>
+            </code>.
+        <a href="http://blog.zoomquiet.io/feeds/all.atom.xml">(feed)</a>
+    </sub>
+
+
+        </div>
+
+        <div class="col-lg-3 well well-sm" id="sidebar">
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧文-sign icon-large"></i>旧文
+                    </a></li>
+                    <li class="list-group-item"><a href="http//ZoomQuiet.io"><i
+                            class="icon-.io-sign icon-large"></i>.io
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
+                            class="icon-Wiki-sign icon-large"></i>Wiki
+                    </a></li>
+                    <li class="list-group-item"><a href="http://code.google.com/p/openbookproject/"><i
+                            class="icon-O.B.P-sign icon-large"></i>O.B.P
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weekly.pychina.org/"><i
+                            class="icon-Weekly-sign icon-large"></i>Weekly
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
+
+            <li class="list-group-item"><h4>
+                <i class="icon-th icon-large"></i>Categories</h4></li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/author.html">
+                        <i class="icon-folder-open icon-large"></i>Author
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/author.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/imho.html">
+                        <i class="icon-folder-open icon-large"></i>IMHO
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/imho.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/livin.html">
+                        <i class="icon-folder-open icon-large"></i>Livin
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/livin.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/pythonic.html">
+                        <i class="icon-folder-open icon-large"></i>Pythonic
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/pythonic.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+
+ 
+
+        </ul>
+    </section>
+<section>
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-tint icon-large"></i>Powerded By</h4></li>
+
+    <li class="list-group-item-zip">
+        <a href="http://docs.getpelican.com">
+            Pelican
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <sup>theme base</sup>
+        <a href="https://github.com/DandyDev/pelican-bootstrap3">
+             DandyDev
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.python.org/">
+            Python
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.inkscape.org/">
+            inkscape
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://git-scm.com/">
+            Git
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="https://gitcafe.com/CPyUG">
+            GitCafe
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://www.qiniu.com/about">
+            七牛
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href='http://www.catb.org/hacker-emblem/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAACXBIWXMAAAsSAAALEgHS3X78AAABj0lEQVR4nOWWMYqDQBSGBa1jEbxFwEKwM6VV8AIWWkis9RI5Q1JpYWGb0jLpBDtrc4BgkQMI+y+yQ3BmdBJiNsv+kOHNZJT3+X6fo2y3W+k/ScFvv9//dhpvUhiGisi+uq6zLHNdd7VaTd7xFYnNor6uQsCO41wulzzPm6aZOavZJQSsaRqAMc6dzRskBFwUxfl8tizroVvDQr3DSSD9+Ore+YMV+irSYpjTRyUErKrqZrNBcLvdbNu+Xq/H43HyfabFhKEfCj0dsDEvEZQQMBHqXJYlAvSw3W43uZ/u/7wvwgitxHKBNGuFieBq0zRRYXRskf0DEzJXet1DIpis8NOf0jHg0+kEM+u6Dif37zCmh8MB0yf8zBRJnYk0UlL6oQiKC5ymqe/7sixXVYXTGJyM2oLWMIyu65Ik8TxvEmYykDjvJ2/zyLqguMBt22IEG+oJDyPGiBgr5N+/KC5wEAQYl8vler1GTyYnLdQWtFEUvTHJV4oLvFgs4jjuY3CSnjzu5M8/ln8Df/IB+OX6Ah776L1W8pWtAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+
+    <li class="list-group-item-zip">
+        <a href="http://zh.wikipedia.org/zh-cn/UTF-8">
+<img src="data:image/jpeg;base64,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"/>
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href='http://creativecommons.org/licenses/by-nc-sa/2.5/cn/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAANDQwNDQ0NDg0ODg4PEA8REREZGRkgICAhISEiIiIkJSMnKCcuMC4xMzEzMzM5Ozk7PTtBQkFCQkJDQ0NERERLTEtVVVVbXltmZmZna2dydnF3d3d9gn2AgICGhoaHh4eIiIiPkI+UmZOZmZmqqqqrsaqzuLK6v7q7u7vFxsXGysbIzMjKzsrMzMzd3d3u7u7///+uXr4hAAAA1UlEQVR42q2T2Q6CMBBFR0VUXHCritQFgXGvnf//Oa2ZNEB4UXrTl97enkxmWnAvcioDRKMtJGwJL0V8duEvWWDqGR4TR4iXfUPgbEBWCjaIj1UzYCchFYDQAgJFYoL4PHF/OVTIG7sEMLEKcAdXCtYkpa+znGQH8XL7nvOyed7VGGVgDEqbqaxD+kh6iOc7V2hjfJfxVYNqKxSRr2VGsl2ukNO85/v1hu1hO6Hch0gLCF+0HBd6yLEfe4jTvuMpp62jBS6GDt4hxnBg3rzX9Kc4FTjXG9Q1UZbZlOQyAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+</ul>
+</section>
+<section>
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-asterisk icon-large"></i>Links</h4></li>
+
+    <li class="list-group-item-zip">
+        <a href="http://blog.zhgdg.org/about.html">
+            珠海GDG
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://techparty.org/about/">
+            techpary.org
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://devrel.info/about.html">
+            DevRel.info
+        </a>
+    </li>
+    
+    <li class="list-group-item-zip">
+        <a href="http://yuedulinju.com/">
+            阅读邻居
+        </a>
+    </li>
+
+
+</ul>
+</section>
+
+</aside>        </div>
+    
+    </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://blog.zoomquiet.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://blog.zoomquiet.io/theme/js/respond.min.js"></script>
+
+<!--
+    <script type="text/javascript">
+        var disqus_shortname = 'blogzoomquietio';
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] ||
+             document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+ 
+-->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'blogzoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    
+
+</body>
+</html>

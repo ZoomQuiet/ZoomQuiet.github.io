@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/pythonic.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-07-11T00:00:00+08:00</updated><entry><title>pydata笔记:环境配置</title><link href="http://blog.zoomquiet.io/zq-chk4scrapbook.html" rel="alternate"></link><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:zq-chk4scrapbook.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/pythonic.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-07-11T00:00:00+08:00</updated><entry><title>ScrapBook彻查成果</title><link href="http://blog.zoomquiet.io/zq-chk4scrapbook.html" rel="alternate"></link><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:zq-chk4scrapbook.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;/h2&gt;
 &lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill"&gt;我的学习&amp;amp;工具&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;从06年,就将个人网络资料收集/整理/发布,
@@ -15,6 +15,7 @@
 外部知识仓库的收集/整理/组合/复用/发布 等等基本功能/服务.&lt;/p&gt;
 &lt;p&gt;而且, 也通过Python ,完成了辅助的小脚本工具,配合 个人主机/7牛&lt;span class="caps"&gt;CDN&lt;/span&gt;, 完成了自动化的差异发布.&lt;/p&gt;
 &lt;h3 id="_2"&gt;可是!&lt;/h3&gt;
+&lt;p&gt;参考: &lt;a href="http://blog.zoomquiet.io/livin-scrapbook.html"&gt;ScrapBook 生存指南&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;从去年开始, 本地 &lt;code&gt;FLOSS&lt;/code&gt; 仓库,就已经无法正常进行标准搜索了,一搜索,整个 FireFox 就僵死.&lt;/li&gt;
 &lt;li&gt;而且,从其它仓库切换进入 &lt;span class="caps"&gt;FLOSS&lt;/span&gt; 时,要等待半分钟以上…&lt;/li&gt;

@@ -134,25 +134,31 @@
 <li><a href="#_2">可是!</a></li>
 </ul>
 </li>
-<li><a href="#_3">期待</a></li>
-<li><a href="#_4">折腾</a><ul>
-<li><a href="#_5">清查</a></li>
-<li><a href="#_6">解析</a></li>
-<li><a href="#_7">重构</a></li>
-<li><a href="#_8">删除</a></li>
+<li><a href="#_3">期待</a><ul>
+<li><a href="#_4">数据结构</a></li>
 </ul>
 </li>
-<li><a href="#_9">回顾</a><ul>
-<li><a href="#_10">数据结构</a></li>
-<li><a href="#_11">功能开关</a></li>
+<li><a href="#_5">折腾</a><ul>
+<li><a href="#_6">清查</a><ul>
+<li><a href="#pax">pax</a></li>
+<li><a href="#_7">手工删除目录树</a></li>
+<li><a href="#_8">严正的不科学!</a></li>
 </ul>
 </li>
-<li><a href="#_12">时间帐单</a></li>
+<li><a href="#_9">解析</a></li>
+<li><a href="#_10">重构</a></li>
+<li><a href="#_11">删除</a></li>
+</ul>
+</li>
+<li><a href="#_12">回顾</a><ul>
+<li><a href="#_13">数据新结构</a></li>
+<li><a href="#_14">功能开关</a></li>
+</ul>
+</li>
+<li><a href="#_15">时间帐单</a></li>
 <li><a href="#140708-scrapbook">140708 ScrapBook 分库</a><ul>
-<li><a href="#pm1500-pax"><span class="caps">PM15</span>:00 pax 复制所有数据</a></li>
-<li><a href="#2h">+2H 严正的不科学!</a></li>
 <li><a href="#2h-click">+2H click</a></li>
-<li><a href="#2h_1">+2H 实际清减</a><ul>
+<li><a href="#2h">+2H 实际清减</a><ul>
 <li><a href="#lxml">lxml</a></li>
 <li><a href="#untangle">untangle</a></li>
 <li><a href="#xmltodict">xmltodict</a></li>
@@ -197,13 +203,160 @@
 <li>针对全新的分仓库,建立对应的 7牛 空间,以及对应的 <code>*.zoomquiet.io</code> 子站发布</li>
 </ol>
 <p>总之就是要加速,无论本地/远程</p>
-<h2 id="_4">折腾</h2>
+<h3 id="_4">数据结构</h3>
+<p>为了大家平滑的理解折腾之处,先简要说明一下 ScrapBook 的数据结构:</p>
+<div class="highlight"><pre><span class="n"><span class="caps">XX</span></span><span class="err">仓库</span><span class="o">/</span>     <span class="err">对应</span> <span class="n">Multi</span><span class="o">-</span><span class="n">ScrapBook</span> <span class="err">开启后</span><span class="p">,</span><span class="err">不同的</span><span class="n">Book</span>
+  <span class="o">+-</span> <span class="n">data</span>   <span class="err">实际本地网页存放入口</span><span class="p">,</span> <span class="err">类似</span> <span class="mi">20050205102119</span> <span class="err">的子目录</span>
+  <span class="o">+-</span> <span class="n">tree</span>   <span class="err">导出目录树后的</span> <span class="n">html</span> <span class="err">入口</span>
+  <span class="o">+-</span> <span class="p">...</span>
+  <span class="err">`</span><span class="o">-</span> <span class="n">scrapbook</span><span class="p">.</span><span class="n">rdf</span> <span class="err">插件界面使用的</span> <span class="n">xml</span> <span class="err">数据仓库</span>
+</pre></div>
+<p><code>scrapbook.rdf 的关键数据约定</code></p>
+<div class="highlight"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;<span class="caps">RDF</span>:<span class="caps">RDF</span></span> <span class="na">xmlns:<span class="caps">NS2</span>=</span><span class="s">"http://amb.vis.ne.jp/mozilla/scrapbook-rdf#"</span>
+         <span class="na">xmlns:<span class="caps">NC</span>=</span><span class="s">"http://home.netscape.com/<span class="caps">NC</span>-rdf#"</span>
+         <span class="na">xmlns:<span class="caps">RDF</span>=</span><span class="s">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span><span class="nt">&gt;</span>
+  ...
+  主体内容
+<span class="nt">&lt;/<span class="caps">RDF</span>:<span class="caps">RDF</span>&gt;</span>
+
+根列表:
+<span class="nt">&lt;<span class="caps">RDF</span>:Seq</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:root"</span><span class="nt">&gt;</span>
+    %(rdf_li)s
+  <span class="nt">&lt;/<span class="caps">RDF</span>:Seq&gt;</span>
+
+目录容器:
+<span class="nt">&lt;<span class="caps">RDF</span>:Seq</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span><span class="nt">&gt;</span>
+    %(rdf_li)s
+  <span class="nt">&lt;/<span class="caps">RDF</span>:Seq&gt;</span>
+
+目录节点条目:
+<span class="nt">&lt;<span class="caps">RDF</span>:li</span> <span class="na"><span class="caps">RDF</span>:resource=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span><span class="nt">/&gt;</span>
+
+目录节点:
+<span class="nt">&lt;<span class="caps">RDF</span>:Description</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
+        <span class="na"><span class="caps">NS2</span>:type=</span><span class="s">"folder"</span>
+        <span class="na"><span class="caps">NS2</span>:id=</span><span class="s">"%(rdf_id)s"</span>
+        <span class="na"><span class="caps">NS2</span>:title=</span><span class="s">"%(rdf_title)s"</span>
+        <span class="na"><span class="caps">NS2</span>:chars=</span><span class="s">""</span>
+        <span class="na"><span class="caps">NS2</span>:icon=</span><span class="s">""</span>
+        <span class="na"><span class="caps">NS2</span>:source=</span><span class="s">""</span>
+        <span class="na"><span class="caps">NS2</span>:comment=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+
+页面节点:
+<span class="nt">&lt;<span class="caps">RDF</span>:Description</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
+        <span class="na"><span class="caps">NS2</span>:type=</span><span class="s">"%(rdf_type)s"</span>
+        <span class="na"><span class="caps">NS2</span>:id=</span><span class="s">"%(rdf_id)s"</span>
+        <span class="na"><span class="caps">NS2</span>:title=</span><span class="s">"%(rdf_title)s"</span>
+        <span class="na"><span class="caps">NS2</span>:comment=</span><span class="s">"%(rdf_comment)s"</span>
+        <span class="na"><span class="caps">NS2</span>:icon=</span><span class="s">"%(rdf_icon)s"</span>
+        <span class="na"><span class="caps">NS2</span>:source=</span><span class="s">"%(rdf_source)s"</span> 
+        <span class="na"><span class="caps">NS2</span>:chars=</span><span class="s">"<span class="caps">UTF</span>-8"</span> <span class="nt">/&gt;</span>
+
+笔记节点:
+<span class="nt">&lt;<span class="caps">RDF</span>:Description</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
+        <span class="na"><span class="caps">NS2</span>:type=</span><span class="s">"note"</span>
+        <span class="na"><span class="caps">NS2</span>:id=</span><span class="s">"%(rdf_id)s"</span>
+        <span class="na"><span class="caps">NS2</span>:title=</span><span class="s">"%(rdf_title)s"</span>
+        <span class="na"><span class="caps">NS2</span>:chars=</span><span class="s">"<span class="caps">UTF</span>-8"</span>
+        <span class="na"><span class="caps">NS2</span>:comment=</span><span class="s">""</span>
+        <span class="na"><span class="caps">NS2</span>:icon=</span><span class="s">""</span>
+        <span class="na"><span class="caps">NS2</span>:source=</span><span class="s">""</span><span class="nt">/&gt;</span>
+
+分割线节点:
+<span class="nt">&lt;<span class="caps">NC</span>:BookmarkSeparator</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
+        <span class="na"><span class="caps">NS2</span>:type=</span><span class="s">"separator"</span>
+        <span class="na"><span class="caps">NS2</span>:id=</span><span class="s">"%(rdf_id)s"</span>
+        <span class="na"><span class="caps">NS2</span>:title=</span><span class="s">""</span>
+        <span class="na"><span class="caps">NS2</span>:chars=</span><span class="s">""</span>
+        <span class="na"><span class="caps">NS2</span>:comment=</span><span class="s">""</span>
+        <span class="na"><span class="caps">NS2</span>:icon=</span><span class="s">""</span>
+        <span class="na"><span class="caps">NS2</span>:source=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+</pre></div>
+<p>以上 <code>%(rdf_id)s</code> 之类是 Py 内置模板的语法,
+在 <code>scrapbook.rdf</code> 实例中,都是形如: <code>20050205102119</code></p>
+<h2 id="_5">折腾</h2>
 <p>纪要一下折腾的过程中,要命的关键过程/代码</p>
-<h3 id="_5">清查</h3>
-<h3 id="_6">解析</h3>
-<h3 id="_7">重构</h3>
-<h3 id="_8">删除</h3>
-<h2 id="_9">回顾</h2>
+<h3 id="_6">清查</h3>
+<p>一切开始之前,的体积:</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">h</span> <span class="o">*</span> 
+<span class="p">...</span>
+<span class="mf">5.6</span><span class="n">G</span>    <span class="n">ZqDevRel</span>
+<span class="mf">6.5</span><span class="n">G</span>    <span class="n">ZqFLOSS</span>
+<span class="mf">3.7</span><span class="n">G</span>    <span class="n">ZqSKM</span>
+<span class="p">...</span>
+
+<span class="err">$</span> <span class="n">ls</span> <span class="n">ZqDevRel</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span>
+   <span class="mi">26214</span>   <span class="mi">26214</span>  <span class="mi">393210</span>
+
+<span class="cp"># 计划切分为</span>
+  <span class="o">-&gt;</span> <span class="n">zqCoder</span> 
+  <span class="o">-&gt;</span> <span class="n">zqSMM</span>
+
+<span class="err">$</span> <span class="n">ls</span> <span class="n">ZqFLOSS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span>
+   <span class="mi">30767</span>   <span class="mi">30767</span>  <span class="mi">461505</span>
+
+<span class="cp"># 计划切分为</span>
+  <span class="o">-&gt;</span> <span class="n">zqDevRes</span>
+  <span class="o">-&gt;</span> <span class="n">zqSCM</span>   
+  <span class="o">-&gt;</span> <span class="n">zqPythonic</span>
+</pre></div>
+<p>先在仓库中,根据拆分目标,将内容树收纳到对应的目录中, 以便复制,加载后,快速删除.</p>
+<h4 id="pax">pax</h4>
+<p><code>pax</code> 是个好工具,原先习惯性的用 <code>cp</code> 那叫个慢!
+搜索才知道,大量小文件的迁移就应该用 <code>pax</code>
+于是简单的起个背景周末跑吧….</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
+<span class="p">...</span>
+<span class="mf">5.7</span><span class="n">G</span>    <span class="n">ZqDevRel</span>
+  <span class="mf">5.7</span><span class="n">G</span>    <span class="n">zqCoder</span>
+  <span class="mf">5.7</span><span class="n">G</span>    <span class="n">zqSMM</span>
+
+<span class="mf">6.5</span><span class="n">G</span>    <span class="n">ZqFLOSS</span>
+  <span class="mf">6.5</span><span class="n">G</span>    <span class="n">zqDevRes</span>
+  <span class="mf">6.5</span><span class="n">G</span>    <span class="n">zqPythonic</span>
+  <span class="mf">6.5</span><span class="n">G</span>    <span class="n">zqSCM</span>
+
+<span class="p">...</span>
+<span class="mf">4.0</span><span class="n">K</span>    <span class="n">scraptools</span>
+<span class="p">...</span>
+</pre></div>
+<p>体积占用激增3倍!</p>
+<p>然后,逐一用 ScrapBook 加载新的目录</p>
+<h4 id="_7">手工删除目录树</h4>
+<p>再对比几个仓库的体积:</p>
+<div class="highlight"><pre><span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
+<span class="err">$</span> <span class="n">ls</span> <span class="n">ZqFLOSS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
+   <span class="mi">30767</span>
+
+<span class="err">$</span> <span class="n">ls</span> <span class="n">zqSCM</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
+   <span class="mi">25320</span>
+
+<span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
+<span class="p">...</span>
+<span class="mf">5.3</span><span class="n">G</span>    <span class="n">data</span>
+<span class="p">...</span>
+
+<span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
+<span class="err">$</span> <span class="n">ls</span> <span class="n">zqDevRes</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
+   <span class="mi">24045</span>
+
+<span class="err">$</span> <span class="n">ls</span> <span class="n">zqPythonic</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
+   <span class="mi">24294</span>
+
+<span class="err">$</span> <span class="n">ls</span> <span class="n">zqSCM</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
+   <span class="mi">25319</span>
+</pre></div>
+<h4 id="_8">严正的不科学!</h4>
+<p>手工折腾了半天,却发现几乎没有释放多少空间出来,
+好象总是有 20000 左右的目录,是不存在的页面节点…</p>
+<h3 id="_9">解析</h3>
+<p>首先,</p>
+<h3 id="_10">重构</h3>
+<p><a href="https://github.com/martinblech/xmltodict/issues/14">xml containing 1 child · Issue #14 · martinblech/xmltodict</a></p>
+<p><code>dict_constructor</code></p>
+<h3 id="_11">删除</h3>
+<h2 id="_12">回顾</h2>
 <p><span class="caps">JS</span> 在 FireFox 的确不给力哪…</p>
 <div class="highlight"><pre><span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
 <span class="p">...</span>
@@ -225,12 +378,19 @@
 <p>为什么,在 700M 的 zqCoder 仓库中无法搜索,但是, 3.4G 的ZqSKM 中就可以?!</p>
 <p>认真对比,从重建的空仓库的 .rdf 中,发现:</p>
 <div class="highlight"><pre><span class="nt">&lt;<span class="caps">RDF</span>:Seq</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:search"</span><span class="nt">&gt;</span>
+....
 <span class="nt">&lt;/<span class="caps">RDF</span>:Seq&gt;</span>
 </pre></div>
-<p>而其它意外折腾出来的,这个节点都都有几万条记录! 10行代码解决!</p>
-<h3 id="_10">数据结构</h3>
-<h3 id="_11">功能开关</h3>
-<h2 id="_12">时间帐单</h2>
+<p>这个节点中包含有意外的几万条记录!</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">seq</span> <span class="n">in</span> <span class="n">doc</span><span class="p">[</span><span class="err">'</span><span class="n"><span class="caps">RDF</span></span><span class="o">:</span><span class="n"><span class="caps">RDF</span></span><span class="err">'</span><span class="p">][</span><span class="err">'</span><span class="n"><span class="caps">RDF</span></span><span class="o">:</span><span class="n">Seq</span><span class="err">'</span><span class="p">]</span><span class="o">:</span>
+    <span class="k">if</span> <span class="err">'</span><span class="n">urn</span><span class="o">:</span><span class="n">scrapbook</span><span class="o">:</span><span class="n">search</span><span class="err">'</span> <span class="o">==</span> <span class="n">seq</span><span class="p">[</span><span class="err">'@</span><span class="n"><span class="caps">RDF</span></span><span class="o">:</span><span class="n">about</span><span class="err">'</span><span class="p">]</span><span class="o">:</span>
+        <span class="n">seq</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="err">'</span><span class="n"><span class="caps">RDF</span></span><span class="o">:</span><span class="n">li</span><span class="err">'</span><span class="p">)</span>
+        <span class="k">break</span>
+</pre></div>
+<p>几行代码解决!</p>
+<h3 id="_13">数据新结构</h3>
+<h3 id="_14">功能开关</h3>
+<h2 id="_15">时间帐单</h2>
 <div class="highlight"><pre><span class="o">+</span> <span class="mf">3.5</span><span class="n">H</span> <span class="err">用</span><span class="n">pax</span> <span class="err">复制</span><span class="p">,</span><span class="err">手工清除多余树</span>
 <span class="o">+</span> <span class="mf">1.5</span><span class="n">H</span> <span class="err">重新理解自个儿的脚本</span><span class="p">,</span><span class="err">加载自制数据结构到湿件</span>
 <span class="o">+</span> <span class="mf">1.0</span><span class="n">H</span> <span class="err">追加走查功能</span> 
@@ -242,61 +402,19 @@
 <span class="o">+</span> <span class="mf">2.0</span><span class="n">H</span> <span class="err">再复制测试仓库</span><span class="p">,</span><span class="err">用</span> <span class="n">sh</span> <span class="err">小心的测试实际删除行为</span>
 <span class="o">+</span> <span class="mf">1.0</span><span class="n">H</span> <span class="err">通测</span>
 <span class="o">+</span> <span class="mf">2.5</span><span class="n">H</span> <span class="err">批量处置</span><span class="mi">7</span> <span class="err">个新旧仓库</span><span class="p">,</span><span class="err">清删除</span> <span class="mi">16</span><span class="err">万</span><span class="o">+</span> <span class="err">个无用目标</span><span class="p">,</span> <span class="err">近</span><span class="mi">25</span><span class="n">G</span><span class="o">+</span> <span class="err">空间释放</span>
-<span class="o">+</span> <span class="mf">2.0</span><span class="n">H</span> <span class="err">整理代码</span><span class="p">,</span> <span class="err">组织文档</span>
+<span class="o">+</span> <span class="mf">4.0</span><span class="n">H</span> <span class="err">整理代码</span><span class="p">,</span> <span class="err">组织文档</span>
 
-<span class="mf">21.5</span><span class="n">H</span><span class="o">+</span> <span class="err">自然时间</span><span class="mi">3</span><span class="err">天</span><span class="o">+</span> <span class="err">业余时间</span>
+<span class="mf">24.5</span><span class="n">H</span><span class="o">+</span> <span class="err">自然时间</span><span class="p">,</span> <span class="mi">3</span><span class="o">+</span><span class="err">天业余时间</span>
 </pre></div>
+<ul>
+<li>140909 才算完成一个可以看的版本</li>
+<li>140711 完成所有功能,启动文档回顾</li>
+</ul>
 <h1 id="140708-scrapbook">140708 ScrapBook 分库</h1>
-<p>5.6G    ZqDevRel
-$ ls ZqDevRel/data/ | wc
-   26214   26214 393210</p>
-<p>-&gt; zqCoder 
--&gt; zqSMM</p>
-<p>6.5G    ZqFLOSS
-$ ls ZqFLOSS/data/ | wc
-   30767   30767 461505</p>
-<p>-&gt; zqDevRes
--&gt; zqSCM <br/>
--&gt; zqPythonic</p>
-<p>3.7G    ZqSKM
-$ ls ZqSKM/data/ | wc
-    9486    9486 142290</p>
-<h2 id="pm1500-pax"><span class="caps">PM15</span>:00 pax 复制所有数据</h2>
-<p>5.7G    ZqDevRel
-6.5G    ZqFLOSS
-351M    ZqKss
-3.7G ZqSKM</p>
-<p>290M    backup
-4.0K scraptools</p>
-<p>5.7G    zqCoder
-6.5G    zqDevRes
-6.5G    zqPythonic
-6.5G    zqSCM
-5.7G zqSMM</p>
-<p>手工删除目录树:::</p>
-<p>zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook/zqSCM
-$ ls data/ | wc -l 25320</p>
-<p>zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook/zqSCM
-$ du -hs *
-…
-5.3G data</p>
-<h2 id="2h">+2H 严正的不科学!</h2>
-<p>已经拆分的仓库:</p>
-<p>zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook
-$ ls zqDevRes/data/ | wc -l
-   24045
-zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook
-$ ls zqPythonic/data/ | wc -l
-   24294
-zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook
-$ ls zqSCM/data/ | wc -l 25319</p>
-<p>zoomq @ <span class="caps">MBP111216ZQ</span> in ~/KuaiPan/zScrapBook
-$ ls ZqFLOSS/data/ | wc -l 30767</p>
-<p>好象总是有 20000 左右,不存在的东西….</p>
 <h2 id="2h-click">+2H click</h2>
 <p>果然,清查出有大量, <span class="caps">FLOSS</span> 中当初没有合理清除的节点
 从 <span class="caps">ROOT</span> 引发的树中挂不上的</p>
-<h2 id="2h_1">+2H 实际清减</h2>
+<h2 id="2h">+2H 实际清减</h2>
 <p><a href="http://amoffat.github.io/sh/">sh 1.08 — sh v1.08 documentation</a></p>
 <div class="highlight"><pre><span class="n">from</span> <span class="n">sh</span> <span class="n">import</span> <span class="n">rm</span>
 <span class="p">...</span>
@@ -622,7 +740,7 @@ ValueError: invalid literal for int() with base 10: ’\x1b[1m\x1b[34m200412141
                     <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
                             class="icon-旧文-sign icon-large"></i>旧文
                     </a></li>
-                    <li class="list-group-item"><a href="http//ZoomQuiet.io"><i
+                    <li class="list-group-item"><a href="http://ZoomQuiet.io"><i
                             class="icon-.io-sign icon-large"></i>.io
                     </a></li>
                     <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i

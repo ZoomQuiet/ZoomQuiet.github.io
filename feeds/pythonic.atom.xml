@@ -1,5 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/pythonic.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-07-11T00:00:00+08:00</updated><entry><title>ScrapBook彻查成果</title><link href="http://blog.zoomquiet.io/zq-chk4scrapbook.html" rel="alternate"></link><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:zq-chk4scrapbook.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/pythonic.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-08-08T00:00:00+08:00</updated><entry><title>Python 101: 传播Python时几点建议</title><link href="http://blog.zoomquiet.io/py101-taching-suggestions.html" rel="alternate"></link><updated>2014-08-08T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-08-08:py101-taching-suggestions.html</id><summary type="html">&lt;p&gt;&lt;img alt="/chinese-python-poster" src="https://datalabcc.files.wordpress.com/2014/05/chinese-python-poster.jpg?w=590"/&gt;&lt;/p&gt;
+
+&lt;p&gt;来自: &lt;a href="http://www.curiousefficiency.org/posts/2014/08/python-teaching-suggestions.html"&gt;Some Suggestions for Teaching Python | Curious Efficiency&lt;/a&gt; 
+Nick Coghlan
+2014-08-08 12:55&lt;/p&gt;
+&lt;p&gt;I recently had the chance to attend a Software Carpentry bootcamp at the University of Queensland (as a teaching assistant), as well as seeing a presentation from one of &lt;span class="caps"&gt;UQ&lt;/span&gt;’s tutors at PyCon Australia 2014.&lt;/p&gt;
+&lt;p&gt;While many of the issues they encountered were inherent in the complexity of teaching programming, a few seemed like things that could be avoided.&lt;/p&gt;
+&lt;h2 id="getting-floating-point-results-from-integer-division"&gt;Getting floating point results from integer division&lt;/h2&gt;
+&lt;p&gt;In Python 2, integer division copies C in truncating the answer by default:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print(3/4)"&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Promoting to floating point requires type coercion, a command line flag or a future import:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print(float(3)/4)"&lt;/span&gt;
+&lt;span class="mf"&gt;0.75&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Qnew&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print(3/4)"&lt;/span&gt;
+&lt;span class="mf"&gt;0.75&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"from __future__ import division; print(3/4)"&lt;/span&gt;
+&lt;span class="mf"&gt;0.75&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Python 3 just does the right thing by default, so one way to avoid the problem entirely is to teach Python 3 instead of Python 2:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print(3/4)"&lt;/span&gt;
+&lt;span class="mf"&gt;0.75&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(In both Python 2 and 3, the &lt;code&gt;//&lt;/code&gt; floor division operator explicitly requests truncating division when it is desired)&lt;/p&gt;
+&lt;h2 id="common-python-23-syntax-for-printing-values"&gt;Common Python 2/3 syntax for printing values&lt;/h2&gt;
+&lt;p&gt;I’ve been using Python 2 and 3 in parallel for more than 8 years now (while Python 3.0 was released in 2008, the project started in earnest a couple of years earlier than that, while Python 2.5 was still in development).&lt;/p&gt;
+&lt;p&gt;One essential trick I have learned in order to make regularly switching back and forth feasible is to limit myself to the common print syntax that works the same in both versions: passing a single argument surrounded by parentheses.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello world!"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
+&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello world!"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
+&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If I need to pass multiple arguments, I’ll use string formatting, rather than the implicit concatenation feature.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"{} {}{}"&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"world"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"!"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
+&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"{} {}{}"&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"world"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"!"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
+&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Rather than doing this, the Software Carpentry material that was used at the bootcamp I attended used the legacy Python 2 only &lt;code&gt;print&lt;/code&gt; syntax extensively, causing examples that otherwise would have worked fine in either version to fail for students that happened to be running Python 3. Adopting the shared syntax for printing values could be enough to make the course largely version independent.&lt;/p&gt;
+&lt;h2 id="distinguishing-between-returning-and-printing-values"&gt;Distinguishing between returning and printing values&lt;/h2&gt;
+&lt;p&gt;One problem noted both at the bootcamp and by presenters at PyCon Australia was the challenge of teaching students the difference between printing and returning values. The problem is the “Print” part of the Read-Eval-Print-Loop provided by Python’s interactive interpreter:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;print_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;return_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;print_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;return_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There’s no obvious difference in output at the interactive prompt, especially for types like numbers where the results of &lt;code&gt;str&lt;/code&gt; and &lt;code&gt;repr&lt;/code&gt; are the same. Even when they’re different, those differences may not be obvious to a student:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;print_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello world"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;return_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello world"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;While I don’t have a definitive answer for this one, an experiment that seems worth trying to me is to teach students how to replace &lt;code&gt;sys.displayhook&lt;/code&gt;. 
+In particular, I suggest demonstrating the following change, and seeing if it helps explain the difference between printing output for display to the user and returning values for further processing:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;new_displayhook&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;         &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"-&amp;gt; {!r}"&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;displayhook&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new_displayhook&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;print_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;return_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Understanding the difference between printing and returning is essential to learning to use functions effectively, and tweaking the display of results this way may help make the difference more obvious.&lt;/p&gt;
+&lt;h2 id="addendum-ipython-including-ipython-notebook"&gt;Addendum: IPython (including IPython Notebook)&lt;/h2&gt;
+&lt;p&gt;The initial examples above focused on the standard CPython runtime, include the default interactive interpreter. The IPython interactive interpreter, including the IPython Notebook, has a couple of interesting differences in behaviour that are relevant to the above comments.&lt;/p&gt;
+&lt;p&gt;Firstly, it does display return values and printed values differently, prefacing results with an output reference number:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="mi"&gt;10&lt;/span&gt;
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Secondly, it has an optional “autocall” feature that allows a user to tell IPython to automatically add the missing parentheses to a function call if the user leaves them out:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ipython3&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;autocall&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print 10"&lt;/span&gt;
+&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is a general purpose feature that allows users to make their IPython sessions behave more like languages that don’t have first class functions (most notably, IPython’s autocall feature closely resembles &lt;span class="caps"&gt;MATLAB&lt;/span&gt;’s “command syntax” notation for calling functions).&lt;/p&gt;
+&lt;p&gt;It also has the side effect that users that use IPython, have autocall enabled, and don’t use any of the more esoteric quirks of the Python 2 &lt;code&gt;print&lt;/code&gt; statement (like stream redirection or suppressing the trailing newline) may not even notice that &lt;code&gt;print&lt;/code&gt; became an ordinary builtin in Python 3.&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;140811 翻译 Weekly issue:127 时发现,转译学习&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="press"></category><category term="101"></category><category term="Zh"></category></entry><entry><title>为毛俺不担心所谓Python用户流失</title><link href="http://blog.zoomquiet.io/why-i-dont-worry-about-pythons-popularity.html" rel="alternate"></link><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:why-i-dont-worry-about-pythons-popularity.html</id><summary type="html">&lt;p&gt;Why I don’t worry about Python losing&amp;nbsp;users&lt;/p&gt;
+&lt;p&gt;I just had a need to read two files that were line-delimited lists of domains, consolidate the data, and then output the domains sorted and all lowercased to a new file. It took me 10 lines of Python code and worked perfectly on the first&amp;nbsp;try.&lt;/p&gt;
+&lt;p&gt;Out of curiosity and to make sure I keep learning Go (my team at work uses it whenever possible), I decided to re-implement the same functionality. That took 
+&lt;a href="https://gist.github.com/brettcannon/a2a37cc5aadbc91c02ad"&gt;56 lines in Go&lt;/a&gt;
+. When I went back and refactored the Python code to match the abstractions I used in the Go code it grew to 
+&lt;a href="https://gist.github.com/brettcannon/82c4fe68bac30f4ed653"&gt;17 lines&lt;/a&gt;&amp;nbsp;.&lt;/p&gt;
+&lt;p&gt;And this sort of thing is exactly why I do not worry about Python’s popularity (at least in terms of users). While languages like Go compete with Python on a performance:productivity comparison, when you compare Python to almost any other language based purely on productivity it trounces the competition. And this shouldn’t shock anyone when you think about the history of Python. The language was initially created to script 
+&lt;a href="http://en.wikipedia.org/wiki/Amoeba_(operating_system)"&gt;a distributed operating system&lt;/a&gt;
+. This is why in the ‘90s and early 2000s the comparison was always Python vs. Perl and then Python vs. Ruby. Only in the 2000s and later did Python get compared to Java or very recently to Go or&amp;nbsp;JavaScript.&lt;/p&gt;
+&lt;p&gt;And this productivity view of Python also ties into education. With 
+&lt;a href="http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext"&gt;Python now the most popular intro teaching language at the top &lt;span class="caps"&gt;U.S.&lt;/span&gt; universities&lt;/a&gt;
+, many people are learning how to program using Python. But exposure early on to a language does not guarantee future usage by someone; I for one did not use Scheme after my intro course. But because Python is such a productive language, the language becomes a staple in one’s toolkit of programming. If people learn Python first, then when they need to write a quick script like I did today they will most likely reach for Python than Java or Go or some other language they may be using for their&amp;nbsp;work.&lt;/p&gt;
+&lt;p&gt;All of this is why I don’t worry about Python’s demise due to lack of users. People might switch to Go at work because the performance:productivity ratio is very good for their project or team. Or maybe people got frustrated with the Python 2/3 transition and didn’t want to base their project at work on Python anymore. It really doesn’t matter in terms of the number of users of Python because I’m willing to bet those people still reach for Python when they need a one-off script to solve a problem. And I bet these people still recommend Python when they are asked what people’s first programming language should be. In other words I don’t worry about our great-for-teaching, highly productive scripting language ever lacking users; Python will always be&amp;nbsp;useful.&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;140728&amp;nbsp;从周刊中发现,决定翻译&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="BRETT"></category><category term="Leo"></category><category term="PyConChina"></category><category term="Zh"></category></entry><entry><title>ScrapBook彻查成果</title><link href="http://blog.zoomquiet.io/zq-chk4scrapbook.html" rel="alternate"></link><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:zq-chk4scrapbook.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;/h2&gt;
 &lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill"&gt;我的学习&amp;amp;工具&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;从06年,就将个人网络资料收集/整理/发布,
@@ -30,13 +138,160 @@
 &lt;li&gt;针对全新的分仓库,建立对应的 7牛 空间,以及对应的 &lt;code&gt;*.zoomquiet.io&lt;/code&gt; 子站发布&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;总之就是要加速,无论本地/远程&lt;/p&gt;
-&lt;h2 id="_4"&gt;折腾&lt;/h2&gt;
+&lt;h3 id="_4"&gt;数据结构&lt;/h3&gt;
+&lt;p&gt;为了大家平滑的理解折腾之处,先简要说明一下 ScrapBook 的数据结构:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;XX&lt;/span&gt;&lt;/span&gt;&lt;span class="err"&gt;仓库&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;     &lt;span class="err"&gt;对应&lt;/span&gt; &lt;span class="n"&gt;Multi&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ScrapBook&lt;/span&gt; &lt;span class="err"&gt;开启后&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;不同的&lt;/span&gt;&lt;span class="n"&gt;Book&lt;/span&gt;
+  &lt;span class="o"&gt;+-&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;   &lt;span class="err"&gt;实际本地网页存放入口&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;类似&lt;/span&gt; &lt;span class="mi"&gt;20050205102119&lt;/span&gt; &lt;span class="err"&gt;的子目录&lt;/span&gt;
+  &lt;span class="o"&gt;+-&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt;   &lt;span class="err"&gt;导出目录树后的&lt;/span&gt; &lt;span class="n"&gt;html&lt;/span&gt; &lt;span class="err"&gt;入口&lt;/span&gt;
+  &lt;span class="o"&gt;+-&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+  &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;scrapbook&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rdf&lt;/span&gt; &lt;span class="err"&gt;插件界面使用的&lt;/span&gt; &lt;span class="n"&gt;xml&lt;/span&gt; &lt;span class="err"&gt;数据仓库&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;scrapbook.rdf 的关键数据约定&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?xml version="1.0"?&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt; &lt;span class="na"&gt;xmlns:&lt;span class="caps"&gt;NS2&lt;/span&gt;=&lt;/span&gt;&lt;span class="s"&gt;"http://amb.vis.ne.jp/mozilla/scrapbook-rdf#"&lt;/span&gt;
+         &lt;span class="na"&gt;xmlns:&lt;span class="caps"&gt;NC&lt;/span&gt;=&lt;/span&gt;&lt;span class="s"&gt;"http://home.netscape.com/&lt;span class="caps"&gt;NC&lt;/span&gt;-rdf#"&lt;/span&gt;
+         &lt;span class="na"&gt;xmlns:&lt;span class="caps"&gt;RDF&lt;/span&gt;=&lt;/span&gt;&lt;span class="s"&gt;"http://www.w3.org/1999/02/22-rdf-syntax-ns#"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+  ...
+  主体内容
+&lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;&amp;gt;&lt;/span&gt;
+
+根列表:
+&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:root"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    %(rdf_li)s
+  &lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&amp;gt;&lt;/span&gt;
+
+目录容器:
+&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    %(rdf_li)s
+  &lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&amp;gt;&lt;/span&gt;
+
+目录节点条目:
+&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:li&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+
+目录节点:
+&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:type=&lt;/span&gt;&lt;span class="s"&gt;"folder"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:title=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_title)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:chars=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:icon=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:source=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:comment=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+
+页面节点:
+&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:type=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_type)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:title=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_title)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:comment=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_comment)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:icon=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_icon)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:source=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_source)s"&lt;/span&gt; 
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:chars=&lt;/span&gt;&lt;span class="s"&gt;"&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+
+笔记节点:
+&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:type=&lt;/span&gt;&lt;span class="s"&gt;"note"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:title=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_title)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:chars=&lt;/span&gt;&lt;span class="s"&gt;"&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:comment=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:icon=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:source=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+
+分割线节点:
+&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:type=&lt;/span&gt;&lt;span class="s"&gt;"separator"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:title=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:chars=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:comment=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:icon=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:source=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;以上 &lt;code&gt;%(rdf_id)s&lt;/code&gt; 之类是 Py 内置模板的语法,
+在 &lt;code&gt;scrapbook.rdf&lt;/code&gt; 实例中,都是形如: &lt;code&gt;20050205102119&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="_5"&gt;折腾&lt;/h2&gt;
 &lt;p&gt;纪要一下折腾的过程中,要命的关键过程/代码&lt;/p&gt;
-&lt;h3 id="_5"&gt;清查&lt;/h3&gt;
-&lt;h3 id="_6"&gt;解析&lt;/h3&gt;
-&lt;h3 id="_7"&gt;重构&lt;/h3&gt;
-&lt;h3 id="_8"&gt;删除&lt;/h3&gt;
-&lt;h2 id="_9"&gt;回顾&lt;/h2&gt;
+&lt;h3 id="_6"&gt;清查&lt;/h3&gt;
+&lt;p&gt;一切开始之前,的体积:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; 
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="mf"&gt;5.6&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqDevRel&lt;/span&gt;
+&lt;span class="mf"&gt;6.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;
+&lt;span class="mf"&gt;3.7&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqSKM&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;ZqDevRel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt;
+   &lt;span class="mi"&gt;26214&lt;/span&gt;   &lt;span class="mi"&gt;26214&lt;/span&gt;  &lt;span class="mi"&gt;393210&lt;/span&gt;
+
+&lt;span class="cp"&gt;# 计划切分为&lt;/span&gt;
+  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zqCoder&lt;/span&gt; 
+  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zqSMM&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt;
+   &lt;span class="mi"&gt;30767&lt;/span&gt;   &lt;span class="mi"&gt;30767&lt;/span&gt;  &lt;span class="mi"&gt;461505&lt;/span&gt;
+
+&lt;span class="cp"&gt;# 计划切分为&lt;/span&gt;
+  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zqDevRes&lt;/span&gt;
+  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zqSCM&lt;/span&gt;   
+  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zqPythonic&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;先在仓库中,根据拆分目标,将内容树收纳到对应的目录中, 以便复制,加载后,快速删除.&lt;/p&gt;
+&lt;h4 id="pax"&gt;pax&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;pax&lt;/code&gt; 是个好工具,原先习惯性的用 &lt;code&gt;cp&lt;/code&gt; 那叫个慢!
+搜索才知道,大量小文件的迁移就应该用 &lt;code&gt;pax&lt;/code&gt;
+于是简单的起个背景周末跑吧….&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="mf"&gt;5.7&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqDevRel&lt;/span&gt;
+  &lt;span class="mf"&gt;5.7&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqCoder&lt;/span&gt;
+  &lt;span class="mf"&gt;5.7&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqSMM&lt;/span&gt;
+
+&lt;span class="mf"&gt;6.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;
+  &lt;span class="mf"&gt;6.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqDevRes&lt;/span&gt;
+  &lt;span class="mf"&gt;6.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqPythonic&lt;/span&gt;
+  &lt;span class="mf"&gt;6.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqSCM&lt;/span&gt;
+
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;    &lt;span class="n"&gt;scraptools&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;体积占用激增3倍!&lt;/p&gt;
+&lt;p&gt;然后,逐一用 ScrapBook 加载新的目录&lt;/p&gt;
+&lt;h4 id="_7"&gt;手工删除目录树&lt;/h4&gt;
+&lt;p&gt;再对比几个仓库的体积:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;
+   &lt;span class="mi"&gt;30767&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;zqSCM&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;
+   &lt;span class="mi"&gt;25320&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="mf"&gt;5.3&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;data&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;zqDevRes&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;
+   &lt;span class="mi"&gt;24045&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;zqPythonic&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;
+   &lt;span class="mi"&gt;24294&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;zqSCM&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;
+   &lt;span class="mi"&gt;25319&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="_8"&gt;严正的不科学!&lt;/h4&gt;
+&lt;p&gt;手工折腾了半天,却发现几乎没有释放多少空间出来,
+好象总是有 20000 左右的目录,是不存在的页面节点…&lt;/p&gt;
+&lt;h3 id="_9"&gt;解析&lt;/h3&gt;
+&lt;p&gt;首先,&lt;/p&gt;
+&lt;h3 id="_10"&gt;重构&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/martinblech/xmltodict/issues/14"&gt;xml containing 1 child · Issue #14 · martinblech/xmltodict&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dict_constructor&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="_11"&gt;删除&lt;/h3&gt;
+&lt;h2 id="_12"&gt;回顾&lt;/h2&gt;
 &lt;p&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 在 FireFox 的确不给力哪…&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
 &lt;span class="p"&gt;...&lt;/span&gt;
@@ -58,12 +313,19 @@
 &lt;p&gt;为什么,在 700M 的 zqCoder 仓库中无法搜索,但是, 3.4G 的ZqSKM 中就可以?!&lt;/p&gt;
 &lt;p&gt;认真对比,从重建的空仓库的 .rdf 中,发现:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:search"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+....
 &lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;而其它意外折腾出来的,这个节点都都有几万条记录! 10行代码解决!&lt;/p&gt;
-&lt;h3 id="_10"&gt;数据结构&lt;/h3&gt;
-&lt;h3 id="_11"&gt;功能开关&lt;/h3&gt;
-&lt;h2 id="_12"&gt;时间帐单&lt;/h2&gt;
+&lt;p&gt;这个节点中包含有意外的几万条记录!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;seq&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Seq&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;urn&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;scrapbook&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;search&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;'@&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;li&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;几行代码解决!&lt;/p&gt;
+&lt;h3 id="_13"&gt;数据新结构&lt;/h3&gt;
+&lt;h3 id="_14"&gt;功能开关&lt;/h3&gt;
+&lt;h2 id="_15"&gt;时间帐单&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;3.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;用&lt;/span&gt;&lt;span class="n"&gt;pax&lt;/span&gt; &lt;span class="err"&gt;复制&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;手工清除多余树&lt;/span&gt;
 &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;重新理解自个儿的脚本&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;加载自制数据结构到湿件&lt;/span&gt;
 &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;追加走查功能&lt;/span&gt; 
@@ -75,61 +337,19 @@
 &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;再复制测试仓库&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;用&lt;/span&gt; &lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="err"&gt;小心的测试实际删除行为&lt;/span&gt;
 &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;通测&lt;/span&gt;
 &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;批量处置&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="err"&gt;个新旧仓库&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;清删除&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="err"&gt;万&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;个无用目标&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;近&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;空间释放&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;整理代码&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;组织文档&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;整理代码&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;组织文档&lt;/span&gt;
 
-&lt;span class="mf"&gt;21.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;自然时间&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="err"&gt;天&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;业余时间&lt;/span&gt;
+&lt;span class="mf"&gt;24.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;自然时间&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="err"&gt;天业余时间&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;140909 才算完成一个可以看的版本&lt;/li&gt;
+&lt;li&gt;140711 完成所有功能,启动文档回顾&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id="140708-scrapbook"&gt;140708 ScrapBook 分库&lt;/h1&gt;
-&lt;p&gt;5.6G    ZqDevRel
-$ ls ZqDevRel/data/ | wc
-   26214   26214 393210&lt;/p&gt;
-&lt;p&gt;-&amp;gt; zqCoder 
--&amp;gt; zqSMM&lt;/p&gt;
-&lt;p&gt;6.5G    ZqFLOSS
-$ ls ZqFLOSS/data/ | wc
-   30767   30767 461505&lt;/p&gt;
-&lt;p&gt;-&amp;gt; zqDevRes
--&amp;gt; zqSCM &lt;br/&gt;
--&amp;gt; zqPythonic&lt;/p&gt;
-&lt;p&gt;3.7G    ZqSKM
-$ ls ZqSKM/data/ | wc
-    9486    9486 142290&lt;/p&gt;
-&lt;h2 id="pm1500-pax"&gt;&lt;span class="caps"&gt;PM15&lt;/span&gt;:00 pax 复制所有数据&lt;/h2&gt;
-&lt;p&gt;5.7G    ZqDevRel
-6.5G    ZqFLOSS
-351M    ZqKss
-3.7G ZqSKM&lt;/p&gt;
-&lt;p&gt;290M    backup
-4.0K scraptools&lt;/p&gt;
-&lt;p&gt;5.7G    zqCoder
-6.5G    zqDevRes
-6.5G    zqPythonic
-6.5G    zqSCM
-5.7G zqSMM&lt;/p&gt;
-&lt;p&gt;手工删除目录树:::&lt;/p&gt;
-&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook/zqSCM
-$ ls data/ | wc -l 25320&lt;/p&gt;
-&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook/zqSCM
-$ du -hs *
-…
-5.3G data&lt;/p&gt;
-&lt;h2 id="2h"&gt;+2H 严正的不科学!&lt;/h2&gt;
-&lt;p&gt;已经拆分的仓库:&lt;/p&gt;
-&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook
-$ ls zqDevRes/data/ | wc -l
-   24045
-zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook
-$ ls zqPythonic/data/ | wc -l
-   24294
-zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook
-$ ls zqSCM/data/ | wc -l 25319&lt;/p&gt;
-&lt;p&gt;zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in ~/KuaiPan/zScrapBook
-$ ls ZqFLOSS/data/ | wc -l 30767&lt;/p&gt;
-&lt;p&gt;好象总是有 20000 左右,不存在的东西….&lt;/p&gt;
 &lt;h2 id="2h-click"&gt;+2H click&lt;/h2&gt;
 &lt;p&gt;果然,清查出有大量, &lt;span class="caps"&gt;FLOSS&lt;/span&gt; 中当初没有合理清除的节点
 从 &lt;span class="caps"&gt;ROOT&lt;/span&gt; 引发的树中挂不上的&lt;/p&gt;
-&lt;h2 id="2h_1"&gt;+2H 实际清减&lt;/h2&gt;
+&lt;h2 id="2h"&gt;+2H 实际清减&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://amoffat.github.io/sh/"&gt;sh 1.08 — sh v1.08 documentation&lt;/a&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;rm&lt;/span&gt;
 &lt;span class="p"&gt;...&lt;/span&gt;

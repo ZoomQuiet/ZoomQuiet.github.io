@@ -26,39 +26,47 @@
 &lt;p&gt;首轮讨论记要如下:&lt;/p&gt;
 &lt;h3 id="140916"&gt;140916 京蠎活动群&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;@ZoomQuiet&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;2007-&amp;gt; Life is short, use Python!
-2013-&amp;gt; Life is shit,go Pythonic!
-2014-&amp;gt; Life is short,suck Python!&lt;/p&gt;
-&lt;p&gt;今年 PyCon 纪念 &lt;span class="caps"&gt;TEE&lt;/span&gt; 的文案,修订为:
-Life such short,be Pythonic !
-有妺纸说,人生苦短应该翻译为
-Life such suck 很认同,但是,不敢用,,,&lt;/p&gt;
-&lt;p&gt;Life is short,be Pythonic!
-人生苦短 得Pythonic?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;@AlbertLee&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Life is short, suck py
-I never stopped pythonic, I just stop showing it
-If you don’t python,you don’t python
-Pythonic than pythonic 定要难受死处女座的…&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;@Lothar&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;life’s pathetic, let’s pythonic&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;@Adam:&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;go pythonic, no pathetic…..&lt;/p&gt;
-&lt;p&gt;人生苦短 Pythonic欢
-苦海无涯，python是岸
-人生苦短 Pythonic绽 总是我就是强迫症想押韵..&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;为什么python程序员都这么短命… 还都这么痛苦… (逃)&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@ZoomQuiet&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;2007&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="kt"&gt;short&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;shit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;go&lt;/span&gt; &lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="mi"&gt;2014&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="kt"&gt;short&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;suck&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+
+&lt;span class="err"&gt;今年&lt;/span&gt; &lt;span class="n"&gt;PyCon&lt;/span&gt; &lt;span class="err"&gt;纪念&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;TEE&lt;/span&gt;&lt;/span&gt; &lt;span class="err"&gt;的文案&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;修订为&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;such&lt;/span&gt; &lt;span class="kt"&gt;short&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;Pythonic&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="err"&gt;有妺纸说&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;人生苦短应该翻译为&lt;/span&gt;
+&lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;such&lt;/span&gt; &lt;span class="n"&gt;suck&lt;/span&gt;
+&lt;span class="err"&gt;很认同&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;但是&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;不敢用&lt;/span&gt;&lt;span class="p"&gt;,,,&lt;/span&gt;
+
+&lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="kt"&gt;short&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="err"&gt;人生苦短&lt;/span&gt; &lt;span class="err"&gt;得&lt;/span&gt;&lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@AlbertLee&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="kt"&gt;short&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;suck&lt;/span&gt; &lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;never&lt;/span&gt; &lt;span class="n"&gt;stopped&lt;/span&gt; &lt;span class="n"&gt;pythonic&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;just&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="n"&gt;showing&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt;
+&lt;span class="n"&gt;If&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;don&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;don&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;
+&lt;span class="n"&gt;Pythonic&lt;/span&gt; &lt;span class="n"&gt;than&lt;/span&gt; &lt;span class="n"&gt;pythonic&lt;/span&gt; 
+    &lt;span class="err"&gt;定要难受死处女座的&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@Lothar&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;life&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pathetic&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;let&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pythonic&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@Adam:&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;go&lt;/span&gt; &lt;span class="n"&gt;pythonic&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;pathetic&lt;/span&gt;&lt;span class="err"&gt;…&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;
+
+&lt;span class="err"&gt;人生苦短&lt;/span&gt; &lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="err"&gt;欢&lt;/span&gt;
+&lt;span class="err"&gt;苦海无涯，&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="err"&gt;是岸&lt;/span&gt;
+&lt;span class="err"&gt;人生苦短&lt;/span&gt; &lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="err"&gt;绽&lt;/span&gt;
+&lt;span class="err"&gt;总是我就是强迫症想押韵&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;为什么python程序员都这么短命… 还都这么痛苦… (逃)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_3"&gt;暂定&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;life&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pathetic&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;let&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pythonic&lt;/span&gt;

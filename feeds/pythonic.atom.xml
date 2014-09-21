@@ -27,7 +27,10 @@ Guido gave a talk on Python 3 during Hack Week 2014 at Dropbox in San Francisco.
 &lt;p&gt;Well, I would say, I just feel most at home in my own house with my family. (laughing)&lt;/p&gt;
 &lt;p&gt;My wife is American; my son has both nationalities, but he speaks English. I’ve lived in the &lt;span class="caps"&gt;US&lt;/span&gt; for eighteen years now. I actually don’t imagine I would ever go back to Europe for a long period of time. I expect I’ll spend most of the rest of my life in the &lt;span class="caps"&gt;US&lt;/span&gt;—probably in the Bay Area, because it’s such a great place.&lt;/p&gt;
 &lt;h2 id="what-are-you-working-on-lately-at-dropbox"&gt;What are you working on lately at Dropbox?&lt;/h2&gt;
-&lt;p&gt;I’ve completed a new feature that we’ve needed for the Datastore &lt;span class="caps"&gt;API&lt;/span&gt; for a long time. It’s the ability to share datastores with other users. It launches today.&lt;/p&gt;
+&lt;p&gt;I’ve completed a new feature that we’ve needed for the 
+&lt;a href="https://www.dropbox.com/developers/datastore"&gt;Datastore &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;
+for a long time. It’s the ability to 
+&lt;a href="https://www.dropbox.com/developers/blog/107/new-datastore-features-shared-datastores-local-datastores-and-datastore-webhooks"&gt;share datastores&lt;/a&gt; with other users. It launches today.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="NMJBScQgtLZE0zmeOA1nJw" src="https://d262ilb51hltx0.cloudfront.net/max/800/1*NMJBScQgtLZE0zmeOA1nJw.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Is this something you’re working on with a team, or are you working more independently?&lt;/p&gt;
 &lt;p&gt;For this particular datastores feature, I’ve done most of the work independently, with two other people contributing, mainly in the form of code reviews. The datastore project as a whole has included a large team of contributors, including several talented interns.&lt;/p&gt;
@@ -62,6 +65,7 @@ Guido introduces Dropbox datastores at &lt;span class="caps"&gt;DBX&lt;/span&gt;
 &lt;p&gt;&lt;img alt="4saVabl5aGfdTVuPLBNBCQ" src="https://d262ilb51hltx0.cloudfront.net/max/1200/1*4saVabl5aGfdTVuPLBNBCQ.jpeg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="ziwbjd1WMkmuuoFK9q0Q" src="https://d262ilb51hltx0.cloudfront.net/max/1200/1*w-ziwbjd1WMkmuuoFK9q0Q.jpeg"/&gt;&lt;/p&gt;
 &lt;h2 id="in-your-letter-to-a-young-programmer-you-wrote-that-you-hoped-they-would-dream-big-but-one-of-the-challenges-for-programmers-now-is-that-there-are-so-many-big-dreams-to-be-had-so-many-opportunities-competing-for-their-attention-do-you-have-any-advice-for-finding-direction-early-on"&gt;In your &lt;a href="http://neopythonic.blogspot.com/2013/10/letter-to-young-programmer.html"&gt;letter to a young programmer&lt;/a&gt;, you wrote that you hoped they would dream big. But one of the challenges for programmers now is that there are so many big dreams to be had, so many opportunities competing for their attention. Do you have any advice for finding direction early on?&lt;/h2&gt;
+&lt;p&gt;中译: &lt;a href="http://blog.zoomquiet.io/guido-letter-2-young.html"&gt;Letter to a young programmer&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Early in their careers? Well, I would not be the expert on that myself, because I took a long time to settle in my career. Looking back—I’m obviously very happy with how everything turned out—but I do think I was probably too passive in choosing what I wanted.&lt;/p&gt;
 &lt;p&gt;I’ve almost never applied for a job. I’ve always waited until someone asked me. And while that worked out well for me, I think in general that may not be the best strategy.&lt;/p&gt;
 &lt;p&gt;But don’t stress out too much about being in control of everything. There’s so much that you can’t possibly know. There’s something called the “fear of missing out.” And there are so many people who feel that if they don’t control every aspect of their curriculum, they’re not going to get the super job they want.&lt;/p&gt;

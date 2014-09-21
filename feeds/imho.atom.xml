@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/imho.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-09-16T19:42:42+08:00</updated><entry><title>Pythonic口号的Pivot</title><link href="http://blog.zoomquiet.io/140916-pycon-slogen.html" rel="alternate"></link><updated>2014-09-16T19:42:42+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-16:140916-pycon-slogen.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/imho.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-09-21T11:11:11+08:00</updated><entry><title>论 OhLife 的倒掉</title><link href="http://blog.zoomquiet.io/140921-ohlife-death.html" rel="alternate"></link><updated>2014-09-21T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-21:140921-ohlife-death.html</id><summary type="html">
+&lt;p&gt;&lt;img alt="ohlife" src="http://a.36krcnd.com/photo/5dfa0868b7808b19b22eb4617a374923.jpg"/&gt;&lt;/p&gt;
+&lt;h2 id="_1"&gt;背景&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.36kr.com/p/2934.html"&gt;OhLife：抛弃你的日记本吧！来自Y Combinator的第三个项目 | 36氪&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;OhLife面临着几大问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由于网站内容涉及隐私，完全保密，因此该网站很难通过正常的网络推广方式吸引来很大的流量。&lt;/li&gt;
+&lt;li&gt;简单的功能很容易被复制，除了创业公司可以轻松复制外，如果 Google、腾讯这样的公司复制了这个模式，Ohlife 的竞争力就很不明显了。&lt;/li&gt;
+&lt;li&gt;简单的功能也很难实现 freemium，因为没有什么高级功能可以单独列出来吸引客户付费。
+不过也未必，或许 OhLife 会专注于做好这一件事，并且能把它做得出人意料之外的好，就如 evernote 一样。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;果然…四年后:&lt;/p&gt;
+&lt;h3 id="ohlife-is-shutting-down"&gt;OhLife is shutting down&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://ohlife.com/shutdown"&gt;OhLife helps you remember what’s happened in your life&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We’ll unfortunately be shutting OhLife down on October 4, 2014.&lt;/p&gt;
+&lt;p&gt;We started OhLife to help people remember what’s happened in their life. But since then we haven’t been able to grow our user base or make OhLife financially stable. Because of both these reasons we’ve decided to shut OhLife down. We appreciate everyone that’s used OhLife and supported us.&lt;/p&gt;
+&lt;p&gt;We’re extremely sorry for shutting the site down.&lt;/p&gt;
+&lt;p&gt;We have some FAQs below to help out. Thank you for all your support.&lt;/p&gt;
+&lt;p&gt;Thank you,
+The OhLife Team&lt;/p&gt;
+&lt;p&gt;How do I export my entries?
+You can save your entries to a text file here: https://ohlife.com/export
+Please export them before we shut down and delete them on October 4, 2014.&lt;/p&gt;
+&lt;p&gt;How do I save photos?
+The Past page (https://ohlife.com/past) has a list of all your entries, so you can quickly scroll through them to find your photos. If you click a photo it will take you to the original version.&lt;/p&gt;
+&lt;p&gt;What if I had a premium account?
+If you had the premium version, a few weeks after we shut OhLife down we’ll refund you a prorated amount.&lt;/p&gt;
+&lt;h2 id="_2"&gt;分析&lt;/h2&gt;
+&lt;p&gt;有用重要还是有銭重要?&lt;/p&gt;
+&lt;h2 id="_3"&gt;思考&lt;/h2&gt;
+&lt;p&gt;之于我们….&lt;/p&gt;
+&lt;h2 id="changlog"&gt;Changlog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;140921 官方通知邮件引发直觉思考&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>Pythonic口号的Pivot</title><link href="http://blog.zoomquiet.io/140916-pycon-slogen.html" rel="alternate"></link><updated>2014-09-16T19:42:42+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-16:140916-pycon-slogen.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="SimpleIsBeautiful（PNG 图像，731x681 像素）" src="http://wiki.woodpecker.org.cn/moin/SimpleIsBeautiful?action=AttachFile&amp;amp;do=get&amp;amp;target=130416-zq-simple-is-beautiful.png"/&gt;&lt;/p&gt;
 &lt;p&gt;可记得去年的&lt;a href="http://python-china.org/topic/544#reply5"&gt;蠎年蠎衫(PythonisT-shirt)设计大赛! — Python China&lt;/a&gt; ?&lt;/p&gt;
 &lt;p&gt;今年又来尝试了….&lt;/p&gt;

@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-05-07T00:00:00+08:00</updated><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:rst2s5-upgraded.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-10-24T00:00:00+08:00</updated><entry><title>Mavericks 中用 sshfs</title><link href="http://blog.zoomquiet.io/sshfs-in-mavericks.html" rel="alternate"></link><updated>2014-10-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-10-24:sshfs-in-mavericks.html</id><summary type="html">
+&lt;h1 id="_1"&gt;背景&lt;/h1&gt;
+&lt;p&gt;自从 2011-12-16 入手 &lt;span class="caps"&gt;MBP&lt;/span&gt; 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;依赖少, 双方有 ssh 就好&lt;/li&gt;
+&lt;li&gt;配置少, ssh 服务的启动没有 smb 服务那么多的配置&lt;/li&gt;
+&lt;li&gt;自动断, 不会象 smb 死占一个虚假的挂接点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="_2"&gt;问题&lt;/h1&gt;
+&lt;p&gt;每次 brew 出点小问题,就导致 sshfs 或是不痛快;&lt;/p&gt;
+&lt;p&gt;目测已经折腾过至少4次了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;送修理两次&lt;/li&gt;
+&lt;li&gt;从 10.6 升级 到 10.9 一次&lt;/li&gt;
+&lt;li&gt;brew 在硬盘权限修订后,完全崩溃,重新安装 又一次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="_3"&gt;分析&lt;/h1&gt;
+&lt;p&gt;毕竟 sshfs 依赖 &lt;span class="caps"&gt;FUSE&lt;/span&gt; 这种 plan9 发展来的神物, 是第三方的东西…&lt;/p&gt;
+&lt;p&gt;而且历史上:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fuse4x&lt;/li&gt;
+&lt;li&gt;macfuse&lt;/li&gt;
+&lt;li&gt;osxfuse&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;出现过很多靠谱不靠谱的…&lt;/p&gt;
+&lt;h1 id="_4"&gt;解决&lt;/h1&gt;
+&lt;p&gt;认真根据 homebrew 上最新 issue 的指引&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先停了以往各种版本的 &lt;code&gt;FUSE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;正常的安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;sshfs&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;由脚本自动安装所有依赖包.&lt;/p&gt;
+&lt;p&gt;并根据安装提示进行必要的系统配置&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cp&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;RfX&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfuse&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Filesystems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfusefs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt; \
+    &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Filesystems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Filesystems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;osxfusefs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Support&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;load_osxfusefs&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;首次,进行挂接时,会有驱动非官方的警告,知道就好,
+其它一切正常的了 ;-)&lt;/p&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.jesusherman.com/blog/general/montar-sshfs-en-os-x-mavericks/"&gt;Montar &lt;span class="caps"&gt;SSHFS&lt;/span&gt; en &lt;span class="caps"&gt;OS&lt;/span&gt; X Mavericks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://michael.terretta.com/fix-to-remove-or-uninstall-macfuse-on-mountain-lion-when-you-get-the-error-macfuse-uninstaller-can-not-find-the-archive-dot-bom-for-macfuse-core-package-dot"&gt;Fix to remove or uninstall MacFuse on Mountain Lion when you get the error “MacFUSE Uninstaller: Can not find the Archive.bom for MacFUSE Core package.” - Crude Technologies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://discussions.apple.com/message/18355704#18355704"&gt;how to remove macfuse and ntfs 3g on osx lion? | Apple Support Communities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;… etc.&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="sshfs"></category></entry><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:rst2s5-upgraded.html</id><summary type="html">
 &lt;h1 id="_1"&gt;背景&lt;/h1&gt;
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:&lt;/p&gt;

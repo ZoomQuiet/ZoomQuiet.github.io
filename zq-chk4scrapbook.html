@@ -205,11 +205,11 @@
 <p>总之就是要加速,无论本地/远程</p>
 <h3 id="_4">数据结构</h3>
 <p>为了大家平滑的理解折腾之处,先简要说明一下 ScrapBook 的数据结构:</p>
-<div class="highlight"><pre><span class="n"><span class="caps">XX</span></span><span class="err">仓库</span><span class="o">/</span>     <span class="err">对应</span> <span class="n">Multi</span><span class="o">-</span><span class="n">ScrapBook</span> <span class="err">开启后</span><span class="p">,</span><span class="err">不同的</span><span class="n">Book</span>
-  <span class="o">+-</span> <span class="n">data</span>   <span class="err">实际本地网页存放入口</span><span class="p">,</span> <span class="err">类似</span> <span class="mi">20050205102119</span> <span class="err">的子目录</span>
-  <span class="o">+-</span> <span class="n">tree</span>   <span class="err">导出目录树后的</span> <span class="n">html</span> <span class="err">入口</span>
-  <span class="o">+-</span> <span class="p">...</span>
-  <span class="err">`</span><span class="o">-</span> <span class="n">scrapbook</span><span class="p">.</span><span class="n">rdf</span> <span class="err">插件界面使用的</span> <span class="n">xml</span> <span class="err">数据仓库</span>
+<div class="highlight"><pre>XX仓库/     对应 Multi-ScrapBook 开启后,不同的Book
+  +- data   实际本地网页存放入口, 类似 20050205102119 的子目录
+  +- tree   导出目录树后的 html 入口
+  +- ...
+  `- scrapbook.rdf 插件界面使用的 xml 数据仓库
 </pre></div>
 <p><code>scrapbook.rdf 的关键数据约定</code></p>
 <div class="highlight"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
@@ -279,73 +279,73 @@
 <p>纪要一下折腾的过程中,要命的关键过程/代码</p>
 <h3 id="_6">清查</h3>
 <p>一切开始之前,的体积:</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">h</span> <span class="o">*</span> 
-<span class="p">...</span>
-<span class="mf">5.6</span><span class="n">G</span>    <span class="n">ZqDevRel</span>
-<span class="mf">6.5</span><span class="n">G</span>    <span class="n">ZqFLOSS</span>
-<span class="mf">3.7</span><span class="n">G</span>    <span class="n">ZqSKM</span>
-<span class="p">...</span>
+<div class="highlight"><pre><span class="nv">$ </span>du -h * 
+...
+5.6G    ZqDevRel
+6.5G    ZqFLOSS
+3.7G    ZqSKM
+...
 
-<span class="err">$</span> <span class="n">ls</span> <span class="n">ZqDevRel</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span>
-   <span class="mi">26214</span>   <span class="mi">26214</span>  <span class="mi">393210</span>
+<span class="nv">$ </span>ls ZqDevRel/data/ <span class="p">|</span> wc
+   <span class="m">26214</span>   <span class="m">26214</span>  393210
 
-<span class="cp"># 计划切分为</span>
-  <span class="o">-&gt;</span> <span class="n">zqCoder</span> 
-  <span class="o">-&gt;</span> <span class="n">zqSMM</span>
+<span class="c"># 计划切分为</span>
+  -&gt; zqCoder 
+  -&gt; zqSMM
 
-<span class="err">$</span> <span class="n">ls</span> <span class="n">ZqFLOSS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span>
-   <span class="mi">30767</span>   <span class="mi">30767</span>  <span class="mi">461505</span>
+<span class="nv">$ </span>ls ZqFLOSS/data/ <span class="p">|</span> wc
+   <span class="m">30767</span>   <span class="m">30767</span>  461505
 
-<span class="cp"># 计划切分为</span>
-  <span class="o">-&gt;</span> <span class="n">zqDevRes</span>
-  <span class="o">-&gt;</span> <span class="n">zqSCM</span>   
-  <span class="o">-&gt;</span> <span class="n">zqPythonic</span>
+<span class="c"># 计划切分为</span>
+  -&gt; zqDevRes
+  -&gt; zqSCM   
+  -&gt; zqPythonic
 </pre></div>
 <p>先在仓库中,根据拆分目标,将内容树收纳到对应的目录中, 以便复制,加载后,快速删除.</p>
 <h4 id="pax">pax</h4>
 <p><code>pax</code> 是个好工具,原先习惯性的用 <code>cp</code> 那叫个慢!
 搜索才知道,大量小文件的迁移就应该用 <code>pax</code>
 于是简单的起个背景周末跑吧….</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
-<span class="p">...</span>
-<span class="mf">5.7</span><span class="n">G</span>    <span class="n">ZqDevRel</span>
-  <span class="mf">5.7</span><span class="n">G</span>    <span class="n">zqCoder</span>
-  <span class="mf">5.7</span><span class="n">G</span>    <span class="n">zqSMM</span>
+<div class="highlight"><pre><span class="nv">$ </span>du -hs *
+...
+5.7G    ZqDevRel
+  5.7G    zqCoder
+  5.7G    zqSMM
 
-<span class="mf">6.5</span><span class="n">G</span>    <span class="n">ZqFLOSS</span>
-  <span class="mf">6.5</span><span class="n">G</span>    <span class="n">zqDevRes</span>
-  <span class="mf">6.5</span><span class="n">G</span>    <span class="n">zqPythonic</span>
-  <span class="mf">6.5</span><span class="n">G</span>    <span class="n">zqSCM</span>
+6.5G    ZqFLOSS
+  6.5G    zqDevRes
+  6.5G    zqPythonic
+  6.5G    zqSCM
 
-<span class="p">...</span>
-<span class="mf">4.0</span><span class="n">K</span>    <span class="n">scraptools</span>
-<span class="p">...</span>
+...
+4.0K    scraptools
+...
 </pre></div>
 <p>体积占用激增3倍!</p>
 <p>然后,逐一用 ScrapBook 加载新的目录</p>
 <h4 id="_7">手工删除目录树</h4>
 <p>再对比几个仓库的体积:</p>
-<div class="highlight"><pre><span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
-<span class="err">$</span> <span class="n">ls</span> <span class="n">ZqFLOSS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
-   <span class="mi">30767</span>
+<div class="highlight"><pre>~/KuaiPan/zScrapBook
+$ ls ZqFLOSS/data/ | wc -l
+   30767
 
-<span class="err">$</span> <span class="n">ls</span> <span class="n">zqSCM</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
-   <span class="mi">25320</span>
+$ ls zqSCM/data/ | wc -l
+   25320
 
-<span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
-<span class="p">...</span>
-<span class="mf">5.3</span><span class="n">G</span>    <span class="n">data</span>
-<span class="p">...</span>
+$ du -hs *
+...
+5.3G    data
+...
 
-<span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
-<span class="err">$</span> <span class="n">ls</span> <span class="n">zqDevRes</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
-   <span class="mi">24045</span>
+~/KuaiPan/zScrapBook
+$ ls zqDevRes/data/ | wc -l
+   24045
 
-<span class="err">$</span> <span class="n">ls</span> <span class="n">zqPythonic</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
-   <span class="mi">24294</span>
+$ ls zqPythonic/data/ | wc -l
+   24294
 
-<span class="err">$</span> <span class="n">ls</span> <span class="n">zqSCM</span><span class="o">/</span><span class="n">data</span><span class="o">/</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
-   <span class="mi">25319</span>
+$ ls zqSCM/data/ | wc -l
+   25319
 </pre></div>
 <h4 id="_8">严正的不科学!</h4>
 <p>手工折腾了半天,却发现几乎没有释放多少空间出来,
@@ -358,22 +358,22 @@
 <h3 id="_11">删除</h3>
 <h2 id="_12">回顾</h2>
 <p><span class="caps">JS</span> 在 FireFox 的确不给力哪…</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
-<span class="p">...</span>
-<span class="mi">957</span><span class="n">M</span>  <span class="n">ZqDevRel</span>
-<span class="mi">866</span><span class="n">M</span>  <span class="n">ZqFLOSS</span>
-<span class="mi">349</span><span class="n">M</span>  <span class="n">ZqKss</span>
-<span class="mf">3.4</span><span class="n">G</span>  <span class="n">ZqSKM</span>
-<span class="p">...</span>
-<span class="mf">1.0</span><span class="n">G</span>  <span class="n">_chaos</span>
-<span class="mf">5.2</span><span class="n">G</span>  <span class="n">_stuff</span>
-<span class="p">...</span>
-<span class="mi">424</span><span class="n">K</span>  <span class="n">scrapbooktools</span>
-<span class="mi">766</span><span class="n">M</span>  <span class="n">zqCoder</span>
-<span class="mf">1.0</span><span class="n">G</span>  <span class="n">zqDevRes</span>
-<span class="mf">1.4</span><span class="n">G</span>  <span class="n">zqPythonic</span>
-<span class="mf">1.4</span><span class="n">G</span>  <span class="n">zqSCM</span>
-<span class="mi">564</span><span class="n">M</span>  <span class="n">zqSMM</span>
+<div class="highlight"><pre><span class="nv">$ </span>du -hs *
+...
+957M  ZqDevRel
+866M  ZqFLOSS
+349M  ZqKss
+3.4G  ZqSKM
+...
+1.0G  _chaos
+5.2G  _stuff
+...
+424K  scrapbooktools
+766M  zqCoder
+1.0G  zqDevRes
+1.4G  zqPythonic
+1.4G  zqSCM
+564M  zqSMM
 </pre></div>
 <p>为什么,在 700M 的 zqCoder 仓库中无法搜索,但是, 3.4G 的ZqSKM 中就可以?!</p>
 <p>认真对比,从重建的空仓库的 .rdf 中,发现:</p>
@@ -382,29 +382,29 @@
 <span class="nt">&lt;/<span class="caps">RDF</span>:Seq&gt;</span>
 </pre></div>
 <p>这个节点中包含有意外的几万条记录!</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">seq</span> <span class="n">in</span> <span class="n">doc</span><span class="p">[</span><span class="err">'</span><span class="n"><span class="caps">RDF</span></span><span class="o">:</span><span class="n"><span class="caps">RDF</span></span><span class="err">'</span><span class="p">][</span><span class="err">'</span><span class="n"><span class="caps">RDF</span></span><span class="o">:</span><span class="n">Seq</span><span class="err">'</span><span class="p">]</span><span class="o">:</span>
-    <span class="k">if</span> <span class="err">'</span><span class="n">urn</span><span class="o">:</span><span class="n">scrapbook</span><span class="o">:</span><span class="n">search</span><span class="err">'</span> <span class="o">==</span> <span class="n">seq</span><span class="p">[</span><span class="err">'@</span><span class="n"><span class="caps">RDF</span></span><span class="o">:</span><span class="n">about</span><span class="err">'</span><span class="p">]</span><span class="o">:</span>
-        <span class="n">seq</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="err">'</span><span class="n"><span class="caps">RDF</span></span><span class="o">:</span><span class="n">li</span><span class="err">'</span><span class="p">)</span>
-        <span class="k">break</span>
+<div class="highlight"><pre>for seq in doc['RDF:RDF']['RDF:Seq']:
+    if 'urn:scrapbook:search' == seq['@RDF:about']:
+        seq.pop('RDF:li')
+        break
 </pre></div>
 <p>几行代码解决!</p>
 <h3 id="_13">数据新结构</h3>
 <h3 id="_14">功能开关</h3>
 <h2 id="_15">时间帐单</h2>
-<div class="highlight"><pre><span class="o">+</span> <span class="mf">3.5</span><span class="n">H</span> <span class="err">用</span><span class="n">pax</span> <span class="err">复制</span><span class="p">,</span><span class="err">手工清除多余树</span>
-<span class="o">+</span> <span class="mf">1.5</span><span class="n">H</span> <span class="err">重新理解自个儿的脚本</span><span class="p">,</span><span class="err">加载自制数据结构到湿件</span>
-<span class="o">+</span> <span class="mf">1.0</span><span class="n">H</span> <span class="err">追加走查功能</span> 
-<span class="o">+</span> <span class="mf">2.0</span><span class="n">H</span> <span class="err">调试走查</span><span class="p">,</span><span class="err">优化输出</span><span class="p">,</span><span class="err">明确可清除无效节点的数量级</span>
-<span class="o">+</span> <span class="mf">1.5</span><span class="n">H</span> <span class="err">尝试用</span> <span class="n">click</span> <span class="err">改进功能开关</span><span class="p">,</span><span class="err">未果</span>
-<span class="o">+</span> <span class="mf">2.0</span><span class="n">H</span> <span class="err">对比测试不同的解析库</span>
-<span class="o">+</span> <span class="mf">1.0</span><span class="n">H</span> <span class="err">用</span><span class="n">xmltodict</span> <span class="err">重构原先的</span> <span class="err">走查功能</span>
-<span class="o">+</span> <span class="mf">1.5</span><span class="n">H</span> <span class="err">根据比对的需求</span><span class="p">,</span><span class="err">改进</span> <span class="n">xmltodict</span> <span class="err">的数据结构</span><span class="p">,</span><span class="err">追加</span> <span class="n">K</span><span class="o">/</span><span class="n">V</span> <span class="err">复用</span>
-<span class="o">+</span> <span class="mf">2.0</span><span class="n">H</span> <span class="err">再复制测试仓库</span><span class="p">,</span><span class="err">用</span> <span class="n">sh</span> <span class="err">小心的测试实际删除行为</span>
-<span class="o">+</span> <span class="mf">1.0</span><span class="n">H</span> <span class="err">通测</span>
-<span class="o">+</span> <span class="mf">2.5</span><span class="n">H</span> <span class="err">批量处置</span><span class="mi">7</span> <span class="err">个新旧仓库</span><span class="p">,</span><span class="err">清删除</span> <span class="mi">16</span><span class="err">万</span><span class="o">+</span> <span class="err">个无用目标</span><span class="p">,</span> <span class="err">近</span><span class="mi">25</span><span class="n">G</span><span class="o">+</span> <span class="err">空间释放</span>
-<span class="o">+</span> <span class="mf">4.0</span><span class="n">H</span> <span class="err">整理代码</span><span class="p">,</span> <span class="err">组织文档</span>
+<div class="highlight"><pre>+ 3.5H 用pax 复制,手工清除多余树
++ 1.5H 重新理解自个儿的脚本,加载自制数据结构到湿件
++ 1.0H 追加走查功能 
++ 2.0H 调试走查,优化输出,明确可清除无效节点的数量级
++ 1.5H 尝试用 click 改进功能开关,未果
++ 2.0H 对比测试不同的解析库
++ 1.0H 用xmltodict 重构原先的 走查功能
++ 1.5H 根据比对的需求,改进 xmltodict 的数据结构,追加 K/V 复用
++ 2.0H 再复制测试仓库,用 sh 小心的测试实际删除行为
++ 1.0H 通测
++ 2.5H 批量处置7 个新旧仓库,清删除 16万+ 个无用目标, 近25G+ 空间释放
++ 4.0H 整理代码, 组织文档
 
-<span class="mf">24.5</span><span class="n">H</span><span class="o">+</span> <span class="err">自然时间</span><span class="p">,</span> <span class="mi">3</span><span class="o">+</span><span class="err">天业余时间</span>
+24.5H+ 自然时间, 3+天业余时间
 </pre></div>
 <ul>
 <li>140909 才算完成一个可以看的版本</li>
@@ -416,9 +416,9 @@
 从 <span class="caps">ROOT</span> 引发的树中挂不上的</p>
 <h2 id="2h">+2H 实际清减</h2>
 <p><a href="http://amoffat.github.io/sh/">sh 1.08 — sh v1.08 documentation</a></p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">sh</span> <span class="n">import</span> <span class="n">rm</span>
-<span class="p">...</span>
-<span class="n">print</span><span class="p">(</span><span class="n">rm</span><span class="p">(</span><span class="s">"-Rfv"</span><span class="p">,</span> <span class="n">del_dir</span><span class="p">))</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sh</span> <span class="kn">import</span> <span class="n">rm</span>
+<span class="o">...</span>
+<span class="k">print</span><span class="p">(</span><span class="n">rm</span><span class="p">(</span><span class="s">"-Rfv"</span><span class="p">,</span> <span class="n">del_dir</span><span class="p">))</span>
 </pre></div>
 <ul>
 <li>
@@ -438,7 +438,7 @@ $ ls reDevRel/data/ | wc -l 2996</p>
 <p>人肉来总是感觉不对,</p>
 <p>尝试:</p>
 <h3 id="lxml">lxml</h3>
-<div class="highlight"><pre><span class="err">忒复杂</span><span class="o">!!!</span>
+<div class="highlight"><pre>忒复杂!!!
 </pre></div>
 <h3 id="untangle">untangle</h3>
 <p><a href="https://github.com/stchris/untangle">stchris/untangle</a></p>
@@ -515,9 +515,9 @@ IndexError: Unknown key &lt;<strong>getstate</strong>&gt;</module></open></p>
 <span class="caps">RDF</span>:Description     24190
 <span class="caps">NC</span>:BookmarkSeparator    57
         _load_pkl() RUNed~ 7872.95103 ms</p>
-<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
- <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
-    <span class="n">re_xmltodict_rdf</span><span class="p">()</span> <span class="n">RUNed</span><span class="o">~</span> <span class="mf">191.21003</span> <span class="n">ms</span>
+<div class="highlight"><pre> _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
+    re_xmltodict_rdf() RUNed~ 191.21003 ms
 </pre></div>
 <p>有这么多垃圾!
 24190 vs 3631 !!!!</p>
@@ -531,8 +531,8 @@ IndexError: Unknown key &lt;<strong>getstate</strong>&gt;</module></open></p>
 <span class="caps">NC</span>:BookmarkSeparator    57
 <open '_chaos="" 'wb'="" 0x10f2376f0="" at="" file="" mode="" scraotools_redevrel.pkl',="">
         exp_level_idx() RUNed~ 17013.92913 ms</open></p>
-<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
- <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+<div class="highlight"><pre> _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 </pre></div>
 <p>clean notes:    11153
 cleanned <span class="caps">DESC</span>:  13037
@@ -547,8 +547,8 @@ _chaos/scraotools_reDevRel.pkl
 <span class="caps">RDF</span>:Description     13037
 <span class="caps">NC</span>:BookmarkSeparator    57
         _load_pkl() RUNed~ 4292.33599 ms</p>
-<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
- <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+<div class="highlight"><pre> _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 </pre></div>
 <p>clean notes:    5506
 cleanned <span class="caps">DESC</span>:  7531
@@ -563,8 +563,8 @@ _chaos/scraotools_reDevRel.pkl
 <span class="caps">RDF</span>:Description     7531
 <span class="caps">NC</span>:BookmarkSeparator    57
         _load_pkl() RUNed~ 3115.18502 ms</p>
-<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
- <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+<div class="highlight"><pre> _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 </pre></div>
 <p>clean notes:    2616
 cleanned <span class="caps">DESC</span>:  4915
@@ -579,8 +579,8 @@ _chaos/scraotools_reDevRel.pkl
 <span class="caps">RDF</span>:Description     4915
 <span class="caps">NC</span>:BookmarkSeparator    57
         _load_pkl() RUNed~ 2528.49293 ms</p>
-<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
- <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+<div class="highlight"><pre> _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 </pre></div>
 <p>clean notes:    1045
 cleanned <span class="caps">DESC</span>:  3870
@@ -595,8 +595,8 @@ _chaos/scraotools_reDevRel.pkl
 <span class="caps">RDF</span>:Description     3870
 <span class="caps">NC</span>:BookmarkSeparator    57
         _load_pkl() RUNed~ 2422.85681 ms</p>
-<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
- <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+<div class="highlight"><pre> _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 </pre></div>
 <p>clean notes:    286
 cleanned <span class="caps">DESC</span>:  3584
@@ -611,8 +611,8 @@ _chaos/scraotools_reDevRel.pkl
 <span class="caps">RDF</span>:Description     3584
 <span class="caps">NC</span>:BookmarkSeparator    57
         _load_pkl() RUNed~ 2225.17014 ms</p>
-<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
- <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+<div class="highlight"><pre> _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 </pre></div>
 <p>clean notes:    10
 cleanned <span class="caps">DESC</span>:  3574
@@ -627,8 +627,8 @@ _chaos/scraotools_reDevRel.pkl
 <span class="caps">RDF</span>:Description     3574
 <span class="caps">NC</span>:BookmarkSeparator    57
         _load_pkl() RUNed~ 2317.77310 ms</p>
-<div class="highlight"><pre> <span class="nl">_RIGHT_NODES:</span> <span class="mi">6926</span>
- <span class="nl">RIGHT_NODES:</span> <span class="mi">3631</span>
+<div class="highlight"><pre> _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 </pre></div>
 <p>clean notes:    0
 cleanned <span class="caps">DESC</span>:  3574

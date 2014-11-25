@@ -135,8 +135,8 @@ Nick Coghlan
 &lt;p&gt;While many of the issues they encountered were inherent in the complexity of teaching programming, a few seemed like things that could be avoided.&lt;/p&gt;
 &lt;h2 id="getting-floating-point-results-from-integer-division"&gt;Getting floating point results from integer division&lt;/h2&gt;
 &lt;p&gt;In Python 2, integer division copies C in truncating the answer by default:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print(3/4)"&lt;/span&gt;
-&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python -c &lt;span class="s2"&gt;"print(3/4)"&lt;/span&gt;
+0
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Promoting to floating point requires type coercion, a command line flag or a future import:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print(float(3)/4)"&lt;/span&gt;
@@ -147,52 +147,52 @@ Nick Coghlan
 &lt;span class="mf"&gt;0.75&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Python 3 just does the right thing by default, so one way to avoid the problem entirely is to teach Python 3 instead of Python 2:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print(3/4)"&lt;/span&gt;
-&lt;span class="mf"&gt;0.75&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python3 -c &lt;span class="s2"&gt;"print(3/4)"&lt;/span&gt;
+0.75
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;(In both Python 2 and 3, the &lt;code&gt;//&lt;/code&gt; floor division operator explicitly requests truncating division when it is desired)&lt;/p&gt;
 &lt;h2 id="common-python-23-syntax-for-printing-values"&gt;Common Python 2/3 syntax for printing values&lt;/h2&gt;
 &lt;p&gt;I’ve been using Python 2 and 3 in parallel for more than 8 years now (while Python 3.0 was released in 2008, the project started in earnest a couple of years earlier than that, while Python 2.5 was still in development).&lt;/p&gt;
 &lt;p&gt;One essential trick I have learned in order to make regularly switching back and forth feasible is to limit myself to the common print syntax that works the same in both versions: passing a single argument surrounded by parentheses.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello world!"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
-&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello world!"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
-&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python -c &lt;span class="s1"&gt;'print("Hello world!")'&lt;/span&gt;
+Hello world!
+&lt;span class="nv"&gt;$ &lt;/span&gt;python3 -c &lt;span class="s1"&gt;'print("Hello world!")'&lt;/span&gt;
+Hello world!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If I need to pass multiple arguments, I’ll use string formatting, rather than the implicit concatenation feature.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"{} {}{}"&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"world"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"!"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
-&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"{} {}{}"&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"world"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"!"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
-&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python -c &lt;span class="s1"&gt;'print("{} {}{}".format("Hello", "world", "!"))'&lt;/span&gt;
+Hello world!
+&lt;span class="nv"&gt;$ &lt;/span&gt;python3 -c &lt;span class="s1"&gt;'print("{} {}{}".format("Hello", "world", "!"))'&lt;/span&gt;
+Hello world!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Rather than doing this, the Software Carpentry material that was used at the bootcamp I attended used the legacy Python 2 only &lt;code&gt;print&lt;/code&gt; syntax extensively, causing examples that otherwise would have worked fine in either version to fail for students that happened to be running Python 3. Adopting the shared syntax for printing values could be enough to make the course largely version independent.&lt;/p&gt;
 &lt;h2 id="distinguishing-between-returning-and-printing-values"&gt;Distinguishing between returning and printing values&lt;/h2&gt;
 &lt;p&gt;One problem noted both at the bootcamp and by presenters at PyCon Australia was the challenge of teaching students the difference between printing and returning values. The problem is the “Print” part of the Read-Eval-Print-Loop provided by Python’s interactive interpreter:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;print_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;return_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;print_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="mi"&gt;10&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;return_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;&amp;gt; def print_arg(x):
+...     print(x)
+...
+&amp;gt;&amp;gt;&amp;gt; def return_arg(x):
+...     return x
+...
+&amp;gt;&amp;gt;&amp;gt; print_arg(10)
+10
+&amp;gt;&amp;gt;&amp;gt; return_arg(10)
+10
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;There’s no obvious difference in output at the interactive prompt, especially for types like numbers where the results of &lt;code&gt;str&lt;/code&gt; and &lt;code&gt;repr&lt;/code&gt; are the same. Even when they’re different, those differences may not be obvious to a student:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;print_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello world"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;return_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello world"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;&amp;gt; print_arg("Hello world")
+Hello world
+&amp;gt;&amp;gt;&amp;gt; return_arg("Hello world")
+'Hello world'
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;While I don’t have a definitive answer for this one, an experiment that seems worth trying to me is to teach students how to replace &lt;code&gt;sys.displayhook&lt;/code&gt;. 
 In particular, I suggest demonstrating the following change, and seeing if it helps explain the difference between printing output for display to the user and returning values for further processing:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;new_displayhook&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;         &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"-&amp;gt; {!r}"&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;displayhook&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new_displayhook&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;new_displayhook&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"-&amp;gt; {!r}"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;displayhook&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new_displayhook&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;print_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;return_arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -202,16 +202,16 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;h2 id="addendum-ipython-including-ipython-notebook"&gt;Addendum: IPython (including IPython Notebook)&lt;/h2&gt;
 &lt;p&gt;The initial examples above focused on the standard CPython runtime, include the default interactive interpreter. The IPython interactive interpreter, including the IPython Notebook, has a couple of interesting differences in behaviour that are relevant to the above comments.&lt;/p&gt;
 &lt;p&gt;Firstly, it does display return values and printed values differently, prefacing results with an output reference number:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
-&lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;In [1]: print 10
+10
 
-&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
-&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+In [2]: 10
+Out[2]: 10
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Secondly, it has an optional “autocall” feature that allows a user to tell IPython to automatically add the missing parentheses to a function call if the user leaves them out:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ipython3&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;autocall&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print 10"&lt;/span&gt;
-&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;ipython3 --autocall&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; -c &lt;span class="s2"&gt;"print 10"&lt;/span&gt;
+-&amp;gt; print&lt;span class="o"&gt;(&lt;/span&gt;10&lt;span class="o"&gt;)&lt;/span&gt;
+10
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This is a general purpose feature that allows users to make their IPython sessions behave more like languages that don’t have first class functions (most notably, IPython’s autocall feature closely resembles &lt;span class="caps"&gt;MATLAB&lt;/span&gt;’s “command syntax” notation for calling functions).&lt;/p&gt;
 &lt;p&gt;It also has the side effect that users that use IPython, have autocall enabled, and don’t use any of the more esoteric quirks of the Python 2 &lt;code&gt;print&lt;/code&gt; statement (like stream redirection or suppressing the trailing newline) may not even notice that &lt;code&gt;print&lt;/code&gt; became an ordinary builtin in Python 3.&lt;/p&gt;
@@ -267,11 +267,11 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;p&gt;总之就是要加速,无论本地/远程&lt;/p&gt;
 &lt;h3 id="_4"&gt;数据结构&lt;/h3&gt;
 &lt;p&gt;为了大家平滑的理解折腾之处,先简要说明一下 ScrapBook 的数据结构:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;XX&lt;/span&gt;&lt;/span&gt;&lt;span class="err"&gt;仓库&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;     &lt;span class="err"&gt;对应&lt;/span&gt; &lt;span class="n"&gt;Multi&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ScrapBook&lt;/span&gt; &lt;span class="err"&gt;开启后&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;不同的&lt;/span&gt;&lt;span class="n"&gt;Book&lt;/span&gt;
-  &lt;span class="o"&gt;+-&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;   &lt;span class="err"&gt;实际本地网页存放入口&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;类似&lt;/span&gt; &lt;span class="mi"&gt;20050205102119&lt;/span&gt; &lt;span class="err"&gt;的子目录&lt;/span&gt;
-  &lt;span class="o"&gt;+-&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt;   &lt;span class="err"&gt;导出目录树后的&lt;/span&gt; &lt;span class="n"&gt;html&lt;/span&gt; &lt;span class="err"&gt;入口&lt;/span&gt;
-  &lt;span class="o"&gt;+-&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
-  &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;scrapbook&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rdf&lt;/span&gt; &lt;span class="err"&gt;插件界面使用的&lt;/span&gt; &lt;span class="n"&gt;xml&lt;/span&gt; &lt;span class="err"&gt;数据仓库&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;XX仓库/     对应 Multi-ScrapBook 开启后,不同的Book
+  +- data   实际本地网页存放入口, 类似 20050205102119 的子目录
+  +- tree   导出目录树后的 html 入口
+  +- ...
+  `- scrapbook.rdf 插件界面使用的 xml 数据仓库
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;scrapbook.rdf 的关键数据约定&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?xml version="1.0"?&amp;gt;&lt;/span&gt;
@@ -341,73 +341,73 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;p&gt;纪要一下折腾的过程中,要命的关键过程/代码&lt;/p&gt;
 &lt;h3 id="_6"&gt;清查&lt;/h3&gt;
 &lt;p&gt;一切开始之前,的体积:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; 
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="mf"&gt;5.6&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqDevRel&lt;/span&gt;
-&lt;span class="mf"&gt;6.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;
-&lt;span class="mf"&gt;3.7&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqSKM&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;du -h * 
+...
+5.6G    ZqDevRel
+6.5G    ZqFLOSS
+3.7G    ZqSKM
+...
 
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;ZqDevRel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt;
-   &lt;span class="mi"&gt;26214&lt;/span&gt;   &lt;span class="mi"&gt;26214&lt;/span&gt;  &lt;span class="mi"&gt;393210&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;ls ZqDevRel/data/ &lt;span class="p"&gt;|&lt;/span&gt; wc
+   &lt;span class="m"&gt;26214&lt;/span&gt;   &lt;span class="m"&gt;26214&lt;/span&gt;  393210
 
-&lt;span class="cp"&gt;# 计划切分为&lt;/span&gt;
-  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zqCoder&lt;/span&gt; 
-  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zqSMM&lt;/span&gt;
+&lt;span class="c"&gt;# 计划切分为&lt;/span&gt;
+  -&amp;gt; zqCoder 
+  -&amp;gt; zqSMM
 
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt;
-   &lt;span class="mi"&gt;30767&lt;/span&gt;   &lt;span class="mi"&gt;30767&lt;/span&gt;  &lt;span class="mi"&gt;461505&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;ls ZqFLOSS/data/ &lt;span class="p"&gt;|&lt;/span&gt; wc
+   &lt;span class="m"&gt;30767&lt;/span&gt;   &lt;span class="m"&gt;30767&lt;/span&gt;  461505
 
-&lt;span class="cp"&gt;# 计划切分为&lt;/span&gt;
-  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zqDevRes&lt;/span&gt;
-  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zqSCM&lt;/span&gt;   
-  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zqPythonic&lt;/span&gt;
+&lt;span class="c"&gt;# 计划切分为&lt;/span&gt;
+  -&amp;gt; zqDevRes
+  -&amp;gt; zqSCM   
+  -&amp;gt; zqPythonic
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;先在仓库中,根据拆分目标,将内容树收纳到对应的目录中, 以便复制,加载后,快速删除.&lt;/p&gt;
 &lt;h4 id="pax"&gt;pax&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;pax&lt;/code&gt; 是个好工具,原先习惯性的用 &lt;code&gt;cp&lt;/code&gt; 那叫个慢!
 搜索才知道,大量小文件的迁移就应该用 &lt;code&gt;pax&lt;/code&gt;
 于是简单的起个背景周末跑吧….&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="mf"&gt;5.7&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqDevRel&lt;/span&gt;
-  &lt;span class="mf"&gt;5.7&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqCoder&lt;/span&gt;
-  &lt;span class="mf"&gt;5.7&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqSMM&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;du -hs *
+...
+5.7G    ZqDevRel
+  5.7G    zqCoder
+  5.7G    zqSMM
 
-&lt;span class="mf"&gt;6.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;
-  &lt;span class="mf"&gt;6.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqDevRes&lt;/span&gt;
-  &lt;span class="mf"&gt;6.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqPythonic&lt;/span&gt;
-  &lt;span class="mf"&gt;6.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqSCM&lt;/span&gt;
+6.5G    ZqFLOSS
+  6.5G    zqDevRes
+  6.5G    zqPythonic
+  6.5G    zqSCM
 
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;    &lt;span class="n"&gt;scraptools&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
+...
+4.0K    scraptools
+...
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;体积占用激增3倍!&lt;/p&gt;
 &lt;p&gt;然后,逐一用 ScrapBook 加载新的目录&lt;/p&gt;
 &lt;h4 id="_7"&gt;手工删除目录树&lt;/h4&gt;
 &lt;p&gt;再对比几个仓库的体积:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;
-   &lt;span class="mi"&gt;30767&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;~/KuaiPan/zScrapBook
+$ ls ZqFLOSS/data/ | wc -l
+   30767
 
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;zqSCM&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;
-   &lt;span class="mi"&gt;25320&lt;/span&gt;
+$ ls zqSCM/data/ | wc -l
+   25320
 
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="mf"&gt;5.3&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;data&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
+$ du -hs *
+...
+5.3G    data
+...
 
-&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;zqDevRes&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;
-   &lt;span class="mi"&gt;24045&lt;/span&gt;
+~/KuaiPan/zScrapBook
+$ ls zqDevRes/data/ | wc -l
+   24045
 
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;zqPythonic&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;
-   &lt;span class="mi"&gt;24294&lt;/span&gt;
+$ ls zqPythonic/data/ | wc -l
+   24294
 
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;zqSCM&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;
-   &lt;span class="mi"&gt;25319&lt;/span&gt;
+$ ls zqSCM/data/ | wc -l
+   25319
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h4 id="_8"&gt;严正的不科学!&lt;/h4&gt;
 &lt;p&gt;手工折腾了半天,却发现几乎没有释放多少空间出来,
@@ -420,22 +420,22 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;h3 id="_11"&gt;删除&lt;/h3&gt;
 &lt;h2 id="_12"&gt;回顾&lt;/h2&gt;
 &lt;p&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 在 FireFox 的确不给力哪…&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="mi"&gt;957&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;  &lt;span class="n"&gt;ZqDevRel&lt;/span&gt;
-&lt;span class="mi"&gt;866&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;  &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;
-&lt;span class="mi"&gt;349&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;  &lt;span class="n"&gt;ZqKss&lt;/span&gt;
-&lt;span class="mf"&gt;3.4&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;ZqSKM&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;_chaos&lt;/span&gt;
-&lt;span class="mf"&gt;5.2&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;_stuff&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="mi"&gt;424&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;  &lt;span class="n"&gt;scrapbooktools&lt;/span&gt;
-&lt;span class="mi"&gt;766&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;  &lt;span class="n"&gt;zqCoder&lt;/span&gt;
-&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;zqDevRes&lt;/span&gt;
-&lt;span class="mf"&gt;1.4&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;zqPythonic&lt;/span&gt;
-&lt;span class="mf"&gt;1.4&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;  &lt;span class="n"&gt;zqSCM&lt;/span&gt;
-&lt;span class="mi"&gt;564&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;  &lt;span class="n"&gt;zqSMM&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;du -hs *
+...
+957M  ZqDevRel
+866M  ZqFLOSS
+349M  ZqKss
+3.4G  ZqSKM
+...
+1.0G  _chaos
+5.2G  _stuff
+...
+424K  scrapbooktools
+766M  zqCoder
+1.0G  zqDevRes
+1.4G  zqPythonic
+1.4G  zqSCM
+564M  zqSMM
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;为什么,在 700M 的 zqCoder 仓库中无法搜索,但是, 3.4G 的ZqSKM 中就可以?!&lt;/p&gt;
 &lt;p&gt;认真对比,从重建的空仓库的 .rdf 中,发现:&lt;/p&gt;
@@ -444,29 +444,29 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这个节点中包含有意外的几万条记录!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;seq&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Seq&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;urn&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;scrapbook&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;search&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;'@&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;li&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;for seq in doc['RDF:RDF']['RDF:Seq']:
+    if 'urn:scrapbook:search' == seq['@RDF:about']:
+        seq.pop('RDF:li')
+        break
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;几行代码解决!&lt;/p&gt;
 &lt;h3 id="_13"&gt;数据新结构&lt;/h3&gt;
 &lt;h3 id="_14"&gt;功能开关&lt;/h3&gt;
 &lt;h2 id="_15"&gt;时间帐单&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;3.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;用&lt;/span&gt;&lt;span class="n"&gt;pax&lt;/span&gt; &lt;span class="err"&gt;复制&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;手工清除多余树&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;重新理解自个儿的脚本&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;加载自制数据结构到湿件&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;追加走查功能&lt;/span&gt; 
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;调试走查&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;优化输出&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;明确可清除无效节点的数量级&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;尝试用&lt;/span&gt; &lt;span class="n"&gt;click&lt;/span&gt; &lt;span class="err"&gt;改进功能开关&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;未果&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;对比测试不同的解析库&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;用&lt;/span&gt;&lt;span class="n"&gt;xmltodict&lt;/span&gt; &lt;span class="err"&gt;重构原先的&lt;/span&gt; &lt;span class="err"&gt;走查功能&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;根据比对的需求&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;改进&lt;/span&gt; &lt;span class="n"&gt;xmltodict&lt;/span&gt; &lt;span class="err"&gt;的数据结构&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;追加&lt;/span&gt; &lt;span class="n"&gt;K&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;V&lt;/span&gt; &lt;span class="err"&gt;复用&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;再复制测试仓库&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;用&lt;/span&gt; &lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="err"&gt;小心的测试实际删除行为&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;通测&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;2.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;批量处置&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="err"&gt;个新旧仓库&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;清删除&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="err"&gt;万&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;个无用目标&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;近&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;空间释放&lt;/span&gt;
-&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="err"&gt;整理代码&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;组织文档&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;+ 3.5H 用pax 复制,手工清除多余树
++ 1.5H 重新理解自个儿的脚本,加载自制数据结构到湿件
++ 1.0H 追加走查功能 
++ 2.0H 调试走查,优化输出,明确可清除无效节点的数量级
++ 1.5H 尝试用 click 改进功能开关,未果
++ 2.0H 对比测试不同的解析库
++ 1.0H 用xmltodict 重构原先的 走查功能
++ 1.5H 根据比对的需求,改进 xmltodict 的数据结构,追加 K/V 复用
++ 2.0H 再复制测试仓库,用 sh 小心的测试实际删除行为
++ 1.0H 通测
++ 2.5H 批量处置7 个新旧仓库,清删除 16万+ 个无用目标, 近25G+ 空间释放
++ 4.0H 整理代码, 组织文档
 
-&lt;span class="mf"&gt;24.5&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;自然时间&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="err"&gt;天业余时间&lt;/span&gt;
+24.5H+ 自然时间, 3+天业余时间
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;140909 才算完成一个可以看的版本&lt;/li&gt;
@@ -478,9 +478,9 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 从 &lt;span class="caps"&gt;ROOT&lt;/span&gt; 引发的树中挂不上的&lt;/p&gt;
 &lt;h2 id="2h"&gt;+2H 实际清减&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://amoffat.github.io/sh/"&gt;sh 1.08 — sh v1.08 documentation&lt;/a&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;rm&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"-Rfv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;del_dir&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sh&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;rm&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"-Rfv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;del_dir&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -500,7 +500,7 @@ $ ls reDevRel/data/ | wc -l 2996&lt;/p&gt;
 &lt;p&gt;人肉来总是感觉不对,&lt;/p&gt;
 &lt;p&gt;尝试:&lt;/p&gt;
 &lt;h3 id="lxml"&gt;lxml&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;忒复杂&lt;/span&gt;&lt;span class="o"&gt;!!!&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;忒复杂!!!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="untangle"&gt;untangle&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://github.com/stchris/untangle"&gt;stchris/untangle&lt;/a&gt;&lt;/p&gt;
@@ -577,9 +577,9 @@ IndexError: Unknown key &amp;lt;&lt;strong&gt;getstate&lt;/strong&gt;&amp;gt;&lt
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
         _load_pkl() RUNed~ 7872.95103 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
- &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
-    &lt;span class="n"&gt;re_xmltodict_rdf&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;RUNed&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="mf"&gt;191.21003&lt;/span&gt; &lt;span class="n"&gt;ms&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
+    re_xmltodict_rdf() RUNed~ 191.21003 ms
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;有这么多垃圾!
 24190 vs 3631 !!!!&lt;/p&gt;
@@ -593,8 +593,8 @@ IndexError: Unknown key &amp;lt;&lt;strong&gt;getstate&lt;/strong&gt;&amp;gt;&lt
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
 &lt;open '_chaos="" 'wb'="" 0x10f2376f0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
         exp_level_idx() RUNed~ 17013.92913 ms&lt;/open&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
- &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;clean notes:    11153
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  13037
@@ -609,8 +609,8 @@ _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     13037
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
         _load_pkl() RUNed~ 4292.33599 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
- &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;clean notes:    5506
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  7531
@@ -625,8 +625,8 @@ _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     7531
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
         _load_pkl() RUNed~ 3115.18502 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
- &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;clean notes:    2616
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  4915
@@ -641,8 +641,8 @@ _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     4915
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
         _load_pkl() RUNed~ 2528.49293 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
- &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;clean notes:    1045
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3870
@@ -657,8 +657,8 @@ _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3870
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
         _load_pkl() RUNed~ 2422.85681 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
- &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;clean notes:    286
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3584
@@ -673,8 +673,8 @@ _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3584
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
         _load_pkl() RUNed~ 2225.17014 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
- &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;clean notes:    10
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3574
@@ -689,8 +689,8 @@ _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3574
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
         _load_pkl() RUNed~ 2317.77310 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nl"&gt;_RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;6926&lt;/span&gt;
- &lt;span class="nl"&gt;RIGHT_NODES:&lt;/span&gt; &lt;span class="mi"&gt;3631&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
+ RIGHT_NODES: 3631
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;clean notes:    0
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3574
@@ -753,10 +753,10 @@ ValueError: invalid literal for int() with base 10: ’\x1b[1m\x1b[34m200412141
 &lt;h2 id="_2"&gt;探索&lt;/h2&gt;
 &lt;p&gt;正如,Python 所有领域的自学,有一个稳定,随时有反馈的环境是最重要的…&lt;/p&gt;
 &lt;p&gt;但是,作者的话,真心不能都相信哪!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="err"&gt;如果你恰好使用&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mf"&gt;3.2&lt;/span&gt; &lt;span class="err"&gt;大部分示例是可以完整运行的&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
-&lt;span class="n"&gt;&lt;span class="caps"&gt;MAC&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;OS&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="err"&gt;环境推荐安装&lt;/span&gt; &lt;span class="n"&gt;epd_free&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;7.3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;macosx&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i386&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dmg&lt;/span&gt;
-&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;...如果你恰好使用 Python 3.2 大部分示例是可以完整运行的
+...
+MAC OS X 环境推荐安装 epd_free-7.3-2-macosx-i386.dmg
+...
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;于是…&lt;/p&gt;
 &lt;h3 id="pyenv"&gt;pyenv&lt;/h3&gt;
@@ -794,8 +794,8 @@ export &lt;span class="caps"&gt;PATH&lt;/span&gt;
 &lt;p&gt;而且是按照系统框架来安装到 &lt;code&gt;/Library/Frameworks/Python.framework&lt;/code&gt; 的
 可是, Mavericks 以后,没有默认Python 了哪,俺已经同时用 &lt;code&gt;brew&lt;/code&gt; 管理系统 Python,
 &lt;code&gt;pyenv&lt;/code&gt; 管理开发 Python ,先不说体积:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Frameworks&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Versions&lt;/span&gt;
-&lt;span class="mi"&gt;425&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;    &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Frameworks&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Versions&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;du -hs /Library/Frameworks/Python.framework/Versions
+425M    /Library/Frameworks/Python.framework/Versions
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;居然第一个案例就跑不起来!&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;import pandas&lt;/code&gt; 有报错…&lt;/p&gt;
@@ -805,17 +805,17 @@ export &lt;span class="caps"&gt;PATH&lt;/span&gt;
 体积也从 74M 爆涨为 &lt;code&gt;235Mb&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;不过,是一派标准的 &lt;span class="caps"&gt;MAC&lt;/span&gt; 软件包了,非常流畅,也有&lt;span class="caps"&gt;GUI&lt;/span&gt; 的引导界面,&lt;/p&gt;
 &lt;p&gt;然后 &lt;code&gt;~/.bash_profile&lt;/code&gt; 追加的是:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Added by Canopy installer on 2014-06-03&lt;/span&gt;
-&lt;span class="cp"&gt;# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1&lt;/span&gt;
-&lt;span class="n"&gt;VIRTUAL_ENV_DISABLE_PROMPT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="err"&gt;\&lt;/span&gt; 
-&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Enthought&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Canopy_64bit&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# Added by Canopy installer on 2014-06-03
+# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
+VIRTUAL_ENV_DISABLE_PROMPT=1 source \ 
+/Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;那就简单了,使用标准的 &lt;code&gt;VirtualEnv&lt;/code&gt; 来包装的话,就不用将系统Python 环境永久性的迁移为
 &lt;code&gt;Canopy&lt;/code&gt; 的了,&lt;/p&gt;
 &lt;p&gt;简单的 在 &lt;code&gt;~/.bashrc&lt;/code&gt; 定义一个别称:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Added by Canopy installer on 2014-06-03&lt;/span&gt;
-&lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="n"&gt;canopy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"source \&lt;/span&gt;
-&lt;span class="s"&gt;/Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# Added by Canopy installer on 2014-06-03
+alias canopy="source \
+/Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate"
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;随时调用 &lt;code&gt;canopy&lt;/code&gt; 就可以进入了..&lt;/p&gt;
 &lt;h2 id="_3"&gt;结论&lt;/h2&gt;
@@ -886,40 +886,40 @@ easy_install path.py
 The latest release is always updated to the Python Package Index. The source code is hosted on&amp;nbsp;Github.&lt;/p&gt;
 &lt;h2 id="finding-the-number-of-files-in-a-directory"&gt;Finding the number of files in a&amp;nbsp;directory:&lt;/h2&gt;
 &lt;p&gt;So our first task is to find the number of files present in a directory. In this example we will not iterate over subdirectories instead we will just count the number of files present in the top level directory. This one is simple. Here is my&amp;nbsp;solution:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
 &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
-&lt;span class="cp"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
-&lt;span class="n"&gt;num_files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="c"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;span class="n"&gt;num_files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 
-&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;num_files&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;num_files&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;In this script we first of all imported the path module. Then we set the num_file variable to 0. This variable is going to keep count for the number of files in our directory. Then we call the path function with a directory name. Firthermore we iterate over the files present in the root of our directory and increment the num_files variable. Finally we print the value of num_files variable. Here is a litle bit modified version of this script which outputs the number of subdirectories present in the root of our&amp;nbsp;directory.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
 &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
-&lt;span class="cp"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
-&lt;span class="n"&gt;num_dirs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirs&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="c"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;span class="n"&gt;num_dirs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirs&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 
-&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;num_dirs&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;num_dirs&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2 id="finding-the-number-of-files-recursively-in-a-directory"&gt;Finding the number of files recursively in a&amp;nbsp;directory:&lt;/h2&gt;
 &lt;p&gt;That was easy! Wasn’t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&amp;nbsp;Python.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
 &lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="n"&gt;dir_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="cp"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="c"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
         &lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-    &lt;span class="n"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isdir&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isdir&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
         &lt;span class="n"&gt;dir_count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-    &lt;span class="nl"&gt;else:&lt;/span&gt;
-        &lt;span class="n"&gt;pass&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;pass&lt;/span&gt;
     &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -927,30 +927,30 @@ The latest release is always updated to the Python Package Index. The source cod
 &lt;p&gt;print &amp;#8220;Total number of files == {0}&amp;#8221;.format(file_count)
 print &amp;#8220;Total number of directories == {0}&amp;#8221;.format(dir_count)
 That was again very easy. Now what if we want to pretty print the directory names? I know there are some terminal one-liners but here we are talking about Python only. Lets see how we can achieve&amp;nbsp;that.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;files_loc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
-&lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;dir_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;()].&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-        &lt;span class="nl"&gt;else:&lt;/span&gt;
-            &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;()]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
-            &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;()].&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-        &lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-    &lt;span class="n"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isdir&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;dir_count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-    &lt;span class="nl"&gt;else:&lt;/span&gt;
-        &lt;span class="n"&gt;pass&lt;/span&gt;
-    &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;files_loc = {}
+file_count = 0
+dir_count = 0
+total = 0
+for i in d.walk():
+    if i.isfile():
+        if i.dirname().basename() in files_loc:
+            files_loc[i.dirname().basename()].append(i.basename())
+        else:
+            files_loc[i.dirname().basename()] = []
+            files_loc[i.dirname().basename()].append(i.basename())
+        file_count += 1
+    elif i.isdir():
+        dir_count += 1
+    else:
+        pass
+    total += 1
 
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;|---&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;files_loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;|   |&amp;quot;&lt;/span&gt;
-        &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;|   `---&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
-    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;|&amp;quot;&lt;/span&gt;
+for i in files_loc:
+    print &amp;quot;|---&amp;quot;+i
+    for i in files_loc[i]:
+        print &amp;quot;|   |&amp;quot;
+        print &amp;quot;|   `---&amp;quot;+i
+    print &amp;quot;|&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -967,13 +967,13 @@ d =&amp;nbsp;path(&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;)&lt;/p&gt;
 In the above script I did not implement any logging and error handling. That is left as an exercise for the&amp;nbsp;reader.&lt;/p&gt;
 &lt;h2 id="deleting-files-based-on-their-extension"&gt;Deleting files based on their&amp;nbsp;extension&lt;/h2&gt;
 &lt;p&gt;Just suppose you want to remove all the ‘.pyc’ files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in&amp;nbsp;path.py.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
 &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walkfiles&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*.pyc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Removed {} file&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;also&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;which&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;deleted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walkfiles&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*.pyc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nb"&gt;file&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Removed {} file&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;also&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="nb"&gt;file&lt;/span&gt; &lt;span class="n"&gt;which&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;deleted&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -981,37 +981,37 @@ In the above script I did not implement any logging and error handling. That is 
 &lt;p&gt;So another interesting scenario. What if we want to delete those files which exceed 5Mb&amp;nbsp;size?&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;NOTE:&lt;/code&gt; There is a difference between Mb and &lt;span class="caps"&gt;MB&lt;/span&gt;. I will be covering Mb here. 
 Is it possible with path.py? Yes it is! So here is a script which does this&amp;nbsp;work:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;del_size&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4522420&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;del_size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="mi"&gt;4522420&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;approximately&lt;/span&gt; &lt;span class="n"&gt;equal&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="mf"&gt;4.1&lt;/span&gt;&lt;span class="n"&gt;Mb&lt;/span&gt;
-        &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;Change&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;desired&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;
-            &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;d = path(&amp;#39;./&amp;#39;)
+del_size = 4522420
+for i in d.walk():
+    if i.isfile():
+        if i.size &amp;gt; del_size:
+        #4522420 is approximately equal to 4.1Mb
+        #Change it to your desired size
+            i.remove()
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;So we saw how we can remove files based on their&amp;nbsp;size.&lt;/p&gt;
 &lt;h2 id="deleting-files-based-on-their-last-access-time"&gt;Deleting files based on their last access&amp;nbsp;time&lt;/h2&gt;
 &lt;p&gt;In this part we will take a look on how to delete files based on their last access time. I have written the code below to achieve this target. Just change the number of days to anything you like. This script will remove the files which were last modified before the &lt;span class="caps"&gt;DAYS&lt;/span&gt;&amp;nbsp;variable.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
-&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
 
-&lt;span class="cp"&gt;#Change the &lt;span class="caps"&gt;DAYS&lt;/span&gt; to your liking&lt;/span&gt;
+&lt;span class="c"&gt;#Change the &lt;span class="caps"&gt;DAYS&lt;/span&gt; to your liking&lt;/span&gt;
 &lt;span class="n"&gt;&lt;span class="caps"&gt;DAYS&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
 &lt;span class="n"&gt;removed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="cp"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
-&lt;span class="n"&gt;time_in_secs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DAYS&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;span class="n"&gt;time_in_secs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DAYS&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mtime&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;time_in_secs&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mtime&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;time_in_secs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
             &lt;span class="n"&gt;removed&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 
-&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;removed&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;removed&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1026,8 +1026,8 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;h1 id="letter-to-a-young-programmer"&gt;&lt;a href="http://neopythonic.blogspot.ca/2013/10/letter-to-young-programmer.html"&gt;Letter to a young&amp;nbsp;programmer&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Dear (insert name&amp;nbsp;here),&lt;/p&gt;
 &lt;p&gt;I heard you enjoy a certain programming language named Python. Programming is a wonderful activity. I am a little jealous that you have access to computers at your age; when I grew up I didn’t even know what a computer was! I was an electronics hobbyist though, and my big dream was to build my own electronic calculator from discrete components. I never did do that, but I did build several digital clocks, and it was amazing to build something that complex and see it work. I hope you dream big too — programmers can make computers (and robots!) do amazing things, and this is a great time to become a programmer. Just imagine how much faster computers will be in five or ten years, and what you will be able to do with your skills&amp;nbsp;then!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;—&lt;/span&gt;&lt;span class="n"&gt;Guido&lt;/span&gt; &lt;span class="n"&gt;van&lt;/span&gt; &lt;span class="n"&gt;Rossum&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inventor&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;&lt;span class="caps"&gt;THURSDAY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;OCTOBER&lt;/span&gt;&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2013&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;—Guido van Rossum (inventor of Python)
+THURSDAY, OCTOBER 24, 2013
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1041,22 +1041,22 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;亲&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;亲:
 
-&lt;span class="err"&gt;目测你正在享受一种叫&lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="err"&gt;的编程语言&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="err"&gt;编程是种美妙的体验&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="err"&gt;俺很有点羡慕嫉妒恨你们&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="err"&gt;在这个年龄就能接触电脑&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="err"&gt;俺那会儿子&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;甚至不知道什么是计算机&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
-&lt;span class="err"&gt;俺算一个电子爱好者&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;那时&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;最大的梦想是&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;亲手完成一个计算元件&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="err"&gt;俺从未作到这点&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="err"&gt;不过&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;倒是完成了几件数字时钟&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="err"&gt;每当见到如此复杂的东西&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;终于能工作时&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;哗&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="err"&gt;那种感觉&lt;/span&gt;&lt;span class="p"&gt;,,,&lt;/span&gt;
-&lt;span class="err"&gt;俺期望你的梦想也足够大&lt;/span&gt; &lt;span class="err"&gt;—&lt;/span&gt;
-&lt;span class="err"&gt;程序可以控制计算机&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;机械人&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;做出令人惊叹的事儿&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="err"&gt;这是个令程序员伟大的时代&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="err"&gt;现在就设想&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="err"&gt;到&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="err"&gt;年后&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;能运用你的功能操作更快的计算机作到什么&lt;/span&gt;&lt;span class="o"&gt;?!&lt;/span&gt;
+目测你正在享受一种叫Python 的编程语言.
+编程是种美妙的体验.
+俺很有点羡慕嫉妒恨你们 !在这个年龄就能接触电脑.
+俺那会儿子,甚至不知道什么是计算机!
+俺算一个电子爱好者,那时,最大的梦想是,亲手完成一个计算元件.
+俺从未作到这点.
+不过,倒是完成了几件数字时钟,
+每当见到如此复杂的东西,终于能工作时,哗! 那种感觉,,,
+俺期望你的梦想也足够大 —
+程序可以控制计算机(机械人)做出令人惊叹的事儿,
+这是个令程序员伟大的时代.
+现在就设想,5到10年后,能运用你的功能操作更快的计算机作到什么?!
 
-&lt;span class="err"&gt;哗…&lt;/span&gt;
+哗…
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1085,12 +1085,12 @@ The ideas behind Sherlock really ought to be part of Python’s logging framewor
 &lt;p&gt;I worked (from home) for about a year for a company called Tuple in Ballard, Washington. I wrote (in C) a very fast optimizing C compiler, assembler, linker and unix-like file system for them. See the &lt;span class="caps"&gt;CC2&lt;/span&gt; stuff at:&amp;nbsp;https://sourceforge.net/projects/leo/files/Miscellaneous/&lt;span class="caps"&gt;CC2&lt;/span&gt;%20and%20Psyco/&lt;/p&gt;
 &lt;p&gt;This was before the days of unit tests! At that time, having the compiler compile itself was pretty much how testing was&amp;nbsp;done!&lt;/p&gt;
 &lt;p&gt;I’ve been a fan of Donald Knuth ever since graduate school. I studied his books about&amp;nbsp;TeX:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;TeXbook&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Reading&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Massachusetts&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1984&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;483&lt;/span&gt;&lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
-&lt;span class="n"&gt;&lt;span class="caps"&gt;ISBN&lt;/span&gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13447&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Volume A, The TeXbook (Reading, Massachusetts: Addison-Wesley, 1984), x+483pp. 
+ISBN 0-201-13447-0
 
-&lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TeX&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;Program&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Reading&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Massachusetts&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1986&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;xviii&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;600&lt;/span&gt;&lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;ISBN&lt;/span&gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13437&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+Volume B, TeX: The Program (Reading, Massachusetts: Addison-Wesley, 1986), xviii+600pp. ISBN 0-201-13437-3
 
-&lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;written&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Pascal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;organized&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;Knuth&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;WEB&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;studied&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;WEB&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;intensely&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+Volume B is written in Pascal(!) and organized (if you can call it that) using Knuth’s WEB system. I studied WEB intensely.
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1129,9 +1129,9 @@ I enjoy painting. About 20 years ago I received a black belt in&amp;nbsp;karate.
 Sherlock背后的想法的确出自Python&amp;nbsp;的日志框架.分级的日志绝对比苍白的命名式日志要好用的多.&lt;/p&gt;
 &lt;p&gt;俺为华盛顿一家名为”Tuple in Ballard”的公司&lt;span class="caps"&gt;SOHO&lt;/span&gt; 了一年, 写(用C)了些很快的编译器,汇编器,链接器,以及 Unix样的文件系统.参考 &lt;span class="caps"&gt;CC2&lt;/span&gt;: https://sourceforge.net/projects/leo/files/Miscellaneous/&lt;span class="caps"&gt;CC2&lt;/span&gt;%20and%20Psyco/&amp;nbsp;这儿是几天前的集成测试结果!当时,编译过编译器自身比跑通测试重要的多.&lt;/p&gt;
 &lt;p&gt;毕业以来,俺一直是高纳德的粉丝. 学习过他有关TeX&amp;nbsp;的书.包括:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;卷&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="n"&gt;TeXbook&lt;/span&gt;&lt;span class="err"&gt;（阅读，马萨诸塞州：&lt;/span&gt;&lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="err"&gt;出版社，&lt;/span&gt;&lt;span class="mi"&gt;1984&lt;/span&gt;&lt;span class="err"&gt;），&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;483&lt;/span&gt;&lt;span class="err"&gt;页。&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;ISBN0&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13447&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;卷A，TeXbook（阅读，马萨诸塞州：Addison-Wesley出版社，1984），X+483页。 ISBN0-201-13447-0
 
-&lt;span class="err"&gt;卷&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;TEX&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;程序（阅读，马萨诸塞州：&lt;/span&gt;&lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="err"&gt;出版社，&lt;/span&gt;&lt;span class="mi"&gt;1986&lt;/span&gt;&lt;span class="err"&gt;），&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;600&lt;/span&gt;&lt;span class="err"&gt;页。&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;ISBN0&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13437&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+卷B, TEX:程序（阅读，马萨诸塞州：Addison-Wesley出版社，1986），18+600页。 ISBN0-201-13437-3
 &lt;/pre&gt;&lt;/div&gt;
 
 

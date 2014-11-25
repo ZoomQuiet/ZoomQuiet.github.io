@@ -15,7 +15,7 @@
 &lt;a href="http://xiaolai.github.io/alpha/on-learning/"&gt;学习学习再学习 - xiaolai&lt;/a&gt; 提出的,俺实在无法同意更多..&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Impossible_staircase" src="http://upload.wikimedia.org/wikipedia/commons/3/34/Impossible_staircase.svg"/&gt;&lt;/p&gt;
 &lt;p&gt;这是最难的知识结构——它往往看起来跟线性结构没什么区别，但，最终令人迷惑，甚至懊恼。 用最直白的话来描述，就是：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;初级的知识需要对高级知识深入了解才能真正深入了解&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;初级的知识需要对高级知识深入了解才能真正深入了解
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;——你看看这句话多拗口就多少有点概念了。&lt;/p&gt;
 &lt;p&gt;所以,还是按照 easy 模式来, 先简单的说,再往死里说折腾的技术细节…&lt;/p&gt;
@@ -198,7 +198,7 @@ Python 世界中大堆静态网站发布工具中的一个,
 &lt;p&gt;即好!&lt;/p&gt;
 &lt;h3 id="toc"&gt;&lt;span class="caps"&gt;TOC&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;是的,以往 rST/t2t 时,甚至于 Word 时都有的 &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;TOC&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="err"&gt;章节索引&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;TOC ~ 章节索引
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;肿么可以没有?!&lt;/p&gt;
 &lt;p&gt;果断: &lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/extract_toc"&gt;pelican-plugins/extract_toc at master · getpelican/pelican-plugins&lt;/a&gt; &lt;/p&gt;

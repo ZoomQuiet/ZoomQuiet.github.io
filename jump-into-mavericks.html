@@ -198,33 +198,33 @@ Qt 当然从来也没有内置过. 所以,</p>
   pypy221chaos
 </pre></div>
 <p>主要遇到的问题是:</p>
-<div class="highlight"><pre><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">python3</span>
-<span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">http</span><span class="o">:</span><span class="c1">//python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2</span>
-<span class="cp">######################################################################## 100.0%</span>
-<span class="o">==&gt;</span> <span class="p">.</span><span class="o">/</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">ipv6</span> <span class="o">--</span><span class="n">datarootdir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span><span class="o">/</span><span class="n">share</span> <span class="o">--</span><span class="n">datadir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">lo</span>
-<span class="o">==&gt;</span> <span class="n">make</span>
-<span class="o">==&gt;</span> <span class="n">make</span> <span class="n">install</span> <span class="n"><span class="caps">PYTHONAPPSDIR</span></span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span>
-<span class="o">==&gt;</span> <span class="n">make</span> <span class="n">frameworkinstallextras</span> <span class="n"><span class="caps">PYTHONAPPSDIR</span></span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">python3</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n"><span class="caps">PYTHONVERBOSE</span></span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
+<div class="highlight"><pre>==&gt; Installing python3
+==&gt; Downloading http://python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2
+######################################################################## 100.0%
+==&gt; ./configure --prefix=/usr/local/Cellar/python3/3.3.3 --enable-ipv6 --datarootdir=/usr/local/Cellar/python3/3.3.3/share --datadir=/usr/lo
+==&gt; make
+==&gt; make install PYTHONAPPSDIR=/usr/local/Cellar/python3/3.3.3
+==&gt; make frameworkinstallextras PYTHONAPPSDIR=/usr/local/Cellar/python3/3.3.3/share/python3
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
 </pre></div>
 <p>指定具体版本,尝试,直到可以顺利安装出可用的就好.</p>
 <p>严正表扬一下 ‘Yamashita, Yuu`</p>
@@ -258,42 +258,42 @@ Determining the layout of your Qt installation...
 <span class="nb">alias </span><span class="nv">leolanch</span><span class="o">=</span><span class="s2">"python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"</span>
 </pre></div>
 <h2 id="sshfs">伟光大的 sshfs</h2>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="n">fuse4x</span>
-<span class="n">Linking</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="p">...</span> <span class="n">Warning</span><span class="o">:</span> <span class="n">Could</span> <span class="n">not</span> <span class="n">link</span> <span class="n">fuse4x</span><span class="p">.</span> <span class="n">Unlinking</span><span class="p">...</span>
+<div class="highlight"><pre><span class="nv">$ </span>brew link fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2... Warning: Could not link fuse4x. Unlinking...
 
-<span class="nl">Error:</span> <span class="n">Could</span> <span class="n">not</span> <span class="n">symlink</span> <span class="n">file</span><span class="o">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span><span class="o">/</span><span class="n">fuse</span><span class="p">.</span><span class="n">pc</span>
-<span class="n">Target</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span><span class="o">/</span><span class="n">fuse</span><span class="p">.</span><span class="n">pc</span> <span class="n">already</span> <span class="n">exists</span><span class="p">.</span> <span class="n">You</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">it</span><span class="p">.</span>
-<span class="n">To</span> <span class="n">force</span> <span class="n">the</span> <span class="n">link</span> <span class="n">and</span> <span class="n">overwrite</span> <span class="n">all</span> <span class="n">other</span> <span class="n">conflicting</span> <span class="n">files</span><span class="p">,</span> <span class="k">do</span><span class="o">:</span>
-  <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">formula_name</span>
+Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
+Target /usr/local/lib/pkgconfig/fuse.pc already exists. You may need to delete it.
+To force the link and overwrite all other conflicting files, <span class="k">do</span>:
+  brew link --overwrite formula_name
 
-<span class="n">To</span> <span class="n">list</span> <span class="n">all</span> <span class="n">files</span> <span class="n">that</span> <span class="n">would</span> <span class="n">be</span> <span class="n">deleted</span><span class="o">:</span>
-  <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="o">--</span><span class="n">dry</span><span class="o">-</span><span class="n">run</span> <span class="n">formula_name</span>
+To list all files that would be deleted:
+  brew link --overwrite --dry-run formula_name
 
-<span class="n">zoomq</span> <span class="err">@</span> <span class="n"><span class="caps">MBP111216ZQ</span></span> <span class="n">in</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span>
-<span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">fuse4x</span>
-<span class="n">Linking</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="p">...</span> <span class="mi">7</span> <span class="n">symlinks</span> <span class="n">created</span>
+zoomq @ <span class="caps">MBP111216ZQ</span> in /usr/local/lib
+<span class="nv">$ </span>brew link --overwrite fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2... <span class="m">7</span> symlinks created
 
 
-<span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">osxfuse</span>
-<span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="o">:</span><span class="c1">//downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz</span>
-<span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">osxfuse</span><span class="o">-</span><span class="mf">2.6.2</span><span class="p">.</span><span class="n">mavericks</span><span class="p">.</span><span class="n">bottle</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
-<span class="o">==&gt;</span> <span class="n">Caveats</span>
-<span class="n">If</span> <span class="n">upgrading</span> <span class="n">from</span> <span class="n">a</span> <span class="n">previous</span> <span class="n">version</span> <span class="n">of</span> <span class="n">osxfuse</span><span class="p">,</span> <span class="n">the</span> <span class="n">previous</span> <span class="n">kernel</span> <span class="n">extension</span>
-<span class="n">will</span> <span class="n">need</span> <span class="n">to</span> <span class="n">be</span> <span class="n">unloaded</span> <span class="n">before</span> <span class="n">installing</span> <span class="n">the</span> <span class="n">new</span> <span class="n">version</span><span class="p">.</span> <span class="n">First</span><span class="p">,</span> <span class="n">check</span> <span class="n">that</span>
-<span class="n">no</span> <span class="n"><span class="caps">FUSE</span></span><span class="o">-</span><span class="n">based</span> <span class="n">file</span> <span class="n">systems</span> <span class="n">are</span> <span class="n">running</span><span class="o">:</span>
+<span class="nv">$ </span>brew install <span class="nv">osxfuse</span>
+<span class="o">==</span>&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz
+<span class="o">==</span>&gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
+<span class="o">==</span>&gt; Caveats
+If upgrading from a previous version of osxfuse, the previous kernel extension
+will need to be unloaded before installing the new version. First, check that
+no <span class="caps">FUSE</span>-based file systems are running:
 
-  <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">osxfusefs</span>
+  mount -t osxfusefs
 
-<span class="n">Unmount</span> <span class="n">all</span> <span class="n"><span class="caps">FUSE</span></span> <span class="n">file</span> <span class="n">systems</span> <span class="n">and</span> <span class="n">then</span> <span class="n">unload</span> <span class="n">the</span> <span class="n">kernel</span> <span class="n">extension</span><span class="o">:</span>
+Unmount all <span class="caps">FUSE</span> file systems and <span class="k">then</span> unload the kernel extension:
 
-  <span class="n">sudo</span> <span class="n">kextunload</span> <span class="o">-</span><span class="n">b</span> <span class="n">com</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">osxfuse</span><span class="p">.</span><span class="n">filesystems</span><span class="p">.</span><span class="n">osxfusefs</span>
+  sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs
 
-<span class="n">The</span> <span class="n">new</span> <span class="n">osxfuse</span> <span class="n">file</span> <span class="n">system</span> <span class="n">bundle</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">be</span> <span class="n">installed</span> <span class="n">by</span> <span class="n">the</span> <span class="n">root</span> <span class="n">user</span><span class="o">:</span>
+The new osxfuse file system bundle needs to be installed by the root user:
 
-  <span class="n">sudo</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cp</span> <span class="o">-</span><span class="n">RfX</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="mf">2.6.2</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="p">.</span><span class="n">fs</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span>
-  <span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">s</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="p">.</span><span class="n">fs</span><span class="o">/</span><span class="n">Support</span><span class="o">/</span><span class="n">load_osxfusefs</span>
-<span class="o">==&gt;</span> <span class="n">Summary</span>
-<span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="mf">2.6.2</span><span class="o">:</span> <span class="mi">84</span> <span class="n">files</span><span class="p">,</span> <span class="mf">5.0</span><span class="n">M</span>
+  sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.2/Library/Filesystems/osxfusefs.fs /Library/Filesystems
+  sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+<span class="o">==</span>&gt; Summary
+🍺  /usr/local/Cellar/osxfuse/2.6.2: <span class="m">84</span> files, 5.0M
 </pre></div>
 <p>具体哪个管用,俺也没整明白,
 反正,怎么折腾,

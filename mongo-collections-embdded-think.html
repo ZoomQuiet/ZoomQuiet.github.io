@@ -130,7 +130,7 @@
 <p><img alt="mongo" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*cwCnTFQEbcUSy1KvoiIqXg.png" /></p>
 <p>[via]&nbsp;http://fosterelli.co/collections-and-embedded-documents-in-mongodb.html</p>
 <p>When someone is approaching MongoDB from the <span class="caps">SQL</span> world, a very common confusion regarding database structure is when to use embedded documents, and when to create an entirely new collection. This distinction is very important because, although MongoDB is schemaless in nature, whether or not an element of your database is structured as embedded documents or a separate collection will change your code a fair amount. Making this change later on can represent a fair amount of work, so it helps to get this right the first&nbsp;time.</p>
-<p>There is no “right answer” to this question, as it depends entirely on the situation at hand. The natural tendency of people coming from the <span class="caps">SQL</span> world is to stick everything in separate collections, but often this is very unnecessary and will cause serious performance impacts. However, mistakenly placing something within another document may lead to pain further down the&nbsp;road.</p>
+<p>There is no &#8220;right answer&#8221; to this question, as it depends entirely on the situation at hand. The natural tendency of people coming from the <span class="caps">SQL</span> world is to stick everything in separate collections, but often this is very unnecessary and will cause serious performance impacts. However, mistakenly placing something within another document may lead to pain further down the&nbsp;road.</p>
 <p>A set of rules I have found useful is to ask yourself the following&nbsp;questions:</p>
 <ul>
 <li>Does the embedded document relate to one or more other&nbsp;collections?</li>
@@ -156,7 +156,7 @@
 <p>The answer here will often be yes. If you want any sort of student information panel or want to have students enrolled in different classes, then you will often want the student document without needing the context of each&nbsp;class.</p>
 <h4 id="will-you-most-often-need-the-parent-document-without-the-embedded-document_1">Will you most often need the parent document without the embedded&nbsp;document?</h4>
 <p>Probably no for this one. It depends on what operation we are doing most often with the class, but I imagine that when we fetch a class we would likely need at least one student as&nbsp;well.</p>
-<p>Overall, students in a class are probably better suited for a separate collection. It’s important to keep in mind the scope of the problem you are solving with the data, and the operations that will be done most commonly. That said, a student is a very relational piece of data and better fits a separate&nbsp;collection.</p>
+<p>Overall, students in a class are probably better suited for a separate collection. It&#8217;s important to keep in mind the scope of the problem you are solving with the data, and the operations that will be done most commonly. That said, a student is a very relational piece of data and better fits a separate&nbsp;collection.</p>
 <blockquote>
 <blockquote>
 <blockquote>
@@ -164,7 +164,7 @@
 </blockquote>
 </blockquote>
 </blockquote>
-<p>如果刚刚从<span class="caps">SQL</span> 世界进入 MongoDB, 最常见的困惑就是 “嵌入式文档” 以及何时创建新的”集合”?
+<p>如果刚刚从<span class="caps">SQL</span> 世界进入 MongoDB, 最常见的困惑就是 &#8220;嵌入式文档&#8221; 以及何时创建新的&#8221;集合&#8221;?
 这类困惑的根源就是还没有建立起来 MongoDB 的自由结构世界观 ;-)
 <span class="caps">SQL</span> 世界的来客,总是试图先建立起一个完美的关系体系可以兼容以后的所有业务变化, 而&nbsp;Mongo们,则是更加愿意先将已知的数据舒服的收集起来,随着业务的理解,不断的调整结构,同时代码永远可用!</p>
 <p>那么,这里给出俺知道的判定问题:</p>
@@ -177,7 +177,7 @@
 如果回答只有一个为 yes,&nbsp;那么独立集合也应该考虑,但一般不必要了.</p>
 <h2 id="_1">示例</h2>
 <h3 id="blog">blog&nbsp;的评注</h3>
-<p>你可能创建过类似blog 的系统,允许用户创建评注.问题在于你无法确定这堆评注,是存储在文章对象中呢,还是另外创建集合来保存?&nbsp;动用以上问题来考查一下…</p>
+<p>你可能创建过类似blog 的系统,允许用户创建评注.问题在于你无法确定这堆评注,是存储在文章对象中呢,还是另外创建集合来保存?&nbsp;动用以上问题来考查一下&#8230; </p>
 <h4 id="_2">嵌入的文档,同其它集合有一个或以上的关联嘛?</h4>
 <p>首先呢,评注肯定是先同当前文章有关联的. 同时也有很多其它方案, 比如想支持作者可以修订评注.&nbsp;但是,这还不足以今评注分离成独立集合.</p>
 <p>你将总会请求嵌入的文档,而 不需要&nbsp;父文档嘛?</p>

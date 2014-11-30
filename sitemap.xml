@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/index.html</loc>
-<lastmod>2014-11-25T12:47:33-00:00</lastmod>
+<lastmod>2014-11-30T13:01:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2014-11-25T12:47:33-00:00</lastmod>
+<lastmod>2014-11-30T13:01:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2014-11-25T12:47:33-00:00</lastmod>
+<lastmod>2014-11-30T13:01:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2014-11-25T12:47:33-00:00</lastmod>
+<lastmod>2014-11-30T13:01:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -200,6 +200,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html</loc>
+<lastmod>2013-11-26T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/py101-cleanup-script.html</loc>
 <lastmod>2013-11-23T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -354,6 +361,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/tutorial.html</loc>
+<lastmod>2013-11-26T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/press.html</loc>
 <lastmod>2014-08-08T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -384,6 +398,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/tag/ct.html</loc>
 <lastmod>2014-01-27T23:48:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/tag/pythonic.html</loc>
+<lastmod>2013-11-26T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -480,6 +501,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/fw.html</loc>
+<lastmod>2013-11-26T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/python.html</loc>
 <lastmod>2014-07-11T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -566,6 +594,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/tag/cubieboard.html</loc>
 <lastmod>2014-01-27T23:48:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/tag/idioms.html</loc>
+<lastmod>2013-11-26T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

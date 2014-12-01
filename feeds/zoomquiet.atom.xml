@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-11-26T00:00:00+08:00</updated><entry><title>十大早该知道的Python技巧</title><link href="http://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html" rel="alternate"></link><updated>2014-11-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-26:top10-Py-idioms-wish-learned-earlier.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html"&gt;prooffreader plus: Top 10 Python idioms I wish I&amp;#8217;d learned&amp;nbsp;earlier&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-11-27T00:00:00+08:00</updated><entry><title>十大早该知道的Python技巧</title><link href="http://blog.zoomquiet.io/141127-ipynb-into-blog.html" rel="alternate"></link><updated>2014-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-27:141127-ipynb-into-blog.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html"&gt;prooffreader plus: How to quickly turn an IPython notebook into a blog&amp;nbsp;post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;IPython notebooks are great for many things, but they&amp;#8217;re a little awkward to embed in blog post platforms like Blogger, Wordpress, etc. When the nbconvert feature was a standalone command-line tool, there was a blog export template, but that seems to have disappeared now that nbconvert has been folded within&amp;nbsp;IPython.&lt;/p&gt;
+&lt;p&gt;Out of the box, nbconvert just has two html export&amp;nbsp;options:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;--html
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;which includes a lot of &lt;span class="caps"&gt;CSS&lt;/span&gt; that interferes with a blog&amp;#8217;s &lt;span class="caps"&gt;CSS&lt;/span&gt;,&amp;nbsp;and:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;--html --template basic
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;which has no &lt;span class="caps"&gt;CSS&lt;/span&gt; and so pretty much negates the benefit of using an IPython notebook. However, it does have &lt;span class="caps"&gt;CSS&lt;/span&gt; classess in the&amp;nbsp;text.&lt;/p&gt;
+&lt;p&gt;My solution was to whip up a quick &lt;span class="caps"&gt;CSS&lt;/span&gt; stylesheet that could be included in the blog post. It seems to work pretty well; you can have a look&amp;nbsp;at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;an &lt;a href="http://nbviewer.ipython.org/github/Prooffreader/Misc_ipynb/blob/master/top_10_python_idioms.ipynb"&gt;IPython notebook in nbviewer&lt;/a&gt; of a recent blog post of&amp;nbsp;mine&lt;/li&gt;
+&lt;li&gt;the &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html"&gt;blog version&lt;/a&gt; after applying this&amp;nbsp;stylesheet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that, for aesthetic reasons, I removed all&amp;nbsp;the&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;In [1]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;-style tags because of the narrow columns on this blog. Your mileage may&amp;nbsp;vary.&lt;/p&gt;
+&lt;h2 id="1-convert-ipynb-notebook-to-html"&gt;1. Convert .ipynb notebook to&amp;nbsp;&lt;span class="caps"&gt;HTML&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;In the terminal, navigate to the folder containing the .ipynb file and&amp;nbsp;type:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ipython nbconvert --to html --template basic filename.ipynb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="2-paste-html-in-blog"&gt;2. Paste &lt;span class="caps"&gt;HTML&lt;/span&gt; in&amp;nbsp;blog&lt;/h2&gt;
+&lt;p&gt;Note: if you&amp;#8217;re using the Blogger platform, never switch back to the Compose interface after you use the &lt;span class="caps"&gt;HTML&lt;/span&gt; interface, it changes all your&amp;nbsp;tags.&lt;/p&gt;
+&lt;h2 id="3-add-css-to-blog-html"&gt;3. Add &lt;span class="caps"&gt;CSS&lt;/span&gt; to blog&amp;nbsp;&lt;span class="caps"&gt;HTML&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;This seems to reproduce the native syntax highlighting of&amp;nbsp;IPython.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;style&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+.highlight{background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:0em .5em;border-radius: 4px;}
+.k{color: #338822; font-weight: bold;}
+.kn{color: #338822; font-weight: bold;}
+.mi{color: #000000;}
+.o{color: #000000;}
+.ow{color: #&lt;span class="caps"&gt;BA22FF&lt;/span&gt;;  font-weight: bold;}
+.nb{color: #338822;}
+.n{color: #000000;}
+.s{color: #cc2222;}
+.se{color: #cc2222; font-weight: bold;}
+.si{color: #C06688; font-weight: bold;}
+.nn{color: #&lt;span class="caps"&gt;4D00FF&lt;/span&gt;; font-weight: bold;}
+&lt;span class="nt"&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_1"&gt;是也乎&lt;/h2&gt;
+&lt;p&gt;原未 &lt;code&gt;IPy[:] notebook&lt;/code&gt; 天然就内置了这种能力!&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
+&lt;li&gt;131106 pub. &lt;a href="https://medium.com/i-m-h-o/9520fee0b59f"&gt;&lt;span class="caps"&gt;EKR&lt;/span&gt; to Chinese programmer — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Pythonic"></category><category term="FW"></category><category term="ipynb"></category><category term="tutorial"></category></entry><entry><title>十大早该知道的Python技巧</title><link href="http://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html" rel="alternate"></link><updated>2014-11-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-26:top10-Py-idioms-wish-learned-earlier.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html"&gt;prooffreader plus: Top 10 Python idioms I wish I&amp;#8217;d learned&amp;nbsp;earlier&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Top 10 Python idioms I wish I'd learned earlier&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;ve been programming all my life, but never been a programmer. Most of my work was done in Visual Basic because it&amp;#8217;s what I was most comfortable with, plus a smattering of other languages (R, C, JavaScript, etc&amp;#8230; Pascal, Applescript, Hypertext and &lt;span class="caps"&gt;BASIC&lt;/span&gt;, which I learned in 1979, if you go far back enough). A couple of years ago, I decided to use Python exclusively so that I could improve my coding. I ended up re-inventing many wheels &amp;#8212; which I didn&amp;#8217;t mind too much, because I enjoy solving puzzles. But sometimes it&amp;#8217;s good to have a more efficient, Pythonesque approach, and time after time I found myself having &amp;#8220;aha!&amp;#8221; moments, realizing I&amp;#8217;d been doing things the hard, excessively verbose way for no reason. Here is a list of ten Python idioms that would have made my life much easier if I&amp;#8217;d thought to search for them early&amp;nbsp;on.&lt;/p&gt;
 &lt;p&gt;Missing from this list are some idioms such as list comprehensions and lambda functions, which are very Pythonesque and very efficient and very cool, but also very difficult to miss because they&amp;#8217;re mentioned on StackOverflow every other answer! Also ternary x if y else z constructions, decorators and generators, because I don&amp;#8217;t use them very&amp;nbsp;often.&lt;/p&gt;
@@ -270,8 +327,7 @@ print(my_long_text)
 &lt;h2 id="_1"&gt;是也乎&lt;/h2&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
-&lt;li&gt;131106 pub. &lt;a href="https://medium.com/i-m-h-o/9520fee0b59f"&gt;&lt;span class="caps"&gt;EKR&lt;/span&gt; to Chinese programmer — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;141130 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="Pythonic"></category><category term="FW"></category><category term="idioms"></category><category term="tutorial"></category></entry><entry><title>论 Shooter 的关闭</title><link href="http://blog.zoomquiet.io/141122-shotter-death.html" rel="alternate"></link><updated>2014-11-22T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-22:141122-shotter-death.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="529.jpg (175×260)" src="http://m.ms10010.com/image/pic/201205/thumb/529.jpg"/&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;And in the naked light I saw ten thousand people, maybe more. 

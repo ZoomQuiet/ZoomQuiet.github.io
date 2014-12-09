@@ -3,7 +3,8 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title> — Articles de Zoom.Quiet| #是也乎#
+    <title>    141209-leo-literate-programming
+| #是也乎#
 | ZoomQuiet.io    </title>
 
     <!-- Using the latest rendering mode for IE -->
@@ -13,10 +14,10 @@
 
     <!-- Open Graph tags -->
 
-            <meta property="og:type" content="website"/>
-            <meta property="og:title" content=""/>
-            <meta property="og:url" content="http://blog.zoomquiet.io"/>
-            <meta property="og:description" content=""/>
+            <meta property="og:type" content="article"/>
+            <meta property="og:slug" content="141209-leo-literate-programming"/>
+            <meta property="og:url" content="http://blog.zoomquiet.io/141209-leo-literate-programming.html"/>
+            <meta property="og:description" content="熟练使用文学编程（literate programming）是怎样一番体验? - 知乎 然后有人戳了俺… 有关文学化编程 参考:LeoEnvironment 以及相关链接, 有关使用 Leo 进行文学化编程, 参考: - 幻灯: 啄木鸟/CPUG 会课06年度第九次 (built by S5) ; 131101-leo-china - 录音: cpug_2006_07_30_01.ogg + Index of /CPyUG/100716-Leo-LiterateProgramming {gen. by gen4idx.py v13.4.18} - 录像: Leo 创始人 令德华的演讲 - PyConChina2013-Leo-final-v2 俺知道 文学化编程是在 2005 年,开始使用 Leo 尝试进行 文学化编程则是到了 2006 ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -84,123 +85,148 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-9">
-            <article>
-                <h2><a href="http://blog.zoomquiet.io/livin-scrapbook.html">ScrapBook&nbsp;生存指南</a></h2>
-                <div class="summary">
-<p><code>7.7G    ZqFLOSS</code> 复制改进后,为毛多了?!</p>
-<div class="highlight"><pre>zoomq @ MBP111216ZQ in ~/KuaiPan/zScrapBook
-$ du -hs *
-4.0K    7niu-devrel.json
-4.0K    7niu-floss.json
-4.0K    7niu-skm.json
-5.5G    ZqDevRel
-6.4G    ZqFLOSS
-3.5G    ZqSKM
- 9.5M    scraotools_ZqDevRel.pkl
- 14M    scraotools_ZqFLOSS.pkl
-1.6M    scraotools_ZqSKM.pkl
-</pre></div>
-<h2 id="_1">背景</h2>
-<p>很久以前, 俺和大家一样,收集整理网络资源的习惯组织方式是:</p>
-<ul>
-<li>目录 (htm ...</li></ul>
-                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/livin-scrapbook.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">如何基于<span class="caps">CB3</span>构建家庭服务器</a></h2>
-                <div class="summary">
-<p><a href="http://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest 的体验</a>
-之后,总是要一步步完成心目中的 家服务器</p>
-<h1 id="issue">Issue</h1>
-<p>基于<span class="caps">CB3</span>使用 lununtu-server-<span class="caps">VGA</span> 操作系统</p>
-<ul>
-<li>环境:</li>
-<li>.bashrc</li>
-<li>
-<p>.inputrc</p>
-</li>
-<li>
-<p>预装: </p>
-</li>
-<li>sshd</li>
-<li>apt-fast<ul>
-<li><a href="http://www.mattparnell.com/linux/apt-fast/">Index of /linux/apt-fast</a></li>
-</ul>
-</li>
-<li>vim</li>
-<li>mc</li>
-<li>
-<p>…</p>
-</li>
-<li>
-<p>不要: </p>
-</li>
-<li>php</li>
-<li>mysql</li>
-<li>apache</li>
-</ul>
-<h1 id="todo"><span class="caps">TODO</span></h1>
-<p>为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有:</p>
-<ol>
-<li>通过 <span class="caps">USB</span> 挂接 FreeBSD 格式化的 <span class="caps">UFS</span> 分区</li>
-<li>通过板载 <span class="caps">SATA</span> 接口,加装 2.5吋 1T 新硬盘</li>
-<li>安装 Samba 系统 ...</li></ol>
-                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.zoomquiet.io/jump-into-7niu.html">迁出<span class="caps">RTFD</span>.org</a></h2>
-                <div class="summary">
-<h1 id="rtfdorg"><span class="caps">RTFD</span>.org</h1>
-<ul>
-<li>正名 readthedocs.org</li>
-<li>别名儿 <code>RTFD</code>.org</li>
-</ul>
-<p>是一个良心服务, 自动将指定的任何一个仓库中的 Sphinx 工程, 根据提交事件,自动同步,编译,发布.</p>
-<p>完全 0 配置,以及不占用大家的任何网络资源,完全免费!</p>
-<h2 id="_1">原先</h2>
-<p>发现后,高兴的大规模使用中,并配置了 Disqus 等等好物…</p>
-<h2 id="_2">现在</h2>
-<p><img alt="d005a8bd08c1" src="https://f.cloud.github.com/assets/834231/1538179/849551c2-4cdc-11e3-9759-d005a8bd08c1.jpg"/></p>
-<ul>
-<li><a href="https://github.com/rtfd/readthedocs.org/issues/435">Many builds stuck in “triggered” state · Issue #435 · rtfd/readthedocs.org</a></li>
-<li><a href="https://github.com/rtfd/readthedocs.org/issues/592">how stop a build triggered from long time ago with finish ...</a></li></ul>
-                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/jump-into-7niu.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.zoomquiet.io/141209-leo-literate-programming.html">
+                        熟练使用文学编程（literate&nbsp;programming）是怎样一番体验?
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+<!--
+    <span class="label label-default">Date</span>
+-->
+    <span class="published">
+        <i class="icon-calendar"></i>2014-12-09 21:21
+    </span>
 
-        <ul class="pagination">
-                <li class="prev"><a href="http://blog.zoomquiet.io/author/zoomquiet5.html">&laquo;</a>
-                </li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet.html">1</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet2.html">2</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet3.html">3</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet4.html">4</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet5.html">5</a></li>
-                <li class="active"><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet6.html">6</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet7.html">7</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet8.html">8</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet9.html">9</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet10.html">10</a></li>
-                <li class=""><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet11.html">11</a></li>
-                <li class="next"><a
-                        href="http://blog.zoomquiet.io/author/zoomquiet7.html">&raquo;</a></li>
-        </ul>
+<!--
+    <span class="label">By</span>
+    <i class="icon-user"></i>
+    <a href="http://blog.zoomquiet.io/author/zoomquiet.html">Zoom.Quiet</a>
+
+    <span class="label label-default">Category</span>
+    <a href="http://blog.zoomquiet.io/category/imho.html">IMHO</a>
+-->
+
+
+
+
+	<span class="label label-default">Tags</span>
+		<a href="http://blog.zoomquiet.io/tag/dama.html">DAMA</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/pythoneer.html">Pythoneer</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/leo.html">Leo</a>
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+    <div class="toc">
+<ul>
+<li><a href="#_1">有关文学化编程</a></li>
+<li><a href="#_2">总体上</a><ul>
+<li><a href="#_3">随心</a></li>
+<li><a href="#_4">小累</a></li>
+</ul>
+</li>
+<li><a href="#_5">是也乎</a><ul>
+<li><a href="#changlog">Changlog</a></li>
+</ul>
+</li>
+</ul>
+</div>
+                
+<p><img alt="Literate_Programming_book_cover" src="http://upload.wikimedia.org/wikipedia/en/thumb/6/62/Literate_Programming_book_cover.jpg/220px-Literate_Programming_book_cover.jpg"/></p>
+<p><a href="http://www.zhihu.com/question/26978956">熟练使用文学编程（literate programming）是怎样一番体验? - 知乎</a></p>
+<p>然后有人戳了俺…</p>
+<!--more-->
+<h2 id="_1">有关文学化编程</h2>
+<p>参考:<a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">LeoEnvironment</a></p>
+<p>以及相关链接,</p>
+<p>有关使用 Leo 进行文学化编程, 参考:
+- 幻灯: <a href="http://s5.zoomquiet.io/060730-abtLeo">啄木鸟/<span class="caps">CPUG</span> 会课06年度第九次 (built by S5)</a> ; <a href="http://s5.zoomquiet.io/131101-leo-china">131101-leo-china</a>
+- 录音: <a href="http://zoomq.qiniudn.com/CPyUG/060731-bpyug-leo/cpug_2006_07_30_01.ogg">cpug_2006_07_30_01.ogg</a>
+    + <a href="http://zoomq.qiniudn.com/CPyUG/100716-Leo-LiterateProgramming">Index of /CPyUG/100716-Leo-LiterateProgramming {gen. by gen4idx.py v13.4.18}</a>
+- 录像: Leo 创始人 令德华的演讲 
+    - <a href="http://v.youku.com/v_show/id_XNjQ1OTM3MDk2.html">PyConChina2013-Leo-final-v2</a></p>
+<p>俺知道 文学化编程是在 2005 年,开始使用 Leo 尝试进行 文学化编程则是到了 2006 年,
+之后,一直尽可能的使用 Leo 作为主要的编辑/编程环境;
+其它包含 Emacs/Vim 中都有 文学化编程扩展,
+不过, 俺一直没有用起来,所以,俺的体验比较偏激;
+在 Leo 中俺进行过各种语言的编程包含:</p>
+<ul>
+<li>php</li>
+<li>css/js</li>
+<li>xslt</li>
+<li>python</li>
+<li>golang</li>
+<li>…</li>
+</ul>
+<h1 id="_2">总体上</h1>
+<p>对比各种 <span class="caps">IDE</span> 或是 subl 中的编程体验, 简单的说:</p>
+<blockquote>
+<p>随心小累</p>
+</blockquote>
+<h2 id="_3">随心</h2>
+<ul>
+<li>目录/文件/模块/函式/代码块/片段/配置/测试数据…. 一切都在一个界面中可以快速编辑</li>
+<li>保存到哪儿也只是一行声明的事儿</li>
+<li>所有代码的 提纲结构, 就是我对程序的理解, 完全无视所有语法结构,可以任意随手设定</li>
+<li>无论何时回到思考场景,上次对程序的思考进展都以 提纲节点树的形式存在着</li>
+<li>同时, “混出” 的代码又完全干净, 标准的代码文本, 不影响任何环境中的运行</li>
+</ul>
+<h2 id="_4">小累</h2>
+<ul>
+<li>Leo 是 纯 Python 编写的编辑环境, 加载/迁移都有点小麻烦</li>
+<li>而且没有很多现代 <span class="caps">IDE</span> 的各种自动化功能, 就连语法颜色也无法 0配置的完美表达各种语法单元</li>
+<li>最累的是和团队其它成员协同时, 其它人都是线性编辑环境,只有俺是多维表述的 文学化编程</li>
+<li>所以, 有代码修订合并时,俺都要手工合并差异,以免破坏了俺的程序表述结构.</li>
+</ul>
+<h1 id="_5">是也乎</h1>
+<p>其实,无论俺怎么分析/回答/解释,
+都无法替代大家自行去体验,
+文学化编程,
+是真正的将思维对应到代码内在结构上,
+而不是语法结构, 这对程序员而言,是种极大的解放.</p>
+<h2 id="changlog">Changlog</h2>
+<ul>
+<li>141209 受邀回答</li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'blogzoomquietio'; // required: replace example with your forum shortname
+            var disqus_identifier = 'IMHO/14-12-09-141209-leo-literate-programming';
+            var disqus_url = 'http://blog.zoomquiet.io/141209-leo-literate-programming.html';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+
 
     <hr/>
     <sub>

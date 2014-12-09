@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/imho.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-11-22T11:11:11+08:00</updated><entry><title>论 Shooter 的关闭</title><link href="http://blog.zoomquiet.io/141122-shotter-death.html" rel="alternate"></link><updated>2014-11-22T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-22:141122-shotter-death.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/imho.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-12-09T21:21:21+08:00</updated><entry><title>熟练使用文学编程（literate programming）是怎样一番体验?</title><link href="http://blog.zoomquiet.io/141209-leo-literate-programming.html" rel="alternate"></link><updated>2014-12-09T21:21:21+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-09:141209-leo-literate-programming.html</id><summary type="html">
+&lt;p&gt;&lt;img alt="Literate_Programming_book_cover" src="http://upload.wikimedia.org/wikipedia/en/thumb/6/62/Literate_Programming_book_cover.jpg/220px-Literate_Programming_book_cover.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.zhihu.com/question/26978956"&gt;熟练使用文学编程（literate programming）是怎样一番体验? - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后有人戳了俺…&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h2 id="_1"&gt;有关文学化编程&lt;/h2&gt;
+&lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment"&gt;LeoEnvironment&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以及相关链接,&lt;/p&gt;
+&lt;p&gt;有关使用 Leo 进行文学化编程, 参考:
+- 幻灯: &lt;a href="http://s5.zoomquiet.io/060730-abtLeo"&gt;啄木鸟/&lt;span class="caps"&gt;CPUG&lt;/span&gt; 会课06年度第九次 (built by S5)&lt;/a&gt; ; &lt;a href="http://s5.zoomquiet.io/131101-leo-china"&gt;131101-leo-china&lt;/a&gt;
+- 录音: &lt;a href="http://zoomq.qiniudn.com/CPyUG/060731-bpyug-leo/cpug_2006_07_30_01.ogg"&gt;cpug_2006_07_30_01.ogg&lt;/a&gt;
+    + &lt;a href="http://zoomq.qiniudn.com/CPyUG/100716-Leo-LiterateProgramming"&gt;Index of /CPyUG/100716-Leo-LiterateProgramming {gen. by gen4idx.py v13.4.18}&lt;/a&gt;
+- 录像: Leo 创始人 令德华的演讲 
+    - &lt;a href="http://v.youku.com/v_show/id_XNjQ1OTM3MDk2.html"&gt;PyConChina2013-Leo-final-v2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;俺知道 文学化编程是在 2005 年,开始使用 Leo 尝试进行 文学化编程则是到了 2006 年,
+之后,一直尽可能的使用 Leo 作为主要的编辑/编程环境;
+其它包含 Emacs/Vim 中都有 文学化编程扩展,
+不过, 俺一直没有用起来,所以,俺的体验比较偏激;
+在 Leo 中俺进行过各种语言的编程包含:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;php&lt;/li&gt;
+&lt;li&gt;css/js&lt;/li&gt;
+&lt;li&gt;xslt&lt;/li&gt;
+&lt;li&gt;python&lt;/li&gt;
+&lt;li&gt;golang&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="_2"&gt;总体上&lt;/h1&gt;
+&lt;p&gt;对比各种 &lt;span class="caps"&gt;IDE&lt;/span&gt; 或是 subl 中的编程体验, 简单的说:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;随心小累&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="_3"&gt;随心&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;目录/文件/模块/函式/代码块/片段/配置/测试数据…. 一切都在一个界面中可以快速编辑&lt;/li&gt;
+&lt;li&gt;保存到哪儿也只是一行声明的事儿&lt;/li&gt;
+&lt;li&gt;所有代码的 提纲结构, 就是我对程序的理解, 完全无视所有语法结构,可以任意随手设定&lt;/li&gt;
+&lt;li&gt;无论何时回到思考场景,上次对程序的思考进展都以 提纲节点树的形式存在着&lt;/li&gt;
+&lt;li&gt;同时, “混出” 的代码又完全干净, 标准的代码文本, 不影响任何环境中的运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_4"&gt;小累&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Leo 是 纯 Python 编写的编辑环境, 加载/迁移都有点小麻烦&lt;/li&gt;
+&lt;li&gt;而且没有很多现代 &lt;span class="caps"&gt;IDE&lt;/span&gt; 的各种自动化功能, 就连语法颜色也无法 0配置的完美表达各种语法单元&lt;/li&gt;
+&lt;li&gt;最累的是和团队其它成员协同时, 其它人都是线性编辑环境,只有俺是多维表述的 文学化编程&lt;/li&gt;
+&lt;li&gt;所以, 有代码修订合并时,俺都要手工合并差异,以免破坏了俺的程序表述结构.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="_5"&gt;是也乎&lt;/h1&gt;
+&lt;p&gt;其实,无论俺怎么分析/回答/解释,
+都无法替代大家自行去体验,
+文学化编程,
+是真正的将思维对应到代码内在结构上,
+而不是语法结构, 这对程序员而言,是种极大的解放.&lt;/p&gt;
+&lt;h2 id="changlog"&gt;Changlog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;141209 受邀回答&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>论 Shooter 的关闭</title><link href="http://blog.zoomquiet.io/141122-shotter-death.html" rel="alternate"></link><updated>2014-11-22T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-22:141122-shotter-death.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="529.jpg (175×260)" src="http://m.ms10010.com/image/pic/201205/thumb/529.jpg"/&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;And in the naked light I saw ten thousand people, maybe more. 
 People talking without speaking, people hearing without listening. 

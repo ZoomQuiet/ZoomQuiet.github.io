@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-12-09T21:21:21+08:00</updated><entry><title>熟练使用文学编程（literate programming）是怎样一番体验?</title><link href="http://blog.zoomquiet.io/141209-leo-literate-programming.html" rel="alternate"></link><updated>2014-12-09T21:21:21+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-09:141209-leo-literate-programming.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-12-12T12:12:12+08:00</updated><entry><title>论如何艺术的骂人</title><link href="http://blog.zoomquiet.io/141212-hierarchy-of-disagreement.html" rel="alternate"></link><updated>2014-12-12T12:12:12+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:141212-hierarchy-of-disagreement.html</id><summary type="html">
+&lt;p&gt;&lt;img alt="141212-ask-binghe.lisp.jpg（JPEG 图像，1024x650 像素）" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-ask-binghe.lisp.jpg?imageView2/2/w/512"/&gt;&lt;/p&gt;
+&lt;p&gt;人称伞哥的传奇人物: &lt;a href="http://www.ituring.com.cn/article/553"&gt;田春&lt;/a&gt; 怎么应对的呢?…&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;来源: &lt;a href="http://weibo.com/1929185323/BAfMov9Vt?type=comment#_rnd1418287455937"&gt;田春冰河 ‘s Weibo_Weibo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;揭晓答案前, 俺忍不住, 得推荐一下古今中外有关骂人相关的经验了:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ccview.net/htm/xiandai/wen/liangshiqiu009.htm"&gt;梁实秋《骂人的艺术》- 现代散文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.zhixuan.com/toutiao/article/5431"&gt;如何优雅的对待他人的批评 - MacTalk By 池建强&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://phiphicake.blogspot.hk/2012/01/paul-graham.html"&gt;Paul Graham的如何嘴炮 金字塔&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;解读: &lt;a href="http://www.zreading.cn/archives/4137.html"&gt;反驳别人的七个层次 | 左岸读书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;原文: &lt;a href="http://www.paulgraham.com/disagree.html"&gt;How to Disagree&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;再来看 伞哥 的回复:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="141212-answer-binghe.lisp.jpg（JPEG 图像，1024x713 像素）" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-answer-binghe.lisp.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;对比学术化的 “反驳的层级” 分析图谱&lt;/p&gt;
+&lt;p&gt;&lt;img alt="hierarchy_of_disagreement.jpg（JPEG 图像，640x554 像素）" src="http://zoomq.qiniudn.com/ZQCollection/snap/hierarchy_of_disagreement.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;可以清晰的感受到:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用对方的观点来不动声色的转移了论点, 无视了对方的指责&lt;/li&gt;
+&lt;li&gt;并用温润的态度指出:&lt;ul&gt;
+&lt;li&gt;哥现在意大利吖&lt;/li&gt;
+&lt;li&gt;都有能力拯救外国&lt;span class="caps"&gt;MM&lt;/span&gt;了&lt;/li&gt;
+&lt;li&gt;E文翻译这点不算事儿,实在是没时间哪…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;已经是极其自然而又低姿态的站在各种高度, 完美的反驳了对方无法理解的智商&lt;/li&gt;
+&lt;li&gt;达到了 paul氏金字塔的 6.5 级,除了开头第一句,有点怨气外, 几近完美&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_1"&gt;是也乎&lt;/h2&gt;
+&lt;p&gt;所以, 至少俺学习到的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;绝对的实力为基础&lt;/li&gt;
+&lt;li&gt;根本不用反驳各种低层次的东西&lt;/li&gt;
+&lt;li&gt;有事儿说事儿,不冲人去,冲人家灵魂深处去&lt;/li&gt;
+&lt;li&gt;才给力.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="change-log"&gt;Change log&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;141212 有感速发&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>熟练使用文学编程（literate programming）是怎样一番体验?</title><link href="http://blog.zoomquiet.io/141209-leo-literate-programming.html" rel="alternate"></link><updated>2014-12-09T21:21:21+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-09:141209-leo-literate-programming.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="Literate_Programming_book_cover" src="http://upload.wikimedia.org/wikipedia/en/thumb/6/62/Literate_Programming_book_cover.jpg/220px-Literate_Programming_book_cover.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.zhihu.com/question/26978956"&gt;熟练使用文学编程（literate programming）是怎样一番体验? - 知乎&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;然后有人戳了俺…&lt;/p&gt;

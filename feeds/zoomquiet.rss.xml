@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title></title><link>http://blog.zoomquiet.io/</link><description></description><atom:link href="http://blog.zoomquiet.io/feeds/zoomquiet.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 20 Jan 2016 17:42:00 +0800</lastBuildDate><item><title>ZoomQuiet.github.io</title><link>http://blog.zoomquiet.io/logging42pelican.html</link><description>&lt;h1 id="zoomquietgithubio"&gt;ZoomQuiet.github.io&lt;/h1&gt;
-&lt;p&gt;re-build for&amp;nbsp;zoomquiet.io&lt;/p&gt;
-&lt;p&gt;detail&amp;nbsp;in:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/ZoomQuiet/ZoomQuiet.io/blob/master/README.md"&gt;ZoomQuiet.io/&lt;span class="caps"&gt;README&lt;/span&gt;.md at master ·&amp;nbsp;ZoomQuiet/ZoomQuiet.io&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 20 Jan 2016 17:42:00 +0800</pubDate><guid>tag:blog.zoomquiet.io,2016-01-20:logging42pelican.html</guid><category>howto</category><category>pelican</category></item><item><title>jump into SSD with Yoesmite</title><link>http://blog.zoomquiet.io/jump-into-ssd.html</link><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title></title><link>http://blog.zoomquiet.io/</link><description></description><atom:link href="http://blog.zoomquiet.io/feeds/zoomquiet.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 09 Apr 2015 00:00:00 +0800</lastBuildDate><item><title>jump into SSD with Yoesmite</title><link>http://blog.zoomquiet.io/jump-into-ssd.html</link><description>
 &lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
 &lt;h1 id="_2"&gt;新梗&lt;/h1&gt;
 &lt;h2 id="npm"&gt;npm&lt;/h2&gt;

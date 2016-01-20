@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    saying-ggodby-python-zh
+| #是也乎#
+| ZoomQuiet.io    </title>
+
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:slug" content="saying-ggodby-python-zh"/>
+            <meta property="og:url" content="http://blog.zoomquiet.io/saying-ggodby-python-zh.html"/>
+            <meta property="og:description" content="原文: Saying Goodbye To Python This post is long overdue; this isn’t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say goodbye. While ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
+    <link href="http://blog.zoomquiet.io/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://blog.zoomquiet.io/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="http://blog.zoomquiet.io/theme/css/pygments/github.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/style.css" type="text/css"/>
+
+    <!-- add emojify into Pelican 
+    <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/emojify.min.css" type="text/css" />
+    <script src="http://blog.zoomquiet.io/theme/js/emojify.js"></script>
+
+-->
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+        <link href="http://blog.zoomquiet.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title=" ATOM Feed"/>
+
+            <!--
+    { include 'includes/ga.html' }
+            -->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--
+<a href="http://blog.zoomquiet.io" class="navbar-brand"></a>
+            -->
+<a href="http://blog.zoomquiet.io" class="navbar-brand">
+    <img src="http://blog.zoomquiet.io/theme/logo.png"/>
+    
+    <span class="violet-site">.io </span>
+</a>            
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://pychina.org">PyChina</a></li>
+                    <li><a href="http://obp.zoomquiet.io">OBP</a></li>
+              
+                        <li><a href="http://blog.zoomquiet.io/pages/about.html">About</a></li>
+                        <li><a href="http://blog.zoomquiet.io/pages/designing.html">设计</a></li>
+                        <li><a href="http://blog.zoomquiet.io/pages/hello-world.html">你好，世界</a></li>
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
+
+                <li><a href="http://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.zoomquiet.io/saying-ggodby-python-zh.html">
+                        为毛俺不担心所谓Python用户流失
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+<!--
+    <span class="label label-default">Date</span>
+-->
+    <span class="published">
+        <i class="icon-calendar"></i>2015-01-10 00:00
+    </span>
+
+<!--
+    <span class="label">By</span>
+    <i class="icon-user"></i>
+    <a href="http://blog.zoomquiet.io/author/zoomquiet.html">Zoom.Quiet</a>
+
+    <span class="label label-default">Category</span>
+    <a href="http://blog.zoomquiet.io/category/pythonic.html">Pythonic</a>
+-->
+
+
+
+
+	<span class="label label-default">Tags</span>
+		<a href="http://blog.zoomquiet.io/tag/weekly.html">Weekly</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/zh.html">Zh</a>
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+                <p>原文: <a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html">Saying Goodbye&nbsp;To Python</a></p>
+<p>This post is long overdue; this isn’t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&nbsp;goodbye.</p>
+<p>While I had moved on from Python years ago, I felt a certain attachment to it well past then, not quite admitting to myself that I wasn’t coming back. When my proposal for PyCon 2013 was rejected I was frustrated (it was going to be a fun talk!) but for some reason that made me fully realized that I wasn’t part of the Python community&nbsp;anymore.</p>
+<p>Python was the first — and I sometimes wonder if the only — programming community I was part of. Coming to Python was a conscious choice. In college I was interested in Scheme and Smalltalk. High-minded languages with interesting ideas, but hard to find practical uses. Scheme was always too underserved by its libraries and sparse academic community. In contrast Smalltalk was productive — it was built by and for people who loved to build things. (More credit here should probably go to Dan Ingalls than Alan Kay — I can sense in Dan Ingalls’s work a real passion for making things, and a pure but unproductive language would not have satisfied him.) But Smalltalk was and is a world of its own. It was culturally and technically pre-internet, pre-open-source, pre-online-community. And despite all the great things about the Smalltalk environment and language it couldn’t fulfill these then-new potentials, even as it tried to adapt. (I wrote a couple posts about this, intended as a sort of sympathetic explanation of why I couldn’t stick with Smalltalk: Where Smalltalk Went Wrong and a&nbsp;followup.)</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Daniel_Henry_Holmes_Ingalls,_Jr.">Dan&nbsp;Ingalls</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Alan_Kay">Alan&nbsp;Kay</a></li>
+<li><a href="http://www.ianbicking.org/where-smalltalk-went-wrong.html">Where Smalltalk Went&nbsp;Wrong</a></li>
+<li><a href="http://www.ianbicking.org/where-smalltalk-went-wrong-2.html">a&nbsp;followup</a></li>
+</ul>
+<p>At the end of my college career (1999ish) I consciously looked for a new home. I flirted with Perl, C, but knew they weren’t for me. Somewhere along the way I came upon Python, and it was good enough that I didn’t look for anything better. I can’t say I fell in love with Python like I had with Scheme and Smalltalk — Scheme was like an opening up of the world after going far beyond what anyone should ask of <span class="caps">GW</span>-<span class="caps">BASIC</span>, and Squeak/Smalltalk was a deep mysterious world, like coming upon the ruins of an ancient and advanced civilization. Python in comparison was practical — but I wasn’t in the mood at that time to discover, I wanted to&nbsp;build.</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/GW-BASIC"><span class="caps">GW</span> -&nbsp;<span class="caps">BASIC</span></a></li>
+</ul>
+<p>And I built a lot of things in Python. I was doing workaday web programming and my enthusiasm went more towards building tools to build stuff than in the building itself. I did build some cool products in those days, not just libraries, but for some reason it’s only the smaller units that I was able to push out. And I found a community in&nbsp;Python.</p>
+<ul>
+<li><a href="http://www.ianbicking.org/projects.html">built a lot of things in&nbsp;Python</a></li>
+</ul>
+<p>And I built. Back in the days I contributed to Webware, what felt like a completely different generation of web development in Python than today. I wrote SQLObject, my first foray into a oh-shit-people-are-using-this-I’m-not-sure-how-I-feel-about-that library. But SQLObject explored a lot of metaprogramming concepts that were quite novel in the Python world at that time. At the same time maintaining it felt like a terrible burden. It took me far too long to resolve that, and only once interest had died down (in no small part due to my lack of attention) did I hand it over to Oleg who has been a far more steady hand. This would be a pattern I would unfortunately repeat. But if SQLObject helped the next generation be better that’s good enough for&nbsp;me.</p>
+<ul>
+<li><a href="http://www.webwareforpython.org/">Webware</a></li>
+<li><a href="http://sqlobject.org/">SQLObject</a></li>
+<li><a href="http://phdru.name/">Oleg</a></li>
+<li><a href="http://www.sqlalchemy.org/">next&nbsp;generation</a></li>
+</ul>
+<p>Later came <span class="caps">WSGI</span> which excited me with its subtly functional basis. I built a whole web framework toolkit (or a framework for building web frameworks?) in Paste. Few people really understood what I was trying to do with Paste — at times including me. Some people like Ben Bangert were able to see the principles underneath the code, and get them out into the world in the kind of usable state that I intended to enable. (And along the way I sometimes felt like I was doing the same for <span class="caps">PJE</span>.) Python web frameworks were a mess back then; ultimately reaching for the crown using a monolithic approach was a more successful technique than trying to build bridges as I attempted with Paste. I’m still not sure what lesson to take from that. Not a general lesson, but more understanding the landscape. And understanding what you can bring to a problem, and who you can bring with. I feel like I’m only now really understanding the importance of vision combined with a diverse group of skills and perspectives, and I have even more to learn about how to actually assemble and coordinate the right group of people in the right environment to&nbsp;succeed.</p>
+<ul>
+<li><a href="http://wsgi.readthedocs.org/"><span class="caps">WSGI</span></a></li>
+<li><a href="http://pythonpaste.org/">Paste</a></li>
+<li><a href="http://groovie.org/">Ben&nbsp;Bangert</a></li>
+<li><a href="https://www.djangoproject.com/">reaching for the&nbsp;crown</a></li>
+</ul>
+<p>Somewhere around here I feel like I reached my 10,000 hours of Python coding. I wrote WebOb, taking the lessons of Paste and a better intuition for library design. I still think it’s the best mapping of <span class="caps">HTTP</span> to Python. Other libraries include more aspects of web development in their scope, or have better documentation, and more users, but when viewed with a particular lens I’m still very proud of WebOb. And it’s been an important building block in a lot of people’s explorations into building a web framework. Other libraries from this period are lxml.html, smaller things like WebTest, ScriptTest, MiniMock, Tempita, perhaps the over-ambition (or just mis-ambition) of Deliverance. That period felt like a clearing out of my system, unloading a bunch of&nbsp;ideas.</p>
+<ul>
+<li><a href="http://webob.org/">WebOb</a></li>
+<li><a href="http://docs.webob.org/en/latest/do-it-yourself.html">building a web&nbsp;framework</a></li>
+<li><a href="http://lxml.de/lxmlhtml.html">lxml.html</a></li>
+<li><a href="http://webtest.pythonpaste.org/">WebTest</a></li>
+<li><a href="http://pythonpaste.org/scripttest/">ScriptTest</a></li>
+<li><a href="https://pypi.python.org/pypi/MiniMock">MiniMock</a></li>
+<li><a href="http://pythonpaste.org/tempita/">Tempita</a></li>
+<li><a href="http://www.coactivate.org/projects/deliverance/introduction">Deliverance</a></li>
+</ul>
+<p>But for whatever reason my most successful tools were virtualenv and pip. These were never my greatest passions, or even close. They were about: (a) fixing personal annoyances in deployment (virtualenv), and (b) getting people to stop fucking whining about Setuptools and easy_install (pip). I’m not sure whether I blame the uneasy success of these tools on broad appeal, or that they are in a sense user-visible tools and not libraries, or that I didn’t like doing them because no one liked doing them and so there was a vacuum waiting to be&nbsp;filled.</p>
+<ul>
+<li><a href="http://www.virtualenv.org/">virtualenv</a></li>
+<li><a href="http://www.pip-installer.org/">pip</a></li>
+</ul>
+<p>And then my last project, Silver Lining. It was early on in the devops revolution, an attempt to think about what a generic container for web applications might look like. It was in a sense going deeper down the hole of virtualenv and pip, but with an aim to build a full product and not just a set of eclectic tools. No one cared. And I only cared a little — I cared because it was completing some ideas I’d long had about deployment, because for a certain kind of web application development it felt nimble and reliable, because it removed or automated tasks I didn’t like to do. But I didn’t care, no more than I cared about virtualenv or pip. I’d gone down a path that was about code and technical design, but if I stepped back it was&nbsp;unexciting.</p>
+<ul>
+<li><a href="https://bitbucket.org/ianb/silverlining/src">Silver&nbsp;Lining</a></li>
+</ul>
+<p>And when I did step back there wasn’t anything in Python that excited me. Python was doing great, my interest had nothing to jumping on or off bandwagons. Python is doing great — better than ever (minor bumps with versions aside). But I think in my mind I’d always imagined I could build up just the right toolset, and using that toolset create the product I actually wanted to create — what exactly that product was, I don’t know, but with the right tools I imagined I could move fast enough and confidently enough to find&nbsp;it.</p>
+<ul>
+<li><a href="https://plus.google.com/+IanBicking/posts/iEVXdcfXkz7">minor bumps with versions&nbsp;aside</a></li>
+</ul>
+<p>Sometimes when I’m feeling particularly excited about an idea, like really excited, I have to take a break. I need to calm down. Try to wrap my head around the ideas, because I know if I push forward directly that I’ll just muddle things up and feel disappointed. No, I don’t know that is true: maybe I don’t want to have to confront, in that moment, that the idea is not as cool as I think it is, or as possible as I think it is. But often I do step back into the problem, with ideas that are more mature for having thought more deeply about them. In a sense I think creating tools and libraries was a similar process: I felt too excited about creating something great, because I worried I’d muddle everything up, or afraid I just couldn’t pull it off, and so I stepped away and would work on&nbsp;tools.</p>
+<p>I always directed my attention to the web, even if I got bogged down in the server. Somehow I skipped native GUIs, even as a user. But pure data processing without consideration for what you do with the data felt unexciting. And ops — that’s just the worst. I was, and am, a true believer in Free Software; and I was, and am, a true believer in the web. That is, I don’t see either as simply a means to an ends. But not for the same reasons, and I can believe in a web that isn’t open source, and open source that isn’t for the web. And yet writing it down I realize I don’t care about open source that isn’t for the&nbsp;web.</p>
+<p>When I stepped back Python no longer seemed relevant to the web, at least not the part of the web that interested me. The tools I had built were no longer relevant either, they were not the tools with which I could realize my ambitions. The database-backed website, or the dynamic-<span class="caps">HTTP</span>-based web application, templates and deployments, anything you’d call “<span class="caps">REST</span>” — none of it seemed like the future, and whatever this vague thing was that I’d been looking for, I wasn’t going to find it&nbsp;there.</p>
+<p>This wasn’t an actual revelation, I’m constructing it in retrospect. If you’d asked me I would have agreed with this notion even years earlier, and it’s not like I came up with some unique idea, if anything I would call it self-evident, don’t we all know this is where the world is going? And so I started to look towards Javascript and the browser and the&nbsp;<span class="caps">DOM</span>.</p>
+<p>Somewhat before this I also joined Mozilla. But it would be backwards to say that Mozilla induced this change in perspective, that it tempted me away from Python. In fact I would have had a much easier time of it if I had just stuck with doing Python backend stuff at&nbsp;Mozilla.</p>
+<p>The last few years of transition have been a struggle. With Python and the server I knew what I was doing. I was good at it, I felt competent. I could construct an opinion with confidence about all kinds of design questions. I was respected and my opinion would be listened to. I’d put in my 10,000 hours, I had achieved&nbsp;mastery.</p>
+<p>Moving to Javascript none of this was true, and most of it still isn’t true. It might be easier to pull off this change if I was doing web development, surrounded with people making similar transitions, a little fish in the little pond of whatever group I was working with. But Mozilla is not that kind of environment. Which is okay — if I had felt confident it would only be because there was no one to correct&nbsp;me.</p>
+<p>It’s oddly common to see people talk about how a programmer can pick up something new in the matter of a few days or months. To find programmers that consider all that knowledge transferable (for instance). I don’t know what to make of it — my less forgiving self thinks these people have never known what real mastery is. I don’t think it takes another 10,000 hours to get mastery in a new language and environment… but it definitely takes some thousands of hours, some years of hard work. I only now feel like I’m getting&nbsp;close.</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=7204515">for&nbsp;instance</a></li>
+</ul>
+<p>Maybe it’s my perspective on what mastery is. Deciding to do something and then doing it is good. It is not mastery. You have to pick the right problem to solve. You have to pick the right way to solve it. You need to know when to revise that plan, and understand the constraints that inform that revision. You need both large scale and small scale intuitions. And you need to be good enough at all the details of programming in that environment that you don’t get overwhelmed with the “easy” stuff, so you have mental energy to spare on the big stuff. The jump from Python to Javascript isn’t that big, the languages have a very similar shape. And the browser was already the environment focused on. And yet redeveloping my intuition for this new environment has taken&nbsp;time.</p>
+<p>Sadly I’m not going to get back where I was, because Javascript is not Python. If there’s a Javascript community I haven’t found it, or it’s at least not a single entity. There is no community that created Javascript like the Python community created Python. Python comes from the internet in a way Javascript does not; Javascript was built for the internet, but Python was built on the internet. And I do miss the Python community, you’re good&nbsp;people.</p>
+<p>But also whatever language partisanship I had is gone, and won’t come back in the guise of a new favorite language. This shouldn’t be confused with a disinterest in language. I still get as annoyed as ever by “use the right tool for the job” — the bland truism meant to shut down critical discussion and engagement with the tasks and choices in software engineering, replacing it with a weak passionless technical&nbsp;fatalism.</p>
+<p>I suppose it is the platform that I am drawn to now before language. And the browser seems like the most interesting platform, not because it’s novel (though it is, it’s a runtime like few others), but because of how concrete it is, and of course how relevant it is to… anything. And the browser is no longer just the servant of a server, I prefer now to think of the browser as an independent agent, connecting to services instead of servers. Obviously that doesn’t describe a great number of running web sites, but it’s the model I see for the future, and a better perspective for understanding future&nbsp;architectures.</p>
+<p>Still this only addresses which direction I’m looking towards, I still have to walk the path. I don’t want to get caught up in the weeds again, building tools for something I never manage to make. Right now I think I’m on to something in the area of collaboration, first with TogetherJS and now I’m thinking bigger with a new experiment. But while I feel like I’ve reached some competence in executing on these projects, programming is only one piece of bringing forward a larger vision. I still have a lot of learning to do, skills for which I haven’t put in the necessary time. How to recruit support, how to manage the project, how to negotiate between feasibility and user value, how to negotiate compromises in strategy and design. And collaboration itself is a whole domain of expertise. I’ve learned a lot, I can do things, but I am definitely not yet experienced enough to choose to do the right thing in these areas. And at this moment I’m worried I won’t have the room to learn these things, it feels like time is running out just when I’m pulling stuff&nbsp;together.</p>
+<ul>
+<li><a href="https://togetherjs.com/">TogetherJS</a></li>
+<li><a href="http://github.com/mozilla/hotdish">new&nbsp;experiment</a></li>
+</ul>
+<p>Anyway, that’s where I am now. No longer a language partisan, unclear of what community I am even participating in, I am less sure how to identify and self-identify myself. How do I describe myself now? Even as I find my technical footing I am still adrift. And so it’s hard to say goodbye. So instead I’ll say, Pythonistas: until we meet again. Maybe I’ll meet some of you over&nbsp;here.</p>
+<h2 id="changelog">Changelog</h2>
+<ul>
+<li>150112 整理到个人&nbsp;blog</li>
+<li>150110&nbsp;从周刊中发现,决定翻译</li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'blogzoomquietio'; // required: replace example with your forum shortname
+            var disqus_identifier = 'Pythonic/15-01-10-saying-ggodby-python-zh';
+            var disqus_url = 'http://blog.zoomquiet.io/saying-ggodby-python-zh.html';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+
+
+    <hr/>
+    <sub>
+        © Copyright 2014 by Zoom.Quiet 
+        <br/>
+        Content licensed under the Creative Commons 
+        <b>attribution-noncommercial-sharealike</b> License.
+        <br/>
+        Contact me via 
+        , <code><a href="mailto:i@zoomquiet.io">mail</a> 
+            </code>
+        ,<code><a href="http://github.com/ZoomQuiet">github</a>
+            </code>
+        or
+        <code><a href="http://bitbucket.org/ZoomQuiet">bitbucket</a>
+            </code>.
+        Tip me via 
+        <code><a href="https://www.gittip.com/ZoomQuiet/">gittip</a>
+            </code>.
+        <a href="http://blog.zoomquiet.io/feeds/all.atom.xml">(feed)</a>
+    </sub>
+
+
+        </div>
+
+        <div class="col-lg-3 well well-sm" id="sidebar">
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧文-sign icon-large"></i>旧文
+                    </a></li>
+                    <li class="list-group-item"><a href="http://ZoomQuiet.io"><i
+                            class="icon-.io-sign icon-large"></i>.io
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
+                            class="icon-Wiki-sign icon-large"></i>Wiki
+                    </a></li>
+                    <li class="list-group-item"><a href="http://code.google.com/p/openbookproject/"><i
+                            class="icon-O.B.P-sign icon-large"></i>O.B.P
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weekly.pychina.org/"><i
+                            class="icon-Weekly-sign icon-large"></i>Weekly
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
+
+            <li class="list-group-item"><h4>
+                <i class="icon-th icon-large"></i>Categories</h4></li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/_extra.html">
+                        <i class="icon-folder-open icon-large"></i>_extra
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/_extra.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/author.html">
+                        <i class="icon-folder-open icon-large"></i>Author
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/author.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/chaos.html">
+                        <i class="icon-folder-open icon-large"></i>Chaos
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/chaos.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/imho.html">
+                        <i class="icon-folder-open icon-large"></i>IMHO
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/imho.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/livin.html">
+                        <i class="icon-folder-open icon-large"></i>Livin
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/livin.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/pythonic.html">
+                        <i class="icon-folder-open icon-large"></i>Pythonic
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/pythonic.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+
+ 
+
+        </ul>
+    </section>
+<section>
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-tint icon-large"></i>Powerded By</h4></li>
+
+    <li class="list-group-item-zip">
+        <a href="http://docs.getpelican.com">
+            Pelican
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <sup>theme base</sup>
+        <a href="https://github.com/DandyDev/pelican-bootstrap3">
+             DandyDev
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.python.org/">
+            Python
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.inkscape.org/">
+            inkscape
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://git-scm.com/">
+            Git
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="https://gitcafe.com/CPyUG">
+            GitCafe
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://www.qiniu.com/about">
+            七牛
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href='http://www.catb.org/hacker-emblem/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAACXBIWXMAAAsSAAALEgHS3X78AAABj0lEQVR4nOWWMYqDQBSGBa1jEbxFwEKwM6VV8AIWWkis9RI5Q1JpYWGb0jLpBDtrc4BgkQMI+y+yQ3BmdBJiNsv+kOHNZJT3+X6fo2y3W+k/ScFvv9//dhpvUhiGisi+uq6zLHNdd7VaTd7xFYnNor6uQsCO41wulzzPm6aZOavZJQSsaRqAMc6dzRskBFwUxfl8tizroVvDQr3DSSD9+Ore+YMV+irSYpjTRyUErKrqZrNBcLvdbNu+Xq/H43HyfabFhKEfCj0dsDEvEZQQMBHqXJYlAvSw3W43uZ/u/7wvwgitxHKBNGuFieBq0zRRYXRskf0DEzJXet1DIpis8NOf0jHg0+kEM+u6Dif37zCmh8MB0yf8zBRJnYk0UlL6oQiKC5ymqe/7sixXVYXTGJyM2oLWMIyu65Ik8TxvEmYykDjvJ2/zyLqguMBt22IEG+oJDyPGiBgr5N+/KC5wEAQYl8vler1GTyYnLdQWtFEUvTHJV4oLvFgs4jjuY3CSnjzu5M8/ln8Df/IB+OX6Ah776L1W8pWtAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+
+    <li class="list-group-item-zip">
+        <a href="http://zh.wikipedia.org/zh-cn/UTF-8">
+<img src="data:image/jpeg;base64,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"/>
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href='http://creativecommons.org/licenses/by-nc-sa/2.5/cn/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAANDQwNDQ0NDg0ODg4PEA8REREZGRkgICAhISEiIiIkJSMnKCcuMC4xMzEzMzM5Ozk7PTtBQkFCQkJDQ0NERERLTEtVVVVbXltmZmZna2dydnF3d3d9gn2AgICGhoaHh4eIiIiPkI+UmZOZmZmqqqqrsaqzuLK6v7q7u7vFxsXGysbIzMjKzsrMzMzd3d3u7u7///+uXr4hAAAA1UlEQVR42q2T2Q6CMBBFR0VUXHCritQFgXGvnf//Oa2ZNEB4UXrTl97enkxmWnAvcioDRKMtJGwJL0V8duEvWWDqGR4TR4iXfUPgbEBWCjaIj1UzYCchFYDQAgJFYoL4PHF/OVTIG7sEMLEKcAdXCtYkpa+znGQH8XL7nvOyed7VGGVgDEqbqaxD+kh6iOc7V2hjfJfxVYNqKxSRr2VGsl2ukNO85/v1hu1hO6Hch0gLCF+0HBd6yLEfe4jTvuMpp62jBS6GDt4hxnBg3rzX9Kc4FTjXG9Q1UZbZlOQyAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+</ul>
+</section>
+<section>
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-asterisk icon-large"></i>Links</h4></li>
+
+    <li class="list-group-item-zip">
+        <a href="http://blog.zhgdg.org/about.html">
+            珠海GDG
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://techparty.org/about/">
+            techpary.org
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://devrel.info/about.html">
+            DevRel.info
+        </a>
+    </li>
+    
+    <li class="list-group-item-zip">
+        <a href="http://yuedulinju.com/">
+            阅读邻居
+        </a>
+    </li>
+
+
+</ul>
+</section>
+
+</aside>        </div>
+    
+    </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://blog.zoomquiet.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://blog.zoomquiet.io/theme/js/respond.min.js"></script>
+
+<!--
+    <script type="text/javascript">
+        var disqus_shortname = 'blogzoomquietio';
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] ||
+             document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+ 
+-->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'blogzoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    
+
+</body>
+</html>

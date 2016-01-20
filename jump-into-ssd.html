@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    jump-into-ssd
+| #是也乎#
+| ZoomQuiet.io    </title>
+
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:slug" content="jump-into-ssd"/>
+            <meta property="og:url" content="http://blog.zoomquiet.io/jump-into-ssd.html"/>
+            <meta property="og:description" content="为毛 新梗 npm $ brew install npm ==&gt; Downloading https://homebrew.bintray.com/bottles/node-0.12.2_1.yosemite.bottle.tar.gz ################################################################## 100.0% ==&gt; Pouring node-0.12.2_1.yosemite.bottle.tar.gz ==&gt; Caveats If you update npm itself, do NOT use the npm update command. The upstream-recommended way to update npm is: npm ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
+    <link href="http://blog.zoomquiet.io/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://blog.zoomquiet.io/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="http://blog.zoomquiet.io/theme/css/pygments/github.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/style.css" type="text/css"/>
+
+    <!-- add emojify into Pelican 
+    <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/emojify.min.css" type="text/css" />
+    <script src="http://blog.zoomquiet.io/theme/js/emojify.js"></script>
+
+-->
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+        <link href="http://blog.zoomquiet.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title=" ATOM Feed"/>
+
+            <!--
+    { include 'includes/ga.html' }
+            -->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--
+<a href="http://blog.zoomquiet.io" class="navbar-brand"></a>
+            -->
+<a href="http://blog.zoomquiet.io" class="navbar-brand">
+    <img src="http://blog.zoomquiet.io/theme/logo.png"/>
+    
+    <span class="violet-site">.io </span>
+</a>            
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://pychina.org">PyChina</a></li>
+                    <li><a href="http://obp.zoomquiet.io">OBP</a></li>
+              
+                        <li><a href="http://blog.zoomquiet.io/pages/about.html">About</a></li>
+                        <li><a href="http://blog.zoomquiet.io/pages/designing.html">设计</a></li>
+                        <li><a href="http://blog.zoomquiet.io/pages/hello-world.html">你好，世界</a></li>
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
+
+                <li><a href="http://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.zoomquiet.io/jump-into-ssd.html">
+                        jump into <span class="caps">SSD</span> with&nbsp;Yoesmite
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+<!--
+    <span class="label label-default">Date</span>
+-->
+    <span class="published">
+        <i class="icon-calendar"></i>2015-04-09 00:00
+    </span>
+
+<!--
+    <span class="label">By</span>
+    <i class="icon-user"></i>
+    <a href="http://blog.zoomquiet.io/author/zoomquiet.html">Zoom.Quiet</a>
+
+    <span class="label label-default">Category</span>
+    <a href="http://blog.zoomquiet.io/category/livin.html">Livin</a>
+-->
+
+
+
+
+	<span class="label label-default">Tags</span>
+		<a href="http://blog.zoomquiet.io/tag/mac.html">MAC</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/leo.html">Leo</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/pyenv.html">Pyenv</a>
+	        ,
+		<a href="http://blog.zoomquiet.io/tag/zq.html">ZQ</a>
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+    <div class="toc">
+<ul>
+<li><a href="#_1">为毛</a></li>
+<li><a href="#_2">新梗</a><ul>
+<li><a href="#npm">npm</a><ul>
+<li><a href="#1000">################################################################## 100.0%</a></li>
+</ul>
+</li>
+<li><a href="#subl">subl</a></li>
+<li><a href="#user">/User</a></li>
+<li><a href="#xcode">XCode</a></li>
+<li><a href="#svn">svn</a></li>
+</ul>
+</li>
+<li><a href="#_3">老梗</a><ul>
+<li><a href="#_4">输入法</a></li>
+<li><a href="#brew">brew</a></li>
+<li><a href="#leo">Leo</a><ul>
+<li><a href="#qt">手编 Qt</a></li>
+</ul>
+</li>
+<li><a href="#150416-try-again">150416 try again</a><ul>
+<li><a href="#1000_1">################################################################## 100.0%</a></li>
+<li><a href="#1000_2">################################################################## 100.0%</a></li>
+<li><a href="#1000_3">################################################################## 100.0%</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_5">回顾</a><ul>
+<li><a href="#python-qt-for-leo">Python + Qt for Leo</a><ul>
+<li><a href="#python">Python</a><ul>
+<li><a href="#pyenvvirtualenv">Pyenv+VirtualEnv</a></li>
+</ul>
+</li>
+<li><a href="#qt-for-leo">Qt for Leo</a></li>
+</ul>
+</li>
+<li><a href="#sshfs">伟光大的 sshfs</a></li>
+</ul>
+</li>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+</div>
+                
+<h1 id="_1">为毛</h1>
+<h1 id="_2">新梗</h1>
+<h2 id="npm">npm</h2>
+<p>$ brew install npm
+==&gt; Downloading https://homebrew.bintray.com/bottles/node-0.12.2_1.yosemite.bottle.tar.gz</p>
+<h6 id="1000">################################################################## 100.0%</h6>
+<p>==&gt; Pouring node-0.12.2_1.yosemite.bottle.tar.gz
+==&gt; Caveats
+If you update npm itself, do <span class="caps">NOT</span> use the npm update command.
+The upstream-recommended way to update npm is:
+  npm install -g npm@latest</p>
+<p>Bash completion has been installed to: /usr/local/etc/bash_completion.d</p>
+<h2 id="subl">subl</h2>
+<p>要</p>
+<h2 id="user">/User</h2>
+<p>$ sudo mv /Users /Users_SSD
+$ sudo ln -s /Volumes/Macintosh\ <span class="caps">HD</span>/Users/ Users</p>
+<h2 id="xcode">XCode</h2>
+<p>/Volumes/Macintosh\ <span class="caps">HD</span>/Applications/Xcode.app/
+$ xcode-select —switch /Applications/Xcode.app</p>
+<h2 id="svn">svn</h2>
+<p>$ brew install subversion
+==&gt; Installing dependencies for subversion: openssl, apr-util, readline, sqlite, scons
+==&gt; Installing subversion dependency: openssl
+==&gt; Downloading https://www.openssl.org/source/openssl-1.0.2a.tar.gz
+Already downloaded: /Library/Caches/Homebrew/openssl-1.0.2a-1.tar.gz
+==&gt; perl ./Configure —prefix=/opt/bin/homebrew/Cellar/openssl/1.0.2a-1 —openssldir=/Volumes/Macintosh <span class="caps">HD</span>
+==&gt; make depend
+==&gt; make
+==&gt; make test
+==&gt; make install <span class="caps">MANDIR</span>=/opt/bin/homebrew/Cellar/openssl/1.0.2a-1/share/man <span class="caps">MANSUFFIX</span>=ssl
+installing <span class="caps">CA</span>.sh
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file … target_directory
+make[1]: <strong><em> [install] Error 64
+make: </em></strong> [install_sw] Error 1</p>
+<p><span class="caps">READ</span> <span class="caps">THIS</span>: https://git.io/brew-troubleshooting</p>
+<p>These open issues may also help:
+openssl: apply yosemite certificate fix (https://github.com/Homebrew/homebrew/pull/38495)
+problems with cert verification by openssl on 10.10.3 (https://github.com/Homebrew/homebrew/issues/38491)
+Installing Elixir fails due to OpenSSL errors. (https://github.com/Homebrew/homebrew/issues/33218)
+problem with Python 2.7.9 and OpenSSL 1.0.2 (https://github.com/Homebrew/homebrew/issues/38226)</p>
+<ul>
+<li>参考: <a href="http://subversion.apache.org/packages.html#osx">Apache Subversion Binary Packages</a></li>
+<li>Flink/Homebrew 都安装不能</li>
+<li>只好使用: <a href="http://www.wandisco.com/subversion/download#osx">WANdisco</a></li>
+<li>Subversion-Client-1.8.10_10.10.x</li>
+<li>安装成功</li>
+</ul>
+<h1 id="_3">老梗</h1>
+<h2 id="_4">输入法</h2>
+<h2 id="brew">brew</h2>
+<h2 id="leo">Leo</h2>
+<p>The sip-dir for Python is /Volumes/Macintosh <span class="caps">HD</span>/Users/zoomq/share/sip.</p>
+<p>Python modules have been installed and Homebrew’s site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+  mkdir -p /Users/zoomq/Library/Python/2.7/lib/python/site-packages
+  echo ‘import site; site.addsitedir(“/Volumes/Macintosh <span class="caps">HD</span>/Users/zoomq/lib/python2.7/site-packages”)’ &gt;&gt; /Users/zoomq/Library/Python/2.7/lib/python/site-packages/homebrew.pth
+==&gt; Summary
+🍺  /opt/bin/homebrew/Cellar/sip/4.16.5: 10 files, 864K, built in 5 seconds</p>
+<p>$ brew install pyqt
+==&gt; Installing pyqt dependency: qt
+==&gt; Downloading https://download.qt.io/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.tgz</p>
+<p>$ brew install pyqt
+==&gt; Downloading https://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.11.3/PyQt-mac-gpl-4.11.3.tar.gz
+Already downloaded: /Library/Caches/Homebrew/pyqt-4.11.3.tar.gz
+==&gt; python configure.py —confirm-license —bindir=/opt/bin/homebrew/Cellar/pyqt/4.11.3/bin —destdir=/opt</p>
+<p>Error: /Volumes/Macintosh <span class="caps">HD</span>/Users/zoomq/opt/qt/bin/qmake failed to create a
+makefile. Make sure you have a working Qt qmake on your <span class="caps">PATH</span> or use the -q
+argument to explicitly specify a working Qt qmake.
+Determining the layout of your Qt installation…</p>
+<p><span class="caps">READ</span> <span class="caps">THIS</span>: https://git.io/brew-troubleshooting</p>
+<p>/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:878:in `initialize’: Failed to connect to: https://api.github.com/search/issues?q=pyqt+repo:Homebrew/homebrew+in:title+state:open&amp;per_page=100 (GitHub::Error)
+getaddrinfo: nodename nor servname provided, or not known</p>
+<p>$ brew search qmake
+No formula found for “qmake”.
+Searching pull requests…
+Closed pull requests:
+qmake gets installed by <span class="caps">QT</span> (https://github.com/Homebrew/homebrew/pull/31336)
+Added patch for XCode4 support for qmake. (https://github.com/Homebrew/homebrew/pull/10475)
+PyQT5.rb Specify qt5 version of qmake. (https://github.com/Homebrew/homebrew/pull/27059)
+PyQt: patch to fix handling of qmake inline comments (https://github.com/Homebrew/homebrew/pull/25225)
+qscintilla2: define 10.9 qmake make spec for lib and python module (https://github.com/Homebrew/homebrew/pull/25882)</p>
+<ul>
+<li>先安装 <a href="http://xquartz.macosforge.org/landing/">XQuartz</a></li>
+<li>重启</li>
+<li>再:</li>
+</ul>
+<p>$ brew install pyqt
+==&gt; Installing pyqt dependency: qt
+==&gt; Downloading https://download.qt.io/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.t
+Already downloaded: /Library/Caches/Homebrew/qt-4.8.6.tar.gz
+==&gt; Downloading https://raw.githubusercontent.com/DomT4/scripts/440e3cafde5bf6ec6f50cd28fa5bf89c280f1b53/H
+Already downloaded: /Library/Caches/Homebrew/qt—patch-57246a33460246118a1fab7460c79f2077d3a929.diff
+==&gt; Patching
+patching file src/gui/dialogs/qcolordialog_mac.mm
+patching file src/gui/dialogs/qfiledialog_mac.mm
+patching file src/gui/dialogs/qfontdialog_mac.mm
+patching file src/gui/kernel/qapplication_mac.mm
+patching file src/gui/kernel/qcocoaapplication_mac.mm
+patching file src/gui/kernel/qcocoaapplicationdelegate_mac.mm
+Hunk #4 succeeded at 295 (offset -13 lines).
+Hunk #5 succeeded at 342 (offset -13 lines).
+patching file src/gui/kernel/qcocoaapplicationdelegate_mac_p.h
+patching file src/gui/kernel/qcocoamenuloader_mac.mm
+patching file src/gui/kernel/qcocoasharedwindowmethods_mac_p.h
+patching file src/gui/kernel/qeventdispatcher_mac.mm
+patching file src/gui/kernel/qt_cocoa_helpers_mac.mm
+patching file src/gui/kernel/qwidget_mac.mm
+patching file src/gui/styles/qmacstyle_mac.mm
+patching file src/gui/util/qsystemtrayicon_mac.mm
+patching file src/gui/widgets/qcocoamenu_mac.mm
+patching file src/gui/widgets/qmenu_mac.mm
+==&gt; ./configure -prefix /opt/bin/homebrew/Cellar/qt/4.8.6 -system-zlib -qt-libtiff -qt-libpng -qt-libjpeg
+==&gt; make</p>
+<p>$ which qmake
+/Volumes/Macintosh <span class="caps">HD</span>/Users/zoomq/bin/qmake</p>
+<p>$ /opt/bin/homebrew/Cellar/qt/4.8.6/bin/qmake -v
+QMake version 2.01a
+Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib</p>
+<p>$ qmake -v
+QMake version 2.01a
+Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib</p>
+<p>哈哈!!!上百M 的怪物哪…</p>
+<h3 id="qt">手编 Qt</h3>
+<ul>
+<li><a href="http://amjith.blogspot.com/2010/09/developing-pyqt4-applications-in-mac-os.html">Developing PyQt4 Applications in Mac <span class="caps">OS</span> X | Core Dump</a></li>
+</ul>
+<h2 id="150416-try-again">150416 try again</h2>
+<p>删除 /opt/bin/homebrew 的非常安装</p>
+<p>$ brew install qt sip pyqt
+==&gt; Downloading https://homebrew.bintray.com/bottles/qt-4.8.6.yosemite.bottle.6.tar.gz</p>
+<h6 id="1000_1">################################################################## 100.0%</h6>
+<p>==&gt; Pouring qt-4.8.6.yosemite.bottle.6.tar.gz
+==&gt; Caveats
+We agreed to the Qt opensource license for you.
+If this is unacceptable you should uninstall.</p>
+<p>.app bundles were installed.
+Run <code>brew linkapps qt</code> to symlink these to /Applications.
+==&gt; Summary
+🍺  /usr/local/Cellar/qt/4.8.6: 2790 files, 122M</p>
+<p>…</p>
+<p>==&gt; ./configure —prefix=/usr/local/Cellar/python/2.7.9 —enable-ipv6 —datarootdir=/usr/local/Cellar/pyth
+==&gt; make
+==&gt; make install <span class="caps">PYTHONAPPSDIR</span>=/usr/local/Cellar/python/2.7.9
+==&gt; make frameworkinstallextras <span class="caps">PYTHONAPPSDIR</span>=/usr/local/Cellar/python/2.7.9/share/python
+==&gt; Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-15.0.tar.gz</p>
+<h6 id="1000_2">################################################################## 100.0%</h6>
+<p>==&gt; Downloading https://pypi.python.org/packages/source/p/pip/pip-6.1.0.tar.gz</p>
+<h6 id="1000_3">################################################################## 100.0%</h6>
+<p>==&gt; Caveats
+Pip and setuptools have been installed. To update them
+  pip install —upgrade pip setuptools</p>
+<p>You can install Python packages with
+  pip install <package></package></p>
+<p>They will install into the site-package directory /usr/local/lib/python2.7/site-packages</p>
+<p>See: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md</p>
+<p>.app bundles were installed.
+Run <code>brew linkapps python</code> to symlink these to /Applications.</p>
+<p>…</p>
+<p>==&gt; Pouring sip-4.16.5.yosemite.bottle.1.tar.gz
+Traceback (most recent call last):
+  File “<string>“, line 1, in <module>
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+Traceback (most recent call last):
+  File “<string>“, line 1, in <module>
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+==&gt; Caveats
+The sip-dir for Python is /usr/local/share/sip.</module></string></module></string></p>
+<p>Python modules have been installed and Homebrew’s site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+  mkdir -p
+  echo ‘import site; site.addsitedir(“/usr/local/lib/python2.7/site-packages”)’ &gt;&gt; homebrew.pth
+==&gt; Summary
+🍺  /usr/local/Cellar/sip/4.16.5: 10 files, 864K</p>
+<p>…</p>
+<p>==&gt; Pouring pyqt-4.11.3.yosemite.bottle.tar.gz
+Traceback (most recent call last):
+  File “<string>“, line 1, in <module>
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+Traceback (most recent call last):
+  File “<string>“, line 1, in <module>
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+==&gt; Caveats
+Phonon support is broken.</module></string></module></string></p>
+<p>Python modules have been installed and Homebrew’s site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+  mkdir -p
+  echo ‘import site; site.addsitedir(“/usr/local/lib/python2.7/site-packages”)’ &gt;&gt; homebrew.pth
+==&gt; Summary
+🍺  /usr/local/Cellar/pyqt/4.11.3: 560 files, 19M</p>
+<h1 id="_5">回顾</h1>
+<p>宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾!</p>
+<p>唯三的折腾:</p>
+<ol>
+<li>Python 环境</li>
+<li>Qt 环境</li>
+<li>sshfs</li>
+</ol>
+<p>严正推荐:</p>
+<p><a href="file:///Users/zoomq/mnt/%E5%BF%AB%E7%9B%98/zScrapBook/ZqFLOSS/data/20131230190257/index.html">Mavericksでbrew upgradeしたらハマった話</a></p>
+<p>等等日文的相关纪要非常实在,直觉,顺序合理,值得,多参考.</p>
+<h2 id="python-qt-for-leo">Python + Qt for Leo</h2>
+<p>大家知道俺是 <a href="http://wiki.woodpecker.org.cn/moin/LiterateProgramming">文学化编程</a>
+的拥趸,
+所以,一直使用 <a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">Leo</a> 作为主要编程环境的,</p>
+<p>10.9 以后 Python 不内置安装了,
+Qt 当然从来也没有内置过. 所以,</p>
+<h3 id="python">Python</h3>
+<p>当然,系统的用 <code>brew install python</code> 了,</p>
+<p>而其它各种项目开发时,就要综合使用</p>
+<h4 id="pyenvvirtualenv">Pyenv+VirtualEnv</h4>
+<p>Pyenv 是这样一种神器:</p>
+<p>完全的面向shell
+  通过环境变量的自动配置 形成复合Python版本共存</p>
+<p>VirtualEnv 有 Pyenv 的插件
+所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:</p>
+<div class="highlight"><pre><span class="nv">$ </span>pyenv versions
+* system <span class="o">(</span><span class="nb">set </span>by /Users/zoomq/.pyenv/version<span class="o">)</span>
+  2.7.3
+  2.7.5
+  2.7.6
+  <span class="caps">273SAE</span>
+  275lbTC
+  275pelican
+  276SphinxOBP
+  276chaos
+  276uliweb
+  3.2
+  3.3.2
+  32IPy
+  ipynotebook
+  pypy-2.2.1
+  pypy221chaos
+</pre></div>
+<p>主要遇到的问题是:</p>
+<div class="highlight"><pre>==&gt; Installing python3
+==&gt; Downloading http://python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2
+######################################################################## 100.0%
+==&gt; ./configure --prefix=/usr/local/Cellar/python3/3.3.3 --enable-ipv6 --datarootdir=/usr/local/Cellar/python3/3.3.3/share --datadir=/usr/lo
+==&gt; make
+==&gt; make install PYTHONAPPSDIR=/usr/local/Cellar/python3/3.3.3
+==&gt; make frameworkinstallextras PYTHONAPPSDIR=/usr/local/Cellar/python3/3.3.3/share/python3
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+</pre></div>
+<p>指定具体版本,尝试,直到可以顺利安装出可用的就好.</p>
+<p>严正表扬一下 ‘Yamashita, Yuu`</p>
+<ul>
+<li><a href="https://github.com/yyuu/pyenv/issues/95#issuecomment-31392999">How to config pyenv’s pip ? · Issue #95 · yyuu/pyenv</a></li>
+<li>绝对认真的回答了俺的提问,虽然不了了之,但是,一个常用工具的作者,可以如此关注一个不是问题的问题,实在太勤勉了,必须学习!</li>
+</ul>
+<h3 id="qt-for-leo">Qt for Leo</h3>
+<p>参考:</p>
+<ul>
+<li><a href="http://support.apple.com/kb/HT5293">About X11 and <span class="caps">OS</span> X</a></li>
+<li><a href="http://xquartz.macosforge.org/landing/">XQuartz</a></li>
+</ul>
+<p>以及:</p>
+<div class="highlight"><pre><span class="nv">$ </span>brew install <span class="nv">pyqt</span>
+<span class="o">==</span>&gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
+Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
+<span class="o">==</span>&gt; Patching
+patching file configure.py
+<span class="o">==</span>&gt; /usr/local/opt/python/bin/python2 configure.py --confirm-license --bindir<span class="o">=</span>/usr/local/Cellar/pyqt/4.10.3/bin --destdir<span class="o">=</span>/usr/local/Cellar/
+Error: Unable to find the qmake configuration file
+/usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
+Use the <span class="caps">QMAKESPEC</span> environment variable to specify the correct platform.
+Determining the layout of your Qt installation...
+
+<span class="caps">READ</span> <span class="caps">THIS</span>: https://github.com/Homebrew/homebrew/wiki/troubleshooting
+</pre></div>
+<p>多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,</p>
+<p>然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:</p>
+<div class="highlight"><pre><span class="c"># ~/.bashrc for running Leo</span>
+<span class="nb">alias </span><span class="nv">leolanch</span><span class="o">=</span><span class="s2">"python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"</span>
+</pre></div>
+<h2 id="sshfs">伟光大的 sshfs</h2>
+<div class="highlight"><pre><span class="nv">$ </span>brew link fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2... Warning: Could not link fuse4x. Unlinking...
+
+Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
+Target /usr/local/lib/pkgconfig/fuse.pc already exists. You may need to delete it.
+To force the link and overwrite all other conflicting files, <span class="k">do</span>:
+  brew link --overwrite formula_name
+
+To list all files that would be deleted:
+  brew link --overwrite --dry-run formula_name
+
+zoomq @ <span class="caps">MBP111216ZQ</span> in /usr/local/lib
+<span class="nv">$ </span>brew link --overwrite fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2... <span class="m">7</span> symlinks created
+
+
+<span class="nv">$ </span>brew install <span class="nv">osxfuse</span>
+<span class="o">==</span>&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz
+<span class="o">==</span>&gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
+<span class="o">==</span>&gt; Caveats
+If upgrading from a previous version of osxfuse, the previous kernel extension
+will need to be unloaded before installing the new version. First, check that
+no <span class="caps">FUSE</span>-based file systems are running:
+
+  mount -t osxfusefs
+
+Unmount all <span class="caps">FUSE</span> file systems and <span class="k">then</span> unload the kernel extension:
+
+  sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs
+
+The new osxfuse file system bundle needs to be installed by the root user:
+
+  sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.2/Library/Filesystems/osxfusefs.fs /Library/Filesystems
+  sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+<span class="o">==</span>&gt; Summary
+🍺  /usr/local/Cellar/osxfuse/2.6.2: <span class="m">84</span> files, 5.0M
+</pre></div>
+<p>具体哪个管用,俺也没整明白,
+反正,怎么折腾,
+都是可以正当加载上 <code>Plan</code> 的内核库, 然后就可以对家庭服务器的所有硬盘,远程加载为本地目录了..</p>
+<h1 id="changelog">Changelog</h1>
+<ul>
+<li>140616 再次精简,算是发布</li>
+<li>140505 快速简述完成</li>
+<li>140110 起意,总结</li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'blogzoomquietio'; // required: replace example with your forum shortname
+            var disqus_identifier = 'Livin/15-04-09-jump-into-ssd';
+            var disqus_url = 'http://blog.zoomquiet.io/jump-into-ssd.html';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+
+
+    <hr/>
+    <sub>
+        © Copyright 2014 by Zoom.Quiet 
+        <br/>
+        Content licensed under the Creative Commons 
+        <b>attribution-noncommercial-sharealike</b> License.
+        <br/>
+        Contact me via 
+        , <code><a href="mailto:i@zoomquiet.io">mail</a> 
+            </code>
+        ,<code><a href="http://github.com/ZoomQuiet">github</a>
+            </code>
+        or
+        <code><a href="http://bitbucket.org/ZoomQuiet">bitbucket</a>
+            </code>.
+        Tip me via 
+        <code><a href="https://www.gittip.com/ZoomQuiet/">gittip</a>
+            </code>.
+        <a href="http://blog.zoomquiet.io/feeds/all.atom.xml">(feed)</a>
+    </sub>
+
+
+        </div>
+
+        <div class="col-lg-3 well well-sm" id="sidebar">
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧文-sign icon-large"></i>旧文
+                    </a></li>
+                    <li class="list-group-item"><a href="http://ZoomQuiet.io"><i
+                            class="icon-.io-sign icon-large"></i>.io
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
+                            class="icon-Wiki-sign icon-large"></i>Wiki
+                    </a></li>
+                    <li class="list-group-item"><a href="http://code.google.com/p/openbookproject/"><i
+                            class="icon-O.B.P-sign icon-large"></i>O.B.P
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weekly.pychina.org/"><i
+                            class="icon-Weekly-sign icon-large"></i>Weekly
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
+
+            <li class="list-group-item"><h4>
+                <i class="icon-th icon-large"></i>Categories</h4></li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/_extra.html">
+                        <i class="icon-folder-open icon-large"></i>_extra
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/_extra.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/author.html">
+                        <i class="icon-folder-open icon-large"></i>Author
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/author.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/chaos.html">
+                        <i class="icon-folder-open icon-large"></i>Chaos
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/chaos.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/imho.html">
+                        <i class="icon-folder-open icon-large"></i>IMHO
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/imho.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/livin.html">
+                        <i class="icon-folder-open icon-large"></i>Livin
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/livin.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="http://blog.zoomquiet.io/category/pythonic.html">
+                        <i class="icon-folder-open icon-large"></i>Pythonic
+                    </a>
+                    <a href="http://blog.zoomquiet.io/feeds/pythonic.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+
+ 
+
+        </ul>
+    </section>
+<section>
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-tint icon-large"></i>Powerded By</h4></li>
+
+    <li class="list-group-item-zip">
+        <a href="http://docs.getpelican.com">
+            Pelican
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <sup>theme base</sup>
+        <a href="https://github.com/DandyDev/pelican-bootstrap3">
+             DandyDev
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.python.org/">
+            Python
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.inkscape.org/">
+            inkscape
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://git-scm.com/">
+            Git
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="https://gitcafe.com/CPyUG">
+            GitCafe
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://www.qiniu.com/about">
+            七牛
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href='http://www.catb.org/hacker-emblem/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAACXBIWXMAAAsSAAALEgHS3X78AAABj0lEQVR4nOWWMYqDQBSGBa1jEbxFwEKwM6VV8AIWWkis9RI5Q1JpYWGb0jLpBDtrc4BgkQMI+y+yQ3BmdBJiNsv+kOHNZJT3+X6fo2y3W+k/ScFvv9//dhpvUhiGisi+uq6zLHNdd7VaTd7xFYnNor6uQsCO41wulzzPm6aZOavZJQSsaRqAMc6dzRskBFwUxfl8tizroVvDQr3DSSD9+Ore+YMV+irSYpjTRyUErKrqZrNBcLvdbNu+Xq/H43HyfabFhKEfCj0dsDEvEZQQMBHqXJYlAvSw3W43uZ/u/7wvwgitxHKBNGuFieBq0zRRYXRskf0DEzJXet1DIpis8NOf0jHg0+kEM+u6Dif37zCmh8MB0yf8zBRJnYk0UlL6oQiKC5ymqe/7sixXVYXTGJyM2oLWMIyu65Ik8TxvEmYykDjvJ2/zyLqguMBt22IEG+oJDyPGiBgr5N+/KC5wEAQYl8vler1GTyYnLdQWtFEUvTHJV4oLvFgs4jjuY3CSnjzu5M8/ln8Df/IB+OX6Ah776L1W8pWtAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+
+    <li class="list-group-item-zip">
+        <a href="http://zh.wikipedia.org/zh-cn/UTF-8">
+<img src="data:image/jpeg;base64,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"/>
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href='http://creativecommons.org/licenses/by-nc-sa/2.5/cn/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAANDQwNDQ0NDg0ODg4PEA8REREZGRkgICAhISEiIiIkJSMnKCcuMC4xMzEzMzM5Ozk7PTtBQkFCQkJDQ0NERERLTEtVVVVbXltmZmZna2dydnF3d3d9gn2AgICGhoaHh4eIiIiPkI+UmZOZmZmqqqqrsaqzuLK6v7q7u7vFxsXGysbIzMjKzsrMzMzd3d3u7u7///+uXr4hAAAA1UlEQVR42q2T2Q6CMBBFR0VUXHCritQFgXGvnf//Oa2ZNEB4UXrTl97enkxmWnAvcioDRKMtJGwJL0V8duEvWWDqGR4TR4iXfUPgbEBWCjaIj1UzYCchFYDQAgJFYoL4PHF/OVTIG7sEMLEKcAdXCtYkpa+znGQH8XL7nvOyed7VGGVgDEqbqaxD+kh6iOc7V2hjfJfxVYNqKxSRr2VGsl2ukNO85/v1hu1hO6Hch0gLCF+0HBd6yLEfe4jTvuMpp62jBS6GDt4hxnBg3rzX9Kc4FTjXG9Q1UZbZlOQyAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+</ul>
+</section>
+<section>
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-asterisk icon-large"></i>Links</h4></li>
+
+    <li class="list-group-item-zip">
+        <a href="http://blog.zhgdg.org/about.html">
+            珠海GDG
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://techparty.org/about/">
+            techpary.org
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://devrel.info/about.html">
+            DevRel.info
+        </a>
+    </li>
+    
+    <li class="list-group-item-zip">
+        <a href="http://yuedulinju.com/">
+            阅读邻居
+        </a>
+    </li>
+
+
+</ul>
+</section>
+
+</aside>        </div>
+    
+    </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://blog.zoomquiet.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://blog.zoomquiet.io/theme/js/respond.min.js"></script>
+
+<!--
+    <script type="text/javascript">
+        var disqus_shortname = 'blogzoomquietio';
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] ||
+             document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+ 
+-->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'blogzoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    
+
+</body>
+</html>

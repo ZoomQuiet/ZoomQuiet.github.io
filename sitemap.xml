@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/index.html</loc>
-<lastmod>2014-12-12T21:03:42-00:00</lastmod>
+<lastmod>2016-01-20T16:23:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2014-12-12T21:03:42-00:00</lastmod>
+<lastmod>2016-01-20T16:23:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2014-12-12T21:03:42-00:00</lastmod>
+<lastmod>2016-01-20T16:23:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2014-12-12T21:03:42-00:00</lastmod>
+<lastmod>2016-01-20T16:23:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/pages/about.html</loc>
-<lastmod>2014-05-21T18:33:09+08:00</lastmod>
+<lastmod>2015-04-09T11:11:22+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -48,6 +48,34 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/pages/hello-world.html</loc>
 <lastmod>2013-08-09T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/logging42pelican.html</loc>
+<lastmod>2016-01-20T17:42:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/jump-into-ssd.html</loc>
+<lastmod>2015-04-09T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/saying-ggodby-python-zh.html</loc>
+<lastmod>2015-01-10T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/knewone-talk-zoomq-choise.html</loc>
+<lastmod>2014-12-23T23:23:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -298,6 +326,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/category/_extra.html</loc>
+<lastmod>2016-01-20T17:42:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/category/author.html</loc>
 <lastmod>2013-11-17T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -320,14 +355,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/category/livin.html</loc>
-<lastmod>2014-10-24T00:00:00+08:06</lastmod>
+<lastmod>2015-04-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/category/pythonic.html</loc>
-<lastmod>2014-11-27T00:00:00+08:06</lastmod>
+<lastmod>2015-01-10T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -341,14 +376,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/pelican.html</loc>
-<lastmod>2013-12-19T10:42:00+08:06</lastmod>
+<lastmod>2016-01-20T17:42:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/zh.html</loc>
-<lastmod>2014-08-08T00:00:00+08:06</lastmod>
+<lastmod>2015-01-10T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -389,6 +424,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/zoomq.html</loc>
+<lastmod>2014-12-23T23:23:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/press.html</loc>
 <lastmod>2014-08-08T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -403,8 +445,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/weekly.html</loc>
+<lastmod>2015-01-10T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/zq.html</loc>
-<lastmod>2014-05-07T00:00:00+08:06</lastmod>
+<lastmod>2015-04-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -453,7 +502,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/pyenv.html</loc>
-<lastmod>2013-12-30T00:00:00+08:06</lastmod>
+<lastmod>2015-04-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -529,6 +578,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/livin.html</loc>
+<lastmod>2014-12-23T23:23:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/triggered.html</loc>
 <lastmod>2014-02-26T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -558,21 +614,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/howto.html</loc>
-<lastmod>2014-07-11T00:00:00+08:06</lastmod>
+<lastmod>2016-01-20T17:42:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/leo.html</loc>
-<lastmod>2014-12-12T12:12:12+08:06</lastmod>
+<lastmod>2015-04-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/mac.html</loc>
-<lastmod>2014-10-24T00:00:00+08:06</lastmod>
+<lastmod>2015-04-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -677,7 +733,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2014-12-12T18:18:18+08:06</lastmod>
+<lastmod>2016-01-20T17:42:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

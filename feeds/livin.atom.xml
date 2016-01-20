@@ -1,5 +1,470 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-10-24T00:00:00+08:00</updated><entry><title>Mavericks 中用 sshfs</title><link href="http://blog.zoomquiet.io/sshfs-in-mavericks.html" rel="alternate"></link><updated>2014-10-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-10-24:sshfs-in-mavericks.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2015-04-09T00:00:00+08:00</updated><entry><title>jump into SSD with Yoesmite</title><link href="http://blog.zoomquiet.io/jump-into-ssd.html" rel="alternate"></link><updated>2015-04-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-04-09:jump-into-ssd.html</id><summary type="html">
+&lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
+&lt;h1 id="_2"&gt;新梗&lt;/h1&gt;
+&lt;h2 id="npm"&gt;npm&lt;/h2&gt;
+&lt;p&gt;$ brew install npm
+==&amp;gt; Downloading https://homebrew.bintray.com/bottles/node-0.12.2_1.yosemite.bottle.tar.gz&lt;/p&gt;
+&lt;h6 id="1000"&gt;################################################################## 100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; Pouring node-0.12.2_1.yosemite.bottle.tar.gz
+==&amp;gt; Caveats
+If you update npm itself, do &lt;span class="caps"&gt;NOT&lt;/span&gt; use the npm update command.
+The upstream-recommended way to update npm is:
+  npm install -g npm@latest&lt;/p&gt;
+&lt;p&gt;Bash completion has been installed to: /usr/local/etc/bash_completion.d&lt;/p&gt;
+&lt;h2 id="subl"&gt;subl&lt;/h2&gt;
+&lt;p&gt;要&lt;/p&gt;
+&lt;h2 id="user"&gt;/User&lt;/h2&gt;
+&lt;p&gt;$ sudo mv /Users /Users_SSD
+$ sudo ln -s /Volumes/Macintosh\ &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/ Users&lt;/p&gt;
+&lt;h2 id="xcode"&gt;XCode&lt;/h2&gt;
+&lt;p&gt;/Volumes/Macintosh\ &lt;span class="caps"&gt;HD&lt;/span&gt;/Applications/Xcode.app/
+$ xcode-select —switch /Applications/Xcode.app&lt;/p&gt;
+&lt;h2 id="svn"&gt;svn&lt;/h2&gt;
+&lt;p&gt;$ brew install subversion
+==&amp;gt; Installing dependencies for subversion: openssl, apr-util, readline, sqlite, scons
+==&amp;gt; Installing subversion dependency: openssl
+==&amp;gt; Downloading https://www.openssl.org/source/openssl-1.0.2a.tar.gz
+Already downloaded: /Library/Caches/Homebrew/openssl-1.0.2a-1.tar.gz
+==&amp;gt; perl ./Configure —prefix=/opt/bin/homebrew/Cellar/openssl/1.0.2a-1 —openssldir=/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;
+==&amp;gt; make depend
+==&amp;gt; make
+==&amp;gt; make test
+==&amp;gt; make install &lt;span class="caps"&gt;MANDIR&lt;/span&gt;=/opt/bin/homebrew/Cellar/openssl/1.0.2a-1/share/man &lt;span class="caps"&gt;MANSUFFIX&lt;/span&gt;=ssl
+installing &lt;span class="caps"&gt;CA&lt;/span&gt;.sh
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file … target_directory
+make[1]: &lt;strong&gt;&lt;em&gt; [install] Error 64
+make: &lt;/em&gt;&lt;/strong&gt; [install_sw] Error 1&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://git.io/brew-troubleshooting&lt;/p&gt;
+&lt;p&gt;These open issues may also help:
+openssl: apply yosemite certificate fix (https://github.com/Homebrew/homebrew/pull/38495)
+problems with cert verification by openssl on 10.10.3 (https://github.com/Homebrew/homebrew/issues/38491)
+Installing Elixir fails due to OpenSSL errors. (https://github.com/Homebrew/homebrew/issues/33218)
+problem with Python 2.7.9 and OpenSSL 1.0.2 (https://github.com/Homebrew/homebrew/issues/38226)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;参考: &lt;a href="http://subversion.apache.org/packages.html#osx"&gt;Apache Subversion Binary Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Flink/Homebrew 都安装不能&lt;/li&gt;
+&lt;li&gt;只好使用: &lt;a href="http://www.wandisco.com/subversion/download#osx"&gt;WANdisco&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subversion-Client-1.8.10_10.10.x&lt;/li&gt;
+&lt;li&gt;安装成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="_3"&gt;老梗&lt;/h1&gt;
+&lt;h2 id="_4"&gt;输入法&lt;/h2&gt;
+&lt;h2 id="brew"&gt;brew&lt;/h2&gt;
+&lt;h2 id="leo"&gt;Leo&lt;/h2&gt;
+&lt;p&gt;The sip-dir for Python is /Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/share/sip.&lt;/p&gt;
+&lt;p&gt;Python modules have been installed and Homebrew’s site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+  mkdir -p /Users/zoomq/Library/Python/2.7/lib/python/site-packages
+  echo ‘import site; site.addsitedir(“/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/lib/python2.7/site-packages”)’ &amp;gt;&amp;gt; /Users/zoomq/Library/Python/2.7/lib/python/site-packages/homebrew.pth
+==&amp;gt; Summary
+🍺  /opt/bin/homebrew/Cellar/sip/4.16.5: 10 files, 864K, built in 5 seconds&lt;/p&gt;
+&lt;p&gt;$ brew install pyqt
+==&amp;gt; Installing pyqt dependency: qt
+==&amp;gt; Downloading https://download.qt.io/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.tgz&lt;/p&gt;
+&lt;p&gt;$ brew install pyqt
+==&amp;gt; Downloading https://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.11.3/PyQt-mac-gpl-4.11.3.tar.gz
+Already downloaded: /Library/Caches/Homebrew/pyqt-4.11.3.tar.gz
+==&amp;gt; python configure.py —confirm-license —bindir=/opt/bin/homebrew/Cellar/pyqt/4.11.3/bin —destdir=/opt&lt;/p&gt;
+&lt;p&gt;Error: /Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/opt/qt/bin/qmake failed to create a
+makefile. Make sure you have a working Qt qmake on your &lt;span class="caps"&gt;PATH&lt;/span&gt; or use the -q
+argument to explicitly specify a working Qt qmake.
+Determining the layout of your Qt installation…&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://git.io/brew-troubleshooting&lt;/p&gt;
+&lt;p&gt;/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:878:in `initialize’: Failed to connect to: https://api.github.com/search/issues?q=pyqt+repo:Homebrew/homebrew+in:title+state:open&amp;amp;per_page=100 (GitHub::Error)
+getaddrinfo: nodename nor servname provided, or not known&lt;/p&gt;
+&lt;p&gt;$ brew search qmake
+No formula found for “qmake”.
+Searching pull requests…
+Closed pull requests:
+qmake gets installed by &lt;span class="caps"&gt;QT&lt;/span&gt; (https://github.com/Homebrew/homebrew/pull/31336)
+Added patch for XCode4 support for qmake. (https://github.com/Homebrew/homebrew/pull/10475)
+PyQT5.rb Specify qt5 version of qmake. (https://github.com/Homebrew/homebrew/pull/27059)
+PyQt: patch to fix handling of qmake inline comments (https://github.com/Homebrew/homebrew/pull/25225)
+qscintilla2: define 10.9 qmake make spec for lib and python module (https://github.com/Homebrew/homebrew/pull/25882)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先安装 &lt;a href="http://xquartz.macosforge.org/landing/"&gt;XQuartz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;重启&lt;/li&gt;
+&lt;li&gt;再:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ brew install pyqt
+==&amp;gt; Installing pyqt dependency: qt
+==&amp;gt; Downloading https://download.qt.io/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.t
+Already downloaded: /Library/Caches/Homebrew/qt-4.8.6.tar.gz
+==&amp;gt; Downloading https://raw.githubusercontent.com/DomT4/scripts/440e3cafde5bf6ec6f50cd28fa5bf89c280f1b53/H
+Already downloaded: /Library/Caches/Homebrew/qt—patch-57246a33460246118a1fab7460c79f2077d3a929.diff
+==&amp;gt; Patching
+patching file src/gui/dialogs/qcolordialog_mac.mm
+patching file src/gui/dialogs/qfiledialog_mac.mm
+patching file src/gui/dialogs/qfontdialog_mac.mm
+patching file src/gui/kernel/qapplication_mac.mm
+patching file src/gui/kernel/qcocoaapplication_mac.mm
+patching file src/gui/kernel/qcocoaapplicationdelegate_mac.mm
+Hunk #4 succeeded at 295 (offset -13 lines).
+Hunk #5 succeeded at 342 (offset -13 lines).
+patching file src/gui/kernel/qcocoaapplicationdelegate_mac_p.h
+patching file src/gui/kernel/qcocoamenuloader_mac.mm
+patching file src/gui/kernel/qcocoasharedwindowmethods_mac_p.h
+patching file src/gui/kernel/qeventdispatcher_mac.mm
+patching file src/gui/kernel/qt_cocoa_helpers_mac.mm
+patching file src/gui/kernel/qwidget_mac.mm
+patching file src/gui/styles/qmacstyle_mac.mm
+patching file src/gui/util/qsystemtrayicon_mac.mm
+patching file src/gui/widgets/qcocoamenu_mac.mm
+patching file src/gui/widgets/qmenu_mac.mm
+==&amp;gt; ./configure -prefix /opt/bin/homebrew/Cellar/qt/4.8.6 -system-zlib -qt-libtiff -qt-libpng -qt-libjpeg
+==&amp;gt; make&lt;/p&gt;
+&lt;p&gt;$ which qmake
+/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/bin/qmake&lt;/p&gt;
+&lt;p&gt;$ /opt/bin/homebrew/Cellar/qt/4.8.6/bin/qmake -v
+QMake version 2.01a
+Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib&lt;/p&gt;
+&lt;p&gt;$ qmake -v
+QMake version 2.01a
+Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib&lt;/p&gt;
+&lt;p&gt;哈哈!!!上百M 的怪物哪…&lt;/p&gt;
+&lt;h3 id="qt"&gt;手编 Qt&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://amjith.blogspot.com/2010/09/developing-pyqt4-applications-in-mac-os.html"&gt;Developing PyQt4 Applications in Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X | Core Dump&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="150416-try-again"&gt;150416 try again&lt;/h2&gt;
+&lt;p&gt;删除 /opt/bin/homebrew 的非常安装&lt;/p&gt;
+&lt;p&gt;$ brew install qt sip pyqt
+==&amp;gt; Downloading https://homebrew.bintray.com/bottles/qt-4.8.6.yosemite.bottle.6.tar.gz&lt;/p&gt;
+&lt;h6 id="1000_1"&gt;################################################################## 100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; Pouring qt-4.8.6.yosemite.bottle.6.tar.gz
+==&amp;gt; Caveats
+We agreed to the Qt opensource license for you.
+If this is unacceptable you should uninstall.&lt;/p&gt;
+&lt;p&gt;.app bundles were installed.
+Run &lt;code&gt;brew linkapps qt&lt;/code&gt; to symlink these to /Applications.
+==&amp;gt; Summary
+🍺  /usr/local/Cellar/qt/4.8.6: 2790 files, 122M&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;p&gt;==&amp;gt; ./configure —prefix=/usr/local/Cellar/python/2.7.9 —enable-ipv6 —datarootdir=/usr/local/Cellar/pyth
+==&amp;gt; make
+==&amp;gt; make install &lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;=/usr/local/Cellar/python/2.7.9
+==&amp;gt; make frameworkinstallextras &lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;=/usr/local/Cellar/python/2.7.9/share/python
+==&amp;gt; Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-15.0.tar.gz&lt;/p&gt;
+&lt;h6 id="1000_2"&gt;################################################################## 100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; Downloading https://pypi.python.org/packages/source/p/pip/pip-6.1.0.tar.gz&lt;/p&gt;
+&lt;h6 id="1000_3"&gt;################################################################## 100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; Caveats
+Pip and setuptools have been installed. To update them
+  pip install —upgrade pip setuptools&lt;/p&gt;
+&lt;p&gt;You can install Python packages with
+  pip install &lt;package&gt;&lt;/package&gt;&lt;/p&gt;
+&lt;p&gt;They will install into the site-package directory /usr/local/lib/python2.7/site-packages&lt;/p&gt;
+&lt;p&gt;See: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md&lt;/p&gt;
+&lt;p&gt;.app bundles were installed.
+Run &lt;code&gt;brew linkapps python&lt;/code&gt; to symlink these to /Applications.&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;p&gt;==&amp;gt; Pouring sip-4.16.5.yosemite.bottle.1.tar.gz
+Traceback (most recent call last):
+  File “&lt;string&gt;“, line 1, in &lt;module&gt;
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+Traceback (most recent call last):
+  File “&lt;string&gt;“, line 1, in &lt;module&gt;
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+==&amp;gt; Caveats
+The sip-dir for Python is /usr/local/share/sip.&lt;/module&gt;&lt;/string&gt;&lt;/module&gt;&lt;/string&gt;&lt;/p&gt;
+&lt;p&gt;Python modules have been installed and Homebrew’s site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+  mkdir -p
+  echo ‘import site; site.addsitedir(“/usr/local/lib/python2.7/site-packages”)’ &amp;gt;&amp;gt; homebrew.pth
+==&amp;gt; Summary
+🍺  /usr/local/Cellar/sip/4.16.5: 10 files, 864K&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;p&gt;==&amp;gt; Pouring pyqt-4.11.3.yosemite.bottle.tar.gz
+Traceback (most recent call last):
+  File “&lt;string&gt;“, line 1, in &lt;module&gt;
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+Traceback (most recent call last):
+  File “&lt;string&gt;“, line 1, in &lt;module&gt;
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+==&amp;gt; Caveats
+Phonon support is broken.&lt;/module&gt;&lt;/string&gt;&lt;/module&gt;&lt;/string&gt;&lt;/p&gt;
+&lt;p&gt;Python modules have been installed and Homebrew’s site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+  mkdir -p
+  echo ‘import site; site.addsitedir(“/usr/local/lib/python2.7/site-packages”)’ &amp;gt;&amp;gt; homebrew.pth
+==&amp;gt; Summary
+🍺  /usr/local/Cellar/pyqt/4.11.3: 560 files, 19M&lt;/p&gt;
+&lt;h1 id="_5"&gt;回顾&lt;/h1&gt;
+&lt;p&gt;宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾!&lt;/p&gt;
+&lt;p&gt;唯三的折腾:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Python 环境&lt;/li&gt;
+&lt;li&gt;Qt 环境&lt;/li&gt;
+&lt;li&gt;sshfs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;严正推荐:&lt;/p&gt;
+&lt;p&gt;&lt;a href="file:///Users/zoomq/mnt/%E5%BF%AB%E7%9B%98/zScrapBook/ZqFLOSS/data/20131230190257/index.html"&gt;Mavericksでbrew upgradeしたらハマった話&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;等等日文的相关纪要非常实在,直觉,顺序合理,值得,多参考.&lt;/p&gt;
+&lt;h2 id="python-qt-for-leo"&gt;Python + Qt for Leo&lt;/h2&gt;
+&lt;p&gt;大家知道俺是 &lt;a href="http://wiki.woodpecker.org.cn/moin/LiterateProgramming"&gt;文学化编程&lt;/a&gt;
+的拥趸,
+所以,一直使用 &lt;a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment"&gt;Leo&lt;/a&gt; 作为主要编程环境的,&lt;/p&gt;
+&lt;p&gt;10.9 以后 Python 不内置安装了,
+Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
+&lt;h3 id="python"&gt;Python&lt;/h3&gt;
+&lt;p&gt;当然,系统的用 &lt;code&gt;brew install python&lt;/code&gt; 了,&lt;/p&gt;
+&lt;p&gt;而其它各种项目开发时,就要综合使用&lt;/p&gt;
+&lt;h4 id="pyenvvirtualenv"&gt;Pyenv+VirtualEnv&lt;/h4&gt;
+&lt;p&gt;Pyenv 是这样一种神器:&lt;/p&gt;
+&lt;p&gt;完全的面向shell
+  通过环境变量的自动配置 形成复合Python版本共存&lt;/p&gt;
+&lt;p&gt;VirtualEnv 有 Pyenv 的插件
+所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pyenv versions
+* system &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set &lt;/span&gt;by /Users/zoomq/.pyenv/version&lt;span class="o"&gt;)&lt;/span&gt;
+  2.7.3
+  2.7.5
+  2.7.6
+  &lt;span class="caps"&gt;273SAE&lt;/span&gt;
+  275lbTC
+  275pelican
+  276SphinxOBP
+  276chaos
+  276uliweb
+  3.2
+  3.3.2
+  32IPy
+  ipynotebook
+  pypy-2.2.1
+  pypy221chaos
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;主要遇到的问题是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;==&amp;gt; Installing python3
+==&amp;gt; Downloading http://python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2
+######################################################################## 100.0%
+==&amp;gt; ./configure --prefix=/usr/local/Cellar/python3/3.3.3 --enable-ipv6 --datarootdir=/usr/local/Cellar/python3/3.3.3/share --datadir=/usr/lo
+==&amp;gt; make
+==&amp;gt; make install PYTHONAPPSDIR=/usr/local/Cellar/python3/3.3.3
+==&amp;gt; make frameworkinstallextras PYTHONAPPSDIR=/usr/local/Cellar/python3/3.3.3/share/python3
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;指定具体版本,尝试,直到可以顺利安装出可用的就好.&lt;/p&gt;
+&lt;p&gt;严正表扬一下 ‘Yamashita, Yuu`&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/yyuu/pyenv/issues/95#issuecomment-31392999"&gt;How to config pyenv’s pip ? · Issue #95 · yyuu/pyenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;绝对认真的回答了俺的提问,虽然不了了之,但是,一个常用工具的作者,可以如此关注一个不是问题的问题,实在太勤勉了,必须学习!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="qt-for-leo"&gt;Qt for Leo&lt;/h3&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://support.apple.com/kb/HT5293"&gt;About X11 and &lt;span class="caps"&gt;OS&lt;/span&gt; X&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://xquartz.macosforge.org/landing/"&gt;XQuartz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以及:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew install &lt;span class="nv"&gt;pyqt&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
+Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Patching
+patching file configure.py
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; /usr/local/opt/python/bin/python2 configure.py --confirm-license --bindir&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/Cellar/pyqt/4.10.3/bin --destdir&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/Cellar/
+Error: Unable to find the qmake configuration file
+/usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
+Use the &lt;span class="caps"&gt;QMAKESPEC&lt;/span&gt; environment variable to specify the correct platform.
+Determining the layout of your Qt installation...
+
+&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://github.com/Homebrew/homebrew/wiki/troubleshooting
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,&lt;/p&gt;
+&lt;p&gt;然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# ~/.bashrc for running Leo&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;leolanch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="sshfs"&gt;伟光大的 sshfs&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew link fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2... Warning: Could not link fuse4x. Unlinking...
+
+Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
+Target /usr/local/lib/pkgconfig/fuse.pc already exists. You may need to delete it.
+To force the link and overwrite all other conflicting files, &lt;span class="k"&gt;do&lt;/span&gt;:
+  brew link --overwrite formula_name
+
+To list all files that would be deleted:
+  brew link --overwrite --dry-run formula_name
+
+zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in /usr/local/lib
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew link --overwrite fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2... &lt;span class="m"&gt;7&lt;/span&gt; symlinks created
+
+
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew install &lt;span class="nv"&gt;osxfuse&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Caveats
+If upgrading from a previous version of osxfuse, the previous kernel extension
+will need to be unloaded before installing the new version. First, check that
+no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:
+
+  mount -t osxfusefs
+
+Unmount all &lt;span class="caps"&gt;FUSE&lt;/span&gt; file systems and &lt;span class="k"&gt;then&lt;/span&gt; unload the kernel extension:
+
+  sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs
+
+The new osxfuse file system bundle needs to be installed by the root user:
+
+  sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.2/Library/Filesystems/osxfusefs.fs /Library/Filesystems
+  sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Summary
+🍺  /usr/local/Cellar/osxfuse/2.6.2: &lt;span class="m"&gt;84&lt;/span&gt; files, 5.0M
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;具体哪个管用,俺也没整明白,
+反正,怎么折腾,
+都是可以正当加载上 &lt;code&gt;Plan&lt;/code&gt; 的内核库, 然后就可以对家庭服务器的所有硬盘,远程加载为本地目录了..&lt;/p&gt;
+&lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
+&lt;li&gt;140505 快速简述完成&lt;/li&gt;
+&lt;li&gt;140110 起意,总结&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>KnewOne-talk 之 大妈 篇</title><link href="http://blog.zoomquiet.io/knewone-talk-zoomq-choise.html" rel="alternate"></link><updated>2014-12-23T23:23:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-23:knewone-talk-zoomq-choise.html</id><summary type="html">
+&lt;p&gt;~ KnewOne talk question list&lt;/p&gt;
+&lt;h2 id="_1"&gt;分享你的生活方式&lt;/h2&gt;
+&lt;p&gt;整体上,俺是一头程序猿,所以,,,&lt;/p&gt;
+&lt;h3 id="1"&gt;1 自我介绍和介绍自己的工作/擅长的领域,允许给自己打广告~&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Zoom.Quiet PyChina.org | 蠎中国社区" src="http://pychina.org/volunteer/zoomquiet.html"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python中文社区创始人(之一) / 管理员, 热心于 Python 等等社区的公益事业, 大家熟知的社区”&lt;a href="http://wiki.woodpecker.org.cn/moin/ZoomQuietAbt"&gt;大妈&lt;/a&gt;“;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;O.B.&lt;/span&gt;P (&lt;a href="https://code.google.com/p/openbookproject/"&gt;Open Book Proj.~中文蟒样开放图书计划&lt;/a&gt;) 及 蟒营(&lt;a href="https://code.google.com/p/kcpycamp/wiki/PythoniCamp"&gt;PythoniCamp&lt;/a&gt;) 工程设计者 /主持人; &lt;/li&gt;
+&lt;li&gt;参与并主持各种线上 / 线下活动; 主持编撰了 &amp;lt;&amp;lt;可爱的Python&amp;gt;&amp;gt; 等图书&lt;/li&gt;
+&lt;li&gt;坚持用 Pythonic 感化国人进入 &lt;span class="caps"&gt;FLOSS&lt;/span&gt;世界进行学习 / 分享 / 创造…&lt;/li&gt;
+&lt;li&gt;擅长:&lt;ul&gt;
+&lt;li&gt;Pythonic入门宣传;实效敏捷配置管理;技术社区文化促生;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PKM&lt;/span&gt; ~ &lt;span class="caps"&gt;GTD&lt;/span&gt;/个人效率工具箱/文学化编程;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;EKM&lt;/span&gt; ~ 企業知识管理策略理解;企業自学习型组织促生;企業对外技术社区管理; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;不过,最专精的可能就是 &lt;code&gt;吐糟&lt;/code&gt; 了, 对各种涉及技术世界的囧事儿,不遗余力的持续吐糟&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#PPT去死去死&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#PHP是最好的语言&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#每天都被老婆打&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;等等流行标签倡导者&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2"&gt;2 工作时都装备了哪些东西?说说体验. (电子设备,工作环境等)&lt;/h3&gt;
+&lt;p&gt;坐班时:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MBP&lt;/span&gt; 主力工作界面&lt;ul&gt;
+&lt;li&gt;MacBook Pro (15-inch, Late 2011), 升级到 10.10, 内存只有8G, 没有去光盘加&lt;span class="caps"&gt;SSD&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DisplayLink&lt;/code&gt; 兼容&lt;span class="caps"&gt;USB&lt;/span&gt;显卡, 形成一拖二,三屏工作环境&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;DELL&lt;/span&gt; &lt;span class="caps"&gt;E177FP&lt;/span&gt; 负责 1024*768 标准幅面排版测试&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;DELL&lt;/span&gt; &lt;span class="caps"&gt;U2212HM&lt;/span&gt; 1280*1920 竖屏 &lt;span class="caps"&gt;CLI&lt;/span&gt; + 文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;FILCO&lt;/span&gt; &lt;span class="caps"&gt;MINILA&lt;/span&gt; 青轴 ~ 替代 &lt;span class="caps"&gt;HHKB&lt;/span&gt; lite2 (用了5年)&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;WACOM&lt;/span&gt; &lt;span class="caps"&gt;INTUOS&lt;/span&gt; pen small ~ 替代鼠标&lt;/li&gt;
+&lt;li&gt;actto 杂牌支架&lt;/li&gt;
+&lt;li&gt;microlab 4.1 有源音箱 (用了超过8年)&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AKG&lt;/span&gt; K99 耳机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;备用机器&lt;ul&gt;
+&lt;li&gt;ThinkPad X230i ~ 只是进行 M$ 环境测试用&lt;/li&gt;
+&lt;li&gt;Chromebook Pixel 32G 国际版 ~ 基本用来展示和进行 Hangout 中控机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Seagate GoFlex for &lt;span class="caps"&gt;MAC&lt;/span&gt; 1Tb 移动硬盘,作为 TimeMachine 和 脚本备份目标空间&lt;/li&gt;
+&lt;li&gt;配合家庭服务器:&lt;ul&gt;
+&lt;li&gt;CubieBoard3 A20 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortex™-A7 Dual&lt;/li&gt;
+&lt;li&gt;配 2Tb 2.5 &lt;span class="caps"&gt;HHD&lt;/span&gt;,拖3.5 外置硬盘盒,驱动 2Tb 旧硬盘&lt;/li&gt;
+&lt;li&gt;形成一个 4T 的家庭多媒体中心,负责下载/媒体分发,以及工作备份&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Moto 360 &lt;ul&gt;
+&lt;li&gt;Google I/O 2014 的礼品纯粹样子货&lt;/li&gt;
+&lt;li&gt;在有随身设备升级到 Android 4.4 以上前,基本就是个手表+计步器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;移动时:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SAMSUNG&lt;/span&gt; note2 移动协约机+16G &lt;span class="caps"&gt;SD&lt;/span&gt; 扩展空间, 作为主力联系平台&lt;/li&gt;
+&lt;li&gt;iPhone 5c &lt;span class="caps"&gt;USA&lt;/span&gt; 裸机行货,作为主力摄影/支付中心,不配&lt;span class="caps"&gt;SIM&lt;/span&gt; 卡,纯 wifi 使用&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SAMSUNG&lt;/span&gt; T310 + 32G &lt;span class="caps"&gt;SD&lt;/span&gt; 扩展空间, 作为移动媒体中心&lt;/li&gt;
+&lt;li&gt;Kindle paperwhite 一代, 作为主力阅读平台&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SANYOICR&lt;/span&gt;-&lt;span class="caps"&gt;B001M&lt;/span&gt; 录音笔 ~ 进行客观记录&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.logitech.com/en-us/product/hd-pro-webcam-c920"&gt;Logitech® &lt;span class="caps"&gt;HD&lt;/span&gt; Pro Webcam C920&lt;/a&gt; ~ 作为 Hangout 直播的硬件&lt;/li&gt;
+&lt;li&gt;小米电池 10400ma&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;TP&lt;/span&gt;-&lt;span class="caps"&gt;LINK&lt;/span&gt; WR702n mini &lt;span class="caps"&gt;AP&lt;/span&gt; ~ 用来替代酒店的样子 wifi &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3"&gt;3 除了工作的兴趣爱好?装备/钟爱哪些产品?体验如何?&lt;/h3&gt;
+&lt;p&gt;主要兴趣:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;阅读 ~ 特别是 SiFi/技术/史哲/文艺 ,除了诗歌,基本都能吞吐&lt;/li&gt;
+&lt;li&gt;电影 ~ 类似阅读的领域&lt;/li&gt;
+&lt;li&gt;漫画 ~ 有几部追番超过20年了…&lt;/li&gt;
+&lt;li&gt;音乐 ~ 喜欢探索各种音乐形式, 比如,通过 &lt;span class="caps"&gt;XIAMI&lt;/span&gt; 保存在手机中的音乐超过3000首,硬盘上也常备 &amp;gt; 30G 的音乐&lt;/li&gt;
+&lt;li&gt;曲艺 ~ 主要是相声,台湾的…&lt;/li&gt;
+&lt;li&gt;社区 ~ 分享过程也是自个儿的再学习过程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;装备的话:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ikea.com/cn/zh/catalog/products/90160720/"&gt;佩洛 单人沙发/扶手椅 - &lt;span class="caps"&gt;IKEA&lt;/span&gt;&lt;/a&gt; 是用过的最物美价廉的生活品了,就是缺少一个脚垫,可是那垫子比沙发本身都差不多了,,,&lt;/li&gt;
+&lt;li&gt;理光 &lt;span class="caps"&gt;GRD1&lt;/span&gt; ~ 在 &lt;span class="caps"&gt;MINOLTA&lt;/span&gt; DiMAGE F100 停产后买的口袋机, 拍摄了超过4万张照片,直接拍废了…实在是街拍神器!&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MOLESKINE&lt;/span&gt; Plain Reporter Notebook&lt;ul&gt;
+&lt;li&gt;9x14cm - 3.5x5.5” acid-free paper &lt;/li&gt;
+&lt;li&gt;横版&lt;/li&gt;
+&lt;li&gt;软皮 soft cover&lt;/li&gt;
+&lt;li&gt;配合 &lt;span class="caps"&gt;LAMY&lt;/span&gt; safari 狩猎者宝珠笔(签字笔)磨砂黑&lt;/li&gt;
+&lt;li&gt;那叫个贴心…&lt;/li&gt;
+&lt;li&gt;因为要配合自个儿的 &lt;span class="caps"&gt;GTD&lt;/span&gt;+时间管理改进,需要一种可以随身携带,各种姿势都能快速记要各种信息的纸笔组合&lt;/li&gt;
+&lt;li&gt;原先是 daolen A6 线圈本,硬皮有松紧带,夹的笔尝试过各种笔,包括樱花的绘图笔&lt;/li&gt;
+&lt;li&gt;可是总是有点不合意, 终于在持续看了几年 &lt;span class="caps"&gt;MOLESKINE&lt;/span&gt; 的软文后,土豪了一回,淘到相对可接受的软面素描本&lt;/li&gt;
+&lt;li&gt;又刚好有机会去了台北的诚品,现场抢到最后一只 &lt;span class="caps"&gt;LAMY&lt;/span&gt; safari&lt;/li&gt;
+&lt;li&gt;配合起来才发现,真的很值这么多米&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MOLESKINE&lt;/span&gt; 的作工不用说了,而且有收纳袋在最后,可以放名片/口令纸条什么的&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LAMY&lt;/span&gt; 的三角形笔杆,以及 0.7 的粗芯,流畅! 在 &lt;span class="caps"&gt;MOLESKINE&lt;/span&gt; 的中性纸上无论怎么折腾,都好象在进行原画探索似的,特别适合用 思维导图的形式来快速记要/安排/追踪每日事务&lt;/li&gt;
+&lt;li&gt;这一组合,一用,就再也丢不了了,,,&lt;/li&gt;
+&lt;li&gt;唯一问题就是 &lt;span class="caps"&gt;LAMY&lt;/span&gt; safari 有点粗,夹在本子中有点伤,但是,因为是横版 A6 幅面,很难找到合适妥贴的外挂形式,,,继续寻找中.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4"&gt;4 近期内最想要什么产品?或者在关注的事物?&lt;/h3&gt;
+&lt;p&gt;长期口水,但是,老婆不给预算的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HHKB&lt;/span&gt; pro ~ 只要是程序猿,没人不想要的吧&lt;/li&gt;
+&lt;li&gt;Herman Miller Aeron ~ 同上&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;ATH&lt;/span&gt;-M50xBK (&lt;span class="caps"&gt;AKG&lt;/span&gt; K712 &lt;span class="caps"&gt;PRO&lt;/span&gt; 更好,但是…)&lt;/li&gt;
+&lt;li&gt;理光 &lt;span class="caps"&gt;GRD&lt;/span&gt; &lt;span class="caps"&gt;IV&lt;/span&gt; ~ 相比 &lt;span class="caps"&gt;GR1&lt;/span&gt; , &lt;span class="caps"&gt;GRD4&lt;/span&gt; 的 F1.9 实在更加有力&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MINI&lt;/span&gt; Cooper ~ 这个只能梦中了,,,现在驾照都没有…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_2"&gt;参考&lt;/h2&gt;
+&lt;p&gt;~~ http://knewone.com/explore/talks&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以提pr提交回答,感谢:)&lt;/li&gt;
+&lt;li&gt;产品使用体验方面,请稍微写得详细一些,谢谢&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="Livin"></category><category term="Zoomq"></category></entry><entry><title>Mavericks 中用 sshfs</title><link href="http://blog.zoomquiet.io/sshfs-in-mavericks.html" rel="alternate"></link><updated>2014-10-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-10-24:sshfs-in-mavericks.html</id><summary type="html">
 &lt;h1 id="_1"&gt;背景&lt;/h1&gt;
 &lt;p&gt;自从 2011-12-16 入手 &lt;span class="caps"&gt;MBP&lt;/span&gt; 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便&lt;/p&gt;
 &lt;ul&gt;

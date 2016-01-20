@@ -1,5 +1,554 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-12-12T18:18:18+08:00</updated><entry><title>流行之恶</title><link href="http://blog.zoomquiet.io/141212-pop-is-evil.html" rel="alternate"></link><updated>2014-12-12T18:18:18+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:141212-pop-is-evil.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2016-01-20T17:42:00+08:00</updated><entry><title>ZoomQuiet.github.io</title><link href="http://blog.zoomquiet.io/logging42pelican.html" rel="alternate"></link><updated>2016-01-20T17:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-01-20:logging42pelican.html</id><summary type="html">&lt;h1 id="zoomquietgithubio"&gt;ZoomQuiet.github.io&lt;/h1&gt;
+&lt;p&gt;re-build for&amp;nbsp;zoomquiet.io&lt;/p&gt;
+&lt;p&gt;detail&amp;nbsp;in:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/ZoomQuiet/ZoomQuiet.io/blob/master/README.md"&gt;ZoomQuiet.io/&lt;span class="caps"&gt;README&lt;/span&gt;.md at master ·&amp;nbsp;ZoomQuiet/ZoomQuiet.io&lt;/a&gt;&lt;/p&gt;</summary><category term="howto"></category><category term="pelican"></category></entry><entry><title>jump into SSD with Yoesmite</title><link href="http://blog.zoomquiet.io/jump-into-ssd.html" rel="alternate"></link><updated>2015-04-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-04-09:jump-into-ssd.html</id><summary type="html">
+&lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
+&lt;h1 id="_2"&gt;新梗&lt;/h1&gt;
+&lt;h2 id="npm"&gt;npm&lt;/h2&gt;
+&lt;p&gt;$ brew install npm
+==&amp;gt; Downloading https://homebrew.bintray.com/bottles/node-0.12.2_1.yosemite.bottle.tar.gz&lt;/p&gt;
+&lt;h6 id="1000"&gt;################################################################## 100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; Pouring node-0.12.2_1.yosemite.bottle.tar.gz
+==&amp;gt; Caveats
+If you update npm itself, do &lt;span class="caps"&gt;NOT&lt;/span&gt; use the npm update command.
+The upstream-recommended way to update npm is:
+  npm install -g npm@latest&lt;/p&gt;
+&lt;p&gt;Bash completion has been installed to: /usr/local/etc/bash_completion.d&lt;/p&gt;
+&lt;h2 id="subl"&gt;subl&lt;/h2&gt;
+&lt;p&gt;要&lt;/p&gt;
+&lt;h2 id="user"&gt;/User&lt;/h2&gt;
+&lt;p&gt;$ sudo mv /Users /Users_SSD
+$ sudo ln -s /Volumes/Macintosh\ &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/ Users&lt;/p&gt;
+&lt;h2 id="xcode"&gt;XCode&lt;/h2&gt;
+&lt;p&gt;/Volumes/Macintosh\ &lt;span class="caps"&gt;HD&lt;/span&gt;/Applications/Xcode.app/
+$ xcode-select —switch /Applications/Xcode.app&lt;/p&gt;
+&lt;h2 id="svn"&gt;svn&lt;/h2&gt;
+&lt;p&gt;$ brew install subversion
+==&amp;gt; Installing dependencies for subversion: openssl, apr-util, readline, sqlite, scons
+==&amp;gt; Installing subversion dependency: openssl
+==&amp;gt; Downloading https://www.openssl.org/source/openssl-1.0.2a.tar.gz
+Already downloaded: /Library/Caches/Homebrew/openssl-1.0.2a-1.tar.gz
+==&amp;gt; perl ./Configure —prefix=/opt/bin/homebrew/Cellar/openssl/1.0.2a-1 —openssldir=/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;
+==&amp;gt; make depend
+==&amp;gt; make
+==&amp;gt; make test
+==&amp;gt; make install &lt;span class="caps"&gt;MANDIR&lt;/span&gt;=/opt/bin/homebrew/Cellar/openssl/1.0.2a-1/share/man &lt;span class="caps"&gt;MANSUFFIX&lt;/span&gt;=ssl
+installing &lt;span class="caps"&gt;CA&lt;/span&gt;.sh
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file … target_directory
+make[1]: &lt;strong&gt;&lt;em&gt; [install] Error 64
+make: &lt;/em&gt;&lt;/strong&gt; [install_sw] Error 1&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://git.io/brew-troubleshooting&lt;/p&gt;
+&lt;p&gt;These open issues may also help:
+openssl: apply yosemite certificate fix (https://github.com/Homebrew/homebrew/pull/38495)
+problems with cert verification by openssl on 10.10.3 (https://github.com/Homebrew/homebrew/issues/38491)
+Installing Elixir fails due to OpenSSL errors. (https://github.com/Homebrew/homebrew/issues/33218)
+problem with Python 2.7.9 and OpenSSL 1.0.2 (https://github.com/Homebrew/homebrew/issues/38226)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;参考: &lt;a href="http://subversion.apache.org/packages.html#osx"&gt;Apache Subversion Binary Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Flink/Homebrew 都安装不能&lt;/li&gt;
+&lt;li&gt;只好使用: &lt;a href="http://www.wandisco.com/subversion/download#osx"&gt;WANdisco&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subversion-Client-1.8.10_10.10.x&lt;/li&gt;
+&lt;li&gt;安装成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="_3"&gt;老梗&lt;/h1&gt;
+&lt;h2 id="_4"&gt;输入法&lt;/h2&gt;
+&lt;h2 id="brew"&gt;brew&lt;/h2&gt;
+&lt;h2 id="leo"&gt;Leo&lt;/h2&gt;
+&lt;p&gt;The sip-dir for Python is /Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/share/sip.&lt;/p&gt;
+&lt;p&gt;Python modules have been installed and Homebrew’s site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+  mkdir -p /Users/zoomq/Library/Python/2.7/lib/python/site-packages
+  echo ‘import site; site.addsitedir(“/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/lib/python2.7/site-packages”)’ &amp;gt;&amp;gt; /Users/zoomq/Library/Python/2.7/lib/python/site-packages/homebrew.pth
+==&amp;gt; Summary
+🍺  /opt/bin/homebrew/Cellar/sip/4.16.5: 10 files, 864K, built in 5 seconds&lt;/p&gt;
+&lt;p&gt;$ brew install pyqt
+==&amp;gt; Installing pyqt dependency: qt
+==&amp;gt; Downloading https://download.qt.io/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.tgz&lt;/p&gt;
+&lt;p&gt;$ brew install pyqt
+==&amp;gt; Downloading https://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.11.3/PyQt-mac-gpl-4.11.3.tar.gz
+Already downloaded: /Library/Caches/Homebrew/pyqt-4.11.3.tar.gz
+==&amp;gt; python configure.py —confirm-license —bindir=/opt/bin/homebrew/Cellar/pyqt/4.11.3/bin —destdir=/opt&lt;/p&gt;
+&lt;p&gt;Error: /Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/opt/qt/bin/qmake failed to create a
+makefile. Make sure you have a working Qt qmake on your &lt;span class="caps"&gt;PATH&lt;/span&gt; or use the -q
+argument to explicitly specify a working Qt qmake.
+Determining the layout of your Qt installation…&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://git.io/brew-troubleshooting&lt;/p&gt;
+&lt;p&gt;/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:878:in `initialize’: Failed to connect to: https://api.github.com/search/issues?q=pyqt+repo:Homebrew/homebrew+in:title+state:open&amp;amp;per_page=100 (GitHub::Error)
+getaddrinfo: nodename nor servname provided, or not known&lt;/p&gt;
+&lt;p&gt;$ brew search qmake
+No formula found for “qmake”.
+Searching pull requests…
+Closed pull requests:
+qmake gets installed by &lt;span class="caps"&gt;QT&lt;/span&gt; (https://github.com/Homebrew/homebrew/pull/31336)
+Added patch for XCode4 support for qmake. (https://github.com/Homebrew/homebrew/pull/10475)
+PyQT5.rb Specify qt5 version of qmake. (https://github.com/Homebrew/homebrew/pull/27059)
+PyQt: patch to fix handling of qmake inline comments (https://github.com/Homebrew/homebrew/pull/25225)
+qscintilla2: define 10.9 qmake make spec for lib and python module (https://github.com/Homebrew/homebrew/pull/25882)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先安装 &lt;a href="http://xquartz.macosforge.org/landing/"&gt;XQuartz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;重启&lt;/li&gt;
+&lt;li&gt;再:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ brew install pyqt
+==&amp;gt; Installing pyqt dependency: qt
+==&amp;gt; Downloading https://download.qt.io/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.t
+Already downloaded: /Library/Caches/Homebrew/qt-4.8.6.tar.gz
+==&amp;gt; Downloading https://raw.githubusercontent.com/DomT4/scripts/440e3cafde5bf6ec6f50cd28fa5bf89c280f1b53/H
+Already downloaded: /Library/Caches/Homebrew/qt—patch-57246a33460246118a1fab7460c79f2077d3a929.diff
+==&amp;gt; Patching
+patching file src/gui/dialogs/qcolordialog_mac.mm
+patching file src/gui/dialogs/qfiledialog_mac.mm
+patching file src/gui/dialogs/qfontdialog_mac.mm
+patching file src/gui/kernel/qapplication_mac.mm
+patching file src/gui/kernel/qcocoaapplication_mac.mm
+patching file src/gui/kernel/qcocoaapplicationdelegate_mac.mm
+Hunk #4 succeeded at 295 (offset -13 lines).
+Hunk #5 succeeded at 342 (offset -13 lines).
+patching file src/gui/kernel/qcocoaapplicationdelegate_mac_p.h
+patching file src/gui/kernel/qcocoamenuloader_mac.mm
+patching file src/gui/kernel/qcocoasharedwindowmethods_mac_p.h
+patching file src/gui/kernel/qeventdispatcher_mac.mm
+patching file src/gui/kernel/qt_cocoa_helpers_mac.mm
+patching file src/gui/kernel/qwidget_mac.mm
+patching file src/gui/styles/qmacstyle_mac.mm
+patching file src/gui/util/qsystemtrayicon_mac.mm
+patching file src/gui/widgets/qcocoamenu_mac.mm
+patching file src/gui/widgets/qmenu_mac.mm
+==&amp;gt; ./configure -prefix /opt/bin/homebrew/Cellar/qt/4.8.6 -system-zlib -qt-libtiff -qt-libpng -qt-libjpeg
+==&amp;gt; make&lt;/p&gt;
+&lt;p&gt;$ which qmake
+/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/bin/qmake&lt;/p&gt;
+&lt;p&gt;$ /opt/bin/homebrew/Cellar/qt/4.8.6/bin/qmake -v
+QMake version 2.01a
+Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib&lt;/p&gt;
+&lt;p&gt;$ qmake -v
+QMake version 2.01a
+Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib&lt;/p&gt;
+&lt;p&gt;哈哈!!!上百M 的怪物哪…&lt;/p&gt;
+&lt;h3 id="qt"&gt;手编 Qt&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://amjith.blogspot.com/2010/09/developing-pyqt4-applications-in-mac-os.html"&gt;Developing PyQt4 Applications in Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X | Core Dump&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="150416-try-again"&gt;150416 try again&lt;/h2&gt;
+&lt;p&gt;删除 /opt/bin/homebrew 的非常安装&lt;/p&gt;
+&lt;p&gt;$ brew install qt sip pyqt
+==&amp;gt; Downloading https://homebrew.bintray.com/bottles/qt-4.8.6.yosemite.bottle.6.tar.gz&lt;/p&gt;
+&lt;h6 id="1000_1"&gt;################################################################## 100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; Pouring qt-4.8.6.yosemite.bottle.6.tar.gz
+==&amp;gt; Caveats
+We agreed to the Qt opensource license for you.
+If this is unacceptable you should uninstall.&lt;/p&gt;
+&lt;p&gt;.app bundles were installed.
+Run &lt;code&gt;brew linkapps qt&lt;/code&gt; to symlink these to /Applications.
+==&amp;gt; Summary
+🍺  /usr/local/Cellar/qt/4.8.6: 2790 files, 122M&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;p&gt;==&amp;gt; ./configure —prefix=/usr/local/Cellar/python/2.7.9 —enable-ipv6 —datarootdir=/usr/local/Cellar/pyth
+==&amp;gt; make
+==&amp;gt; make install &lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;=/usr/local/Cellar/python/2.7.9
+==&amp;gt; make frameworkinstallextras &lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;=/usr/local/Cellar/python/2.7.9/share/python
+==&amp;gt; Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-15.0.tar.gz&lt;/p&gt;
+&lt;h6 id="1000_2"&gt;################################################################## 100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; Downloading https://pypi.python.org/packages/source/p/pip/pip-6.1.0.tar.gz&lt;/p&gt;
+&lt;h6 id="1000_3"&gt;################################################################## 100.0%&lt;/h6&gt;
+&lt;p&gt;==&amp;gt; Caveats
+Pip and setuptools have been installed. To update them
+  pip install —upgrade pip setuptools&lt;/p&gt;
+&lt;p&gt;You can install Python packages with
+  pip install &lt;package&gt;&lt;/package&gt;&lt;/p&gt;
+&lt;p&gt;They will install into the site-package directory /usr/local/lib/python2.7/site-packages&lt;/p&gt;
+&lt;p&gt;See: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md&lt;/p&gt;
+&lt;p&gt;.app bundles were installed.
+Run &lt;code&gt;brew linkapps python&lt;/code&gt; to symlink these to /Applications.&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;p&gt;==&amp;gt; Pouring sip-4.16.5.yosemite.bottle.1.tar.gz
+Traceback (most recent call last):
+  File “&lt;string&gt;“, line 1, in &lt;module&gt;
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+Traceback (most recent call last):
+  File “&lt;string&gt;“, line 1, in &lt;module&gt;
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+==&amp;gt; Caveats
+The sip-dir for Python is /usr/local/share/sip.&lt;/module&gt;&lt;/string&gt;&lt;/module&gt;&lt;/string&gt;&lt;/p&gt;
+&lt;p&gt;Python modules have been installed and Homebrew’s site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+  mkdir -p
+  echo ‘import site; site.addsitedir(“/usr/local/lib/python2.7/site-packages”)’ &amp;gt;&amp;gt; homebrew.pth
+==&amp;gt; Summary
+🍺  /usr/local/Cellar/sip/4.16.5: 10 files, 864K&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;p&gt;==&amp;gt; Pouring pyqt-4.11.3.yosemite.bottle.tar.gz
+Traceback (most recent call last):
+  File “&lt;string&gt;“, line 1, in &lt;module&gt;
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+Traceback (most recent call last):
+  File “&lt;string&gt;“, line 1, in &lt;module&gt;
+AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+==&amp;gt; Caveats
+Phonon support is broken.&lt;/module&gt;&lt;/string&gt;&lt;/module&gt;&lt;/string&gt;&lt;/p&gt;
+&lt;p&gt;Python modules have been installed and Homebrew’s site-packages is not
+in your Python sys.path, so you will not be able to import the modules
+this formula installed. If you plan to develop with these modules,
+please run:
+  mkdir -p
+  echo ‘import site; site.addsitedir(“/usr/local/lib/python2.7/site-packages”)’ &amp;gt;&amp;gt; homebrew.pth
+==&amp;gt; Summary
+🍺  /usr/local/Cellar/pyqt/4.11.3: 560 files, 19M&lt;/p&gt;
+&lt;h1 id="_5"&gt;回顾&lt;/h1&gt;
+&lt;p&gt;宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾!&lt;/p&gt;
+&lt;p&gt;唯三的折腾:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Python 环境&lt;/li&gt;
+&lt;li&gt;Qt 环境&lt;/li&gt;
+&lt;li&gt;sshfs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;严正推荐:&lt;/p&gt;
+&lt;p&gt;&lt;a href="file:///Users/zoomq/mnt/%E5%BF%AB%E7%9B%98/zScrapBook/ZqFLOSS/data/20131230190257/index.html"&gt;Mavericksでbrew upgradeしたらハマった話&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;等等日文的相关纪要非常实在,直觉,顺序合理,值得,多参考.&lt;/p&gt;
+&lt;h2 id="python-qt-for-leo"&gt;Python + Qt for Leo&lt;/h2&gt;
+&lt;p&gt;大家知道俺是 &lt;a href="http://wiki.woodpecker.org.cn/moin/LiterateProgramming"&gt;文学化编程&lt;/a&gt;
+的拥趸,
+所以,一直使用 &lt;a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment"&gt;Leo&lt;/a&gt; 作为主要编程环境的,&lt;/p&gt;
+&lt;p&gt;10.9 以后 Python 不内置安装了,
+Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
+&lt;h3 id="python"&gt;Python&lt;/h3&gt;
+&lt;p&gt;当然,系统的用 &lt;code&gt;brew install python&lt;/code&gt; 了,&lt;/p&gt;
+&lt;p&gt;而其它各种项目开发时,就要综合使用&lt;/p&gt;
+&lt;h4 id="pyenvvirtualenv"&gt;Pyenv+VirtualEnv&lt;/h4&gt;
+&lt;p&gt;Pyenv 是这样一种神器:&lt;/p&gt;
+&lt;p&gt;完全的面向shell
+  通过环境变量的自动配置 形成复合Python版本共存&lt;/p&gt;
+&lt;p&gt;VirtualEnv 有 Pyenv 的插件
+所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pyenv versions
+* system &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set &lt;/span&gt;by /Users/zoomq/.pyenv/version&lt;span class="o"&gt;)&lt;/span&gt;
+  2.7.3
+  2.7.5
+  2.7.6
+  &lt;span class="caps"&gt;273SAE&lt;/span&gt;
+  275lbTC
+  275pelican
+  276SphinxOBP
+  276chaos
+  276uliweb
+  3.2
+  3.3.2
+  32IPy
+  ipynotebook
+  pypy-2.2.1
+  pypy221chaos
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;主要遇到的问题是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;==&amp;gt; Installing python3
+==&amp;gt; Downloading http://python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2
+######################################################################## 100.0%
+==&amp;gt; ./configure --prefix=/usr/local/Cellar/python3/3.3.3 --enable-ipv6 --datarootdir=/usr/local/Cellar/python3/3.3.3/share --datadir=/usr/lo
+==&amp;gt; make
+==&amp;gt; make install PYTHONAPPSDIR=/usr/local/Cellar/python3/3.3.3
+==&amp;gt; make frameworkinstallextras PYTHONAPPSDIR=/usr/local/Cellar/python3/3.3.3/share/python3
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ValueError: list.remove(x): x not in list
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;指定具体版本,尝试,直到可以顺利安装出可用的就好.&lt;/p&gt;
+&lt;p&gt;严正表扬一下 ‘Yamashita, Yuu`&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/yyuu/pyenv/issues/95#issuecomment-31392999"&gt;How to config pyenv’s pip ? · Issue #95 · yyuu/pyenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;绝对认真的回答了俺的提问,虽然不了了之,但是,一个常用工具的作者,可以如此关注一个不是问题的问题,实在太勤勉了,必须学习!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="qt-for-leo"&gt;Qt for Leo&lt;/h3&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://support.apple.com/kb/HT5293"&gt;About X11 and &lt;span class="caps"&gt;OS&lt;/span&gt; X&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://xquartz.macosforge.org/landing/"&gt;XQuartz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以及:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew install &lt;span class="nv"&gt;pyqt&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
+Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Patching
+patching file configure.py
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; /usr/local/opt/python/bin/python2 configure.py --confirm-license --bindir&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/Cellar/pyqt/4.10.3/bin --destdir&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/Cellar/
+Error: Unable to find the qmake configuration file
+/usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
+Use the &lt;span class="caps"&gt;QMAKESPEC&lt;/span&gt; environment variable to specify the correct platform.
+Determining the layout of your Qt installation...
+
+&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://github.com/Homebrew/homebrew/wiki/troubleshooting
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,&lt;/p&gt;
+&lt;p&gt;然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# ~/.bashrc for running Leo&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;leolanch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="sshfs"&gt;伟光大的 sshfs&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew link fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2... Warning: Could not link fuse4x. Unlinking...
+
+Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
+Target /usr/local/lib/pkgconfig/fuse.pc already exists. You may need to delete it.
+To force the link and overwrite all other conflicting files, &lt;span class="k"&gt;do&lt;/span&gt;:
+  brew link --overwrite formula_name
+
+To list all files that would be deleted:
+  brew link --overwrite --dry-run formula_name
+
+zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in /usr/local/lib
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew link --overwrite fuse4x
+Linking /usr/local/Cellar/fuse4x/0.9.2... &lt;span class="m"&gt;7&lt;/span&gt; symlinks created
+
+
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew install &lt;span class="nv"&gt;osxfuse&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Caveats
+If upgrading from a previous version of osxfuse, the previous kernel extension
+will need to be unloaded before installing the new version. First, check that
+no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:
+
+  mount -t osxfusefs
+
+Unmount all &lt;span class="caps"&gt;FUSE&lt;/span&gt; file systems and &lt;span class="k"&gt;then&lt;/span&gt; unload the kernel extension:
+
+  sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs
+
+The new osxfuse file system bundle needs to be installed by the root user:
+
+  sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.2/Library/Filesystems/osxfusefs.fs /Library/Filesystems
+  sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Summary
+🍺  /usr/local/Cellar/osxfuse/2.6.2: &lt;span class="m"&gt;84&lt;/span&gt; files, 5.0M
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;具体哪个管用,俺也没整明白,
+反正,怎么折腾,
+都是可以正当加载上 &lt;code&gt;Plan&lt;/code&gt; 的内核库, 然后就可以对家庭服务器的所有硬盘,远程加载为本地目录了..&lt;/p&gt;
+&lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
+&lt;li&gt;140505 快速简述完成&lt;/li&gt;
+&lt;li&gt;140110 起意,总结&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>为毛俺不担心所谓Python用户流失</title><link href="http://blog.zoomquiet.io/saying-ggodby-python-zh.html" rel="alternate"></link><updated>2015-01-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-01-10:saying-ggodby-python-zh.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This post is long overdue; this isn’t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
+&lt;p&gt;While I had moved on from Python years ago, I felt a certain attachment to it well past then, not quite admitting to myself that I wasn’t coming back. When my proposal for PyCon 2013 was rejected I was frustrated (it was going to be a fun talk!) but for some reason that made me fully realized that I wasn’t part of the Python community&amp;nbsp;anymore.&lt;/p&gt;
+&lt;p&gt;Python was the first — and I sometimes wonder if the only — programming community I was part of. Coming to Python was a conscious choice. In college I was interested in Scheme and Smalltalk. High-minded languages with interesting ideas, but hard to find practical uses. Scheme was always too underserved by its libraries and sparse academic community. In contrast Smalltalk was productive — it was built by and for people who loved to build things. (More credit here should probably go to Dan Ingalls than Alan Kay — I can sense in Dan Ingalls’s work a real passion for making things, and a pure but unproductive language would not have satisfied him.) But Smalltalk was and is a world of its own. It was culturally and technically pre-internet, pre-open-source, pre-online-community. And despite all the great things about the Smalltalk environment and language it couldn’t fulfill these then-new potentials, even as it tried to adapt. (I wrote a couple posts about this, intended as a sort of sympathetic explanation of why I couldn’t stick with Smalltalk: Where Smalltalk Went Wrong and a&amp;nbsp;followup.)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Daniel_Henry_Holmes_Ingalls,_Jr."&gt;Dan&amp;nbsp;Ingalls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Alan_Kay"&gt;Alan&amp;nbsp;Kay&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.ianbicking.org/where-smalltalk-went-wrong.html"&gt;Where Smalltalk Went&amp;nbsp;Wrong&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.ianbicking.org/where-smalltalk-went-wrong-2.html"&gt;a&amp;nbsp;followup&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At the end of my college career (1999ish) I consciously looked for a new home. I flirted with Perl, C, but knew they weren’t for me. Somewhere along the way I came upon Python, and it was good enough that I didn’t look for anything better. I can’t say I fell in love with Python like I had with Scheme and Smalltalk — Scheme was like an opening up of the world after going far beyond what anyone should ask of &lt;span class="caps"&gt;GW&lt;/span&gt;-&lt;span class="caps"&gt;BASIC&lt;/span&gt;, and Squeak/Smalltalk was a deep mysterious world, like coming upon the ruins of an ancient and advanced civilization. Python in comparison was practical — but I wasn’t in the mood at that time to discover, I wanted to&amp;nbsp;build.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/GW-BASIC"&gt;&lt;span class="caps"&gt;GW&lt;/span&gt; -&amp;nbsp;&lt;span class="caps"&gt;BASIC&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And I built a lot of things in Python. I was doing workaday web programming and my enthusiasm went more towards building tools to build stuff than in the building itself. I did build some cool products in those days, not just libraries, but for some reason it’s only the smaller units that I was able to push out. And I found a community in&amp;nbsp;Python.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ianbicking.org/projects.html"&gt;built a lot of things in&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And I built. Back in the days I contributed to Webware, what felt like a completely different generation of web development in Python than today. I wrote SQLObject, my first foray into a oh-shit-people-are-using-this-I’m-not-sure-how-I-feel-about-that library. But SQLObject explored a lot of metaprogramming concepts that were quite novel in the Python world at that time. At the same time maintaining it felt like a terrible burden. It took me far too long to resolve that, and only once interest had died down (in no small part due to my lack of attention) did I hand it over to Oleg who has been a far more steady hand. This would be a pattern I would unfortunately repeat. But if SQLObject helped the next generation be better that’s good enough for&amp;nbsp;me.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.webwareforpython.org/"&gt;Webware&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://sqlobject.org/"&gt;SQLObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://phdru.name/"&gt;Oleg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.sqlalchemy.org/"&gt;next&amp;nbsp;generation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Later came &lt;span class="caps"&gt;WSGI&lt;/span&gt; which excited me with its subtly functional basis. I built a whole web framework toolkit (or a framework for building web frameworks?) in Paste. Few people really understood what I was trying to do with Paste — at times including me. Some people like Ben Bangert were able to see the principles underneath the code, and get them out into the world in the kind of usable state that I intended to enable. (And along the way I sometimes felt like I was doing the same for &lt;span class="caps"&gt;PJE&lt;/span&gt;.) Python web frameworks were a mess back then; ultimately reaching for the crown using a monolithic approach was a more successful technique than trying to build bridges as I attempted with Paste. I’m still not sure what lesson to take from that. Not a general lesson, but more understanding the landscape. And understanding what you can bring to a problem, and who you can bring with. I feel like I’m only now really understanding the importance of vision combined with a diverse group of skills and perspectives, and I have even more to learn about how to actually assemble and coordinate the right group of people in the right environment to&amp;nbsp;succeed.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://wsgi.readthedocs.org/"&gt;&lt;span class="caps"&gt;WSGI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pythonpaste.org/"&gt;Paste&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://groovie.org/"&gt;Ben&amp;nbsp;Bangert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.djangoproject.com/"&gt;reaching for the&amp;nbsp;crown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Somewhere around here I feel like I reached my 10,000 hours of Python coding. I wrote WebOb, taking the lessons of Paste and a better intuition for library design. I still think it’s the best mapping of &lt;span class="caps"&gt;HTTP&lt;/span&gt; to Python. Other libraries include more aspects of web development in their scope, or have better documentation, and more users, but when viewed with a particular lens I’m still very proud of WebOb. And it’s been an important building block in a lot of people’s explorations into building a web framework. Other libraries from this period are lxml.html, smaller things like WebTest, ScriptTest, MiniMock, Tempita, perhaps the over-ambition (or just mis-ambition) of Deliverance. That period felt like a clearing out of my system, unloading a bunch of&amp;nbsp;ideas.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://webob.org/"&gt;WebOb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.webob.org/en/latest/do-it-yourself.html"&gt;building a web&amp;nbsp;framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://lxml.de/lxmlhtml.html"&gt;lxml.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://webtest.pythonpaste.org/"&gt;WebTest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pythonpaste.org/scripttest/"&gt;ScriptTest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pypi.python.org/pypi/MiniMock"&gt;MiniMock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pythonpaste.org/tempita/"&gt;Tempita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.coactivate.org/projects/deliverance/introduction"&gt;Deliverance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But for whatever reason my most successful tools were virtualenv and pip. These were never my greatest passions, or even close. They were about: (a) fixing personal annoyances in deployment (virtualenv), and (b) getting people to stop fucking whining about Setuptools and easy_install (pip). I’m not sure whether I blame the uneasy success of these tools on broad appeal, or that they are in a sense user-visible tools and not libraries, or that I didn’t like doing them because no one liked doing them and so there was a vacuum waiting to be&amp;nbsp;filled.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.virtualenv.org/"&gt;virtualenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.pip-installer.org/"&gt;pip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And then my last project, Silver Lining. It was early on in the devops revolution, an attempt to think about what a generic container for web applications might look like. It was in a sense going deeper down the hole of virtualenv and pip, but with an aim to build a full product and not just a set of eclectic tools. No one cared. And I only cared a little — I cared because it was completing some ideas I’d long had about deployment, because for a certain kind of web application development it felt nimble and reliable, because it removed or automated tasks I didn’t like to do. But I didn’t care, no more than I cared about virtualenv or pip. I’d gone down a path that was about code and technical design, but if I stepped back it was&amp;nbsp;unexciting.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://bitbucket.org/ianb/silverlining/src"&gt;Silver&amp;nbsp;Lining&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And when I did step back there wasn’t anything in Python that excited me. Python was doing great, my interest had nothing to jumping on or off bandwagons. Python is doing great — better than ever (minor bumps with versions aside). But I think in my mind I’d always imagined I could build up just the right toolset, and using that toolset create the product I actually wanted to create — what exactly that product was, I don’t know, but with the right tools I imagined I could move fast enough and confidently enough to find&amp;nbsp;it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://plus.google.com/+IanBicking/posts/iEVXdcfXkz7"&gt;minor bumps with versions&amp;nbsp;aside&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sometimes when I’m feeling particularly excited about an idea, like really excited, I have to take a break. I need to calm down. Try to wrap my head around the ideas, because I know if I push forward directly that I’ll just muddle things up and feel disappointed. No, I don’t know that is true: maybe I don’t want to have to confront, in that moment, that the idea is not as cool as I think it is, or as possible as I think it is. But often I do step back into the problem, with ideas that are more mature for having thought more deeply about them. In a sense I think creating tools and libraries was a similar process: I felt too excited about creating something great, because I worried I’d muddle everything up, or afraid I just couldn’t pull it off, and so I stepped away and would work on&amp;nbsp;tools.&lt;/p&gt;
+&lt;p&gt;I always directed my attention to the web, even if I got bogged down in the server. Somehow I skipped native GUIs, even as a user. But pure data processing without consideration for what you do with the data felt unexciting. And ops — that’s just the worst. I was, and am, a true believer in Free Software; and I was, and am, a true believer in the web. That is, I don’t see either as simply a means to an ends. But not for the same reasons, and I can believe in a web that isn’t open source, and open source that isn’t for the web. And yet writing it down I realize I don’t care about open source that isn’t for the&amp;nbsp;web.&lt;/p&gt;
+&lt;p&gt;When I stepped back Python no longer seemed relevant to the web, at least not the part of the web that interested me. The tools I had built were no longer relevant either, they were not the tools with which I could realize my ambitions. The database-backed website, or the dynamic-&lt;span class="caps"&gt;HTTP&lt;/span&gt;-based web application, templates and deployments, anything you’d call “&lt;span class="caps"&gt;REST&lt;/span&gt;” — none of it seemed like the future, and whatever this vague thing was that I’d been looking for, I wasn’t going to find it&amp;nbsp;there.&lt;/p&gt;
+&lt;p&gt;This wasn’t an actual revelation, I’m constructing it in retrospect. If you’d asked me I would have agreed with this notion even years earlier, and it’s not like I came up with some unique idea, if anything I would call it self-evident, don’t we all know this is where the world is going? And so I started to look towards Javascript and the browser and the&amp;nbsp;&lt;span class="caps"&gt;DOM&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Somewhat before this I also joined Mozilla. But it would be backwards to say that Mozilla induced this change in perspective, that it tempted me away from Python. In fact I would have had a much easier time of it if I had just stuck with doing Python backend stuff at&amp;nbsp;Mozilla.&lt;/p&gt;
+&lt;p&gt;The last few years of transition have been a struggle. With Python and the server I knew what I was doing. I was good at it, I felt competent. I could construct an opinion with confidence about all kinds of design questions. I was respected and my opinion would be listened to. I’d put in my 10,000 hours, I had achieved&amp;nbsp;mastery.&lt;/p&gt;
+&lt;p&gt;Moving to Javascript none of this was true, and most of it still isn’t true. It might be easier to pull off this change if I was doing web development, surrounded with people making similar transitions, a little fish in the little pond of whatever group I was working with. But Mozilla is not that kind of environment. Which is okay — if I had felt confident it would only be because there was no one to correct&amp;nbsp;me.&lt;/p&gt;
+&lt;p&gt;It’s oddly common to see people talk about how a programmer can pick up something new in the matter of a few days or months. To find programmers that consider all that knowledge transferable (for instance). I don’t know what to make of it — my less forgiving self thinks these people have never known what real mastery is. I don’t think it takes another 10,000 hours to get mastery in a new language and environment… but it definitely takes some thousands of hours, some years of hard work. I only now feel like I’m getting&amp;nbsp;close.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=7204515"&gt;for&amp;nbsp;instance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Maybe it’s my perspective on what mastery is. Deciding to do something and then doing it is good. It is not mastery. You have to pick the right problem to solve. You have to pick the right way to solve it. You need to know when to revise that plan, and understand the constraints that inform that revision. You need both large scale and small scale intuitions. And you need to be good enough at all the details of programming in that environment that you don’t get overwhelmed with the “easy” stuff, so you have mental energy to spare on the big stuff. The jump from Python to Javascript isn’t that big, the languages have a very similar shape. And the browser was already the environment focused on. And yet redeveloping my intuition for this new environment has taken&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;Sadly I’m not going to get back where I was, because Javascript is not Python. If there’s a Javascript community I haven’t found it, or it’s at least not a single entity. There is no community that created Javascript like the Python community created Python. Python comes from the internet in a way Javascript does not; Javascript was built for the internet, but Python was built on the internet. And I do miss the Python community, you’re good&amp;nbsp;people.&lt;/p&gt;
+&lt;p&gt;But also whatever language partisanship I had is gone, and won’t come back in the guise of a new favorite language. This shouldn’t be confused with a disinterest in language. I still get as annoyed as ever by “use the right tool for the job” — the bland truism meant to shut down critical discussion and engagement with the tasks and choices in software engineering, replacing it with a weak passionless technical&amp;nbsp;fatalism.&lt;/p&gt;
+&lt;p&gt;I suppose it is the platform that I am drawn to now before language. And the browser seems like the most interesting platform, not because it’s novel (though it is, it’s a runtime like few others), but because of how concrete it is, and of course how relevant it is to… anything. And the browser is no longer just the servant of a server, I prefer now to think of the browser as an independent agent, connecting to services instead of servers. Obviously that doesn’t describe a great number of running web sites, but it’s the model I see for the future, and a better perspective for understanding future&amp;nbsp;architectures.&lt;/p&gt;
+&lt;p&gt;Still this only addresses which direction I’m looking towards, I still have to walk the path. I don’t want to get caught up in the weeds again, building tools for something I never manage to make. Right now I think I’m on to something in the area of collaboration, first with TogetherJS and now I’m thinking bigger with a new experiment. But while I feel like I’ve reached some competence in executing on these projects, programming is only one piece of bringing forward a larger vision. I still have a lot of learning to do, skills for which I haven’t put in the necessary time. How to recruit support, how to manage the project, how to negotiate between feasibility and user value, how to negotiate compromises in strategy and design. And collaboration itself is a whole domain of expertise. I’ve learned a lot, I can do things, but I am definitely not yet experienced enough to choose to do the right thing in these areas. And at this moment I’m worried I won’t have the room to learn these things, it feels like time is running out just when I’m pulling stuff&amp;nbsp;together.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://togetherjs.com/"&gt;TogetherJS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/mozilla/hotdish"&gt;new&amp;nbsp;experiment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Anyway, that’s where I am now. No longer a language partisan, unclear of what community I am even participating in, I am less sure how to identify and self-identify myself. How do I describe myself now? Even as I find my technical footing I am still adrift. And so it’s hard to say goodbye. So instead I’ll say, Pythonistas: until we meet again. Maybe I’ll meet some of you over&amp;nbsp;here.&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;150112 整理到个人&amp;nbsp;blog&lt;/li&gt;
+&lt;li&gt;150110&amp;nbsp;从周刊中发现,决定翻译&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Weekly"></category><category term="Zh"></category></entry><entry><title>KnewOne-talk 之 大妈 篇</title><link href="http://blog.zoomquiet.io/knewone-talk-zoomq-choise.html" rel="alternate"></link><updated>2014-12-23T23:23:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-23:knewone-talk-zoomq-choise.html</id><summary type="html">
+&lt;p&gt;~ KnewOne talk question list&lt;/p&gt;
+&lt;h2 id="_1"&gt;分享你的生活方式&lt;/h2&gt;
+&lt;p&gt;整体上,俺是一头程序猿,所以,,,&lt;/p&gt;
+&lt;h3 id="1"&gt;1 自我介绍和介绍自己的工作/擅长的领域,允许给自己打广告~&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Zoom.Quiet PyChina.org | 蠎中国社区" src="http://pychina.org/volunteer/zoomquiet.html"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python中文社区创始人(之一) / 管理员, 热心于 Python 等等社区的公益事业, 大家熟知的社区”&lt;a href="http://wiki.woodpecker.org.cn/moin/ZoomQuietAbt"&gt;大妈&lt;/a&gt;“;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;O.B.&lt;/span&gt;P (&lt;a href="https://code.google.com/p/openbookproject/"&gt;Open Book Proj.~中文蟒样开放图书计划&lt;/a&gt;) 及 蟒营(&lt;a href="https://code.google.com/p/kcpycamp/wiki/PythoniCamp"&gt;PythoniCamp&lt;/a&gt;) 工程设计者 /主持人; &lt;/li&gt;
+&lt;li&gt;参与并主持各种线上 / 线下活动; 主持编撰了 &amp;lt;&amp;lt;可爱的Python&amp;gt;&amp;gt; 等图书&lt;/li&gt;
+&lt;li&gt;坚持用 Pythonic 感化国人进入 &lt;span class="caps"&gt;FLOSS&lt;/span&gt;世界进行学习 / 分享 / 创造…&lt;/li&gt;
+&lt;li&gt;擅长:&lt;ul&gt;
+&lt;li&gt;Pythonic入门宣传;实效敏捷配置管理;技术社区文化促生;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PKM&lt;/span&gt; ~ &lt;span class="caps"&gt;GTD&lt;/span&gt;/个人效率工具箱/文学化编程;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;EKM&lt;/span&gt; ~ 企業知识管理策略理解;企業自学习型组织促生;企業对外技术社区管理; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;不过,最专精的可能就是 &lt;code&gt;吐糟&lt;/code&gt; 了, 对各种涉及技术世界的囧事儿,不遗余力的持续吐糟&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#PPT去死去死&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#PHP是最好的语言&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#每天都被老婆打&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;等等流行标签倡导者&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2"&gt;2 工作时都装备了哪些东西?说说体验. (电子设备,工作环境等)&lt;/h3&gt;
+&lt;p&gt;坐班时:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MBP&lt;/span&gt; 主力工作界面&lt;ul&gt;
+&lt;li&gt;MacBook Pro (15-inch, Late 2011), 升级到 10.10, 内存只有8G, 没有去光盘加&lt;span class="caps"&gt;SSD&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DisplayLink&lt;/code&gt; 兼容&lt;span class="caps"&gt;USB&lt;/span&gt;显卡, 形成一拖二,三屏工作环境&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;DELL&lt;/span&gt; &lt;span class="caps"&gt;E177FP&lt;/span&gt; 负责 1024*768 标准幅面排版测试&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;DELL&lt;/span&gt; &lt;span class="caps"&gt;U2212HM&lt;/span&gt; 1280*1920 竖屏 &lt;span class="caps"&gt;CLI&lt;/span&gt; + 文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;FILCO&lt;/span&gt; &lt;span class="caps"&gt;MINILA&lt;/span&gt; 青轴 ~ 替代 &lt;span class="caps"&gt;HHKB&lt;/span&gt; lite2 (用了5年)&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;WACOM&lt;/span&gt; &lt;span class="caps"&gt;INTUOS&lt;/span&gt; pen small ~ 替代鼠标&lt;/li&gt;
+&lt;li&gt;actto 杂牌支架&lt;/li&gt;
+&lt;li&gt;microlab 4.1 有源音箱 (用了超过8年)&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AKG&lt;/span&gt; K99 耳机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;备用机器&lt;ul&gt;
+&lt;li&gt;ThinkPad X230i ~ 只是进行 M$ 环境测试用&lt;/li&gt;
+&lt;li&gt;Chromebook Pixel 32G 国际版 ~ 基本用来展示和进行 Hangout 中控机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Seagate GoFlex for &lt;span class="caps"&gt;MAC&lt;/span&gt; 1Tb 移动硬盘,作为 TimeMachine 和 脚本备份目标空间&lt;/li&gt;
+&lt;li&gt;配合家庭服务器:&lt;ul&gt;
+&lt;li&gt;CubieBoard3 A20 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortex™-A7 Dual&lt;/li&gt;
+&lt;li&gt;配 2Tb 2.5 &lt;span class="caps"&gt;HHD&lt;/span&gt;,拖3.5 外置硬盘盒,驱动 2Tb 旧硬盘&lt;/li&gt;
+&lt;li&gt;形成一个 4T 的家庭多媒体中心,负责下载/媒体分发,以及工作备份&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Moto 360 &lt;ul&gt;
+&lt;li&gt;Google I/O 2014 的礼品纯粹样子货&lt;/li&gt;
+&lt;li&gt;在有随身设备升级到 Android 4.4 以上前,基本就是个手表+计步器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;移动时:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SAMSUNG&lt;/span&gt; note2 移动协约机+16G &lt;span class="caps"&gt;SD&lt;/span&gt; 扩展空间, 作为主力联系平台&lt;/li&gt;
+&lt;li&gt;iPhone 5c &lt;span class="caps"&gt;USA&lt;/span&gt; 裸机行货,作为主力摄影/支付中心,不配&lt;span class="caps"&gt;SIM&lt;/span&gt; 卡,纯 wifi 使用&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SAMSUNG&lt;/span&gt; T310 + 32G &lt;span class="caps"&gt;SD&lt;/span&gt; 扩展空间, 作为移动媒体中心&lt;/li&gt;
+&lt;li&gt;Kindle paperwhite 一代, 作为主力阅读平台&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SANYOICR&lt;/span&gt;-&lt;span class="caps"&gt;B001M&lt;/span&gt; 录音笔 ~ 进行客观记录&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.logitech.com/en-us/product/hd-pro-webcam-c920"&gt;Logitech® &lt;span class="caps"&gt;HD&lt;/span&gt; Pro Webcam C920&lt;/a&gt; ~ 作为 Hangout 直播的硬件&lt;/li&gt;
+&lt;li&gt;小米电池 10400ma&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;TP&lt;/span&gt;-&lt;span class="caps"&gt;LINK&lt;/span&gt; WR702n mini &lt;span class="caps"&gt;AP&lt;/span&gt; ~ 用来替代酒店的样子 wifi &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3"&gt;3 除了工作的兴趣爱好?装备/钟爱哪些产品?体验如何?&lt;/h3&gt;
+&lt;p&gt;主要兴趣:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;阅读 ~ 特别是 SiFi/技术/史哲/文艺 ,除了诗歌,基本都能吞吐&lt;/li&gt;
+&lt;li&gt;电影 ~ 类似阅读的领域&lt;/li&gt;
+&lt;li&gt;漫画 ~ 有几部追番超过20年了…&lt;/li&gt;
+&lt;li&gt;音乐 ~ 喜欢探索各种音乐形式, 比如,通过 &lt;span class="caps"&gt;XIAMI&lt;/span&gt; 保存在手机中的音乐超过3000首,硬盘上也常备 &amp;gt; 30G 的音乐&lt;/li&gt;
+&lt;li&gt;曲艺 ~ 主要是相声,台湾的…&lt;/li&gt;
+&lt;li&gt;社区 ~ 分享过程也是自个儿的再学习过程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;装备的话:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ikea.com/cn/zh/catalog/products/90160720/"&gt;佩洛 单人沙发/扶手椅 - &lt;span class="caps"&gt;IKEA&lt;/span&gt;&lt;/a&gt; 是用过的最物美价廉的生活品了,就是缺少一个脚垫,可是那垫子比沙发本身都差不多了,,,&lt;/li&gt;
+&lt;li&gt;理光 &lt;span class="caps"&gt;GRD1&lt;/span&gt; ~ 在 &lt;span class="caps"&gt;MINOLTA&lt;/span&gt; DiMAGE F100 停产后买的口袋机, 拍摄了超过4万张照片,直接拍废了…实在是街拍神器!&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MOLESKINE&lt;/span&gt; Plain Reporter Notebook&lt;ul&gt;
+&lt;li&gt;9x14cm - 3.5x5.5” acid-free paper &lt;/li&gt;
+&lt;li&gt;横版&lt;/li&gt;
+&lt;li&gt;软皮 soft cover&lt;/li&gt;
+&lt;li&gt;配合 &lt;span class="caps"&gt;LAMY&lt;/span&gt; safari 狩猎者宝珠笔(签字笔)磨砂黑&lt;/li&gt;
+&lt;li&gt;那叫个贴心…&lt;/li&gt;
+&lt;li&gt;因为要配合自个儿的 &lt;span class="caps"&gt;GTD&lt;/span&gt;+时间管理改进,需要一种可以随身携带,各种姿势都能快速记要各种信息的纸笔组合&lt;/li&gt;
+&lt;li&gt;原先是 daolen A6 线圈本,硬皮有松紧带,夹的笔尝试过各种笔,包括樱花的绘图笔&lt;/li&gt;
+&lt;li&gt;可是总是有点不合意, 终于在持续看了几年 &lt;span class="caps"&gt;MOLESKINE&lt;/span&gt; 的软文后,土豪了一回,淘到相对可接受的软面素描本&lt;/li&gt;
+&lt;li&gt;又刚好有机会去了台北的诚品,现场抢到最后一只 &lt;span class="caps"&gt;LAMY&lt;/span&gt; safari&lt;/li&gt;
+&lt;li&gt;配合起来才发现,真的很值这么多米&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MOLESKINE&lt;/span&gt; 的作工不用说了,而且有收纳袋在最后,可以放名片/口令纸条什么的&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LAMY&lt;/span&gt; 的三角形笔杆,以及 0.7 的粗芯,流畅! 在 &lt;span class="caps"&gt;MOLESKINE&lt;/span&gt; 的中性纸上无论怎么折腾,都好象在进行原画探索似的,特别适合用 思维导图的形式来快速记要/安排/追踪每日事务&lt;/li&gt;
+&lt;li&gt;这一组合,一用,就再也丢不了了,,,&lt;/li&gt;
+&lt;li&gt;唯一问题就是 &lt;span class="caps"&gt;LAMY&lt;/span&gt; safari 有点粗,夹在本子中有点伤,但是,因为是横版 A6 幅面,很难找到合适妥贴的外挂形式,,,继续寻找中.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4"&gt;4 近期内最想要什么产品?或者在关注的事物?&lt;/h3&gt;
+&lt;p&gt;长期口水,但是,老婆不给预算的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HHKB&lt;/span&gt; pro ~ 只要是程序猿,没人不想要的吧&lt;/li&gt;
+&lt;li&gt;Herman Miller Aeron ~ 同上&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;ATH&lt;/span&gt;-M50xBK (&lt;span class="caps"&gt;AKG&lt;/span&gt; K712 &lt;span class="caps"&gt;PRO&lt;/span&gt; 更好,但是…)&lt;/li&gt;
+&lt;li&gt;理光 &lt;span class="caps"&gt;GRD&lt;/span&gt; &lt;span class="caps"&gt;IV&lt;/span&gt; ~ 相比 &lt;span class="caps"&gt;GR1&lt;/span&gt; , &lt;span class="caps"&gt;GRD4&lt;/span&gt; 的 F1.9 实在更加有力&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MINI&lt;/span&gt; Cooper ~ 这个只能梦中了,,,现在驾照都没有…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_2"&gt;参考&lt;/h2&gt;
+&lt;p&gt;~~ http://knewone.com/explore/talks&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以提pr提交回答,感谢:)&lt;/li&gt;
+&lt;li&gt;产品使用体验方面,请稍微写得详细一些,谢谢&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="Livin"></category><category term="Zoomq"></category></entry><entry><title>流行之恶</title><link href="http://blog.zoomquiet.io/141212-pop-is-evil.html" rel="alternate"></link><updated>2014-12-12T18:18:18+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:141212-pop-is-evil.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="popular_science_logo.png" src="http://zoomq.qiniudn.com/ZQCollection/logo/popular_science_logo.png?watermark/2/text/Wm9vbS5RdWlldA==/fill/V2hpdGU=/fontsize/320/dissolve/85|imageView2/2/w/320"/&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;hello,
     你觉得有生命力流行的东西就是好的么,
@@ -117,6 +666,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="change-log"&gt;Change log&lt;/h2&gt;
+&lt;p&gt;原稿: &lt;a href="http://blog.zoomquiet.io/141212-pop-is-evil.html"&gt;流行之恶&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;141212 后台运算了两天,尝试输出第一次&lt;/li&gt;
 &lt;li&gt;141210 被戳提问&lt;/li&gt;
@@ -1359,19 +1909,20 @@ $ ls zqSCM/data/ | wc -l
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"-Rfv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;del_dir&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;用 sh 删除目录&lt;/p&gt;
-&lt;p&gt;tree_nodes:  3574
-exp_items:  4164
-dirs:  590
-&lt;span class="caps"&gt;DESC&lt;/span&gt; : 24190
-chaos: 20616
-有效: 3574
-$ ls reDevRel/data/ | wc -l 2996&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;用 lxml/模板 重构 rdf&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;用 sh 删除目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    tree_nodes:  3574
+    exp_items:  4164
+    dirs:  590
+    DESC : 24190
+    chaos: 20616
+    有效: 3574
+$ ls reDevRel/data/ | wc -l
+    2996
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;用 lxml/模板 重构 rdf&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;人肉来总是感觉不对,&lt;/p&gt;
 &lt;p&gt;尝试:&lt;/p&gt;
@@ -1380,210 +1931,227 @@ $ ls reDevRel/data/ | wc -l 2996&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="untangle"&gt;untangle&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://github.com/stchris/untangle"&gt;stchris/untangle&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
-RDF_Description     24190
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-&lt;open '_chaos="" 'wb'="" 0x100666ed0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
-        exp_level_idx() RUNed~ 2263.57079 ms&lt;/open&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Seq&lt;/span&gt;         &lt;span class="mi"&gt;579&lt;/span&gt;
+&lt;span class="n"&gt;RDF_Description&lt;/span&gt;     &lt;span class="mi"&gt;24190&lt;/span&gt;
+&lt;span class="n"&gt;&lt;span class="caps"&gt;NC&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;BookmarkSeparator&lt;/span&gt;    &lt;span class="mi"&gt;57&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mode&lt;/span&gt; &lt;span class="s1"&gt;'wb'&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="mh"&gt;0x100666ed0&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="n"&gt;exp_level_idx&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="n"&gt;RUNed&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="mf"&gt;2263.57079&lt;/span&gt; &lt;span class="n"&gt;ms&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;快,但是,无法Dump,而且书写不直觉, 要将 “:” 变成 “_” obj.RDF_RDF.RDF_Description&lt;/p&gt;
-&lt;p&gt;&lt;open '_chaos="" 'wb'="" 0x100769ed0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;lt;open file '_chaos/scraotools_reDevRel.pkl', mode 'wb' at 0x100769ed0&amp;gt;
 Traceback (most recent call last):
-  File “scraptools/zq_chk4scrap.py”, line 457, in &lt;module&gt;
-&lt;span class="caps"&gt;RDFD&lt;/span&gt; = exp_level_idx(&lt;span class="caps"&gt;MYBOOK&lt;/span&gt;)
-  File “scraptools/zq_chk4scrap.py”, line 161, in cal_time
+  File "scraptools/zq_chk4scrap.py", line 457, in &amp;lt;module&amp;gt;
+    RDFD = exp_level_idx(MYBOOK)
+  File "scraptools/zq_chk4scrap.py", line 161, in cal_time
     result = func(*args)
-  File “scraptools/zq_chk4scrap.py”, line 205, in exp_level_idx
+  File "scraptools/zq_chk4scrap.py", line 205, in exp_level_idx
     pickle.dump(obj.RDF_RDF, output)
-  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 1370, in dump
+  File "/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py", line 1370, in dump
     Pickler(file, protocol).dump(obj)
-  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 224, in dump
+  File "/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py", line 224, in dump
     self.save(obj)
-  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 286, in save
+  File "/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py", line 286, in save
     f(self, obj) # Call unbound method with explicit self
-  File “/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py”, line 719, in save_inst
-    getstate = obj.&lt;strong&gt;getstate&lt;/strong&gt;
-  File “/Users/zoomq/.pyenv/versions/276chaos/lib/python2.7/site-packages/untangle.py”, line 66, in &lt;strong&gt;getattr&lt;/strong&gt;
-    raise IndexError(‘Unknown key &amp;lt;%s&amp;gt;’ % key)
-IndexError: Unknown key &amp;lt;&lt;strong&gt;getstate&lt;/strong&gt;&amp;gt;&lt;/module&gt;&lt;/open&gt;&lt;/p&gt;
+  File "/Users/zoomq/.pyenv/versions/2.7.6/lib/python2.7/pickle.py", line 719, in save_inst
+    getstate = obj.__getstate__
+  File "/Users/zoomq/.pyenv/versions/276chaos/lib/python2.7/site-packages/untangle.py", line 66, in __getattr__
+    raise IndexError('Unknown key &amp;lt;%s&amp;gt;' % key)
+IndexError: Unknown key &amp;lt;__getstate__&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="xmltodict"&gt;xmltodict&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://github.com/martinblech/xmltodict"&gt;martinblech/xmltodict&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[u’&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’]
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-        exp_level_idx() RUNed~ 4997.31612 ms&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;[u'&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;']&lt;/span&gt;
+&lt;span class="err"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt;         &lt;span class="err"&gt;579&lt;/span&gt;
+&lt;span class="err"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description&lt;/span&gt;     &lt;span class="err"&gt;24190&lt;/span&gt;
+&lt;span class="err"&gt;&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator&lt;/span&gt;    &lt;span class="err"&gt;57&lt;/span&gt;
+        &lt;span class="err"&gt;exp_level_idx()&lt;/span&gt; &lt;span class="err"&gt;RUNed~&lt;/span&gt; &lt;span class="err"&gt;4997.31612&lt;/span&gt; &lt;span class="err"&gt;ms&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;慢,但是,能 dump 而且书写直觉 doc[‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’][‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq’]&lt;/p&gt;
-&lt;p&gt;[u’&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’]
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-&lt;open '_chaos="" 'wb'="" 0x10f26d420="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
-        exp_level_idx() RUNed~ 16878.75390 ms&lt;/open&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;[u'&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;']&lt;/span&gt;
+&lt;span class="err"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt;         &lt;span class="err"&gt;579&lt;/span&gt;
+&lt;span class="err"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description&lt;/span&gt;     &lt;span class="err"&gt;24190&lt;/span&gt;
+&lt;span class="err"&gt;&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator&lt;/span&gt;    &lt;span class="err"&gt;57&lt;/span&gt;
+&lt;span class="err"&gt;&amp;lt;open&lt;/span&gt; &lt;span class="err"&gt;file&lt;/span&gt; &lt;span class="err"&gt;'_chaos/scraotools_reDevRel.pkl',&lt;/span&gt; &lt;span class="err"&gt;mode&lt;/span&gt; &lt;span class="err"&gt;'wb'&lt;/span&gt; &lt;span class="err"&gt;at&lt;/span&gt; &lt;span class="err"&gt;0x10f26d420&amp;gt;&lt;/span&gt;
+        &lt;span class="err"&gt;exp_level_idx()&lt;/span&gt; &lt;span class="err"&gt;RUNed~&lt;/span&gt; &lt;span class="err"&gt;16878.75390&lt;/span&gt; &lt;span class="err"&gt;ms&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;同时,能反写出&lt;span class="caps"&gt;XML&lt;/span&gt; 来!&lt;/p&gt;
-&lt;p&gt;主要问题是行为不统一!
-  &lt;rdf:seq rdf:about="urn:scrapbook:item20070113201921"&gt;
-&lt;rdf:li rdf:resource="urn:scrapbook:item20070113201940"&gt;&lt;/rdf:li&gt;
-&lt;rdf:li rdf:resource="urn:scrapbook:item20070113201941"&gt;&lt;/rdf:li&gt;
-&lt;/rdf:seq&gt;
-时 唯一的 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Li 不是 List!!&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id]&amp;gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Li OrderedDict([(u’@&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource’, u’urn:scrapbook:item20070113201921’)])
-&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id][‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:li’].len:: 1
-    &lt;class 'collections.ordereddict'=""&gt;
-&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id]&amp;gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Li @&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource
+&lt;p&gt;主要问题是行为不统一!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:item20070113201921"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:li&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:item20070113201940"&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:li&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:item20070113201941"&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;时 唯一的 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Li 不是 List!!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;K2SEQ[crt_id]&amp;gt;RDF:Li OrderedDict([(u'@RDF:resource', u'urn:scrapbook:item20070113201921')])
+K2SEQ[crt_id]['RDF:li'].len:: 1
+    &amp;lt;class 'collections.OrderedDict'&amp;gt;
+K2SEQ[crt_id]&amp;gt;RDF:Li @RDF:resource
      try crt_node.keys:
-@&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource
-&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id]&amp;gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Li OrderedDict([(u’@&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource’, u’urn:scrapbook:item20070527160000’)])
+@RDF:resource
+K2SEQ[crt_id]&amp;gt;RDF:Li OrderedDict([(u'@RDF:resource', u'urn:scrapbook:item20070527160000')])
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id]&amp;gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Li OrderedDict([(u’@&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource’, u’urn:scrapbook:item20061006133550’)])
-&lt;span class="caps"&gt;K2SEQ&lt;/span&gt;[crt_id][‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:li’].len:: 9
-    &lt;type 'list'=""&gt;&lt;/type&gt;&lt;/class&gt;&lt;/p&gt;
+K2SEQ[crt_id]&amp;gt;RDF:Li OrderedDict([(u'@RDF:resource', u'urn:scrapbook:item20061006133550')])
+K2SEQ[crt_id]['RDF:li'].len:: 9
+    &amp;lt;type 'list'&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href="https://github.com/martinblech/xmltodict/issues/67"&gt;odd parse for same xml structure · Issue #67 · martinblech/xmltodict&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="4h"&gt;4H 折腾明白了:&lt;/h3&gt;
-&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
 /Users/zoomq/mnt/快盘/zScrapBook/reDevRel/scrapbook.rdf
-[u’&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’]
+&lt;span class="o"&gt;[&lt;/span&gt;u&lt;span class="s1"&gt;'&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-&lt;open '_chaos="" 'wb'="" 0x10f17a660="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
-        exp_level_idx() RUNed~ 17073.48084 ms&lt;/open&gt;&lt;/p&gt;
-&lt;p&gt;_chaos/scraotools_reDevRel.pkl
+&amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x10f17a660&amp;gt;
+        exp_level_idx&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 17073.48084 ms
+
+_chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;            13
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-        _load_pkl() RUNed~ 7872.95103 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
- RIGHT_NODES: 3631
-    re_xmltodict_rdf() RUNed~ 191.21003 ms
+        _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 7872.95103 ms
+
+     _RIGHT_NODES: 6926
+     RIGHT_NODES: 3631
+        re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 191.21003 ms
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;有这么多垃圾!
-24190 vs 3631 !!!!&lt;/p&gt;
+&lt;p&gt;有这么多垃圾!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;24190 vs 3631 !!!!
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;但是,居然无法一次性清理干净?!&lt;/p&gt;
 &lt;p&gt;一扫::&lt;/p&gt;
-&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
 /Users/zoomq/mnt/快盘/zScrapBook/reDevRel/scrapbook.rdf
-[u’&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’]
+&lt;span class="o"&gt;[&lt;/span&gt;u&lt;span class="s1"&gt;'&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-&lt;open '_chaos="" 'wb'="" 0x10f2376f0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
-        exp_level_idx() RUNed~ 17013.92913 ms&lt;/open&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
- RIGHT_NODES: 3631
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;clean notes:    11153
+&amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x10f2376f0&amp;gt;
+        exp_level_idx&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 17013.92913 ms
+
+     _RIGHT_NODES: 6926
+     RIGHT_NODES: 3631
+clean notes:    11153
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  13037
-&lt;open '_chaos="" 'wb'="" 0x10eecff60="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+&amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x10eecff60&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
-        re_xmltodict_rdf() RUNed~ 131239.34913 ms&lt;/open&gt;&lt;/p&gt;
+        re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 131239.34913 ms
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;2扫:&lt;/p&gt;
-&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     13037
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-        _load_pkl() RUNed~ 4292.33599 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
- RIGHT_NODES: 3631
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;clean notes:    5506
+        _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 4292.33599 ms
+
+     _RIGHT_NODES: 6926
+     RIGHT_NODES: 3631
+clean notes:    5506
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  7531
-&lt;open '_chaos="" 'wb'="" 0x108874f60="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+&amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x108874f60&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
-        re_xmltodict_rdf() RUNed~ 44531.90279 ms&lt;/open&gt;&lt;/p&gt;
+        re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 44531.90279 ms
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;3扫::&lt;/p&gt;
-&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     7531
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-        _load_pkl() RUNed~ 3115.18502 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
- RIGHT_NODES: 3631
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;clean notes:    2616
+        _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 3115.18502 ms
+
+     _RIGHT_NODES: 6926
+     RIGHT_NODES: 3631
+clean notes:    2616
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  4915
-&lt;open '_chaos="" 'wb'="" 0x105d1edb0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+&amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x105d1edb0&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
-        re_xmltodict_rdf() RUNed~ 19026.94511 ms&lt;/open&gt;&lt;/p&gt;
+        re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 19026.94511 ms
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;4扫::&lt;/p&gt;
-&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     4915
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-        _load_pkl() RUNed~ 2528.49293 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
- RIGHT_NODES: 3631
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;clean notes:    1045
+        _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 2528.49293 ms
+
+     _RIGHT_NODES: 6926
+     RIGHT_NODES: 3631
+clean notes:    1045
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3870
-&lt;open '_chaos="" 'wb'="" 0x10429ced0="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+&amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x10429ced0&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
-        re_xmltodict_rdf() RUNed~ 11538.43212 ms&lt;/open&gt;&lt;/p&gt;
+        re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 11538.43212 ms
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;5扫:&lt;/p&gt;
-&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3870
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-        _load_pkl() RUNed~ 2422.85681 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
- RIGHT_NODES: 3631
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;clean notes:    286
+        _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 2422.85681 ms
+
+     _RIGHT_NODES: 6926
+     RIGHT_NODES: 3631
+clean notes:    286
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3584
-&lt;open '_chaos="" 'wb'="" 0x102c5d300="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+&amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x102c5d300&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
-        re_xmltodict_rdf() RUNed~ 9368.47901 ms&lt;/open&gt;&lt;/p&gt;
+        re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 9368.47901 ms
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;6扫::&lt;/p&gt;
-&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3584
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-        _load_pkl() RUNed~ 2225.17014 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
- RIGHT_NODES: 3631
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;clean notes:    10
+        _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 2225.17014 ms
+
+     _RIGHT_NODES: 6926
+     RIGHT_NODES: 3631
+clean notes:    10
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3574
-&lt;open '_chaos="" 'wb'="" 0x102c2af60="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+&amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x102c2af60&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
-        re_xmltodict_rdf() RUNed~ 8464.92100 ms&lt;/open&gt;&lt;/p&gt;
+        re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 8464.92100 ms
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;7扫:&lt;/p&gt;
-&lt;p&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3574
 &lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
-        _load_pkl() RUNed~ 2317.77310 ms&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; _RIGHT_NODES: 6926
- RIGHT_NODES: 3631
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;clean notes:    0
+        _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 2317.77310 ms
+
+     _RIGHT_NODES: 6926
+     RIGHT_NODES: 3631
+clean notes:    0
 cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3574
-&lt;open '_chaos="" 'wb'="" 0x1021b3030="" at="" file="" mode="" scraotools_redevrel.pkl',=""&gt;
+&amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x1021b3030&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
-        re_xmltodict_rdf() RUNed~ 8694.52500 ms&lt;/open&gt;&lt;/p&gt;
+        re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 8694.52500 ms
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="2"&gt;2小时 目录对比&lt;/h3&gt;
-&lt;p&gt;sh-&amp;gt;ls 出来时,
-是 &lt;span class="caps"&gt;STDOUT&lt;/span&gt; 有隐藏字符! 兰色…居然没有意识到!&lt;/p&gt;
-&lt;p&gt;20041214101930
-&lt;type 'str'=""&gt;
-Traceback (most recent call last):
-  File “scraptools/zq_chk4scrap.py”, line 724, in &lt;module&gt;
-    mv_chaos_data(REPO_NAME, &lt;span class="caps"&gt;XRDF&lt;/span&gt;)
-  File “scraptools/zq_chk4scrap.py”, line 524, in mv_chaos_data
-    print len(int(li)) #.strip()
-ValueError: invalid literal for int() with base 10: ’\x1b[1m\x1b[34m20041214101930\x1b[39;49m\x1b[0m’&lt;/module&gt;&lt;/type&gt;&lt;/p&gt;
+&lt;p&gt;sh-&amp;gt;ls 出来时,&lt;/p&gt;
+&lt;p&gt;是 &lt;span class="caps"&gt;STDOUT&lt;/span&gt; 有隐藏字符! 兰色…居然没有意识到!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;20041214101930&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt; &lt;span class="s1"&gt;'str'&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;Traceback&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;most&lt;/span&gt; &lt;span class="nt"&gt;recent&lt;/span&gt; &lt;span class="nt"&gt;call&lt;/span&gt; &lt;span class="nt"&gt;last&lt;/span&gt;&lt;span class="o"&gt;):&lt;/span&gt;
+  &lt;span class="nt"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"scraptools/zq_chk4scrap.py"&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;line&lt;/span&gt; &lt;span class="nt"&gt;724&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;module&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;mv_chaos_data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;REPO_NAME&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;&lt;span class="caps"&gt;XRDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+  &lt;span class="nt"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"scraptools/zq_chk4scrap.py"&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;line&lt;/span&gt; &lt;span class="nt"&gt;524&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="nt"&gt;mv_chaos_data&lt;/span&gt;
+    &lt;span class="nt"&gt;print&lt;/span&gt; &lt;span class="nt"&gt;len&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="nc"&gt;.strip&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+&lt;span class="nt"&gt;ValueError&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;invalid&lt;/span&gt; &lt;span class="nt"&gt;literal&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="nt"&gt;with&lt;/span&gt; &lt;span class="nt"&gt;base&lt;/span&gt; &lt;span class="nt"&gt;10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;'\&lt;/span&gt;&lt;span class="nt"&gt;x1b&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;x1b&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="nx"&gt;m20041214101930&lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;x1b&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;39&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="mi"&gt;49&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;x1b&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="140710-1804"&gt;140710 18:04&lt;/h3&gt;
 &lt;p&gt;完成初步完备流程:&lt;/p&gt;
 &lt;ul&gt;
@@ -1603,18 +2171,21 @@ ValueError: invalid literal for int() with base 10: ’\x1b[1m\x1b[34m200412141
 &lt;li&gt;解决反复清查的问题&lt;/li&gt;
 &lt;li&gt;提高效率&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;$ du -hs *
+&lt;p&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;du -hs *
 5.1G    ZqDevRel
 950M    reDevRel
     5.2G    zqCoder
     4.9G    zqSMM
 8.0M    _chaos
-4.2G _stuff&lt;/p&gt;
-&lt;p&gt;6.5G    ZqFLOSS
+4.2G    _stuff
+
+6.5G    ZqFLOSS
     5.2G    zqDevRes
     5.2G    zqPythonic
     5.3G    zqSCM
-3.7G ZqSKM&lt;/p&gt;</summary><category term="scrapbook"></category><category term="python"></category><category term="howto"></category><category term="mavericks"></category></entry><entry><title>pydata笔记:环境配置</title><link href="http://blog.zoomquiet.io/pydata-0-mavericks.html" rel="alternate"></link><updated>2014-06-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-06-03:pydata-0-mavericks.html</id><summary type="html">
+3.7G    ZqSKM
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="scrapbook"></category><category term="python"></category><category term="howto"></category><category term="mavericks"></category></entry><entry><title>pydata笔记:环境配置</title><link href="http://blog.zoomquiet.io/pydata-0-mavericks.html" rel="alternate"></link><updated>2014-06-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-06-03:pydata-0-mavericks.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="s27157694.jpg（JPEG 图像，300x300 像素）" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;
@@ -3658,6 +4229,7 @@ Python 世界中大堆静态网站发布工具中的一个,
 &lt;/ul&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;160120 ZoomQuiet re-deploy in sora&lt;/li&gt;
 &lt;li&gt;140127 ZoomQuiet 增补宏观理解&lt;/li&gt;
 &lt;li&gt;140120 ZoomQuiet 复制到 QPython 的 Pelican 工程&lt;/li&gt;
 &lt;li&gt;131219 ZoomQuiet 为 &lt;a href="https://gitcafe.com/CPyUG/weekly/blob/master/README.md"&gt;CPyUG/weekly - GitCafe&lt;/a&gt; 创建&lt;/li&gt;

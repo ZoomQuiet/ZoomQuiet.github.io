@@ -196,7 +196,7 @@
 <a href="http://en.wikipedia.org/wiki/Flat_Earth">flat earth theory</a>
 . Until today 
 <a href="http://theflatearthsociety.org/">some people</a>
-still believe that the earth is flat and make all kinds of theories to prove it. Some of their arguments look very scientific, but do you believe in their formulas or a picture of the earth from the <span class="caps">ISS</span>? When you get the fundamental things wrong and don’t throw them away, you have to patch them endlessly with even more complicated theories. And that’s what happened to <span class="caps">OOP</span>.</p>
+still believe that the earth is flat and make all kinds of theories to prove it. Some of their arguments look very scientific, but do you believe in their formulas or a picture of the earth from the <span class="caps">ISS</span>? When you get the fundamental things wrong and don’t throw them away, you have to patch them endlessly with even more complicated theories. And that’s what happened to <span class="caps">OOP</span>.</p>
 <p><img alt="yw_flat-earth.png" src="http://zoomq.qiniudn.com/ZQCollection/img/yw_flat-earth.png"/></p>
 <h2 id="are-functions-objects">Are functions objects?</h2>
 <p>From what I know, the original motivation of putting functions inside objects was to support <span class="caps">GUI</span> applications. You click on a button and some function (a callback) will be invoked. For the convenience of referring to the button, the callback takes the triggered object as its first argument. Since the callback does nothing more than this, it seems to be convenient to just store it inside the button. And thus we had an “object” which combines the attributes of the button and a method (the callback). Indeed this is a good idea, but this limited usage case can’t really justify a universal notion of “everything is an object”, just like a two-mile walk can’t prove that the earth is flat.</p>
@@ -211,15 +211,15 @@ still believe that the earth is flat and make all kinds of theories to prove it.
 <p>Whenever you criticize Java or C++ for their verbosity, <span class="caps">OO</span> proponents will tell you that they are not authentic <span class="caps">OO</span> languages. They would ask you to look at Smalltalk. If Smalltalk’s ways are that good, why almost nobody is using Smalltalk now? Because there are real problems in its approach. I think Smalltalk is the origin of over-abstraction and over-complication you find in other <span class="caps">OO</span> languages.</p>
 <p>The “authentic” <span class="caps">OO</span> style of Smalltalk promotes the notion of “extremely late binding”, which basically means that the meaning of the program constructs is determined as late as possible. Late binding gives you a chance to swap out the underlying implementation without forcing the upper levels to change, but this also means that you are no longer sure what a piece of code means. When I look at expressions such as ‘1+2′ and ‘if (t) then …  else … ‘ in Java or C++, I at least know for sure that they mean an integer addition and an usual conditional. But I’m no longer sure about this in an “extremely late binding language”, because the meaning of ‘+’ and ‘if” can be redefined. Giving the programmers the power of defining control structures is a bad idea, because soon your language will be abundant of quirky control structures designed by programmers who try to be clever. It will no longer be the language that you used to know.</p>
 <p>An example for this feature is Smalltalk’s conditional structure, which looks like this:</p>
-<div class="highlight"><pre><span class="nv">result</span> <span class="o">:=</span> <span class="nv">a</span> <span class="nf">&gt;</span> <span class="nv">b</span>
+<div class="highlight"><pre><span></span><span class="nv">result</span> <span class="o">:=</span> <span class="nv">a</span> <span class="nf">&gt;</span> <span class="nv">b</span>
     <span class="nb">ifTrue:</span>[ <span class="s">'greater'</span> ]
     <span class="nb">ifFalse:</span>[ <span class="s">'less or equal'</span> ]
 </pre></div>
 <p>You send a message ifTrue: to a Boolean object, passing as an argument a block of code to be executed if and only if the Boolean receiver is true.</p>
 <p>First of all, if you really have a well-designed language, you shouldn’t be wanting to define your own control structures. As a seasoned Lisp/Scheme programmer, I have seen many custom-designed control structures (such as the various looping macros) over the years, but none of them turned out to be good ideas. I’d rather write slightly longer and more verbose code in the vanilla language than to learn those weird control structures. Second, if you are really genius enough to have invented another good control structure, the late binding feature of Smalltalk probably won’t provide you the necessary power for defining it. The power of functions as an abstraction tool is limited. It is strictly less powerful than Lisp/Scheme’s macros. Third, this feature of Smalltalk is not really a novel approach and it has a big problem. A similar but more beautiful conditional construct had been defined in lambda calculus since before computer science was born:</p>
-<div class="highlight"><pre><span class="nv"><span class="caps">TRUE</span></span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">x.</span><span class="err">λ</span><span class="nv">y.x</span>
-<span class="nv"><span class="caps">FALSE</span></span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">x.</span><span class="err">λ</span><span class="nv">y.y</span>
-<span class="nv"><span class="caps">IF</span></span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">b.</span><span class="err">λ</span><span class="nv">t.</span><span class="err">λ</span><span class="nv">f.b</span> <span class="no">t</span> <span class="nv">f</span>
+<div class="highlight"><pre><span></span><span class="nv">TRUE</span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">x.</span><span class="err">λ</span><span class="nv">y.x</span>
+<span class="nv">FALSE</span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">x.</span><span class="err">λ</span><span class="nv">y.y</span>
+<span class="nv">IF</span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">b.</span><span class="err">λ</span><span class="nv">t.</span><span class="err">λ</span><span class="nv">f.b</span> <span class="no">t</span> <span class="nv">f</span>
 </pre></div>
 <p>This is very beautiful and can be done in any functional language, but why none of the functional languages implement conditionals this way? Because when you see an expression <span class="caps">IF</span> b t f, you will have no idea whether it is a conditional or not, because <span class="caps">IF</span> can be redefined in the program. Also because <span class="caps">IF</span> is just a function, it may also accept unexpected values other than <span class="caps">TRUE</span> or <span class="caps">FALSE</span>. This may happen to make the conditional construct work but cause trouble later on. This is called “unintentional semantics”. This kind of bug can be very hard to track down.</p>
 <p>This approach also makes compiler and static analysis hard. When the compiler sees <span class="caps">IF</span> b t f, it no longer knows that it is a conditional and thus optimize it that way. It has to treat it as a usual function call. Similarly when the type checker sees it, it doesn’t know what type to expect for b, because it may not be a conditional at all. The above argument against the lambda calculus can easily be adapted to Smalltalk.</p>
@@ -281,7 +281,7 @@ may be a good starting point.</p>
 定义是: ”
 <a href="http://en.wikipedia.org/wiki/Field_(computer_science)">数据字段</a>
 (描述对象的属性)以及关联方法 的结合体.
-“ 你真能在所有情景中适应这种模式嘛?</p>
+” 你真能在所有情景中适应这种模式嘛?</p>
 <p>首先来设想一下<span class="caps">OOP</span> 模式是否能对真实世界加以解释. 汽车/树木/动物 视作对象的话, 那么它们的位置/速度/时间的 变化 乍说? 有什么对应的方法? 好吧, <span class="caps">OOP</span> 信徒可能叫你将类称为 速度 或是 时间 然后将方法增加进去. 可是速度/时间真的含有这种称为”方法”的东西 ? 当然没有, 这不过是想象罢了. 
 你可以追加速度/时间,但是,怎么令其包含<code>加</code>处理? 
 这就好比说:<code>子弹包含了枪</code>.</p>
@@ -346,7 +346,7 @@ may be a good starting point.</p>
 于是我们有了个”对象”, 包含了按钮的属性以及方法(回调). 的确挺方便. 
 但 <span class="caps">GUI</span> 应用只是个非常有限的情景,并不能真正证明 “一切皆对象”的普世性. 就象用两里路的平坦是不能证明地球是平的.</p>
 <p>如果你真的理解什么是抽象, 可能已经注意到,上述故事包含一个微妙的错误:</p>
-<div class="highlight"><pre>按钮的回调是不是一个真正的方法.
+<div class="highlight"><pre><span></span>按钮的回调是不是一个真正的方法.
 </pre></div>
 <p>方法的本质目的是提供抽象的属性,但回调的目的不是为了提供抽象. 在这儿,只是刚好按钮包含了一个触发功能.</p>
 <p>只有极少数功能应当视作对象的方法.
@@ -380,7 +380,7 @@ may be a good starting point.</p>
 俺经常见到有 <span class="caps">JAVA</span> 程序动用多层继承/重载,但实际作的事儿不多.
 更糟的是,正因堆砌了如此多的代码,却没有真正在作事儿,
 以至于难以找到哪部分是你真正想作的东西.就象穿越一个迷宫.
-而对这,有另外一个漂亮的形容词是 “<a href="http://zh.wikipedia.org/wiki/%E9%B2%81%E6%A3%92%E6%80%A7_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)">鲁棒性</a>“ (健壮性,Robustness)</p>
+而对这,有另外一个漂亮的形容词是 “<a href="http://zh.wikipedia.org/wiki/%E9%B2%81%E6%A3%92%E6%80%A7_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)">鲁棒性</a>” (健壮性,Robustness)</p>
 <p>如果俺为了复用以及健壮,宁愿只用代码复制,再修订, 只要确保每个副本简单,容易理解.</p>
 <p>每当你抱怨  <span class="caps">JAVA</span>/C++ 的冗长时, <span class="caps">OO</span>程序猿就会告诉你,那些不是真正的 <span class="caps">OO</span> 语言.
 一准向你推荐 Smalltalk 的.
@@ -400,7 +400,7 @@ may be a good starting point.</p>
 事实证明,给予程序猿定义控制结构的能力,
 这主意其实很囧, 因为立即就会发现,自作聪明的程序猿都在努力向语言里塞满各种特殊的控制结构.</p>
 <p>这一特性,可以举个 Smalltalk 的著名条件结构为例:</p>
-<div class="highlight"><pre><span class="nv">result</span> <span class="o">:=</span> <span class="nv">a</span> <span class="nf">&gt;</span> <span class="nv">b</span>
+<div class="highlight"><pre><span></span><span class="nv">result</span> <span class="o">:=</span> <span class="nv">a</span> <span class="nf">&gt;</span> <span class="nv">b</span>
     <span class="nb">ifTrue:</span>[ <span class="s">'greater'</span> ]
     <span class="nb">ifFalse:</span>[ <span class="s">'less or equal'</span> ]
 </pre></div>
@@ -416,9 +416,9 @@ Smalltalk 的延迟绑定功能,也难以提供足够的能力来定义它.
 <p>第三,Smalltalk 这一特性并不是新东西,而且包含了一个重大问题.
 类似的但更加优美的控制结构,
 在计算机科学诞生前就已经由 lambda演算科学定义出来了:</p>
-<div class="highlight"><pre><span class="nv"><span class="caps">TRUE</span></span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">x.</span><span class="err">λ</span><span class="nv">y.x</span>
-<span class="nv"><span class="caps">FALSE</span></span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">x.</span><span class="err">λ</span><span class="nv">y.y</span>
-<span class="nv"><span class="caps">IF</span></span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">b.</span><span class="err">λ</span><span class="nv">t.</span><span class="err">λ</span><span class="nv">f.b</span> <span class="no">t</span> <span class="nv">f</span>
+<div class="highlight"><pre><span></span><span class="nv">TRUE</span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">x.</span><span class="err">λ</span><span class="nv">y.x</span>
+<span class="nv">FALSE</span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">x.</span><span class="err">λ</span><span class="nv">y.y</span>
+<span class="nv">IF</span> <span class="nb">=</span> <span class="err">λ</span><span class="nv">b.</span><span class="err">λ</span><span class="nv">t.</span><span class="err">λ</span><span class="nv">f.b</span> <span class="no">t</span> <span class="nv">f</span>
 </pre></div>
 <p>这是非常漂亮的,可以用任何语言实现的,
 但是为毛没有任何一个函式语言以这种方式来实现条件语句?
@@ -553,7 +553,8 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.</p>
 不盲从 <code>一切皆对象</code>或是<code>设计模式</code> 的工程师.
 优秀程序员,通常在 <span class="caps">OO</span> 语言中进行变通,基本上只写传统的过程式的代码,
 并结合函数式编程风格.
-因此,一些 <span class="caps">OOP</span> 语言及其工具可能有非常广泛的应用, 但是,<span class="caps">OO</span>风格其实并没有真正对编程领域施加什么大太的推动.</p>
+因此,一些 <span class="caps">OOP</span> 语言及其工具可能有非常广泛的应用,
+但是,<span class="caps">OO</span>风格其实并没有真正对编程领域施加什么大太的推动.</p>
 <h2 id="_6">终言</h2>
 <p>~ Final word</p>
 <p>那么终究这篇文章想说什么?
@@ -572,7 +573,8 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.</p>
 <p>因此,俺严正建议,表再接受任何 <span class="caps">OO</span>方面的想法,
 也表试图使用它的 “特性”.
 <span class="caps">OO</span> 就是<code>食脑魔</code>,能躲多远躲多远.
-但,你依然可以使用 “<span class="caps">OO</span>语言” 来生产可用程序, 因为你基本上是以非<span class="caps">OO</span>语言来使用它的.</p>
+但,你依然可以使用 “<span class="caps">OO</span>语言” 来生产可用程序,
+因为你基本上是以非<span class="caps">OO</span>语言来使用它的.</p>
 <h1 id="_7">是也乎</h1>
 <p>对于 <code>王珢</code> , 关注了太久了,久到成为习惯了… 但是,认真翻译他翻越后的技术思考成果,还是第一次,可惜也只能用自个儿的语气来快译,真正涉及的所有技术细节,俺还没有能力逐一印证,俺也只是个期望简洁的结论,记忆下来,直接使用的那种知其然,不知所以然的家伙… </p>
 <p>但是,不得不说,对于 <span class="caps">OOP</span> 从第N次使用<span class="caps">JAVA</span> 败退后,
@@ -596,6 +598,11 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.</p>
 </ul>
 <h1 id="changlog">Changlog ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h1>
 <ul>
+<li>160322 发现 <code>王珢</code> 在原文中给出了俺的翻译链接!<ul>
+<li><a href="https://yinwang0.wordpress.com/2013/12/24/oop/"><img alt="131224_oop_linkback" src="http://zoomq.qiniudn.com/ZQCollection/snap/yw/131224_oop_linkback.png"/></a></li>
+<li>是也乎,(￣▽￣) 感动!</li>
+</ul>
+</li>
 <li>140109 获得<code>王珢</code>授权,得以进行传播.</li>
 <li>140108 前后7.42小时完成快译.</li>
 <li>131224 翻越抄录在 medium.com</li>
@@ -681,7 +688,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.</p>
 他不认同 <span class="caps">FP</span> 的炒作,
 类似 monads 以及 模式匹配(这有点儿好处),
 但他完全高估了 <span class="caps">OOP</span> 和角色模式了.
-从他的blog 文章中可以看到,他宣称 角色模式是 ”唯一正解”.</p>
+从他的blog 文章中可以看到,他宣称 角色模式是 “唯一正解”.</p>
 <p>I’m always wary of such notion as “one true way” or “everything is… ” I actually read Carl Hewitt’s actor model paper a long time ago and also some of his other concepts such as Direct LogicTM (Yes, there is a trademark sign on it). I didn’t really appreciate the papers and his way of writing, with the “dedicated to some-big-names” headlines, trademark signs and grand claims.</p>
 <p>俺对任何宣称 “唯一…” 或是 “一切…”
 的概念有疑虑.

@@ -144,40 +144,40 @@ Nick Coghlan
 <p>While many of the issues they encountered were inherent in the complexity of teaching programming, a few seemed like things that could be avoided.</p>
 <h2 id="getting-floating-point-results-from-integer-division">Getting floating point results from integer division</h2>
 <p>In Python 2, integer division copies C in truncating the answer by default:</p>
-<div class="highlight"><pre><span class="nv">$ </span>python -c <span class="s2">"print(3/4)"</span>
+<div class="highlight"><pre><span></span>$ python -c <span class="s2">"print(3/4)"</span>
 0
 </pre></div>
 <p>Promoting to floating point requires type coercion, a command line flag or a future import:</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">"print(float(3)/4)"</span>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"print(float(3)/4)"</span>
 <span class="mf">0.75</span>
-<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">Qnew</span> <span class="o">-</span><span class="n">c</span> <span class="s">"print(3/4)"</span>
+<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">Qnew</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"print(3/4)"</span>
 <span class="mf">0.75</span>
-<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">"from __future__ import division; print(3/4)"</span>
+<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"from __future__ import division; print(3/4)"</span>
 <span class="mf">0.75</span>
 </pre></div>
 <p>Python 3 just does the right thing by default, so one way to avoid the problem entirely is to teach Python 3 instead of Python 2:</p>
-<div class="highlight"><pre><span class="nv">$ </span>python3 -c <span class="s2">"print(3/4)"</span>
+<div class="highlight"><pre><span></span>$ python3 -c <span class="s2">"print(3/4)"</span>
 0.75
 </pre></div>
 <p>(In both Python 2 and 3, the <code>//</code> floor division operator explicitly requests truncating division when it is desired)</p>
 <h2 id="common-python-23-syntax-for-printing-values">Common Python 2/3 syntax for printing values</h2>
 <p>I’ve been using Python 2 and 3 in parallel for more than 8 years now (while Python 3.0 was released in 2008, the project started in earnest a couple of years earlier than that, while Python 2.5 was still in development).</p>
 <p>One essential trick I have learned in order to make regularly switching back and forth feasible is to limit myself to the common print syntax that works the same in both versions: passing a single argument surrounded by parentheses.</p>
-<div class="highlight"><pre><span class="nv">$ </span>python -c <span class="s1">'print("Hello world!")'</span>
+<div class="highlight"><pre><span></span>$ python -c <span class="s1">'print("Hello world!")'</span>
 Hello world!
-<span class="nv">$ </span>python3 -c <span class="s1">'print("Hello world!")'</span>
+$ python3 -c <span class="s1">'print("Hello world!")'</span>
 Hello world!
 </pre></div>
 <p>If I need to pass multiple arguments, I’ll use string formatting, rather than the implicit concatenation feature.</p>
-<div class="highlight"><pre><span class="nv">$ </span>python -c <span class="s1">'print("{} {}{}".format("Hello", "world", "!"))'</span>
+<div class="highlight"><pre><span></span>$ python -c <span class="s1">'print("{} {}{}".format("Hello", "world", "!"))'</span>
 Hello world!
-<span class="nv">$ </span>python3 -c <span class="s1">'print("{} {}{}".format("Hello", "world", "!"))'</span>
+$ python3 -c <span class="s1">'print("{} {}{}".format("Hello", "world", "!"))'</span>
 Hello world!
 </pre></div>
 <p>Rather than doing this, the Software Carpentry material that was used at the bootcamp I attended used the legacy Python 2 only <code>print</code> syntax extensively, causing examples that otherwise would have worked fine in either version to fail for students that happened to be running Python 3. Adopting the shared syntax for printing values could be enough to make the course largely version independent.</p>
 <h2 id="distinguishing-between-returning-and-printing-values">Distinguishing between returning and printing values</h2>
 <p>One problem noted both at the bootcamp and by presenters at PyCon Australia was the challenge of teaching students the difference between printing and returning values. The problem is the “Print” part of the Read-Eval-Print-Loop provided by Python’s interactive interpreter:</p>
-<div class="highlight"><pre>&gt;&gt;&gt; def print_arg(x):
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; def print_arg(x):
 ...     print(x)
 ...
 &gt;&gt;&gt; def return_arg(x):
@@ -189,16 +189,16 @@ Hello world!
 10
 </pre></div>
 <p>There’s no obvious difference in output at the interactive prompt, especially for types like numbers where the results of <code>str</code> and <code>repr</code> are the same. Even when they’re different, those differences may not be obvious to a student:</p>
-<div class="highlight"><pre>&gt;&gt;&gt; print_arg("Hello world")
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; print_arg("Hello world")
 Hello world
 &gt;&gt;&gt; return_arg("Hello world")
 'Hello world'
 </pre></div>
 <p>While I don’t have a definitive answer for this one, an experiment that seems worth trying to me is to teach students how to replace <code>sys.displayhook</code>. 
 In particular, I suggest demonstrating the following change, and seeing if it helps explain the difference between printing output for display to the user and returning values for further processing:</p>
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">new_displayhook</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">new_displayhook</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
 <span class="o">...</span>     <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s">"-&gt; {!r}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s2">"-&gt; {!r}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span>
 <span class="o">...</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">sys</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">displayhook</span> <span class="o">=</span> <span class="n">new_displayhook</span>
@@ -211,14 +211,14 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 <h2 id="addendum-ipython-including-ipython-notebook">Addendum: IPython (including IPython Notebook)</h2>
 <p>The initial examples above focused on the standard CPython runtime, include the default interactive interpreter. The IPython interactive interpreter, including the IPython Notebook, has a couple of interesting differences in behaviour that are relevant to the above comments.</p>
 <p>Firstly, it does display return values and printed values differently, prefacing results with an output reference number:</p>
-<div class="highlight"><pre>In [1]: print 10
+<div class="highlight"><pre><span></span>In [1]: print 10
 10
 
 In [2]: 10
 Out[2]: 10
 </pre></div>
 <p>Secondly, it has an optional “autocall” feature that allows a user to tell IPython to automatically add the missing parentheses to a function call if the user leaves them out:</p>
-<div class="highlight"><pre><span class="nv">$ </span>ipython3 --autocall<span class="o">=</span><span class="m">1</span> -c <span class="s2">"print 10"</span>
+<div class="highlight"><pre><span></span>$ ipython3 --autocall<span class="o">=</span><span class="m">1</span> -c <span class="s2">"print 10"</span>
 -&gt; print<span class="o">(</span>10<span class="o">)</span>
 10
 </pre></div>

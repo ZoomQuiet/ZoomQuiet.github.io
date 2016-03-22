@@ -137,24 +137,24 @@
 <h2 id="1-python-3-style-printing-in-python-2">1. Python 3-style printing in Python&nbsp;2</h2>
 <p>One of the things that kept me from concentrating on Python was this whole version 2 - version 3 debacle. Finally I went with Python 2 because all the libraries I wanted were not 3-compatible, and I figured if I needed to, I would laboriously adjust my code&nbsp;later. </p>
 <p>But really, the biggest differences in everyday programming are printing and division, and now I just import from future. Now that almost all the libraries I use heavily are v3-compliant, I&#8217;ll make the switch&nbsp;soon.</p>
-<div class="highlight"><pre><span class="n">mynumber</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="highlight"><pre><span></span><span class="n">mynumber</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="k">print</span> <span class="s">&quot;Python 2:&quot;</span>
-<span class="k">print</span> <span class="s">&quot;The number is </span><span class="si">%d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mynumber</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;Python 2:&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;The number is </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mynumber</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">mynumber</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
 <span class="k">print</span> <span class="n">mynumber</span> <span class="o">//</span> <span class="mi">2</span>
 
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">Python 3:&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;The number is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mynumber</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">mynumber</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Python 3:&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;The number is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mynumber</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mynumber</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">mynumber</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 
-<div class="highlight"><pre>Python 2:
+<div class="highlight"><pre><span></span>Python 2:
 The number is 5
 2 2
 
@@ -165,8 +165,8 @@ The number is 5
 
 
 <p>Oh, and here&#8217;s an easter egg for C&nbsp;programmers:</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">braces</span>
-  <span class="n">File</span> <span class="s">&quot;&lt;ipython-input-3-2aebb3fc8ecf&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">braces</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;ipython-input-3-2aebb3fc8ecf&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
     <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">braces</span>
 <span class="ne">SyntaxError</span><span class="p">:</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">chance</span>
 </pre></div>
@@ -174,14 +174,14 @@ The number is 5
 
 <h2 id="2-enumeratelist">2.&nbsp;enumerate(list)</h2>
 <p>It might seem obvious that you should be able to iterate over a list and its index at the same time, but I used counter variables or slices for an embarrassingly long&nbsp;time.</p>
-<div class="highlight"><pre>mylist = [&quot;It&#39;s&quot;, &#39;only&#39;, &#39;a&#39;, &#39;model&#39;]
+<div class="highlight"><pre><span></span>mylist = [&quot;It&#39;s&quot;, &#39;only&#39;, &#39;a&#39;, &#39;model&#39;]
 
 for index, item in enumerate(mylist):
     print(index, item)
 </pre></div>
 
 
-<div class="highlight"><pre>0 It&#39;s
+<div class="highlight"><pre><span></span>0 It&#39;s
 1 only
 2 a
 3 model
@@ -190,14 +190,14 @@ for index, item in enumerate(mylist):
 
 <h2 id="3-chained-comparison-operators">3. Chained comparison&nbsp;operators</h2>
 <p>Because I was so used to statically typed languages (where this idiom would be ambiguous), it never occurred to me to put two operators in the same expression. In many languages, 4 &gt; 3 &gt; 2 would return as False, because (4 &gt; 3) would be evaluated as a boolean, and then True &gt; 2 would be evaluated as&nbsp;False.</p>
-<div class="highlight"><pre>mynumber = 3
+<div class="highlight"><pre><span></span>mynumber = 3
 
 if 4 &gt; mynumber &gt; 2:
     print(&quot;Chained comparison operators work! \n&quot; * 3)
 </pre></div>
 
 
-<div class="highlight"><pre>Chained comparison operators work! 
+<div class="highlight"><pre><span></span>Chained comparison operators work! 
 Chained comparison operators work! 
 Chained comparison operators work!
 </pre></div>
@@ -205,7 +205,7 @@ Chained comparison operators work!
 
 <h2 id="4-collectionscounter">4.&nbsp;collections.Counter</h2>
 <p>The collections library is, like, the best thing ever. Stackoverflow turned me on to ordered dicts early on, but I kept using a snippet to create dicts to count occurrences of results in my code. One of these days, I&#8217;ll figure out a use for&nbsp;collections.deque.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="n">mycounter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
@@ -217,7 +217,7 @@ Chained comparison operators work!
 </pre></div>
 
 
-<div class="highlight"><pre>0 10
+<div class="highlight"><pre><span></span>0 10
 1 10
 2 13
 3 6
@@ -232,7 +232,7 @@ Chained comparison operators work!
 
 <h2 id="5-dict-comprehensions">5. Dict&nbsp;comprehensions</h2>
 <p>A rite of passage for a Python programmer is understanding list comprehensions, but eventually I realized dict comprehensions are just as useful &#8212; especially for reversing&nbsp;dicts.</p>
-<div class="highlight"><pre>my_phrase = [&quot;No&quot;, &quot;one&quot;, &quot;expects&quot;, &quot;the&quot;, &quot;Spanish&quot;, &quot;Inquisition&quot;]
+<div class="highlight"><pre><span></span>my_phrase = [&quot;No&quot;, &quot;one&quot;, &quot;expects&quot;, &quot;the&quot;, &quot;Spanish&quot;, &quot;Inquisition&quot;]
 my_dict = {key: value for value, key in enumerate(my_phrase)}
 print(my_dict)
 reversed_dict = {value: key for key, value in my_dict.items()}
@@ -240,7 +240,7 @@ print(reversed_dict)
 </pre></div>
 
 
-<div class="highlight"><pre>{&#39;Inquisition&#39;: 5, &#39;No&#39;: 0, &#39;expects&#39;: 2, &#39;one&#39;: 1, &#39;Spanish&#39;: 4, &#39;the&#39;: 3}
+<div class="highlight"><pre><span></span>{&#39;Inquisition&#39;: 5, &#39;No&#39;: 0, &#39;expects&#39;: 2, &#39;one&#39;: 1, &#39;Spanish&#39;: 4, &#39;the&#39;: 3}
 {0: &#39;No&#39;, 1: &#39;one&#39;, 2: &#39;expects&#39;, 3: &#39;the&#39;, 4: &#39;Spanish&#39;, 5: &#39;Inquisition&#39;}
 </pre></div>
 
@@ -249,16 +249,16 @@ print(reversed_dict)
 <p>I used to use the os library exclusively to manipulate files; now I can even programmatically call complex command-line tools like ffmpeg for video&nbsp;editing</p>
 <p>(And yes, I use Windows, so do all of my clients. But I have the good grace to be embarrassed about&nbsp;it!)</p>
 <p>Note that the particular subprocess I picked would be much better done with the os library; I just wanted a command everyone would be familiar with. And in general, shell=True is a <span class="caps">VERY</span> bad idea, I put it here so that the command output would appear in the IPython notebook cell. Don&#8217;t try this at home,&nbsp;kids!</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">subprocess</span>
-<span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="s">&#39;dir&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
- <span class="n">Volume</span> <span class="ow">in</span> <span class="n">drive</span> <span class="n">C</span> <span class="ow">is</span> <span class="n"><span class="caps">OS</span></span>
- <span class="n">Volume</span> <span class="n">Serial</span> <span class="n">Number</span> <span class="ow">is</span> <span class="p">[</span><span class="n"><span class="caps">REDACTED</span></span><span class="p">]</span>
- <span class="n">Directory</span> <span class="n">of</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">David</span>\<span class="n">Documents</span>\<span class="p">[</span><span class="n"><span class="caps">REDACTED</span></span><span class="p">]</span>
+ <span class="n">Volume</span> <span class="ow">in</span> <span class="n">drive</span> <span class="n">C</span> <span class="ow">is</span> <span class="n">OS</span>
+ <span class="n">Volume</span> <span class="n">Serial</span> <span class="n">Number</span> <span class="ow">is</span> <span class="p">[</span><span class="n">REDACTED</span><span class="p">]</span>
+ <span class="n">Directory</span> <span class="n">of</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">David</span>\<span class="n">Documents</span>\<span class="p">[</span><span class="n">REDACTED</span><span class="p">]</span>
 </pre></div>
 
 
-<div class="highlight"><pre>2014-11-26  06:04 AM    &lt;DIR&gt;          .
+<div class="highlight"><pre><span></span>2014-11-26  06:04 AM    &lt;DIR&gt;          .
 2014-11-26  06:04 AM    &lt;DIR&gt;          ..
 2014-11-23  11:47 AM    &lt;DIR&gt;          .git
 2014-11-26  06:06 AM    &lt;DIR&gt;          .ipynb_checkpoints
@@ -282,7 +282,7 @@ print(reversed_dict)
 
 <h2 id="7-dict-get-and-iteritems-methods">7. dict .get() and .iteritems()&nbsp;methods</h2>
 <p>Having a default value when a key does not exist has all kinds of uses, and just like enumerate() for lists, you can iterate over key, value tuples in&nbsp;dicts</p>
-<div class="highlight"><pre>my_dict = {&#39;name&#39;: &#39;Lancelot&#39;, &#39;quest&#39;: &#39;Holy Grail&#39;, &#39;favourite_color&#39;: &#39;blue&#39;}
+<div class="highlight"><pre><span></span>my_dict = {&#39;name&#39;: &#39;Lancelot&#39;, &#39;quest&#39;: &#39;Holy Grail&#39;, &#39;favourite_color&#39;: &#39;blue&#39;}
 
 print(my_dict.get(&#39;airspeed velocity of an unladen swallow&#39;, &#39;African or European?\n&#39;))
 
@@ -291,7 +291,7 @@ for key, value in my_dict.iteritems():
 </pre></div>
 
 
-<div class="highlight"><pre>African or European?
+<div class="highlight"><pre><span></span>African or European?
 
 quest: Holy Grail
 name: Lancelot
@@ -301,7 +301,7 @@ favourite_color: blue
 
 <h2 id="8-tuple-unpacking-for-switching-variables">8. Tuple unpacking for switching&nbsp;variables</h2>
 <p>Do you know how many times I had to use a third, temporary dummy variable in <span class="caps">VB</span>? c = a; a = b; b =&nbsp;c?</p>
-<div class="highlight"><pre>a = &#39;Spam&#39;
+<div class="highlight"><pre><span></span>a = &#39;Spam&#39;
 b = &#39;Eggs&#39;
 
 print(a, b)
@@ -312,21 +312,21 @@ print(a, b)
 </pre></div>
 
 
-<div class="highlight"><pre>Spam Eggs
+<div class="highlight"><pre><span></span>Spam Eggs
 Eggs Spam
 </pre></div>
 
 
 <h2 id="9-introspection-tools">9. Introspection&nbsp;tools</h2>
 <p>I was aware of dir(), but I had assumed help() would do the same thing as IPython&#8217;s ? magic command. It does way more. (This post has been updated after some great advice from reddit&#8217;s /r/python which, indeed, I wish I&#8217;d known about&nbsp;before!)</p>
-<div class="highlight"><pre>my_dict = {&#39;That&#39;: &#39;an ex-parrot!&#39;}
+<div class="highlight"><pre><span></span>my_dict = {&#39;That&#39;: &#39;an ex-parrot!&#39;}
 
 help(my_dict)
 </pre></div>
 
 
 <p>Help on dict&nbsp;object:</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="n">dict</span>(<span class="n">object</span>)
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">dict</span>(<span class="n">object</span>)
  |  <span class="n">dict</span>() -&gt; <span class="nb">new</span> <span class="n">empty</span> <span class="n">dictionary</span>
  |  <span class="n">dict</span>(<span class="n">mapping</span>) -&gt; <span class="nb">new</span> <span class="n">dictionary</span> <span class="n">initialized</span> <span class="nb">from</span> <span class="n">a</span> <span class="n">mapping</span> <span class="n">object&#39;s</span>
  |      (<span class="nb">key</span>, <span class="nb">value</span>) <span class="nb">pairs</span>
@@ -352,7 +352,7 @@ help(my_dict)
  |      <span class="o">x</span>.<span class="n">__eq__</span>(<span class="n">y</span>) &lt;==&gt; <span class="o">x==</span><span class="n">y</span>
  |  
 
-[<span class="n"><span class="caps">TRUNCATED</span></span> <span class="n"><span class="caps">FOR</span></span> <span class="n"><span class="caps">SPACE</span></span>]
+[<span class="n">TRUNCATED</span> <span class="n">FOR</span> <span class="n">SPACE</span>]
 
  |  
  |  <span class="n">update</span>(...)
@@ -388,7 +388,7 @@ help(my_dict)
 is the style guide for Python code. Among other things, it directs that lines not be over 80 characters long and that indenting by consistent over line&nbsp;breaks.</p>
 <p>This can be accomplished with a combination of backslashes \; parentheses () with commas , ; and addition operators +; but every one of these solutions is awkward for multiline strings. There is a multiline string signifier, the triple quote, but it does not allow consistent indenting over line&nbsp;breaks. </p>
 <p>There is a solution: parentheses without commas. I don&#8217;t know why this works, but I&#8217;m glad it&nbsp;does.</p>
-<div class="highlight"><pre>my_long_text = (&quot;We are no longer the knights who say Ni! &quot;
+<div class="highlight"><pre><span></span>my_long_text = (&quot;We are no longer the knights who say Ni! &quot;
                 &quot;We are now the knights who say ekki-ekki-&quot;
                 &quot;ekki-p&#39;tang-zoom-boing-z&#39;nourrwringmm!&quot;)
 print(my_long_text)

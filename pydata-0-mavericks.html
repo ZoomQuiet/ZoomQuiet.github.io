@@ -156,7 +156,7 @@
 <h2 id="_2">探索</h2>
 <p>正如,Python 所有领域的自学,有一个稳定,随时有反馈的环境是最重要的…</p>
 <p>但是,作者的话,真心不能都相信哪!</p>
-<div class="highlight"><pre>...如果你恰好使用 Python 3.2 大部分示例是可以完整运行的
+<div class="highlight"><pre><span></span>...如果你恰好使用 Python 3.2 大部分示例是可以完整运行的
 ...
 MAC OS X 环境推荐安装 epd_free-7.3-2-macosx-i386.dmg
 ...
@@ -189,15 +189,15 @@ MAC OS X 环境推荐安装 epd_free-7.3-2-macosx-i386.dmg
 </ul>
 <p>果断下载,安装…</p>
 <p>各种不对味儿,原来自动在 <code>~/.bash_profile</code></p>
-<div class="highlight"><pre># Setting PATH for EPD_free-7.3-2
+<div class="highlight"><pre><span></span># Setting PATH for EPD_free-7.3-2
 # The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:<span class="cp">${</span><span class="n"><span class="caps">PATH</span></span><span class="cp">}</span>"
-export <span class="caps">PATH</span>
+PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:<span class="cp">${</span><span class="n">PATH</span><span class="cp">}</span>"
+export PATH
 </pre></div>
 <p>而且是按照系统框架来安装到 <code>/Library/Frameworks/Python.framework</code> 的
 可是, Mavericks 以后,没有默认Python 了哪,俺已经同时用 <code>brew</code> 管理系统 Python,
 <code>pyenv</code> 管理开发 Python ,先不说体积:</p>
-<div class="highlight"><pre><span class="nv">$ </span>du -hs /Library/Frameworks/Python.framework/Versions
+<div class="highlight"><pre><span></span>$ du -hs /Library/Frameworks/Python.framework/Versions
 425M    /Library/Frameworks/Python.framework/Versions
 </pre></div>
 <p>居然第一个案例就跑不起来!</p>
@@ -208,7 +208,7 @@ export <span class="caps">PATH</span>
 体积也从 74M 爆涨为 <code>235Mb</code></p>
 <p>不过,是一派标准的 <span class="caps">MAC</span> 软件包了,非常流畅,也有<span class="caps">GUI</span> 的引导界面,</p>
 <p>然后 <code>~/.bash_profile</code> 追加的是:</p>
-<div class="highlight"><pre># Added by Canopy installer on 2014-06-03
+<div class="highlight"><pre><span></span># Added by Canopy installer on 2014-06-03
 # VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
 VIRTUAL_ENV_DISABLE_PROMPT=1 source \ 
 /Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate
@@ -216,7 +216,7 @@ VIRTUAL_ENV_DISABLE_PROMPT=1 source \
 <p>那就简单了,使用标准的 <code>VirtualEnv</code> 来包装的话,就不用将系统Python 环境永久性的迁移为
 <code>Canopy</code> 的了,</p>
 <p>简单的 在 <code>~/.bashrc</code> 定义一个别称:</p>
-<div class="highlight"><pre># Added by Canopy installer on 2014-06-03
+<div class="highlight"><pre><span></span># Added by Canopy installer on 2014-06-03
 alias canopy="source \
 /Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate"
 </pre></div>

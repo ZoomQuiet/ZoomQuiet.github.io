@@ -226,7 +226,7 @@ problem with Python 2.7.9 and OpenSSL 1.0.2 (https://github.com/Homebrew/homebr
 <h2 id="_4">输入法</h2>
 <h2 id="brew">brew</h2>
 <h2 id="leo">Leo</h2>
-<p>The sip-dir for Python is /Volumes/Macintosh <span class="caps">HD</span>/Users/zoomq/share/sip.</p>
+<p>The sip-dir for Python is /Volumes/Macintosh <span class="caps">HD</span>/Users/zoomq/share/sip.</p>
 <p>Python modules have been installed and Homebrew’s site-packages is not
 in your Python sys.path, so you will not be able to import the modules
 this formula installed. If you plan to develop with these modules,
@@ -291,7 +291,7 @@ patching file src/gui/widgets/qmenu_mac.mm
 ==&gt; ./configure -prefix /opt/bin/homebrew/Cellar/qt/4.8.6 -system-zlib -qt-libtiff -qt-libpng -qt-libjpeg
 ==&gt; make</p>
 <p>$ which qmake
-/Volumes/Macintosh <span class="caps">HD</span>/Users/zoomq/bin/qmake</p>
+/Volumes/Macintosh <span class="caps">HD</span>/Users/zoomq/bin/qmake</p>
 <p>$ /opt/bin/homebrew/Cellar/qt/4.8.6/bin/qmake -v
 QMake version 2.01a
 Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib</p>
@@ -396,12 +396,12 @@ Qt 当然从来也没有内置过. 所以,</p>
   通过环境变量的自动配置 形成复合Python版本共存</p>
 <p>VirtualEnv 有 Pyenv 的插件
 所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:</p>
-<div class="highlight"><pre><span class="nv">$ </span>pyenv versions
-* system <span class="o">(</span><span class="nb">set </span>by /Users/zoomq/.pyenv/version<span class="o">)</span>
+<div class="highlight"><pre><span></span>$ pyenv versions
+* system <span class="o">(</span><span class="nb">set</span> by /Users/zoomq/.pyenv/version<span class="o">)</span>
   2.7.3
   2.7.5
   2.7.6
-  <span class="caps">273SAE</span>
+  273SAE
   275lbTC
   275pelican
   276SphinxOBP
@@ -415,7 +415,7 @@ Qt 当然从来也没有内置过. 所以,</p>
   pypy221chaos
 </pre></div>
 <p>主要遇到的问题是:</p>
-<div class="highlight"><pre>==&gt; Installing python3
+<div class="highlight"><pre><span></span>==&gt; Installing python3
 ==&gt; Downloading http://python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2
 ######################################################################## 100.0%
 ==&gt; ./configure --prefix=/usr/local/Cellar/python3/3.3.3 --enable-ipv6 --datarootdir=/usr/local/Cellar/python3/3.3.3/share --datadir=/usr/lo
@@ -456,7 +456,7 @@ ValueError: list.remove(x): x not in list
 <li><a href="http://xquartz.macosforge.org/landing/">XQuartz</a></li>
 </ul>
 <p>以及:</p>
-<div class="highlight"><pre><span class="nv">$ </span>brew install <span class="nv">pyqt</span>
+<div class="highlight"><pre><span></span>$ brew install <span class="nv">pyqt</span>
 <span class="o">==</span>&gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
 Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
 <span class="o">==</span>&gt; Patching
@@ -464,18 +464,18 @@ patching file configure.py
 <span class="o">==</span>&gt; /usr/local/opt/python/bin/python2 configure.py --confirm-license --bindir<span class="o">=</span>/usr/local/Cellar/pyqt/4.10.3/bin --destdir<span class="o">=</span>/usr/local/Cellar/
 Error: Unable to find the qmake configuration file
 /usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
-Use the <span class="caps">QMAKESPEC</span> environment variable to specify the correct platform.
+Use the QMAKESPEC environment variable to specify the correct platform.
 Determining the layout of your Qt installation...
 
-<span class="caps">READ</span> <span class="caps">THIS</span>: https://github.com/Homebrew/homebrew/wiki/troubleshooting
+READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
 </pre></div>
 <p>多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,</p>
 <p>然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:</p>
-<div class="highlight"><pre><span class="c"># ~/.bashrc for running Leo</span>
-<span class="nb">alias </span><span class="nv">leolanch</span><span class="o">=</span><span class="s2">"python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"</span>
+<div class="highlight"><pre><span></span><span class="c1"># ~/.bashrc for running Leo</span>
+<span class="nb">alias</span> <span class="nv">leolanch</span><span class="o">=</span><span class="s2">"python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"</span>
 </pre></div>
 <h2 id="sshfs">伟光大的 sshfs</h2>
-<div class="highlight"><pre><span class="nv">$ </span>brew link fuse4x
+<div class="highlight"><pre><span></span>$ brew link fuse4x
 Linking /usr/local/Cellar/fuse4x/0.9.2... Warning: Could not link fuse4x. Unlinking...
 
 Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
@@ -486,22 +486,22 @@ To force the link and overwrite all other conflicting files, <span class="k">do<
 To list all files that would be deleted:
   brew link --overwrite --dry-run formula_name
 
-zoomq @ <span class="caps">MBP111216ZQ</span> in /usr/local/lib
-<span class="nv">$ </span>brew link --overwrite fuse4x
+zoomq @ MBP111216ZQ in /usr/local/lib
+$ brew link --overwrite fuse4x
 Linking /usr/local/Cellar/fuse4x/0.9.2... <span class="m">7</span> symlinks created
 
 
-<span class="nv">$ </span>brew install <span class="nv">osxfuse</span>
+$ brew install <span class="nv">osxfuse</span>
 <span class="o">==</span>&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz
 <span class="o">==</span>&gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
 <span class="o">==</span>&gt; Caveats
 If upgrading from a previous version of osxfuse, the previous kernel extension
 will need to be unloaded before installing the new version. First, check that
-no <span class="caps">FUSE</span>-based file systems are running:
+no FUSE-based file systems are running:
 
   mount -t osxfusefs
 
-Unmount all <span class="caps">FUSE</span> file systems and <span class="k">then</span> unload the kernel extension:
+Unmount all FUSE file systems and <span class="k">then</span> unload the kernel extension:
 
   sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs
 

@@ -53,7 +53,7 @@ problem with Python 2.7.9 and OpenSSL 1.0.2 (https://github.com/Homebrew/homebr
 &lt;h2 id="_4"&gt;输入法&lt;/h2&gt;
 &lt;h2 id="brew"&gt;brew&lt;/h2&gt;
 &lt;h2 id="leo"&gt;Leo&lt;/h2&gt;
-&lt;p&gt;The sip-dir for Python is /Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/share/sip.&lt;/p&gt;
+&lt;p&gt;The sip-dir for Python is /Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/share/sip.&lt;/p&gt;
 &lt;p&gt;Python modules have been installed and Homebrew’s site-packages is not
 in your Python sys.path, so you will not be able to import the modules
 this formula installed. If you plan to develop with these modules,
@@ -118,7 +118,7 @@ patching file src/gui/widgets/qmenu_mac.mm
 ==&amp;gt; ./configure -prefix /opt/bin/homebrew/Cellar/qt/4.8.6 -system-zlib -qt-libtiff -qt-libpng -qt-libjpeg
 ==&amp;gt; make&lt;/p&gt;
 &lt;p&gt;$ which qmake
-/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/bin/qmake&lt;/p&gt;
+/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/bin/qmake&lt;/p&gt;
 &lt;p&gt;$ /opt/bin/homebrew/Cellar/qt/4.8.6/bin/qmake -v
 QMake version 2.01a
 Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib&lt;/p&gt;
@@ -223,12 +223,12 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
   通过环境变量的自动配置 形成复合Python版本共存&lt;/p&gt;
 &lt;p&gt;VirtualEnv 有 Pyenv 的插件
 所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pyenv versions
-* system &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set &lt;/span&gt;by /Users/zoomq/.pyenv/version&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pyenv versions
+* system &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt; by /Users/zoomq/.pyenv/version&lt;span class="o"&gt;)&lt;/span&gt;
   2.7.3
   2.7.5
   2.7.6
-  &lt;span class="caps"&gt;273SAE&lt;/span&gt;
+  273SAE
   275lbTC
   275pelican
   276SphinxOBP
@@ -242,7 +242,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
   pypy221chaos
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;主要遇到的问题是:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;==&amp;gt; Installing python3
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;==&amp;gt; Installing python3
 ==&amp;gt; Downloading http://python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2
 ######################################################################## 100.0%
 ==&amp;gt; ./configure --prefix=/usr/local/Cellar/python3/3.3.3 --enable-ipv6 --datarootdir=/usr/local/Cellar/python3/3.3.3/share --datadir=/usr/lo
@@ -283,7 +283,7 @@ ValueError: list.remove(x): x not in list
 &lt;li&gt;&lt;a href="http://xquartz.macosforge.org/landing/"&gt;XQuartz&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以及:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew install &lt;span class="nv"&gt;pyqt&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install &lt;span class="nv"&gt;pyqt&lt;/span&gt;
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
 Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Patching
@@ -291,18 +291,18 @@ patching file configure.py
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; /usr/local/opt/python/bin/python2 configure.py --confirm-license --bindir&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/Cellar/pyqt/4.10.3/bin --destdir&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/Cellar/
 Error: Unable to find the qmake configuration file
 /usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
-Use the &lt;span class="caps"&gt;QMAKESPEC&lt;/span&gt; environment variable to specify the correct platform.
+Use the QMAKESPEC environment variable to specify the correct platform.
 Determining the layout of your Qt installation...
 
-&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://github.com/Homebrew/homebrew/wiki/troubleshooting
+READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,&lt;/p&gt;
 &lt;p&gt;然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# ~/.bashrc for running Leo&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;leolanch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# ~/.bashrc for running Leo&lt;/span&gt;
+&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;leolanch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="sshfs"&gt;伟光大的 sshfs&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew link fuse4x
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew link fuse4x
 Linking /usr/local/Cellar/fuse4x/0.9.2... Warning: Could not link fuse4x. Unlinking...
 
 Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
@@ -313,22 +313,22 @@ To force the link and overwrite all other conflicting files, &lt;span class="k"&
 To list all files that would be deleted:
   brew link --overwrite --dry-run formula_name
 
-zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in /usr/local/lib
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew link --overwrite fuse4x
+zoomq @ MBP111216ZQ in /usr/local/lib
+$ brew link --overwrite fuse4x
 Linking /usr/local/Cellar/fuse4x/0.9.2... &lt;span class="m"&gt;7&lt;/span&gt; symlinks created
 
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew install &lt;span class="nv"&gt;osxfuse&lt;/span&gt;
+$ brew install &lt;span class="nv"&gt;osxfuse&lt;/span&gt;
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Caveats
 If upgrading from a previous version of osxfuse, the previous kernel extension
 will need to be unloaded before installing the new version. First, check that
-no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:
+no FUSE-based file systems are running:
 
   mount -t osxfusefs
 
-Unmount all &lt;span class="caps"&gt;FUSE&lt;/span&gt; file systems and &lt;span class="k"&gt;then&lt;/span&gt; unload the kernel extension:
+Unmount all FUSE file systems and &lt;span class="k"&gt;then&lt;/span&gt; unload the kernel extension:
 
   sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs
 
@@ -360,7 +360,7 @@ The new osxfuse file system bundle needs to be installed by the root user:
 &lt;li&gt;坚持用 Pythonic 感化国人进入 &lt;span class="caps"&gt;FLOSS&lt;/span&gt;世界进行学习 / 分享 / 创造…&lt;/li&gt;
 &lt;li&gt;擅长:&lt;ul&gt;
 &lt;li&gt;Pythonic入门宣传;实效敏捷配置管理;技术社区文化促生;&lt;/li&gt;
-&lt;li&gt;&lt;span class="caps"&gt;PKM&lt;/span&gt; ~ &lt;span class="caps"&gt;GTD&lt;/span&gt;/个人效率工具箱/文学化编程;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PKM&lt;/span&gt; ~ &lt;span class="caps"&gt;GTD&lt;/span&gt;/个人效率工具箱/文学化编程;&lt;/li&gt;
 &lt;li&gt;&lt;span class="caps"&gt;EKM&lt;/span&gt; ~ 企業知识管理策略理解;企業自学习型组织促生;企業对外技术社区管理; &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -376,7 +376,7 @@ The new osxfuse file system bundle needs to be installed by the root user:
 &lt;p&gt;坐班时:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class="caps"&gt;MBP&lt;/span&gt; 主力工作界面&lt;ul&gt;
-&lt;li&gt;MacBook Pro (15-inch, Late 2011), 升级到 10.10, 内存只有8G, 没有去光盘加&lt;span class="caps"&gt;SSD&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;MacBook Pro (15-inch, Late 2011), 升级到 10.10, 内存只有8G, 没有去光盘加&lt;span class="caps"&gt;SSD&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;DisplayLink&lt;/code&gt; 兼容&lt;span class="caps"&gt;USB&lt;/span&gt;显卡, 形成一拖二,三屏工作环境&lt;ul&gt;
 &lt;li&gt;&lt;span class="caps"&gt;DELL&lt;/span&gt; &lt;span class="caps"&gt;E177FP&lt;/span&gt; 负责 1024*768 标准幅面排版测试&lt;/li&gt;
 &lt;li&gt;&lt;span class="caps"&gt;DELL&lt;/span&gt; &lt;span class="caps"&gt;U2212HM&lt;/span&gt; 1280*1920 竖屏 &lt;span class="caps"&gt;CLI&lt;/span&gt; + 文档&lt;/li&gt;
@@ -438,7 +438,7 @@ The new osxfuse file system bundle needs to be installed by the root user:
 &lt;li&gt;软皮 soft cover&lt;/li&gt;
 &lt;li&gt;配合 &lt;span class="caps"&gt;LAMY&lt;/span&gt; safari 狩猎者宝珠笔(签字笔)磨砂黑&lt;/li&gt;
 &lt;li&gt;那叫个贴心…&lt;/li&gt;
-&lt;li&gt;因为要配合自个儿的 &lt;span class="caps"&gt;GTD&lt;/span&gt;+时间管理改进,需要一种可以随身携带,各种姿势都能快速记要各种信息的纸笔组合&lt;/li&gt;
+&lt;li&gt;因为要配合自个儿的 &lt;span class="caps"&gt;GTD&lt;/span&gt;+时间管理改进,需要一种可以随身携带,各种姿势都能快速记要各种信息的纸笔组合&lt;/li&gt;
 &lt;li&gt;原先是 daolen A6 线圈本,硬皮有松紧带,夹的笔尝试过各种笔,包括樱花的绘图笔&lt;/li&gt;
 &lt;li&gt;可是总是有点不合意, 终于在持续看了几年 &lt;span class="caps"&gt;MOLESKINE&lt;/span&gt; 的软文后,土豪了一回,淘到相对可接受的软面素描本&lt;/li&gt;
 &lt;li&gt;又刚好有机会去了台北的诚品,现场抢到最后一只 &lt;span class="caps"&gt;LAMY&lt;/span&gt; safari&lt;/li&gt;
@@ -496,11 +496,11 @@ The new osxfuse file system bundle needs to be installed by the root user:
 &lt;li&gt;先停了以往各种版本的 &lt;code&gt;FUSE&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;正常的安装&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew install sshfs
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install sshfs
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;由脚本自动安装所有依赖包.&lt;/p&gt;
 &lt;p&gt;并根据安装提示进行必要的系统配置&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs \
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs \
     /Library/Filesystems/
 sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
 &lt;/pre&gt;&lt;/div&gt;
@@ -536,26 +536,26 @@ sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
 &lt;/ul&gt;
 &lt;p&gt;发现就是样式的声明问题:
 于是就追加了一个参数: &lt;code&gt;style="monokai"&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# ...&lt;/span&gt;
-&lt;span class="n"&gt;formatter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_formatter_by_name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'html'&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# ...&lt;/span&gt;
+&lt;span class="n"&gt;formatter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_formatter_by_name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'html'&lt;/span&gt;
 &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;noclasses&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;
-&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"monokai"&lt;/span&gt;
+&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"monokai"&lt;/span&gt;
 &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;搞掂!&lt;/p&gt;
 &lt;p&gt;另外,也随手变更了一下注册的 &lt;code&gt;directive&lt;/code&gt; ~ 指令:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Register the directive with docutils.&lt;/span&gt;
-&lt;span class="c"&gt;#rst.directives.register_directive('code-block', code_block)&lt;/span&gt;
-&lt;span class="c"&gt;#rst.roles.register_local_role('code-block', code_role)&lt;/span&gt;
-&lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;directives&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_directive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'sourcecode'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;code_block&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;roles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_local_role&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'sourcecode'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;code_role&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Register the directive with docutils.&lt;/span&gt;
+&lt;span class="c1"&gt;#rst.directives.register_directive('code-block', code_block)&lt;/span&gt;
+&lt;span class="c1"&gt;#rst.roles.register_local_role('code-block', code_role)&lt;/span&gt;
+&lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;directives&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_directive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'sourcecode'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;code_block&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;roles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_local_role&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'sourcecode'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;code_role&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这样俺在 Leo 中写:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png"/&gt;&lt;/p&gt;
 &lt;p&gt;就可以一键生成为幻灯中的:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/&gt;&lt;/p&gt;</summary><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">
 &lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;zoomq @ MBP111216ZQ in ~/KuaiPan/zScrapBook
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;zoomq @ MBP111216ZQ in ~/KuaiPan/zScrapBook
 $ du -hs *
 4.0K    7niu-devrel.json
 4.0K    7niu-floss.json
@@ -711,7 +711,7 @@ $ du -hs *
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h2 id="_3"&gt;系统整顿&lt;/h2&gt;
 &lt;p&gt;&lt;span class="caps"&gt;CB&lt;/span&gt; 自制的 lubuntu 系统,最扯的事儿是:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;居然
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;居然
 没有
 默认
 安装
@@ -740,7 +740,7 @@ alias apclean=’sudo aptitude autoclean’
 alias ppaddkey=’sudo apt-key adv —keyserver keyserver.ubuntu.com —recv-keys’&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;然后,第一时间杀灭预安装的 Apache,MySQL,&lt;span class="caps"&gt;PHP&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;然后,第一时间杀灭预安装的 Apache,MySQL,&lt;span class="caps"&gt;PHP&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;参考:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -756,21 +756,21 @@ $ sudo rm -rf /var/lib/mysql&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3 id="utf8"&gt;&lt;span class="caps"&gt;UTF8&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;默认的: &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;locale
-&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANG&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
-&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
-&lt;span class="nv"&gt;LC_CTYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_NUMERIC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_TIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_COLLATE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_MONETARY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_MESSAGES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_PAPER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_ADDRESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ locale
+&lt;span class="nv"&gt;LANG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="nv"&gt;LANGUAGE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="nv"&gt;LC_CTYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NUMERIC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_COLLATE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MONETARY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MESSAGES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_PAPER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_ADDRESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
 &lt;span class="nv"&gt;LC_ALL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;参考:&lt;/p&gt;
@@ -779,39 +779,39 @@ $ sudo rm -rf /var/lib/mysql&lt;/p&gt;
 &lt;li&gt;&lt;a href="http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale"&gt;修改locale - Ubuntu中文&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;重启后依然!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;zoomq@cubietruck:~&lt;span class="nv"&gt;$ &lt;/span&gt;locale
-&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANG&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
-&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
-&lt;span class="nv"&gt;LC_CTYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_NUMERIC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_TIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_COLLATE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_MONETARY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_MESSAGES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_PAPER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_ADDRESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;POSIX&lt;/span&gt;"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;zoomq@cubietruck:~$ locale
+&lt;span class="nv"&gt;LANG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="nv"&gt;LANGUAGE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="nv"&gt;LC_CTYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NUMERIC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_COLLATE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MONETARY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MESSAGES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_PAPER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_ADDRESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"POSIX"&lt;/span&gt;
 &lt;span class="nv"&gt;LC_ALL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;但是,从 screen 中进入时,就已经&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;locale
-&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANG&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8
-&lt;span class="nv"&gt;&lt;span class="caps"&gt;LANGUAGE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;en_US:en
-&lt;span class="nv"&gt;LC_CTYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_NUMERIC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_TIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_COLLATE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_MONETARY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_MESSAGES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_PAPER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_ADDRESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-&lt;span class="nv"&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ locale
+&lt;span class="nv"&gt;LANG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;en_US.UTF-8
+&lt;span class="nv"&gt;LANGUAGE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;en_US:en
+&lt;span class="nv"&gt;LC_CTYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NUMERIC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_COLLATE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MONETARY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MESSAGES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_PAPER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_ADDRESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
+&lt;span class="nv"&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"en_US.UTF-8"&lt;/span&gt;
 &lt;span class="nv"&gt;LC_ALL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;好吧,也算解决,
@@ -819,10 +819,10 @@ $ sudo rm -rf /var/lib/mysql&lt;/p&gt;
 但是,一般俺只在 Screen 光辉中生存的,所以,不是问题.&lt;/p&gt;
 &lt;h2 id="_4"&gt;数据迁移&lt;/h2&gt;
 &lt;p&gt;专门问过高人:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;Quiet&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;quiet&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;Quiet&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;quiet&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;shlug&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;shlug&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;googlegroups&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;Mon&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jan&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;PM&lt;/span&gt;&lt;/span&gt;
-&lt;span class="n"&gt;subject&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;Tb&lt;/span&gt; &lt;span class="err"&gt;的&lt;/span&gt;&lt;span class="mf"&gt;2.5&lt;/span&gt;&lt;span class="err"&gt;吋盘给&lt;/span&gt; &lt;span class="n"&gt;Ubuntu&lt;/span&gt; &lt;span class="err"&gt;用应该选择什么&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;FS&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
+&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;Mon&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jan&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt; &lt;span class="n"&gt;PM&lt;/span&gt;
+&lt;span class="n"&gt;subject&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;Tb&lt;/span&gt; &lt;span class="err"&gt;的&lt;/span&gt;&lt;span class="mf"&gt;2.5&lt;/span&gt;&lt;span class="err"&gt;吋盘给&lt;/span&gt; &lt;span class="n"&gt;Ubuntu&lt;/span&gt; &lt;span class="err"&gt;用应该选择什么&lt;/span&gt;&lt;span class="n"&gt;FS&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;参考: &lt;a href="http://floss.zoomquiet.io/data/20110828225725/index.html"&gt;linux下的文件系统选型 | shell’s home&lt;/a&gt; 以及相关的各种文档,&lt;/p&gt;
 &lt;p&gt;进行了各种尝试,只能说那真是千辛万苦哪:&lt;/p&gt;
@@ -838,7 +838,7 @@ $ sudo rm -rf /var/lib/mysql&lt;/p&gt;
 &lt;li&gt;怎么将老盘的 &lt;span class="caps"&gt;BSD&lt;/span&gt; 文件系统中的数据迁移出来?&lt;ul&gt;
 &lt;li&gt;&lt;span class="caps"&gt;MAC&lt;/span&gt; 挂 &lt;span class="caps"&gt;UFS&lt;/span&gt; ~ 无解&lt;/li&gt;
 &lt;li&gt;Linux 挂 &lt;span class="caps"&gt;UFS&lt;/span&gt; ~ 失败&lt;/li&gt;
-&lt;li&gt;FreeBSD 挂 &lt;span class="caps"&gt;UFS&lt;/span&gt; &lt;/li&gt;
+&lt;li&gt;FreeBSD 挂 &lt;span class="caps"&gt;UFS&lt;/span&gt; &lt;/li&gt;
 &lt;li&gt;嚓了! 也失败!&lt;/li&gt;
 &lt;li&gt;这不科学,再换一台&lt;span class="caps"&gt;BSD&lt;/span&gt; ,一下子就成功了!&lt;/li&gt;
 &lt;li&gt;原来是 &lt;span class="caps"&gt;BSD&lt;/span&gt; 8.2 和 9.1 的系统不同导致…&lt;/li&gt;
@@ -862,8 +862,8 @@ $ sudo rm -rf /var/lib/mysql&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;整个 700多G 数据,就这样迁移到了 &lt;span class="caps"&gt;CB&lt;/span&gt; 控制的两个硬盘共 2T 空间中…&lt;/p&gt;
 &lt;h3 id="_5"&gt;相关片段&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;cat /proc/partitions
-major minor  &lt;span class="c"&gt;#blocks  name&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ cat /proc/partitions
+major minor  &lt;span class="c1"&gt;#blocks  name&lt;/span&gt;
 
   &lt;span class="m"&gt;93&lt;/span&gt;        &lt;span class="m"&gt;0&lt;/span&gt;    &lt;span class="m"&gt;7520256&lt;/span&gt; nand
   &lt;span class="m"&gt;93&lt;/span&gt;        &lt;span class="m"&gt;1&lt;/span&gt;      &lt;span class="m"&gt;65536&lt;/span&gt; nanda
@@ -875,8 +875,8 @@ major minor  &lt;span class="c"&gt;#blocks  name&lt;/span&gt;
    &lt;span class="m"&gt;8&lt;/span&gt;       &lt;span class="m"&gt;18&lt;/span&gt;  &lt;span class="m"&gt;781380608&lt;/span&gt; sdb2
    &lt;span class="m"&gt;8&lt;/span&gt;       &lt;span class="m"&gt;19&lt;/span&gt; &lt;span class="m"&gt;1171928064&lt;/span&gt; sdb3
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo mount.exfat-fuse /dev/sdb2 /mnt/bk2wk
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo mount.exfat-fuse /dev/sdb3 /mnt/dl4p2p
+$ sudo mount.exfat-fuse /dev/sdb2 /mnt/bk2wk
+$ sudo mount.exfat-fuse /dev/sdb3 /mnt/dl4p2p
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;但是, 远程 sshfs 后目录只读!?&lt;/p&gt;
 &lt;ul&gt;
@@ -885,20 +885,20 @@ major minor  &lt;span class="c"&gt;#blocks  name&lt;/span&gt;
 &lt;li&gt;&lt;a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;/OpenSSH/Keys - Community Ubuntu Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_6"&gt;外置硬盘盒&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;dmesg &lt;span class="p"&gt;|&lt;/span&gt; grep da0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ dmesg &lt;span class="p"&gt;|&lt;/span&gt; grep da0
 ada0 at ata4 bus &lt;span class="m"&gt;0&lt;/span&gt; scbus2 target &lt;span class="m"&gt;0&lt;/span&gt; lun 0
-ada0: &amp;lt;&lt;span class="caps"&gt;ST3160815AS&lt;/span&gt; 3.&lt;span class="caps"&gt;ADA&lt;/span&gt;&amp;gt; &lt;span class="caps"&gt;ATA&lt;/span&gt;-7 &lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x device
-ada0: 300.&lt;span class="caps"&gt;000MB&lt;/span&gt;/s transfers &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="caps"&gt;SATA&lt;/span&gt; 2.x, &lt;span class="caps"&gt;UDMA5&lt;/span&gt;, &lt;span class="caps"&gt;PIO&lt;/span&gt; 8192bytes&lt;span class="o"&gt;)&lt;/span&gt;
-ada0: &lt;span class="caps"&gt;152587MB&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;312500000&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; byte sectors: 16H 63S/T 16383C&lt;span class="o"&gt;)&lt;/span&gt;
+ada0: &amp;lt;ST3160815AS 3.ADA&amp;gt; ATA-7 SATA 2.x device
+ada0: 300.000MB/s transfers &lt;span class="o"&gt;(&lt;/span&gt;SATA 2.x, UDMA5, PIO 8192bytes&lt;span class="o"&gt;)&lt;/span&gt;
+ada0: 152587MB &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;312500000&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; byte sectors: 16H 63S/T 16383C&lt;span class="o"&gt;)&lt;/span&gt;
 ada0: Previously was known as ad8
 Trying to mount root from ufs:/dev/ada0s1a &lt;span class="o"&gt;[&lt;/span&gt;rw&lt;span class="o"&gt;]&lt;/span&gt;...
 da0 at umass-sim0 bus &lt;span class="m"&gt;0&lt;/span&gt; scbus6 target &lt;span class="m"&gt;0&lt;/span&gt; lun 0
-da0: &amp;lt;&lt;span class="caps"&gt;ATA&lt;/span&gt; &lt;span class="caps"&gt;ST2000DL003&lt;/span&gt;-&lt;span class="caps"&gt;9VT1&lt;/span&gt; &lt;span class="caps"&gt;CC3C&lt;/span&gt;&amp;gt; Fixed Direct Access &lt;span class="caps"&gt;SCSI&lt;/span&gt;-6 device
-da0: 40.&lt;span class="caps"&gt;000MB&lt;/span&gt;/s transfers
-da0: &lt;span class="caps"&gt;1907729MB&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3907029168&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; byte sectors: 255H 63S/T 243201C&lt;span class="o"&gt;)&lt;/span&gt;
+da0: &amp;lt;ATA ST2000DL003-9VT1 CC3C&amp;gt; Fixed Direct Access SCSI-6 device
+da0: 40.000MB/s transfers
+da0: 1907729MB &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3907029168&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; byte sectors: 255H 63S/T 243201C&lt;span class="o"&gt;)&lt;/span&gt;
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;gpart show /dev/da0
-&lt;span class="o"&gt;=&lt;/span&gt;&amp;gt;        &lt;span class="m"&gt;34&lt;/span&gt;  &lt;span class="m"&gt;3907029101&lt;/span&gt;  da0  &lt;span class="caps"&gt;GPT&lt;/span&gt;  &lt;span class="o"&gt;(&lt;/span&gt;1.8T&lt;span class="o"&gt;)&lt;/span&gt;
+$ gpart show /dev/da0
+&lt;span class="o"&gt;=&lt;/span&gt;&amp;gt;        &lt;span class="m"&gt;34&lt;/span&gt;  &lt;span class="m"&gt;3907029101&lt;/span&gt;  da0  GPT  &lt;span class="o"&gt;(&lt;/span&gt;1.8T&lt;span class="o"&gt;)&lt;/span&gt;
           &lt;span class="m"&gt;34&lt;/span&gt;           &lt;span class="m"&gt;6&lt;/span&gt;       - free -  &lt;span class="o"&gt;(&lt;/span&gt;3.0k&lt;span class="o"&gt;)&lt;/span&gt;
           &lt;span class="m"&gt;40&lt;/span&gt;         &lt;span class="m"&gt;128&lt;/span&gt;    &lt;span class="m"&gt;1&lt;/span&gt;  freebsd-boot  &lt;span class="o"&gt;(&lt;/span&gt;64k&lt;span class="o"&gt;)&lt;/span&gt;
          &lt;span class="m"&gt;168&lt;/span&gt;    &lt;span class="m"&gt;16777216&lt;/span&gt;    &lt;span class="m"&gt;2&lt;/span&gt;  freebsd-ufs  &lt;span class="o"&gt;(&lt;/span&gt;8.0G&lt;span class="o"&gt;)&lt;/span&gt;
@@ -907,7 +907,7 @@ da0: &lt;span class="caps"&gt;1907729MB&lt;/span&gt; &lt;span class="o"&gt;(&lt;
   &lt;span class="m"&gt;3907029134&lt;/span&gt;           &lt;span class="m"&gt;1&lt;/span&gt;       - free -  &lt;span class="o"&gt;(&lt;/span&gt;512B&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="sshfs"&gt;伟光大的 sshfs&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew link fuse4x
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew link fuse4x
 Linking /usr/local/Cellar/fuse4x/0.9.2... Warning: Could not link fuse4x. Unlinking...
 
 Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
@@ -918,22 +918,22 @@ To force the link and overwrite all other conflicting files, &lt;span class="k"&
 To list all files that would be deleted:
   brew link --overwrite --dry-run formula_name
 
-zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in /usr/local/lib
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew link --overwrite fuse4x
+zoomq @ MBP111216ZQ in /usr/local/lib
+$ brew link --overwrite fuse4x
 Linking /usr/local/Cellar/fuse4x/0.9.2... &lt;span class="m"&gt;7&lt;/span&gt; symlinks created
 
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew install &lt;span class="nv"&gt;osxfuse&lt;/span&gt;
+$ brew install &lt;span class="nv"&gt;osxfuse&lt;/span&gt;
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Caveats
 If upgrading from a previous version of osxfuse, the previous kernel extension
 will need to be unloaded before installing the new version. First, check that
-no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:
+no FUSE-based file systems are running:
 
   mount -t osxfusefs
 
-Unmount all &lt;span class="caps"&gt;FUSE&lt;/span&gt; file systems and &lt;span class="k"&gt;then&lt;/span&gt; unload the kernel extension:
+Unmount all FUSE file systems and &lt;span class="k"&gt;then&lt;/span&gt; unload the kernel extension:
 
   sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs
 
@@ -945,42 +945,42 @@ The new osxfuse file system bundle needs to be installed by the root user:
 🍺  /usr/local/Cellar/osxfuse/2.6.2: &lt;span class="m"&gt;84&lt;/span&gt; files, 5.0M
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="exfat"&gt;exFAT&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;cat /etc/lsb-release.bk
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ cat /etc/lsb-release.bk
 &lt;span class="nv"&gt;DISTRIB_ID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Linaro
 &lt;span class="nv"&gt;DISTRIB_RELEASE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;13.08
 &lt;span class="nv"&gt;DISTRIB_CODENAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;raring
 &lt;span class="nv"&gt;DISTRIB_DESCRIPTION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Linaro 13.08"&lt;/span&gt;
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo vi /etc/lsb-release
+$ sudo vi /etc/lsb-release
 &lt;span class="nv"&gt;DISTRIB_ID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Ubuntu
 &lt;span class="nv"&gt;DISTRIB_RELEASE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;13.04
 &lt;span class="nv"&gt;DISTRIB_CODENAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;raring
 &lt;span class="nv"&gt;DISTRIB_DESCRIPTION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Ubuntu 13.04"&lt;/span&gt;
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-add-repository ppa:relan/exfat
-你将向系统添加如下 &lt;span class="caps"&gt;PPA&lt;/span&gt;：
- &lt;span class="caps"&gt;PPA&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; the free exFAT file system implementation project: http://code.google.com/p/exfat/
+$ sudo apt-add-repository ppa:relan/exfat
+你将向系统添加如下 PPA：
+ PPA &lt;span class="k"&gt;for&lt;/span&gt; the free exFAT file system implementation project: http://code.google.com/p/exfat/
  更多信息： https://launchpad.net/~relan/+archive/exfat
 按回车继续或者 Ctrl+c 取消添加
 
 gpg: 钥匙环‘/tmp/tmppjaczn/secring.gpg’已建立
 gpg: 钥匙环‘/tmp/tmppjaczn/pubring.gpg’已建立
-gpg: 下载密钥‘&lt;span class="caps"&gt;A252A784&lt;/span&gt;’，从 hkp 服务器 keyserver.ubuntu.com
+gpg: 下载密钥‘A252A784’，从 hkp 服务器 keyserver.ubuntu.com
 gpg: /tmp/tmppjaczn/trustdb.gpg：建立了信任度数据库
-gpg: 密钥 &lt;span class="caps"&gt;A252A784&lt;/span&gt;：公钥“Launchpad Free exFAT file system implementation”已导入
+gpg: 密钥 A252A784：公钥“Launchpad Free exFAT file system implementation”已导入
 gpg: 合计被处理的数量：1
-gpg:               已导入：1  &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt;: 1&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;span class="caps"&gt;OK&lt;/span&gt;
+gpg:               已导入：1  &lt;span class="o"&gt;(&lt;/span&gt;RSA: 1&lt;span class="o"&gt;)&lt;/span&gt;
+OK
 
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;acs exfat
-exfat-fuse - &lt;span class="nb"&gt;read &lt;/span&gt;and write exFAT driver &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="caps"&gt;FUSE&lt;/span&gt;
+$ acs exfat
+exfat-fuse - &lt;span class="nb"&gt;read&lt;/span&gt; and write exFAT driver &lt;span class="k"&gt;for&lt;/span&gt; FUSE
 exfat-utils - utilities to create, check, label and dump exFAT filesystem
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;agi exfat-fuse
+$ agi exfat-fuse
 
  Working... this may take a &lt;span class="k"&gt;while&lt;/span&gt;.
-&lt;span class="c"&gt;# apt-fast mirror list: Mon Jan 27 16:42:10 &lt;span class="caps"&gt;UTC&lt;/span&gt; 2014&lt;/span&gt;
+&lt;span class="c1"&gt;# apt-fast mirror list: Mon Jan 27 16:42:10 UTC 2014&lt;/span&gt;
 http://ports.ubuntu.com/ubuntu-ports/pool/universe/f/fuse-exfat/exfat-fuse_1.0.1-1_armhf.deb
  &lt;span class="nv"&gt;checksum&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;md5&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcacfbade2df1f97d72ba9912961883f
  &lt;span class="nv"&gt;out&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;exfat-fuse_1.0.1-1_armhf.deb
@@ -990,13 +990,13 @@ http://ports.ubuntu.com/ubuntu-ports/pool/universe/e/exfat-utils/exfat-utils_1.0
 ...
 
 下载结果：
-gid   &lt;span class="p"&gt;|&lt;/span&gt;stat&lt;span class="p"&gt;|&lt;/span&gt;avg speed  &lt;span class="p"&gt;|&lt;/span&gt;path/&lt;span class="caps"&gt;URI&lt;/span&gt;
+gid   &lt;span class="p"&gt;|&lt;/span&gt;stat&lt;span class="p"&gt;|&lt;/span&gt;avg speed  &lt;span class="p"&gt;|&lt;/span&gt;path/URI
 &lt;span class="o"&gt;======&lt;/span&gt;+&lt;span class="o"&gt;====&lt;/span&gt;+&lt;span class="o"&gt;===========&lt;/span&gt;+&lt;span class="o"&gt;=======================================================&lt;/span&gt;
-07028f&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt;    66KiB/s&lt;span class="p"&gt;|&lt;/span&gt;/var/cache/apt/archives/apt-fast/exfat-fuse_1.0.1-1_armhf.deb
-e4fa30&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt;    40KiB/s&lt;span class="p"&gt;|&lt;/span&gt;/var/cache/apt/archives/apt-fast/exfat-utils_1.0.1-1_armhf.deb
+07028f&lt;span class="p"&gt;|&lt;/span&gt;OK  &lt;span class="p"&gt;|&lt;/span&gt;    66KiB/s&lt;span class="p"&gt;|&lt;/span&gt;/var/cache/apt/archives/apt-fast/exfat-fuse_1.0.1-1_armhf.deb
+e4fa30&lt;span class="p"&gt;|&lt;/span&gt;OK  &lt;span class="p"&gt;|&lt;/span&gt;    40KiB/s&lt;span class="p"&gt;|&lt;/span&gt;/var/cache/apt/archives/apt-fast/exfat-utils_1.0.1-1_armhf.deb
 
 状态标识：
-&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;：完成下载。
+&lt;span class="o"&gt;(&lt;/span&gt;OK&lt;span class="o"&gt;)&lt;/span&gt;：完成下载。
 正在读取软件包列表... 完成
 正在分析软件包的依赖关系树
 正在读取状态信息... 完成
@@ -1021,12 +1021,12 @@ Selecting previously unselected package exfat-utils.
 正在设置 exfat-utils &lt;span class="o"&gt;(&lt;/span&gt;1.0.1-1&lt;span class="o"&gt;)&lt;/span&gt; ...
 
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo fdisk -l /dev/sdb
+$ sudo fdisk -l /dev/sdb
 
-&lt;span class="caps"&gt;WARNING&lt;/span&gt;: &lt;span class="caps"&gt;GPT&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="caps"&gt;GUID&lt;/span&gt; Partition Table&lt;span class="o"&gt;)&lt;/span&gt; detected on &lt;span class="s1"&gt;'/dev/sdb'&lt;/span&gt;! The util fdisk doesn&lt;span class="err"&gt;'&lt;/span&gt;t support &lt;span class="caps"&gt;GPT&lt;/span&gt;. Use &lt;span class="caps"&gt;GNU&lt;/span&gt; Parted.
+WARNING: GPT &lt;span class="o"&gt;(&lt;/span&gt;GUID Partition Table&lt;span class="o"&gt;)&lt;/span&gt; detected on &lt;span class="s1"&gt;'/dev/sdb'&lt;/span&gt;! The util fdisk doesn&lt;span class="err"&gt;'&lt;/span&gt;t support GPT. Use GNU Parted.
 
 
-Disk /dev/sdb: 2000.4 &lt;span class="caps"&gt;GB&lt;/span&gt;, &lt;span class="m"&gt;2000398934016&lt;/span&gt; bytes
+Disk /dev/sdb: 2000.4 GB, &lt;span class="m"&gt;2000398934016&lt;/span&gt; bytes
 &lt;span class="m"&gt;255&lt;/span&gt; heads, &lt;span class="m"&gt;63&lt;/span&gt; sectors/track, &lt;span class="m"&gt;243201&lt;/span&gt; cylinders, total &lt;span class="m"&gt;3907029168&lt;/span&gt; sectors
 &lt;span class="nv"&gt;Units&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; sectors of &lt;span class="m"&gt;1&lt;/span&gt; * &lt;span class="nv"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; bytes
 Sector size &lt;span class="o"&gt;(&lt;/span&gt;logical/physical&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
@@ -1034,15 +1034,15 @@ I/O size &lt;span class="o"&gt;(&lt;/span&gt;minimum/optimal&lt;span class="o"&g
 Disk identifier: 0x00000000
 
    Device Boot      Start         End      Blocks   Id  System
-/dev/sdb1               &lt;span class="m"&gt;1&lt;/span&gt;      &lt;span class="m"&gt;409639&lt;/span&gt;      204819+  ee  &lt;span class="caps"&gt;GPT&lt;/span&gt;
-/dev/sdb2          &lt;span class="m"&gt;411648&lt;/span&gt;  &lt;span class="m"&gt;1563172863&lt;/span&gt;   &lt;span class="m"&gt;781380608&lt;/span&gt;    &lt;span class="m"&gt;7&lt;/span&gt;  &lt;span class="caps"&gt;HPFS&lt;/span&gt;/&lt;span class="caps"&gt;NTFS&lt;/span&gt;/exFAT
-/dev/sdb3      &lt;span class="m"&gt;1563172864&lt;/span&gt;  &lt;span class="m"&gt;3907028991&lt;/span&gt;  &lt;span class="m"&gt;1171928064&lt;/span&gt;    &lt;span class="m"&gt;7&lt;/span&gt;  &lt;span class="caps"&gt;HPFS&lt;/span&gt;/&lt;span class="caps"&gt;NTFS&lt;/span&gt;/exFAT
+/dev/sdb1               &lt;span class="m"&gt;1&lt;/span&gt;      &lt;span class="m"&gt;409639&lt;/span&gt;      204819+  ee  GPT
+/dev/sdb2          &lt;span class="m"&gt;411648&lt;/span&gt;  &lt;span class="m"&gt;1563172863&lt;/span&gt;   &lt;span class="m"&gt;781380608&lt;/span&gt;    &lt;span class="m"&gt;7&lt;/span&gt;  HPFS/NTFS/exFAT
+/dev/sdb3      &lt;span class="m"&gt;1563172864&lt;/span&gt;  &lt;span class="m"&gt;3907028991&lt;/span&gt;  &lt;span class="m"&gt;1171928064&lt;/span&gt;    &lt;span class="m"&gt;7&lt;/span&gt;  HPFS/NTFS/exFAT
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="_7"&gt;系统硬盘&lt;/h3&gt;
 &lt;p&gt;观察:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo fdisk -l /dev/sda
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo fdisk -l /dev/sda
 
-Disk /dev/sda: 1000.2 &lt;span class="caps"&gt;GB&lt;/span&gt;, &lt;span class="m"&gt;1000204886016&lt;/span&gt; bytes
+Disk /dev/sda: 1000.2 GB, &lt;span class="m"&gt;1000204886016&lt;/span&gt; bytes
 &lt;span class="m"&gt;255&lt;/span&gt; heads, &lt;span class="m"&gt;63&lt;/span&gt; sectors/track, &lt;span class="m"&gt;121601&lt;/span&gt; cylinders, total &lt;span class="m"&gt;1953525168&lt;/span&gt; sectors
 &lt;span class="nv"&gt;Units&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; sectors of &lt;span class="m"&gt;1&lt;/span&gt; * &lt;span class="nv"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; bytes
 Sector size &lt;span class="o"&gt;(&lt;/span&gt;logical/physical&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;4096&lt;/span&gt; bytes
@@ -1057,12 +1057,12 @@ Disk /dev/sda doesn&lt;span class="err"&gt;'&lt;/span&gt;t contain a valid parti
 &lt;li&gt;&lt;a href="http://blog.itpub.net/26686207/viewspace-765782/"&gt;多硬盘分区管理fdisk-张丹-leonarding-&lt;span class="caps"&gt;ITPUB&lt;/span&gt;博客&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;格式化:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo mkfs.ext4 /dev/sda3
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo mkfs.ext4 /dev/sda3
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h4 id="fatab"&gt;fatab&lt;/h4&gt;
 &lt;p&gt;观察:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;cat /proc/partitions
-major minor  &lt;span class="c"&gt;#blocks  name&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ cat /proc/partitions
+major minor  &lt;span class="c1"&gt;#blocks  name&lt;/span&gt;
 
   &lt;span class="m"&gt;93&lt;/span&gt;        &lt;span class="m"&gt;0&lt;/span&gt;    &lt;span class="m"&gt;7520256&lt;/span&gt; nand
   &lt;span class="m"&gt;93&lt;/span&gt;        &lt;span class="m"&gt;1&lt;/span&gt;      &lt;span class="m"&gt;65536&lt;/span&gt; nanda
@@ -1077,15 +1077,15 @@ major minor  &lt;span class="c"&gt;#blocks  name&lt;/span&gt;
    &lt;span class="m"&gt;8&lt;/span&gt;       &lt;span class="m"&gt;18&lt;/span&gt;  &lt;span class="m"&gt;781380608&lt;/span&gt; sdb2
    &lt;span class="m"&gt;8&lt;/span&gt;       &lt;span class="m"&gt;19&lt;/span&gt; &lt;span class="m"&gt;1171928064&lt;/span&gt; sdb3
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo blkid
-/dev/nanda: &lt;span class="nv"&gt;SEC_TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"msdos"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;LABEL&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Volumn"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"vfat"&lt;/span&gt;
-/dev/nandb: &lt;span class="nv"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"d20c81fd-3188-4650-b124-2fa090bb7920"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"ext4"&lt;/span&gt;
-/dev/nandc: &lt;span class="nv"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"1914bbf8-2641-4b3f-a00e-4afa65d0ed8f"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"ext4"&lt;/span&gt;
+$ sudo blkid
+/dev/nanda: &lt;span class="nv"&gt;SEC_TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"msdos"&lt;/span&gt; &lt;span class="nv"&gt;LABEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Volumn"&lt;/span&gt; &lt;span class="nv"&gt;TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"vfat"&lt;/span&gt;
+/dev/nandb: &lt;span class="nv"&gt;UUID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"d20c81fd-3188-4650-b124-2fa090bb7920"&lt;/span&gt; &lt;span class="nv"&gt;TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"ext4"&lt;/span&gt;
+/dev/nandc: &lt;span class="nv"&gt;UUID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"1914bbf8-2641-4b3f-a00e-4afa65d0ed8f"&lt;/span&gt; &lt;span class="nv"&gt;TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"ext4"&lt;/span&gt;
 
-/dev/sda3: &lt;span class="nv"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"b9db3117-90d7-48a6-8302-0b316b9745fd"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"ext4"&lt;/span&gt;
-/dev/sdb1: &lt;span class="nv"&gt;&lt;span class="caps"&gt;LABEL&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;span class="caps"&gt;EFI&lt;/span&gt;"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"67E3-&lt;span class="caps"&gt;17ED&lt;/span&gt;"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"vfat"&lt;/span&gt;
-/dev/sdb2: &lt;span class="nv"&gt;&lt;span class="caps"&gt;LABEL&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"bk4wk"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"52E4-&lt;span class="caps"&gt;78FF&lt;/span&gt;"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"exfat"&lt;/span&gt;
-/dev/sdb3: &lt;span class="nv"&gt;&lt;span class="caps"&gt;LABEL&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"dl4p2p"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"52E4-7901"&lt;/span&gt; &lt;span class="nv"&gt;&lt;span class="caps"&gt;TYPE&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"exfat"&lt;/span&gt;
+/dev/sda3: &lt;span class="nv"&gt;UUID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"b9db3117-90d7-48a6-8302-0b316b9745fd"&lt;/span&gt; &lt;span class="nv"&gt;TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"ext4"&lt;/span&gt;
+/dev/sdb1: &lt;span class="nv"&gt;LABEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"EFI"&lt;/span&gt; &lt;span class="nv"&gt;UUID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"67E3-17ED"&lt;/span&gt; &lt;span class="nv"&gt;TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"vfat"&lt;/span&gt;
+/dev/sdb2: &lt;span class="nv"&gt;LABEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"bk4wk"&lt;/span&gt; &lt;span class="nv"&gt;UUID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"52E4-78FF"&lt;/span&gt; &lt;span class="nv"&gt;TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"exfat"&lt;/span&gt;
+/dev/sdb3: &lt;span class="nv"&gt;LABEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"dl4p2p"&lt;/span&gt; &lt;span class="nv"&gt;UUID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"52E4-7901"&lt;/span&gt; &lt;span class="nv"&gt;TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"exfat"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;参考:&lt;/p&gt;
 &lt;ul&gt;
@@ -1093,7 +1093,7 @@ major minor  &lt;span class="c"&gt;#blocks  name&lt;/span&gt;
 &lt;li&gt;&lt;a href="http://www.bango29.com/cubieboard-part-1/"&gt;Cubieboard - Part 1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;配置:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;/dev/sda1    /media/ext  ext4    defaults    0   2
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/dev/sda1    /media/ext  ext4    defaults    0   2
 /dev/nandc    /mnt/nandc  ext4    defaults    0   2
 /mnt/nandc/swapfile    none    swap    sw  0   0
 /dev/sda3    /mnt/data  ext4    defaults    0   2
@@ -1125,7 +1125,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;p&gt;等等吧,俺折腾完, &lt;span class="caps"&gt;CB&lt;/span&gt; 变码头了,才见到标题那句话!&lt;/p&gt;
 &lt;p&gt;才明确,想扩展内置&lt;span class="caps"&gt;OS&lt;/span&gt; 空间,要先从 &lt;span class="caps"&gt;SD&lt;/span&gt; 系统重启…所以,就算了吧…&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://00-00-00-00.com/2013/08/13/cubieboard%e8%87%aa%e5%8a%a8%e6%8c%82%e8%bd%bdtf%e5%8d%a1fstab%e8%ae%be%e7%bd%ae%e6%96%b9%e6%b3%95/"&gt;Cubieboard自动挂载&lt;span class="caps"&gt;TF&lt;/span&gt;卡fstab设置方法 | &lt;span class="caps"&gt;OPENERP&lt;/span&gt;-从零开始!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://00-00-00-00.com/2013/08/13/cubieboard%e8%87%aa%e5%8a%a8%e6%8c%82%e8%bd%bdtf%e5%8d%a1fstab%e8%ae%be%e7%bd%ae%e6%96%b9%e6%b3%95/"&gt;Cubieboard自动挂载&lt;span class="caps"&gt;TF&lt;/span&gt;卡fstab设置方法 | &lt;span class="caps"&gt;OPENERP&lt;/span&gt;-从零开始!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_9"&gt;家庭影院&lt;/h2&gt;
 &lt;p&gt;就几点功能:&lt;/p&gt;
@@ -1136,7 +1136,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;/ul&gt;
 &lt;h3 id="mldonkey"&gt;MLDonkey&lt;/h3&gt;
 &lt;p&gt;安装:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;agi -y mldonkey-server
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ agi -y mldonkey-server
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;就没有然后了,
 启动,远程用网页控制就好,
@@ -1144,7 +1144,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;h3 id="samba"&gt;samba&lt;/h3&gt;
 &lt;p&gt;这是标准的跨平台文件分享服务了:&lt;/p&gt;
 &lt;p&gt;安装:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;agi -y samba
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ agi -y samba
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;配置也非常直接..&lt;/p&gt;
 &lt;h3 id="minidlna"&gt;MiniDLNA&lt;/h3&gt;
@@ -1193,7 +1193,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;li&gt;&lt;a href="http://segmentfault.com/q/1010000000386461"&gt;是否可能支持大目录的 Bucket 间迁移? - 七牛云存储问答 - SegmentFault&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;更加杯具的是:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;chaos.zoomquiet.io  自定义     审核失败    京ICP备09067992号  
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;chaos.zoomquiet.io  自定义     审核失败    京ICP备09067992号  
 状态说明: 2014-01-21 11:32:36 审核失败。域名未备案
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;绑定的域名必须有备案!&lt;/p&gt;
@@ -1246,7 +1246,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;ol&gt;
 &lt;li&gt;电脑里先运行 LiveSuit 并加载目标&lt;span class="caps"&gt;NAND&lt;/span&gt; 镜像&lt;/li&gt;
 &lt;li&gt;按住&lt;code&gt;FEL&lt;/code&gt; 键,不松,然后插入&lt;span class="caps"&gt;USB&lt;/span&gt;线&lt;/li&gt;
-&lt;li&gt;再将 &lt;span class="caps"&gt;USB&lt;/span&gt;线插入电脑&lt;/li&gt;
+&lt;li&gt;再将 &lt;span class="caps"&gt;USB&lt;/span&gt;线插入电脑&lt;/li&gt;
 &lt;li&gt;然后松开 &lt;code&gt;FEL&lt;/code&gt; 键&lt;/li&gt;
 &lt;li&gt;LiveSuit 识别外部 &lt;span class="caps"&gt;CB&lt;/span&gt; 板,开始请求确认,准备好开始刷机了&lt;/li&gt;
 &lt;/ol&gt;
@@ -1286,7 +1286,8 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;p&gt;:::text
 http://dl.cubieboard.org/software/a20-cubietruck/lubuntu/ \
 ct-lubuntu-nand-v1.01/ct-lubuntu-server/lubuntu-server-nand.img.gz
-ct-lubuntu-nand-v1.00/ct-lubuntu-server-20131026/lubuntu-server-nand.img.gz ct-lubuntu-nand-v1.00/&lt;span class="caps"&gt;VGA&lt;/span&gt;/lubuntu-server-nand.img.gz&lt;/p&gt;
+ct-lubuntu-nand-v1.00/ct-lubuntu-server-20131026/lubuntu-server-nand.img.gz
+ct-lubuntu-nand-v1.00/&lt;span class="caps"&gt;VGA&lt;/span&gt;/lubuntu-server-nand.img.gz&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;从下载路径的确可以看出是针对什么的镜像;
@@ -1294,7 +1295,7 @@ ct-lubuntu-nand-v1.00/ct-lubuntu-server-20131026/lubuntu-server-nand.img.gz ct-
 都是 &lt;code&gt;lubuntu-server-nand.img.gz&lt;/code&gt;
 解压缩 也都是 &lt;code&gt;lubuntu-server-nand.img&lt;/code&gt;
 根本就看不出什么是什么了! 强烈建议,重新制定版本规范,也包含最终下载文件名;比如:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;ct-lubuntu-13.06-server-nand.img.gz
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ct-lubuntu-13.06-server-nand.img.gz
 ct-vga-lubuntu-13.06-server-nand.img.gz
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="vga"&gt;&lt;span class="caps"&gt;VGA&lt;/span&gt;&lt;/h3&gt;
@@ -1311,7 +1312,7 @@ ct-vga-lubuntu-13.06-server-nand.img.gz
 &lt;code&gt;lubuntu-nand-v1.01&lt;/code&gt; 中还没有完成兼容!&lt;/p&gt;
 &lt;p&gt;重新刷上对口的 &lt;span class="caps"&gt;OS&lt;/span&gt;, 这下子终于见到熟悉的命令行界面了!!!&lt;/p&gt;
 &lt;p&gt;但是:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Welcome to Linaro 13.08 (GNU/Linux 3.4.61+ armv7l)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Welcome to Linaro 13.08 (GNU/Linux 3.4.61+ armv7l)
 
  * Documentation:  https://wiki.linaro.org/
 New release '13.10' available.
@@ -1320,9 +1321,9 @@ Run 'do-release-upgrade' to upgrade to it.
 &lt;p&gt;这倒底是升级呢? 还是不升级呢?!&lt;/p&gt;
 &lt;h3 id="ip"&gt;&lt;span class="caps"&gt;IP&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;修订: &lt;code&gt;/etc/network/interfaces&lt;/code&gt; 为:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;auto lo eth0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;auto lo eth0
 iface lo inet loopback
-&lt;span class="c"&gt;#iface eth0 inet dhcp&lt;/span&gt;
+&lt;span class="c1"&gt;#iface eth0 inet dhcp&lt;/span&gt;
 iface eth0 inet static
 
 address 192.168.0.111
@@ -1332,7 +1333,7 @@ network 192.168.0.0
 broadcast 192.168.0.255
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;重启网络:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;/etc/init.d/networking restart
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/etc/init.d/networking restart
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;就将原先每次重启时,可能变化的动态 &lt;span class="caps"&gt;IP&lt;/span&gt; 变成内网的静态 &lt;span class="caps"&gt;IP&lt;/span&gt; 了&lt;/p&gt;
 &lt;h3 id="connection-refused"&gt;Connection refused&lt;/h3&gt;
@@ -1341,16 +1342,16 @@ broadcast 192.168.0.255
 &lt;p&gt;果断 Google 发布,是常见问题!&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://askubuntu.com/questions/30080/how-to-solve-connection-refused-errors-in-ssh-connection"&gt;openssh - How to solve ‘Connection refused’ errors in &lt;span class="caps"&gt;SSH&lt;/span&gt; connection? - Ask Ubuntu&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;完全无法相信自个儿的眼睛! 竟然是因为根本没有 &lt;code&gt;sshd&lt;/code&gt; 进程运行的原因!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install openssh-server openssh-client
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install openssh-server openssh-client
 sudo /etc/init.d/ssh start
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;再尝试&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;ssh 192.168.0.111
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ssh 192.168.0.111
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;一切正常了!&lt;/p&gt;
 &lt;h3 id="ftab"&gt;ftab&lt;/h3&gt;
 &lt;p&gt;看&lt;span class="caps"&gt;CB3&lt;/span&gt; 的硬件参数,应该有8G 内置空间的, 但是查询:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;df -h
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/root       2.0G 1019M  907M  53% /
 devtmpfs        913M  4.0K  913M   1% /dev
@@ -1361,9 +1362,9 @@ none            913M     &lt;span class="m"&gt;0&lt;/span&gt;  913M   0% /run/sh
 none            100M     &lt;span class="m"&gt;0&lt;/span&gt;  100M   0% /run/user
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;不对哪,肿么只有2G 的空间?&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo fdisk -l
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo fdisk -l
 
-Disk /dev/nand: &lt;span class="m"&gt;7700&lt;/span&gt; &lt;span class="caps"&gt;MB&lt;/span&gt;, &lt;span class="m"&gt;7700742144&lt;/span&gt; bytes
+Disk /dev/nand: &lt;span class="m"&gt;7700&lt;/span&gt; MB, &lt;span class="m"&gt;7700742144&lt;/span&gt; bytes
 &lt;span class="m"&gt;255&lt;/span&gt; heads, &lt;span class="m"&gt;63&lt;/span&gt; sectors/track, &lt;span class="m"&gt;936&lt;/span&gt; cylinders, total &lt;span class="m"&gt;15040512&lt;/span&gt; sectors
 &lt;span class="nv"&gt;Units&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; sectors of &lt;span class="m"&gt;1&lt;/span&gt; * &lt;span class="nv"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; bytes
 Sector size &lt;span class="o"&gt;(&lt;/span&gt;logical/physical&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
@@ -1372,7 +1373,7 @@ Disk identifier: 0x00000000
 
 Disk /dev/nand doesn&lt;span class="s1"&gt;'t contain a valid partition table&lt;/span&gt;
 
-&lt;span class="s1"&gt;Disk /dev/nanda: 67 &lt;span class="caps"&gt;MB&lt;/span&gt;, 67108864 bytes&lt;/span&gt;
+&lt;span class="s1"&gt;Disk /dev/nanda: 67 MB, 67108864 bytes&lt;/span&gt;
 &lt;span class="s1"&gt;255 heads, 63 sectors/track, 8 cylinders, total 131072 sectors&lt;/span&gt;
 &lt;span class="s1"&gt;Units = sectors of 1 * 512 = 512 bytes&lt;/span&gt;
 &lt;span class="s1"&gt;Sector size (logical/physical): 512 bytes / 512 bytes&lt;/span&gt;
@@ -1381,7 +1382,7 @@ Disk /dev/nand doesn&lt;span class="s1"&gt;'t contain a valid partition table&lt
 
 &lt;span class="s1"&gt;     Device Boot      Start         End      Blocks   Id  System&lt;/span&gt;
 
-&lt;span class="s1"&gt;Disk /dev/nandb: 2147 &lt;span class="caps"&gt;MB&lt;/span&gt;, 2147483648 bytes&lt;/span&gt;
+&lt;span class="s1"&gt;Disk /dev/nandb: 2147 MB, 2147483648 bytes&lt;/span&gt;
 &lt;span class="s1"&gt;255 heads, 63 sectors/track, 261 cylinders, total 4194304 sectors&lt;/span&gt;
 &lt;span class="s1"&gt;Units = sectors of 1 * 512 = 512 bytes&lt;/span&gt;
 &lt;span class="s1"&gt;Sector size (logical/physical): 512 bytes / 512 bytes&lt;/span&gt;
@@ -1390,7 +1391,7 @@ Disk /dev/nand doesn&lt;span class="s1"&gt;'t contain a valid partition table&lt
 
 &lt;span class="s1"&gt;Disk /dev/nandb doesn'&lt;/span&gt;t contain a valid partition table
 
-Disk /dev/nandc: &lt;span class="m"&gt;5469&lt;/span&gt; &lt;span class="caps"&gt;MB&lt;/span&gt;, &lt;span class="m"&gt;5469372416&lt;/span&gt; bytes
+Disk /dev/nandc: &lt;span class="m"&gt;5469&lt;/span&gt; MB, &lt;span class="m"&gt;5469372416&lt;/span&gt; bytes
 &lt;span class="m"&gt;255&lt;/span&gt; heads, &lt;span class="m"&gt;63&lt;/span&gt; sectors/track, &lt;span class="m"&gt;664&lt;/span&gt; cylinders, total &lt;span class="m"&gt;10682368&lt;/span&gt; sectors
 &lt;span class="nv"&gt;Units&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; sectors of &lt;span class="m"&gt;1&lt;/span&gt; * &lt;span class="nv"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; bytes
 Sector size &lt;span class="o"&gt;(&lt;/span&gt;logical/physical&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
@@ -1401,7 +1402,7 @@ Disk /dev/nandc doesn&lt;span class="err"&gt;'&lt;/span&gt;t contain a valid par
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;果然有 &lt;code&gt;/dev/nandc&lt;/code&gt; 没有挂上;&lt;/p&gt;
 &lt;p&gt;于是,先建立文件系统:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;mkfs.ext4 /dev/nandc
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkfs.ext4 /dev/nandc
 mke2fs 1.42.5 (29-Jul-2012)
 Filesystem label=
 OS type: Linux
@@ -1416,7 +1417,7 @@ done
 Writing superblocks and filesystem accounting information: done
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;然后,不折腾,直接使用: &lt;code&gt;/etc/rc.local&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo mount /dev/nandc /mnt/nandc
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo mount /dev/nandc /mnt/nandc
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;追加一行,完成! 这样重启时,将在最后一刻重新挂接上丢失的分区&lt;/p&gt;
 &lt;h3 id="_6"&gt;其它&lt;/h3&gt;
@@ -1461,8 +1462,8 @@ Writing superblocks and filesystem accounting information: done
 &lt;li&gt;&lt;a href="http://docs.cubieboard.org/tutorials/common/livesuit_installation_guide"&gt;LiveSuit Guide&lt;/a&gt; (cubieboard.org)&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.lubuntu.net/"&gt;www.lubuntu.net&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://help.ubuntu.com/community/InstallingANewHardDrive?action=fullsearch&amp;amp;value=linkto%3A%22InstallingANewHardDrive%22&amp;amp;context=180"&gt;InstallingANewHardDrive&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://archlinuxarm.org/platforms/armv7/allwinner/cubieboard"&gt;Cubieboard | Arch Linux &lt;span class="caps"&gt;ARM&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://archlinuxarm.org/platforms/armv7/allwinner/cubieboard-2"&gt;Cubieboard 2 | Arch Linux &lt;span class="caps"&gt;ARM&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://archlinuxarm.org/platforms/armv7/allwinner/cubieboard"&gt;Cubieboard | Arch Linux &lt;span class="caps"&gt;ARM&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://archlinuxarm.org/platforms/armv7/allwinner/cubieboard-2"&gt;Cubieboard 2 | Arch Linux &lt;span class="caps"&gt;ARM&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
@@ -1501,12 +1502,12 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
   通过环境变量的自动配置 形成复合Python版本共存&lt;/p&gt;
 &lt;p&gt;VirtualEnv 有 Pyenv 的插件
 所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pyenv versions
-* system &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set &lt;/span&gt;by /Users/zoomq/.pyenv/version&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pyenv versions
+* system &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt; by /Users/zoomq/.pyenv/version&lt;span class="o"&gt;)&lt;/span&gt;
   2.7.3
   2.7.5
   2.7.6
-  &lt;span class="caps"&gt;273SAE&lt;/span&gt;
+  273SAE
   275lbTC
   275pelican
   276SphinxOBP
@@ -1520,7 +1521,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
   pypy221chaos
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;主要遇到的问题是:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;==&amp;gt; Installing python3
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;==&amp;gt; Installing python3
 ==&amp;gt; Downloading http://python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2
 ######################################################################## 100.0%
 ==&amp;gt; ./configure --prefix=/usr/local/Cellar/python3/3.3.3 --enable-ipv6 --datarootdir=/usr/local/Cellar/python3/3.3.3/share --datadir=/usr/lo
@@ -1561,7 +1562,7 @@ ValueError: list.remove(x): x not in list
 &lt;li&gt;&lt;a href="http://xquartz.macosforge.org/landing/"&gt;XQuartz&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以及:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew install &lt;span class="nv"&gt;pyqt&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install &lt;span class="nv"&gt;pyqt&lt;/span&gt;
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
 Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Patching
@@ -1569,18 +1570,18 @@ patching file configure.py
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; /usr/local/opt/python/bin/python2 configure.py --confirm-license --bindir&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/Cellar/pyqt/4.10.3/bin --destdir&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/Cellar/
 Error: Unable to find the qmake configuration file
 /usr/local/Cellar/qt/4.8.5/mkspecs/unsupported/macx-clang-libc++/qmake.conf.
-Use the &lt;span class="caps"&gt;QMAKESPEC&lt;/span&gt; environment variable to specify the correct platform.
+Use the QMAKESPEC environment variable to specify the correct platform.
 Determining the layout of your Qt installation...
 
-&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://github.com/Homebrew/homebrew/wiki/troubleshooting
+READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,&lt;/p&gt;
 &lt;p&gt;然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# ~/.bashrc for running Leo&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;leolanch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# ~/.bashrc for running Leo&lt;/span&gt;
+&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;leolanch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="sshfs"&gt;伟光大的 sshfs&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;brew link fuse4x
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew link fuse4x
 Linking /usr/local/Cellar/fuse4x/0.9.2... Warning: Could not link fuse4x. Unlinking...
 
 Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
@@ -1591,22 +1592,22 @@ To force the link and overwrite all other conflicting files, &lt;span class="k"&
 To list all files that would be deleted:
   brew link --overwrite --dry-run formula_name
 
-zoomq @ &lt;span class="caps"&gt;MBP111216ZQ&lt;/span&gt; in /usr/local/lib
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew link --overwrite fuse4x
+zoomq @ MBP111216ZQ in /usr/local/lib
+$ brew link --overwrite fuse4x
 Linking /usr/local/Cellar/fuse4x/0.9.2... &lt;span class="m"&gt;7&lt;/span&gt; symlinks created
 
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew install &lt;span class="nv"&gt;osxfuse&lt;/span&gt;
+$ brew install &lt;span class="nv"&gt;osxfuse&lt;/span&gt;
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
 &lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Caveats
 If upgrading from a previous version of osxfuse, the previous kernel extension
 will need to be unloaded before installing the new version. First, check that
-no &lt;span class="caps"&gt;FUSE&lt;/span&gt;-based file systems are running:
+no FUSE-based file systems are running:
 
   mount -t osxfusefs
 
-Unmount all &lt;span class="caps"&gt;FUSE&lt;/span&gt; file systems and &lt;span class="k"&gt;then&lt;/span&gt; unload the kernel extension:
+Unmount all FUSE file systems and &lt;span class="k"&gt;then&lt;/span&gt; unload the kernel extension:
 
   sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs
 

@@ -205,73 +205,73 @@
 <p>总之就是要加速,无论本地/远程</p>
 <h3 id="_4">数据结构</h3>
 <p>为了大家平滑的理解折腾之处,先简要说明一下 ScrapBook 的数据结构:</p>
-<div class="highlight"><pre>XX仓库/     对应 Multi-ScrapBook 开启后,不同的Book
+<div class="highlight"><pre><span></span>XX仓库/     对应 Multi-ScrapBook 开启后,不同的Book
   +- data   实际本地网页存放入口, 类似 20050205102119 的子目录
   +- tree   导出目录树后的 html 入口
   +- ...
   `- scrapbook.rdf 插件界面使用的 xml 数据仓库
 </pre></div>
 <p><code>scrapbook.rdf 的关键数据约定</code></p>
-<div class="highlight"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
-<span class="nt">&lt;<span class="caps">RDF</span>:<span class="caps">RDF</span></span> <span class="na">xmlns:<span class="caps">NS2</span>=</span><span class="s">"http://amb.vis.ne.jp/mozilla/scrapbook-rdf#"</span>
-         <span class="na">xmlns:<span class="caps">NC</span>=</span><span class="s">"http://home.netscape.com/<span class="caps">NC</span>-rdf#"</span>
-         <span class="na">xmlns:<span class="caps">RDF</span>=</span><span class="s">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;RDF:RDF</span> <span class="na">xmlns:NS2=</span><span class="s">"http://amb.vis.ne.jp/mozilla/scrapbook-rdf#"</span>
+         <span class="na">xmlns:NC=</span><span class="s">"http://home.netscape.com/NC-rdf#"</span>
+         <span class="na">xmlns:RDF=</span><span class="s">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span><span class="nt">&gt;</span>
   ...
   主体内容
-<span class="nt">&lt;/<span class="caps">RDF</span>:<span class="caps">RDF</span>&gt;</span>
+<span class="nt">&lt;/RDF:RDF&gt;</span>
 
 根列表:
-<span class="nt">&lt;<span class="caps">RDF</span>:Seq</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:root"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;RDF:Seq</span> <span class="na">RDF:about=</span><span class="s">"urn:scrapbook:root"</span><span class="nt">&gt;</span>
     %(rdf_li)s
-  <span class="nt">&lt;/<span class="caps">RDF</span>:Seq&gt;</span>
+  <span class="nt">&lt;/RDF:Seq&gt;</span>
 
 目录容器:
-<span class="nt">&lt;<span class="caps">RDF</span>:Seq</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;RDF:Seq</span> <span class="na">RDF:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span><span class="nt">&gt;</span>
     %(rdf_li)s
-  <span class="nt">&lt;/<span class="caps">RDF</span>:Seq&gt;</span>
+  <span class="nt">&lt;/RDF:Seq&gt;</span>
 
 目录节点条目:
-<span class="nt">&lt;<span class="caps">RDF</span>:li</span> <span class="na"><span class="caps">RDF</span>:resource=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;RDF:li</span> <span class="na">RDF:resource=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span><span class="nt">/&gt;</span>
 
 目录节点:
-<span class="nt">&lt;<span class="caps">RDF</span>:Description</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
-        <span class="na"><span class="caps">NS2</span>:type=</span><span class="s">"folder"</span>
-        <span class="na"><span class="caps">NS2</span>:id=</span><span class="s">"%(rdf_id)s"</span>
-        <span class="na"><span class="caps">NS2</span>:title=</span><span class="s">"%(rdf_title)s"</span>
-        <span class="na"><span class="caps">NS2</span>:chars=</span><span class="s">""</span>
-        <span class="na"><span class="caps">NS2</span>:icon=</span><span class="s">""</span>
-        <span class="na"><span class="caps">NS2</span>:source=</span><span class="s">""</span>
-        <span class="na"><span class="caps">NS2</span>:comment=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;RDF:Description</span> <span class="na">RDF:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
+        <span class="na">NS2:type=</span><span class="s">"folder"</span>
+        <span class="na">NS2:id=</span><span class="s">"%(rdf_id)s"</span>
+        <span class="na">NS2:title=</span><span class="s">"%(rdf_title)s"</span>
+        <span class="na">NS2:chars=</span><span class="s">""</span>
+        <span class="na">NS2:icon=</span><span class="s">""</span>
+        <span class="na">NS2:source=</span><span class="s">""</span>
+        <span class="na">NS2:comment=</span><span class="s">""</span> <span class="nt">/&gt;</span>
 
 页面节点:
-<span class="nt">&lt;<span class="caps">RDF</span>:Description</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
-        <span class="na"><span class="caps">NS2</span>:type=</span><span class="s">"%(rdf_type)s"</span>
-        <span class="na"><span class="caps">NS2</span>:id=</span><span class="s">"%(rdf_id)s"</span>
-        <span class="na"><span class="caps">NS2</span>:title=</span><span class="s">"%(rdf_title)s"</span>
-        <span class="na"><span class="caps">NS2</span>:comment=</span><span class="s">"%(rdf_comment)s"</span>
-        <span class="na"><span class="caps">NS2</span>:icon=</span><span class="s">"%(rdf_icon)s"</span>
-        <span class="na"><span class="caps">NS2</span>:source=</span><span class="s">"%(rdf_source)s"</span> 
-        <span class="na"><span class="caps">NS2</span>:chars=</span><span class="s">"<span class="caps">UTF</span>-8"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;RDF:Description</span> <span class="na">RDF:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
+        <span class="na">NS2:type=</span><span class="s">"%(rdf_type)s"</span>
+        <span class="na">NS2:id=</span><span class="s">"%(rdf_id)s"</span>
+        <span class="na">NS2:title=</span><span class="s">"%(rdf_title)s"</span>
+        <span class="na">NS2:comment=</span><span class="s">"%(rdf_comment)s"</span>
+        <span class="na">NS2:icon=</span><span class="s">"%(rdf_icon)s"</span>
+        <span class="na">NS2:source=</span><span class="s">"%(rdf_source)s"</span> 
+        <span class="na">NS2:chars=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
 
 笔记节点:
-<span class="nt">&lt;<span class="caps">RDF</span>:Description</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
-        <span class="na"><span class="caps">NS2</span>:type=</span><span class="s">"note"</span>
-        <span class="na"><span class="caps">NS2</span>:id=</span><span class="s">"%(rdf_id)s"</span>
-        <span class="na"><span class="caps">NS2</span>:title=</span><span class="s">"%(rdf_title)s"</span>
-        <span class="na"><span class="caps">NS2</span>:chars=</span><span class="s">"<span class="caps">UTF</span>-8"</span>
-        <span class="na"><span class="caps">NS2</span>:comment=</span><span class="s">""</span>
-        <span class="na"><span class="caps">NS2</span>:icon=</span><span class="s">""</span>
-        <span class="na"><span class="caps">NS2</span>:source=</span><span class="s">""</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;RDF:Description</span> <span class="na">RDF:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
+        <span class="na">NS2:type=</span><span class="s">"note"</span>
+        <span class="na">NS2:id=</span><span class="s">"%(rdf_id)s"</span>
+        <span class="na">NS2:title=</span><span class="s">"%(rdf_title)s"</span>
+        <span class="na">NS2:chars=</span><span class="s">"UTF-8"</span>
+        <span class="na">NS2:comment=</span><span class="s">""</span>
+        <span class="na">NS2:icon=</span><span class="s">""</span>
+        <span class="na">NS2:source=</span><span class="s">""</span><span class="nt">/&gt;</span>
 
 分割线节点:
-<span class="nt">&lt;<span class="caps">NC</span>:BookmarkSeparator</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
-        <span class="na"><span class="caps">NS2</span>:type=</span><span class="s">"separator"</span>
-        <span class="na"><span class="caps">NS2</span>:id=</span><span class="s">"%(rdf_id)s"</span>
-        <span class="na"><span class="caps">NS2</span>:title=</span><span class="s">""</span>
-        <span class="na"><span class="caps">NS2</span>:chars=</span><span class="s">""</span>
-        <span class="na"><span class="caps">NS2</span>:comment=</span><span class="s">""</span>
-        <span class="na"><span class="caps">NS2</span>:icon=</span><span class="s">""</span>
-        <span class="na"><span class="caps">NS2</span>:source=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;NC:BookmarkSeparator</span> <span class="na">RDF:about=</span><span class="s">"urn:scrapbook:%(rdf_item)s"</span>
+        <span class="na">NS2:type=</span><span class="s">"separator"</span>
+        <span class="na">NS2:id=</span><span class="s">"%(rdf_id)s"</span>
+        <span class="na">NS2:title=</span><span class="s">""</span>
+        <span class="na">NS2:chars=</span><span class="s">""</span>
+        <span class="na">NS2:comment=</span><span class="s">""</span>
+        <span class="na">NS2:icon=</span><span class="s">""</span>
+        <span class="na">NS2:source=</span><span class="s">""</span> <span class="nt">/&gt;</span>
 </pre></div>
 <p>以上 <code>%(rdf_id)s</code> 之类是 Py 内置模板的语法,
 在 <code>scrapbook.rdf</code> 实例中,都是形如: <code>20050205102119</code></p>
@@ -279,24 +279,24 @@
 <p>纪要一下折腾的过程中,要命的关键过程/代码</p>
 <h3 id="_6">清查</h3>
 <p>一切开始之前,的体积:</p>
-<div class="highlight"><pre><span class="nv">$ </span>du -h * 
+<div class="highlight"><pre><span></span>$ du -h * 
 ...
 5.6G    ZqDevRel
 6.5G    ZqFLOSS
 3.7G    ZqSKM
 ...
 
-<span class="nv">$ </span>ls ZqDevRel/data/ <span class="p">|</span> wc
+$ ls ZqDevRel/data/ <span class="p">|</span> wc
    <span class="m">26214</span>   <span class="m">26214</span>  393210
 
-<span class="c"># 计划切分为</span>
+<span class="c1"># 计划切分为</span>
   -&gt; zqCoder 
   -&gt; zqSMM
 
-<span class="nv">$ </span>ls ZqFLOSS/data/ <span class="p">|</span> wc
+$ ls ZqFLOSS/data/ <span class="p">|</span> wc
    <span class="m">30767</span>   <span class="m">30767</span>  461505
 
-<span class="c"># 计划切分为</span>
+<span class="c1"># 计划切分为</span>
   -&gt; zqDevRes
   -&gt; zqSCM   
   -&gt; zqPythonic
@@ -306,7 +306,7 @@
 <p><code>pax</code> 是个好工具,原先习惯性的用 <code>cp</code> 那叫个慢!
 搜索才知道,大量小文件的迁移就应该用 <code>pax</code>
 于是简单的起个背景周末跑吧….</p>
-<div class="highlight"><pre><span class="nv">$ </span>du -hs *
+<div class="highlight"><pre><span></span>$ du -hs *
 ...
 5.7G    ZqDevRel
   5.7G    zqCoder
@@ -325,7 +325,7 @@
 <p>然后,逐一用 ScrapBook 加载新的目录</p>
 <h4 id="_7">手工删除目录树</h4>
 <p>再对比几个仓库的体积:</p>
-<div class="highlight"><pre>~/KuaiPan/zScrapBook
+<div class="highlight"><pre><span></span>~/KuaiPan/zScrapBook
 $ ls ZqFLOSS/data/ | wc -l
    30767
 
@@ -358,7 +358,7 @@ $ ls zqSCM/data/ | wc -l
 <h3 id="_11">删除</h3>
 <h2 id="_12">回顾</h2>
 <p><span class="caps">JS</span> 在 FireFox 的确不给力哪…</p>
-<div class="highlight"><pre><span class="nv">$ </span>du -hs *
+<div class="highlight"><pre><span></span>$ du -hs *
 ...
 957M  ZqDevRel
 866M  ZqFLOSS
@@ -377,12 +377,12 @@ $ ls zqSCM/data/ | wc -l
 </pre></div>
 <p>为什么,在 700M 的 zqCoder 仓库中无法搜索,但是, 3.4G 的ZqSKM 中就可以?!</p>
 <p>认真对比,从重建的空仓库的 .rdf 中,发现:</p>
-<div class="highlight"><pre><span class="nt">&lt;<span class="caps">RDF</span>:Seq</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:search"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><span class="nt">&lt;RDF:Seq</span> <span class="na">RDF:about=</span><span class="s">"urn:scrapbook:search"</span><span class="nt">&gt;</span>
 ....
-<span class="nt">&lt;/<span class="caps">RDF</span>:Seq&gt;</span>
+<span class="nt">&lt;/RDF:Seq&gt;</span>
 </pre></div>
 <p>这个节点中包含有意外的几万条记录!</p>
-<div class="highlight"><pre>for seq in doc['RDF:RDF']['RDF:Seq']:
+<div class="highlight"><pre><span></span>for seq in doc['RDF:RDF']['RDF:Seq']:
     if 'urn:scrapbook:search' == seq['@RDF:about']:
         seq.pop('RDF:li')
         break
@@ -391,7 +391,7 @@ $ ls zqSCM/data/ | wc -l
 <h3 id="_13">数据新结构</h3>
 <h3 id="_14">功能开关</h3>
 <h2 id="_15">时间帐单</h2>
-<div class="highlight"><pre>+ 3.5H 用pax 复制,手工清除多余树
+<div class="highlight"><pre><span></span>+ 3.5H 用pax 复制,手工清除多余树
 + 1.5H 重新理解自个儿的脚本,加载自制数据结构到湿件
 + 1.0H 追加走查功能 
 + 2.0H 调试走查,优化输出,明确可清除无效节点的数量级
@@ -416,15 +416,15 @@ $ ls zqSCM/data/ | wc -l
 从 <span class="caps">ROOT</span> 引发的树中挂不上的</p>
 <h2 id="2h">+2H 实际清减</h2>
 <p><a href="http://amoffat.github.io/sh/">sh 1.08 — sh v1.08 documentation</a></p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sh</span> <span class="kn">import</span> <span class="n">rm</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sh</span> <span class="kn">import</span> <span class="n">rm</span>
 <span class="o">...</span>
-<span class="k">print</span><span class="p">(</span><span class="n">rm</span><span class="p">(</span><span class="s">"-Rfv"</span><span class="p">,</span> <span class="n">del_dir</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">rm</span><span class="p">(</span><span class="s2">"-Rfv"</span><span class="p">,</span> <span class="n">del_dir</span><span class="p">))</span>
 </pre></div>
 <ul>
 <li>用 sh 删除目录</li>
 </ul>
 <p>:</p>
-<div class="highlight"><pre>    tree_nodes:  3574
+<div class="highlight"><pre><span></span>    tree_nodes:  3574
     exp_items:  4164
     dirs:  590
     DESC : 24190
@@ -439,18 +439,18 @@ $ ls reDevRel/data/ | wc -l
 <p>人肉来总是感觉不对,</p>
 <p>尝试:</p>
 <h3 id="lxml">lxml</h3>
-<div class="highlight"><pre>忒复杂!!!
+<div class="highlight"><pre><span></span>忒复杂!!!
 </pre></div>
 <h3 id="untangle">untangle</h3>
 <p><a href="https://github.com/stchris/untangle">stchris/untangle</a></p>
-<div class="highlight"><pre><span class="n"><span class="caps">RDF</span></span><span class="o">:</span><span class="n">Seq</span>         <span class="mi">579</span>
+<div class="highlight"><pre><span></span><span class="n">RDF</span><span class="o">:</span><span class="n">Seq</span>         <span class="mi">579</span>
 <span class="n">RDF_Description</span>     <span class="mi">24190</span>
-<span class="n"><span class="caps">NC</span></span><span class="o">:</span><span class="n">BookmarkSeparator</span>    <span class="mi">57</span>
+<span class="n">NC</span><span class="o">:</span><span class="n">BookmarkSeparator</span>    <span class="mi">57</span>
 <span class="o">&lt;</span><span class="n">open</span> <span class="n">file</span> <span class="s1">'_chaos/scraotools_reDevRel.pkl'</span><span class="o">,</span> <span class="n">mode</span> <span class="s1">'wb'</span> <span class="n">at</span> <span class="mh">0x100666ed0</span><span class="o">&gt;</span>
         <span class="n">exp_level_idx</span><span class="o">()</span> <span class="n">RUNed</span><span class="o">~</span> <span class="mf">2263.57079</span> <span class="n">ms</span>
 </pre></div>
 <p>快,但是,无法Dump,而且书写不直觉, 要将 “:” 变成 “_” obj.RDF_RDF.RDF_Description</p>
-<div class="highlight"><pre>&lt;open file '_chaos/scraotools_reDevRel.pkl', mode 'wb' at 0x100769ed0&gt;
+<div class="highlight"><pre><span></span>&lt;open file '_chaos/scraotools_reDevRel.pkl', mode 'wb' at 0x100769ed0&gt;
 Traceback (most recent call last):
   File "scraptools/zq_chk4scrap.py", line 457, in &lt;module&gt;
     RDFD = exp_level_idx(MYBOOK)
@@ -472,29 +472,30 @@ IndexError: Unknown key &lt;__getstate__&gt;
 </pre></div>
 <h3 id="xmltodict">xmltodict</h3>
 <p><a href="https://github.com/martinblech/xmltodict">martinblech/xmltodict</a></p>
-<div class="highlight"><pre><span class="k">[u'<span class="caps">RDF</span>:<span class="caps">RDF</span>']</span>
-<span class="err"><span class="caps">RDF</span>:Seq</span>         <span class="err">579</span>
-<span class="err"><span class="caps">RDF</span>:Description</span>     <span class="err">24190</span>
-<span class="err"><span class="caps">NC</span>:BookmarkSeparator</span>    <span class="err">57</span>
+<div class="highlight"><pre><span></span><span class="k">[u'RDF:RDF']</span>
+<span class="err">RDF:Seq</span>         <span class="err">579</span>
+<span class="err">RDF:Description</span>     <span class="err">24190</span>
+<span class="err">NC:BookmarkSeparator</span>    <span class="err">57</span>
         <span class="err">exp_level_idx()</span> <span class="err">RUNed~</span> <span class="err">4997.31612</span> <span class="err">ms</span>
 </pre></div>
-<p>慢,但是,能 dump 而且书写直觉 doc[‘<span class="caps">RDF</span>:<span class="caps">RDF</span>’][‘<span class="caps">RDF</span>:Seq’]</p>
-<div class="highlight"><pre><span class="k">[u'<span class="caps">RDF</span>:<span class="caps">RDF</span>']</span>
-<span class="err"><span class="caps">RDF</span>:Seq</span>         <span class="err">579</span>
-<span class="err"><span class="caps">RDF</span>:Description</span>     <span class="err">24190</span>
-<span class="err"><span class="caps">NC</span>:BookmarkSeparator</span>    <span class="err">57</span>
+<p>慢,但是,能 dump 而且书写直觉
+    doc[‘<span class="caps">RDF</span>:<span class="caps">RDF</span>’][‘<span class="caps">RDF</span>:Seq’]</p>
+<div class="highlight"><pre><span></span><span class="k">[u'RDF:RDF']</span>
+<span class="err">RDF:Seq</span>         <span class="err">579</span>
+<span class="err">RDF:Description</span>     <span class="err">24190</span>
+<span class="err">NC:BookmarkSeparator</span>    <span class="err">57</span>
 <span class="err">&lt;open</span> <span class="err">file</span> <span class="err">'_chaos/scraotools_reDevRel.pkl',</span> <span class="err">mode</span> <span class="err">'wb'</span> <span class="err">at</span> <span class="err">0x10f26d420&gt;</span>
         <span class="err">exp_level_idx()</span> <span class="err">RUNed~</span> <span class="err">16878.75390</span> <span class="err">ms</span>
 </pre></div>
 <p>同时,能反写出<span class="caps">XML</span> 来!</p>
 <p>主要问题是行为不统一!</p>
-<div class="highlight"><pre><span class="nt">&lt;<span class="caps">RDF</span>:Seq</span> <span class="na"><span class="caps">RDF</span>:about=</span><span class="s">"urn:scrapbook:item20070113201921"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;<span class="caps">RDF</span>:li</span> <span class="na"><span class="caps">RDF</span>:resource=</span><span class="s">"urn:scrapbook:item20070113201940"</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;<span class="caps">RDF</span>:li</span> <span class="na"><span class="caps">RDF</span>:resource=</span><span class="s">"urn:scrapbook:item20070113201941"</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/<span class="caps">RDF</span>:Seq&gt;</span>
+<div class="highlight"><pre><span></span><span class="nt">&lt;RDF:Seq</span> <span class="na">RDF:about=</span><span class="s">"urn:scrapbook:item20070113201921"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;RDF:li</span> <span class="na">RDF:resource=</span><span class="s">"urn:scrapbook:item20070113201940"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;RDF:li</span> <span class="na">RDF:resource=</span><span class="s">"urn:scrapbook:item20070113201941"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/RDF:Seq&gt;</span>
 </pre></div>
 <p>时 唯一的 <span class="caps">RDF</span>:Li 不是 List!!</p>
-<div class="highlight"><pre>K2SEQ[crt_id]&gt;RDF:Li OrderedDict([(u'@RDF:resource', u'urn:scrapbook:item20070113201921')])
+<div class="highlight"><pre><span></span>K2SEQ[crt_id]&gt;RDF:Li OrderedDict([(u'@RDF:resource', u'urn:scrapbook:item20070113201921')])
 K2SEQ[crt_id]['RDF:li'].len:: 1
     &lt;class 'collections.OrderedDict'&gt;
 K2SEQ[crt_id]&gt;RDF:Li @RDF:resource
@@ -508,20 +509,20 @@ K2SEQ[crt_id]['RDF:li'].len:: 9
 </pre></div>
 <p><a href="https://github.com/martinblech/xmltodict/issues/67">odd parse for same xml structure · Issue #67 · martinblech/xmltodict</a></p>
 <h3 id="4h">4H 折腾明白了:</h3>
-<div class="highlight"><pre><span class="nv">$ </span>python scraptools/zq_chk4scrap.py reDevRel/
+<div class="highlight"><pre><span></span>$ python scraptools/zq_chk4scrap.py reDevRel/
 /Users/zoomq/mnt/快盘/zScrapBook/reDevRel/scrapbook.rdf
-<span class="o">[</span>u<span class="s1">'<span class="caps">RDF</span>:<span class="caps">RDF</span>'</span><span class="o">]</span>
-<span class="caps">RDF</span>:Seq         579
-<span class="caps">RDF</span>:Description     24190
-<span class="caps">NC</span>:BookmarkSeparator    57
+<span class="o">[</span>u<span class="s1">'RDF:RDF'</span><span class="o">]</span>
+RDF:Seq         579
+RDF:Description     24190
+NC:BookmarkSeparator    57
 &lt;open file <span class="s1">'_chaos/scraotools_reDevRel.pkl'</span>, mode <span class="s1">'wb'</span> at 0x10f17a660&gt;
         exp_level_idx<span class="o">()</span> RUNed~ 17073.48084 ms
 
 _chaos/scraotools_reDevRel.pkl
-<span class="caps">RDF</span>:<span class="caps">ROOT</span>            13
-<span class="caps">RDF</span>:Seq         578
-<span class="caps">RDF</span>:Description     24190
-<span class="caps">NC</span>:BookmarkSeparator    57
+RDF:ROOT            13
+RDF:Seq         578
+RDF:Description     24190
+NC:BookmarkSeparator    57
         _load_pkl<span class="o">()</span> RUNed~ 7872.95103 ms
 
      _RIGHT_NODES: 6926
@@ -529,125 +530,125 @@ _chaos/scraotools_reDevRel.pkl
         re_xmltodict_rdf<span class="o">()</span> RUNed~ 191.21003 ms
 </pre></div>
 <p>有这么多垃圾!</p>
-<div class="highlight"><pre>24190 vs 3631 !!!!
+<div class="highlight"><pre><span></span>24190 vs 3631 !!!!
 </pre></div>
 <p>但是,居然无法一次性清理干净?!</p>
 <p>一扫::</p>
-<div class="highlight"><pre><span class="nv">$ </span>python scraptools/zq_chk4scrap.py reDevRel/
+<div class="highlight"><pre><span></span>$ python scraptools/zq_chk4scrap.py reDevRel/
 /Users/zoomq/mnt/快盘/zScrapBook/reDevRel/scrapbook.rdf
-<span class="o">[</span>u<span class="s1">'<span class="caps">RDF</span>:<span class="caps">RDF</span>'</span><span class="o">]</span>
-<span class="caps">RDF</span>:Seq         579
-<span class="caps">RDF</span>:Description     24190
-<span class="caps">NC</span>:BookmarkSeparator    57
+<span class="o">[</span>u<span class="s1">'RDF:RDF'</span><span class="o">]</span>
+RDF:Seq         579
+RDF:Description     24190
+NC:BookmarkSeparator    57
 &lt;open file <span class="s1">'_chaos/scraotools_reDevRel.pkl'</span>, mode <span class="s1">'wb'</span> at 0x10f2376f0&gt;
         exp_level_idx<span class="o">()</span> RUNed~ 17013.92913 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    11153
-cleanned <span class="caps">DESC</span>:  13037
+cleanned DESC:  13037
 &lt;open file <span class="s1">'_chaos/scraotools_reDevRel.pkl'</span>, mode <span class="s1">'wb'</span> at 0x10eecff60&gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf<span class="o">()</span> RUNed~ 131239.34913 ms
 </pre></div>
 <p>2扫:</p>
-<div class="highlight"><pre><span class="nv">$ </span>python scraptools/zq_chk4scrap.py reDevRel/
+<div class="highlight"><pre><span></span>$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
-<span class="caps">RDF</span>:Seq         578
-<span class="caps">RDF</span>:Description     13037
-<span class="caps">NC</span>:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     13037
+NC:BookmarkSeparator    57
         _load_pkl<span class="o">()</span> RUNed~ 4292.33599 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    5506
-cleanned <span class="caps">DESC</span>:  7531
+cleanned DESC:  7531
 &lt;open file <span class="s1">'_chaos/scraotools_reDevRel.pkl'</span>, mode <span class="s1">'wb'</span> at 0x108874f60&gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf<span class="o">()</span> RUNed~ 44531.90279 ms
 </pre></div>
 <p>3扫::</p>
-<div class="highlight"><pre><span class="nv">$ </span>python scraptools/zq_chk4scrap.py reDevRel/
+<div class="highlight"><pre><span></span>$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
-<span class="caps">RDF</span>:Seq         578
-<span class="caps">RDF</span>:Description     7531
-<span class="caps">NC</span>:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     7531
+NC:BookmarkSeparator    57
         _load_pkl<span class="o">()</span> RUNed~ 3115.18502 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    2616
-cleanned <span class="caps">DESC</span>:  4915
+cleanned DESC:  4915
 &lt;open file <span class="s1">'_chaos/scraotools_reDevRel.pkl'</span>, mode <span class="s1">'wb'</span> at 0x105d1edb0&gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf<span class="o">()</span> RUNed~ 19026.94511 ms
 </pre></div>
 <p>4扫::</p>
-<div class="highlight"><pre><span class="nv">$ </span>python scraptools/zq_chk4scrap.py reDevRel/
+<div class="highlight"><pre><span></span>$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
-<span class="caps">RDF</span>:Seq         578
-<span class="caps">RDF</span>:Description     4915
-<span class="caps">NC</span>:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     4915
+NC:BookmarkSeparator    57
         _load_pkl<span class="o">()</span> RUNed~ 2528.49293 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    1045
-cleanned <span class="caps">DESC</span>:  3870
+cleanned DESC:  3870
 &lt;open file <span class="s1">'_chaos/scraotools_reDevRel.pkl'</span>, mode <span class="s1">'wb'</span> at 0x10429ced0&gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf<span class="o">()</span> RUNed~ 11538.43212 ms
 </pre></div>
 <p>5扫:</p>
-<div class="highlight"><pre><span class="nv">$ </span>python scraptools/zq_chk4scrap.py reDevRel/
+<div class="highlight"><pre><span></span>$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
-<span class="caps">RDF</span>:Seq         578
-<span class="caps">RDF</span>:Description     3870
-<span class="caps">NC</span>:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     3870
+NC:BookmarkSeparator    57
         _load_pkl<span class="o">()</span> RUNed~ 2422.85681 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    286
-cleanned <span class="caps">DESC</span>:  3584
+cleanned DESC:  3584
 &lt;open file <span class="s1">'_chaos/scraotools_reDevRel.pkl'</span>, mode <span class="s1">'wb'</span> at 0x102c5d300&gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf<span class="o">()</span> RUNed~ 9368.47901 ms
 </pre></div>
 <p>6扫::</p>
-<div class="highlight"><pre><span class="nv">$ </span>python scraptools/zq_chk4scrap.py reDevRel/
+<div class="highlight"><pre><span></span>$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
-<span class="caps">RDF</span>:Seq         578
-<span class="caps">RDF</span>:Description     3584
-<span class="caps">NC</span>:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     3584
+NC:BookmarkSeparator    57
         _load_pkl<span class="o">()</span> RUNed~ 2225.17014 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    10
-cleanned <span class="caps">DESC</span>:  3574
+cleanned DESC:  3574
 &lt;open file <span class="s1">'_chaos/scraotools_reDevRel.pkl'</span>, mode <span class="s1">'wb'</span> at 0x102c2af60&gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf<span class="o">()</span> RUNed~ 8464.92100 ms
 </pre></div>
 <p>7扫:</p>
-<div class="highlight"><pre><span class="nv">$ </span>python scraptools/zq_chk4scrap.py reDevRel/
+<div class="highlight"><pre><span></span>$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-<span class="caps">RDF</span>:<span class="caps">ROOT</span>    13
-<span class="caps">RDF</span>:Seq         578
-<span class="caps">RDF</span>:Description     3574
-<span class="caps">NC</span>:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     3574
+NC:BookmarkSeparator    57
         _load_pkl<span class="o">()</span> RUNed~ 2317.77310 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    0
-cleanned <span class="caps">DESC</span>:  3574
+cleanned DESC:  3574
 &lt;open file <span class="s1">'_chaos/scraotools_reDevRel.pkl'</span>, mode <span class="s1">'wb'</span> at 0x1021b3030&gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf<span class="o">()</span> RUNed~ 8694.52500 ms
@@ -655,11 +656,11 @@ _chaos/scrapbook_reDevRel.rdf
 <h3 id="2">2小时 目录对比</h3>
 <p>sh-&gt;ls 出来时,</p>
 <p>是 <span class="caps">STDOUT</span> 有隐藏字符! 兰色…居然没有意识到!</p>
-<div class="highlight"><pre><span class="nt">20041214101930</span>
+<div class="highlight"><pre><span></span><span class="nt">20041214101930</span>
 <span class="o">&lt;</span><span class="nt">type</span> <span class="s1">'str'</span><span class="o">&gt;</span>
 <span class="nt">Traceback</span> <span class="o">(</span><span class="nt">most</span> <span class="nt">recent</span> <span class="nt">call</span> <span class="nt">last</span><span class="o">):</span>
   <span class="nt">File</span> <span class="s2">"scraptools/zq_chk4scrap.py"</span><span class="o">,</span> <span class="nt">line</span> <span class="nt">724</span><span class="o">,</span> <span class="nt">in</span> <span class="o">&lt;</span><span class="nt">module</span><span class="o">&gt;</span>
-    <span class="nt">mv_chaos_data</span><span class="o">(</span><span class="nt">REPO_NAME</span><span class="o">,</span> <span class="nt"><span class="caps">XRDF</span></span><span class="o">)</span>
+    <span class="nt">mv_chaos_data</span><span class="o">(</span><span class="nt">REPO_NAME</span><span class="o">,</span> <span class="nt">XRDF</span><span class="o">)</span>
   <span class="nt">File</span> <span class="s2">"scraptools/zq_chk4scrap.py"</span><span class="o">,</span> <span class="nt">line</span> <span class="nt">524</span><span class="o">,</span> <span class="nt">in</span> <span class="nt">mv_chaos_data</span>
     <span class="nt">print</span> <span class="nt">len</span><span class="o">(</span><span class="nt">int</span><span class="o">(</span><span class="nt">li</span><span class="o">))</span> <span class="err">#</span><span class="nc">.strip</span><span class="o">()</span>
 <span class="nt">ValueError</span><span class="o">:</span> <span class="nt">invalid</span> <span class="nt">literal</span> <span class="nt">for</span> <span class="nt">int</span><span class="o">()</span> <span class="nt">with</span> <span class="nt">base</span> <span class="nt">10</span><span class="o">:</span> <span class="err">'\</span><span class="nt">x1b</span><span class="cp">[</span><span class="mi">1</span><span class="nx">m</span><span class="o">\</span><span class="nx">x1b</span><span class="err">[</span><span class="mi">34</span><span class="nx">m20041214101930</span><span class="o">\</span><span class="nx">x1b</span><span class="err">[</span><span class="mi">39</span><span class="p">;</span><span class="mi">49</span><span class="nx">m</span><span class="o">\</span><span class="nx">x1b</span><span class="err">[</span><span class="mi">0</span><span class="nx">m</span><span class="s1">'</span>
@@ -684,7 +685,7 @@ _chaos/scrapbook_reDevRel.rdf
 <li>提高效率</li>
 </ul>
 <p>:</p>
-<div class="highlight"><pre><span class="nv">$ </span>du -hs *
+<div class="highlight"><pre><span></span>$ du -hs *
 5.1G    ZqDevRel
 950M    reDevRel
     5.2G    zqCoder

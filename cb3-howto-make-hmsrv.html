@@ -235,7 +235,7 @@
 之后,总是要一步步完成心目中的 家服务器</p>
 <h2 id="_3">系统整顿</h2>
 <p><span class="caps">CB</span> 自制的 lubuntu 系统,最扯的事儿是:</p>
-<div class="highlight"><pre>居然
+<div class="highlight"><pre><span></span>居然
 没有
 默认
 安装
@@ -264,7 +264,7 @@ alias apclean=’sudo aptitude autoclean’
 alias ppaddkey=’sudo apt-key adv —keyserver keyserver.ubuntu.com —recv-keys’</p>
 </li>
 </ul>
-<p>然后,第一时间杀灭预安装的 Apache,MySQL,<span class="caps">PHP</span></p>
+<p>然后,第一时间杀灭预安装的 Apache,MySQL,<span class="caps">PHP</span></p>
 <p>参考:</p>
 <ul>
 <li>
@@ -280,21 +280,21 @@ $ sudo rm -rf /var/lib/mysql</p>
 </ul>
 <h3 id="utf8"><span class="caps">UTF8</span></h3>
 <p>默认的: </p>
-<div class="highlight"><pre><span class="nv">$ </span>locale
-<span class="nv"><span class="caps">LANG</span></span><span class="o">=</span>
-<span class="nv"><span class="caps">LANGUAGE</span></span><span class="o">=</span>
-<span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_NUMERIC</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_TIME</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_COLLATE</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_MONETARY</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_MESSAGES</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_PAPER</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_NAME</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_ADDRESS</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_TELEPHONE</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_MEASUREMENT</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_IDENTIFICATION</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
+<div class="highlight"><pre><span></span>$ locale
+<span class="nv">LANG</span><span class="o">=</span>
+<span class="nv">LANGUAGE</span><span class="o">=</span>
+<span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_NUMERIC</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_TIME</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_COLLATE</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_MONETARY</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_MESSAGES</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_PAPER</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_NAME</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_ADDRESS</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_TELEPHONE</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_MEASUREMENT</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_IDENTIFICATION</span><span class="o">=</span><span class="s2">"POSIX"</span>
 <span class="nv">LC_ALL</span><span class="o">=</span>
 </pre></div>
 <p>参考:</p>
@@ -303,39 +303,39 @@ $ sudo rm -rf /var/lib/mysql</p>
 <li><a href="http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale">修改locale - Ubuntu中文</a></li>
 </ul>
 <p>重启后依然!</p>
-<div class="highlight"><pre>zoomq@cubietruck:~<span class="nv">$ </span>locale
-<span class="nv"><span class="caps">LANG</span></span><span class="o">=</span>
-<span class="nv"><span class="caps">LANGUAGE</span></span><span class="o">=</span>
-<span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_NUMERIC</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_TIME</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_COLLATE</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_MONETARY</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_MESSAGES</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_PAPER</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_NAME</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_ADDRESS</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_TELEPHONE</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_MEASUREMENT</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
-<span class="nv">LC_IDENTIFICATION</span><span class="o">=</span><span class="s2">"<span class="caps">POSIX</span>"</span>
+<div class="highlight"><pre><span></span>zoomq@cubietruck:~$ locale
+<span class="nv">LANG</span><span class="o">=</span>
+<span class="nv">LANGUAGE</span><span class="o">=</span>
+<span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_NUMERIC</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_TIME</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_COLLATE</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_MONETARY</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_MESSAGES</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_PAPER</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_NAME</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_ADDRESS</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_TELEPHONE</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_MEASUREMENT</span><span class="o">=</span><span class="s2">"POSIX"</span>
+<span class="nv">LC_IDENTIFICATION</span><span class="o">=</span><span class="s2">"POSIX"</span>
 <span class="nv">LC_ALL</span><span class="o">=</span>
 </pre></div>
 <p>但是,从 screen 中进入时,就已经</p>
-<div class="highlight"><pre><span class="nv">$ </span>locale
-<span class="nv"><span class="caps">LANG</span></span><span class="o">=</span>en_US.<span class="caps">UTF</span>-8
-<span class="nv"><span class="caps">LANGUAGE</span></span><span class="o">=</span>en_US:en
-<span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_NUMERIC</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_TIME</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_COLLATE</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_MONETARY</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_MESSAGES</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_PAPER</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_NAME</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_ADDRESS</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_TELEPHONE</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_MEASUREMENT</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
-<span class="nv">LC_IDENTIFICATION</span><span class="o">=</span><span class="s2">"en_US.<span class="caps">UTF</span>-8"</span>
+<div class="highlight"><pre><span></span>$ locale
+<span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+<span class="nv">LANGUAGE</span><span class="o">=</span>en_US:en
+<span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_NUMERIC</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_TIME</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_COLLATE</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_MONETARY</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_MESSAGES</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_PAPER</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_NAME</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_ADDRESS</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_TELEPHONE</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_MEASUREMENT</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
+<span class="nv">LC_IDENTIFICATION</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
 <span class="nv">LC_ALL</span><span class="o">=</span>
 </pre></div>
 <p>好吧,也算解决,
@@ -343,10 +343,10 @@ $ sudo rm -rf /var/lib/mysql</p>
 但是,一般俺只在 Screen 光辉中生存的,所以,不是问题.</p>
 <h2 id="_4">数据迁移</h2>
 <p>专门问过高人:</p>
-<div class="highlight"><pre><span class="n">from</span><span class="o">:</span>  <span class="n">Zoom</span><span class="o">.</span><span class="na">Quiet</span> <span class="o">&lt;</span><span class="n">zoom</span><span class="o">.</span><span class="na">quiet</span><span class="err">@</span><span class="n">gmail</span><span class="o">.</span><span class="na">com</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><span class="n">from</span><span class="o">:</span>  <span class="n">Zoom</span><span class="o">.</span><span class="na">Quiet</span> <span class="o">&lt;</span><span class="n">zoom</span><span class="o">.</span><span class="na">quiet</span><span class="err">@</span><span class="n">gmail</span><span class="o">.</span><span class="na">com</span><span class="o">&gt;</span>
 <span class="n">to</span><span class="o">:</span>  <span class="n">shlug</span> <span class="o">&lt;</span><span class="n">shlug</span><span class="err">@</span><span class="n">googlegroups</span><span class="o">.</span><span class="na">com</span><span class="o">&gt;</span>
-<span class="n">date</span><span class="o">:</span>  <span class="n">Mon</span><span class="o">,</span> <span class="n">Jan</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">2014</span> <span class="n">at</span> <span class="mi">4</span><span class="o">:</span><span class="mi">35</span> <span class="n"><span class="caps">PM</span></span>
-<span class="n">subject</span><span class="o">:</span>   <span class="mi">1</span><span class="n">Tb</span> <span class="err">的</span><span class="mf">2.5</span><span class="err">吋盘给</span> <span class="n">Ubuntu</span> <span class="err">用应该选择什么</span><span class="n"><span class="caps">FS</span></span><span class="o">?</span>
+<span class="n">date</span><span class="o">:</span>  <span class="n">Mon</span><span class="o">,</span> <span class="n">Jan</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">2014</span> <span class="n">at</span> <span class="mi">4</span><span class="o">:</span><span class="mi">35</span> <span class="n">PM</span>
+<span class="n">subject</span><span class="o">:</span>   <span class="mi">1</span><span class="n">Tb</span> <span class="err">的</span><span class="mf">2.5</span><span class="err">吋盘给</span> <span class="n">Ubuntu</span> <span class="err">用应该选择什么</span><span class="n">FS</span><span class="o">?</span>
 </pre></div>
 <p>参考: <a href="http://floss.zoomquiet.io/data/20110828225725/index.html">linux下的文件系统选型 | shell’s home</a> 以及相关的各种文档,</p>
 <p>进行了各种尝试,只能说那真是千辛万苦哪:</p>
@@ -362,7 +362,7 @@ $ sudo rm -rf /var/lib/mysql</p>
 <li>怎么将老盘的 <span class="caps">BSD</span> 文件系统中的数据迁移出来?<ul>
 <li><span class="caps">MAC</span> 挂 <span class="caps">UFS</span> ~ 无解</li>
 <li>Linux 挂 <span class="caps">UFS</span> ~ 失败</li>
-<li>FreeBSD 挂 <span class="caps">UFS</span> </li>
+<li>FreeBSD 挂 <span class="caps">UFS</span> </li>
 <li>嚓了! 也失败!</li>
 <li>这不科学,再换一台<span class="caps">BSD</span> ,一下子就成功了!</li>
 <li>原来是 <span class="caps">BSD</span> 8.2 和 9.1 的系统不同导致…</li>
@@ -386,8 +386,8 @@ $ sudo rm -rf /var/lib/mysql</p>
 </ul>
 <p>整个 700多G 数据,就这样迁移到了 <span class="caps">CB</span> 控制的两个硬盘共 2T 空间中…</p>
 <h3 id="_5">相关片段</h3>
-<div class="highlight"><pre><span class="nv">$ </span>cat /proc/partitions
-major minor  <span class="c">#blocks  name</span>
+<div class="highlight"><pre><span></span>$ cat /proc/partitions
+major minor  <span class="c1">#blocks  name</span>
 
   <span class="m">93</span>        <span class="m">0</span>    <span class="m">7520256</span> nand
   <span class="m">93</span>        <span class="m">1</span>      <span class="m">65536</span> nanda
@@ -399,8 +399,8 @@ major minor  <span class="c">#blocks  name</span>
    <span class="m">8</span>       <span class="m">18</span>  <span class="m">781380608</span> sdb2
    <span class="m">8</span>       <span class="m">19</span> <span class="m">1171928064</span> sdb3
 
-<span class="nv">$ </span>sudo mount.exfat-fuse /dev/sdb2 /mnt/bk2wk
-<span class="nv">$ </span>sudo mount.exfat-fuse /dev/sdb3 /mnt/dl4p2p
+$ sudo mount.exfat-fuse /dev/sdb2 /mnt/bk2wk
+$ sudo mount.exfat-fuse /dev/sdb3 /mnt/dl4p2p
 </pre></div>
 <p>但是, 远程 sshfs 后目录只读!?</p>
 <ul>
@@ -409,20 +409,20 @@ major minor  <span class="c">#blocks  name</span>
 <li><a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys"><span class="caps">SSH</span>/OpenSSH/Keys - Community Ubuntu Documentation</a></li>
 </ul>
 <h3 id="_6">外置硬盘盒</h3>
-<div class="highlight"><pre><span class="nv">$ </span>dmesg <span class="p">|</span> grep da0
+<div class="highlight"><pre><span></span>$ dmesg <span class="p">|</span> grep da0
 ada0 at ata4 bus <span class="m">0</span> scbus2 target <span class="m">0</span> lun 0
-ada0: &lt;<span class="caps">ST3160815AS</span> 3.<span class="caps">ADA</span>&gt; <span class="caps">ATA</span>-7 <span class="caps">SATA</span> 2.x device
-ada0: 300.<span class="caps">000MB</span>/s transfers <span class="o">(</span><span class="caps">SATA</span> 2.x, <span class="caps">UDMA5</span>, <span class="caps">PIO</span> 8192bytes<span class="o">)</span>
-ada0: <span class="caps">152587MB</span> <span class="o">(</span><span class="m">312500000</span> <span class="m">512</span> byte sectors: 16H 63S/T 16383C<span class="o">)</span>
+ada0: &lt;ST3160815AS 3.ADA&gt; ATA-7 SATA 2.x device
+ada0: 300.000MB/s transfers <span class="o">(</span>SATA 2.x, UDMA5, PIO 8192bytes<span class="o">)</span>
+ada0: 152587MB <span class="o">(</span><span class="m">312500000</span> <span class="m">512</span> byte sectors: 16H 63S/T 16383C<span class="o">)</span>
 ada0: Previously was known as ad8
 Trying to mount root from ufs:/dev/ada0s1a <span class="o">[</span>rw<span class="o">]</span>...
 da0 at umass-sim0 bus <span class="m">0</span> scbus6 target <span class="m">0</span> lun 0
-da0: &lt;<span class="caps">ATA</span> <span class="caps">ST2000DL003</span>-<span class="caps">9VT1</span> <span class="caps">CC3C</span>&gt; Fixed Direct Access <span class="caps">SCSI</span>-6 device
-da0: 40.<span class="caps">000MB</span>/s transfers
-da0: <span class="caps">1907729MB</span> <span class="o">(</span><span class="m">3907029168</span> <span class="m">512</span> byte sectors: 255H 63S/T 243201C<span class="o">)</span>
+da0: &lt;ATA ST2000DL003-9VT1 CC3C&gt; Fixed Direct Access SCSI-6 device
+da0: 40.000MB/s transfers
+da0: 1907729MB <span class="o">(</span><span class="m">3907029168</span> <span class="m">512</span> byte sectors: 255H 63S/T 243201C<span class="o">)</span>
 
-<span class="nv">$ </span>gpart show /dev/da0
-<span class="o">=</span>&gt;        <span class="m">34</span>  <span class="m">3907029101</span>  da0  <span class="caps">GPT</span>  <span class="o">(</span>1.8T<span class="o">)</span>
+$ gpart show /dev/da0
+<span class="o">=</span>&gt;        <span class="m">34</span>  <span class="m">3907029101</span>  da0  GPT  <span class="o">(</span>1.8T<span class="o">)</span>
           <span class="m">34</span>           <span class="m">6</span>       - free -  <span class="o">(</span>3.0k<span class="o">)</span>
           <span class="m">40</span>         <span class="m">128</span>    <span class="m">1</span>  freebsd-boot  <span class="o">(</span>64k<span class="o">)</span>
          <span class="m">168</span>    <span class="m">16777216</span>    <span class="m">2</span>  freebsd-ufs  <span class="o">(</span>8.0G<span class="o">)</span>
@@ -431,7 +431,7 @@ da0: <span class="caps">1907729MB</span> <span class="o">(</span><span class="m"
   <span class="m">3907029134</span>           <span class="m">1</span>       - free -  <span class="o">(</span>512B<span class="o">)</span>
 </pre></div>
 <h3 id="sshfs">伟光大的 sshfs</h3>
-<div class="highlight"><pre><span class="nv">$ </span>brew link fuse4x
+<div class="highlight"><pre><span></span>$ brew link fuse4x
 Linking /usr/local/Cellar/fuse4x/0.9.2... Warning: Could not link fuse4x. Unlinking...
 
 Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
@@ -442,22 +442,22 @@ To force the link and overwrite all other conflicting files, <span class="k">do<
 To list all files that would be deleted:
   brew link --overwrite --dry-run formula_name
 
-zoomq @ <span class="caps">MBP111216ZQ</span> in /usr/local/lib
-<span class="nv">$ </span>brew link --overwrite fuse4x
+zoomq @ MBP111216ZQ in /usr/local/lib
+$ brew link --overwrite fuse4x
 Linking /usr/local/Cellar/fuse4x/0.9.2... <span class="m">7</span> symlinks created
 
 
-<span class="nv">$ </span>brew install <span class="nv">osxfuse</span>
+$ brew install <span class="nv">osxfuse</span>
 <span class="o">==</span>&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz
 <span class="o">==</span>&gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
 <span class="o">==</span>&gt; Caveats
 If upgrading from a previous version of osxfuse, the previous kernel extension
 will need to be unloaded before installing the new version. First, check that
-no <span class="caps">FUSE</span>-based file systems are running:
+no FUSE-based file systems are running:
 
   mount -t osxfusefs
 
-Unmount all <span class="caps">FUSE</span> file systems and <span class="k">then</span> unload the kernel extension:
+Unmount all FUSE file systems and <span class="k">then</span> unload the kernel extension:
 
   sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs
 
@@ -469,42 +469,42 @@ The new osxfuse file system bundle needs to be installed by the root user:
 🍺  /usr/local/Cellar/osxfuse/2.6.2: <span class="m">84</span> files, 5.0M
 </pre></div>
 <h3 id="exfat">exFAT</h3>
-<div class="highlight"><pre><span class="nv">$ </span>cat /etc/lsb-release.bk
+<div class="highlight"><pre><span></span>$ cat /etc/lsb-release.bk
 <span class="nv">DISTRIB_ID</span><span class="o">=</span>Linaro
 <span class="nv">DISTRIB_RELEASE</span><span class="o">=</span>13.08
 <span class="nv">DISTRIB_CODENAME</span><span class="o">=</span>raring
 <span class="nv">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s2">"Linaro 13.08"</span>
 
-<span class="nv">$ </span>sudo vi /etc/lsb-release
+$ sudo vi /etc/lsb-release
 <span class="nv">DISTRIB_ID</span><span class="o">=</span>Ubuntu
 <span class="nv">DISTRIB_RELEASE</span><span class="o">=</span>13.04
 <span class="nv">DISTRIB_CODENAME</span><span class="o">=</span>raring
 <span class="nv">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s2">"Ubuntu 13.04"</span>
 
-<span class="nv">$ </span>sudo apt-add-repository ppa:relan/exfat
-你将向系统添加如下 <span class="caps">PPA</span>：
- <span class="caps">PPA</span> <span class="k">for</span> the free exFAT file system implementation project: http://code.google.com/p/exfat/
+$ sudo apt-add-repository ppa:relan/exfat
+你将向系统添加如下 PPA：
+ PPA <span class="k">for</span> the free exFAT file system implementation project: http://code.google.com/p/exfat/
  更多信息： https://launchpad.net/~relan/+archive/exfat
 按回车继续或者 Ctrl+c 取消添加
 
 gpg: 钥匙环‘/tmp/tmppjaczn/secring.gpg’已建立
 gpg: 钥匙环‘/tmp/tmppjaczn/pubring.gpg’已建立
-gpg: 下载密钥‘<span class="caps">A252A784</span>’，从 hkp 服务器 keyserver.ubuntu.com
+gpg: 下载密钥‘A252A784’，从 hkp 服务器 keyserver.ubuntu.com
 gpg: /tmp/tmppjaczn/trustdb.gpg：建立了信任度数据库
-gpg: 密钥 <span class="caps">A252A784</span>：公钥“Launchpad Free exFAT file system implementation”已导入
+gpg: 密钥 A252A784：公钥“Launchpad Free exFAT file system implementation”已导入
 gpg: 合计被处理的数量：1
-gpg:               已导入：1  <span class="o">(</span><span class="caps">RSA</span>: 1<span class="o">)</span>
-<span class="caps">OK</span>
+gpg:               已导入：1  <span class="o">(</span>RSA: 1<span class="o">)</span>
+OK
 
 
-<span class="nv">$ </span>acs exfat
-exfat-fuse - <span class="nb">read </span>and write exFAT driver <span class="k">for</span> <span class="caps">FUSE</span>
+$ acs exfat
+exfat-fuse - <span class="nb">read</span> and write exFAT driver <span class="k">for</span> FUSE
 exfat-utils - utilities to create, check, label and dump exFAT filesystem
 
-<span class="nv">$ </span>agi exfat-fuse
+$ agi exfat-fuse
 
  Working... this may take a <span class="k">while</span>.
-<span class="c"># apt-fast mirror list: Mon Jan 27 16:42:10 <span class="caps">UTC</span> 2014</span>
+<span class="c1"># apt-fast mirror list: Mon Jan 27 16:42:10 UTC 2014</span>
 http://ports.ubuntu.com/ubuntu-ports/pool/universe/f/fuse-exfat/exfat-fuse_1.0.1-1_armhf.deb
  <span class="nv">checksum</span><span class="o">=</span><span class="nv">md5</span><span class="o">=</span>fcacfbade2df1f97d72ba9912961883f
  <span class="nv">out</span><span class="o">=</span>exfat-fuse_1.0.1-1_armhf.deb
@@ -514,13 +514,13 @@ http://ports.ubuntu.com/ubuntu-ports/pool/universe/e/exfat-utils/exfat-utils_1.0
 ...
 
 下载结果：
-gid   <span class="p">|</span>stat<span class="p">|</span>avg speed  <span class="p">|</span>path/<span class="caps">URI</span>
+gid   <span class="p">|</span>stat<span class="p">|</span>avg speed  <span class="p">|</span>path/URI
 <span class="o">======</span>+<span class="o">====</span>+<span class="o">===========</span>+<span class="o">=======================================================</span>
-07028f<span class="p">|</span><span class="caps">OK</span>  <span class="p">|</span>    66KiB/s<span class="p">|</span>/var/cache/apt/archives/apt-fast/exfat-fuse_1.0.1-1_armhf.deb
-e4fa30<span class="p">|</span><span class="caps">OK</span>  <span class="p">|</span>    40KiB/s<span class="p">|</span>/var/cache/apt/archives/apt-fast/exfat-utils_1.0.1-1_armhf.deb
+07028f<span class="p">|</span>OK  <span class="p">|</span>    66KiB/s<span class="p">|</span>/var/cache/apt/archives/apt-fast/exfat-fuse_1.0.1-1_armhf.deb
+e4fa30<span class="p">|</span>OK  <span class="p">|</span>    40KiB/s<span class="p">|</span>/var/cache/apt/archives/apt-fast/exfat-utils_1.0.1-1_armhf.deb
 
 状态标识：
-<span class="o">(</span><span class="caps">OK</span><span class="o">)</span>：完成下载。
+<span class="o">(</span>OK<span class="o">)</span>：完成下载。
 正在读取软件包列表... 完成
 正在分析软件包的依赖关系树
 正在读取状态信息... 完成
@@ -545,12 +545,12 @@ Selecting previously unselected package exfat-utils.
 正在设置 exfat-utils <span class="o">(</span>1.0.1-1<span class="o">)</span> ...
 
 
-<span class="nv">$ </span>sudo fdisk -l /dev/sdb
+$ sudo fdisk -l /dev/sdb
 
-<span class="caps">WARNING</span>: <span class="caps">GPT</span> <span class="o">(</span><span class="caps">GUID</span> Partition Table<span class="o">)</span> detected on <span class="s1">'/dev/sdb'</span>! The util fdisk doesn<span class="err">'</span>t support <span class="caps">GPT</span>. Use <span class="caps">GNU</span> Parted.
+WARNING: GPT <span class="o">(</span>GUID Partition Table<span class="o">)</span> detected on <span class="s1">'/dev/sdb'</span>! The util fdisk doesn<span class="err">'</span>t support GPT. Use GNU Parted.
 
 
-Disk /dev/sdb: 2000.4 <span class="caps">GB</span>, <span class="m">2000398934016</span> bytes
+Disk /dev/sdb: 2000.4 GB, <span class="m">2000398934016</span> bytes
 <span class="m">255</span> heads, <span class="m">63</span> sectors/track, <span class="m">243201</span> cylinders, total <span class="m">3907029168</span> sectors
 <span class="nv">Units</span> <span class="o">=</span> sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
 Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
@@ -558,15 +558,15 @@ I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span 
 Disk identifier: 0x00000000
 
    Device Boot      Start         End      Blocks   Id  System
-/dev/sdb1               <span class="m">1</span>      <span class="m">409639</span>      204819+  ee  <span class="caps">GPT</span>
-/dev/sdb2          <span class="m">411648</span>  <span class="m">1563172863</span>   <span class="m">781380608</span>    <span class="m">7</span>  <span class="caps">HPFS</span>/<span class="caps">NTFS</span>/exFAT
-/dev/sdb3      <span class="m">1563172864</span>  <span class="m">3907028991</span>  <span class="m">1171928064</span>    <span class="m">7</span>  <span class="caps">HPFS</span>/<span class="caps">NTFS</span>/exFAT
+/dev/sdb1               <span class="m">1</span>      <span class="m">409639</span>      204819+  ee  GPT
+/dev/sdb2          <span class="m">411648</span>  <span class="m">1563172863</span>   <span class="m">781380608</span>    <span class="m">7</span>  HPFS/NTFS/exFAT
+/dev/sdb3      <span class="m">1563172864</span>  <span class="m">3907028991</span>  <span class="m">1171928064</span>    <span class="m">7</span>  HPFS/NTFS/exFAT
 </pre></div>
 <h3 id="_7">系统硬盘</h3>
 <p>观察:</p>
-<div class="highlight"><pre><span class="nv">$ </span>sudo fdisk -l /dev/sda
+<div class="highlight"><pre><span></span>$ sudo fdisk -l /dev/sda
 
-Disk /dev/sda: 1000.2 <span class="caps">GB</span>, <span class="m">1000204886016</span> bytes
+Disk /dev/sda: 1000.2 GB, <span class="m">1000204886016</span> bytes
 <span class="m">255</span> heads, <span class="m">63</span> sectors/track, <span class="m">121601</span> cylinders, total <span class="m">1953525168</span> sectors
 <span class="nv">Units</span> <span class="o">=</span> sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
 Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">4096</span> bytes
@@ -581,12 +581,12 @@ Disk /dev/sda doesn<span class="err">'</span>t contain a valid partition table
 <li><a href="http://blog.itpub.net/26686207/viewspace-765782/">多硬盘分区管理fdisk-张丹-leonarding-<span class="caps">ITPUB</span>博客</a></li>
 </ul>
 <p>格式化:</p>
-<div class="highlight"><pre><span class="nv">$ </span>sudo mkfs.ext4 /dev/sda3
+<div class="highlight"><pre><span></span>$ sudo mkfs.ext4 /dev/sda3
 </pre></div>
 <h4 id="fatab">fatab</h4>
 <p>观察:</p>
-<div class="highlight"><pre><span class="nv">$ </span>cat /proc/partitions
-major minor  <span class="c">#blocks  name</span>
+<div class="highlight"><pre><span></span>$ cat /proc/partitions
+major minor  <span class="c1">#blocks  name</span>
 
   <span class="m">93</span>        <span class="m">0</span>    <span class="m">7520256</span> nand
   <span class="m">93</span>        <span class="m">1</span>      <span class="m">65536</span> nanda
@@ -601,15 +601,15 @@ major minor  <span class="c">#blocks  name</span>
    <span class="m">8</span>       <span class="m">18</span>  <span class="m">781380608</span> sdb2
    <span class="m">8</span>       <span class="m">19</span> <span class="m">1171928064</span> sdb3
 
-<span class="nv">$ </span>sudo blkid
-/dev/nanda: <span class="nv">SEC_TYPE</span><span class="o">=</span><span class="s2">"msdos"</span> <span class="nv"><span class="caps">LABEL</span></span><span class="o">=</span><span class="s2">"Volumn"</span> <span class="nv"><span class="caps">TYPE</span></span><span class="o">=</span><span class="s2">"vfat"</span>
-/dev/nandb: <span class="nv"><span class="caps">UUID</span></span><span class="o">=</span><span class="s2">"d20c81fd-3188-4650-b124-2fa090bb7920"</span> <span class="nv"><span class="caps">TYPE</span></span><span class="o">=</span><span class="s2">"ext4"</span>
-/dev/nandc: <span class="nv"><span class="caps">UUID</span></span><span class="o">=</span><span class="s2">"1914bbf8-2641-4b3f-a00e-4afa65d0ed8f"</span> <span class="nv"><span class="caps">TYPE</span></span><span class="o">=</span><span class="s2">"ext4"</span>
+$ sudo blkid
+/dev/nanda: <span class="nv">SEC_TYPE</span><span class="o">=</span><span class="s2">"msdos"</span> <span class="nv">LABEL</span><span class="o">=</span><span class="s2">"Volumn"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"vfat"</span>
+/dev/nandb: <span class="nv">UUID</span><span class="o">=</span><span class="s2">"d20c81fd-3188-4650-b124-2fa090bb7920"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"ext4"</span>
+/dev/nandc: <span class="nv">UUID</span><span class="o">=</span><span class="s2">"1914bbf8-2641-4b3f-a00e-4afa65d0ed8f"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"ext4"</span>
 
-/dev/sda3: <span class="nv"><span class="caps">UUID</span></span><span class="o">=</span><span class="s2">"b9db3117-90d7-48a6-8302-0b316b9745fd"</span> <span class="nv"><span class="caps">TYPE</span></span><span class="o">=</span><span class="s2">"ext4"</span>
-/dev/sdb1: <span class="nv"><span class="caps">LABEL</span></span><span class="o">=</span><span class="s2">"<span class="caps">EFI</span>"</span> <span class="nv"><span class="caps">UUID</span></span><span class="o">=</span><span class="s2">"67E3-<span class="caps">17ED</span>"</span> <span class="nv"><span class="caps">TYPE</span></span><span class="o">=</span><span class="s2">"vfat"</span>
-/dev/sdb2: <span class="nv"><span class="caps">LABEL</span></span><span class="o">=</span><span class="s2">"bk4wk"</span> <span class="nv"><span class="caps">UUID</span></span><span class="o">=</span><span class="s2">"52E4-<span class="caps">78FF</span>"</span> <span class="nv"><span class="caps">TYPE</span></span><span class="o">=</span><span class="s2">"exfat"</span>
-/dev/sdb3: <span class="nv"><span class="caps">LABEL</span></span><span class="o">=</span><span class="s2">"dl4p2p"</span> <span class="nv"><span class="caps">UUID</span></span><span class="o">=</span><span class="s2">"52E4-7901"</span> <span class="nv"><span class="caps">TYPE</span></span><span class="o">=</span><span class="s2">"exfat"</span>
+/dev/sda3: <span class="nv">UUID</span><span class="o">=</span><span class="s2">"b9db3117-90d7-48a6-8302-0b316b9745fd"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"ext4"</span>
+/dev/sdb1: <span class="nv">LABEL</span><span class="o">=</span><span class="s2">"EFI"</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">"67E3-17ED"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"vfat"</span>
+/dev/sdb2: <span class="nv">LABEL</span><span class="o">=</span><span class="s2">"bk4wk"</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">"52E4-78FF"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"exfat"</span>
+/dev/sdb3: <span class="nv">LABEL</span><span class="o">=</span><span class="s2">"dl4p2p"</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">"52E4-7901"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"exfat"</span>
 </pre></div>
 <p>参考:</p>
 <ul>
@@ -617,7 +617,7 @@ major minor  <span class="c">#blocks  name</span>
 <li><a href="http://www.bango29.com/cubieboard-part-1/">Cubieboard - Part 1</a></li>
 </ul>
 <p>配置:</p>
-<div class="highlight"><pre>/dev/sda1    /media/ext  ext4    defaults    0   2
+<div class="highlight"><pre><span></span>/dev/sda1    /media/ext  ext4    defaults    0   2
 /dev/nandc    /mnt/nandc  ext4    defaults    0   2
 /mnt/nandc/swapfile    none    swap    sw  0   0
 /dev/sda3    /mnt/data  ext4    defaults    0   2
@@ -649,7 +649,7 @@ partition  3: class =         <span class="caps">DISK</span>, name =        <spa
 <p>等等吧,俺折腾完, <span class="caps">CB</span> 变码头了,才见到标题那句话!</p>
 <p>才明确,想扩展内置<span class="caps">OS</span> 空间,要先从 <span class="caps">SD</span> 系统重启…所以,就算了吧…</p>
 <ul>
-<li><a href="http://00-00-00-00.com/2013/08/13/cubieboard%e8%87%aa%e5%8a%a8%e6%8c%82%e8%bd%bdtf%e5%8d%a1fstab%e8%ae%be%e7%bd%ae%e6%96%b9%e6%b3%95/">Cubieboard自动挂载<span class="caps">TF</span>卡fstab设置方法 | <span class="caps">OPENERP</span>-从零开始!</a></li>
+<li><a href="http://00-00-00-00.com/2013/08/13/cubieboard%e8%87%aa%e5%8a%a8%e6%8c%82%e8%bd%bdtf%e5%8d%a1fstab%e8%ae%be%e7%bd%ae%e6%96%b9%e6%b3%95/">Cubieboard自动挂载<span class="caps">TF</span>卡fstab设置方法 | <span class="caps">OPENERP</span>-从零开始!</a></li>
 </ul>
 <h2 id="_9">家庭影院</h2>
 <p>就几点功能:</p>
@@ -660,7 +660,7 @@ partition  3: class =         <span class="caps">DISK</span>, name =        <spa
 </ul>
 <h3 id="mldonkey">MLDonkey</h3>
 <p>安装:</p>
-<div class="highlight"><pre><span class="nv">$ </span>agi -y mldonkey-server
+<div class="highlight"><pre><span></span>$ agi -y mldonkey-server
 </pre></div>
 <p>就没有然后了,
 启动,远程用网页控制就好,
@@ -668,7 +668,7 @@ partition  3: class =         <span class="caps">DISK</span>, name =        <spa
 <h3 id="samba">samba</h3>
 <p>这是标准的跨平台文件分享服务了:</p>
 <p>安装:</p>
-<div class="highlight"><pre><span class="nv">$ </span>agi -y samba
+<div class="highlight"><pre><span></span>$ agi -y samba
 </pre></div>
 <p>配置也非常直接..</p>
 <h3 id="minidlna">MiniDLNA</h3>

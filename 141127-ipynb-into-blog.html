@@ -131,12 +131,12 @@
                 <p>原文: <a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html">prooffreader plus: How to quickly turn an IPython notebook into a blog&nbsp;post</a></p>
 <p>IPython notebooks are great for many things, but they&#8217;re a little awkward to embed in blog post platforms like Blogger, Wordpress, etc. When the nbconvert feature was a standalone command-line tool, there was a blog export template, but that seems to have disappeared now that nbconvert has been folded within&nbsp;IPython.</p>
 <p>Out of the box, nbconvert just has two html export&nbsp;options:</p>
-<div class="highlight"><pre>--html
+<div class="highlight"><pre><span></span>--html
 </pre></div>
 
 
 <p>which includes a lot of <span class="caps">CSS</span> that interferes with a blog&#8217;s <span class="caps">CSS</span>,&nbsp;and:</p>
-<div class="highlight"><pre>--html --template basic
+<div class="highlight"><pre><span></span>--html --template basic
 </pre></div>
 
 
@@ -147,34 +147,34 @@
 <li>the <a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html">blog version</a> after applying this&nbsp;stylesheet.</li>
 </ul>
 <p>Note that, for aesthetic reasons, I removed all&nbsp;the</p>
-<div class="highlight"><pre>In [1]
+<div class="highlight"><pre><span></span>In [1]
 </pre></div>
 
 
 <p>-style tags because of the narrow columns on this blog. Your mileage may&nbsp;vary.</p>
-<h2 id="1-convert-ipynb-notebook-to-html">1. Convert .ipynb notebook to&nbsp;<span class="caps">HTML</span></h2>
+<h2 id="1-convert-ipynb-notebook-to-html">1. Convert .ipynb notebook to <span class="caps">HTML</span></h2>
 <p>In the terminal, navigate to the folder containing the .ipynb file and&nbsp;type:</p>
-<div class="highlight"><pre>ipython nbconvert --to html --template basic filename.ipynb
+<div class="highlight"><pre><span></span>ipython nbconvert --to html --template basic filename.ipynb
 </pre></div>
 
 
 <h2 id="2-paste-html-in-blog">2. Paste <span class="caps">HTML</span> in&nbsp;blog</h2>
 <p>Note: if you&#8217;re using the Blogger platform, never switch back to the Compose interface after you use the <span class="caps">HTML</span> interface, it changes all your&nbsp;tags.</p>
-<h2 id="3-add-css-to-blog-html">3. Add <span class="caps">CSS</span> to blog&nbsp;<span class="caps">HTML</span></h2>
+<h2 id="3-add-css-to-blog-html">3. Add <span class="caps">CSS</span> to blog <span class="caps">HTML</span></h2>
 <p>This seems to reproduce the native syntax highlighting of&nbsp;IPython.</p>
-<div class="highlight"><pre><span class="nt">&lt;style</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><span class="nt">&lt;style</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
 .highlight{background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:0em .5em;border-radius: 4px;}
 .k{color: #338822; font-weight: bold;}
 .kn{color: #338822; font-weight: bold;}
 .mi{color: #000000;}
 .o{color: #000000;}
-.ow{color: #<span class="caps">BA22FF</span>;  font-weight: bold;}
+.ow{color: #BA22FF;  font-weight: bold;}
 .nb{color: #338822;}
 .n{color: #000000;}
 .s{color: #cc2222;}
 .se{color: #cc2222; font-weight: bold;}
 .si{color: #C06688; font-weight: bold;}
-.nn{color: #<span class="caps">4D00FF</span>; font-weight: bold;}
+.nn{color: #4D00FF; font-weight: bold;}
 <span class="nt">&lt;/style&gt;</span>
 </pre></div>
 

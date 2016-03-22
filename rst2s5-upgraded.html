@@ -160,19 +160,19 @@
 </ul>
 <p>发现就是样式的声明问题:
 于是就追加了一个参数: <code>style="monokai"</code></p>
-<div class="highlight"><pre><span class="c"># ...</span>
-<span class="n">formatter</span> <span class="o">=</span> <span class="n">get_formatter_by_name</span><span class="p">(</span><span class="s">'html'</span>
+<div class="highlight"><pre><span></span><span class="c1"># ...</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">get_formatter_by_name</span><span class="p">(</span><span class="s1">'html'</span>
 <span class="p">,</span> <span class="n">noclasses</span><span class="o">=</span><span class="bp">True</span>
-<span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s">"monokai"</span>
+<span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">"monokai"</span>
 <span class="p">)</span>
 </pre></div>
 <p>搞掂!</p>
 <p>另外,也随手变更了一下注册的 <code>directive</code> ~ 指令:</p>
-<div class="highlight"><pre><span class="c"># Register the directive with docutils.</span>
-<span class="c">#rst.directives.register_directive('code-block', code_block)</span>
-<span class="c">#rst.roles.register_local_role('code-block', code_role)</span>
-<span class="n">rst</span><span class="o">.</span><span class="n">directives</span><span class="o">.</span><span class="n">register_directive</span><span class="p">(</span><span class="s">'sourcecode'</span><span class="p">,</span> <span class="n">code_block</span><span class="p">)</span>
-<span class="n">rst</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">register_local_role</span><span class="p">(</span><span class="s">'sourcecode'</span><span class="p">,</span> <span class="n">code_role</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="c1"># Register the directive with docutils.</span>
+<span class="c1">#rst.directives.register_directive('code-block', code_block)</span>
+<span class="c1">#rst.roles.register_local_role('code-block', code_role)</span>
+<span class="n">rst</span><span class="o">.</span><span class="n">directives</span><span class="o">.</span><span class="n">register_directive</span><span class="p">(</span><span class="s1">'sourcecode'</span><span class="p">,</span> <span class="n">code_block</span><span class="p">)</span>
+<span class="n">rst</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">register_local_role</span><span class="p">(</span><span class="s1">'sourcecode'</span><span class="p">,</span> <span class="n">code_role</span><span class="p">)</span>
 </pre></div>
 <p>这样俺在 Leo 中写:</p>
 <p><img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png"/></p>

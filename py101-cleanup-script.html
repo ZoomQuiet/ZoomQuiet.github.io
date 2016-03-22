@@ -134,9 +134,9 @@ easy_install path.py
 The latest release is always updated to the Python Package Index. The source code is hosted on&nbsp;Github.</p>
 <h2 id="finding-the-number-of-files-in-a-directory">Finding the number of files in a&nbsp;directory:</h2>
 <p>So our first task is to find the number of files present in a directory. In this example we will not iterate over subdirectories instead we will just count the number of files present in the top level directory. This one is simple. Here is my&nbsp;solution:</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n"><span class="caps">DIRECTORY</span></span><span class="p">)</span> 
-<span class="c">#Replace <span class="caps">DIRECTORY</span> with your required directory</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span> 
+<span class="c1">#Replace DIRECTORY with your required directory</span>
 <span class="n">num_files</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">files</span><span class="p">())</span>
 
 <span class="k">print</span> <span class="n">num_files</span>
@@ -144,9 +144,9 @@ The latest release is always updated to the Python Package Index. The source cod
 
 
 <p>In this script we first of all imported the path module. Then we set the num_file variable to 0. This variable is going to keep count for the number of files in our directory. Then we call the path function with a directory name. Firthermore we iterate over the files present in the root of our directory and increment the num_files variable. Finally we print the value of num_files variable. Here is a litle bit modified version of this script which outputs the number of subdirectories present in the root of our&nbsp;directory.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n"><span class="caps">DIRECTORY</span></span><span class="p">)</span> 
-<span class="c">#Replace <span class="caps">DIRECTORY</span> with your required directory</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span> 
+<span class="c1">#Replace DIRECTORY with your required directory</span>
 <span class="n">num_dirs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">dirs</span><span class="p">())</span>
 
 <span class="k">print</span> <span class="n">num_dirs</span>
@@ -155,12 +155,12 @@ The latest release is always updated to the Python Package Index. The source cod
 
 <h2 id="finding-the-number-of-files-recursively-in-a-directory">Finding the number of files recursively in a&nbsp;directory:</h2>
 <p>That was easy! Wasn’t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&nbsp;Python.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="n">file_count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">dir_count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n"><span class="caps">DIRECTORY</span></span><span class="p">)</span>
-<span class="c">#Replace <span class="caps">DIRECTORY</span> with your required directory</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
+<span class="c1">#Replace DIRECTORY with your required directory</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">walk</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">isfile</span><span class="p">():</span>
         <span class="n">file_count</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -175,7 +175,7 @@ The latest release is always updated to the Python Package Index. The source cod
 <p>print &#8220;Total number of files == {0}&#8221;.format(file_count)
 print &#8220;Total number of directories == {0}&#8221;.format(dir_count)
 That was again very easy. Now what if we want to pretty print the directory names? I know there are some terminal one-liners but here we are talking about Python only. Lets see how we can achieve&nbsp;that.</p>
-<div class="highlight"><pre>files_loc = {}
+<div class="highlight"><pre><span></span>files_loc = {}
 file_count = 0
 dir_count = 0
 total = 0
@@ -206,7 +206,7 @@ for i in files_loc:
 <h2 id="deleting-a-specific-file-from-a-directory">Deleting a specific file from a&nbsp;directory:</h2>
 <p>So lets suppose we have a file called this_file_sucks.py. Now how do we delete it. Lets make this seranio more real by saying that we do not know in which directory it is placed. Its simple to solve this problem as well. Just go to the top level directory and execute this&nbsp;script:</p>
 <p>from path import path
-d =&nbsp;path(<span class="caps">DIRECTORY</span>)</p>
+d = path(<span class="caps">DIRECTORY</span>)</p>
 <h1 id="replace-directory-with-your-desired-directory">replace directory with your desired&nbsp;directory</h1>
 <p>for i in d.walk():
     if i.isfile():
@@ -215,12 +215,12 @@ d =&nbsp;path(<span class="caps">DIRECTORY</span>)</p>
 In the above script I did not implement any logging and error handling. That is left as an exercise for the&nbsp;reader.</p>
 <h2 id="deleting-files-based-on-their-extension">Deleting files based on their&nbsp;extension</h2>
 <p>Just suppose you want to remove all the ‘.pyc’ files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in&nbsp;path.py.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n"><span class="caps">DIRECTORY</span></span><span class="p">)</span>
-<span class="n">files</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">walkfiles</span><span class="p">(</span><span class="s">&quot;*.pyc&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">walkfiles</span><span class="p">(</span><span class="s2">&quot;*.pyc&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
     <span class="nb">file</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
-    <span class="k">print</span> <span class="s">&quot;Removed {} file&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s2">&quot;Removed {} file&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
 <span class="n">This</span> <span class="n">will</span> <span class="n">also</span> <span class="k">print</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">file</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">deleted</span><span class="o">.</span>
 </pre></div>
 
@@ -229,7 +229,7 @@ In the above script I did not implement any logging and error handling. That is 
 <p>So another interesting scenario. What if we want to delete those files which exceed 5Mb&nbsp;size?</p>
 <p><code>NOTE:</code> There is a difference between Mb and <span class="caps">MB</span>. I will be covering Mb here. 
 Is it possible with path.py? Yes it is! So here is a script which does this&nbsp;work:</p>
-<div class="highlight"><pre>d = path(&#39;./&#39;)
+<div class="highlight"><pre><span></span>d = path(&#39;./&#39;)
 del_size = 4522420
 for i in d.walk():
     if i.isfile():
@@ -243,15 +243,15 @@ for i in d.walk():
 <p>So we saw how we can remove files based on their&nbsp;size.</p>
 <h2 id="deleting-files-based-on-their-last-access-time">Deleting files based on their last access&nbsp;time</h2>
 <p>In this part we will take a look on how to delete files based on their last access time. I have written the code below to achieve this target. Just change the number of days to anything you like. This script will remove the files which were last modified before the <span class="caps">DAYS</span>&nbsp;variable.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
-<span class="c">#Change the <span class="caps">DAYS</span> to your liking</span>
-<span class="n"><span class="caps">DAYS</span></span> <span class="o">=</span> <span class="mi">6</span>
+<span class="c1">#Change the DAYS to your liking</span>
+<span class="n">DAYS</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">removed</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n"><span class="caps">DIRECTORY</span></span><span class="p">)</span>
-<span class="c">#Replace <span class="caps">DIRECTORY</span> with your required directory</span>
-<span class="n">time_in_secs</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="n"><span class="caps">DAYS</span></span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
+<span class="c1">#Replace DIRECTORY with your required directory</span>
+<span class="n">time_in_secs</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="n">DAYS</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">walk</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">isfile</span><span class="p">():</span>

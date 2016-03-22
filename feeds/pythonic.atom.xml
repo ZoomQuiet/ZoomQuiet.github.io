@@ -11,7 +11,7 @@
 &lt;/ul&gt;
 &lt;p&gt;At the end of my college career (1999ish) I consciously looked for a new home. I flirted with Perl, C, but knew they weren’t for me. Somewhere along the way I came upon Python, and it was good enough that I didn’t look for anything better. I can’t say I fell in love with Python like I had with Scheme and Smalltalk — Scheme was like an opening up of the world after going far beyond what anyone should ask of &lt;span class="caps"&gt;GW&lt;/span&gt;-&lt;span class="caps"&gt;BASIC&lt;/span&gt;, and Squeak/Smalltalk was a deep mysterious world, like coming upon the ruins of an ancient and advanced civilization. Python in comparison was practical — but I wasn’t in the mood at that time to discover, I wanted to&amp;nbsp;build.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/GW-BASIC"&gt;&lt;span class="caps"&gt;GW&lt;/span&gt; -&amp;nbsp;&lt;span class="caps"&gt;BASIC&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/GW-BASIC"&gt;&lt;span class="caps"&gt;GW&lt;/span&gt; - &lt;span class="caps"&gt;BASIC&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;And I built a lot of things in Python. I was doing workaday web programming and my enthusiasm went more towards building tools to build stuff than in the building itself. I did build some cool products in those days, not just libraries, but for some reason it’s only the smaller units that I was able to push out. And I found a community in&amp;nbsp;Python.&lt;/p&gt;
 &lt;ul&gt;
@@ -58,7 +58,7 @@
 &lt;p&gt;Sometimes when I’m feeling particularly excited about an idea, like really excited, I have to take a break. I need to calm down. Try to wrap my head around the ideas, because I know if I push forward directly that I’ll just muddle things up and feel disappointed. No, I don’t know that is true: maybe I don’t want to have to confront, in that moment, that the idea is not as cool as I think it is, or as possible as I think it is. But often I do step back into the problem, with ideas that are more mature for having thought more deeply about them. In a sense I think creating tools and libraries was a similar process: I felt too excited about creating something great, because I worried I’d muddle everything up, or afraid I just couldn’t pull it off, and so I stepped away and would work on&amp;nbsp;tools.&lt;/p&gt;
 &lt;p&gt;I always directed my attention to the web, even if I got bogged down in the server. Somehow I skipped native GUIs, even as a user. But pure data processing without consideration for what you do with the data felt unexciting. And ops — that’s just the worst. I was, and am, a true believer in Free Software; and I was, and am, a true believer in the web. That is, I don’t see either as simply a means to an ends. But not for the same reasons, and I can believe in a web that isn’t open source, and open source that isn’t for the web. And yet writing it down I realize I don’t care about open source that isn’t for the&amp;nbsp;web.&lt;/p&gt;
 &lt;p&gt;When I stepped back Python no longer seemed relevant to the web, at least not the part of the web that interested me. The tools I had built were no longer relevant either, they were not the tools with which I could realize my ambitions. The database-backed website, or the dynamic-&lt;span class="caps"&gt;HTTP&lt;/span&gt;-based web application, templates and deployments, anything you’d call “&lt;span class="caps"&gt;REST&lt;/span&gt;” — none of it seemed like the future, and whatever this vague thing was that I’d been looking for, I wasn’t going to find it&amp;nbsp;there.&lt;/p&gt;
-&lt;p&gt;This wasn’t an actual revelation, I’m constructing it in retrospect. If you’d asked me I would have agreed with this notion even years earlier, and it’s not like I came up with some unique idea, if anything I would call it self-evident, don’t we all know this is where the world is going? And so I started to look towards Javascript and the browser and the&amp;nbsp;&lt;span class="caps"&gt;DOM&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;This wasn’t an actual revelation, I’m constructing it in retrospect. If you’d asked me I would have agreed with this notion even years earlier, and it’s not like I came up with some unique idea, if anything I would call it self-evident, don’t we all know this is where the world is going? And so I started to look towards Javascript and the browser and the &lt;span class="caps"&gt;DOM&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Somewhat before this I also joined Mozilla. But it would be backwards to say that Mozilla induced this change in perspective, that it tempted me away from Python. In fact I would have had a much easier time of it if I had just stuck with doing Python backend stuff at&amp;nbsp;Mozilla.&lt;/p&gt;
 &lt;p&gt;The last few years of transition have been a struggle. With Python and the server I knew what I was doing. I was good at it, I felt competent. I could construct an opinion with confidence about all kinds of design questions. I was respected and my opinion would be listened to. I’d put in my 10,000 hours, I had achieved&amp;nbsp;mastery.&lt;/p&gt;
 &lt;p&gt;Moving to Javascript none of this was true, and most of it still isn’t true. It might be easier to pull off this change if I was doing web development, surrounded with people making similar transitions, a little fish in the little pond of whatever group I was working with. But Mozilla is not that kind of environment. Which is okay — if I had felt confident it would only be because there was no one to correct&amp;nbsp;me.&lt;/p&gt;
@@ -83,12 +83,12 @@
 &lt;/ul&gt;</summary><category term="Weekly"></category><category term="Zh"></category></entry><entry><title>如何将 ipynb 发布到 blog 中?</title><link href="http://blog.zoomquiet.io/141127-ipynb-into-blog.html" rel="alternate"></link><updated>2014-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-27:141127-ipynb-into-blog.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html"&gt;prooffreader plus: How to quickly turn an IPython notebook into a blog&amp;nbsp;post&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;IPython notebooks are great for many things, but they&amp;#8217;re a little awkward to embed in blog post platforms like Blogger, Wordpress, etc. When the nbconvert feature was a standalone command-line tool, there was a blog export template, but that seems to have disappeared now that nbconvert has been folded within&amp;nbsp;IPython.&lt;/p&gt;
 &lt;p&gt;Out of the box, nbconvert just has two html export&amp;nbsp;options:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;--html
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;--html
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;which includes a lot of &lt;span class="caps"&gt;CSS&lt;/span&gt; that interferes with a blog&amp;#8217;s &lt;span class="caps"&gt;CSS&lt;/span&gt;,&amp;nbsp;and:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;--html --template basic
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;--html --template basic
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -99,34 +99,34 @@
 &lt;li&gt;the &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html"&gt;blog version&lt;/a&gt; after applying this&amp;nbsp;stylesheet.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note that, for aesthetic reasons, I removed all&amp;nbsp;the&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;In [1]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;In [1]
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;-style tags because of the narrow columns on this blog. Your mileage may&amp;nbsp;vary.&lt;/p&gt;
-&lt;h2 id="1-convert-ipynb-notebook-to-html"&gt;1. Convert .ipynb notebook to&amp;nbsp;&lt;span class="caps"&gt;HTML&lt;/span&gt;&lt;/h2&gt;
+&lt;h2 id="1-convert-ipynb-notebook-to-html"&gt;1. Convert .ipynb notebook to &lt;span class="caps"&gt;HTML&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;In the terminal, navigate to the folder containing the .ipynb file and&amp;nbsp;type:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;ipython nbconvert --to html --template basic filename.ipynb
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ipython nbconvert --to html --template basic filename.ipynb
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2 id="2-paste-html-in-blog"&gt;2. Paste &lt;span class="caps"&gt;HTML&lt;/span&gt; in&amp;nbsp;blog&lt;/h2&gt;
 &lt;p&gt;Note: if you&amp;#8217;re using the Blogger platform, never switch back to the Compose interface after you use the &lt;span class="caps"&gt;HTML&lt;/span&gt; interface, it changes all your&amp;nbsp;tags.&lt;/p&gt;
-&lt;h2 id="3-add-css-to-blog-html"&gt;3. Add &lt;span class="caps"&gt;CSS&lt;/span&gt; to blog&amp;nbsp;&lt;span class="caps"&gt;HTML&lt;/span&gt;&lt;/h2&gt;
+&lt;h2 id="3-add-css-to-blog-html"&gt;3. Add &lt;span class="caps"&gt;CSS&lt;/span&gt; to blog &lt;span class="caps"&gt;HTML&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;This seems to reproduce the native syntax highlighting of&amp;nbsp;IPython.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;style&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;style&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
 .highlight{background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:0em .5em;border-radius: 4px;}
 .k{color: #338822; font-weight: bold;}
 .kn{color: #338822; font-weight: bold;}
 .mi{color: #000000;}
 .o{color: #000000;}
-.ow{color: #&lt;span class="caps"&gt;BA22FF&lt;/span&gt;;  font-weight: bold;}
+.ow{color: #BA22FF;  font-weight: bold;}
 .nb{color: #338822;}
 .n{color: #000000;}
 .s{color: #cc2222;}
 .se{color: #cc2222; font-weight: bold;}
 .si{color: #C06688; font-weight: bold;}
-.nn{color: #&lt;span class="caps"&gt;4D00FF&lt;/span&gt;; font-weight: bold;}
+.nn{color: #4D00FF; font-weight: bold;}
 &lt;span class="nt"&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -146,24 +146,24 @@
 &lt;h2 id="1-python-3-style-printing-in-python-2"&gt;1. Python 3-style printing in Python&amp;nbsp;2&lt;/h2&gt;
 &lt;p&gt;One of the things that kept me from concentrating on Python was this whole version 2 - version 3 debacle. Finally I went with Python 2 because all the libraries I wanted were not 3-compatible, and I figured if I needed to, I would laboriously adjust my code&amp;nbsp;later. &lt;/p&gt;
 &lt;p&gt;But really, the biggest differences in everyday programming are printing and division, and now I just import from future. Now that almost all the libraries I use heavily are v3-compliant, I&amp;#8217;ll make the switch&amp;nbsp;soon.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mynumber&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;mynumber&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Python 2:&amp;quot;&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;The number is &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mynumber&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Python 2:&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;The number is &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mynumber&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;mynumber&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;mynumber&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;print_function&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;division&lt;/span&gt;
 
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Python 3:&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;The number is {}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mynumber&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mynumber&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;Python 3:&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The number is {}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mynumber&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mynumber&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mynumber&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;Python 2:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Python 2:
 The number is 5
 2 2
 
@@ -174,8 +174,8 @@ The number is 5
 
 
 &lt;p&gt;Oh, and here&amp;#8217;s an easter egg for C&amp;nbsp;programmers:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;braces&lt;/span&gt;
-  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;ipython-input-3-2aebb3fc8ecf&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;braces&lt;/span&gt;
+  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;lt;ipython-input-3-2aebb3fc8ecf&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
     &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;braces&lt;/span&gt;
 &lt;span class="ne"&gt;SyntaxError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;chance&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -183,14 +183,14 @@ The number is 5
 
 &lt;h2 id="2-enumeratelist"&gt;2.&amp;nbsp;enumerate(list)&lt;/h2&gt;
 &lt;p&gt;It might seem obvious that you should be able to iterate over a list and its index at the same time, but I used counter variables or slices for an embarrassingly long&amp;nbsp;time.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;mylist = [&amp;quot;It&amp;#39;s&amp;quot;, &amp;#39;only&amp;#39;, &amp;#39;a&amp;#39;, &amp;#39;model&amp;#39;]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mylist = [&amp;quot;It&amp;#39;s&amp;quot;, &amp;#39;only&amp;#39;, &amp;#39;a&amp;#39;, &amp;#39;model&amp;#39;]
 
 for index, item in enumerate(mylist):
     print(index, item)
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;0 It&amp;#39;s
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;0 It&amp;#39;s
 1 only
 2 a
 3 model
@@ -199,14 +199,14 @@ for index, item in enumerate(mylist):
 
 &lt;h2 id="3-chained-comparison-operators"&gt;3. Chained comparison&amp;nbsp;operators&lt;/h2&gt;
 &lt;p&gt;Because I was so used to statically typed languages (where this idiom would be ambiguous), it never occurred to me to put two operators in the same expression. In many languages, 4 &amp;gt; 3 &amp;gt; 2 would return as False, because (4 &amp;gt; 3) would be evaluated as a boolean, and then True &amp;gt; 2 would be evaluated as&amp;nbsp;False.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;mynumber = 3
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mynumber = 3
 
 if 4 &amp;gt; mynumber &amp;gt; 2:
     print(&amp;quot;Chained comparison operators work! \n&amp;quot; * 3)
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;Chained comparison operators work! 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Chained comparison operators work! 
 Chained comparison operators work! 
 Chained comparison operators work!
 &lt;/pre&gt;&lt;/div&gt;
@@ -214,7 +214,7 @@ Chained comparison operators work!
 
 &lt;h2 id="4-collectionscounter"&gt;4.&amp;nbsp;collections.Counter&lt;/h2&gt;
 &lt;p&gt;The collections library is, like, the best thing ever. Stackoverflow turned me on to ordered dicts early on, but I kept using a snippet to create dicts to count occurrences of results in my code. One of these days, I&amp;#8217;ll figure out a use for&amp;nbsp;collections.deque.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;collections&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Counter&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;collections&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Counter&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;randrange&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pprint&lt;/span&gt;
 &lt;span class="n"&gt;mycounter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -226,7 +226,7 @@ Chained comparison operators work!
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;0 10
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;0 10
 1 10
 2 13
 3 6
@@ -241,7 +241,7 @@ Chained comparison operators work!
 
 &lt;h2 id="5-dict-comprehensions"&gt;5. Dict&amp;nbsp;comprehensions&lt;/h2&gt;
 &lt;p&gt;A rite of passage for a Python programmer is understanding list comprehensions, but eventually I realized dict comprehensions are just as useful &amp;#8212; especially for reversing&amp;nbsp;dicts.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;my_phrase = [&amp;quot;No&amp;quot;, &amp;quot;one&amp;quot;, &amp;quot;expects&amp;quot;, &amp;quot;the&amp;quot;, &amp;quot;Spanish&amp;quot;, &amp;quot;Inquisition&amp;quot;]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;my_phrase = [&amp;quot;No&amp;quot;, &amp;quot;one&amp;quot;, &amp;quot;expects&amp;quot;, &amp;quot;the&amp;quot;, &amp;quot;Spanish&amp;quot;, &amp;quot;Inquisition&amp;quot;]
 my_dict = {key: value for value, key in enumerate(my_phrase)}
 print(my_dict)
 reversed_dict = {value: key for key, value in my_dict.items()}
@@ -249,7 +249,7 @@ print(reversed_dict)
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;{&amp;#39;Inquisition&amp;#39;: 5, &amp;#39;No&amp;#39;: 0, &amp;#39;expects&amp;#39;: 2, &amp;#39;one&amp;#39;: 1, &amp;#39;Spanish&amp;#39;: 4, &amp;#39;the&amp;#39;: 3}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{&amp;#39;Inquisition&amp;#39;: 5, &amp;#39;No&amp;#39;: 0, &amp;#39;expects&amp;#39;: 2, &amp;#39;one&amp;#39;: 1, &amp;#39;Spanish&amp;#39;: 4, &amp;#39;the&amp;#39;: 3}
 {0: &amp;#39;No&amp;#39;, 1: &amp;#39;one&amp;#39;, 2: &amp;#39;expects&amp;#39;, 3: &amp;#39;the&amp;#39;, 4: &amp;#39;Spanish&amp;#39;, 5: &amp;#39;Inquisition&amp;#39;}
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -258,16 +258,16 @@ print(reversed_dict)
 &lt;p&gt;I used to use the os library exclusively to manipulate files; now I can even programmatically call complex command-line tools like ffmpeg for video&amp;nbsp;editing&lt;/p&gt;
 &lt;p&gt;(And yes, I use Windows, so do all of my clients. But I have the good grace to be embarrassed about&amp;nbsp;it!)&lt;/p&gt;
 &lt;p&gt;Note that the particular subprocess I picked would be much better done with the os library; I just wanted a command everyone would be familiar with. And in general, shell=True is a &lt;span class="caps"&gt;VERY&lt;/span&gt; bad idea, I put it here so that the command output would appear in the IPython notebook cell. Don&amp;#8217;t try this at home,&amp;nbsp;kids!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt;
-&lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;check_output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;dir&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt;
+&lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;check_output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dir&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
- &lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;drive&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;OS&lt;/span&gt;&lt;/span&gt;
- &lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;Serial&lt;/span&gt; &lt;span class="n"&gt;Number&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;REDACTED&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
- &lt;span class="n"&gt;Directory&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;\&lt;span class="n"&gt;Users&lt;/span&gt;\&lt;span class="n"&gt;David&lt;/span&gt;\&lt;span class="n"&gt;Documents&lt;/span&gt;\&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;REDACTED&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+ &lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;drive&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;OS&lt;/span&gt;
+ &lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;Serial&lt;/span&gt; &lt;span class="n"&gt;Number&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;REDACTED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+ &lt;span class="n"&gt;Directory&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;\&lt;span class="n"&gt;Users&lt;/span&gt;\&lt;span class="n"&gt;David&lt;/span&gt;\&lt;span class="n"&gt;Documents&lt;/span&gt;\&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;REDACTED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;2014-11-26  06:04 AM    &amp;lt;DIR&amp;gt;          .
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;2014-11-26  06:04 AM    &amp;lt;DIR&amp;gt;          .
 2014-11-26  06:04 AM    &amp;lt;DIR&amp;gt;          ..
 2014-11-23  11:47 AM    &amp;lt;DIR&amp;gt;          .git
 2014-11-26  06:06 AM    &amp;lt;DIR&amp;gt;          .ipynb_checkpoints
@@ -291,7 +291,7 @@ print(reversed_dict)
 
 &lt;h2 id="7-dict-get-and-iteritems-methods"&gt;7. dict .get() and .iteritems()&amp;nbsp;methods&lt;/h2&gt;
 &lt;p&gt;Having a default value when a key does not exist has all kinds of uses, and just like enumerate() for lists, you can iterate over key, value tuples in&amp;nbsp;dicts&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;my_dict = {&amp;#39;name&amp;#39;: &amp;#39;Lancelot&amp;#39;, &amp;#39;quest&amp;#39;: &amp;#39;Holy Grail&amp;#39;, &amp;#39;favourite_color&amp;#39;: &amp;#39;blue&amp;#39;}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;my_dict = {&amp;#39;name&amp;#39;: &amp;#39;Lancelot&amp;#39;, &amp;#39;quest&amp;#39;: &amp;#39;Holy Grail&amp;#39;, &amp;#39;favourite_color&amp;#39;: &amp;#39;blue&amp;#39;}
 
 print(my_dict.get(&amp;#39;airspeed velocity of an unladen swallow&amp;#39;, &amp;#39;African or European?\n&amp;#39;))
 
@@ -300,7 +300,7 @@ for key, value in my_dict.iteritems():
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;African or European?
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;African or European?
 
 quest: Holy Grail
 name: Lancelot
@@ -310,7 +310,7 @@ favourite_color: blue
 
 &lt;h2 id="8-tuple-unpacking-for-switching-variables"&gt;8. Tuple unpacking for switching&amp;nbsp;variables&lt;/h2&gt;
 &lt;p&gt;Do you know how many times I had to use a third, temporary dummy variable in &lt;span class="caps"&gt;VB&lt;/span&gt;? c = a; a = b; b =&amp;nbsp;c?&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;a = &amp;#39;Spam&amp;#39;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;a = &amp;#39;Spam&amp;#39;
 b = &amp;#39;Eggs&amp;#39;
 
 print(a, b)
@@ -321,21 +321,21 @@ print(a, b)
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;Spam Eggs
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Spam Eggs
 Eggs Spam
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2 id="9-introspection-tools"&gt;9. Introspection&amp;nbsp;tools&lt;/h2&gt;
 &lt;p&gt;I was aware of dir(), but I had assumed help() would do the same thing as IPython&amp;#8217;s ? magic command. It does way more. (This post has been updated after some great advice from reddit&amp;#8217;s /r/python which, indeed, I wish I&amp;#8217;d known about&amp;nbsp;before!)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;my_dict = {&amp;#39;That&amp;#39;: &amp;#39;an ex-parrot!&amp;#39;}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;my_dict = {&amp;#39;That&amp;#39;: &amp;#39;an ex-parrot!&amp;#39;}
 
 help(my_dict)
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Help on dict&amp;nbsp;object:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;dict&lt;/span&gt;(&lt;span class="n"&gt;object&lt;/span&gt;)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;dict&lt;/span&gt;(&lt;span class="n"&gt;object&lt;/span&gt;)
  |  &lt;span class="n"&gt;dict&lt;/span&gt;() -&amp;gt; &lt;span class="nb"&gt;new&lt;/span&gt; &lt;span class="n"&gt;empty&lt;/span&gt; &lt;span class="n"&gt;dictionary&lt;/span&gt;
  |  &lt;span class="n"&gt;dict&lt;/span&gt;(&lt;span class="n"&gt;mapping&lt;/span&gt;) -&amp;gt; &lt;span class="nb"&gt;new&lt;/span&gt; &lt;span class="n"&gt;dictionary&lt;/span&gt; &lt;span class="n"&gt;initialized&lt;/span&gt; &lt;span class="nb"&gt;from&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;mapping&lt;/span&gt; &lt;span class="n"&gt;object&amp;#39;s&lt;/span&gt;
  |      (&lt;span class="nb"&gt;key&lt;/span&gt;, &lt;span class="nb"&gt;value&lt;/span&gt;) &lt;span class="nb"&gt;pairs&lt;/span&gt;
@@ -361,7 +361,7 @@ help(my_dict)
  |      &lt;span class="o"&gt;x&lt;/span&gt;.&lt;span class="n"&gt;__eq__&lt;/span&gt;(&lt;span class="n"&gt;y&lt;/span&gt;) &amp;lt;==&amp;gt; &lt;span class="o"&gt;x==&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
  |  
 
-[&lt;span class="n"&gt;&lt;span class="caps"&gt;TRUNCATED&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;FOR&lt;/span&gt;&lt;/span&gt; &lt;span class="n"&gt;&lt;span class="caps"&gt;SPACE&lt;/span&gt;&lt;/span&gt;]
+[&lt;span class="n"&gt;TRUNCATED&lt;/span&gt; &lt;span class="n"&gt;FOR&lt;/span&gt; &lt;span class="n"&gt;SPACE&lt;/span&gt;]
 
  |  
  |  &lt;span class="n"&gt;update&lt;/span&gt;(...)
@@ -397,7 +397,7 @@ help(my_dict)
 is the style guide for Python code. Among other things, it directs that lines not be over 80 characters long and that indenting by consistent over line&amp;nbsp;breaks.&lt;/p&gt;
 &lt;p&gt;This can be accomplished with a combination of backslashes \; parentheses () with commas , ; and addition operators +; but every one of these solutions is awkward for multiline strings. There is a multiline string signifier, the triple quote, but it does not allow consistent indenting over line&amp;nbsp;breaks. &lt;/p&gt;
 &lt;p&gt;There is a solution: parentheses without commas. I don&amp;#8217;t know why this works, but I&amp;#8217;m glad it&amp;nbsp;does.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;my_long_text = (&amp;quot;We are no longer the knights who say Ni! &amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;my_long_text = (&amp;quot;We are no longer the knights who say Ni! &amp;quot;
                 &amp;quot;We are now the knights who say ekki-ekki-&amp;quot;
                 &amp;quot;ekki-p&amp;#39;tang-zoom-boing-z&amp;#39;nourrwringmm!&amp;quot;)
 print(my_long_text)
@@ -545,40 +545,40 @@ Nick Coghlan
 &lt;p&gt;While many of the issues they encountered were inherent in the complexity of teaching programming, a few seemed like things that could be avoided.&lt;/p&gt;
 &lt;h2 id="getting-floating-point-results-from-integer-division"&gt;Getting floating point results from integer division&lt;/h2&gt;
 &lt;p&gt;In Python 2, integer division copies C in truncating the answer by default:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python -c &lt;span class="s2"&gt;"print(3/4)"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python -c &lt;span class="s2"&gt;"print(3/4)"&lt;/span&gt;
 0
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Promoting to floating point requires type coercion, a command line flag or a future import:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print(float(3)/4)"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s2"&gt;"print(float(3)/4)"&lt;/span&gt;
 &lt;span class="mf"&gt;0.75&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Qnew&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"print(3/4)"&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Qnew&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s2"&gt;"print(3/4)"&lt;/span&gt;
 &lt;span class="mf"&gt;0.75&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s"&gt;"from __future__ import division; print(3/4)"&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s2"&gt;"from __future__ import division; print(3/4)"&lt;/span&gt;
 &lt;span class="mf"&gt;0.75&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Python 3 just does the right thing by default, so one way to avoid the problem entirely is to teach Python 3 instead of Python 2:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python3 -c &lt;span class="s2"&gt;"print(3/4)"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python3 -c &lt;span class="s2"&gt;"print(3/4)"&lt;/span&gt;
 0.75
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;(In both Python 2 and 3, the &lt;code&gt;//&lt;/code&gt; floor division operator explicitly requests truncating division when it is desired)&lt;/p&gt;
 &lt;h2 id="common-python-23-syntax-for-printing-values"&gt;Common Python 2/3 syntax for printing values&lt;/h2&gt;
 &lt;p&gt;I’ve been using Python 2 and 3 in parallel for more than 8 years now (while Python 3.0 was released in 2008, the project started in earnest a couple of years earlier than that, while Python 2.5 was still in development).&lt;/p&gt;
 &lt;p&gt;One essential trick I have learned in order to make regularly switching back and forth feasible is to limit myself to the common print syntax that works the same in both versions: passing a single argument surrounded by parentheses.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python -c &lt;span class="s1"&gt;'print("Hello world!")'&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python -c &lt;span class="s1"&gt;'print("Hello world!")'&lt;/span&gt;
 Hello world!
-&lt;span class="nv"&gt;$ &lt;/span&gt;python3 -c &lt;span class="s1"&gt;'print("Hello world!")'&lt;/span&gt;
+$ python3 -c &lt;span class="s1"&gt;'print("Hello world!")'&lt;/span&gt;
 Hello world!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If I need to pass multiple arguments, I’ll use string formatting, rather than the implicit concatenation feature.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python -c &lt;span class="s1"&gt;'print("{} {}{}".format("Hello", "world", "!"))'&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python -c &lt;span class="s1"&gt;'print("{} {}{}".format("Hello", "world", "!"))'&lt;/span&gt;
 Hello world!
-&lt;span class="nv"&gt;$ &lt;/span&gt;python3 -c &lt;span class="s1"&gt;'print("{} {}{}".format("Hello", "world", "!"))'&lt;/span&gt;
+$ python3 -c &lt;span class="s1"&gt;'print("{} {}{}".format("Hello", "world", "!"))'&lt;/span&gt;
 Hello world!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Rather than doing this, the Software Carpentry material that was used at the bootcamp I attended used the legacy Python 2 only &lt;code&gt;print&lt;/code&gt; syntax extensively, causing examples that otherwise would have worked fine in either version to fail for students that happened to be running Python 3. Adopting the shared syntax for printing values could be enough to make the course largely version independent.&lt;/p&gt;
 &lt;h2 id="distinguishing-between-returning-and-printing-values"&gt;Distinguishing between returning and printing values&lt;/h2&gt;
 &lt;p&gt;One problem noted both at the bootcamp and by presenters at PyCon Australia was the challenge of teaching students the difference between printing and returning values. The problem is the “Print” part of the Read-Eval-Print-Loop provided by Python’s interactive interpreter:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;&amp;gt; def print_arg(x):
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; def print_arg(x):
 ...     print(x)
 ...
 &amp;gt;&amp;gt;&amp;gt; def return_arg(x):
@@ -590,16 +590,16 @@ Hello world!
 10
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;There’s no obvious difference in output at the interactive prompt, especially for types like numbers where the results of &lt;code&gt;str&lt;/code&gt; and &lt;code&gt;repr&lt;/code&gt; are the same. Even when they’re different, those differences may not be obvious to a student:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;&amp;gt; print_arg("Hello world")
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; print_arg("Hello world")
 Hello world
 &amp;gt;&amp;gt;&amp;gt; return_arg("Hello world")
 'Hello world'
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;While I don’t have a definitive answer for this one, an experiment that seems worth trying to me is to teach students how to replace &lt;code&gt;sys.displayhook&lt;/code&gt;. 
 In particular, I suggest demonstrating the following change, and seeing if it helps explain the difference between printing output for display to the user and returning values for further processing:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;new_displayhook&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;new_displayhook&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"-&amp;gt; {!r}"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"-&amp;gt; {!r}"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;displayhook&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new_displayhook&lt;/span&gt;
@@ -612,14 +612,14 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;h2 id="addendum-ipython-including-ipython-notebook"&gt;Addendum: IPython (including IPython Notebook)&lt;/h2&gt;
 &lt;p&gt;The initial examples above focused on the standard CPython runtime, include the default interactive interpreter. The IPython interactive interpreter, including the IPython Notebook, has a couple of interesting differences in behaviour that are relevant to the above comments.&lt;/p&gt;
 &lt;p&gt;Firstly, it does display return values and printed values differently, prefacing results with an output reference number:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;In [1]: print 10
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;In [1]: print 10
 10
 
 In [2]: 10
 Out[2]: 10
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Secondly, it has an optional “autocall” feature that allows a user to tell IPython to automatically add the missing parentheses to a function call if the user leaves them out:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;ipython3 --autocall&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; -c &lt;span class="s2"&gt;"print 10"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ipython3 --autocall&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; -c &lt;span class="s2"&gt;"print 10"&lt;/span&gt;
 -&amp;gt; print&lt;span class="o"&gt;(&lt;/span&gt;10&lt;span class="o"&gt;)&lt;/span&gt;
 10
 &lt;/pre&gt;&lt;/div&gt;
@@ -677,73 +677,73 @@ Out[2]: 10
 &lt;p&gt;总之就是要加速,无论本地/远程&lt;/p&gt;
 &lt;h3 id="_4"&gt;数据结构&lt;/h3&gt;
 &lt;p&gt;为了大家平滑的理解折腾之处,先简要说明一下 ScrapBook 的数据结构:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;XX仓库/     对应 Multi-ScrapBook 开启后,不同的Book
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;XX仓库/     对应 Multi-ScrapBook 开启后,不同的Book
   +- data   实际本地网页存放入口, 类似 20050205102119 的子目录
   +- tree   导出目录树后的 html 入口
   +- ...
   `- scrapbook.rdf 插件界面使用的 xml 数据仓库
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;scrapbook.rdf 的关键数据约定&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?xml version="1.0"?&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt; &lt;span class="na"&gt;xmlns:&lt;span class="caps"&gt;NS2&lt;/span&gt;=&lt;/span&gt;&lt;span class="s"&gt;"http://amb.vis.ne.jp/mozilla/scrapbook-rdf#"&lt;/span&gt;
-         &lt;span class="na"&gt;xmlns:&lt;span class="caps"&gt;NC&lt;/span&gt;=&lt;/span&gt;&lt;span class="s"&gt;"http://home.netscape.com/&lt;span class="caps"&gt;NC&lt;/span&gt;-rdf#"&lt;/span&gt;
-         &lt;span class="na"&gt;xmlns:&lt;span class="caps"&gt;RDF&lt;/span&gt;=&lt;/span&gt;&lt;span class="s"&gt;"http://www.w3.org/1999/02/22-rdf-syntax-ns#"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?xml version="1.0"?&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;RDF:RDF&lt;/span&gt; &lt;span class="na"&gt;xmlns:NS2=&lt;/span&gt;&lt;span class="s"&gt;"http://amb.vis.ne.jp/mozilla/scrapbook-rdf#"&lt;/span&gt;
+         &lt;span class="na"&gt;xmlns:NC=&lt;/span&gt;&lt;span class="s"&gt;"http://home.netscape.com/NC-rdf#"&lt;/span&gt;
+         &lt;span class="na"&gt;xmlns:RDF=&lt;/span&gt;&lt;span class="s"&gt;"http://www.w3.org/1999/02/22-rdf-syntax-ns#"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
   ...
   主体内容
-&lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/RDF:RDF&amp;gt;&lt;/span&gt;
 
 根列表:
-&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:root"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;RDF:Seq&lt;/span&gt; &lt;span class="na"&gt;RDF:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:root"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
     %(rdf_li)s
-  &lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/RDF:Seq&amp;gt;&lt;/span&gt;
 
 目录容器:
-&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;RDF:Seq&lt;/span&gt; &lt;span class="na"&gt;RDF:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
     %(rdf_li)s
-  &lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/RDF:Seq&amp;gt;&lt;/span&gt;
 
 目录节点条目:
-&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:li&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;RDF:li&lt;/span&gt; &lt;span class="na"&gt;RDF:resource=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
 
 目录节点:
-&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:type=&lt;/span&gt;&lt;span class="s"&gt;"folder"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:title=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_title)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:chars=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:icon=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:source=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:comment=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;RDF:Description&lt;/span&gt; &lt;span class="na"&gt;RDF:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:type=&lt;/span&gt;&lt;span class="s"&gt;"folder"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:title=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_title)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:chars=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:icon=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:source=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:comment=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
 
 页面节点:
-&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:type=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_type)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:title=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_title)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:comment=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_comment)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:icon=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_icon)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:source=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_source)s"&lt;/span&gt; 
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:chars=&lt;/span&gt;&lt;span class="s"&gt;"&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;RDF:Description&lt;/span&gt; &lt;span class="na"&gt;RDF:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:type=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_type)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:title=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_title)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:comment=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_comment)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:icon=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_icon)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:source=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_source)s"&lt;/span&gt; 
+        &lt;span class="na"&gt;NS2:chars=&lt;/span&gt;&lt;span class="s"&gt;"UTF-8"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
 
 笔记节点:
-&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:type=&lt;/span&gt;&lt;span class="s"&gt;"note"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:title=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_title)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:chars=&lt;/span&gt;&lt;span class="s"&gt;"&lt;span class="caps"&gt;UTF&lt;/span&gt;-8"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:comment=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:icon=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:source=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;RDF:Description&lt;/span&gt; &lt;span class="na"&gt;RDF:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:type=&lt;/span&gt;&lt;span class="s"&gt;"note"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:title=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_title)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:chars=&lt;/span&gt;&lt;span class="s"&gt;"UTF-8"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:comment=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:icon=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:source=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
 
 分割线节点:
-&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:type=&lt;/span&gt;&lt;span class="s"&gt;"separator"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:title=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:chars=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:comment=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:icon=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
-        &lt;span class="na"&gt;&lt;span class="caps"&gt;NS2&lt;/span&gt;:source=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;NC:BookmarkSeparator&lt;/span&gt; &lt;span class="na"&gt;RDF:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:%(rdf_item)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:type=&lt;/span&gt;&lt;span class="s"&gt;"separator"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:id=&lt;/span&gt;&lt;span class="s"&gt;"%(rdf_id)s"&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:title=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:chars=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:comment=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:icon=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt;
+        &lt;span class="na"&gt;NS2:source=&lt;/span&gt;&lt;span class="s"&gt;""&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;以上 &lt;code&gt;%(rdf_id)s&lt;/code&gt; 之类是 Py 内置模板的语法,
 在 &lt;code&gt;scrapbook.rdf&lt;/code&gt; 实例中,都是形如: &lt;code&gt;20050205102119&lt;/code&gt;&lt;/p&gt;
@@ -751,24 +751,24 @@ Out[2]: 10
 &lt;p&gt;纪要一下折腾的过程中,要命的关键过程/代码&lt;/p&gt;
 &lt;h3 id="_6"&gt;清查&lt;/h3&gt;
 &lt;p&gt;一切开始之前,的体积:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;du -h * 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ du -h * 
 ...
 5.6G    ZqDevRel
 6.5G    ZqFLOSS
 3.7G    ZqSKM
 ...
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;ls ZqDevRel/data/ &lt;span class="p"&gt;|&lt;/span&gt; wc
+$ ls ZqDevRel/data/ &lt;span class="p"&gt;|&lt;/span&gt; wc
    &lt;span class="m"&gt;26214&lt;/span&gt;   &lt;span class="m"&gt;26214&lt;/span&gt;  393210
 
-&lt;span class="c"&gt;# 计划切分为&lt;/span&gt;
+&lt;span class="c1"&gt;# 计划切分为&lt;/span&gt;
   -&amp;gt; zqCoder 
   -&amp;gt; zqSMM
 
-&lt;span class="nv"&gt;$ &lt;/span&gt;ls ZqFLOSS/data/ &lt;span class="p"&gt;|&lt;/span&gt; wc
+$ ls ZqFLOSS/data/ &lt;span class="p"&gt;|&lt;/span&gt; wc
    &lt;span class="m"&gt;30767&lt;/span&gt;   &lt;span class="m"&gt;30767&lt;/span&gt;  461505
 
-&lt;span class="c"&gt;# 计划切分为&lt;/span&gt;
+&lt;span class="c1"&gt;# 计划切分为&lt;/span&gt;
   -&amp;gt; zqDevRes
   -&amp;gt; zqSCM   
   -&amp;gt; zqPythonic
@@ -778,7 +778,7 @@ Out[2]: 10
 &lt;p&gt;&lt;code&gt;pax&lt;/code&gt; 是个好工具,原先习惯性的用 &lt;code&gt;cp&lt;/code&gt; 那叫个慢!
 搜索才知道,大量小文件的迁移就应该用 &lt;code&gt;pax&lt;/code&gt;
 于是简单的起个背景周末跑吧….&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;du -hs *
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ du -hs *
 ...
 5.7G    ZqDevRel
   5.7G    zqCoder
@@ -797,7 +797,7 @@ Out[2]: 10
 &lt;p&gt;然后,逐一用 ScrapBook 加载新的目录&lt;/p&gt;
 &lt;h4 id="_7"&gt;手工删除目录树&lt;/h4&gt;
 &lt;p&gt;再对比几个仓库的体积:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;~/KuaiPan/zScrapBook
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~/KuaiPan/zScrapBook
 $ ls ZqFLOSS/data/ | wc -l
    30767
 
@@ -830,7 +830,7 @@ $ ls zqSCM/data/ | wc -l
 &lt;h3 id="_11"&gt;删除&lt;/h3&gt;
 &lt;h2 id="_12"&gt;回顾&lt;/h2&gt;
 &lt;p&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 在 FireFox 的确不给力哪…&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;du -hs *
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ du -hs *
 ...
 957M  ZqDevRel
 866M  ZqFLOSS
@@ -849,12 +849,12 @@ $ ls zqSCM/data/ | wc -l
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;为什么,在 700M 的 zqCoder 仓库中无法搜索,但是, 3.4G 的ZqSKM 中就可以?!&lt;/p&gt;
 &lt;p&gt;认真对比,从重建的空仓库的 .rdf 中,发现:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:search"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;RDF:Seq&lt;/span&gt; &lt;span class="na"&gt;RDF:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:search"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
 ....
-&lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/RDF:Seq&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这个节点中包含有意外的几万条记录!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;for seq in doc['RDF:RDF']['RDF:Seq']:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for seq in doc['RDF:RDF']['RDF:Seq']:
     if 'urn:scrapbook:search' == seq['@RDF:about']:
         seq.pop('RDF:li')
         break
@@ -863,7 +863,7 @@ $ ls zqSCM/data/ | wc -l
 &lt;h3 id="_13"&gt;数据新结构&lt;/h3&gt;
 &lt;h3 id="_14"&gt;功能开关&lt;/h3&gt;
 &lt;h2 id="_15"&gt;时间帐单&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;+ 3.5H 用pax 复制,手工清除多余树
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;+ 3.5H 用pax 复制,手工清除多余树
 + 1.5H 重新理解自个儿的脚本,加载自制数据结构到湿件
 + 1.0H 追加走查功能 
 + 2.0H 调试走查,优化输出,明确可清除无效节点的数量级
@@ -888,15 +888,15 @@ $ ls zqSCM/data/ | wc -l
 从 &lt;span class="caps"&gt;ROOT&lt;/span&gt; 引发的树中挂不上的&lt;/p&gt;
 &lt;h2 id="2h"&gt;+2H 实际清减&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://amoffat.github.io/sh/"&gt;sh 1.08 — sh v1.08 documentation&lt;/a&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sh&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;rm&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sh&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;rm&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"-Rfv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;del_dir&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"-Rfv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;del_dir&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;用 sh 删除目录&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    tree_nodes:  3574
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    tree_nodes:  3574
     exp_items:  4164
     dirs:  590
     DESC : 24190
@@ -911,18 +911,18 @@ $ ls reDevRel/data/ | wc -l
 &lt;p&gt;人肉来总是感觉不对,&lt;/p&gt;
 &lt;p&gt;尝试:&lt;/p&gt;
 &lt;h3 id="lxml"&gt;lxml&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;忒复杂!!!
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;忒复杂!!!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="untangle"&gt;untangle&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://github.com/stchris/untangle"&gt;stchris/untangle&lt;/a&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Seq&lt;/span&gt;         &lt;span class="mi"&gt;579&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;RDF&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Seq&lt;/span&gt;         &lt;span class="mi"&gt;579&lt;/span&gt;
 &lt;span class="n"&gt;RDF_Description&lt;/span&gt;     &lt;span class="mi"&gt;24190&lt;/span&gt;
-&lt;span class="n"&gt;&lt;span class="caps"&gt;NC&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;BookmarkSeparator&lt;/span&gt;    &lt;span class="mi"&gt;57&lt;/span&gt;
+&lt;span class="n"&gt;NC&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;BookmarkSeparator&lt;/span&gt;    &lt;span class="mi"&gt;57&lt;/span&gt;
 &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mode&lt;/span&gt; &lt;span class="s1"&gt;'wb'&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="mh"&gt;0x100666ed0&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
         &lt;span class="n"&gt;exp_level_idx&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="n"&gt;RUNed&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="mf"&gt;2263.57079&lt;/span&gt; &lt;span class="n"&gt;ms&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;快,但是,无法Dump,而且书写不直觉, 要将 “:” 变成 “_” obj.RDF_RDF.RDF_Description&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&amp;lt;open file '_chaos/scraotools_reDevRel.pkl', mode 'wb' at 0x100769ed0&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;open file '_chaos/scraotools_reDevRel.pkl', mode 'wb' at 0x100769ed0&amp;gt;
 Traceback (most recent call last):
   File "scraptools/zq_chk4scrap.py", line 457, in &amp;lt;module&amp;gt;
     RDFD = exp_level_idx(MYBOOK)
@@ -944,29 +944,30 @@ IndexError: Unknown key &amp;lt;__getstate__&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="xmltodict"&gt;xmltodict&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://github.com/martinblech/xmltodict"&gt;martinblech/xmltodict&lt;/a&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;[u'&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;']&lt;/span&gt;
-&lt;span class="err"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt;         &lt;span class="err"&gt;579&lt;/span&gt;
-&lt;span class="err"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description&lt;/span&gt;     &lt;span class="err"&gt;24190&lt;/span&gt;
-&lt;span class="err"&gt;&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator&lt;/span&gt;    &lt;span class="err"&gt;57&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[u'RDF:RDF']&lt;/span&gt;
+&lt;span class="err"&gt;RDF:Seq&lt;/span&gt;         &lt;span class="err"&gt;579&lt;/span&gt;
+&lt;span class="err"&gt;RDF:Description&lt;/span&gt;     &lt;span class="err"&gt;24190&lt;/span&gt;
+&lt;span class="err"&gt;NC:BookmarkSeparator&lt;/span&gt;    &lt;span class="err"&gt;57&lt;/span&gt;
         &lt;span class="err"&gt;exp_level_idx()&lt;/span&gt; &lt;span class="err"&gt;RUNed~&lt;/span&gt; &lt;span class="err"&gt;4997.31612&lt;/span&gt; &lt;span class="err"&gt;ms&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;慢,但是,能 dump 而且书写直觉 doc[‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’][‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq’]&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;[u'&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;']&lt;/span&gt;
-&lt;span class="err"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt;         &lt;span class="err"&gt;579&lt;/span&gt;
-&lt;span class="err"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description&lt;/span&gt;     &lt;span class="err"&gt;24190&lt;/span&gt;
-&lt;span class="err"&gt;&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator&lt;/span&gt;    &lt;span class="err"&gt;57&lt;/span&gt;
+&lt;p&gt;慢,但是,能 dump 而且书写直觉
+    doc[‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;’][‘&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq’]&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[u'RDF:RDF']&lt;/span&gt;
+&lt;span class="err"&gt;RDF:Seq&lt;/span&gt;         &lt;span class="err"&gt;579&lt;/span&gt;
+&lt;span class="err"&gt;RDF:Description&lt;/span&gt;     &lt;span class="err"&gt;24190&lt;/span&gt;
+&lt;span class="err"&gt;NC:BookmarkSeparator&lt;/span&gt;    &lt;span class="err"&gt;57&lt;/span&gt;
 &lt;span class="err"&gt;&amp;lt;open&lt;/span&gt; &lt;span class="err"&gt;file&lt;/span&gt; &lt;span class="err"&gt;'_chaos/scraotools_reDevRel.pkl',&lt;/span&gt; &lt;span class="err"&gt;mode&lt;/span&gt; &lt;span class="err"&gt;'wb'&lt;/span&gt; &lt;span class="err"&gt;at&lt;/span&gt; &lt;span class="err"&gt;0x10f26d420&amp;gt;&lt;/span&gt;
         &lt;span class="err"&gt;exp_level_idx()&lt;/span&gt; &lt;span class="err"&gt;RUNed~&lt;/span&gt; &lt;span class="err"&gt;16878.75390&lt;/span&gt; &lt;span class="err"&gt;ms&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;同时,能反写出&lt;span class="caps"&gt;XML&lt;/span&gt; 来!&lt;/p&gt;
 &lt;p&gt;主要问题是行为不统一!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:item20070113201921"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:li&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:item20070113201940"&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:li&lt;/span&gt; &lt;span class="na"&gt;&lt;span class="caps"&gt;RDF&lt;/span&gt;:resource=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:item20070113201941"&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;RDF:Seq&lt;/span&gt; &lt;span class="na"&gt;RDF:about=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:item20070113201921"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;RDF:li&lt;/span&gt; &lt;span class="na"&gt;RDF:resource=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:item20070113201940"&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;RDF:li&lt;/span&gt; &lt;span class="na"&gt;RDF:resource=&lt;/span&gt;&lt;span class="s"&gt;"urn:scrapbook:item20070113201941"&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/RDF:Seq&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;时 唯一的 &lt;span class="caps"&gt;RDF&lt;/span&gt;:Li 不是 List!!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;K2SEQ[crt_id]&amp;gt;RDF:Li OrderedDict([(u'@RDF:resource', u'urn:scrapbook:item20070113201921')])
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;K2SEQ[crt_id]&amp;gt;RDF:Li OrderedDict([(u'@RDF:resource', u'urn:scrapbook:item20070113201921')])
 K2SEQ[crt_id]['RDF:li'].len:: 1
     &amp;lt;class 'collections.OrderedDict'&amp;gt;
 K2SEQ[crt_id]&amp;gt;RDF:Li @RDF:resource
@@ -980,20 +981,20 @@ K2SEQ[crt_id]['RDF:li'].len:: 9
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href="https://github.com/martinblech/xmltodict/issues/67"&gt;odd parse for same xml structure · Issue #67 · martinblech/xmltodict&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="4h"&gt;4H 折腾明白了:&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
 /Users/zoomq/mnt/快盘/zScrapBook/reDevRel/scrapbook.rdf
-&lt;span class="o"&gt;[&lt;/span&gt;u&lt;span class="s1"&gt;'&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+&lt;span class="o"&gt;[&lt;/span&gt;u&lt;span class="s1"&gt;'RDF:RDF'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+RDF:Seq         579
+RDF:Description     24190
+NC:BookmarkSeparator    57
 &amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x10f17a660&amp;gt;
         exp_level_idx&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 17073.48084 ms
 
 _chaos/scraotools_reDevRel.pkl
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;            13
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+RDF:ROOT            13
+RDF:Seq         578
+RDF:Description     24190
+NC:BookmarkSeparator    57
         _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 7872.95103 ms
 
      _RIGHT_NODES: 6926
@@ -1001,125 +1002,125 @@ _chaos/scraotools_reDevRel.pkl
         re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 191.21003 ms
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;有这么多垃圾!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;24190 vs 3631 !!!!
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;24190 vs 3631 !!!!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;但是,居然无法一次性清理干净?!&lt;/p&gt;
 &lt;p&gt;一扫::&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
 /Users/zoomq/mnt/快盘/zScrapBook/reDevRel/scrapbook.rdf
-&lt;span class="o"&gt;[&lt;/span&gt;u&lt;span class="s1"&gt;'&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;RDF&lt;/span&gt;'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         579
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     24190
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+&lt;span class="o"&gt;[&lt;/span&gt;u&lt;span class="s1"&gt;'RDF:RDF'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+RDF:Seq         579
+RDF:Description     24190
+NC:BookmarkSeparator    57
 &amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x10f2376f0&amp;gt;
         exp_level_idx&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 17013.92913 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    11153
-cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  13037
+cleanned DESC:  13037
 &amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x10eecff60&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 131239.34913 ms
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;2扫:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     13037
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     13037
+NC:BookmarkSeparator    57
         _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 4292.33599 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    5506
-cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  7531
+cleanned DESC:  7531
 &amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x108874f60&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 44531.90279 ms
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;3扫::&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     7531
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     7531
+NC:BookmarkSeparator    57
         _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 3115.18502 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    2616
-cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  4915
+cleanned DESC:  4915
 &amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x105d1edb0&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 19026.94511 ms
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;4扫::&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     4915
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     4915
+NC:BookmarkSeparator    57
         _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 2528.49293 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    1045
-cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3870
+cleanned DESC:  3870
 &amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x10429ced0&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 11538.43212 ms
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;5扫:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3870
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     3870
+NC:BookmarkSeparator    57
         _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 2422.85681 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    286
-cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3584
+cleanned DESC:  3584
 &amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x102c5d300&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 9368.47901 ms
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;6扫::&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3584
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     3584
+NC:BookmarkSeparator    57
         _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 2225.17014 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    10
-cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3574
+cleanned DESC:  3574
 &amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x102c2af60&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 8464.92100 ms
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;7扫:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python scraptools/zq_chk4scrap.py reDevRel/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python scraptools/zq_chk4scrap.py reDevRel/
 _chaos/scraotools_reDevRel.pkl
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:&lt;span class="caps"&gt;ROOT&lt;/span&gt;    13
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Seq         578
-&lt;span class="caps"&gt;RDF&lt;/span&gt;:Description     3574
-&lt;span class="caps"&gt;NC&lt;/span&gt;:BookmarkSeparator    57
+RDF:ROOT    13
+RDF:Seq         578
+RDF:Description     3574
+NC:BookmarkSeparator    57
         _load_pkl&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 2317.77310 ms
 
      _RIGHT_NODES: 6926
      RIGHT_NODES: 3631
 clean notes:    0
-cleanned &lt;span class="caps"&gt;DESC&lt;/span&gt;:  3574
+cleanned DESC:  3574
 &amp;lt;open file &lt;span class="s1"&gt;'_chaos/scraotools_reDevRel.pkl'&lt;/span&gt;, mode &lt;span class="s1"&gt;'wb'&lt;/span&gt; at 0x1021b3030&amp;gt;
 _chaos/scrapbook_reDevRel.rdf
         re_xmltodict_rdf&lt;span class="o"&gt;()&lt;/span&gt; RUNed~ 8694.52500 ms
@@ -1127,11 +1128,11 @@ _chaos/scrapbook_reDevRel.rdf
 &lt;h3 id="2"&gt;2小时 目录对比&lt;/h3&gt;
 &lt;p&gt;sh-&amp;gt;ls 出来时,&lt;/p&gt;
 &lt;p&gt;是 &lt;span class="caps"&gt;STDOUT&lt;/span&gt; 有隐藏字符! 兰色…居然没有意识到!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;20041214101930&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;20041214101930&lt;/span&gt;
 &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt; &lt;span class="s1"&gt;'str'&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;Traceback&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;most&lt;/span&gt; &lt;span class="nt"&gt;recent&lt;/span&gt; &lt;span class="nt"&gt;call&lt;/span&gt; &lt;span class="nt"&gt;last&lt;/span&gt;&lt;span class="o"&gt;):&lt;/span&gt;
   &lt;span class="nt"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"scraptools/zq_chk4scrap.py"&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;line&lt;/span&gt; &lt;span class="nt"&gt;724&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;module&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;mv_chaos_data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;REPO_NAME&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;&lt;span class="caps"&gt;XRDF&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="nt"&gt;mv_chaos_data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;REPO_NAME&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;XRDF&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
   &lt;span class="nt"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"scraptools/zq_chk4scrap.py"&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;line&lt;/span&gt; &lt;span class="nt"&gt;524&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="nt"&gt;mv_chaos_data&lt;/span&gt;
     &lt;span class="nt"&gt;print&lt;/span&gt; &lt;span class="nt"&gt;len&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="nc"&gt;.strip&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
 &lt;span class="nt"&gt;ValueError&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;invalid&lt;/span&gt; &lt;span class="nt"&gt;literal&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="nt"&gt;with&lt;/span&gt; &lt;span class="nt"&gt;base&lt;/span&gt; &lt;span class="nt"&gt;10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;'\&lt;/span&gt;&lt;span class="nt"&gt;x1b&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;x1b&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="nx"&gt;m20041214101930&lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;x1b&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;39&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="mi"&gt;49&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;x1b&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
@@ -1156,7 +1157,7 @@ _chaos/scrapbook_reDevRel.rdf
 &lt;li&gt;提高效率&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;du -hs *
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ du -hs *
 5.1G    ZqDevRel
 950M    reDevRel
     5.2G    zqCoder
@@ -1184,7 +1185,7 @@ _chaos/scrapbook_reDevRel.rdf
 &lt;h2 id="_2"&gt;探索&lt;/h2&gt;
 &lt;p&gt;正如,Python 所有领域的自学,有一个稳定,随时有反馈的环境是最重要的…&lt;/p&gt;
 &lt;p&gt;但是,作者的话,真心不能都相信哪!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;...如果你恰好使用 Python 3.2 大部分示例是可以完整运行的
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;...如果你恰好使用 Python 3.2 大部分示例是可以完整运行的
 ...
 MAC OS X 环境推荐安装 epd_free-7.3-2-macosx-i386.dmg
 ...
@@ -1217,15 +1218,15 @@ MAC OS X 环境推荐安装 epd_free-7.3-2-macosx-i386.dmg
 &lt;/ul&gt;
 &lt;p&gt;果断下载,安装…&lt;/p&gt;
 &lt;p&gt;各种不对味儿,原来自动在 &lt;code&gt;~/.bash_profile&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# Setting PATH for EPD_free-7.3-2
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Setting PATH for EPD_free-7.3-2
 # The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;"
-export &lt;span class="caps"&gt;PATH&lt;/span&gt;
+PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;PATH&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;"
+export PATH
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;而且是按照系统框架来安装到 &lt;code&gt;/Library/Frameworks/Python.framework&lt;/code&gt; 的
 可是, Mavericks 以后,没有默认Python 了哪,俺已经同时用 &lt;code&gt;brew&lt;/code&gt; 管理系统 Python,
 &lt;code&gt;pyenv&lt;/code&gt; 管理开发 Python ,先不说体积:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;du -hs /Library/Frameworks/Python.framework/Versions
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ du -hs /Library/Frameworks/Python.framework/Versions
 425M    /Library/Frameworks/Python.framework/Versions
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;居然第一个案例就跑不起来!&lt;/p&gt;
@@ -1236,7 +1237,7 @@ export &lt;span class="caps"&gt;PATH&lt;/span&gt;
 体积也从 74M 爆涨为 &lt;code&gt;235Mb&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;不过,是一派标准的 &lt;span class="caps"&gt;MAC&lt;/span&gt; 软件包了,非常流畅,也有&lt;span class="caps"&gt;GUI&lt;/span&gt; 的引导界面,&lt;/p&gt;
 &lt;p&gt;然后 &lt;code&gt;~/.bash_profile&lt;/code&gt; 追加的是:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# Added by Canopy installer on 2014-06-03
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Added by Canopy installer on 2014-06-03
 # VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
 VIRTUAL_ENV_DISABLE_PROMPT=1 source \ 
 /Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate
@@ -1244,7 +1245,7 @@ VIRTUAL_ENV_DISABLE_PROMPT=1 source \
 &lt;p&gt;那就简单了,使用标准的 &lt;code&gt;VirtualEnv&lt;/code&gt; 来包装的话,就不用将系统Python 环境永久性的迁移为
 &lt;code&gt;Canopy&lt;/code&gt; 的了,&lt;/p&gt;
 &lt;p&gt;简单的 在 &lt;code&gt;~/.bashrc&lt;/code&gt; 定义一个别称:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# Added by Canopy installer on 2014-06-03
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Added by Canopy installer on 2014-06-03
 alias canopy="source \
 /Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate"
 &lt;/pre&gt;&lt;/div&gt;
@@ -1279,7 +1280,7 @@ alias canopy="source \
 &lt;li&gt;140527 &lt;a href="http://www.amazon.cn/gp/product/B00KD7Q7U2/ref=oh_d__o00_details_o00__i00?ie=UTF8&amp;amp;psc=1"&gt;《利用Python进行数据分析》 Wes McKinney, 唐学韬 (Kindle电子书)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="pandas"></category><category term="ipython"></category><category term="pydata"></category><category term="mavericks"></category></entry><entry><title>PythonisT happy guido ;-)</title><link href="http://blog.zoomquiet.io/140106-pycon2013tee-guido.html" rel="alternate"></link><updated>2014-01-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-07:140106-pycon2013tee-guido.html</id><summary type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;起初&lt;span class="caps"&gt;ZEUUX&lt;/span&gt; 作&lt;span class="caps"&gt;TEE&lt;/span&gt; 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for&amp;nbsp;&lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;起初&lt;span class="caps"&gt;ZEUUX&lt;/span&gt; 作&lt;span class="caps"&gt;TEE&lt;/span&gt; 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;然后,就没有然后了&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;后来, 好容易一个蠎年了! 为了蠎年的 PyCon2013China,&amp;nbsp;启动了&lt;/p&gt;
@@ -1317,9 +1318,9 @@ easy_install path.py
 The latest release is always updated to the Python Package Index. The source code is hosted on&amp;nbsp;Github.&lt;/p&gt;
 &lt;h2 id="finding-the-number-of-files-in-a-directory"&gt;Finding the number of files in a&amp;nbsp;directory:&lt;/h2&gt;
 &lt;p&gt;So our first task is to find the number of files present in a directory. In this example we will not iterate over subdirectories instead we will just count the number of files present in the top level directory. This one is simple. Here is my&amp;nbsp;solution:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
-&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
-&lt;span class="c"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DIRECTORY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="c1"&gt;#Replace DIRECTORY with your required directory&lt;/span&gt;
 &lt;span class="n"&gt;num_files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 
 &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;num_files&lt;/span&gt;
@@ -1327,9 +1328,9 @@ The latest release is always updated to the Python Package Index. The source cod
 
 
 &lt;p&gt;In this script we first of all imported the path module. Then we set the num_file variable to 0. This variable is going to keep count for the number of files in our directory. Then we call the path function with a directory name. Firthermore we iterate over the files present in the root of our directory and increment the num_files variable. Finally we print the value of num_files variable. Here is a litle bit modified version of this script which outputs the number of subdirectories present in the root of our&amp;nbsp;directory.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
-&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
-&lt;span class="c"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DIRECTORY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="c1"&gt;#Replace DIRECTORY with your required directory&lt;/span&gt;
 &lt;span class="n"&gt;num_dirs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirs&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 
 &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;num_dirs&lt;/span&gt;
@@ -1338,12 +1339,12 @@ The latest release is always updated to the Python Package Index. The source cod
 
 &lt;h2 id="finding-the-number-of-files-recursively-in-a-directory"&gt;Finding the number of files recursively in a&amp;nbsp;directory:&lt;/h2&gt;
 &lt;p&gt;That was easy! Wasn’t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&amp;nbsp;Python.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
 &lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="n"&gt;dir_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DIRECTORY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#Replace DIRECTORY with your required directory&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
         &lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
@@ -1358,7 +1359,7 @@ The latest release is always updated to the Python Package Index. The source cod
 &lt;p&gt;print &amp;#8220;Total number of files == {0}&amp;#8221;.format(file_count)
 print &amp;#8220;Total number of directories == {0}&amp;#8221;.format(dir_count)
 That was again very easy. Now what if we want to pretty print the directory names? I know there are some terminal one-liners but here we are talking about Python only. Lets see how we can achieve&amp;nbsp;that.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;files_loc = {}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;files_loc = {}
 file_count = 0
 dir_count = 0
 total = 0
@@ -1389,7 +1390,7 @@ for i in files_loc:
 &lt;h2 id="deleting-a-specific-file-from-a-directory"&gt;Deleting a specific file from a&amp;nbsp;directory:&lt;/h2&gt;
 &lt;p&gt;So lets suppose we have a file called this_file_sucks.py. Now how do we delete it. Lets make this seranio more real by saying that we do not know in which directory it is placed. Its simple to solve this problem as well. Just go to the top level directory and execute this&amp;nbsp;script:&lt;/p&gt;
 &lt;p&gt;from path import path
-d =&amp;nbsp;path(&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;)&lt;/p&gt;
+d = path(&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;)&lt;/p&gt;
 &lt;h1 id="replace-directory-with-your-desired-directory"&gt;replace directory with your desired&amp;nbsp;directory&lt;/h1&gt;
 &lt;p&gt;for i in d.walk():
     if i.isfile():
@@ -1398,12 +1399,12 @@ d =&amp;nbsp;path(&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;)&lt;/p&gt;
 In the above script I did not implement any logging and error handling. That is left as an exercise for the&amp;nbsp;reader.&lt;/p&gt;
 &lt;h2 id="deleting-files-based-on-their-extension"&gt;Deleting files based on their&amp;nbsp;extension&lt;/h2&gt;
 &lt;p&gt;Just suppose you want to remove all the ‘.pyc’ files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in&amp;nbsp;path.py.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
-&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walkfiles&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*.pyc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DIRECTORY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walkfiles&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;*.pyc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nb"&gt;file&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Removed {} file&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Removed {} file&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;also&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="nb"&gt;file&lt;/span&gt; &lt;span class="n"&gt;which&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;deleted&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1412,7 +1413,7 @@ In the above script I did not implement any logging and error handling. That is 
 &lt;p&gt;So another interesting scenario. What if we want to delete those files which exceed 5Mb&amp;nbsp;size?&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;NOTE:&lt;/code&gt; There is a difference between Mb and &lt;span class="caps"&gt;MB&lt;/span&gt;. I will be covering Mb here. 
 Is it possible with path.py? Yes it is! So here is a script which does this&amp;nbsp;work:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;d = path(&amp;#39;./&amp;#39;)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;d = path(&amp;#39;./&amp;#39;)
 del_size = 4522420
 for i in d.walk():
     if i.isfile():
@@ -1426,15 +1427,15 @@ for i in d.walk():
 &lt;p&gt;So we saw how we can remove files based on their&amp;nbsp;size.&lt;/p&gt;
 &lt;h2 id="deleting-files-based-on-their-last-access-time"&gt;Deleting files based on their last access&amp;nbsp;time&lt;/h2&gt;
 &lt;p&gt;In this part we will take a look on how to delete files based on their last access time. I have written the code below to achieve this target. Just change the number of days to anything you like. This script will remove the files which were last modified before the &lt;span class="caps"&gt;DAYS&lt;/span&gt;&amp;nbsp;variable.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
 
-&lt;span class="c"&gt;#Change the &lt;span class="caps"&gt;DAYS&lt;/span&gt; to your liking&lt;/span&gt;
-&lt;span class="n"&gt;&lt;span class="caps"&gt;DAYS&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
+&lt;span class="c1"&gt;#Change the DAYS to your liking&lt;/span&gt;
+&lt;span class="n"&gt;DAYS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
 &lt;span class="n"&gt;removed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c"&gt;#Replace &lt;span class="caps"&gt;DIRECTORY&lt;/span&gt; with your required directory&lt;/span&gt;
-&lt;span class="n"&gt;time_in_secs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;&lt;span class="caps"&gt;DAYS&lt;/span&gt;&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DIRECTORY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#Replace DIRECTORY with your required directory&lt;/span&gt;
+&lt;span class="n"&gt;time_in_secs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DAYS&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
@@ -1457,7 +1458,7 @@ for i in d.walk():
 &lt;h1 id="letter-to-a-young-programmer"&gt;&lt;a href="http://neopythonic.blogspot.ca/2013/10/letter-to-young-programmer.html"&gt;Letter to a young&amp;nbsp;programmer&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Dear (insert name&amp;nbsp;here),&lt;/p&gt;
 &lt;p&gt;I heard you enjoy a certain programming language named Python. Programming is a wonderful activity. I am a little jealous that you have access to computers at your age; when I grew up I didn’t even know what a computer was! I was an electronics hobbyist though, and my big dream was to build my own electronic calculator from discrete components. I never did do that, but I did build several digital clocks, and it was amazing to build something that complex and see it work. I hope you dream big too — programmers can make computers (and robots!) do amazing things, and this is a great time to become a programmer. Just imagine how much faster computers will be in five or ten years, and what you will be able to do with your skills&amp;nbsp;then!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;—Guido van Rossum (inventor of Python)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;—Guido van Rossum (inventor of Python)
 THURSDAY, OCTOBER 24, 2013
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1472,7 +1473,7 @@ THURSDAY, OCTOBER 24, 2013
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;亲:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;亲:
 
 目测你正在享受一种叫Python 的编程语言.
 编程是种美妙的体验.
@@ -1513,10 +1514,11 @@ So! &lt;span class="caps"&gt;EKR&lt;/span&gt; writed down his colorful&amp;nbsp;
 &lt;p&gt;About this time I started a computer business selling Sherlock, a tracing tool for C programs:&amp;nbsp;https://sourceforge.net/projects/leo/files/Miscellaneous/Sherlock/ &lt;/p&gt;
 &lt;p&gt;I received a patent for it, but the business went nowhere. Sherlock is not needed for tracing Python programs: the pattern used in Leo suffices.
 The ideas behind Sherlock really ought to be part of Python’s logging framework. Levels of logging are feeble compared to individually named and targeted&amp;nbsp;logs.&lt;/p&gt;
-&lt;p&gt;I worked (from home) for about a year for a company called Tuple in Ballard, Washington. I wrote (in C) a very fast optimizing C compiler, assembler, linker and unix-like file system for them. See the &lt;span class="caps"&gt;CC2&lt;/span&gt; stuff at:&amp;nbsp;https://sourceforge.net/projects/leo/files/Miscellaneous/&lt;span class="caps"&gt;CC2&lt;/span&gt;%20and%20Psyco/&lt;/p&gt;
+&lt;p&gt;I worked (from home) for about a year for a company called Tuple in Ballard, Washington. I wrote (in C) a very fast optimizing C compiler, assembler, linker and unix-like file system for them. See the &lt;span class="caps"&gt;CC2&lt;/span&gt; stuff at: 
+https://sourceforge.net/projects/leo/files/Miscellaneous/&lt;span class="caps"&gt;CC2&lt;/span&gt;%20and%20Psyco/&lt;/p&gt;
 &lt;p&gt;This was before the days of unit tests! At that time, having the compiler compile itself was pretty much how testing was&amp;nbsp;done!&lt;/p&gt;
 &lt;p&gt;I’ve been a fan of Donald Knuth ever since graduate school. I studied his books about&amp;nbsp;TeX:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Volume A, The TeXbook (Reading, Massachusetts: Addison-Wesley, 1984), x+483pp. 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Volume A, The TeXbook (Reading, Massachusetts: Addison-Wesley, 1984), x+483pp. 
 ISBN 0-201-13447-0
 
 Volume B, TeX: The Program (Reading, Massachusetts: Addison-Wesley, 1986), xviii+600pp. ISBN 0-201-13437-3
@@ -1560,7 +1562,7 @@ I enjoy painting. About 20 years ago I received a black belt in&amp;nbsp;karate.
 Sherlock背后的想法的确出自Python&amp;nbsp;的日志框架.分级的日志绝对比苍白的命名式日志要好用的多.&lt;/p&gt;
 &lt;p&gt;俺为华盛顿一家名为”Tuple in Ballard”的公司&lt;span class="caps"&gt;SOHO&lt;/span&gt; 了一年, 写(用C)了些很快的编译器,汇编器,链接器,以及 Unix样的文件系统.参考 &lt;span class="caps"&gt;CC2&lt;/span&gt;: https://sourceforge.net/projects/leo/files/Miscellaneous/&lt;span class="caps"&gt;CC2&lt;/span&gt;%20and%20Psyco/&amp;nbsp;这儿是几天前的集成测试结果!当时,编译过编译器自身比跑通测试重要的多.&lt;/p&gt;
 &lt;p&gt;毕业以来,俺一直是高纳德的粉丝. 学习过他有关TeX&amp;nbsp;的书.包括:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;卷A，TeXbook（阅读，马萨诸塞州：Addison-Wesley出版社，1984），X+483页。 ISBN0-201-13447-0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;卷A，TeXbook（阅读，马萨诸塞州：Addison-Wesley出版社，1984），X+483页。 ISBN0-201-13447-0
 
 卷B, TEX:程序（阅读，马萨诸塞州：Addison-Wesley出版社，1986），18+600页。 ISBN0-201-13437-3
 &lt;/pre&gt;&lt;/div&gt;

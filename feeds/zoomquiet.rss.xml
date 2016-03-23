@@ -820,6 +820,11 @@ The new osxfuse file system bundle needs to be installed by the root user:
 &lt;p&gt;原未 &lt;code&gt;IPy[:] notebook&lt;/code&gt; 天然就内置了这种能力!&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;160322 @&lt;span class="caps"&gt;TANG&lt;/span&gt; ZhiXiong 提醒:&lt;ul&gt;
+&lt;li&gt;其实放在 GitHub，然后分享一个 Jupyter&amp;nbsp;链接是最好的&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;是也乎&lt;/code&gt; 这的确是 2015-7 之后更好的解决方案了&amp;nbsp;;-)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131106 pub. &lt;a href="https://medium.com/i-m-h-o/9520fee0b59f"&gt;&lt;span class="caps"&gt;EKR&lt;/span&gt; to Chinese programmer — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 27 Nov 2014 00:00:00 +0800</pubDate><guid>tag:blog.zoomquiet.io,2014-11-27:141127-ipynb-into-blog.html</guid><category>Pythonic</category><category>FW</category><category>ipynb</category><category>tutorial</category></item><item><title>十大早该知道的Python技巧</title><link>http://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html</link><description>&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html"&gt;prooffreader plus: Top 10 Python idioms I wish I&amp;#8217;d learned&amp;nbsp;earlier&lt;/a&gt;&lt;/p&gt;

@@ -16,7 +16,259 @@
 &lt;li&gt;嗯哼,这就是失控控制法&lt;/li&gt;
 &lt;li&gt;不控制的控制才是最好的控制&lt;/li&gt;
 &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="geek"></category><category term="linux"></category><category term="floss"></category><category term="linux"></category></entry><entry><title>为毛俺不担心所谓Python用户流失</title><link href="http://blog.zoomquiet.io/saying-ggodby-python-zh.html" rel="alternate"></link><updated>2015-01-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-01-10:saying-ggodby-python-zh.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="geek"></category><category term="linux"></category><category term="floss"></category><category term="linux"></category></entry><entry><title>Leo 5.2 theme custom</title><link href="http://blog.zoomquiet.io/leo5theme.html" rel="alternate"></link><updated>2016-04-15T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-15:leo5theme.html</id><summary type="html">
+&lt;h1 id="en"&gt;&lt;span class="caps"&gt;EN&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;thanks guys in &lt;code&gt;leo-editor@googlegroups.com&lt;/code&gt; :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Terry Brown&lt;/li&gt;
+&lt;li&gt;john lunzer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;make me know how to custom Leo theme step by step:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;old versions &lt;code&gt;myLeoSettings.leo&lt;/code&gt; appended buttons :&lt;ul&gt;
+&lt;li&gt;at &lt;code&gt;leo/myLeoSettings.leo#Startup--&amp;gt;Local buttons&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;need copy from  &lt;code&gt;leoSettings.leo&lt;/code&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;so my custome flow as:&lt;ul&gt;
+&lt;li&gt;try edit some node&lt;/li&gt;
+&lt;li&gt;click &lt;code&gt;reload-styles&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;open other &lt;code&gt;.leo&lt;/code&gt; , check effect&lt;/li&gt;
+&lt;li&gt;close it&lt;/li&gt;
+&lt;li&gt;loop up steps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;finally all i custom in  &lt;code&gt;~/.leo/myLeoSettings.leo&lt;/code&gt; :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;appended help menus:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Menus--&amp;gt;@menus--&amp;gt;@menu &amp;amp;Help--&amp;gt;@item open-myLeoSettings-leo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;bigger cursor:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Qt Gui Misc settings--&amp;gt;@int qt-cursor-width = 6&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;font changed:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Appearance (change these first)--&amp;gt;Qt Gui settings--&amp;gt;Fonts--&amp;gt;Basic Fonts (change these first)--&amp;gt;@string font-family = Input, Droid Sans Mono, DejaVu Sans Mono&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;body-bg dark:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Appearance (change these first)--&amp;gt;Qt Gui settings--&amp;gt;Colors--&amp;gt;Body pane colors--&amp;gt;@color body-bg = #2F3337&lt;/code&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;close Gutter:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Appearance (change these first)--&amp;gt;Qt Gui settings--&amp;gt;Margins &amp;amp; borders--&amp;gt;Gutter--&amp;gt;@bool use-gutter = False&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;custom border-focus-color:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;myLeoSettings.leo#@settings--&amp;gt;Appearance (change these first)--&amp;gt;Qt Gui settings--&amp;gt;Colors--&amp;gt;Border colors--&amp;gt;@color focused-border-focus-color = #85C2FF&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Python syntax coloring:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Syntax coloring--&amp;gt;Language-specific colors--&amp;gt;Python&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;appended nodes:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;@color blank_color = grey
+@color tab_color = red
+@color label_color = red
+@color keyword1_color = #268bd2
+@color keyword2_color = #2aa198
+@color keyword3_color = #859900
+@color keyword4_color = #268bd2
+@color literal1_color = #cb4b16
+@color literal2_color = #b58900
+@color literal3_color = #dc322f
+@color literal4_color = #859900
+@color markup_color = #2aa198
+@color comment1_color = #557755
+@color comment2_color = #557755
+@color comment3_color = #557755
+@color comment4_color = #557755
+@color operator_color = #bbbbbb
+@color function_color = #cb4b16
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;self&lt;/code&gt; with coloring&lt;ul&gt;
+&lt;li&gt;fixed &lt;code&gt;path/2/installed/leo/modes/python.py&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;appended &lt;code&gt;"self": "keyword4",&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="_1"&gt;是也乎&lt;/h1&gt;
+&lt;p&gt;~ 老问题新解决&lt;/p&gt;
+&lt;h2 id="_2"&gt;背景&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://leoeditor.com/leo_toc.html"&gt;Leo&lt;/a&gt; &lt;img alt="Leo4" src="http://leoeditor.com/_static/Leo4-80-border.jpg"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;参考: &lt;a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment"&gt;LeoEnvironment - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;从 05 年开始使用&lt;/li&gt;
+&lt;li&gt;从笔记到工程管理,都用的非常欢实&lt;/li&gt;
+&lt;li&gt;是 令德华(&lt;a href="http://leoeditor.com/ekr.html"&gt;Edward K. Ream&lt;/a&gt;) 独立创建并长期维护的,完备的文学化编辑环境&lt;/li&gt;
+&lt;li&gt;09年从 Tk 迁移到 Qt 后平滑的跟随俺转战 M$/Ubuntu/&lt;span class="caps"&gt;MAC&lt;/span&gt; 所有桌面系统&lt;/li&gt;
+&lt;li&gt;嗯哼,完全基于 Python 开发的…&lt;/li&gt;
+&lt;li&gt;详细介绍,参考 &lt;a href="http://zoomq.qiniudn.com/pychina/PyCon2013China/PyConChina2013-EKR-final-v2"&gt;PyConChina2013-&lt;span class="caps"&gt;EKR&lt;/span&gt;-final-v2&lt;/a&gt; ~ 老令公 在 PyCon2013China 大会上分享的视频&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_3"&gt;问题&lt;/h2&gt;
+&lt;p&gt;但是,使用最性感的编辑器 sublime text 后, 对 Leo 默认的界面就万般难以忍受了…&lt;/p&gt;
+&lt;p&gt;终于决心折腾一下样式!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Leo 基于几个配置文件:&lt;ul&gt;
+&lt;li&gt;默认配置 &lt;code&gt;path/2/installed/Leo/config/leoSettings.leo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;用户配置 &lt;code&gt;~/.leo/myLeoSettings.leo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;俺从 3.1 版本开始使用 Leo, 现在的稳定版本是 5.2&lt;/li&gt;
+&lt;li&gt;所以, &lt;code&gt;~/.leo/myLeoSettings.leo&lt;/code&gt; 和官方的默认有较大偏差&lt;/li&gt;
+&lt;li&gt;那么如何解决:&lt;ul&gt;
+&lt;li&gt;启用&lt;a href="http://leoeditor.com/what-is-new.html#what-s-new-in-leo-4-11"&gt;Leo 4.11&lt;/a&gt; 开始有的 &lt;code&gt;sublime Text 2, a dark colorizing theme&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;如何令 &lt;code&gt;self&lt;/code&gt; 也有语法颜色?&lt;/li&gt;
+&lt;li&gt;如何改变默认的 &lt;code&gt;cursor&lt;/code&gt; 尺寸?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_4"&gt;过程&lt;/h2&gt;
+&lt;p&gt;简单的说,手上的配置文件有这几种:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/.leo/myLeoSettings.leo&lt;/code&gt; 混杂了增补多年配置的可能不兼容配置&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;path/2/installed/Leo/config/leoSettings.leo&lt;/code&gt; 5.2 最新版本配置&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;path/2/installed/Leo/config/exampleSettings.leo&lt;/code&gt; 5.2 内置配置示例&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;path/2/installed/Leo/config/themes.leo&lt;/code&gt; 5.2 内置 theme 定制示例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;先后进行的尝试:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 &lt;code&gt;exampleSettings.leo&lt;/code&gt; 基础上&lt;ul&gt;
+&lt;li&gt;先完成积累的习惯配置&lt;/li&gt;
+&lt;li&gt;再进行 theme 配置&lt;/li&gt;
+&lt;li&gt;失败! 原先的配置点太多:&lt;ul&gt;
+&lt;li&gt;快捷键&lt;/li&gt;
+&lt;li&gt;窗口布局&lt;/li&gt;
+&lt;li&gt;字体&lt;/li&gt;
+&lt;li&gt;颜色&lt;/li&gt;
+&lt;li&gt;菜单…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;leoSettings.leo&lt;/code&gt; 基础上&lt;ul&gt;
+&lt;li&gt;先完成积累的习惯配置&lt;/li&gt;
+&lt;li&gt;再进行 theme 配置&lt;/li&gt;
+&lt;li&gt;失败! 原因同上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;最终只好一边询问社区列表,一边基于 &lt;code&gt;~/.leo/myLeoSettings.leo&lt;/code&gt; 进行配置&lt;ul&gt;
+&lt;li&gt;从 &lt;code&gt;leoSettings.leo&lt;/code&gt; 复制相应最新配置树过来&lt;/li&gt;
+&lt;li&gt;参考原先的进行对应配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_5"&gt;要点&lt;/h2&gt;
+&lt;p&gt;~成功将 &lt;img alt="leoeditor" src="http://leoeditor.com/screen-shots/render-svg-sources.png"/&gt;
+变成:
+&lt;img alt="leo5.2_darktheme" src="http://zoomq.qiniudn.com/ZQCollection/snap/leo/leo5.2_darktheme.png"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;myLeoSettings.leo&lt;/code&gt; 的控制按钮:&lt;ul&gt;
+&lt;li&gt;来自 &lt;code&gt;leo/myLeoSettings.leo#Startup--&amp;gt;Local buttons&lt;/code&gt;, 要从  &lt;code&gt;leoSettings.leo&lt;/code&gt; 复制&lt;/li&gt;
+&lt;li&gt;这样进行之后的配置尝试时的流程才能固化为:&lt;ul&gt;
+&lt;li&gt;进行对应 node 的修订&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;reload-styles&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开另外一个 &lt;code&gt;.leo&lt;/code&gt; 观察效果&lt;/li&gt;
+&lt;li&gt;关闭&lt;/li&gt;
+&lt;li&gt;重复以上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;相关 &lt;code&gt;~/.leo/myLeoSettings.leo&lt;/code&gt; 的配置点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;追加帮助菜单:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Menus--&amp;gt;@menus--&amp;gt;@menu &amp;amp;Help--&amp;gt;@item open-myLeoSettings-leo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;光标加粗:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Qt Gui Misc settings--&amp;gt;@int qt-cursor-width = 6&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;字体指定:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Appearance (change these first)--&amp;gt;Qt Gui settings--&amp;gt;Fonts--&amp;gt;Basic Fonts (change these first)--&amp;gt;@string font-family = Input, Droid Sans Mono, DejaVu Sans Mono&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;编辑窗口底色:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Appearance (change these first)--&amp;gt;Qt Gui settings--&amp;gt;Colors--&amp;gt;Body pane colors--&amp;gt;@color body-bg = #2F3337&lt;/code&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关闭行数:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Appearance (change these first)--&amp;gt;Qt Gui settings--&amp;gt;Margins &amp;amp; borders--&amp;gt;Gutter--&amp;gt;@bool use-gutter = False&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;修订窗格激活提醒框&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;myLeoSettings.leo#@settings--&amp;gt;Appearance (change these first)--&amp;gt;Qt Gui settings--&amp;gt;Colors--&amp;gt;Border colors--&amp;gt;@color focused-border-focus-color = #85C2FF&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Python 语法颜色自定:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#@settings--&amp;gt;Syntax coloring--&amp;gt;Language-specific colors--&amp;gt;Python&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;逐一追加 node:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;@color blank_color = grey
+@color tab_color = red
+@color label_color = red
+@color keyword1_color = #268bd2
+@color keyword2_color = #2aa198
+@color keyword3_color = #859900
+@color keyword4_color = #268bd2
+@color literal1_color = #cb4b16
+@color literal2_color = #b58900
+@color literal3_color = #dc322f
+@color literal4_color = #859900
+@color markup_color = #2aa198
+@color comment1_color = #557755
+@color comment2_color = #557755
+@color comment3_color = #557755
+@color comment4_color = #557755
+@color operator_color = #bbbbbb
+@color function_color = #cb4b16
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;self&lt;/code&gt; 非关键词追加语法颜色&lt;ul&gt;
+&lt;li&gt;修订 &lt;code&gt;path/2/installed/leo/modes/python.py&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;追加 &lt;code&gt;"self": "keyword4",&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢 &lt;code&gt;leo-editor@googlegroups.com&lt;/code&gt; 列表中好人的大力帮助:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Terry Brown&lt;/li&gt;
+&lt;li&gt;john lunzer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="timing"&gt;timing&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;+ 1.5h 根据记忆折腾
++ .5h 官方列表提问
++ 2h 使用官方配置折腾
++ 1h 使用列表提示检验
++ .5h 完成心目中的配置
+
+~ 6h 才完成...
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;140909 才算完成一个可以看的版本&lt;/li&gt;
+&lt;li&gt;140711 完成所有功能,启动文档回顾&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="todo"&gt;&lt;span class="caps"&gt;TODO&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;subl theme 到 Leo theme 的转换脚本&lt;/li&gt;
+&lt;li&gt;进一步的样式化:&lt;ul&gt;
+&lt;li&gt;髙亮当前行&lt;/li&gt;
+&lt;li&gt;提纲界面的 dark theme&lt;/li&gt;
+&lt;li&gt;log 界面的 dark theme&lt;/li&gt;
+&lt;li&gt;find 界面的 dark theme&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="python"></category><category term="howto"></category><category term="leo"></category><category term="theme"></category></entry><entry><title>为毛俺不担心所谓Python用户流失</title><link href="http://blog.zoomquiet.io/saying-ggodby-python-zh.html" rel="alternate"></link><updated>2015-01-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-01-10:saying-ggodby-python-zh.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This post is long overdue; this isn’t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
 &lt;p&gt;While I had moved on from Python years ago, I felt a certain attachment to it well past then, not quite admitting to myself that I wasn’t coming back. When my proposal for PyCon 2013 was rejected I was frustrated (it was going to be a fun talk!) but for some reason that made me fully realized that I wasn’t part of the Python community&amp;nbsp;anymore.&lt;/p&gt;
 &lt;p&gt;Python was the first — and I sometimes wonder if the only — programming community I was part of. Coming to Python was a conscious choice. In college I was interested in Scheme and Smalltalk. High-minded languages with interesting ideas, but hard to find practical uses. Scheme was always too underserved by its libraries and sparse academic community. In contrast Smalltalk was productive — it was built by and for people who loved to build things. (More credit here should probably go to Dan Ingalls than Alan Kay — I can sense in Dan Ingalls’s work a real passion for making things, and a pure but unproductive language would not have satisfied him.) But Smalltalk was and is a world of its own. It was culturally and technically pre-internet, pre-open-source, pre-online-community. And despite all the great things about the Smalltalk environment and language it couldn’t fulfill these then-new potentials, even as it tried to adapt. (I wrote a couple posts about this, intended as a sort of sympathetic explanation of why I couldn’t stick with Smalltalk: Where Smalltalk Went Wrong and a&amp;nbsp;followup.)&lt;/p&gt;

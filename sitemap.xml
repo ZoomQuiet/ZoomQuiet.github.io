@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/index.html</loc>
-<lastmod>2016-04-15T18:16:08-00:00</lastmod>
+<lastmod>2016-04-15T18:17:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2016-04-15T18:16:08-00:00</lastmod>
+<lastmod>2016-04-15T18:17:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2016-04-15T18:16:08-00:00</lastmod>
+<lastmod>2016-04-15T18:17:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2016-04-15T18:16:08-00:00</lastmod>
+<lastmod>2016-04-15T18:17:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -53,15 +53,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/linux-linus-not-only-be-fun.html</loc>
-<lastmod>2016-06-10T00:00:00+08:00</lastmod>
+<loc>http://blog.zoomquiet.io/leo5theme.html</loc>
+<lastmod>2016-04-15T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/leo5theme.html</loc>
-<lastmod>2016-04-15T00:00:00+08:00</lastmod>
+<loc>http://blog.zoomquiet.io/linux-linus-not-only-be-fun.html</loc>
+<lastmod>2016-04-10T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -362,7 +362,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/category/pythonic.html</loc>
-<lastmod>2016-06-10T00:00:00+08:06</lastmod>
+<lastmod>2016-04-15T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -377,6 +377,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/tag/pelican.html</loc>
 <lastmod>2013-12-19T10:42:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/tag/theme.html</loc>
+<lastmod>2016-04-15T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -453,7 +460,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/linux.html</loc>
-<lastmod>2016-06-10T00:00:00+08:06</lastmod>
+<lastmod>2016-04-10T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -522,8 +529,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/theme.html</loc>
-<lastmod>2016-04-15T00:00:00+08:06</lastmod>
+<loc>http://blog.zoomquiet.io/tag/floss.html</loc>
+<lastmod>2016-04-10T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -642,7 +649,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/geek.html</loc>
-<lastmod>2016-06-10T00:00:00+08:06</lastmod>
+<lastmod>2016-04-10T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -657,13 +664,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/tag/china.html</loc>
 <lastmod>2013-11-11T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://blog.zoomquiet.io/tag/floss.html</loc>
-<lastmod>2016-06-10T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -761,7 +761,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2016-06-10T00:00:00+08:06</lastmod>
+<lastmod>2016-04-15T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2016-06-10T00:00:00+08:00</updated><entry><title>Linux 后的思想</title><link href="http://blog.zoomquiet.io/linux-linus-not-only-be-fun.html" rel="alternate"></link><updated>2016-06-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-06-10:linux-linus-not-only-be-fun.html</id><summary type="html">
-&lt;p&gt;来自 &lt;span class="caps"&gt;TED2016&lt;/span&gt; 的分享:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux"&gt;Linus Torvalds: The mind behind Linux | &lt;span class="caps"&gt;TED&lt;/span&gt; Talk | &lt;span class="caps"&gt;TED&lt;/span&gt;.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;戳中泪点的:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;所有项目,只是因为我需要&lt;/li&gt;
-&lt;li&gt;最困难的不是完成大项目,而是令人们在一起工作,即使相互不接受&lt;/li&gt;
-&lt;li&gt;Linux 并不是选择了开源,只是那时刚好有开源吻合 Linux 项目&lt;/li&gt;
-&lt;li&gt;….&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;是的,为什么 Linux 发展的如此快,而更加早的 &lt;span class="caps"&gt;GNU&lt;/span&gt; 项目反而越来越没有存在感了!?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="caps"&gt;RMS&lt;/span&gt; 太聪明,总是戳到关键点&lt;/li&gt;
-&lt;li&gt;Linus 明智的多,只作自己能控制的,其它的给更加聪明的人折腾吧&lt;/li&gt;
-&lt;li&gt;嗯哼,这就是失控控制法&lt;/li&gt;
-&lt;li&gt;不控制的控制才是最好的控制&lt;/li&gt;
-&lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="geek"></category><category term="linux"></category><category term="floss"></category><category term="linux"></category></entry><entry><title>Leo 5.2 theme custom</title><link href="http://blog.zoomquiet.io/leo5theme.html" rel="alternate"></link><updated>2016-04-15T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-15:leo5theme.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2016-04-15T00:00:00+08:00</updated><entry><title>Leo 5.2 theme custom</title><link href="http://blog.zoomquiet.io/leo5theme.html" rel="alternate"></link><updated>2016-04-15T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-15:leo5theme.html</id><summary type="html">
 &lt;h1 id="en"&gt;&lt;span class="caps"&gt;EN&lt;/span&gt;&lt;/h1&gt;
 &lt;p&gt;thanks guys in &lt;code&gt;leo-editor@googlegroups.com&lt;/code&gt; :&lt;/p&gt;
 &lt;ul&gt;
@@ -269,7 +252,24 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;参考颜色: &lt;a href="http://leo-editor.github.io/snippets/colormap.html"&gt;Leo Color Map&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="python"></category><category term="howto"></category><category term="leo"></category><category term="theme"></category></entry><entry><title>jump into SSD with Yoesmite</title><link href="http://blog.zoomquiet.io/jump-into-ssd.html" rel="alternate"></link><updated>2015-04-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-04-09:jump-into-ssd.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="python"></category><category term="howto"></category><category term="leo"></category><category term="theme"></category></entry><entry><title>Linux 后的思想</title><link href="http://blog.zoomquiet.io/linux-linus-not-only-be-fun.html" rel="alternate"></link><updated>2016-04-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-10:linux-linus-not-only-be-fun.html</id><summary type="html">
+&lt;p&gt;来自 &lt;span class="caps"&gt;TED2016&lt;/span&gt; 的分享:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux"&gt;Linus Torvalds: The mind behind Linux | &lt;span class="caps"&gt;TED&lt;/span&gt; Talk | &lt;span class="caps"&gt;TED&lt;/span&gt;.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;戳中泪点的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有项目,只是因为我需要&lt;/li&gt;
+&lt;li&gt;最困难的不是完成大项目,而是令人们在一起工作,即使相互不接受&lt;/li&gt;
+&lt;li&gt;Linux 并不是选择了开源,只是那时刚好有开源吻合 Linux 项目&lt;/li&gt;
+&lt;li&gt;….&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;是的,为什么 Linux 发展的如此快,而更加早的 &lt;span class="caps"&gt;GNU&lt;/span&gt; 项目反而越来越没有存在感了!?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;RMS&lt;/span&gt; 太聪明,总是戳到关键点&lt;/li&gt;
+&lt;li&gt;Linus 明智的多,只作自己能控制的,其它的给更加聪明的人折腾吧&lt;/li&gt;
+&lt;li&gt;嗯哼,这就是失控控制法&lt;/li&gt;
+&lt;li&gt;不控制的控制才是最好的控制&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="geek"></category><category term="linux"></category><category term="floss"></category><category term="linux"></category></entry><entry><title>jump into SSD with Yoesmite</title><link href="http://blog.zoomquiet.io/jump-into-ssd.html" rel="alternate"></link><updated>2015-04-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-04-09:jump-into-ssd.html</id><summary type="html">
 &lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
 &lt;h1 id="_2"&gt;新梗&lt;/h1&gt;
 &lt;h2 id="npm"&gt;npm&lt;/h2&gt;

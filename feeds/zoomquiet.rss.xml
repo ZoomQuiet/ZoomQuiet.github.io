@@ -596,41 +596,67 @@ Overwrite the outline node?&lt;/p&gt;
 &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sun, 10 Apr 2016 00:00:00 +0800</pubDate><guid>tag:blog.zoomquiet.io,2016-04-10:linux-linus-not-only-be-fun.html</guid><category>geek</category><category>linux</category><category>floss</category><category>linux</category></item><item><title>jump into SSD with Yoesmite</title><link>http://blog.zoomquiet.io/jump-into-ssd.html</link><description>
 &lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
+&lt;p&gt;不解释, 人家都免费给你升级了哪!&lt;/p&gt;
 &lt;h1 id="_2"&gt;新梗&lt;/h1&gt;
+&lt;p&gt;~ 嗯哼,各种关键记要,不进行解释了…&lt;/p&gt;
 &lt;h2 id="npm"&gt;npm&lt;/h2&gt;
-&lt;p&gt;$ brew install npm
-==&amp;gt; Downloading https://homebrew.bintray.com/bottles/node-0.12.2_1.yosemite.bottle.tar.gz&lt;/p&gt;
-&lt;h6 id="1000"&gt;################################################################## 100.0%&lt;/h6&gt;
-&lt;p&gt;==&amp;gt; Pouring node-0.12.2_1.yosemite.bottle.tar.gz
-==&amp;gt; Caveats
-If you update npm itself, do &lt;span class="caps"&gt;NOT&lt;/span&gt; use the npm update command.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install &lt;span class="nv"&gt;npm&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://homebrew.bintray.com/bottles/node-0.12.2_1.yosemite.bottle.tar.gz
+&lt;span class="c1"&gt;######################################################################## 100.0%&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Pouring node-0.12.2_1.yosemite.bottle.tar.gz
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Caveats
+If you update npm itself, &lt;span class="k"&gt;do&lt;/span&gt; NOT use the npm update command.
 The upstream-recommended way to update npm is:
-  npm install -g npm@latest&lt;/p&gt;
+  npm install -g npm@latest
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Bash completion has been installed to: /usr/local/etc/bash_completion.d&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;是也乎:&lt;/code&gt; 后来也全部升级为 &lt;strong&gt;nvm&lt;/strong&gt; 了&lt;/p&gt;
 &lt;h2 id="subl"&gt;subl&lt;/h2&gt;
-&lt;p&gt;要&lt;/p&gt;
+&lt;p&gt;~ &lt;a href="https://segmentfault.com/q/1010000002397241"&gt;sublime-text - 如何在mac中用命令行时用sublime打开文件 - SegmentFault&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sudo ln -s “/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl” /usr/bin/subl&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id="user"&gt;/User&lt;/h2&gt;
-&lt;p&gt;$ sudo mv /Users /Users_SSD
-$ sudo ln -s /Volumes/Macintosh\ &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/ Users&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo mv /Users /Users_SSD
+$ sudo ln -s /Volumes/Macintosh&lt;span class="se"&gt;\ &lt;/span&gt;HD/Users/ Users
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="amd-actionauthenticatesp"&gt;&lt;span class="caps"&gt;AMD&lt;/span&gt;-Action:authenticate:&lt;span class="caps"&gt;SP&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;~ 为了复用原先的配置,结果引发了这个大问题!&lt;/p&gt;
+&lt;p&gt;参考: &lt;a href="https://grh.am/2015/amd-action-authenticate/"&gt;Grh.am - Pesky “&lt;span class="caps"&gt;AMD&lt;/span&gt;-Action:authenticate:&lt;span class="caps"&gt;SP&lt;/span&gt;” and its Fix&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最后还是小心的对应折腾了一下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将 &lt;code&gt;Users/Shared&lt;/code&gt; 中的全部内容 &lt;code&gt;ditto&lt;/code&gt; 到 &lt;span class="caps"&gt;SSD&lt;/span&gt; 中&lt;/li&gt;
+&lt;li&gt;其它的目录,逐一 &lt;code&gt;ln -s&lt;/code&gt; 过去&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样才好:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/Users༽
+༆  ls -1l
+Guest -&amp;gt; ../Users_SSD/Guest/
+Shared
+zoomq -&amp;gt; /Volumes/MacintoshHD/Users/zoomq/
+...
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="xcode"&gt;XCode&lt;/h2&gt;
-&lt;p&gt;/Volumes/Macintosh\ &lt;span class="caps"&gt;HD&lt;/span&gt;/Applications/Xcode.app/
-$ xcode-select —switch /Applications/Xcode.app&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/Volumes/Macintosh\ HD/Applications/Xcode.app/
+$ xcode-select --switch /Applications/Xcode.app
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="svn"&gt;svn&lt;/h2&gt;
-&lt;p&gt;$ brew install subversion
-==&amp;gt; Installing dependencies for subversion: openssl, apr-util, readline, sqlite, scons
-==&amp;gt; Installing subversion dependency: openssl
-==&amp;gt; Downloading https://www.openssl.org/source/openssl-1.0.2a.tar.gz
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install &lt;span class="nv"&gt;subversion&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Installing dependencies &lt;span class="k"&gt;for&lt;/span&gt; subversion: openssl, apr-util, readline, sqlite, &lt;span class="nv"&gt;scons&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Installing subversion dependency: &lt;span class="nv"&gt;openssl&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://www.openssl.org/source/openssl-1.0.2a.tar.gz
 Already downloaded: /Library/Caches/Homebrew/openssl-1.0.2a-1.tar.gz
-==&amp;gt; perl ./Configure —prefix=/opt/bin/homebrew/Cellar/openssl/1.0.2a-1 —openssldir=/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;
-==&amp;gt; make depend
-==&amp;gt; make
-==&amp;gt; make test
-==&amp;gt; make install &lt;span class="caps"&gt;MANDIR&lt;/span&gt;=/opt/bin/homebrew/Cellar/openssl/1.0.2a-1/share/man &lt;span class="caps"&gt;MANSUFFIX&lt;/span&gt;=ssl
-installing &lt;span class="caps"&gt;CA&lt;/span&gt;.sh
-usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file
-       cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file … target_directory
-make[1]: &lt;strong&gt;&lt;em&gt; [install] Error 64
-make: &lt;/em&gt;&lt;/strong&gt; [install_sw] Error 1&lt;/p&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; perl ./Configure --prefix&lt;span class="o"&gt;=&lt;/span&gt;/opt/bin/homebrew/Cellar/openssl/1.0.2a-1 --openssldir&lt;span class="o"&gt;=&lt;/span&gt;/Volumes/Macintosh &lt;span class="nv"&gt;HD&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; make &lt;span class="nv"&gt;depend&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; &lt;span class="nv"&gt;make&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; make &lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; make install &lt;span class="nv"&gt;MANDIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/opt/bin/homebrew/Cellar/openssl/1.0.2a-1/share/man &lt;span class="nv"&gt;MANSUFFIX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;ssl
+installing CA.sh
+usage: cp &lt;span class="o"&gt;[&lt;/span&gt;-R &lt;span class="o"&gt;[&lt;/span&gt;-H &lt;span class="p"&gt;|&lt;/span&gt; -L &lt;span class="p"&gt;|&lt;/span&gt; -P&lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-fi &lt;span class="p"&gt;|&lt;/span&gt; -n&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-apvX&lt;span class="o"&gt;]&lt;/span&gt; source_file target_file
+       cp &lt;span class="o"&gt;[&lt;/span&gt;-R &lt;span class="o"&gt;[&lt;/span&gt;-H &lt;span class="p"&gt;|&lt;/span&gt; -L &lt;span class="p"&gt;|&lt;/span&gt; -P&lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-fi &lt;span class="p"&gt;|&lt;/span&gt; -n&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-apvX&lt;span class="o"&gt;]&lt;/span&gt; source_file ... target_directory
+make&lt;span class="o"&gt;[&lt;/span&gt;1&lt;span class="o"&gt;]&lt;/span&gt;: *** &lt;span class="o"&gt;[&lt;/span&gt;install&lt;span class="o"&gt;]&lt;/span&gt; Error 64
+make: *** &lt;span class="o"&gt;[&lt;/span&gt;install_sw&lt;span class="o"&gt;]&lt;/span&gt; Error 1
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://git.io/brew-troubleshooting&lt;/p&gt;
 &lt;p&gt;These open issues may also help:
 openssl: apply yosemite certificate fix (https://github.com/Homebrew/homebrew/pull/38495)
@@ -652,54 +678,63 @@ problem with Python 2.7.9 and OpenSSL 1.0.2 (https://github.com/Homebrew/homebr
 &lt;p&gt;Python modules have been installed and Homebrew’s site-packages is not
 in your Python sys.path, so you will not be able to import the modules
 this formula installed. If you plan to develop with these modules,
-please run:
-  mkdir -p /Users/zoomq/Library/Python/2.7/lib/python/site-packages
-  echo ‘import site; site.addsitedir(“/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/lib/python2.7/site-packages”)’ &amp;gt;&amp;gt; /Users/zoomq/Library/Python/2.7/lib/python/site-packages/homebrew.pth
-==&amp;gt; Summary
-🍺  /opt/bin/homebrew/Cellar/sip/4.16.5: 10 files, 864K, built in 5 seconds&lt;/p&gt;
-&lt;p&gt;$ brew install pyqt
-==&amp;gt; Installing pyqt dependency: qt
-==&amp;gt; Downloading https://download.qt.io/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.tgz&lt;/p&gt;
-&lt;p&gt;$ brew install pyqt
-==&amp;gt; Downloading https://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.11.3/PyQt-mac-gpl-4.11.3.tar.gz
-Already downloaded: /Library/Caches/Homebrew/pyqt-4.11.3.tar.gz
-==&amp;gt; python configure.py —confirm-license —bindir=/opt/bin/homebrew/Cellar/pyqt/4.11.3/bin —destdir=/opt&lt;/p&gt;
-&lt;p&gt;Error: /Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/opt/qt/bin/qmake failed to create a
-makefile. Make sure you have a working Qt qmake on your &lt;span class="caps"&gt;PATH&lt;/span&gt; or use the -q
-argument to explicitly specify a working Qt qmake.
-Determining the layout of your Qt installation…&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;READ&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt;: https://git.io/brew-troubleshooting&lt;/p&gt;
-&lt;p&gt;/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:878:in `initialize’: Failed to connect to: https://api.github.com/search/issues?q=pyqt+repo:Homebrew/homebrew+in:title+state:open&amp;amp;per_page=100 (GitHub::Error)
-getaddrinfo: nodename nor servname provided, or not known&lt;/p&gt;
-&lt;p&gt;$ brew search qmake
-No formula found for “qmake”.
-Searching pull requests…
-Closed pull requests:
-qmake gets installed by &lt;span class="caps"&gt;QT&lt;/span&gt; (https://github.com/Homebrew/homebrew/pull/31336)
-Added patch for XCode4 support for qmake. (https://github.com/Homebrew/homebrew/pull/10475)
-PyQT5.rb Specify qt5 version of qmake. (https://github.com/Homebrew/homebrew/pull/27059)
-PyQt: patch to fix handling of qmake inline comments (https://github.com/Homebrew/homebrew/pull/25225)
-qscintilla2: define 10.9 qmake make spec for lib and python module (https://github.com/Homebrew/homebrew/pull/25882)&lt;/p&gt;
+please run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2.7&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;packages&lt;/span&gt;
+  &lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;'import site; site.addsitedir("/Volumes/Macintosh HD/Users/zoomq/lib/python2.7/site-packages")'&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2.7&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;homebrew&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pth&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Summary&lt;/span&gt;
+&lt;span class="err"&gt;🍺&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sip&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;4.16&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;864&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;built&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt;
+
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pyqt&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Installing&lt;/span&gt; &lt;span class="n"&gt;pyqt&lt;/span&gt; &lt;span class="n"&gt;dependency&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;qt&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Downloading&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;official_releases&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;qt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;4.8&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;4.8&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;qt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;everywhere&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;opensource&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;4.8&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;6.&lt;/span&gt;&lt;span class="n"&gt;tgz&lt;/span&gt;
+
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pyqt&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Downloading&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;downloads&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pyqt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;PyQt4&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;PyQt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;4.11&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;PyQt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mac&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;gpl&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;4.11&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;3.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt;
+&lt;span class="n"&gt;Already&lt;/span&gt; &lt;span class="n"&gt;downloaded&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Caches&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pyqt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;4.11&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;3.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;configure&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;confirm&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;license&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;bindir&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Cellar&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pyqt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;4.11&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;destdir&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;
+
+&lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Volumes&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Macintosh&lt;/span&gt; &lt;span class="n"&gt;HD&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;qt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;qmake&lt;/span&gt; &lt;span class="n"&gt;failed&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;create&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="n"&gt;makefile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Make&lt;/span&gt; &lt;span class="n"&gt;sure&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;have&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;working&lt;/span&gt; &lt;span class="n"&gt;Qt&lt;/span&gt; &lt;span class="n"&gt;qmake&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;
+&lt;span class="n"&gt;argument&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;explicitly&lt;/span&gt; &lt;span class="n"&gt;specify&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;working&lt;/span&gt; &lt;span class="n"&gt;Qt&lt;/span&gt; &lt;span class="n"&gt;qmake&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Determining&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;Qt&lt;/span&gt; &lt;span class="n"&gt;installation&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="n"&gt;READ&lt;/span&gt; &lt;span class="n"&gt;THIS&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;troubleshooting&lt;/span&gt;
+
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Frameworks&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Ruby&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Versions&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ruby&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;878&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;initialize&lt;/span&gt;&lt;span class="s1"&gt;': Failed to connect to: https://api.github.com/search/issues?q=pyqt+repo:Homebrew/homebrew+in:title+state:open&amp;amp;per_page=100 (GitHub::Error)&lt;/span&gt;
+&lt;span class="n"&gt;getaddrinfo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;nodename&lt;/span&gt; &lt;span class="n"&gt;nor&lt;/span&gt; &lt;span class="n"&gt;servname&lt;/span&gt; &lt;span class="n"&gt;provided&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;known&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;search&lt;/span&gt; &lt;span class="n"&gt;qmake&lt;/span&gt;
+&lt;span class="n"&gt;No&lt;/span&gt; &lt;span class="n"&gt;formula&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="s2"&gt;"qmake"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Searching&lt;/span&gt; &lt;span class="n"&gt;pull&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Closed&lt;/span&gt; &lt;span class="n"&gt;pull&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="n"&gt;qmake&lt;/span&gt; &lt;span class="n"&gt;gets&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;QT&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pull&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;31336&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Added&lt;/span&gt; &lt;span class="n"&gt;patch&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;XCode4&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;qmake&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pull&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;10475&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;PyQT5&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt; &lt;span class="n"&gt;Specify&lt;/span&gt; &lt;span class="n"&gt;qt5&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;qmake&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pull&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;27059&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;PyQt&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;patch&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;fix&lt;/span&gt; &lt;span class="n"&gt;handling&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;qmake&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt; &lt;span class="n"&gt;comments&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pull&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;25225&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;qscintilla2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;define&lt;/span&gt; &lt;span class="mf"&gt;10.9&lt;/span&gt; &lt;span class="n"&gt;qmake&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;spec&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;lib&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;homebrew&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pull&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;25882&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;先安装 &lt;a href="http://xquartz.macosforge.org/landing/"&gt;XQuartz&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;重启&lt;/li&gt;
-&lt;li&gt;再:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;$ brew install pyqt
-==&amp;gt; Installing pyqt dependency: qt
-==&amp;gt; Downloading https://download.qt.io/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.t
+&lt;p&gt;再:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install &lt;span class="nv"&gt;pyqt&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Installing pyqt dependency: &lt;span class="nv"&gt;qt&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://download.qt.io/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.t
 Already downloaded: /Library/Caches/Homebrew/qt-4.8.6.tar.gz
-==&amp;gt; Downloading https://raw.githubusercontent.com/DomT4/scripts/440e3cafde5bf6ec6f50cd28fa5bf89c280f1b53/H
-Already downloaded: /Library/Caches/Homebrew/qt—patch-57246a33460246118a1fab7460c79f2077d3a929.diff
-==&amp;gt; Patching
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://raw.githubusercontent.com/DomT4/scripts/440e3cafde5bf6ec6f50cd28fa5bf89c280f1b53/H
+Already downloaded: /Library/Caches/Homebrew/qt--patch-57246a33460246118a1fab7460c79f2077d3a929.diff
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Patching
 patching file src/gui/dialogs/qcolordialog_mac.mm
 patching file src/gui/dialogs/qfiledialog_mac.mm
 patching file src/gui/dialogs/qfontdialog_mac.mm
 patching file src/gui/kernel/qapplication_mac.mm
 patching file src/gui/kernel/qcocoaapplication_mac.mm
 patching file src/gui/kernel/qcocoaapplicationdelegate_mac.mm
-Hunk #4 succeeded at 295 (offset -13 lines).
-Hunk #5 succeeded at 342 (offset -13 lines).
+Hunk &lt;span class="c1"&gt;#4 succeeded at 295 (offset -13 lines).&lt;/span&gt;
+Hunk &lt;span class="c1"&gt;#5 succeeded at 342 (offset -13 lines).&lt;/span&gt;
 patching file src/gui/kernel/qcocoaapplicationdelegate_mac_p.h
 patching file src/gui/kernel/qcocoamenuloader_mac.mm
 patching file src/gui/kernel/qcocoasharedwindowmethods_mac_p.h
@@ -710,16 +745,22 @@ patching file src/gui/styles/qmacstyle_mac.mm
 patching file src/gui/util/qsystemtrayicon_mac.mm
 patching file src/gui/widgets/qcocoamenu_mac.mm
 patching file src/gui/widgets/qmenu_mac.mm
-==&amp;gt; ./configure -prefix /opt/bin/homebrew/Cellar/qt/4.8.6 -system-zlib -qt-libtiff -qt-libpng -qt-libjpeg
-==&amp;gt; make&lt;/p&gt;
-&lt;p&gt;$ which qmake
-/Volumes/Macintosh &lt;span class="caps"&gt;HD&lt;/span&gt;/Users/zoomq/bin/qmake&lt;/p&gt;
-&lt;p&gt;$ /opt/bin/homebrew/Cellar/qt/4.8.6/bin/qmake -v
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; ./configure -prefix /opt/bin/homebrew/Cellar/qt/4.8.6 -system-zlib -qt-libtiff -qt-libpng -qt-libjpeg
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; make
+
+
+$ which qmake
+/Volumes/Macintosh HD/Users/zoomq/bin/qmake
+
+
+$ /opt/bin/homebrew/Cellar/qt/4.8.6/bin/qmake -v
 QMake version 2.01a
-Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib&lt;/p&gt;
-&lt;p&gt;$ qmake -v
+Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib
+
+$ qmake -v
 QMake version 2.01a
-Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib&lt;/p&gt;
+Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;哈哈!!!上百M 的怪物哪…&lt;/p&gt;
 &lt;h3 id="qt"&gt;手编 Qt&lt;/h3&gt;
 &lt;ul&gt;
@@ -727,71 +768,85 @@ Using Qt version 4.8.6 in /opt/bin/homebrew/Cellar/qt/4.8.6/lib&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id="150416-try-again"&gt;150416 try again&lt;/h2&gt;
 &lt;p&gt;删除 /opt/bin/homebrew 的非常安装&lt;/p&gt;
-&lt;p&gt;$ brew install qt sip pyqt
-==&amp;gt; Downloading https://homebrew.bintray.com/bottles/qt-4.8.6.yosemite.bottle.6.tar.gz&lt;/p&gt;
-&lt;h6 id="1000_1"&gt;################################################################## 100.0%&lt;/h6&gt;
-&lt;p&gt;==&amp;gt; Pouring qt-4.8.6.yosemite.bottle.6.tar.gz
-==&amp;gt; Caveats
-We agreed to the Qt opensource license for you.
-If this is unacceptable you should uninstall.&lt;/p&gt;
-&lt;p&gt;.app bundles were installed.
-Run &lt;code&gt;brew linkapps qt&lt;/code&gt; to symlink these to /Applications.
-==&amp;gt; Summary
-🍺  /usr/local/Cellar/qt/4.8.6: 2790 files, 122M&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install qt sip &lt;span class="nv"&gt;pyqt&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://homebrew.bintray.com/bottles/qt-4.8.6.yosemite.bottle.6.tar.gz
+&lt;span class="c1"&gt;######################################################################## 100.0%&lt;/span&gt;
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Pouring qt-4.8.6.yosemite.bottle.6.tar.gz
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Caveats
+We agreed to the Qt opensource license &lt;span class="k"&gt;for&lt;/span&gt; you.
+If this is unacceptable you should uninstall.
+
+.app bundles were installed.
+Run &lt;span class="sb"&gt;`&lt;/span&gt;brew linkapps qt&lt;span class="sb"&gt;`&lt;/span&gt; to symlink these to /Applications.
+&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Summary
+🍺  /usr/local/Cellar/qt/4.8.6: &lt;span class="m"&gt;2790&lt;/span&gt; files, 122M
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;…&lt;/p&gt;
-&lt;p&gt;==&amp;gt; ./configure —prefix=/usr/local/Cellar/python/2.7.9 —enable-ipv6 —datarootdir=/usr/local/Cellar/pyth
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;==&amp;gt; ./configure --prefix=/usr/local/Cellar/python/2.7.9 --enable-ipv6 --datarootdir=/usr/local/Cellar/pyth
 ==&amp;gt; make
-==&amp;gt; make install &lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;=/usr/local/Cellar/python/2.7.9
-==&amp;gt; make frameworkinstallextras &lt;span class="caps"&gt;PYTHONAPPSDIR&lt;/span&gt;=/usr/local/Cellar/python/2.7.9/share/python
-==&amp;gt; Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-15.0.tar.gz&lt;/p&gt;
-&lt;h6 id="1000_2"&gt;################################################################## 100.0%&lt;/h6&gt;
-&lt;p&gt;==&amp;gt; Downloading https://pypi.python.org/packages/source/p/pip/pip-6.1.0.tar.gz&lt;/p&gt;
-&lt;h6 id="1000_3"&gt;################################################################## 100.0%&lt;/h6&gt;
-&lt;p&gt;==&amp;gt; Caveats
+==&amp;gt; make install PYTHONAPPSDIR=/usr/local/Cellar/python/2.7.9
+==&amp;gt; make frameworkinstallextras PYTHONAPPSDIR=/usr/local/Cellar/python/2.7.9/share/python
+==&amp;gt; Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-15.0.tar.gz
+######################################################################## 100.0%
+==&amp;gt; Downloading https://pypi.python.org/packages/source/p/pip/pip-6.1.0.tar.gz
+######################################################################## 100.0%
+==&amp;gt; Caveats
 Pip and setuptools have been installed. To update them
-  pip install —upgrade pip setuptools&lt;/p&gt;
-&lt;p&gt;You can install Python packages with
-  pip install &lt;package&gt;&lt;/package&gt;&lt;/p&gt;
-&lt;p&gt;They will install into the site-package directory /usr/local/lib/python2.7/site-packages&lt;/p&gt;
-&lt;p&gt;See: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md&lt;/p&gt;
-&lt;p&gt;.app bundles were installed.
-Run &lt;code&gt;brew linkapps python&lt;/code&gt; to symlink these to /Applications.&lt;/p&gt;
-&lt;p&gt;…&lt;/p&gt;
-&lt;p&gt;==&amp;gt; Pouring sip-4.16.5.yosemite.bottle.1.tar.gz
+  pip install --upgrade pip setuptools
+
+You can install Python packages with
+  pip install &amp;lt;package&amp;gt;
+
+They will install into the site-package directory
+  /usr/local/lib/python2.7/site-packages
+
+See: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md
+
+.app bundles were installed.
+Run `brew linkapps python` to symlink these to /Applications.
+
+...
+
+==&amp;gt; Pouring sip-4.16.5.yosemite.bottle.1.tar.gz
 Traceback (most recent call last):
-  File “&lt;string&gt;“, line 1, in &lt;module&gt;
-AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+  File "&amp;lt;string&amp;gt;", line 1, in &amp;lt;module&amp;gt;
+AttributeError: 'module' object has no attribute 'getusersitepackages'
 Traceback (most recent call last):
-  File “&lt;string&gt;“, line 1, in &lt;module&gt;
-AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+  File "&amp;lt;string&amp;gt;", line 1, in &amp;lt;module&amp;gt;
+AttributeError: 'module' object has no attribute 'getusersitepackages'
 ==&amp;gt; Caveats
-The sip-dir for Python is /usr/local/share/sip.&lt;/module&gt;&lt;/string&gt;&lt;/module&gt;&lt;/string&gt;&lt;/p&gt;
-&lt;p&gt;Python modules have been installed and Homebrew’s site-packages is not
+The sip-dir for Python is /usr/local/share/sip.
+
+Python modules have been installed and Homebrew's site-packages is not
 in your Python sys.path, so you will not be able to import the modules
 this formula installed. If you plan to develop with these modules,
 please run:
   mkdir -p
-  echo ‘import site; site.addsitedir(“/usr/local/lib/python2.7/site-packages”)’ &amp;gt;&amp;gt; homebrew.pth
+  echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' &amp;gt;&amp;gt; homebrew.pth
 ==&amp;gt; Summary
-🍺  /usr/local/Cellar/sip/4.16.5: 10 files, 864K&lt;/p&gt;
-&lt;p&gt;…&lt;/p&gt;
-&lt;p&gt;==&amp;gt; Pouring pyqt-4.11.3.yosemite.bottle.tar.gz
+🍺  /usr/local/Cellar/sip/4.16.5: 10 files, 864K
+
+...
+
+==&amp;gt; Pouring pyqt-4.11.3.yosemite.bottle.tar.gz
 Traceback (most recent call last):
-  File “&lt;string&gt;“, line 1, in &lt;module&gt;
-AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+  File "&amp;lt;string&amp;gt;", line 1, in &amp;lt;module&amp;gt;
+AttributeError: 'module' object has no attribute 'getusersitepackages'
 Traceback (most recent call last):
-  File “&lt;string&gt;“, line 1, in &lt;module&gt;
-AttributeError: ‘module’ object has no attribute ‘getusersitepackages’
+  File "&amp;lt;string&amp;gt;", line 1, in &amp;lt;module&amp;gt;
+AttributeError: 'module' object has no attribute 'getusersitepackages'
 ==&amp;gt; Caveats
-Phonon support is broken.&lt;/module&gt;&lt;/string&gt;&lt;/module&gt;&lt;/string&gt;&lt;/p&gt;
-&lt;p&gt;Python modules have been installed and Homebrew’s site-packages is not
+Phonon support is broken.
+
+Python modules have been installed and Homebrew's site-packages is not
 in your Python sys.path, so you will not be able to import the modules
 this formula installed. If you plan to develop with these modules,
 please run:
   mkdir -p
-  echo ‘import site; site.addsitedir(“/usr/local/lib/python2.7/site-packages”)’ &amp;gt;&amp;gt; homebrew.pth
+  echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' &amp;gt;&amp;gt; homebrew.pth
 ==&amp;gt; Summary
-🍺  /usr/local/Cellar/pyqt/4.11.3: 560 files, 19M&lt;/p&gt;
+🍺  /usr/local/Cellar/pyqt/4.11.3: 560 files, 19M
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id="_5"&gt;回顾&lt;/h1&gt;
 &lt;p&gt;宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾!&lt;/p&gt;
 &lt;p&gt;唯三的折腾:&lt;/p&gt;
@@ -939,6 +994,7 @@ The new osxfuse file system bundle needs to be installed by the root user:
 都是可以正当加载上 &lt;code&gt;Plan&lt;/code&gt; 的内核库, 然后就可以对家庭服务器的所有硬盘,远程加载为本地目录了..&lt;/p&gt;
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;160419 增补后来的折腾&lt;/li&gt;
 &lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
 &lt;li&gt;140505 快速简述完成&lt;/li&gt;
 &lt;li&gt;140110 起意,总结&lt;/li&gt;

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/pythonic.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2016-04-17T00:00:00+08:00</updated><entry><title>如何在 Leo 中协作?!</title><link href="http://blog.zoomquiet.io/how2collaborate-with-leo.html" rel="alternate"></link><updated>2016-04-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-17:how2collaborate-with-leo.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/pythonic.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2016-05-31T00:00:00+08:00</updated><entry><title>天然样循环</title><link href="http://blog.zoomquiet.io/nedbat-loop-iter.html" rel="alternate"></link><updated>2016-05-31T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-05-31:nedbat-loop-iter.html</id><summary type="html">
+&lt;p&gt;来自 @nedbat 的分享:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://nedbatchelder.com/text/iter.html"&gt;Ned Batchelder: Loop Like A Native&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="_1"&gt;是也乎&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;160613 空先发&lt;/li&gt;
+&lt;li&gt;160531 动念&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="pythonic"></category><category term="pythoneer"></category><category term="loop"></category><category term="coder"></category></entry><entry><title>如何在 Leo 中协作?!</title><link href="http://blog.zoomquiet.io/how2collaborate-with-leo.html" rel="alternate"></link><updated>2016-04-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-17:how2collaborate-with-leo.html</id><summary type="html">
 &lt;h1 id="leo"&gt;Leo?&lt;/h1&gt;
 &lt;p&gt;~ 嗯哼&lt;/p&gt;
 &lt;p&gt;研究什么是 Leo ? 非要一句话说清查的话,只能是:&lt;/p&gt;

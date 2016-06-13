@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title></title><link>http://blog.zoomquiet.io/</link><description></description><atom:link href="http://blog.zoomquiet.io/feeds/zoomquiet.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 17 Apr 2016 00:00:00 +0800</lastBuildDate><item><title>如何在 Leo 中协作?!</title><link>http://blog.zoomquiet.io/how2collaborate-with-leo.html</link><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title></title><link>http://blog.zoomquiet.io/</link><description></description><atom:link href="http://blog.zoomquiet.io/feeds/zoomquiet.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 31 May 2016 00:00:00 +0800</lastBuildDate><item><title>天然样循环</title><link>http://blog.zoomquiet.io/nedbat-loop-iter.html</link><description>
+&lt;p&gt;来自 @nedbat 的分享:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://nedbatchelder.com/text/iter.html"&gt;Ned Batchelder: Loop Like A Native&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="_1"&gt;是也乎&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;160613 空先发&lt;/li&gt;
+&lt;li&gt;160531 动念&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 31 May 2016 00:00:00 +0800</pubDate><guid>tag:blog.zoomquiet.io,2016-05-31:nedbat-loop-iter.html</guid><category>pythonic</category><category>pythoneer</category><category>loop</category><category>coder</category></item><item><title>如何在 Leo 中协作?!</title><link>http://blog.zoomquiet.io/how2collaborate-with-leo.html</link><description>
 &lt;h1 id="leo"&gt;Leo?&lt;/h1&gt;
 &lt;p&gt;~ 嗯哼&lt;/p&gt;
 &lt;p&gt;研究什么是 Leo ? 非要一句话说清查的话,只能是:&lt;/p&gt;
@@ -5580,4 +5587,26 @@ implementation in collections.deque you’ll probably end up missing the library
 &lt;ul&gt;
 &lt;li&gt;1406?? &lt;/li&gt;
 &lt;li&gt;140618 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 10 Nov 2009 00:00:00 +0800</pubDate><guid>tag:blog.zoomquiet.io,2009-11-10:091110_jacob-what2write.html</guid><category>Jacob</category><category>Pythoneer</category><category>Zh</category></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 10 Nov 2009 00:00:00 +0800</pubDate><guid>tag:blog.zoomquiet.io,2009-11-10:091110_jacob-what2write.html</guid><category>Jacob</category><category>Pythoneer</category><category>Zh</category></item><item><title>KnewOne-talk 之 大妈 篇</title><link>http://blog.zoomquiet.io/cipher-who-s-gonna.html</link><description>
+&lt;h1 id="cipher"&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;&lt;span class="caps"&gt;CIPHER&lt;/span&gt;”&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;who's gonna tell you when
+It's too late
+Who's gonna tell you things
+Aren't so great
+You can't go on
+Thinking nothing is wrong
+Who's gonna drive you home tonight
+
+Who's gonna pick you up
+When you full
+Who's gonna hang it up
+When you call
+who's gonna pay attation
+To you dreams
+Who's gonna Plug them ears
+When you scream
+
+Who's gonna....
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="from"&gt;from&lt;/h2&gt;
+&lt;p&gt;成田美名的漫画,当时一见此诗就入了心&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Mon, 11 Nov 1996 11:11:00 +0800</pubDate><guid>tag:blog.zoomquiet.io,1996-11-11:cipher-who-s-gonna.html</guid><category>manga</category><category>Livin</category><category>Zoomq</category></item></channel></rss>

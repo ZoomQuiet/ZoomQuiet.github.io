@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/index.html</loc>
-<lastmod>2016-04-19T18:00:31-00:00</lastmod>
+<lastmod>2016-06-13T09:42:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2016-04-19T18:00:31-00:00</lastmod>
+<lastmod>2016-06-13T09:42:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2016-04-19T18:00:31-00:00</lastmod>
+<lastmod>2016-06-13T09:42:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2016-04-19T18:00:31-00:00</lastmod>
+<lastmod>2016-06-13T09:42:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/pages/about.html</loc>
-<lastmod>2015-04-08T22:11:22+08:00</lastmod>
+<lastmod>2015-04-09T11:11:22+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -48,6 +48,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/pages/hello-world.html</loc>
 <lastmod>2013-08-09T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/nedbat-loop-iter.html</loc>
+<lastmod>2016-05-31T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -340,6 +347,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/cipher-who-s-gonna.html</loc>
+<lastmod>1996-11-11T11:11:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/category/author.html</loc>
 <lastmod>2013-11-17T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -369,7 +383,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/category/pythonic.html</loc>
-<lastmod>2016-04-17T00:00:00+08:06</lastmod>
+<lastmod>2016-05-31T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -389,8 +403,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/theme.html</loc>
-<lastmod>2016-04-15T00:00:00+08:06</lastmod>
+<loc>http://blog.zoomquiet.io/tag/think.html</loc>
+<lastmod>2013-11-11T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -501,8 +515,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/chaos.html</loc>
+<lastmod>2014-12-12T18:18:18+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/pythonic.html</loc>
-<lastmod>2016-04-17T00:00:00+08:06</lastmod>
+<lastmod>2016-05-31T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -515,8 +536,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/chaos.html</loc>
-<lastmod>2014-12-12T18:18:18+08:06</lastmod>
+<loc>http://blog.zoomquiet.io/tag/floss.html</loc>
+<lastmod>2016-04-10T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -536,8 +557,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/floss.html</loc>
-<lastmod>2016-04-10T00:00:00+08:06</lastmod>
+<loc>http://blog.zoomquiet.io/tag/theme.html</loc>
+<lastmod>2016-04-15T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -648,6 +669,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/coder.html</loc>
+<lastmod>2016-05-31T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/leo.html</loc>
 <lastmod>2016-04-17T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -704,15 +732,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/think.html</loc>
-<lastmod>2013-11-11T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://blog.zoomquiet.io/tag/pythoneer.html</loc>
-<lastmod>2014-12-12T18:18:18+08:06</lastmod>
+<lastmod>2016-05-31T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -760,6 +781,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/manga.html</loc>
+<lastmod>1996-11-11T11:11:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/ekr.html</loc>
 <lastmod>2016-04-17T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -767,8 +795,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/loop.html</loc>
+<lastmod>2016-05-31T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2016-04-17T00:00:00+08:06</lastmod>
+<lastmod>2016-05-31T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

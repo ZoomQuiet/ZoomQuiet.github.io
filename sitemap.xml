@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/index.html</loc>
-<lastmod>2016-06-13T09:54:57-00:00</lastmod>
+<lastmod>2016-06-20T12:43:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2016-06-13T09:54:57-00:00</lastmod>
+<lastmod>2016-06-20T12:43:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2016-06-13T09:54:57-00:00</lastmod>
+<lastmod>2016-06-20T12:43:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2016-06-13T09:54:57-00:00</lastmod>
+<lastmod>2016-06-20T12:43:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -48,6 +48,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/pages/hello-world.html</loc>
 <lastmod>2013-08-09T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/160619-protocol4dying.html</loc>
+<lastmod>2016-06-19T21:12:21+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -376,7 +383,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/category/imho.html</loc>
-<lastmod>2014-12-12T18:18:18+08:06</lastmod>
+<lastmod>2016-06-19T21:12:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -522,14 +529,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/chaos.html</loc>
-<lastmod>2014-12-12T18:18:18+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://blog.zoomquiet.io/tag/pythonic.html</loc>
+<loc>http://blog.zoomquiet.io/tag/coder.html</loc>
 <lastmod>2016-05-31T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -543,8 +543,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/floss.html</loc>
-<lastmod>2016-04-10T00:00:00+08:06</lastmod>
+<loc>http://blog.zoomquiet.io/tag/chaos.html</loc>
+<lastmod>2016-06-19T21:12:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -614,7 +614,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/dama.html</loc>
-<lastmod>2014-12-12T18:18:18+08:06</lastmod>
+<lastmod>2016-06-19T21:12:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -683,7 +683,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/coder.html</loc>
+<loc>http://blog.zoomquiet.io/tag/pythonic.html</loc>
 <lastmod>2016-05-31T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -718,6 +718,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/floss.html</loc>
+<lastmod>2016-04-10T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/press.html</loc>
 <lastmod>2014-08-08T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -747,7 +754,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/pythoneer.html</loc>
-<lastmod>2016-05-31T00:00:00+08:06</lastmod>
+<lastmod>2016-06-19T21:12:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -817,7 +824,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2016-05-31T00:00:00+08:06</lastmod>
+<lastmod>2016-06-19T21:12:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

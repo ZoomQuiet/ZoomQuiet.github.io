@@ -172,9 +172,9 @@ rMBP 13吋,16G 内存, 512G &lt;span class="caps"&gt;SSD&lt;/span&gt; ;-)
 &lt;li&gt;用 pip 安装 &lt;code&gt;PyQt4&lt;/code&gt; 就好&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:&lt;/p&gt;
-&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;`bash&lt;/p&gt;
-&lt;h1 id="bashrc-for-running-leo"&gt;\~/.bashrc for running Leo&lt;/h1&gt;
-&lt;p&gt;alias leolanch=”python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;” “`&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# \~/.bashrc for running Leo
+alias leolanch="python /opt/bin/leo/launchLeo.py \&amp;gt;\&amp;gt; /dev/null 2\&amp;gt;&amp;amp;1 &amp;amp;"
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="dock"&gt;Dock&lt;/h3&gt;
 &lt;p&gt;是的,人生第一个 &lt;span class="caps"&gt;APPLE&lt;/span&gt; 软件就是为了 Dock 才突破心障的, 然后就开始了 App Store 的无尽挖掘..&lt;/p&gt;
 &lt;p&gt;当前习惯的组合:&lt;/p&gt;

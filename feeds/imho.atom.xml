@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/imho.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-12-12T18:18:18+08:00</updated><entry><title>流行之恶</title><link href="http://blog.zoomquiet.io/141212-pop-is-evil.html" rel="alternate"></link><updated>2014-12-12T18:18:18+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:141212-pop-is-evil.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/imho.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2014-12-12T18:18:18+08:00</updated><entry><title>流行之恶</title><link href="http://blog.zoomquiet.io/141212-pop-is-evil.html" rel="alternate"></link><published>2014-12-12T18:18:18+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:141212-pop-is-evil.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="popular_science_logo.png" src="http://zoomq.qiniudn.com/ZQCollection/logo/popular_science_logo.png?watermark/2/text/Wm9vbS5RdWlldA==/fill/V2hpdGU=/fontsize/320/dissolve/85|imageView2/2/w/320"/&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hello,
     你觉得有生命力流行的东西就是好的么,
@@ -121,7 +121,7 @@
 &lt;ul&gt;
 &lt;li&gt;141212 后台运算了两天,尝试输出第一次&lt;/li&gt;
 &lt;li&gt;141210 被戳提问&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="Chaos"></category></entry><entry><title>论如何艺术的骂人</title><link href="http://blog.zoomquiet.io/141212-hierarchy-of-disagreement.html" rel="alternate"></link><updated>2014-12-12T12:12:12+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:141212-hierarchy-of-disagreement.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="Chaos"></category></entry><entry><title>论如何艺术的骂人</title><link href="http://blog.zoomquiet.io/141212-hierarchy-of-disagreement.html" rel="alternate"></link><published>2014-12-12T12:12:12+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:141212-hierarchy-of-disagreement.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="141212-ask-binghe.lisp.jpg（JPEG 图像，1024x650 像素）" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-ask-binghe.lisp.jpg?imageView2/2/w/512"/&gt;&lt;/p&gt;
 &lt;p&gt;人称伞哥的传奇人物: &lt;a href="http://www.ituring.com.cn/article/553"&gt;田春&lt;/a&gt; 怎么应对的呢?…&lt;/p&gt;
 &lt;!--more--&gt;
@@ -163,7 +163,7 @@
 &lt;h2 id="change-log"&gt;Change log&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;141212 有感速发&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>熟练使用文学编程（literate programming）是怎样一番体验?</title><link href="http://blog.zoomquiet.io/141209-leo-literate-programming.html" rel="alternate"></link><updated>2014-12-09T21:21:21+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-09:141209-leo-literate-programming.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>熟练使用文学编程（literate programming）是怎样一番体验?</title><link href="http://blog.zoomquiet.io/141209-leo-literate-programming.html" rel="alternate"></link><published>2014-12-09T21:21:21+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-09:141209-leo-literate-programming.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="Literate_Programming_book_cover" src="http://upload.wikimedia.org/wikipedia/en/thumb/6/62/Literate_Programming_book_cover.jpg/220px-Literate_Programming_book_cover.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.zhihu.com/question/26978956"&gt;熟练使用文学编程（literate programming）是怎样一番体验? - 知乎&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;然后有人戳了俺…&lt;/p&gt;
@@ -219,7 +219,7 @@
 &lt;h2 id="changlog"&gt;Changlog&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;141209 受邀回答&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>论 Shooter 的关闭</title><link href="http://blog.zoomquiet.io/141122-shotter-death.html" rel="alternate"></link><updated>2014-11-22T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-22:141122-shotter-death.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>论 Shooter 的关闭</title><link href="http://blog.zoomquiet.io/141122-shotter-death.html" rel="alternate"></link><published>2014-11-22T11:11:11+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-22:141122-shotter-death.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="529.jpg (175×260)" src="http://m.ms10010.com/image/pic/201205/thumb/529.jpg"/&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;And in the naked light I saw ten thousand people, maybe more. 
 People talking without speaking, people hearing without listening. 
@@ -268,7 +268,7 @@ People writing songs that voices never shared, no one dared disturb the sound of
 &lt;ul&gt;
 &lt;li&gt;141125 没忍住…&lt;/li&gt;
 &lt;li&gt;141121 起意&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>论 OhLife 的倒掉</title><link href="http://blog.zoomquiet.io/140921-ohlife-death.html" rel="alternate"></link><updated>2014-09-21T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-21:140921-ohlife-death.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>论 OhLife 的倒掉</title><link href="http://blog.zoomquiet.io/140921-ohlife-death.html" rel="alternate"></link><published>2014-09-21T11:11:11+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-21:140921-ohlife-death.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="ohlife" src="http://a.36krcnd.com/photo/5dfa0868b7808b19b22eb4617a374923.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://www.36kr.com/p/2934.html"&gt;OhLife:抛弃你的日记本吧!来自Y Combinator的第三个项目 | 36氪&lt;/a&gt;&lt;/p&gt;
@@ -360,7 +360,7 @@ If you had the premium version, a few weeks after we shut OhLife down we’ll re
 &lt;h2 id="changlog"&gt;Changlog&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140921 官方通知邮件引发直觉思考&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>Pythonic口号的Pivot</title><link href="http://blog.zoomquiet.io/140916-pycon-slogen.html" rel="alternate"></link><updated>2014-09-16T19:42:42+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-16:140916-pycon-slogen.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>Pythonic口号的Pivot</title><link href="http://blog.zoomquiet.io/140916-pycon-slogen.html" rel="alternate"></link><published>2014-09-16T19:42:42+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-16:140916-pycon-slogen.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="SimpleIsBeautiful(PNG 图像,731x681 像素)" src="http://wiki.woodpecker.org.cn/moin/SimpleIsBeautiful?action=AttachFile&amp;amp;do=get&amp;amp;target=130416-zq-simple-is-beautiful.png"/&gt;&lt;/p&gt;
 &lt;p&gt;可记得去年的&lt;a href="http://python-china.org/topic/544#reply5"&gt;蠎年蠎衫(PythonisT-shirt)设计大赛! — Python China&lt;/a&gt; ?&lt;/p&gt;
 &lt;p&gt;今年又来尝试了….&lt;/p&gt;
@@ -442,7 +442,7 @@ Pythonic than pythonic
 &lt;h2 id="changlog"&gt;Changlog&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140916 微信群引发&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>电邮的自我防护</title><link href="http://blog.zoomquiet.io/140718-fsf-emailselfdefense-mac.html" rel="alternate"></link><updated>2014-08-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-08-03:140718-fsf-emailselfdefense-mac.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>电邮的自我防护</title><link href="http://blog.zoomquiet.io/140718-fsf-emailselfdefense-mac.html" rel="alternate"></link><published>2014-08-03T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-08-03:140718-fsf-emailselfdefense-mac.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="infographic" src="https://static.fsf.org/nosvn/enc-dev0/img/en/infographic-button.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://emailselfdefense.fsf.org/en/mac.html"&gt;Email Self-Defense - a guide to fighting surveillance with GnuPG encryption&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;原主忒啰嗦了!&lt;/p&gt;
@@ -452,7 +452,7 @@ Pythonic than pythonic
 &lt;ul&gt;
 &lt;li&gt;140916 转发 &lt;a href="https://tonghuix.io/2014/06/email-selfdefence-gnupg/#"&gt;使用 GnuPG 进行电子邮件的自我防御[&lt;span class="caps"&gt;FSF&lt;/span&gt;信息图中译] » Open Source Geek | 爱开源未来&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;140803 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="fsf"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>How to argue for Python’s use</title><link href="http://blog.zoomquiet.io/140718_Brett_Cannon-How2argue4Python-use.html" rel="alternate"></link><updated>2014-07-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-18:140718_Brett_Cannon-How2argue4Python-use.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="fsf"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>How to argue for Python’s use</title><link href="http://blog.zoomquiet.io/140718_Brett_Cannon-How2argue4Python-use.html" rel="alternate"></link><published>2014-07-18T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-18:140718_Brett_Cannon-How2argue4Python-use.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://nothingbutsnark.svbtle.com/how-to-argue-for-pythons-use"&gt;How to argue for Python’s use&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Recently I wrote a blog post about how I don’t worry about Python losing users. Within minutes I had people asking about Python’s usage, which the post was not about and is a very different thing to worry about. See, it looks like the number of people using Python will continue to be high into the future, but whether Python will be used for as many projects is not guaranteed; the number of users is great and seems secure, but the number of uses of Python in projects is not nearly as certain.&lt;/p&gt;
 &lt;p&gt;This blog post is meant to help show how Python is still very much viable for most software projects out there. I’m not going to worry about selling Python to people going up against other dynamic languages like Ruby as I think those battles tend to come down to personal taste. What this is meant for is people dealing with teammates trying to sell statically typed languages. Specifically, this post is going to be geared towards arguing against Go, but it could be any statically typed language.&lt;/p&gt;
@@ -499,7 +499,7 @@ Pythonic than pythonic
 &lt;ul&gt;
 &lt;li&gt;1406?? &lt;/li&gt;
 &lt;li&gt;140728 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Brett"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>On object-oriented programming</title><link href="http://blog.zoomquiet.io/131224-yw-on-oop.html" rel="alternate"></link><updated>2013-12-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-24:131224-yw-on-oop.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="Brett"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>On object-oriented programming</title><link href="http://blog.zoomquiet.io/131224-yw-on-oop.html" rel="alternate"></link><published>2013-12-24T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-24:131224-yw-on-oop.html</id><summary type="html">
 &lt;h1 id="_1"&gt;翻越分享原文&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;via: http://yinwang0.wordpress.com/2013/12/24/on-object-oriented-programming/&lt;/li&gt;
@@ -1085,7 +1085,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 俺可以作任何事儿,
 包括所谓 访问者模式 提供的所有先进东西, 但是,不通用使用模式.&lt;/p&gt;
 &lt;p&gt;I owe my insights into design patterns to some functional programming people. If you really want to understand the essence of &lt;span class="caps"&gt;OO&lt;/span&gt; design patterns, and how &lt;span class="caps"&gt;NOT&lt;/span&gt; to use them, take a look at this little book other than the GoF one.&lt;/p&gt;
-&lt;p&gt;…&lt;/p&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Tests and static analysis</title><link href="http://blog.zoomquiet.io/131127-yw-on-test-static-analysis.html" rel="alternate"></link><updated>2013-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-27:131127-yw-on-test-static-analysis.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Tests and static analysis</title><link href="http://blog.zoomquiet.io/131127-yw-on-test-static-analysis.html" rel="alternate"></link><published>2013-11-27T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-27:131127-yw-on-test-static-analysis.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/&lt;/p&gt;
 &lt;p&gt;Ever since I made a static analysis tool for Python called PySonar, I have been asked about the question: &amp;#8220;What is the difference between testing and static analysis?&amp;#8221; I just replied to a comment asking a similar question, so I think it&amp;#8217;s a good time to write down some systematic answer for this&amp;nbsp;question.&lt;/p&gt;
 &lt;h2 id="static-analysis-is-static-tests-are-dynamic"&gt;Static analysis is static, tests are&amp;nbsp;dynamic&lt;/h2&gt;
 &lt;p&gt;Static analysis and tests are similar in their purposes. They are both tools for improving code quality. But they are very different in nature: static analysis is static, but tests are dynamic. &amp;#8220;Static&amp;#8221; basically means &amp;#8220;without running the&amp;nbsp;program&amp;#8221;.&lt;/p&gt;
@@ -1138,7 +1138,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;14010? &lt;/li&gt;
 &lt;li&gt;131212 翻越抄录在 medium.com&amp;nbsp;开始翻译&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>OSS good for enterprise</title><link href="http://blog.zoomquiet.io/oss-good-4-china-com.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:oss-good-4-china-com.html</id><summary type="html">&lt;h1 id="oss"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>OSS good for enterprise</title><link href="http://blog.zoomquiet.io/oss-good-4-china-com.html" rel="alternate"></link><published>2013-11-11T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:oss-good-4-china-com.html</id><summary type="html">&lt;h1 id="oss"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;~中国绝大多数IT企业&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="oss" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png" /&gt;&lt;/p&gt;
 &lt;p&gt;其实也是欠稿一篇, 先是忽悠朋友完成了作文:
@@ -1216,7 +1216,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131114&amp;nbsp;增补后续地图炮&lt;/li&gt;
 &lt;li&gt;131112 初放 &lt;a href="https://medium.com/i-m-h-o/74caad149e7e"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处 — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>Collections and Embedded Documents in MongoDB</title><link href="http://blog.zoomquiet.io/mongo-collections-embdded-think.html" rel="alternate"></link><updated>2013-10-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-10-27:mongo-collections-embdded-think.html</id><summary type="html">&lt;h1 id="mongodb"&gt;MongoDB&amp;nbsp;中的集合或嵌入式文档&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>Collections and Embedded Documents in MongoDB</title><link href="http://blog.zoomquiet.io/mongo-collections-embdded-think.html" rel="alternate"></link><published>2013-10-27T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-10-27:mongo-collections-embdded-think.html</id><summary type="html">&lt;h1 id="mongodb"&gt;MongoDB&amp;nbsp;中的集合或嵌入式文档&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="mongo" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*cwCnTFQEbcUSy1KvoiIqXg.png" /&gt;&lt;/p&gt;
 &lt;p&gt;[via]&amp;nbsp;http://fosterelli.co/collections-and-embedded-documents-in-mongodb.html&lt;/p&gt;
 &lt;p&gt;When someone is approaching MongoDB from the &lt;span class="caps"&gt;SQL&lt;/span&gt; world, a very common confusion regarding database structure is when to use embedded documents, and when to create an entirely new collection. This distinction is very important because, although MongoDB is schemaless in nature, whether or not an element of your database is structured as embedded documents or a separate collection will change your code a fair amount. Making this change later on can represent a fair amount of work, so it helps to get this right the first&amp;nbsp;time.&lt;/p&gt;
@@ -1290,7 +1290,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/c161d7036f89"&gt;Collections and Embedded Documents in MongoDB — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="NoSQL"></category><category term="Mongo"></category><category term="Zh"></category></entry><entry><title>reply On literate programming</title><link href="http://blog.zoomquiet.io/reply-yw-on-literate-programming.html" rel="alternate"></link><updated>2012-09-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-09-18:reply-yw-on-literate-programming.html</id><summary type="html">&lt;p&gt;&lt;a href="http://yinwang0.wordpress.com/2011/05/18/literate-programming/"&gt;On Literate Programming | Surely I Am&amp;nbsp;Joking&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="NoSQL"></category><category term="Mongo"></category><category term="Zh"></category></entry><entry><title>reply On literate programming</title><link href="http://blog.zoomquiet.io/reply-yw-on-literate-programming.html" rel="alternate"></link><published>2012-09-18T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-09-18:reply-yw-on-literate-programming.html</id><summary type="html">&lt;p&gt;&lt;a href="http://yinwang0.wordpress.com/2011/05/18/literate-programming/"&gt;On Literate Programming | Surely I Am&amp;nbsp;Joking&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;对于文学化编程,俺使用的是 Leo :&amp;nbsp;http://wiki.woodpecker.org.cn/moin/LeoEnvironment&lt;/p&gt;
 &lt;p&gt;你提及的:&lt;/p&gt;
 &lt;ul&gt;
@@ -1357,7 +1357,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 
 
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>CI is hard!</title><link href="http://blog.zoomquiet.io/101028_jacob-ci-is-hard.html" rel="alternate"></link><updated>2010-10-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2010-10-09:101028_jacob-ci-is-hard.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>CI is hard!</title><link href="http://blog.zoomquiet.io/101028_jacob-ci-is-hard.html" rel="alternate"></link><published>2010-10-09T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2010-10-09:101028_jacob-ci-is-hard.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://buildbot.net/"&gt;Buildbot&lt;/a&gt;, 
 the venerable Python 
 &lt;a href="http://en.wikipedia.org/wiki/Continuous_integration"&gt;continuous integration&lt;/a&gt;
@@ -1412,7 +1412,7 @@ has the best one I’ve run across – but none of these examples make much sens
 &lt;ul&gt;
 &lt;li&gt;1406?? &lt;/li&gt;
 &lt;li&gt;140618 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>What to write</title><link href="http://blog.zoomquiet.io/091110_jacob-what2write.html" rel="alternate"></link><updated>2009-11-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2009-11-10:091110_jacob-what2write.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>What to write</title><link href="http://blog.zoomquiet.io/091110_jacob-what2write.html" rel="alternate"></link><published>2009-11-10T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2009-11-10:091110_jacob-what2write.html</id><summary type="html">
 &lt;p&gt;Tech docs can take a bunch of different forms ranging from high-level overviews, to step-by-step walkthroughs, to auto-generated &lt;span class="caps"&gt;API&lt;/span&gt; documentation. Unfortunately, no single format works for all users; there’s huge differences in the way that people learn, so a well-documented project needs to provide many different forms of documentation.&lt;/p&gt;
 &lt;p&gt;At a high level, you can break down the different types of documentation you need to provide into three different formats:&lt;/p&gt;
 &lt;ul&gt;
@@ -1474,7 +1474,7 @@ implementation in collections.deque you’ll probably end up missing the library
 &lt;ul&gt;
 &lt;li&gt;1406?? &lt;/li&gt;
 &lt;li&gt;140618 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>探讨 信息化社会中 中国传统思想的作用</title><link href="http://blog.zoomquiet.io/issue-chinese-for-internet.html" rel="alternate"></link><updated>1998-01-01T11:17:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1998-01-01:issue-chinese-for-internet.html</id><summary type="html">&lt;p&gt;(&lt;code&gt;是也乎:&lt;/code&gt;&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>探讨 信息化社会中 中国传统思想的作用</title><link href="http://blog.zoomquiet.io/issue-chinese-for-internet.html" rel="alternate"></link><published>1998-01-01T11:17:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1998-01-01:issue-chinese-for-internet.html</id><summary type="html">&lt;p&gt;(&lt;code&gt;是也乎:&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;这是大学选修课:&lt;code&gt;科学史&lt;/code&gt; 的论文,
 算是自个儿思想的黑历史…总算能有足够的心力来直面互联网时代前的5毛思想了… )&lt;/p&gt;
 
@@ -1667,6 +1667,15 @@ implementation in collections.deque you’ll probably end up missing the library
 &lt;/li&gt;
 &lt;li&gt;《后现代科学——科学魅力的再现》  大卫·雷·格里芬&lt;ul&gt;
 &lt;li&gt;中央编译出版社&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="_15"&gt;是也乎:&lt;/h1&gt;
+&lt;p&gt;多年后的再曰:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;科学是深沉的，它力求理解这个世界，这一态度充满了爱。而技术则希望统治，最终走向野心勃勃！”&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;&lt;/code&gt; 科学是放肆的,力求突破一切常识来理解世界,这一态度是孩童般的纯粹;&lt;ul&gt;
+&lt;li&gt;技术是集约的,解决问题是一切目的而不论问题何来,最终总是被利益集团控制,毕竟技术需要经济的投入…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary><category term="thinked"></category><category term="Livin"></category><category term="Zoomq"></category></entry></feed>

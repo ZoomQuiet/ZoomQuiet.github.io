@@ -1,5 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2015-04-09T00:00:00+08:00</updated><entry><title>jump into SSD with Yoesmite</title><link href="http://blog.zoomquiet.io/jump-into-ssd.html" rel="alternate"></link><updated>2015-04-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-04-09:jump-into-ssd.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2016-06-28T00:00:00+08:00</updated><entry><title>rMBP 坠入纪</title><link href="http://blog.zoomquiet.io/break-into-rMBP13.html" rel="alternate"></link><published>2016-06-28T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-06-28:break-into-rMBP13.html</id><summary type="html">
+&lt;h1 id="_1"&gt;崩&lt;/h1&gt;
+&lt;p&gt;160625, 一个平常的早晨, 俺的世界崩溃了一大坨…
+5年前老婆大人开恩准购的: 高配版, 8G, 512G+256G &lt;span class="caps"&gt;SSD&lt;/span&gt; 的&lt;span class="caps"&gt;MBP&lt;/span&gt; 15吋 无法开机!&lt;/p&gt;
+&lt;h1 id="_2"&gt;溃&lt;/h1&gt;
+&lt;p&gt;立即去当地 &lt;span class="caps"&gt;APPLE&lt;/span&gt; 维修中心,从机械硬盘启动,使用内置硬盘工具检验 &lt;span class="caps"&gt;SSD&lt;/span&gt; 不通过,
+现场重新格式化安装, 但是中心没有 10.11 的安装镜像,只能先安装上 10.7.3 的.
+回来,一边回忆,一边想整理这5年, 都如何配置出吻合自个儿口味的 &lt;span class="caps"&gt;MAC&lt;/span&gt; 环境的!?&lt;/p&gt;
+&lt;p&gt;但是, 下午, 相同情景, 再次灰屏,无法启动!
+知道没那么简单了….果然,再次去, 发现是长期使用 60W 的电源来驱动 80W 的机器,导致显卡 &lt;span class="caps"&gt;SSD&lt;/span&gt; 都有问题,必须更换主板…&lt;/p&gt;
+&lt;h1 id="_3"&gt;新&lt;/h1&gt;
+&lt;p&gt;但是! 电脑是一切工作中心环境哪, 没有一个随时可以投入工作的移动环境, 简直好象就是离开了地球一样!&lt;/p&gt;
+&lt;p&gt;好在老婆大人受不了俺天塌地陷的表情,一个心软, 
+俺就冲到 澳门 刚刚开启的 &lt;span class="caps"&gt;APPLE&lt;/span&gt; &lt;span class="caps"&gt;STORE&lt;/span&gt; 扛了台全新
+rMBP 13吋,16G 内存, 512G &lt;span class="caps"&gt;SSD&lt;/span&gt; ;-)
+&lt;span class="caps"&gt;OS&lt;/span&gt; X 10.11 的.&lt;/p&gt;
+&lt;h1 id="_4"&gt;配&lt;/h1&gt;
+&lt;p&gt;然后, 开始漫长而艰难的重新配置.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为毛?! 因为俺没用 TimeMachine 哪…&lt;/li&gt;
+&lt;li&gt;实在是当初没有合适的移动硬盘, 在家里 FreeBSD 的电脑上远程进行 TimeMachine 备份又太慢.&lt;/li&gt;
+&lt;li&gt;加之, 积累有关键数据的 &lt;code&gt;rsync&lt;/code&gt; 脚本, 可以自动备份所有关键数据;&lt;/li&gt;
+&lt;li&gt;进一步的, &lt;span class="caps"&gt;BMP&lt;/span&gt; 的皮实是出了名的, TimeMachine 占用空间也是出了名的…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一切的一切,导致,重新开始配置时,才发现有多少事儿要折腾!
+参考: &lt;a href="http://s5rst.qiniucdn.com/131113-MyTools/index.html"&gt;我的工具箱&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;是的, 用15年以上, 来迭代的将自个儿的电脑操作, 融合到一系列工具中, 并训练成了肌肉记忆,
+一台全新的优秀的 rMBP 对俺,几乎无法使用.&lt;/p&gt;
+&lt;h2 id="_5"&gt;习惯&lt;/h2&gt;
+&lt;p&gt;回想一下俺日常每天每时每刻都在使用的习惯操作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sshvpnJP&lt;/code&gt; 快速和 日本 的主机建立 &lt;span class="caps"&gt;SSH&lt;/span&gt; 隧道, 专供 Chrome 进行 gmail 以及其它科学网络使用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd+Space&lt;/code&gt; 切换输入法, 使用 Rime 的 &lt;code&gt;鼠须管&lt;/code&gt; 加载从 win98SE 上移植过来的 &lt;code&gt;BXM&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;subl 中 Shift+Ctrl+上下箭头 可以进行纵向的块选择&lt;/li&gt;
+&lt;li&gt;FireFox 中 right click 的上下文菜单,应该只有俺需要的&lt;/li&gt;
+&lt;li&gt;FireFox 使用树状结构的 &lt;span class="caps"&gt;TAB&lt;/span&gt; 来管理批量标签页面&lt;/li&gt;
+&lt;li&gt;有自动根据当前时间调节色温的 Docker 软件&lt;/li&gt;
+&lt;li&gt;有驻留 Dock 的日历软件,点击就可以看到&lt;/li&gt;
+&lt;li&gt;有习惯的双窗口文件管理器&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;好吧…事实上在 &lt;span class="caps"&gt;MAC&lt;/span&gt; 中的所有操作都进行过精心的配置!&lt;/p&gt;
+&lt;p&gt;那么,先冷静的规划一下,恢复的顺序和操作以免前后矛盾;&lt;/p&gt;
+&lt;p&gt;所谓的配置,其实分:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统配置&lt;/li&gt;
+&lt;li&gt;软件安装&lt;/li&gt;
+&lt;li&gt;软件定制&lt;/li&gt;
+&lt;li&gt;shell 定制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从逻辑和先后依赖而言,就应该从基础配置到具体配置来,用越来越多的工具来协助自己完成配置;&lt;/p&gt;
+&lt;h2 id="_6"&gt;过程&lt;/h2&gt;
+&lt;p&gt;简单的回顾一下关键又崩溃的恢复过程&lt;/p&gt;
+&lt;h3 id="_7"&gt;数据&lt;/h3&gt;
+&lt;p&gt;因为有 2T 的 &lt;span class="caps"&gt;WD&lt;/span&gt; 火线移动硬盘, 所以, 基本上所有数据都有备份,恢复过程中发现缺少的只有:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Leo 的默认  workbook.leo 是链接到其它文档的, 但是,用 rsync 时,没有跟随链接,具体指向哪儿忘记了&lt;/li&gt;
+&lt;li&gt;FIreFox 有大量的扩展以及扩展本身的配置&lt;ul&gt;
+&lt;li&gt;但是,杯具的是, FireFox 的配置/扩展/书签 等等用户数据备份一直没有统一的渠道&lt;ul&gt;
+&lt;li&gt;要不是用插件完成 比如 &lt;code&gt;FEBE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;要不对具体的系统文件目录进行备份&lt;/li&gt;
+&lt;li&gt;要不用专用软件进行&lt;/li&gt;
+&lt;li&gt;要不是用内置的 box 之流第三方服务进行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一年前 mozilla 终于提出了自运营的云空间,本来以为都能自动备份下来的,,,结果是俺 Naive 了…&lt;/li&gt;
+&lt;li&gt;重新安装后, 用原先的身份口令无法登录,看页面明显是中国的火狐公司使用了另外一套云空间,而且没有同步原先海外用户认证&lt;/li&gt;
+&lt;li&gt;好吧, 更加奇葩的是, FireFox 从大陆和官方下载的 &lt;span class="caps"&gt;MAC&lt;/span&gt; 中文版安装包含根本不同!&lt;ul&gt;
+&lt;li&gt;大陆的内置了很多类似 好123 的导航页面和服务….&lt;/li&gt;
+&lt;li&gt;恶心的我…&lt;/li&gt;
+&lt;li&gt;大陆版 Firefox_latest_mac_47.0.dmg 90Mb_&lt;/li&gt;
+&lt;li&gt;官方版 Firefox 47.0.dmg 84Mb&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其它, 下载/工作/文档/图片, 都用 &lt;code&gt;rsync&lt;/code&gt; 非常精细的备份在移动硬盘中,
+也是用 &lt;code&gt;rsync&lt;/code&gt; 一次就可以同步回来;
+所以, 512G 硬盘, 实际 499G 空间,
+新机到手只用了 18G , &lt;span class="caps"&gt;OS&lt;/span&gt; X 10.11.3 系统以及赠送的 iWorks 系列软件,才占这么少! 良心!&lt;/p&gt;
+&lt;p&gt;只是运行完数据同步后, 只有 &lt;code&gt;160G&lt;/code&gt; 可用了….&lt;/p&gt;
+&lt;h3 id="_8"&gt;系统&lt;/h3&gt;
+&lt;p&gt;首先, 关闭 Spotlight, 因为没有什么用,将整个儿硬盘设定为隐私就好.
+然后, 立即在键盘中,将 &lt;code&gt;caps&lt;/code&gt; 设定为 &lt;code&gt;control&lt;/code&gt; 这样和  &lt;span class="caps"&gt;HHKB&lt;/span&gt; Lite 的键位感觉就一致了.&lt;/p&gt;
+&lt;p&gt;根据 &lt;a href=""&gt;ZqBXM/mac at master · ZoomQuiet/ZqBXM&lt;/a&gt;(https://github.com/ZoomQuiet/ZqBXM/tree/master/mac) 将 Squirrel 安装恢复出来, 首先恢复输入法.&lt;/p&gt;
+&lt;p&gt;安装 &lt;code&gt;muCommander&lt;/code&gt; 进入熟悉的双窗口文件管理器:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;杯具的是,这货依赖 &lt;span class="caps"&gt;JAVA&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;首先要下载 70M 的 javaforosx.dmg&lt;/li&gt;
+&lt;li&gt;然后才能运行, 更加神奇的是:&lt;ul&gt;
+&lt;li&gt;2013 年就已经停止维护了&lt;/li&gt;
+&lt;li&gt;最高版本 0.9 无法使用&lt;/li&gt;
+&lt;li&gt;只能先安装 0.85 使用几天后, 再安装 0.9 就又好了…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;当前和 TotalCommander 不同,  muCommander 实在是非常轻型的管理器&lt;/li&gt;
+&lt;li&gt;只是有几个特性刚好吻合我的习惯:&lt;ul&gt;
+&lt;li&gt;可以精细的定制样式, 指定程序猿字体, theme&lt;/li&gt;
+&lt;li&gt;能快速记录/调节 目录书签&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt+1&lt;/code&gt; 给出所有上级目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt+2&lt;/code&gt; 给出最近操作的目录列表&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt+4&lt;/code&gt; 给出所有书签目录列表&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt+5&lt;/code&gt; 给出所有有效驱动器列表&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cltr+l&lt;/code&gt; 用 finder 打开当前目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt+F6&lt;/code&gt; 对选定文件进行批量重定名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F5&lt;/code&gt; 将选定文件复制到另外一个窗口目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F6&lt;/code&gt; 将选定文件移动到另外一个窗口目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F7&lt;/code&gt; 创建目录&lt;/li&gt;
+&lt;li&gt;…
+在 muCommander 就可以高速整理当前目录, 吻合记忆结构了.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="_9"&gt;浏览器&lt;/h3&gt;
+&lt;p&gt;安装当前不用说, 为什么要先安装浏览器, 而不是其它必须软件?!
+因为, 其它所有配置/软件信息 ,都用 FireFox 的插件 ScrapBook 管理的,
+必须恢复私人本地资料库, 才好在以往收集的文档指引下逐一恢复软件配置.&lt;/p&gt;
+&lt;p&gt;杯具的是, 更多资料都在 GDriver 中, 而进入, 需要翻越, 可翻越依赖浏览器插, 可 Chrome 的插件都在人家的市场中, 嗯哼, Chrome Store 也在墙外.&lt;/p&gt;
+&lt;p&gt;是也乎,(￣▽￣)&lt;/p&gt;
+&lt;p&gt;只好, 先从 baidu 搜索到老版本, &lt;code&gt;Proxy_SwitchySharp.crx&lt;/code&gt; 拖到扩展页面中,先勉强用起来.
+幸好, 因为太常用,也关键, gmail 帐号口令是记下来的, 登录上, 瞬间, chrome 的一切都回来了!&lt;/p&gt;
+&lt;p&gt;FireFox 就没有这么幸运了…只能人工, 一个个回忆/搜索/安装/配置回来…&lt;/p&gt;
+&lt;p&gt;用了差不多半天,才将 FireFox 恢复到比较顺手:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DownThemAll 高速/分块 下载器&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CoLT&lt;/code&gt;  Copy Link Text and Location  可定制的链接复制管理器,可以一键从页面/链接 生成 markdown/rst/html 等等形式的链接, 是文档写作关键支撑工具&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Enjoy Reading&lt;/code&gt;+&lt;code&gt;Tranquility&lt;/code&gt; 是云化了的 &lt;code&gt;Readablity&lt;/code&gt; 的替代, 可以将页面净化为只有主要内容&lt;/li&gt;
+&lt;li&gt;以便用 &lt;code&gt;ScrapBook&lt;/code&gt; 抓取为本地页面, 然后用目录树的形式来管理, 离线查阅/标记自学&lt;ul&gt;
+&lt;li&gt;参考: &lt;a href=""&gt;ZoomQuiet.io collection mapping {by gen4dot2htm.py v11.10.27 at:160217 11:09:36,660754}&lt;/a&gt;(http://zoomquiet.io/collection.html)&lt;/li&gt;
+&lt;li&gt;配合自动脚本, 可以随时将积累了 10+年以上, 20Gb, 5+万页网页分享出来&lt;/li&gt;
+&lt;li&gt;嗯哼,是的, 通过 7牛&lt;span class="caps"&gt;CDN&lt;/span&gt; ;-)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;It's All Text!&lt;/code&gt; 可以用快捷键召唤出任何指定的本地编辑软件,来编辑网页 textarea, 并自动复制回编辑器编辑的内容! 简直是在线文档/issue/wiki 的维护必须工具! 是的大家都在用网页编辑器, 俺可以用 Sublime Text 进行狂速的本地编辑!&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NoSquint Plus&lt;/code&gt; 可以记忆域名的具体缩放比例, rMBP 的分辨率非常大, 但是,默认显示网页时,又总是放大的过大,需要记忆最合适的比例,自动的!&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Wired-Marker&lt;/code&gt; 能对在线页面进行批注, 是对 ScrapBook 的补充&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uBlock Origin&lt;/code&gt; 智能关闭所有 &lt;span class="caps"&gt;JS&lt;/span&gt; 的业务脚本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Adblock Plus&lt;/code&gt; 智能关闭所有广告 &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Right Encoding&lt;/code&gt; 高速指定网页编码&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Tree Style Tab&lt;/code&gt;+&lt;code&gt;Tab Mix Plus&lt;/code&gt; 用树状目录,层级管理有内容关联的标签页面,简直是海量并发挖掘和学习必须的!&lt;/li&gt;
+&lt;li&gt;&lt;a href=""&gt;Menu Wizard&lt;/a&gt;(https://addons.mozilla.org/zh-&lt;span class="caps"&gt;CN&lt;/span&gt;/firefox/addon/s3menu-wizard/?src=userprofile) 以上扩展,已经向上下文 right click 菜单追加了上百项选项了!&lt;ul&gt;
+&lt;li&gt;必须可以实时精简! 菜单精灵,就是这样一种神器,只看自己需要的菜单!&lt;/li&gt;
+&lt;li&gt;而且作者是名 乌克兰 程序猿,失业在家就靠几项优秀的 &lt;span class="caps"&gt;FF&lt;/span&gt; 插件的捐助来养家, 每年都得捐助几次,,,,&lt;/li&gt;
+&lt;li&gt;因为, 实在太好用了!!!! &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是,依然丢失了积累超过10年的书签…好在其中至少80% 也都失效了….&lt;/p&gt;
+&lt;h3 id="leo-with-qt"&gt;Leo with Qt&lt;/h3&gt;
+&lt;p&gt;文学化编辑环境 &lt;a href="http://wiki.woodpecker.org.cn/moin/LiterateProgramming"&gt;LiterateProgramming - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;俺用 Leo 来进行所有的软件开发,图书翻译…更加要命的是所有注册口令的管理.
+是的没用伟大的 1Password,,, 也是历史原因:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开始用 Leo 管理私人口令时,可能还没有 1P 这公司呢….&lt;/li&gt;
+&lt;li&gt;1P 要銭的…&lt;/li&gt;
+&lt;li&gt;Leo 中已经积累了上千帐号的口令了…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不过,  Leo 的历史也很长,第一个版本发布在 1996 年! 以前都是基于 Tk 的, 中文问题很多, 
+老爷子自学了 Qt, 在 2013 年全面迁移到 Qt 了, 漂亮了很多,但是,安装就麻烦了点儿.&lt;/p&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://support.apple.com/kb/HT5293"&gt;About X11 and &lt;span class="caps"&gt;OS&lt;/span&gt; X&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://xquartz.macosforge.org/landing/"&gt;XQuartz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;具体的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安装 &lt;code&gt;XQuartz-2.7.9.dmg&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;然后用 brew 安装 qt&lt;/li&gt;
+&lt;li&gt;最后进入具体的python 环境, 比如说 pyenv 管理的版本 python &lt;/li&gt;
+&lt;li&gt;用 pip 安装 &lt;code&gt;PyQt4&lt;/code&gt; 就好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;`bash&lt;/p&gt;
+&lt;h1 id="bashrc-for-running-leo"&gt;\~/.bashrc for running Leo&lt;/h1&gt;
+&lt;p&gt;alias leolanch=”python /opt/bin/leo/launchLeo.py &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;” “`&lt;/p&gt;
+&lt;h3 id="dock"&gt;Dock&lt;/h3&gt;
+&lt;p&gt;是的,人生第一个 &lt;span class="caps"&gt;APPLE&lt;/span&gt; 软件就是为了 Dock 才突破心障的, 然后就开始了 App Store 的无尽挖掘..&lt;/p&gt;
+&lt;p&gt;当前习惯的组合:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bartender 2 收纳各种图标&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Battery Health&lt;/code&gt;+&lt;code&gt;coconutBattery&lt;/code&gt; 关注电池健康&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Colossus&lt;/code&gt; 国人作品,系统状态报告,重要的是实时网速,以及当前 ip&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Day-O&lt;/code&gt; 用 &lt;code&gt;TinyCal&lt;/code&gt; 替代, 进行快速日历查阅&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Spectacle&lt;/code&gt; 进行窗口管理&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Noizio&lt;/code&gt; 工作白噪音, 因为 iOS 上买了,桌面也就顺手入了&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Flux&lt;/code&gt; 自动色温调节, 保护视力&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Caffeine&lt;/code&gt; 嗯哼…&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choosy&lt;/code&gt;  从 Chrome 将链接在 FireFox 打开 这样就完成了, 用 google 搜索, 用 FireFox 的插件收集结果页面到本地长尾研究.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="app-store"&gt;App Store&lt;/h3&gt;
+&lt;p&gt;通过官方 Store 安装, 的好处是不用自行本地备份 app 的安装文件,
+恢复系统时可以从已购应用分类中快速指定, 重新自动安装.&lt;/p&gt;
+&lt;p&gt;当前习惯使用的应用集:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统工具:&lt;ul&gt;
+&lt;li&gt;DrCleaner 内存清理&lt;/li&gt;
+&lt;li&gt;AppCleaner 软件清理&lt;/li&gt;
+&lt;li&gt;Alfred 效能工具, 虽然购买了专业版, 但是, 工作流并没有用起来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;开发工具:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Sublime Text&lt;/code&gt; 嚓, 插件仓库简直无法自拔&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;iTerm&lt;/code&gt; 每天用的那叫个频繁, 和 subl 配置成一样的 theme….&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Dash&lt;/code&gt; 又一款不得不买的 程序猿 必备软件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TeamViewer&lt;/code&gt; 打死不用 windows, 但是,一定要用也通过远程管理控制!&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Tincta&lt;/code&gt; 编辑器, 支持正则表达式 替换的&lt;/li&gt;
+&lt;li&gt;git/svn/hg 什么的通过 brew 安装的就不在这儿提及了…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;空间工具:&lt;ul&gt;
+&lt;li&gt;360云盘/百度云盘 没办法的标配置&lt;/li&gt;
+&lt;li&gt;Evernote 用来快速收集 微信中的聊天记录&lt;/li&gt;
+&lt;li&gt;Dropbox 纯粹用来情怀曾经的美好&lt;/li&gt;
+&lt;li&gt;Xccello 伪装成桌面的 Trello&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;文档工具:&lt;ul&gt;
+&lt;li&gt;OOo 不得不用的 Office 兼容软件&lt;/li&gt;
+&lt;li&gt;Ulysses 嗯哼, 比 subl 还要性感的跨平台创作环境&lt;/li&gt;
+&lt;li&gt;1Checker 自学 E文写作工具&lt;/li&gt;
+&lt;li&gt;XtraFinder 杯具而神奇的注入式 Finder 增强工具&lt;/li&gt;
+&lt;li&gt;FileZilla 最好用的 &lt;span class="caps"&gt;FTP&lt;/span&gt; 桌面工具&lt;/li&gt;
+&lt;li&gt;androidfiletransfer 嗯哼&lt;/li&gt;
+&lt;li&gt;calibre 电子书转换工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SNS&lt;/span&gt; 工具:&lt;ul&gt;
+&lt;li&gt;微信/&lt;span class="caps"&gt;QQ&lt;/span&gt;/Telegram 一个不能少&lt;/li&gt;
+&lt;li&gt;Ali 旺旺 有时和店家沟通,必须&lt;/li&gt;
+&lt;li&gt;Skye&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;阅读观看&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Xee³&lt;/code&gt; 看图&lt;/li&gt;
+&lt;li&gt;Skitch 标定图&lt;/li&gt;
+&lt;li&gt;MediaInfo 照片 Meta 信息&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;CHM&lt;/span&gt; View 嗯哼&lt;/li&gt;
+&lt;li&gt;Simple Comic 嗯哼&lt;/li&gt;
+&lt;li&gt;MPlayerX 嗯哼&lt;/li&gt;
+&lt;li&gt;Skim 看 &lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="dev"&gt;Dev.&lt;/h3&gt;
+&lt;p&gt;开发环境哪…&lt;/p&gt;
+&lt;p&gt;是另外一个故事了, 也是血淋淋的, 简直不忍心回顾了&lt;/p&gt;
+&lt;h1 id="_10"&gt;总结&lt;/h1&gt;
+&lt;p&gt;经过72小时,总厂不眠不休的配置,总算将主要的环境配置好了, 其它的随用随安装就好…&lt;/p&gt;
+&lt;p&gt;就算每5年才可能来这么一次, 再也不想了!
+以往, 只有 win-&amp;gt;Linux 时差不多也要这么折腾几天, 
+Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
+可是 &lt;span class="caps"&gt;MAC&lt;/span&gt; 的硬件切换,怎么就这么痛?!&lt;/p&gt;
+&lt;p&gt;回想,一定, 主要的折腾是系统和软件的个性配置, 星星点点, 总厂都是微小的痛点,
+在长期探寻中,找到了合适的方案, 以及操作快捷键, 然后肌肉记忆了下来,
+具体如何配置的, 又没有记录, 或是自动化恢复方案, 然后就只能重新从肌肉记忆反推配置…&lt;/p&gt;
+&lt;p&gt;所以, 一定要长期/坚持/持续/理性 的备份!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;杯具总是随时可能发生的&lt;/li&gt;
+&lt;li&gt;面向灾难恢复的备份才是可用的&lt;/li&gt;
+&lt;li&gt;最快时间恢复原有最好状态的备份才是好的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;综上, &lt;span class="caps"&gt;MAC&lt;/span&gt; 本来就内置了最好的备份机制: &lt;code&gt;TimeMachine&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="tm"&gt;&lt;span class="caps"&gt;TM&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;一定要用! 一定要用! 一定要用! &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个专用设备, 官方的 时间胶囊, 进行无线备份&lt;/li&gt;
+&lt;li&gt;或是大容量高速移动硬盘进行有线备份,只是:&lt;ul&gt;
+&lt;li&gt;一定要雷线! 一定要雷线! 一定要雷线!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;只是, 一直担心,没有演练过 TimeMachine 的系统恢复哪, 总是对这机制不怎么放心, 怎么破!?&lt;/p&gt;
+&lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;160701 补全&lt;/li&gt;
+&lt;li&gt;160628 发布&lt;/li&gt;
+&lt;li&gt;160627 随笔&lt;/li&gt;
+&lt;li&gt;160626 开始&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="rMBP"></category><category term="DAMA"></category></entry><entry><title>jump into SSD with Yoesmite</title><link href="http://blog.zoomquiet.io/jump-into-ssd.html" rel="alternate"></link><published>2015-04-09T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-04-09:jump-into-ssd.html</id><summary type="html">
 &lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
 &lt;p&gt;不解释, 人家都免费给你升级了哪!&lt;/p&gt;
 &lt;h1 id="_2"&gt;新梗&lt;/h1&gt;
@@ -403,7 +683,7 @@ The new osxfuse file system bundle needs to be installed by the root user:
 &lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
 &lt;li&gt;140505 快速简述完成&lt;/li&gt;
 &lt;li&gt;140110 起意,总结&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>KnewOne-talk 之 大妈 篇</title><link href="http://blog.zoomquiet.io/knewone-talk-zoomq-choise.html" rel="alternate"></link><updated>2014-12-23T23:23:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-23:knewone-talk-zoomq-choise.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>KnewOne-talk 之 大妈 篇</title><link href="http://blog.zoomquiet.io/knewone-talk-zoomq-choise.html" rel="alternate"></link><published>2014-12-23T23:23:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-23:knewone-talk-zoomq-choise.html</id><summary type="html">
 &lt;p&gt;~ KnewOne talk question list&lt;/p&gt;
 &lt;h2 id="_1"&gt;分享你的生活方式&lt;/h2&gt;
 &lt;p&gt;整体上,俺是一头程序猿,所以,,,&lt;/p&gt;
@@ -520,7 +800,7 @@ The new osxfuse file system bundle needs to be installed by the root user:
 &lt;ul&gt;
 &lt;li&gt;可以提pr提交回答,感谢:)&lt;/li&gt;
 &lt;li&gt;产品使用体验方面,请稍微写得详细一些,谢谢&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="Livin"></category><category term="Zoomq"></category></entry><entry><title>Mavericks 中用 sshfs</title><link href="http://blog.zoomquiet.io/sshfs-in-mavericks.html" rel="alternate"></link><updated>2014-10-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-10-24:sshfs-in-mavericks.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="Livin"></category><category term="Zoomq"></category></entry><entry><title>Mavericks 中用 sshfs</title><link href="http://blog.zoomquiet.io/sshfs-in-mavericks.html" rel="alternate"></link><published>2014-10-24T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-10-24:sshfs-in-mavericks.html</id><summary type="html">
 &lt;h1 id="_1"&gt;背景&lt;/h1&gt;
 &lt;p&gt;自从 2011-12-16 入手 &lt;span class="caps"&gt;MBP&lt;/span&gt; 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便&lt;/p&gt;
 &lt;ul&gt;
@@ -568,7 +848,7 @@ sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
 &lt;li&gt;&lt;a href="http://michael.terretta.com/fix-to-remove-or-uninstall-macfuse-on-mountain-lion-when-you-get-the-error-macfuse-uninstaller-can-not-find-the-archive-dot-bom-for-macfuse-core-package-dot"&gt;Fix to remove or uninstall MacFuse on Mountain Lion when you get the error “MacFUSE Uninstaller: Can not find the Archive.bom for MacFUSE Core package.” - Crude Technologies&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://discussions.apple.com/message/18355704#18355704"&gt;how to remove macfuse and ntfs 3g on osx lion? | Apple Support Communities&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;… etc.&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="sshfs"></category></entry><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:rst2s5-upgraded.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="sshfs"></category></entry><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><published>2014-05-07T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:rst2s5-upgraded.html</id><summary type="html">
 &lt;h1 id="_1"&gt;背景&lt;/h1&gt;
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:&lt;/p&gt;
@@ -609,7 +889,7 @@ sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
 &lt;p&gt;这样俺在 Leo 中写:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png"/&gt;&lt;/p&gt;
 &lt;p&gt;就可以一键生成为幻灯中的:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/&gt;&lt;/p&gt;</summary><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">
+&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/&gt;&lt;/p&gt;</summary><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><published>2014-02-26T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:livin-scrapbook.html</id><summary type="html">
 &lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;zoomq @ MBP111216ZQ in ~/KuaiPan/zScrapBook
 $ du -hs *
@@ -698,7 +978,7 @@ $ du -hs *
 &lt;ul&gt;
 &lt;li&gt;140405 无解的快速总结&lt;/li&gt;
 &lt;li&gt;140217 开始回顾&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><published>2014-01-27T23:48:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:cb3-howto-make-hmsrv.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h1 id="issue"&gt;Issue&lt;/h1&gt;
@@ -1209,7 +1489,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;ul&gt;
 &lt;li&gt;140505 快速完结&lt;/li&gt;
 &lt;li&gt;140127 单立文章追踪&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="http://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:jump-into-7niu.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="http://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><published>2014-01-19T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:jump-into-7niu.html</id><summary type="html">
 &lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;正名 readthedocs.org&lt;/li&gt;
@@ -1258,7 +1538,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140119 开始总结&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="http://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><updated>2014-01-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:cbi-zq-install.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="http://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><published>2014-01-11T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:cbi-zq-install.html</id><summary type="html">
 &lt;h2 id="cbi"&gt;&lt;span class="caps"&gt;CBI&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://blog.zhgdg.org/2014-01/et-cbi1/"&gt;CBInstall.1 欢乐完成&lt;/a&gt; 记要了现场活动的情况;&lt;/p&gt;
 &lt;p&gt;当然,俺也是学员之一,要交作业的,所以,俺的刷机笔记如下:&lt;/p&gt;
@@ -1525,7 +1805,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;ul&gt;
 &lt;li&gt;140119 终于汇集了所有唠叨!&lt;/li&gt;
 &lt;li&gt;140111 开始总结&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="http://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:jump-into-mavericks.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="http://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><published>2013-12-30T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:jump-into-mavericks.html</id><summary type="html">
 &lt;h1 id="_1"&gt;为毛&lt;/h1&gt;
 &lt;p&gt;得承认是被 老池的文章忽悠到了, 
 而且, 10.9 免费了, 进一步的通过&lt;span class="caps"&gt;OS&lt;/span&gt; 提高了电池/内存的使用效率,
@@ -1682,7 +1962,7 @@ The new osxfuse file system bundle needs to be installed by the root user:
 &lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
 &lt;li&gt;140505 快速简述完成&lt;/li&gt;
 &lt;li&gt;140110 起意,总结&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>who’s gonna…</title><link href="http://blog.zoomquiet.io/cipher-who-s-gonna.html" rel="alternate"></link><updated>1996-11-11T11:11:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1996-11-11:cipher-who-s-gonna.html</id><summary type="html">
+&lt;/ul&gt;</summary><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>who’s gonna…</title><link href="http://blog.zoomquiet.io/cipher-who-s-gonna.html" rel="alternate"></link><published>1996-11-11T11:11:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1996-11-11:cipher-who-s-gonna.html</id><summary type="html">
 &lt;h1 id="cipher"&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;&lt;span class="caps"&gt;CIPHER&lt;/span&gt;”&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;who's gonna tell you when
 It's too late

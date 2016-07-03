@@ -125,6 +125,7 @@ rMBP 13吋,16G 内存, 512G &lt;span class="caps"&gt;SSD&lt;/span&gt; ;-)
 &lt;p&gt;用了差不多半天,才将 FireFox 恢复到比较顺手:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;DownThemAll 高速/分块 下载器&lt;/li&gt;
+&lt;li&gt;Greasemonkey 神奇的开挂平台&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;CoLT&lt;/code&gt;  Copy Link Text and Location  可定制的链接复制管理器,可以一键从页面/链接 生成 markdown/rst/html 等等形式的链接, 是文档写作关键支撑工具&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Enjoy Reading&lt;/code&gt;+&lt;code&gt;Tranquility&lt;/code&gt; 是云化了的 &lt;code&gt;Readablity&lt;/code&gt; 的替代, 可以将页面净化为只有主要内容&lt;/li&gt;
 &lt;li&gt;以便用 &lt;code&gt;ScrapBook&lt;/code&gt; 抓取为本地页面, 然后用目录树的形式来管理, 离线查阅/标记自学&lt;ul&gt;
@@ -148,6 +149,17 @@ rMBP 13吋,16G 内存, 512G &lt;span class="caps"&gt;SSD&lt;/span&gt; ;-)
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;但是,依然丢失了积累超过10年的书签…好在其中至少80% 也都失效了….&lt;/p&gt;
+&lt;p&gt;等等,还有 Chrome 对应的扩展呢:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Greasemonkey 神奇的开挂平台,在 Chrome 上是Tampermonkey&lt;/li&gt;
+&lt;li&gt;为什么你们就是不能加个空格呢？ 嗯哼!&lt;/li&gt;
+&lt;li&gt;uBlock Origin / Adblock Plus同 &lt;span class="caps"&gt;FF&lt;/span&gt; &lt;/li&gt;
+&lt;li&gt;Proxy SwitchyOmega 嗯哼!&lt;/li&gt;
+&lt;li&gt;Octotree 为了快速游览 github 仓库代码&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Create Link&lt;/code&gt; &lt;code&gt;CoLT&lt;/code&gt;  Copy Link Text and Location 的部分替代&lt;/li&gt;
+&lt;li&gt;Choosy 嗯哼,,,将 链接用指定 应用打开&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Boomerang for Gmail&lt;/code&gt; 神奇的邮件管理增强, 是 &lt;span class="caps"&gt;GDT&lt;/span&gt; 的必须品&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id="leo-with-qt"&gt;Leo with Qt&lt;/h3&gt;
 &lt;p&gt;文学化编辑环境 &lt;a href="http://wiki.woodpecker.org.cn/moin/LiterateProgramming"&gt;LiterateProgramming - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt; &lt;/p&gt;
 &lt;p&gt;俺用 Leo 来进行所有的软件开发,图书翻译…更加要命的是所有注册口令的管理.
@@ -189,7 +201,7 @@ alias leolanch="python /opt/bin/leo/launchLeo.py \&amp;gt;\&amp;gt; /dev/null 2\
 &lt;li&gt;&lt;code&gt;Caffeine&lt;/code&gt; 嗯哼…&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Choosy&lt;/code&gt;  从 Chrome 将链接在 FireFox 打开 这样就完成了, 用 google 搜索, 用 FireFox 的插件收集结果页面到本地长尾研究.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="app-store"&gt;App Store&lt;/h3&gt;
+&lt;h3 id="app-storebrew"&gt;App Store+Brew&lt;/h3&gt;
 &lt;p&gt;通过官方 Store 安装, 的好处是不用自行本地备份 app 的安装文件,
 恢复系统时可以从已购应用分类中快速指定, 重新自动安装.&lt;/p&gt;
 &lt;p&gt;当前习惯使用的应用集:&lt;/p&gt;
@@ -201,7 +213,10 @@ alias leolanch="python /opt/bin/leo/launchLeo.py \&amp;gt;\&amp;gt; /dev/null 2\
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;开发工具:&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Sublime Text&lt;/code&gt; 嚓, 插件仓库简直无法自拔&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Sublime Text&lt;/code&gt; 嚓, 插件仓库简直无法自拔&lt;ul&gt;
+&lt;li&gt;大坑,仅仅配置 md 编辑就要有一个固定的顺序,才能获得过的去的编辑体验…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;iTerm&lt;/code&gt; 每天用的那叫个频繁, 和 subl 配置成一样的 theme….&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Dash&lt;/code&gt; 又一款不得不买的 程序猿 必备软件&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;TeamViewer&lt;/code&gt; 打死不用 windows, 但是,一定要用也通过远程管理控制!&lt;/li&gt;
@@ -238,8 +253,8 @@ alias leolanch="python /opt/bin/leo/launchLeo.py \&amp;gt;\&amp;gt; /dev/null 2\
 &lt;li&gt;MediaInfo 照片 Meta 信息&lt;/li&gt;
 &lt;li&gt;&lt;span class="caps"&gt;CHM&lt;/span&gt; View 嗯哼&lt;/li&gt;
 &lt;li&gt;Simple Comic 嗯哼&lt;/li&gt;
-&lt;li&gt;MPlayerX 嗯哼&lt;/li&gt;
-&lt;li&gt;Skim 看 &lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Movist/&lt;span class="caps"&gt;VLC&lt;/span&gt;/MPlayerX/&lt;span class="caps"&gt;MPV&lt;/span&gt; 嗯哼&lt;/li&gt;
+&lt;li&gt;Skim 看 &lt;span class="caps"&gt;PD&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -248,12 +263,12 @@ alias leolanch="python /opt/bin/leo/launchLeo.py \&amp;gt;\&amp;gt; /dev/null 2\
 &lt;p&gt;开发环境哪…&lt;/p&gt;
 &lt;p&gt;是另外一个故事了, 也是血淋淋的, 简直不忍心回顾了&lt;/p&gt;
 &lt;h1 id="_10"&gt;总结&lt;/h1&gt;
-&lt;p&gt;经过72小时,总厂不眠不休的配置,总算将主要的环境配置好了, 其它的随用随安装就好…&lt;/p&gt;
+&lt;p&gt;经过72小时,近乎 不眠不休的配置,总算将主要的环境配置好了, 其它的随用随安装就好…&lt;/p&gt;
 &lt;p&gt;就算每5年才可能来这么一次, 再也不想了!
 以往, 只有 win-&amp;gt;Linux 时差不多也要这么折腾几天, 
 Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
 可是 &lt;span class="caps"&gt;MAC&lt;/span&gt; 的硬件切换,怎么就这么痛?!&lt;/p&gt;
-&lt;p&gt;回想,一定, 主要的折腾是系统和软件的个性配置, 星星点点, 总厂都是微小的痛点,
+&lt;p&gt;回想,一定, 主要的折腾是系统和软件的个性配置, 星星点点, 基本都是微小的痛点,
 在长期探寻中,找到了合适的方案, 以及操作快捷键, 然后肌肉记忆了下来,
 具体如何配置的, 又没有记录, 或是自动化恢复方案, 然后就只能重新从肌肉记忆反推配置…&lt;/p&gt;
 &lt;p&gt;所以, 一定要长期/坚持/持续/理性 的备份!&lt;/p&gt;
@@ -271,10 +286,12 @@ Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
 &lt;li&gt;一定要雷线! 一定要雷线! 一定要雷线!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;当前,有条件的,能上 AirPort Time Capsule 就上&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;只是, 一直担心,没有演练过 TimeMachine 的系统恢复哪, 总是对这机制不怎么放心, 怎么破!?&lt;/p&gt;
 &lt;h1 id="changelog"&gt;Changelog&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;160703 增补,因为有人说,都是远古工具陈列馆了,不得不将最近引入工具箱的记述上&lt;/li&gt;
 &lt;li&gt;160701 补全&lt;/li&gt;
 &lt;li&gt;160628 发布&lt;/li&gt;
 &lt;li&gt;160627 随笔&lt;/li&gt;

@@ -580,7 +580,235 @@ for num, name in enumerate(names):
 1 Empire State
 2 Sears Tower
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id="_5"&gt;是也乎&lt;/h2&gt;
+&lt;h4 id="vs"&gt;迭代 vs 索引&lt;/h4&gt;
+&lt;p&gt;受限:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for i in range(len(my_list)):
+    v = my_list[i]    # indexing!
+    print i, v
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;更强:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for i, v in enumerate(iterable):
+    print i, v
+
+for linenum, line in enumerate(f, start=1):
+    #...
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;C样坏形:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;i = 0
+for v in iterable:
+    print i, v
+    i += 1
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="q_1"&gt;Q: 如何对两个列表循环?&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+heights = [324, 381, 442]
+
+for i in range(len(names)):
+    name = names[i]
+    height = heights[i]
+    print "%s: %s meters" % (name, height)
+
+Eiffel Tower: 324 meters
+Empire State: 381 meters
+Sears Tower: 442 meters
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="zip"&gt;zip() 生成弱对关系循环&lt;/h4&gt;
+&lt;p&gt;将一对循环,变成一个流循环:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for name, height in zip(names, heights):
+    print "%s: %s meters" % (name, height)
+
+Eiffel Tower: 324 meters
+Empire State: 381 meters
+Sears Tower: 442 meters
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="dict"&gt;dict() 是接收一对流的&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+heights = [324, 381, 442]
+
+dict(zip(names, heights))
+
+{'Empire State': 381, 
+ 'Sears Tower': 442, 
+ 'Eiffel Tower': 324}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="_5"&gt;最赞&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tall_buildings = {
+  "Empire State": 381, "Sears Tower": 442,
+  "Burj Khalifa": 828, "Taipei 101": 509,
+  }
+
+&amp;gt;&amp;gt;&amp;gt; print max(tall_buildings.values())
+828
+
+&amp;gt;&amp;gt;&amp;gt; print max(tall_buildings.items(), key=lambda b: b[1])
+('Burj Khalifa', 828)
+
+&amp;gt;&amp;gt;&amp;gt; print max(tall_buildings, key=tall_buildings.get)
+'Burj Khalifa'
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="_6"&gt;自制迭代&lt;/h2&gt;
+&lt;h3 id="_7"&gt;生成自有迭代&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nums = [88, 73, 92, 72, 40, 38, 25, 20, 90, 72]
+for n in nums:
+    if n % 2 == 0:
+        do_something(n)
+
+def evens(stream):
+    them = []
+    for n in stream:
+        if n % 2 == 0:
+            them.append(n)
+    return them
+
+for n in evens(nums):
+    do_something(n)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="_8"&gt;生成器&lt;/h3&gt;
+&lt;p&gt;函式返回一个值 —&amp;gt; 生成器生成一个流&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;def hello_world():
+    yield "Hello"
+    yield "world"
+
+for x in hello_world():
+    print x
+
+Hello
+world
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="evens-generator"&gt;Evens generator&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;def evens(stream):
+    for n in stream:
+        if n % 2 == 0:
+            yield n
+
+for n in evens(nums):
+    do_something(n)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="_9"&gt;对迭代提炼&lt;/h4&gt;
+&lt;p&gt;~ Abstracting your iteration&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;f = open("my_config.ini")
+for line in f:
+    line = line.strip()
+    if line.startswith('#'):
+        # A comment line, skip it.
+        continue
+    if not line:
+        # A blank line, skip it.
+        continue
+
+    # An interesting line.
+    do_something(line)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;自制生成器:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;def interesting_lines(f):
+    for line in f:
+        line = line.strip()
+        if line.startswith('#'):
+            continue
+        if not line:
+            continue
+        yield line
+
+with open("my_config.ini") as f:
+    for line in interesting_lines(f):
+        do_something(line)
+
+with open("my_other.dat") as f2:
+    for line in interesting_lines(f2):
+        do_something_else(line)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="q_2"&gt;Q: 如何从两层循环中退出?&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for row in range(height):
+    for col in range(width):
+
+        value = spreadsheet.get_value(col, row)
+        do_something(value)
+
+        if this_is_my_value(value):
+            break   # ← ???
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="a"&gt;A: 合并循环&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;def range_2d(width, height):
+    """Produce a stream of two-D coordinates."""
+    for y in range(height):
+        for x in range(width):
+            yield x, y
+
+for col, row in range_2d(width, height):
+    value = spreadsheet.get_value(col, row)
+    do_something(value)
+
+    if this_is_my_value(value):
+        break
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="better"&gt;Better: 单元迭代&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for cell in spreadsheet.cells():
+    value = cell.get_value()
+    do_something(value)
+
+    if this_is_my_value(value):
+        break
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="_10"&gt;底层迭代&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;可迭代: 能生成迭代 Iterable: produces an iterator&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;迭代器: 生成一个值流 Iterator: produces a stream of values&lt;/p&gt;
+&lt;p&gt;iterator = iter(iterable)  # iterable.&lt;strong&gt;iter&lt;/strong&gt;()
+value = next(iterator)     # iterator.next() or .&lt;strong&gt;next&lt;/strong&gt;()
+value = next(iterator) …&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;迭代器仅有一个操作: &lt;code&gt;next()&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="_11"&gt;迭代基层操作&lt;/h3&gt;
+&lt;p&gt;有时很有用:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;with open("blah.dat") as f:
+    # Read the first line
+    header_line = next(f)
+
+    # Read the rest
+    for data_line in f:
+        # ...
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="_12"&gt;构造自制对象可迭代&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;ToDoList&lt;/span&gt;(&lt;span class="n"&gt;object&lt;/span&gt;):
+    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;(&lt;span class="k"&gt;self&lt;/span&gt;):
+        &lt;span class="k"&gt;self&lt;/span&gt;.&lt;span class="n"&gt;tasks&lt;/span&gt; = []
+
+    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;__iter__&lt;/span&gt;(&lt;span class="k"&gt;self&lt;/span&gt;):
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;iter&lt;/span&gt;(&lt;span class="k"&gt;self&lt;/span&gt;.&lt;span class="n"&gt;tasks&lt;/span&gt;)
+
+&lt;span class="nb"&gt;todo&lt;/span&gt; = &lt;span class="n"&gt;ToDoList&lt;/span&gt;()
+...
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;todo:&lt;/span&gt;
+    &lt;span class="c c-Singleline"&gt;# ...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;仅仅需要定义 &lt;code&gt;__iter__()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="iter"&gt;&lt;strong&gt;iter&lt;/strong&gt; 生成器&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;ToDoList&lt;/span&gt;(&lt;span class="n"&gt;object&lt;/span&gt;):
+    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;(&lt;span class="k"&gt;self&lt;/span&gt;):
+        &lt;span class="k"&gt;self&lt;/span&gt;.&lt;span class="n"&gt;tasks&lt;/span&gt; = []
+
+    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;__iter__&lt;/span&gt;(&lt;span class="k"&gt;self&lt;/span&gt;):
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="k"&gt;self&lt;/span&gt;.&lt;span class="n"&gt;tasks:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;not&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;.&lt;span class="n"&gt;done:&lt;/span&gt;
+                &lt;span class="n"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;
+
+    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt;(&lt;span class="k"&gt;self&lt;/span&gt;):
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;iter&lt;/span&gt;(&lt;span class="k"&gt;self&lt;/span&gt;.&lt;span class="n"&gt;tasks&lt;/span&gt;)
+
+    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;done&lt;/span&gt;(&lt;span class="k"&gt;self&lt;/span&gt;):
+        &lt;span class="k"&gt;return&lt;/span&gt; (&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="k"&gt;self&lt;/span&gt;.&lt;span class="n"&gt;tasks&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;.&lt;span class="n"&gt;done&lt;/span&gt;)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="_13"&gt;(￣▽￣)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;迭代无处不在&lt;/li&gt;
+&lt;li&gt;Python 内置了干净强大的模型支持迭代&lt;/li&gt;
+&lt;li&gt;抽象和定制你的迭代吧!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_14"&gt;是也乎&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;160613 空先发&lt;/li&gt;
 &lt;li&gt;160531 动念&lt;/li&gt;

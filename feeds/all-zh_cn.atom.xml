@@ -1592,6 +1592,15 @@ The new osxfuse file system bundle needs to be installed by the root user:
 &lt;p&gt;Anyway, that’s where I am now. No longer a language partisan, unclear of what community I am even participating in, I am less sure how to identify and self-identify myself. How do I describe myself now? Even as I find my technical footing I am still adrift. And so it’s hard to say goodbye. So instead I’ll say, Pythonistas: until we meet again. Maybe I’ll meet some of you over&amp;nbsp;here.&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;161201 是也乎,(￣▽￣)&lt;ul&gt;
+&lt;li&gt;发现也没有必要逐字翻译&lt;/li&gt;
+&lt;li&gt;作者是位勤劳的 Pythonista, 创造了从 SQLObject 到 Silver Lining&amp;nbsp;等等一系列&lt;/li&gt;
+&lt;li&gt;不成功的模块/工具/工程&lt;/li&gt;
+&lt;li&gt;现在是 &lt;code&gt;TogetherJS&lt;/code&gt; 发起人&lt;/li&gt;
+&lt;li&gt;之所以从 Python 转进 &lt;span class="caps"&gt;JS&lt;/span&gt; 世界,只是因为感觉在 Python&amp;nbsp;中无论折腾什么都会进入混乱的竞争&lt;/li&gt;
+&lt;li&gt;细思恐极&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;150112 整理到个人&amp;nbsp;blog&lt;/li&gt;
 &lt;li&gt;150110&amp;nbsp;从周刊中发现,决定翻译&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="Weekly"></category><category term="Zh"></category></entry><entry><title>KnewOne-talk 之 大妈 篇</title><link href="http://blog.zoomquiet.io/knewone-talk-zoomq-choise.html" rel="alternate"></link><published>2014-12-23T23:23:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-23:knewone-talk-zoomq-choise.html</id><summary type="html">
@@ -1983,7 +1992,7 @@ The new osxfuse file system bundle needs to be installed by the root user:
 
 
 &lt;h2 id="_1"&gt;是也乎&lt;/h2&gt;
-&lt;p&gt;原未 &lt;code&gt;IPy[:] notebook&lt;/code&gt; 天然就内置了这种能力!&lt;/p&gt;
+&lt;p&gt;原来&amp;#8230; &lt;code&gt;IPy[:] notebook&lt;/code&gt; 天然就内置了这种能力!&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;160322 @&lt;span class="caps"&gt;TANG&lt;/span&gt; ZhiXiong 提醒:&lt;ul&gt;
@@ -2812,7 +2821,7 @@ Out[2]: 10
 &lt;ul&gt;
 &lt;li&gt;1406?? &lt;/li&gt;
 &lt;li&gt;140728 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Brett"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>为毛俺不担心所谓Python用户流失</title><link href="http://blog.zoomquiet.io/why-i-dont-worry-about-pythons-popularity.html" rel="alternate"></link><published>2014-07-11T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:why-i-dont-worry-about-pythons-popularity.html</id><summary type="html">&lt;p&gt;Why I don’t worry about Python losing&amp;nbsp;users&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="Brett"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>为毛俺不担心所谓Python用户流失</title><link href="http://blog.zoomquiet.io/why-i-dont-worry-about-pythons-popularity.html" rel="alternate"></link><published>2014-07-11T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:why-i-dont-worry-about-pythons-popularity.html</id><summary type="html">&lt;h2 id="why-i-dont-worry-about-python-losing-users"&gt;Why I don’t worry about Python losing&amp;nbsp;users&lt;/h2&gt;
 &lt;p&gt;I just had a need to read two files that were line-delimited lists of domains, consolidate the data, and then output the domains sorted and all lowercased to a new file. It took me 10 lines of Python code and worked perfectly on the first&amp;nbsp;try.&lt;/p&gt;
 &lt;p&gt;Out of curiosity and to make sure I keep learning Go (my team at work uses it whenever possible), I decided to re-implement the same functionality. That took 
 &lt;a href="https://gist.github.com/brettcannon/a2a37cc5aadbc91c02ad"&gt;56 lines in Go&lt;/a&gt;
@@ -2827,6 +2836,14 @@ Out[2]: 10
 &lt;p&gt;All of this is why I don’t worry about Python’s demise due to lack of users. People might switch to Go at work because the performance:productivity ratio is very good for their project or team. Or maybe people got frustrated with the Python 2/3 transition and didn’t want to base their project at work on Python anymore. It really doesn’t matter in terms of the number of users of Python because I’m willing to bet those people still reach for Python when they need a one-off script to solve a problem. And I bet these people still recommend Python when they are asked what people’s first programming language should be. In other words I don’t worry about our great-for-teaching, highly productive scripting language ever lacking users; Python will always be&amp;nbsp;useful.&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;161203 是也乎,(￣▽￣)&lt;ul&gt;
+&lt;li&gt;发现没有必要全文翻译,观点很清晰&lt;/li&gt;
+&lt;li&gt;就生产力方面,当前世界无出其右&lt;/li&gt;
+&lt;li&gt;嘦是人类创建的软件工程,必然有一个很长时期的混乱期&lt;/li&gt;
+&lt;li&gt;这个期间,临时的/一次性的 检验/验证/实验性&amp;nbsp;脚本是必须的&lt;/li&gt;
+&lt;li&gt;那么通用的 Python&amp;nbsp;语言简直是无法放弃的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;140728&amp;nbsp;从周刊中发现,决定翻译&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="BRETT"></category><category term="Leo"></category><category term="PyConChina"></category><category term="Zh"></category></entry><entry><title>ScrapBook彻查成果</title><link href="http://blog.zoomquiet.io/zq-chk4scrapbook.html" rel="alternate"></link><published>2014-07-11T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:zq-chk4scrapbook.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;/h2&gt;

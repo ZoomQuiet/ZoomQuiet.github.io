@@ -111,11 +111,29 @@
                 <div class="summary">
 <p>来自 @nedbat 的分享:</p>
 <p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">是也乎</h2>
+<h2 id="_1">迭代基础</h2>
+<p>C样:</p>
+<div class="highlight"><pre><span></span>i = 0
+while i &lt; len(my_list):
+    v = my_list[i]
+    print v
+    i += 1
+</pre></div>
+<p>偏门:</p>
+<div class="highlight"><pre><span></span>for i in range(len(my_list)):
+    v = my_list[i]
+    print v
+</pre></div>
+<p>蠎样:</p>
+<div class="highlight"><pre><span></span>for v in my_list:
+    print v
+</pre></div>
+<p>模式:</p>
+<div class="highlight"><pre><span></span>for name in iterable:
+    statements
+</pre></div>
 <ul>
-<li>160613 空先发</li>
-<li>160531 动念</li>
-</ul>
+<li>可 ...</li></ul>
                     <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
                 </div>
             </article>

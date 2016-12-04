@@ -447,7 +447,140 @@ Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
 &lt;p&gt;Google一下就可以發現台灣已經有很多人在倡導與臨終、安樂死相關的理念，值得我們向她/他們致敬，但我相信他們的努力還沒有受到應有的重視，對於這個議題，我們還有很多要努力的地方。&lt;/p&gt;</summary><category term="DAMA"></category><category term="Pythoneer"></category><category term="Chaos"></category></entry><entry><title>天然样循环</title><link href="http://blog.zoomquiet.io/nedbat-loop-iter.html" rel="alternate"></link><published>2016-05-31T00:00:00+08:00</published><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-05-31:nedbat-loop-iter.html</id><summary type="html">
 &lt;p&gt;来自 @nedbat 的分享:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://nedbatchelder.com/text/iter.html"&gt;Ned Batchelder: Loop Like A Native&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="_1"&gt;是也乎&lt;/h2&gt;
+&lt;h2 id="_1"&gt;迭代基础&lt;/h2&gt;
+&lt;p&gt;C样:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;i = 0
+while i &amp;lt; len(my_list):
+    v = my_list[i]
+    print v
+    i += 1
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;偏门:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for i in range(len(my_list)):
+    v = my_list[i]
+    print v
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;蠎样:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for v in my_list:
+    print v
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;模式:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for name in iterable:
+    statements
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;可 &lt;code&gt;iterable&lt;/code&gt; 的对象可以生成值流&lt;/li&gt;
+&lt;li&gt;对迭代对象的每次操作&lt;/li&gt;
+&lt;li&gt;由对象决定是什么值&lt;/li&gt;
+&lt;li&gt;Python 中太多对象可以直接迭代的…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="list-elements"&gt;list ⇒ elements&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for e in [1, 2, 3, 4]:
+    print e
+
+1
+2
+3
+4
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="strings-characters"&gt;Strings ⇒ characters&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for c in "Hello":
+    print c
+
+H
+e
+l
+l
+o
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="dicts-keys"&gt;Dicts ⇒ keys&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;d = { 'a': 1,  'b': 2,  'c': 3 }
+
+for k in d:
+    print k
+
+a
+c
+b
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;当然顺序是没有的&lt;/li&gt;
+&lt;li&gt;以及:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;for v in d.itervalues():&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;for k,v in d.iteritems():&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;专用形式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="files-lines"&gt;Files ⇒ lines&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;with open("gettysburg.txt") as f:
+    for line in f:
+        print repr(line)
+
+'Four-score and seven years ago,\n'
+'our fathers brought forth on this continent\n'
+'a new nation,\n'
+'conceived in liberty,\n'
+'and dedicated to the proposition\n'
+'that all men are created equal.\n'
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="_2"&gt;标准库中有趣的迭代&lt;/h3&gt;
+&lt;p&gt;正则表达式:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for match in re.finditer(pattern, string):
+    # once for each regex match...
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;文件系统:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for root, dirs, files in os.walk('/some/dir'):
+    # once for each sub-directory...
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;迭代工具:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;itertools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="c1"&gt;# once for each integer... Infinite!&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;repeat&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cycle&lt;/span&gt;
+&lt;span class="n"&gt;seq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;repeat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;cycle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c1"&gt;# 17, 17, 17, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, ...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="_3"&gt;其它的迭代形式&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;new_list = list(iterable)
+
+results = [f(x) for x in iterable]
+
+total = sum(iterable)
+
+smallest = min(iterable)
+largest = max(iterable)
+
+combined = "".join(iterable)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="_4"&gt;基本设问&lt;/h2&gt;
+&lt;h3 id="q"&gt;Q: 如何获得索引号?&lt;/h3&gt;
+&lt;p&gt;别:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for i in range(len(my_list)):
+    v = my_list[i]
+    print i, v
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;赞:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for i, v in enumerate(my_list):
+    print i, v
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="enumerate"&gt;enumerate() 制造好用的值对&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+list(enumerate(names))
+
+[(0, 'Eiffel Tower'), 
+ (1, 'Empire State'), 
+ (2, 'Sears Tower')]
+
+for num, name in enumerate(names):
+    print num, name
+
+0 Eiffel Tower
+1 Empire State
+2 Sears Tower
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="_5"&gt;是也乎&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;160613 空先发&lt;/li&gt;
 &lt;li&gt;160531 动念&lt;/li&gt;

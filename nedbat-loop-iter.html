@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="nedbat-loop-iter"/>
             <meta property="og:url" content="http://blog.zoomquiet.io/nedbat-loop-iter.html"/>
-            <meta property="og:description" content="来自 @nedbat 的分享: Ned Batchelder: Loop Like A Native 迭代基础 C样: i = 0 while i &lt; len(my_list): v = my_list[i] print v i += 1 偏门: for i in range(len(my_list)): v = my_list[i] print v 蠎样: for v in my_list: print v 模式: for name in iterable: statements 可 ..."/>
+            <meta property="og:description" content="[TOC] 来自 @nedbat 的分享: Ned Batchelder: Loop Like A Native 迭代基础 C样: i = 0 while i &lt; len(my_list): v = my_list[i] print v i += 1 偏门: for i in range(len(my_list)): v = my_list[i] print v 蠎样: for v in my_list: print v 模式: for name in iterable: statements …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -67,9 +67,6 @@
                     <li><a href="http://pychina.org">PyChina</a></li>
                     <li><a href="http://obp.zoomquiet.io">OBP</a></li>
               
-                        <li><a href="http://blog.zoomquiet.io/pages/about.html">About</a></li>
-                        <li><a href="http://blog.zoomquiet.io/pages/designing.html">设计</a></li>
-                        <li><a href="http://blog.zoomquiet.io/pages/hello-world.html">你好，世界</a></li>
               
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -128,61 +125,10 @@
 </footer><!-- /.post-info -->                    </div>
                 </div>
 
-    <div class="toc">
-<ul>
-<li><a href="#_1">迭代基础</a><ul>
-<li><a href="#list-elements">list ⇒ elements</a></li>
-<li><a href="#strings-characters">Strings ⇒ characters</a></li>
-<li><a href="#dicts-keys">Dicts ⇒ keys</a></li>
-<li><a href="#files-lines">Files ⇒ lines</a></li>
-<li><a href="#_2">标准库中有趣的迭代</a></li>
-<li><a href="#_3">其它的迭代形式</a></li>
-</ul>
-</li>
-<li><a href="#_4">基本设问</a><ul>
-<li><a href="#q">Q: 如何获得索引号?</a><ul>
-<li><a href="#enumerate">enumerate() 制造好用的值对</a></li>
-<li><a href="#vs">迭代 vs 索引</a></li>
-</ul>
-</li>
-<li><a href="#q_1">Q: 如何对两个列表循环?</a><ul>
-<li><a href="#zip">zip() 生成弱对关系循环</a></li>
-<li><a href="#dict">dict() 是接收一对流的</a></li>
-<li><a href="#_5">最赞</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_6">自制迭代</a><ul>
-<li><a href="#_7">生成自有迭代</a></li>
-<li><a href="#_8">生成器</a><ul>
-<li><a href="#evens-generator">Evens generator</a></li>
-<li><a href="#_9">对迭代提炼</a></li>
-</ul>
-</li>
-<li><a href="#q_2">Q: 如何从两层循环中退出?</a><ul>
-<li><a href="#a">A: 合并循环</a></li>
-<li><a href="#better">Better: 单元迭代</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_10">底层迭代</a><ul>
-<li><a href="#_11">迭代基层操作</a></li>
-<li><a href="#_12">构造自制对象可迭代</a><ul>
-<li><a href="#iter">iter 生成器</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_13">(￣▽￣)</a></li>
-<li><a href="#_14">是也乎</a></li>
-</ul>
-</div>
-                
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">迭代基础</h2>
+                <p>[<span class="caps">TOC</span>]</p>
+<p>来自 @nedbat&nbsp;的分享:</p>
+<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A&nbsp;Native</a></p>
+<h2>迭代基础</h2>
 <p>C样:</p>
 <div class="highlight"><pre><span></span>i = 0
 while i &lt; len(my_list):
@@ -190,26 +136,34 @@ while i &lt; len(my_list):
     print v
     i += 1
 </pre></div>
+
+
 <p>偏门:</p>
 <div class="highlight"><pre><span></span>for i in range(len(my_list)):
     v = my_list[i]
     print v
 </pre></div>
+
+
 <p>蠎样:</p>
 <div class="highlight"><pre><span></span>for v in my_list:
     print v
 </pre></div>
+
+
 <p>模式:</p>
 <div class="highlight"><pre><span></span>for name in iterable:
     statements
 </pre></div>
+
+
 <ul>
 <li>可 <code>iterable</code> 的对象可以生成值流</li>
 <li>对迭代对象的每次操作</li>
 <li>由对象决定是什么值</li>
-<li>Python 中太多对象可以直接迭代的…</li>
+<li>Python&nbsp;中太多对象可以直接迭代的&#8230;</li>
 </ul>
-<h3 id="list-elements">list ⇒ elements</h3>
+<h3>list ⇒&nbsp;elements</h3>
 <div class="highlight"><pre><span></span>for e in [1, 2, 3, 4]:
     print e
 
@@ -218,8 +172,10 @@ while i &lt; len(my_list):
 3
 4
 </pre></div>
-<h3 id="strings-characters">Strings ⇒ characters</h3>
-<div class="highlight"><pre><span></span>for c in "Hello":
+
+
+<h3>Strings ⇒&nbsp;characters</h3>
+<div class="highlight"><pre><span></span>for c in &quot;Hello&quot;:
     print c
 
 H
@@ -228,8 +184,10 @@ l
 l
 o
 </pre></div>
-<h3 id="dicts-keys">Dicts ⇒ keys</h3>
-<div class="highlight"><pre><span></span>d = { 'a': 1,  'b': 2,  'c': 3 }
+
+
+<h3>Dicts ⇒&nbsp;keys</h3>
+<div class="highlight"><pre><span></span>d = { &#39;a&#39;: 1,  &#39;b&#39;: 2,  &#39;c&#39;: 3 }
 
 for k in d:
     print k
@@ -238,6 +196,8 @@ a
 c
 b
 </pre></div>
+
+
 <ul>
 <li>当然顺序是没有的</li>
 <li>以及:<ul>
@@ -247,27 +207,33 @@ b
 </ul>
 </li>
 </ul>
-<h3 id="files-lines">Files ⇒ lines</h3>
-<div class="highlight"><pre><span></span>with open("gettysburg.txt") as f:
+<h3>Files ⇒&nbsp;lines</h3>
+<div class="highlight"><pre><span></span>with open(&quot;gettysburg.txt&quot;) as f:
     for line in f:
         print repr(line)
 
-'Four-score and seven years ago,\n'
-'our fathers brought forth on this continent\n'
-'a new nation,\n'
-'conceived in liberty,\n'
-'and dedicated to the proposition\n'
-'that all men are created equal.\n'
+&#39;Four-score and seven years ago,\n&#39;
+&#39;our fathers brought forth on this continent\n&#39;
+&#39;a new nation,\n&#39;
+&#39;conceived in liberty,\n&#39;
+&#39;and dedicated to the proposition\n&#39;
+&#39;that all men are created equal.\n&#39;
 </pre></div>
-<h3 id="_2">标准库中有趣的迭代</h3>
+
+
+<h3>标准库中有趣的迭代</h3>
 <p>正则表达式:</p>
 <div class="highlight"><pre><span></span>for match in re.finditer(pattern, string):
     # once for each regex match...
 </pre></div>
+
+
 <p>文件系统:</p>
-<div class="highlight"><pre><span></span>for root, dirs, files in os.walk('/some/dir'):
+<div class="highlight"><pre><span></span>for root, dirs, files in os.walk(&#39;/some/dir&#39;):
     # once for each sub-directory...
 </pre></div>
+
+
 <p>迭代工具:</p>
 <div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">():</span>
     <span class="c1"># once for each integer... Infinite!</span>
@@ -277,7 +243,9 @@ b
 <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
     <span class="c1"># 17, 17, 17, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, ...</span>
 </pre></div>
-<h3 id="_3">其它的迭代形式</h3>
+
+
+<h3>其它的迭代形式</h3>
 <div class="highlight"><pre><span></span>new_list = list(iterable)
 
 results = [f(x) for x in iterable]
@@ -287,26 +255,32 @@ total = sum(iterable)
 smallest = min(iterable)
 largest = max(iterable)
 
-combined = "".join(iterable)
+combined = &quot;&quot;.join(iterable)
 </pre></div>
-<h2 id="_4">基本设问</h2>
-<h3 id="q">Q: 如何获得索引号?</h3>
+
+
+<h2>基本设问</h2>
+<h3>Q:&nbsp;如何获得索引号?</h3>
 <p>别:</p>
 <div class="highlight"><pre><span></span>for i in range(len(my_list)):
     v = my_list[i]
     print i, v
 </pre></div>
+
+
 <p>赞:</p>
 <div class="highlight"><pre><span></span>for i, v in enumerate(my_list):
     print i, v
 </pre></div>
-<h4 id="enumerate">enumerate() 制造好用的值对</h4>
-<div class="highlight"><pre><span></span>names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+
+
+<h4>enumerate()&nbsp;制造好用的值对</h4>
+<div class="highlight"><pre><span></span>names = [&quot;Eiffel Tower&quot;, &quot;Empire State&quot;, &quot;Sears Tower&quot;]
 list(enumerate(names))
 
-[(0, 'Eiffel Tower'), 
- (1, 'Empire State'), 
- (2, 'Sears Tower')]
+[(0, &#39;Eiffel Tower&#39;), 
+ (1, &#39;Empire State&#39;), 
+ (2, &#39;Sears Tower&#39;)]
 
 for num, name in enumerate(names):
     print num, name
@@ -315,12 +289,16 @@ for num, name in enumerate(names):
 1 Empire State
 2 Sears Tower
 </pre></div>
-<h4 id="vs">迭代 vs 索引</h4>
+
+
+<h4>迭代 vs&nbsp;索引</h4>
 <p>受限:</p>
 <div class="highlight"><pre><span></span>for i in range(len(my_list)):
     v = my_list[i]    # indexing!
     print i, v
 </pre></div>
+
+
 <p>更强:</p>
 <div class="highlight"><pre><span></span>for i, v in enumerate(iterable):
     print i, v
@@ -328,61 +306,73 @@ for num, name in enumerate(names):
 for linenum, line in enumerate(f, start=1):
     #...
 </pre></div>
+
+
 <p>C样坏形:</p>
 <div class="highlight"><pre><span></span>i = 0
 for v in iterable:
     print i, v
     i += 1
 </pre></div>
-<h3 id="q_1">Q: 如何对两个列表循环?</h3>
-<div class="highlight"><pre><span></span>names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+
+
+<h3>Q:&nbsp;如何对两个列表循环?</h3>
+<div class="highlight"><pre><span></span>names = [&quot;Eiffel Tower&quot;, &quot;Empire State&quot;, &quot;Sears Tower&quot;]
 heights = [324, 381, 442]
 
 for i in range(len(names)):
     name = names[i]
     height = heights[i]
-    print "%s: %s meters" % (name, height)
+    print &quot;%s: %s meters&quot; % (name, height)
 
 Eiffel Tower: 324 meters
 Empire State: 381 meters
 Sears Tower: 442 meters
 </pre></div>
-<h4 id="zip">zip() 生成弱对关系循环</h4>
+
+
+<h4>zip()&nbsp;生成弱对关系循环</h4>
 <p>将一对循环,变成一个流循环:</p>
 <div class="highlight"><pre><span></span>for name, height in zip(names, heights):
-    print "%s: %s meters" % (name, height)
+    print &quot;%s: %s meters&quot; % (name, height)
 
 Eiffel Tower: 324 meters
 Empire State: 381 meters
 Sears Tower: 442 meters
 </pre></div>
-<h4 id="dict">dict() 是接收一对流的</h4>
-<div class="highlight"><pre><span></span>names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+
+
+<h4>dict()&nbsp;是接收一对流的</h4>
+<div class="highlight"><pre><span></span>names = [&quot;Eiffel Tower&quot;, &quot;Empire State&quot;, &quot;Sears Tower&quot;]
 heights = [324, 381, 442]
 
 dict(zip(names, heights))
 
-{'Empire State': 381, 
- 'Sears Tower': 442, 
- 'Eiffel Tower': 324}
+{&#39;Empire State&#39;: 381, 
+ &#39;Sears Tower&#39;: 442, 
+ &#39;Eiffel Tower&#39;: 324}
 </pre></div>
-<h4 id="_5">最赞</h4>
+
+
+<h4>最赞</h4>
 <div class="highlight"><pre><span></span>tall_buildings = {
-  "Empire State": 381, "Sears Tower": 442,
-  "Burj Khalifa": 828, "Taipei 101": 509,
+  &quot;Empire State&quot;: 381, &quot;Sears Tower&quot;: 442,
+  &quot;Burj Khalifa&quot;: 828, &quot;Taipei 101&quot;: 509,
   }
 
 &gt;&gt;&gt; print max(tall_buildings.values())
 828
 
 &gt;&gt;&gt; print max(tall_buildings.items(), key=lambda b: b[1])
-('Burj Khalifa', 828)
+(&#39;Burj Khalifa&#39;, 828)
 
 &gt;&gt;&gt; print max(tall_buildings, key=tall_buildings.get)
-'Burj Khalifa'
+&#39;Burj Khalifa&#39;
 </pre></div>
-<h2 id="_6">自制迭代</h2>
-<h3 id="_7">生成自有迭代</h3>
+
+
+<h2>自制迭代</h2>
+<h3>生成自有迭代</h3>
 <div class="highlight"><pre><span></span>nums = [88, 73, 92, 72, 40, 38, 25, 20, 90, 72]
 for n in nums:
     if n % 2 == 0:
@@ -398,11 +388,13 @@ def evens(stream):
 for n in evens(nums):
     do_something(n)
 </pre></div>
-<h3 id="_8">生成器</h3>
-<p>函式返回一个值 —&gt; 生成器生成一个流</p>
+
+
+<h3>生成器</h3>
+<p>函式返回一个值 &#8212;&gt;&nbsp;生成器生成一个流</p>
 <div class="highlight"><pre><span></span>def hello_world():
-    yield "Hello"
-    yield "world"
+    yield &quot;Hello&quot;
+    yield &quot;world&quot;
 
 for x in hello_world():
     print x
@@ -410,7 +402,9 @@ for x in hello_world():
 Hello
 world
 </pre></div>
-<h4 id="evens-generator">Evens generator</h4>
+
+
+<h4>Evens&nbsp;generator</h4>
 <div class="highlight"><pre><span></span>def evens(stream):
     for n in stream:
         if n % 2 == 0:
@@ -419,12 +413,14 @@ world
 for n in evens(nums):
     do_something(n)
 </pre></div>
-<h4 id="_9">对迭代提炼</h4>
-<p>~ Abstracting your iteration</p>
-<div class="highlight"><pre><span></span>f = open("my_config.ini")
+
+
+<h4>对迭代提炼</h4>
+<p>~ Abstracting your&nbsp;iteration</p>
+<div class="highlight"><pre><span></span>f = open(&quot;my_config.ini&quot;)
 for line in f:
     line = line.strip()
-    if line.startswith('#'):
+    if line.startswith(&#39;#&#39;):
         # A comment line, skip it.
         continue
     if not line:
@@ -434,25 +430,29 @@ for line in f:
     # An interesting line.
     do_something(line)
 </pre></div>
+
+
 <p>自制生成器:</p>
 <div class="highlight"><pre><span></span>def interesting_lines(f):
     for line in f:
         line = line.strip()
-        if line.startswith('#'):
+        if line.startswith(&#39;#&#39;):
             continue
         if not line:
             continue
         yield line
 
-with open("my_config.ini") as f:
+with open(&quot;my_config.ini&quot;) as f:
     for line in interesting_lines(f):
         do_something(line)
 
-with open("my_other.dat") as f2:
+with open(&quot;my_other.dat&quot;) as f2:
     for line in interesting_lines(f2):
         do_something_else(line)
 </pre></div>
-<h3 id="q_2">Q: 如何从两层循环中退出?</h3>
+
+
+<h3>Q:&nbsp;如何从两层循环中退出?</h3>
 <div class="highlight"><pre><span></span>for row in range(height):
     for col in range(width):
 
@@ -462,9 +462,11 @@ with open("my_other.dat") as f2:
         if this_is_my_value(value):
             break   # ← ???
 </pre></div>
-<h4 id="a">A: 合并循环</h4>
+
+
+<h4>A:&nbsp;合并循环</h4>
 <div class="highlight"><pre><span></span>def range_2d(width, height):
-    """Produce a stream of two-D coordinates."""
+    &quot;&quot;&quot;Produce a stream of two-D coordinates.&quot;&quot;&quot;
     for y in range(height):
         for x in range(width):
             yield x, y
@@ -476,7 +478,9 @@ for col, row in range_2d(width, height):
     if this_is_my_value(value):
         break
 </pre></div>
-<h4 id="better">Better: 单元迭代</h4>
+
+
+<h4>Better:&nbsp;单元迭代</h4>
 <div class="highlight"><pre><span></span>for cell in spreadsheet.cells():
     value = cell.get_value()
     do_something(value)
@@ -484,20 +488,22 @@ for col, row in range_2d(width, height):
     if this_is_my_value(value):
         break
 </pre></div>
-<h2 id="_10">底层迭代</h2>
+
+
+<h2>底层迭代</h2>
 <ul>
-<li>可迭代: 能生成迭代 Iterable: produces an iterator</li>
+<li>可迭代: 能生成迭代 Iterable: produces an&nbsp;iterator</li>
 <li>
-<p>迭代器: 生成一个值流 Iterator: produces a stream of values</p>
+<p>迭代器: 生成一个值流 Iterator: produces a stream of&nbsp;values</p>
 <p>iterator = iter(iterable)  # iterable.<strong>iter</strong>()
 value = next(iterator)     # iterator.next() or .<strong>next</strong>()
-value = next(iterator) …</p>
+value = next(iterator)&nbsp;&#8230;</p>
 </li>
 </ul>
 <p>迭代器仅有一个操作: <code>next()</code></p>
-<h3 id="_11">迭代基层操作</h3>
+<h3>迭代基层操作</h3>
 <p>有时很有用:</p>
-<div class="highlight"><pre><span></span>with open("blah.dat") as f:
+<div class="highlight"><pre><span></span>with open(&quot;blah.dat&quot;) as f:
     # Read the first line
     header_line = next(f)
 
@@ -505,48 +511,54 @@ value = next(iterator) …</p>
     for data_line in f:
         # ...
 </pre></div>
-<h3 id="_12">构造自制对象可迭代</h3>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">ToDoList</span>(<span class="n">object</span>):
-    <span class="n">def</span> <span class="n">__init__</span>(<span class="k">self</span>):
-        <span class="k">self</span>.<span class="n">tasks</span> = []
 
-    <span class="n">def</span> <span class="n">__iter__</span>(<span class="k">self</span>):
-        <span class="k">return</span> <span class="n">iter</span>(<span class="k">self</span>.<span class="n">tasks</span>)
 
-<span class="nb">todo</span> = <span class="n">ToDoList</span>()
-...
-<span class="k">for</span> <span class="n">task</span> <span class="n">in</span> <span class="n">todo:</span>
-    <span class="c c-Singleline"># ...</span>
+<h3>构造自制对象可迭代</h3>
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">ToDoList</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">tasks</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="nx">def</span> <span class="nx">__iter__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="nx">iter</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">tasks</span><span class="p">)</span>
+
+<span class="nx">todo</span> <span class="o">=</span> <span class="nx">ToDoList</span><span class="p">()</span>
+<span class="p">...</span>
+<span class="k">for</span> <span class="nx">task</span> <span class="k">in</span> <span class="nx">todo</span><span class="o">:</span>
+    <span class="err">#</span> <span class="p">...</span>
 </pre></div>
+
+
 <ul>
 <li>仅仅需要定义 <code>__iter__()</code></li>
 </ul>
-<h4 id="iter"><strong>iter</strong> 生成器</h4>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">ToDoList</span>(<span class="n">object</span>):
-    <span class="n">def</span> <span class="n">__init__</span>(<span class="k">self</span>):
-        <span class="k">self</span>.<span class="n">tasks</span> = []
+<h4><strong>iter</strong>&nbsp;生成器</h4>
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">ToDoList</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">tasks</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="n">def</span> <span class="n">__iter__</span>(<span class="k">self</span>):
-        <span class="k">for</span> <span class="n">task</span> <span class="n">in</span> <span class="k">self</span>.<span class="n">tasks:</span>
-            <span class="k">if</span> <span class="nb">not</span> <span class="n">task</span>.<span class="n">done:</span>
-                <span class="n">yield</span> <span class="n">task</span>
+    <span class="nx">def</span> <span class="nx">__iter__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">for</span> <span class="nx">task</span> <span class="k">in</span> <span class="nx">self.tasks</span>:
+            <span class="kt">if</span> <span class="nx">not</span> <span class="nx">task.done</span>:
+                <span class="kt">yield</span> <span class="nx">task</span>
 
-    <span class="n">def</span> <span class="nb">all</span>(<span class="k">self</span>):
-        <span class="k">return</span> <span class="n">iter</span>(<span class="k">self</span>.<span class="n">tasks</span>)
+    <span class="nx">def</span> <span class="nx">all</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="nx">iter</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">tasks</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">done</span>(<span class="k">self</span>):
-        <span class="k">return</span> (<span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="n">in</span> <span class="k">self</span>.<span class="n">tasks</span> <span class="k">if</span> <span class="n">t</span>.<span class="n">done</span>)
+    <span class="nx">def</span> <span class="nx">done</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nx">t</span> <span class="k">for</span> <span class="nx">t</span> <span class="k">in</span> <span class="nx">self</span><span class="p">.</span><span class="nx">tasks</span> <span class="k">if</span> <span class="nx">t</span><span class="p">.</span><span class="nx">done</span><span class="p">)</span>
 </pre></div>
-<h2 id="_13">(￣▽￣)</h2>
+
+
+<h2>(￣▽￣)</h2>
 <ul>
 <li>迭代无处不在</li>
-<li>Python 内置了干净强大的模型支持迭代</li>
+<li>Python&nbsp;内置了干净强大的模型支持迭代</li>
 <li>抽象和定制你的迭代吧!</li>
 </ul>
-<h2 id="_14">是也乎</h2>
+<h2>是也乎</h2>
 <ul>
-<li>160613 空先发</li>
-<li>160531 动念</li>
+<li>160613&nbsp;空先发</li>
+<li>160531&nbsp;动念</li>
 </ul>
             </div>
             <!-- /.entry-content -->

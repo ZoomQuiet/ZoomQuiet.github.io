@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/index.html</loc>
-<lastmod>2016-12-04T16:39:21-00:00</lastmod>
+<lastmod>2017-08-09T13:03:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2016-12-04T16:39:21-00:00</lastmod>
+<lastmod>2017-08-09T13:03:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2016-12-04T16:39:21-00:00</lastmod>
+<lastmod>2017-08-09T13:03:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2016-12-04T16:39:21-00:00</lastmod>
+<lastmod>2017-08-09T13:03:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/pages/about.html</loc>
-<lastmod>2016-06-26T14:34:10+08:00</lastmod>
+<lastmod>2014-05-21T18:33:09+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -48,6 +48,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/pages/hello-world.html</loc>
 <lastmod>2013-08-09T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/pyqt4macos.html</loc>
+<lastmod>2017-08-08T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -418,7 +425,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/category/pythonic.html</loc>
-<lastmod>2016-11-17T00:00:00+08:06</lastmod>
+<lastmod>2017-08-08T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -564,8 +571,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/pydata.html</loc>
-<lastmod>2014-06-03T00:00:00+08:06</lastmod>
+<loc>http://blog.zoomquiet.io/tag/pyconchina.html</loc>
+<lastmod>2014-07-11T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -578,8 +585,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/pyconchina.html</loc>
-<lastmod>2014-07-11T00:00:00+08:06</lastmod>
+<loc>http://blog.zoomquiet.io/tag/pyqt.html</loc>
+<lastmod>2017-08-08T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -627,8 +634,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://blog.zoomquiet.io/tag/cubier.html</loc>
-<lastmod>2014-01-27T23:48:00+08:06</lastmod>
+<loc>http://blog.zoomquiet.io/tag/sierra.html</loc>
+<lastmod>2017-08-08T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -705,7 +712,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/tag/howto.html</loc>
-<lastmod>2016-11-17T00:00:00+08:06</lastmod>
+<lastmod>2017-08-08T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -732,8 +739,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/cubier.html</loc>
+<lastmod>2014-01-27T23:48:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/mac.html</loc>
-<lastmod>2016-06-28T00:00:00+08:06</lastmod>
+<lastmod>2017-08-08T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -816,6 +830,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/pydata.html</loc>
+<lastmod>2014-06-03T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/rst2s5.html</loc>
 <lastmod>2014-05-07T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -859,7 +880,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2016-11-17T00:00:00+08:06</lastmod>
+<lastmod>2017-08-08T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

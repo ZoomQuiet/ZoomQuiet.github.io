@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="rst2s5-upgraded"/>
             <meta property="og:url" content="http://blog.zoomquiet.io/rst2s5-upgraded.html"/>
-            <meta property="og:description" content="背景 rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging 所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了: s5.zoomquiet.io 问题 忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见 分析 4年前的生成脚本,和最新 pygments 接口不匹配了,,, 解决 参考: Using Pygments in ReST documents — Pygments Using rst for presentations rst2s5 with syntax highlighting python - Where can I find a ..."/>
+            <meta property="og:description" content="[TOC] 背景 rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging 所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了: s5.zoomquiet.io 问题 忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见 分析 4年前的生成脚本,和最新 pygments 接口不匹配了,,, 解决 参考: Using Pygments in ReST documents — Pygments Using rst for presentations rst2s5 with syntax highlighting python - Where can I find …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -67,9 +67,6 @@
                     <li><a href="http://pychina.org">PyChina</a></li>
                     <li><a href="http://obp.zoomquiet.io">OBP</a></li>
               
-                        <li><a href="http://blog.zoomquiet.io/pages/about.html">About</a></li>
-                        <li><a href="http://blog.zoomquiet.io/pages/designing.html">设计</a></li>
-                        <li><a href="http://blog.zoomquiet.io/pages/hello-world.html">你好，世界</a></li>
               
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -128,30 +125,22 @@
 </footer><!-- /.post-info -->                    </div>
                 </div>
 
-    <div class="toc">
-<ul>
-<li><a href="#_1">背景</a></li>
-<li><a href="#_2">问题</a></li>
-<li><a href="#_3">分析</a></li>
-<li><a href="#_4">解决</a></li>
-</ul>
-</div>
-                
-<h1 id="_1">背景</h1>
-<p><a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html">rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging</a></p>
-<p>所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:</p>
+                <p>[<span class="caps">TOC</span>]</p>
+<h1>背景</h1>
+<p><a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html">rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet&#8217;s PyBlosxom&nbsp;blogging</a></p>
+<p>所以 2011 以后所有发布的幻灯都是 rest2s5&nbsp;生成的了:</p>
 <p><a href="http://s5.zoomquiet.io/">s5.zoomquiet.io</a></p>
-<h1 id="_2">问题</h1>
+<h1>问题</h1>
 <p>忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见</p>
-<h1 id="_3">分析</h1>
-<p>4年前的生成脚本,和最新 pygments 接口不匹配了,,,</p>
-<h1 id="_4">解决</h1>
+<h1>分析</h1>
+<p>4年前的生成脚本,和最新 pygments&nbsp;接口不匹配了,,,</p>
+<h1>解决</h1>
 <p>参考:</p>
 <ul>
-<li><a href="http://pygments.org/docs/rstdirective/">Using Pygments in ReST documents — Pygments</a></li>
-<li><a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/">Using rst for presentations</a></li>
-<li><a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html">rst2s5 with syntax highlighting</a></li>
-<li><a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files">python - Where can I find a gallery of Pygments <span class="caps">CSS</span> files - Super User</a></li>
+<li><a href="http://pygments.org/docs/rstdirective/">Using Pygments in ReST documents —&nbsp;Pygments</a></li>
+<li><a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/">Using rst for&nbsp;presentations</a></li>
+<li><a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html">rst2s5 with syntax&nbsp;highlighting</a></li>
+<li><a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files">python - Where can I find a gallery of Pygments <span class="caps">CSS</span> files - Super&nbsp;User</a></li>
 </ul>
 <p>对比:</p>
 <ul>
@@ -161,23 +150,27 @@
 <p>发现就是样式的声明问题:
 于是就追加了一个参数: <code>style="monokai"</code></p>
 <div class="highlight"><pre><span></span><span class="c1"># ...</span>
-<span class="n">formatter</span> <span class="o">=</span> <span class="n">get_formatter_by_name</span><span class="p">(</span><span class="s1">'html'</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">get_formatter_by_name</span><span class="p">(</span><span class="s1">&#39;html&#39;</span>
 <span class="p">,</span> <span class="n">noclasses</span><span class="o">=</span><span class="bp">True</span>
-<span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">"monokai"</span>
+<span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;monokai&quot;</span>
 <span class="p">)</span>
 </pre></div>
+
+
 <p>搞掂!</p>
-<p>另外,也随手变更了一下注册的 <code>directive</code> ~ 指令:</p>
+<p>另外,也随手变更了一下注册的 <code>directive</code> ~&nbsp;指令:</p>
 <div class="highlight"><pre><span></span><span class="c1"># Register the directive with docutils.</span>
-<span class="c1">#rst.directives.register_directive('code-block', code_block)</span>
-<span class="c1">#rst.roles.register_local_role('code-block', code_role)</span>
-<span class="n">rst</span><span class="o">.</span><span class="n">directives</span><span class="o">.</span><span class="n">register_directive</span><span class="p">(</span><span class="s1">'sourcecode'</span><span class="p">,</span> <span class="n">code_block</span><span class="p">)</span>
-<span class="n">rst</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">register_local_role</span><span class="p">(</span><span class="s1">'sourcecode'</span><span class="p">,</span> <span class="n">code_role</span><span class="p">)</span>
+<span class="c1">#rst.directives.register_directive(&#39;code-block&#39;, code_block)</span>
+<span class="c1">#rst.roles.register_local_role(&#39;code-block&#39;, code_role)</span>
+<span class="n">rst</span><span class="o">.</span><span class="n">directives</span><span class="o">.</span><span class="n">register_directive</span><span class="p">(</span><span class="s1">&#39;sourcecode&#39;</span><span class="p">,</span> <span class="n">code_block</span><span class="p">)</span>
+<span class="n">rst</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">register_local_role</span><span class="p">(</span><span class="s1">&#39;sourcecode&#39;</span><span class="p">,</span> <span class="n">code_role</span><span class="p">)</span>
 </pre></div>
-<p>这样俺在 Leo 中写:</p>
-<p><img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png"/></p>
+
+
+<p>这样俺在 Leo&nbsp;中写:</p>
+<p><img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png"></p>
 <p>就可以一键生成为幻灯中的:</p>
-<p><img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/></p>
+<p><img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"></p>
             </div>
             <!-- /.entry-content -->
     <hr />

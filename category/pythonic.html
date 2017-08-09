@@ -67,9 +67,6 @@
                     <li><a href="http://pychina.org">PyChina</a></li>
                     <li><a href="http://obp.zoomquiet.io">OBP</a></li>
               
-                        <li><a href="http://blog.zoomquiet.io/pages/about.html">About</a></li>
-                        <li><a href="http://blog.zoomquiet.io/pages/designing.html">设计</a></li>
-                        <li><a href="http://blog.zoomquiet.io/pages/hello-world.html">你好，世界</a></li>
               
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -86,17 +83,42 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="http://blog.zoomquiet.io/leo5theme-key-words.html">Leo 5.4 theme&nbsp;custom</a></h2>
-                <div class="summary">
-<h2 id="_1">背景</h2>
-<p><a href="http://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme custom</a></p>
-<p>Leo 是灵活的完全 Pythonic 的可定制 <code>文学化编辑环境</code> …</p>
-<p>所以,其定制的进展是无限的…</p>
-<h2 id="_2">现象</h2>
+                <h2><a href="http://blog.zoomquiet.io/pyqt4macos.html">PyQt4 之消失在&nbsp;Sierra</a></h2>
+                <div class="summary"><p>[<span class="caps">TOC</span>]</p>
+<h2>背景</h2>
+<p>最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,
+用 PyQt&nbsp;是必然选择哪.</p>
+<p>只是项目是老坑, 所以,没用 Qt5 技术桟, 还是&nbsp;Qt4</p>
+<h2>嗯哼</h2>
 <ul>
-<li>在完成了基本的 theme 定制后发现</li>
+<li>这天要折腾 <span class="caps">QR</span>&nbsp;码识别了</li>
+<li>运行 <code>brew install zbar</code></li>
+<li>然后,各种问题就爆发了,特别是:<ul>
+<li><code>libjpeg.8.dylib</code> 加载不到</li>
+<li>PyQt4&nbsp;镜像丢失</li>
+<li>&#8230;</li>
+</ul>
+</li>
+<li>重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt&nbsp;可以安装了&#8230;</li>
+</ul>
+<h2>原来</h2>
+<p>参考:<a href="https://github.com/cartr/homebrew-qt4">cartr/homebrew-qt4: Homebrew …</a></p>
+                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/pyqt4macos.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="http://blog.zoomquiet.io/leo5theme-key-words.html">Leo 5.4 theme&nbsp;custom</a></h2>
+                <div class="summary"><p>[<span class="caps">TOC</span>]</p>
+<h2>背景</h2>
+<p><a href="http://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme&nbsp;custom</a></p>
+<p>Leo 是灵活的完全 Pythonic 的可定制 <code>文学化编辑环境</code> &#8230;</p>
+<p>所以,其定制的进展是无限的&#8230;</p>
+<h2>现象</h2>
+<ul>
+<li>在完成了基本的 theme&nbsp;定制后发现</li>
 <li>默认语法元素的颜色,不太理想</li>
-<li>特别是: <a href="http://leoeditor.com/cheatsheet.html#id13">&lt;<sections>&gt;</sections></a><ul>
+<li>特别是: <a href="http://leoeditor.com/cheatsheet.html#id13">&lt;<Sections>&gt;</a><ul>
 <li>可以将下层节点放置在任何想放置的地方的引入点声明</li>
 <li>但是,这里 <code>&lt;&lt;...&gt;&gt;</code> 两端符号的颜色是默认兰色</li>
 <li>在暗色背景中看不清楚</li>
@@ -104,25 +126,25 @@
 </li>
 <li>可能一时没能找到配置处</li>
 </ul>
-<h2 id="_3">解决</h2>
+<h2>解决</h2>
 <ul>
 <li>通过社区列表咨询<ul>
 <li>2天后收到各种建议</li>
 </ul>
 </li>
 <li>才知道是俺使用 Leo 的配置文件过老<ul>
-<li>导致新版本的全局 theme 定义节点</li>
-<li><code>lThemes: copy to last top-level setting in myLeoSettings.leo--&gt;Common to all themes--&gt;Colors for ...</code></li></ul></li></ul>
+<li>导致新版本的全局 theme&nbsp;定义节点</li>
+<li><code>lThemes: copy to last top-level setting in myLeoSettings.leo--&gt;Common to all themes--&gt;Colors …</code></li></ul></li></ul>
                     <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/leo5theme-key-words.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="http://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
-                <div class="summary">
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">迭代基础</h2>
+                <div class="summary"><p>[<span class="caps">TOC</span>]</p>
+<p>来自 @nedbat&nbsp;的分享:</p>
+<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A&nbsp;Native</a></p>
+<h2>迭代基础</h2>
 <p>C样:</p>
 <div class="highlight"><pre><span></span>i = 0
 while i &lt; len(my_list):
@@ -130,51 +152,25 @@ while i &lt; len(my_list):
     print v
     i += 1
 </pre></div>
+
+
 <p>偏门:</p>
 <div class="highlight"><pre><span></span>for i in range(len(my_list)):
     v = my_list[i]
     print v
 </pre></div>
+
+
 <p>蠎样:</p>
 <div class="highlight"><pre><span></span>for v in my_list:
     print v
 </pre></div>
+
+
 <p>模式:</p>
 <div class="highlight"><pre><span></span>for name in iterable:
-    statements
-</pre></div>
-<ul>
-<li>可 ...</li></ul>
+    statements …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.zoomquiet.io/how2collaborate-with-leo.html">如何在 Leo&nbsp;中协作?!</a></h2>
-                <div class="summary">
-<h1 id="leo">Leo?</h1>
-<p>~ 嗯哼</p>
-<p>研究什么是 Leo ? 非要一句话说清查的话,只能是:</p>
-<ul>
-<li><code>纯 Python 构建的文学化编辑环境</code><ul>
-<li>好吧, 那什么是 <code>文学化编辑</code> ?</li>
-<li>这事儿, 俺就没办法说清楚了….</li>
-<li>根据俺一向的宣称: <code>教不会别人的,一定也是自己并不真正理解的</code></li>
-</ul>
-</li>
-<li>这点,俺认!<ul>
-<li>参考: <a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">LeoEnvironment - Woodpecker Wiki for <span class="caps">CPUG</span></a></li>
-<li>以及 <a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill#Leo">ZqStudy/MyLearningSkill - Woodpecker Wiki for <span class="caps">CPUG</span></a></li>
-</ul>
-</li>
-<li>就知道, 俺从 05 年上了船…就一直反复的四处宣传 Leo 的舒爽…<ul>
-<li>可惜,一直就没有找到一个真正 <code>直指人心</code> 的 文学化编辑/程 的描述姿势</li>
-</ul>
-</li>
-</ul>
-<p>好吧,再次尝试一下:</p>
-<h2 id="literate-programming">Literate Programming ...</h2>
-                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/how2collaborate-with-leo.html">more ...</a>
                 </div>
             </article>
             <hr/>

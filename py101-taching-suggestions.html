@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="py101-taching-suggestions"/>
             <meta property="og:url" content="http://blog.zoomquiet.io/py101-taching-suggestions.html"/>
-            <meta property="og:description" content="来自: Some Suggestions for Teaching Python | Curious Efficiency Nick Coghlan 2014-08-08 12:55 I recently had the chance to attend a Software Carpentry bootcamp at the University of Queensland (as a teaching assistant), as well as seeing a presentation from one of UQ’s tutors at PyCon Australia 2014. While ..."/>
+            <meta property="og:description" content="[TOC] 来自: Some Suggestions for Teaching Python | Curious Efficiency Nick Coghlan 2014-08-08 12:55 I recently had the chance to attend a Software Carpentry bootcamp at the University of Queensland (as a teaching assistant), as well as seeing a presentation from one of UQ’s tutors at PyCon Australia 2014 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -67,9 +67,6 @@
                     <li><a href="http://pychina.org">PyChina</a></li>
                     <li><a href="http://obp.zoomquiet.io">OBP</a></li>
               
-                        <li><a href="http://blog.zoomquiet.io/pages/about.html">About</a></li>
-                        <li><a href="http://blog.zoomquiet.io/pages/designing.html">设计</a></li>
-                        <li><a href="http://blog.zoomquiet.io/pages/hello-world.html">你好，世界</a></li>
               
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -126,57 +123,58 @@
 </footer><!-- /.post-info -->                    </div>
                 </div>
 
-    <div class="toc">
-<ul>
-<li><a href="#getting-floating-point-results-from-integer-division">Getting floating point results from integer division</a></li>
-<li><a href="#common-python-23-syntax-for-printing-values">Common Python 2/3 syntax for printing values</a></li>
-<li><a href="#distinguishing-between-returning-and-printing-values">Distinguishing between returning and printing values</a></li>
-<li><a href="#addendum-ipython-including-ipython-notebook">Addendum: IPython (including IPython Notebook)</a></li>
-<li><a href="#changelog">Changelog</a></li>
-</ul>
-</div>
-                <p><img alt="/chinese-python-poster" src="https://datalabcc.files.wordpress.com/2014/05/chinese-python-poster.jpg?w=590"/></p>
-
+                <p><img alt="/chinese-python-poster" src="https://datalabcc.files.wordpress.com/2014/05/chinese-python-poster.jpg?w=590"></p>
+<p>[<span class="caps">TOC</span>]</p>
 <p>来自: <a href="http://www.curiousefficiency.org/posts/2014/08/python-teaching-suggestions.html">Some Suggestions for Teaching Python | Curious Efficiency</a> 
 Nick Coghlan
-2014-08-08 12:55</p>
-<p>I recently had the chance to attend a Software Carpentry bootcamp at the University of Queensland (as a teaching assistant), as well as seeing a presentation from one of <span class="caps">UQ</span>’s tutors at PyCon Australia 2014.</p>
-<p>While many of the issues they encountered were inherent in the complexity of teaching programming, a few seemed like things that could be avoided.</p>
-<h2 id="getting-floating-point-results-from-integer-division">Getting floating point results from integer division</h2>
-<p>In Python 2, integer division copies C in truncating the answer by default:</p>
-<div class="highlight"><pre><span></span>$ python -c <span class="s2">"print(3/4)"</span>
-0
+2014-08-08&nbsp;12:55</p>
+<p>I recently had the chance to attend a Software Carpentry bootcamp at the University of Queensland (as a teaching assistant), as well as seeing a presentation from one of <span class="caps">UQ</span>&#8217;s tutors at PyCon Australia&nbsp;2014.</p>
+<p>While many of the issues they encountered were inherent in the complexity of teaching programming, a few seemed like things that could be&nbsp;avoided.</p>
+<h2>Getting floating point results from integer&nbsp;division</h2>
+<p>In Python 2, integer division copies C in truncating the answer by&nbsp;default:</p>
+<div class="highlight"><pre><span></span>$ python -c <span class="s2">&quot;print(3/4)&quot;</span>
+<span class="m">0</span>
 </pre></div>
-<p>Promoting to floating point requires type coercion, a command line flag or a future import:</p>
-<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"print(float(3)/4)"</span>
+
+
+<p>Promoting to floating point requires type coercion, a command line flag or a future&nbsp;import:</p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;print(float(3)/4)&quot;</span>
 <span class="mf">0.75</span>
-<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">Qnew</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"print(3/4)"</span>
+<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">Qnew</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;print(3/4)&quot;</span>
 <span class="mf">0.75</span>
-<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"from __future__ import division; print(3/4)"</span>
+<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;from __future__ import division; print(3/4)&quot;</span>
 <span class="mf">0.75</span>
 </pre></div>
-<p>Python 3 just does the right thing by default, so one way to avoid the problem entirely is to teach Python 3 instead of Python 2:</p>
-<div class="highlight"><pre><span></span>$ python3 -c <span class="s2">"print(3/4)"</span>
-0.75
+
+
+<p>Python 3 just does the right thing by default, so one way to avoid the problem entirely is to teach Python 3 instead of Python&nbsp;2:</p>
+<div class="highlight"><pre><span></span>$ python3 -c <span class="s2">&quot;print(3/4)&quot;</span>
+<span class="m">0</span>.75
 </pre></div>
-<p>(In both Python 2 and 3, the <code>//</code> floor division operator explicitly requests truncating division when it is desired)</p>
-<h2 id="common-python-23-syntax-for-printing-values">Common Python 2/3 syntax for printing values</h2>
-<p>I’ve been using Python 2 and 3 in parallel for more than 8 years now (while Python 3.0 was released in 2008, the project started in earnest a couple of years earlier than that, while Python 2.5 was still in development).</p>
-<p>One essential trick I have learned in order to make regularly switching back and forth feasible is to limit myself to the common print syntax that works the same in both versions: passing a single argument surrounded by parentheses.</p>
-<div class="highlight"><pre><span></span>$ python -c <span class="s1">'print("Hello world!")'</span>
+
+
+<p>(In both Python 2 and 3, the <code>//</code> floor division operator explicitly requests truncating division when it is&nbsp;desired)</p>
+<h2>Common Python 2/3 syntax for printing&nbsp;values</h2>
+<p>I&#8217;ve been using Python 2 and 3 in parallel for more than 8 years now (while Python 3.0 was released in 2008, the project started in earnest a couple of years earlier than that, while Python 2.5 was still in&nbsp;development).</p>
+<p>One essential trick I have learned in order to make regularly switching back and forth feasible is to limit myself to the common print syntax that works the same in both versions: passing a single argument surrounded by&nbsp;parentheses.</p>
+<div class="highlight"><pre><span></span>$ python -c <span class="s1">&#39;print(&quot;Hello world!&quot;)&#39;</span>
 Hello world!
-$ python3 -c <span class="s1">'print("Hello world!")'</span>
-Hello world!
-</pre></div>
-<p>If I need to pass multiple arguments, I’ll use string formatting, rather than the implicit concatenation feature.</p>
-<div class="highlight"><pre><span></span>$ python -c <span class="s1">'print("{} {}{}".format("Hello", "world", "!"))'</span>
-Hello world!
-$ python3 -c <span class="s1">'print("{} {}{}".format("Hello", "world", "!"))'</span>
+$ python3 -c <span class="s1">&#39;print(&quot;Hello world!&quot;)&#39;</span>
 Hello world!
 </pre></div>
-<p>Rather than doing this, the Software Carpentry material that was used at the bootcamp I attended used the legacy Python 2 only <code>print</code> syntax extensively, causing examples that otherwise would have worked fine in either version to fail for students that happened to be running Python 3. Adopting the shared syntax for printing values could be enough to make the course largely version independent.</p>
-<h2 id="distinguishing-between-returning-and-printing-values">Distinguishing between returning and printing values</h2>
-<p>One problem noted both at the bootcamp and by presenters at PyCon Australia was the challenge of teaching students the difference between printing and returning values. The problem is the “Print” part of the Read-Eval-Print-Loop provided by Python’s interactive interpreter:</p>
+
+
+<p>If I need to pass multiple arguments, I&#8217;ll use string formatting, rather than the implicit concatenation&nbsp;feature.</p>
+<div class="highlight"><pre><span></span>$ python -c <span class="s1">&#39;print(&quot;{} {}{}&quot;.format(&quot;Hello&quot;, &quot;world&quot;, &quot;!&quot;))&#39;</span>
+Hello world!
+$ python3 -c <span class="s1">&#39;print(&quot;{} {}{}&quot;.format(&quot;Hello&quot;, &quot;world&quot;, &quot;!&quot;))&#39;</span>
+Hello world!
+</pre></div>
+
+
+<p>Rather than doing this, the Software Carpentry material that was used at the bootcamp I attended used the legacy Python 2 only <code>print</code> syntax extensively, causing examples that otherwise would have worked fine in either version to fail for students that happened to be running Python 3. Adopting the shared syntax for printing values could be enough to make the course largely version&nbsp;independent.</p>
+<h2>Distinguishing between returning and printing&nbsp;values</h2>
+<p>One problem noted both at the bootcamp and by presenters at PyCon Australia was the challenge of teaching students the difference between printing and returning values. The problem is the &#8220;Print&#8221; part of the Read-Eval-Print-Loop provided by Python&#8217;s interactive&nbsp;interpreter:</p>
 <div class="highlight"><pre><span></span>&gt;&gt;&gt; def print_arg(x):
 ...     print(x)
 ...
@@ -188,17 +186,21 @@ Hello world!
 &gt;&gt;&gt; return_arg(10)
 10
 </pre></div>
-<p>There’s no obvious difference in output at the interactive prompt, especially for types like numbers where the results of <code>str</code> and <code>repr</code> are the same. Even when they’re different, those differences may not be obvious to a student:</p>
-<div class="highlight"><pre><span></span>&gt;&gt;&gt; print_arg("Hello world")
+
+
+<p>There&#8217;s no obvious difference in output at the interactive prompt, especially for types like numbers where the results of <code>str</code> and <code>repr</code> are the same. Even when they&#8217;re different, those differences may not be obvious to a&nbsp;student:</p>
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; print_arg(&quot;Hello world&quot;)
 Hello world
-&gt;&gt;&gt; return_arg("Hello world")
-'Hello world'
+&gt;&gt;&gt; return_arg(&quot;Hello world&quot;)
+&#39;Hello world&#39;
 </pre></div>
-<p>While I don’t have a definitive answer for this one, an experiment that seems worth trying to me is to teach students how to replace <code>sys.displayhook</code>. 
-In particular, I suggest demonstrating the following change, and seeing if it helps explain the difference between printing output for display to the user and returning values for further processing:</p>
+
+
+<p>While I don&#8217;t have a definitive answer for this one, an experiment that seems worth trying to me is to teach students how to replace <code>sys.displayhook</code>. 
+In particular, I suggest demonstrating the following change, and seeing if it helps explain the difference between printing output for display to the user and returning values for further&nbsp;processing:</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">new_displayhook</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
 <span class="o">...</span>     <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s2">"-&gt; {!r}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;-&gt; {!r}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span>
 <span class="o">...</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">sys</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">displayhook</span> <span class="o">=</span> <span class="n">new_displayhook</span>
@@ -207,26 +209,32 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 <span class="o">&gt;&gt;&gt;</span> <span class="n">return_arg</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="o">-&gt;</span> <span class="mi">10</span>
 </pre></div>
-<p>Understanding the difference between printing and returning is essential to learning to use functions effectively, and tweaking the display of results this way may help make the difference more obvious.</p>
-<h2 id="addendum-ipython-including-ipython-notebook">Addendum: IPython (including IPython Notebook)</h2>
-<p>The initial examples above focused on the standard CPython runtime, include the default interactive interpreter. The IPython interactive interpreter, including the IPython Notebook, has a couple of interesting differences in behaviour that are relevant to the above comments.</p>
-<p>Firstly, it does display return values and printed values differently, prefacing results with an output reference number:</p>
+
+
+<p>Understanding the difference between printing and returning is essential to learning to use functions effectively, and tweaking the display of results this way may help make the difference more&nbsp;obvious.</p>
+<h2>Addendum: IPython (including IPython&nbsp;Notebook)</h2>
+<p>The initial examples above focused on the standard CPython runtime, include the default interactive interpreter. The IPython interactive interpreter, including the IPython Notebook, has a couple of interesting differences in behaviour that are relevant to the above&nbsp;comments.</p>
+<p>Firstly, it does display return values and printed values differently, prefacing results with an output reference&nbsp;number:</p>
 <div class="highlight"><pre><span></span>In [1]: print 10
 10
 
 In [2]: 10
 Out[2]: 10
 </pre></div>
-<p>Secondly, it has an optional “autocall” feature that allows a user to tell IPython to automatically add the missing parentheses to a function call if the user leaves them out:</p>
-<div class="highlight"><pre><span></span>$ ipython3 --autocall<span class="o">=</span><span class="m">1</span> -c <span class="s2">"print 10"</span>
--&gt; print<span class="o">(</span>10<span class="o">)</span>
-10
+
+
+<p>Secondly, it has an optional &#8220;autocall&#8221; feature that allows a user to tell IPython to automatically add the missing parentheses to a function call if the user leaves them&nbsp;out:</p>
+<div class="highlight"><pre><span></span>$ ipython3 --autocall<span class="o">=</span><span class="m">1</span> -c <span class="s2">&quot;print 10&quot;</span>
+-&gt; print<span class="o">(</span><span class="m">10</span><span class="o">)</span>
+<span class="m">10</span>
 </pre></div>
-<p>This is a general purpose feature that allows users to make their IPython sessions behave more like languages that don’t have first class functions (most notably, IPython’s autocall feature closely resembles <span class="caps">MATLAB</span>’s “command syntax” notation for calling functions).</p>
-<p>It also has the side effect that users that use IPython, have autocall enabled, and don’t use any of the more esoteric quirks of the Python 2 <code>print</code> statement (like stream redirection or suppressing the trailing newline) may not even notice that <code>print</code> became an ordinary builtin in Python 3.</p>
-<h2 id="changelog">Changelog</h2>
+
+
+<p>This is a general purpose feature that allows users to make their IPython sessions behave more like languages that don&#8217;t have first class functions (most notably, IPython&#8217;s autocall feature closely resembles <span class="caps">MATLAB</span>&#8217;s &#8220;command syntax&#8221; notation for calling&nbsp;functions).</p>
+<p>It also has the side effect that users that use IPython, have autocall enabled, and don&#8217;t use any of the more esoteric quirks of the Python 2 <code>print</code> statement (like stream redirection or suppressing the trailing newline) may not even notice that <code>print</code> became an ordinary builtin in Python&nbsp;3.</p>
+<h2>Changelog</h2>
 <ul>
-<li>140811 翻译 Weekly issue:127 时发现,转译学习</li>
+<li>140811 翻译 Weekly issue:127&nbsp;时发现,转译学习</li>
 </ul>
             </div>
             <!-- /.entry-content -->

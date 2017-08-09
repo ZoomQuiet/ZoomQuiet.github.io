@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="top10-Py-idioms-wish-learned-earlier"/>
             <meta property="og:url" content="http://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html"/>
-            <meta property="og:description" content="原文: prooffreader plus: Top 10 Python idioms I wish I’d learned earlier Top 10 Python idioms I wish I&#39;d learned earlier I’ve been programming all my life, but never been a programmer. Most of my work was done in Visual Basic because it’s what I was ..."/>
+            <meta property="og:description" content="原文: prooffreader plus: Top 10 Python idioms I wish I’d learned earlier Top 10 Python idioms I wish I&#39;d learned earlier I’ve been programming all my life, but never been a programmer. Most of my work was done in Visual Basic because it’s what I was most …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -67,9 +67,6 @@
                     <li><a href="http://pychina.org">PyChina</a></li>
                     <li><a href="http://obp.zoomquiet.io">OBP</a></li>
               
-                        <li><a href="http://blog.zoomquiet.io/pages/about.html">About</a></li>
-                        <li><a href="http://blog.zoomquiet.io/pages/designing.html">设计</a></li>
-                        <li><a href="http://blog.zoomquiet.io/pages/hello-world.html">你好，世界</a></li>
               
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -134,7 +131,7 @@
 <p>Missing from this list are some idioms such as list comprehensions and lambda functions, which are very Pythonesque and very efficient and very cool, but also very difficult to miss because they&#8217;re mentioned on StackOverflow every other answer! Also ternary x if y else z constructions, decorators and generators, because I don&#8217;t use them very&nbsp;often.</p>
 <p>There&#8217;s also an 
 <a href="http://nbviewer.ipython.org/github/Prooffreader/Misc_ipynb/blob/master/top_10_python_idioms.ipynb">IPython notebook nbviewer version</a> of this document if you&nbsp;prefer.</p>
-<h2 id="1-python-3-style-printing-in-python-2">1. Python 3-style printing in Python&nbsp;2</h2>
+<h2>1. Python 3-style printing in Python&nbsp;2</h2>
 <p>One of the things that kept me from concentrating on Python was this whole version 2 - version 3 debacle. Finally I went with Python 2 because all the libraries I wanted were not 3-compatible, and I figured if I needed to, I would laboriously adjust my code&nbsp;later. </p>
 <p>But really, the biggest differences in everyday programming are printing and division, and now I just import from future. Now that almost all the libraries I use heavily are v3-compliant, I&#8217;ll make the switch&nbsp;soon.</p>
 <div class="highlight"><pre><span></span><span class="n">mynumber</span> <span class="o">=</span> <span class="mi">5</span>
@@ -172,7 +169,7 @@ The number is 5
 </pre></div>
 
 
-<h2 id="2-enumeratelist">2.&nbsp;enumerate(list)</h2>
+<h2>2.&nbsp;enumerate(list)</h2>
 <p>It might seem obvious that you should be able to iterate over a list and its index at the same time, but I used counter variables or slices for an embarrassingly long&nbsp;time.</p>
 <div class="highlight"><pre><span></span>mylist = [&quot;It&#39;s&quot;, &#39;only&#39;, &#39;a&#39;, &#39;model&#39;]
 
@@ -188,7 +185,7 @@ for index, item in enumerate(mylist):
 </pre></div>
 
 
-<h2 id="3-chained-comparison-operators">3. Chained comparison&nbsp;operators</h2>
+<h2>3. Chained comparison&nbsp;operators</h2>
 <p>Because I was so used to statically typed languages (where this idiom would be ambiguous), it never occurred to me to put two operators in the same expression. In many languages, 4 &gt; 3 &gt; 2 would return as False, because (4 &gt; 3) would be evaluated as a boolean, and then True &gt; 2 would be evaluated as&nbsp;False.</p>
 <div class="highlight"><pre><span></span>mynumber = 3
 
@@ -203,7 +200,7 @@ Chained comparison operators work!
 </pre></div>
 
 
-<h2 id="4-collectionscounter">4.&nbsp;collections.Counter</h2>
+<h2>4.&nbsp;collections.Counter</h2>
 <p>The collections library is, like, the best thing ever. Stackoverflow turned me on to ordered dicts early on, but I kept using a snippet to create dicts to count occurrences of results in my code. One of these days, I&#8217;ll figure out a use for&nbsp;collections.deque.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
@@ -230,7 +227,7 @@ Chained comparison operators work!
 </pre></div>
 
 
-<h2 id="5-dict-comprehensions">5. Dict&nbsp;comprehensions</h2>
+<h2>5. Dict&nbsp;comprehensions</h2>
 <p>A rite of passage for a Python programmer is understanding list comprehensions, but eventually I realized dict comprehensions are just as useful &#8212; especially for reversing&nbsp;dicts.</p>
 <div class="highlight"><pre><span></span>my_phrase = [&quot;No&quot;, &quot;one&quot;, &quot;expects&quot;, &quot;the&quot;, &quot;Spanish&quot;, &quot;Inquisition&quot;]
 my_dict = {key: value for value, key in enumerate(my_phrase)}
@@ -245,7 +242,7 @@ print(reversed_dict)
 </pre></div>
 
 
-<h2 id="6-executing-shell-commands-with-subprocess">6. Executing shell commands with&nbsp;subprocess</h2>
+<h2>6. Executing shell commands with&nbsp;subprocess</h2>
 <p>I used to use the os library exclusively to manipulate files; now I can even programmatically call complex command-line tools like ffmpeg for video&nbsp;editing</p>
 <p>(And yes, I use Windows, so do all of my clients. But I have the good grace to be embarrassed about&nbsp;it!)</p>
 <p>Note that the particular subprocess I picked would be much better done with the os library; I just wanted a command everyone would be familiar with. And in general, shell=True is a <span class="caps">VERY</span> bad idea, I put it here so that the command output would appear in the IPython notebook cell. Don&#8217;t try this at home,&nbsp;kids!</p>
@@ -280,7 +277,7 @@ print(reversed_dict)
 </pre></div>
 
 
-<h2 id="7-dict-get-and-iteritems-methods">7. dict .get() and .iteritems()&nbsp;methods</h2>
+<h2>7. dict .get() and .iteritems()&nbsp;methods</h2>
 <p>Having a default value when a key does not exist has all kinds of uses, and just like enumerate() for lists, you can iterate over key, value tuples in&nbsp;dicts</p>
 <div class="highlight"><pre><span></span>my_dict = {&#39;name&#39;: &#39;Lancelot&#39;, &#39;quest&#39;: &#39;Holy Grail&#39;, &#39;favourite_color&#39;: &#39;blue&#39;}
 
@@ -299,7 +296,7 @@ favourite_color: blue
 </pre></div>
 
 
-<h2 id="8-tuple-unpacking-for-switching-variables">8. Tuple unpacking for switching&nbsp;variables</h2>
+<h2>8. Tuple unpacking for switching&nbsp;variables</h2>
 <p>Do you know how many times I had to use a third, temporary dummy variable in <span class="caps">VB</span>? c = a; a = b; b =&nbsp;c?</p>
 <div class="highlight"><pre><span></span>a = &#39;Spam&#39;
 b = &#39;Eggs&#39;
@@ -317,7 +314,7 @@ Eggs Spam
 </pre></div>
 
 
-<h2 id="9-introspection-tools">9. Introspection&nbsp;tools</h2>
+<h2>9. Introspection&nbsp;tools</h2>
 <p>I was aware of dir(), but I had assumed help() would do the same thing as IPython&#8217;s ? magic command. It does way more. (This post has been updated after some great advice from reddit&#8217;s /r/python which, indeed, I wish I&#8217;d known about&nbsp;before!)</p>
 <div class="highlight"><pre><span></span>my_dict = {&#39;That&#39;: &#39;an ex-parrot!&#39;}
 
@@ -326,64 +323,64 @@ help(my_dict)
 
 
 <p>Help on dict&nbsp;object:</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">dict</span>(<span class="n">object</span>)
- |  <span class="n">dict</span>() -&gt; <span class="nb">new</span> <span class="n">empty</span> <span class="n">dictionary</span>
- |  <span class="n">dict</span>(<span class="n">mapping</span>) -&gt; <span class="nb">new</span> <span class="n">dictionary</span> <span class="n">initialized</span> <span class="nb">from</span> <span class="n">a</span> <span class="n">mapping</span> <span class="n">object&#39;s</span>
- |      (<span class="nb">key</span>, <span class="nb">value</span>) <span class="nb">pairs</span>
- |  <span class="n">dict</span>(<span class="n">iterable</span>) -&gt; <span class="nb">new</span> <span class="n">dictionary</span> <span class="n">initialized</span> <span class="k">as</span> <span class="k">if</span> <span class="n">via:</span>
- |      <span class="n">d</span> = {}
- |      <span class="k">for</span> <span class="n">k</span>, <span class="n">v</span> <span class="n">in</span> <span class="n">iterable:</span>
- |          <span class="n">d</span>[<span class="n">k</span>] = <span class="n">v</span>
- |  <span class="n">dict</span>(**<span class="n">kwargs</span>) -&gt; <span class="nb">new</span> <span class="n">dictionary</span> <span class="n">initialized</span> <span class="n">with</span> <span class="n">the</span> <span class="nb">name</span>=<span class="nb">value</span> <span class="nb">pairs</span>
- |      <span class="n">in</span> <span class="n">the</span> <span class="n">keyword</span> <span class="n">argument</span> <span class="n">list</span>.  <span class="n">For</span> <span class="n">example:</span>  <span class="n">dict</span>(<span class="nb">one</span>=<span class="mi">1</span>, <span class="n">two</span>=<span class="mi">2</span>)
- |  
- |  <span class="n">Methods</span> <span class="nb">defined</span> <span class="n">here:</span>
- |  
- |  <span class="n">__cmp__</span>(...)
- |      <span class="o">x</span>.<span class="n">__cmp__</span>(<span class="n">y</span>) &lt;==&gt; <span class="o">cmp</span>(<span class="o">x</span>,<span class="n">y</span>)
- |  
- |  <span class="n">__contains__</span>(...)
- |      <span class="n">D</span>.<span class="n">__contains__</span>(<span class="n">k</span>) -&gt; <span class="nb">True</span> <span class="k">if</span> <span class="n">D</span> <span class="k">has</span> <span class="n">a</span> <span class="nb">key</span> <span class="n">k</span>, <span class="k">else</span> <span class="nb">False</span>
- |  
- |  <span class="n">__delitem__</span>(...)
- |      <span class="o">x</span>.<span class="n">__delitem__</span>(<span class="n">y</span>) &lt;==&gt; <span class="n">del</span> <span class="o">x</span>[<span class="n">y</span>]
- |  
- |  <span class="n">__eq__</span>(...)
- |      <span class="o">x</span>.<span class="n">__eq__</span>(<span class="n">y</span>) &lt;==&gt; <span class="o">x==</span><span class="n">y</span>
- |  
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">dict</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span>
+ <span class="o">|</span>  <span class="nx">dict</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nx">empty</span> <span class="nx">dictionary</span>
+ <span class="o">|</span>  <span class="nx">dict</span><span class="p">(</span><span class="nx">mapping</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nx">dictionary</span> <span class="nx">initialized</span> <span class="nx">from</span> <span class="nx">a</span> <span class="nx">mapping</span> <span class="nx">object</span><span class="s1">&#39;s</span>
+<span class="s1"> |      (key, value) pairs</span>
+<span class="s1"> |  dict(iterable) -&gt; new dictionary initialized as if via:</span>
+<span class="s1"> |      d = {}</span>
+<span class="s1"> |      for k, v in iterable:</span>
+<span class="s1"> |          d[k] = v</span>
+<span class="s1"> |  dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs</span>
+<span class="s1"> |      in the keyword argument list.  For example:  dict(one=1, two=2)</span>
+<span class="s1"> |  </span>
+<span class="s1"> |  Methods defined here:</span>
+<span class="s1"> |  </span>
+<span class="s1"> |  __cmp__(...)</span>
+<span class="s1"> |      x.__cmp__(y) &lt;==&gt; cmp(x,y)</span>
+<span class="s1"> |  </span>
+<span class="s1"> |  __contains__(...)</span>
+<span class="s1"> |      D.__contains__(k) -&gt; True if D has a key k, else False</span>
+<span class="s1"> |  </span>
+<span class="s1"> |  __delitem__(...)</span>
+<span class="s1"> |      x.__delitem__(y) &lt;==&gt; del x[y]</span>
+<span class="s1"> |  </span>
+<span class="s1"> |  __eq__(...)</span>
+<span class="s1"> |      x.__eq__(y) &lt;==&gt; x==y</span>
+<span class="s1"> |  </span>
 
-[<span class="n">TRUNCATED</span> <span class="n">FOR</span> <span class="n">SPACE</span>]
+<span class="s1">[TRUNCATED FOR SPACE]</span>
 
- |  
- |  <span class="n">update</span>(...)
- |      <span class="n">D</span>.<span class="n">update</span>([<span class="n">E</span>, ]**<span class="n">F</span>) -&gt; <span class="n">None</span>.  <span class="n">Update</span> <span class="n">D</span> <span class="nb">from</span> <span class="n">dict</span><span class="o">/</span><span class="n">iterable</span> <span class="n">E</span> <span class="o">and</span> <span class="n">F</span>.
- |      <span class="n">If</span> <span class="n">E</span> <span class="n">present</span> <span class="o">and</span> <span class="k">has</span> <span class="n">a</span> .<span class="nb">keys</span>() <span class="k">method</span>, <span class="o">does</span>:     <span class="k">for</span> <span class="n">k</span> <span class="n">in</span> <span class="n">E:</span> <span class="n">D</span>[<span class="n">k</span>] = <span class="n">E</span>[<span class="n">k</span>]
- |      <span class="n">If</span> <span class="n">E</span> <span class="n">present</span> <span class="o">and</span> <span class="n">lacks</span> .<span class="nb">keys</span>() <span class="k">method</span>, <span class="o">does</span>:     <span class="k">for</span> (<span class="n">k</span>, <span class="n">v</span>) <span class="n">in</span> <span class="n">E:</span> <span class="n">D</span>[<span class="n">k</span>] = <span class="n">v</span>
- |      <span class="n">In</span> <span class="n">either</span> <span class="n">case</span>, <span class="n">this</span> <span class="k">is</span> <span class="n">followed</span> <span class="n">by:</span> <span class="k">for</span> <span class="n">k</span> <span class="n">in</span> <span class="n">F:</span> <span class="n">D</span>[<span class="n">k</span>] = <span class="n">F</span>[<span class="n">k</span>]
- |  
- |  <span class="nb">values</span>(...)
- |      <span class="n">D</span>.<span class="nb">values</span>() -&gt; <span class="n">list</span> <span class="k">of</span> <span class="n">D&#39;s</span> <span class="nb">values</span>
- |  
- |  <span class="n">viewitems</span>(...)
- |      <span class="n">D</span>.<span class="n">viewitems</span>() -&gt; <span class="n">a</span> <span class="n">set-like</span> <span class="n">object</span> <span class="n">providing</span> <span class="n">a</span> <span class="n">view</span> <span class="n">on</span> <span class="n">D&#39;s</span> <span class="n">items</span>
- |  
- |  <span class="n">viewkeys</span>(...)
- |      <span class="n">D</span>.<span class="n">viewkeys</span>() -&gt; <span class="n">a</span> <span class="n">set-like</span> <span class="n">object</span> <span class="n">providing</span> <span class="n">a</span> <span class="n">view</span> <span class="n">on</span> <span class="n">D&#39;s</span> <span class="nb">keys</span>
- |  
- |  <span class="n">viewvalues</span>(...)
- |      <span class="n">D</span>.<span class="n">viewvalues</span>() -&gt; <span class="n">an</span> <span class="n">object</span> <span class="n">providing</span> <span class="n">a</span> <span class="n">view</span> <span class="n">on</span> <span class="n">D&#39;s</span> <span class="nb">values</span>
- |  
- |  ----------------------------------------------------------------------
- |  <span class="n">Data</span> <span class="o">and</span> <span class="n">other</span> <span class="n">attributes</span> <span class="nb">defined</span> <span class="n">here:</span>
- |  
- |  <span class="n">__hash__</span> = <span class="n">None</span>
- |  
- |  <span class="n">__new__</span> = 
- |      <span class="n">T</span>.<span class="n">__new__</span>(<span class="n">S</span>, ...) -&gt; <span class="n">a</span> <span class="nb">new</span> <span class="n">object</span> <span class="n">with</span> <span class="n">type</span> <span class="n">S</span>, <span class="n">a</span> <span class="n">subtype</span> <span class="k">of</span> <span class="n">T</span>
+<span class="s1"> |  </span>
+<span class="s1"> |  update(...)</span>
+<span class="s1"> |      D.update([E, ]**F) -&gt; None.  Update D from dict/iterable E and F.</span>
+<span class="s1"> |      If E present and has a .keys() method, does:     for k in E: D[k] = E[k]</span>
+<span class="s1"> |      If E present and lacks .keys() method, does:     for (k, v) in E: D[k] = v</span>
+<span class="s1"> |      In either case, this is followed by: for k in F: D[k] = F[k]</span>
+<span class="s1"> |  </span>
+<span class="s1"> |  values(...)</span>
+<span class="s1"> |      D.values() -&gt; list of D&#39;</span><span class="nx">s</span> <span class="nx">values</span>
+ <span class="o">|</span>  
+ <span class="o">|</span>  <span class="nx">viewitems</span><span class="p">(...)</span>
+ <span class="o">|</span>      <span class="nx">D</span><span class="p">.</span><span class="nx">viewitems</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nx">a</span> <span class="nx">set</span><span class="o">-</span><span class="nx">like</span> <span class="nx">object</span> <span class="nx">providing</span> <span class="nx">a</span> <span class="nx">view</span> <span class="nx">on</span> <span class="nx">D</span><span class="s1">&#39;s items</span>
+<span class="s1"> |  </span>
+<span class="s1"> |  viewkeys(...)</span>
+<span class="s1"> |      D.viewkeys() -&gt; a set-like object providing a view on D&#39;</span><span class="nx">s</span> <span class="nx">keys</span>
+ <span class="o">|</span>  
+ <span class="o">|</span>  <span class="nx">viewvalues</span><span class="p">(...)</span>
+ <span class="o">|</span>      <span class="nx">D</span><span class="p">.</span><span class="nx">viewvalues</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nx">an</span> <span class="nx">object</span> <span class="nx">providing</span> <span class="nx">a</span> <span class="nx">view</span> <span class="nx">on</span> <span class="nx">D</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">values</span>
+ <span class="o">|</span>  
+ <span class="o">|</span>  <span class="o">----------------------------------------------------------------------</span>
+ <span class="o">|</span>  <span class="nx">Data</span> <span class="nx">and</span> <span class="nx">other</span> <span class="nx">attributes</span> <span class="nx">defined</span> <span class="nx">here</span><span class="o">:</span>
+ <span class="o">|</span>  
+ <span class="o">|</span>  <span class="nx">__hash__</span> <span class="o">=</span> <span class="nx">None</span>
+ <span class="o">|</span>  
+ <span class="o">|</span>  <span class="nx">__new__</span> <span class="o">=</span> 
+ <span class="o">|</span>      <span class="nx">T</span><span class="p">.</span><span class="nx">__new__</span><span class="p">(</span><span class="nx">S</span><span class="p">,</span> <span class="p">...)</span> <span class="o">-&gt;</span> <span class="nx">a</span> <span class="k">new</span> <span class="nx">object</span> <span class="kd">with</span> <span class="nx">type</span> <span class="nx">S</span><span class="p">,</span> <span class="nx">a</span> <span class="nx">subtype</span> <span class="nx">of</span> <span class="nx">T</span>
 </pre></div>
 
 
-<h2 id="10-pep-8-compliant-string-chaining">10. <span class="caps">PEP</span>-8 compliant string&nbsp;chaining</h2>
+<h2>10. <span class="caps">PEP</span>-8 compliant string&nbsp;chaining</h2>
 <p><a href="https://www.python.org/dev/peps/pep-0008"><span class="caps">PEP8</span></a>
 is the style guide for Python code. Among other things, it directs that lines not be over 80 characters long and that indenting by consistent over line&nbsp;breaks.</p>
 <p>This can be accomplished with a combination of backslashes \; parentheses () with commas , ; and addition operators +; but every one of these solutions is awkward for multiline strings. There is a multiline string signifier, the triple quote, but it does not allow consistent indenting over line&nbsp;breaks. </p>
@@ -396,8 +393,8 @@ print(my_long_text)
 
 
 <p>We are no longer the knights who say Ni! We are now the knights who say&nbsp;ekki-ekki-ekki-p&#8217;tang-zoom-boing-z&#8217;nourrwringmm!</p>
-<h2 id="_1">是也乎</h2>
-<h2 id="changelog">Changelog</h2>
+<h2>是也乎</h2>
+<h2>Changelog</h2>
 <ul>
 <li>141130 move into Pelican as&nbsp;zoomquiet.io</li>
 </ul>

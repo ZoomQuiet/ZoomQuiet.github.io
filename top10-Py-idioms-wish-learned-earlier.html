@@ -4,7 +4,7 @@
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
     <title>    top10-Py-idioms-wish-learned-earlier
-| #是也乎#
+| 是也乎(￣▽￣)
 | ZoomQuiet.io    </title>
 
     <!-- Using the latest rendering mode for IE -->
@@ -134,7 +134,7 @@
 <p>Missing from this list are some idioms such as list comprehensions and lambda functions, which are very Pythonesque and very efficient and very cool, but also very difficult to miss because they&#8217;re mentioned on StackOverflow every other answer! Also ternary x if y else z constructions, decorators and generators, because I don&#8217;t use them very&nbsp;often.</p>
 <p>There&#8217;s also an 
 <a href="http://nbviewer.ipython.org/github/Prooffreader/Misc_ipynb/blob/master/top_10_python_idioms.ipynb">IPython notebook nbviewer version</a> of this document if you&nbsp;prefer.</p>
-<h2>1. Python 3-style printing in Python&nbsp;2</h2>
+<h2 id="1-python-3-style-printing-in-python-2">1. Python 3-style printing in Python 2<a class="headerlink" href="#1-python-3-style-printing-in-python-2" title="Permanent link">&para;</a></h2>
 <p>One of the things that kept me from concentrating on Python was this whole version 2 - version 3 debacle. Finally I went with Python 2 because all the libraries I wanted were not 3-compatible, and I figured if I needed to, I would laboriously adjust my code&nbsp;later. </p>
 <p>But really, the biggest differences in everyday programming are printing and division, and now I just import from future. Now that almost all the libraries I use heavily are v3-compliant, I&#8217;ll make the switch&nbsp;soon.</p>
 <div class="highlight"><pre><span></span><span class="n">mynumber</span> <span class="o">=</span> <span class="mi">5</span>
@@ -172,7 +172,7 @@ The number is 5
 </pre></div>
 
 
-<h2>2.&nbsp;enumerate(list)</h2>
+<h2 id="2-enumeratelist">2. enumerate(list)<a class="headerlink" href="#2-enumeratelist" title="Permanent link">&para;</a></h2>
 <p>It might seem obvious that you should be able to iterate over a list and its index at the same time, but I used counter variables or slices for an embarrassingly long&nbsp;time.</p>
 <div class="highlight"><pre><span></span>mylist = [&quot;It&#39;s&quot;, &#39;only&#39;, &#39;a&#39;, &#39;model&#39;]
 
@@ -188,7 +188,7 @@ for index, item in enumerate(mylist):
 </pre></div>
 
 
-<h2>3. Chained comparison&nbsp;operators</h2>
+<h2 id="3-chained-comparison-operators">3. Chained comparison operators<a class="headerlink" href="#3-chained-comparison-operators" title="Permanent link">&para;</a></h2>
 <p>Because I was so used to statically typed languages (where this idiom would be ambiguous), it never occurred to me to put two operators in the same expression. In many languages, 4 &gt; 3 &gt; 2 would return as False, because (4 &gt; 3) would be evaluated as a boolean, and then True &gt; 2 would be evaluated as&nbsp;False.</p>
 <div class="highlight"><pre><span></span>mynumber = 3
 
@@ -203,7 +203,7 @@ Chained comparison operators work!
 </pre></div>
 
 
-<h2>4.&nbsp;collections.Counter</h2>
+<h2 id="4-collectionscounter">4. collections.Counter<a class="headerlink" href="#4-collectionscounter" title="Permanent link">&para;</a></h2>
 <p>The collections library is, like, the best thing ever. Stackoverflow turned me on to ordered dicts early on, but I kept using a snippet to create dicts to count occurrences of results in my code. One of these days, I&#8217;ll figure out a use for&nbsp;collections.deque.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
@@ -230,7 +230,7 @@ Chained comparison operators work!
 </pre></div>
 
 
-<h2>5. Dict&nbsp;comprehensions</h2>
+<h2 id="5-dict-comprehensions">5. Dict comprehensions<a class="headerlink" href="#5-dict-comprehensions" title="Permanent link">&para;</a></h2>
 <p>A rite of passage for a Python programmer is understanding list comprehensions, but eventually I realized dict comprehensions are just as useful &#8212; especially for reversing&nbsp;dicts.</p>
 <div class="highlight"><pre><span></span>my_phrase = [&quot;No&quot;, &quot;one&quot;, &quot;expects&quot;, &quot;the&quot;, &quot;Spanish&quot;, &quot;Inquisition&quot;]
 my_dict = {key: value for value, key in enumerate(my_phrase)}
@@ -245,7 +245,7 @@ print(reversed_dict)
 </pre></div>
 
 
-<h2>6. Executing shell commands with&nbsp;subprocess</h2>
+<h2 id="6-executing-shell-commands-with-subprocess">6. Executing shell commands with subprocess<a class="headerlink" href="#6-executing-shell-commands-with-subprocess" title="Permanent link">&para;</a></h2>
 <p>I used to use the os library exclusively to manipulate files; now I can even programmatically call complex command-line tools like ffmpeg for video&nbsp;editing</p>
 <p>(And yes, I use Windows, so do all of my clients. But I have the good grace to be embarrassed about&nbsp;it!)</p>
 <p>Note that the particular subprocess I picked would be much better done with the os library; I just wanted a command everyone would be familiar with. And in general, shell=True is a <span class="caps">VERY</span> bad idea, I put it here so that the command output would appear in the IPython notebook cell. Don&#8217;t try this at home,&nbsp;kids!</p>
@@ -280,7 +280,7 @@ print(reversed_dict)
 </pre></div>
 
 
-<h2>7. dict .get() and .iteritems()&nbsp;methods</h2>
+<h2 id="7-dict-get-and-iteritems-methods">7. dict .get() and .iteritems() methods<a class="headerlink" href="#7-dict-get-and-iteritems-methods" title="Permanent link">&para;</a></h2>
 <p>Having a default value when a key does not exist has all kinds of uses, and just like enumerate() for lists, you can iterate over key, value tuples in&nbsp;dicts</p>
 <div class="highlight"><pre><span></span>my_dict = {&#39;name&#39;: &#39;Lancelot&#39;, &#39;quest&#39;: &#39;Holy Grail&#39;, &#39;favourite_color&#39;: &#39;blue&#39;}
 
@@ -299,7 +299,7 @@ favourite_color: blue
 </pre></div>
 
 
-<h2>8. Tuple unpacking for switching&nbsp;variables</h2>
+<h2 id="8-tuple-unpacking-for-switching-variables">8. Tuple unpacking for switching variables<a class="headerlink" href="#8-tuple-unpacking-for-switching-variables" title="Permanent link">&para;</a></h2>
 <p>Do you know how many times I had to use a third, temporary dummy variable in <span class="caps">VB</span>? c = a; a = b; b =&nbsp;c?</p>
 <div class="highlight"><pre><span></span>a = &#39;Spam&#39;
 b = &#39;Eggs&#39;
@@ -317,7 +317,7 @@ Eggs Spam
 </pre></div>
 
 
-<h2>9. Introspection&nbsp;tools</h2>
+<h2 id="9-introspection-tools">9. Introspection tools<a class="headerlink" href="#9-introspection-tools" title="Permanent link">&para;</a></h2>
 <p>I was aware of dir(), but I had assumed help() would do the same thing as IPython&#8217;s ? magic command. It does way more. (This post has been updated after some great advice from reddit&#8217;s /r/python which, indeed, I wish I&#8217;d known about&nbsp;before!)</p>
 <div class="highlight"><pre><span></span>my_dict = {&#39;That&#39;: &#39;an ex-parrot!&#39;}
 
@@ -383,7 +383,7 @@ help(my_dict)
 </pre></div>
 
 
-<h2>10. <span class="caps">PEP</span>-8 compliant string&nbsp;chaining</h2>
+<h2 id="10-pep-8-compliant-string-chaining">10. <span class="caps">PEP</span>-8 compliant string chaining<a class="headerlink" href="#10-pep-8-compliant-string-chaining" title="Permanent link">&para;</a></h2>
 <p><a href="https://www.python.org/dev/peps/pep-0008"><span class="caps">PEP8</span></a>
 is the style guide for Python code. Among other things, it directs that lines not be over 80 characters long and that indenting by consistent over line&nbsp;breaks.</p>
 <p>This can be accomplished with a combination of backslashes \; parentheses () with commas , ; and addition operators +; but every one of these solutions is awkward for multiline strings. There is a multiline string signifier, the triple quote, but it does not allow consistent indenting over line&nbsp;breaks. </p>
@@ -396,8 +396,8 @@ print(my_long_text)
 
 
 <p>We are no longer the knights who say Ni! We are now the knights who say&nbsp;ekki-ekki-ekki-p&#8217;tang-zoom-boing-z&#8217;nourrwringmm!</p>
-<h2>是也乎</h2>
-<h2>Changelog</h2>
+<h2 id="_1">是也乎<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>141130 move into Pelican as&nbsp;zoomquiet.io</li>
 </ul>
@@ -460,28 +460,6 @@ print(my_long_text)
 <aside>
     <section>
         <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
-                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
-                            class="icon-旧文-sign icon-large"></i>旧文
-                    </a></li>
-                    <li class="list-group-item"><a href="http://ZoomQuiet.io"><i
-                            class="icon-.io-sign icon-large"></i>.io
-                    </a></li>
-                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i
-                            class="icon-GitHub-sign icon-large"></i>GitHub
-                    </a></li>
-                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
-                            class="icon-Wiki-sign icon-large"></i>Wiki
-                    </a></li>
-                    <li class="list-group-item"><a href="http://code.google.com/p/openbookproject/"><i
-                            class="icon-O.B.P-sign icon-large"></i>O.B.P
-                    </a></li>
-                    <li class="list-group-item"><a href="http://weekly.pychina.org/"><i
-                            class="icon-Weekly-sign icon-large"></i>Weekly
-                    </a></li>
-                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet"><i
-                            class="icon-weibo-sign icon-large"></i>weibo
-                    </a></li>
 
             <li class="list-group-item"><h4>
                 <i class="icon-th icon-large"></i>Categories</h4></li>
@@ -525,6 +503,32 @@ print(my_long_text)
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
+
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="http://ZoomQuiet.io"><i
+                            class="icon-.io-sign icon-large"></i>.io
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.zoomquiet.io"><i
+                            class="icon-Wiki-sign icon-large"></i>Wiki
+                    </a></li>
+                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧曰-sign icon-large"></i>旧曰
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
+                            class="icon-啄木鸟-sign icon-large"></i>啄木鸟
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/OpenBookProjects/wiki/blob/master/HowToBuildBookOnline.md"><i
+                            class="icon-O.B.P-sign icon-large"></i>O.B.P
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weekly.pychina.org/"><i
+                            class="icon-Weekly-sign icon-large"></i>Weekly
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
 
  
 

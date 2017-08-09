@@ -4,7 +4,7 @@
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
     <title>    py101-cleanup-script
-| #是也乎#
+| 是也乎(￣▽￣)
 | ZoomQuiet.io    </title>
 
     <!-- Using the latest rendering mode for IE -->
@@ -128,11 +128,11 @@
 
                 <p><a href="http://freepythontips.wordpress.com/2014/01/23/python-101-writing-a-cleanup-script/">Python 101: Writing a cleanup script | Bite Sized Python&nbsp;Tips</a></p>
 <p>So hi there guys! I hope you are fine. So what is in this post? Today we will be writing a cleanup script. The idea for this post came from Mike Driscol who recently wrote a very useful post about writing a cleanup script in python. So how is my post different from his post? In my post I will be using path.py. When I used path.py for the first time I just fell in love with&nbsp;it.</p>
-<h2>Installing&nbsp;path.py:</h2>
+<h2 id="installing-pathpy">Installing path.py:<a class="headerlink" href="#installing-pathpy" title="Permanent link">&para;</a></h2>
 <p>So there are several ways for installing path.py. Path.py may be installed using setuptools or distribute or pip:
 easy_install path.py
 The latest release is always updated to the Python Package Index. The source code is hosted on&nbsp;Github.</p>
-<h2>Finding the number of files in a&nbsp;directory:</h2>
+<h2 id="finding-the-number-of-files-in-a-directory">Finding the number of files in a directory:<a class="headerlink" href="#finding-the-number-of-files-in-a-directory" title="Permanent link">&para;</a></h2>
 <p>So our first task is to find the number of files present in a directory. In this example we will not iterate over subdirectories instead we will just count the number of files present in the top level directory. This one is simple. Here is my&nbsp;solution:</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span> 
@@ -153,7 +153,7 @@ The latest release is always updated to the Python Package Index. The source cod
 </pre></div>
 
 
-<h2>Finding the number of files recursively in a&nbsp;directory:</h2>
+<h2 id="finding-the-number-of-files-recursively-in-a-directory">Finding the number of files recursively in a directory:<a class="headerlink" href="#finding-the-number-of-files-recursively-in-a-directory" title="Permanent link">&para;</a></h2>
 <p>That was easy! Wasn’t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&nbsp;Python.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="n">file_count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -203,17 +203,17 @@ for i in files_loc:
 
 
 <p>There is nothing fancy here. In this script we are just pretty printing a directory and the files it contains. Now lets&nbsp;continue.</p>
-<h2>Deleting a specific file from a&nbsp;directory:</h2>
+<h2 id="deleting-a-specific-file-from-a-directory">Deleting a specific file from a directory:<a class="headerlink" href="#deleting-a-specific-file-from-a-directory" title="Permanent link">&para;</a></h2>
 <p>So lets suppose we have a file called this_file_sucks.py. Now how do we delete it. Lets make this seranio more real by saying that we do not know in which directory it is placed. Its simple to solve this problem as well. Just go to the top level directory and execute this&nbsp;script:</p>
 <p>from path import path
 d = path(<span class="caps">DIRECTORY</span>)</p>
-<h1>replace directory with your desired&nbsp;directory</h1>
+<h1 id="replace-directory-with-your-desired-directory">replace directory with your desired directory<a class="headerlink" href="#replace-directory-with-your-desired-directory" title="Permanent link">&para;</a></h1>
 <p>for i in d.walk():
     if i.isfile():
         if i.name == &#8216;php.py&#8217;:
             i.remove()
 In the above script I did not implement any logging and error handling. That is left as an exercise for the&nbsp;reader.</p>
-<h2>Deleting files based on their&nbsp;extension</h2>
+<h2 id="deleting-files-based-on-their-extension">Deleting files based on their extension<a class="headerlink" href="#deleting-files-based-on-their-extension" title="Permanent link">&para;</a></h2>
 <p>Just suppose you want to remove all the ‘.pyc’ files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in&nbsp;path.py.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
@@ -225,7 +225,7 @@ In the above script I did not implement any logging and error handling. That is 
 </pre></div>
 
 
-<h2>Deleting files based on their&nbsp;size:</h2>
+<h2 id="deleting-files-based-on-their-size">Deleting files based on their size:<a class="headerlink" href="#deleting-files-based-on-their-size" title="Permanent link">&para;</a></h2>
 <p>So another interesting scenario. What if we want to delete those files which exceed 5Mb&nbsp;size?</p>
 <p><code>NOTE:</code> There is a difference between Mb and <span class="caps">MB</span>. I will be covering Mb here. 
 Is it possible with path.py? Yes it is! So here is a script which does this&nbsp;work:</p>
@@ -241,7 +241,7 @@ for i in d.walk():
 
 
 <p>So we saw how we can remove files based on their&nbsp;size.</p>
-<h2>Deleting files based on their last access&nbsp;time</h2>
+<h2 id="deleting-files-based-on-their-last-access-time">Deleting files based on their last access time<a class="headerlink" href="#deleting-files-based-on-their-last-access-time" title="Permanent link">&para;</a></h2>
 <p>In this part we will take a look on how to delete files based on their last access time. I have written the code below to achieve this target. Just change the number of days to anything you like. This script will remove the files which were last modified before the <span class="caps">DAYS</span>&nbsp;variable.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="kn">import</span> <span class="nn">time</span>
@@ -264,9 +264,9 @@ for i in d.walk():
 
 
 <p>So we have also learned how to remove files based on their last modified time. If you want to delete files based on last access time just change i.mtime to i.atime and you will be good to&nbsp;go.</p>
-<h2>Goodbye</h2>
+<h2 id="goodbye">Goodbye<a class="headerlink" href="#goodbye" title="Permanent link">&para;</a></h2>
 <p>So that was it. I hope you liked the post. In the end I would like to make a public apology that my English is not good so you may find some grammar mistakes. You are requested to email them to me so that I can improve my English. If you liked this post then don’t forget to follow me on twitter and facebook. A retweet won’t hurt either! If you want to send me a pm then use this&nbsp;email.</p>
-<h2>Changelog</h2>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>140125 翻译 Weekly issue:99.5&nbsp;时发现,转抄学习</li>
 </ul>
@@ -329,28 +329,6 @@ for i in d.walk():
 <aside>
     <section>
         <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
-                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
-                            class="icon-旧文-sign icon-large"></i>旧文
-                    </a></li>
-                    <li class="list-group-item"><a href="http://ZoomQuiet.io"><i
-                            class="icon-.io-sign icon-large"></i>.io
-                    </a></li>
-                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i
-                            class="icon-GitHub-sign icon-large"></i>GitHub
-                    </a></li>
-                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
-                            class="icon-Wiki-sign icon-large"></i>Wiki
-                    </a></li>
-                    <li class="list-group-item"><a href="http://code.google.com/p/openbookproject/"><i
-                            class="icon-O.B.P-sign icon-large"></i>O.B.P
-                    </a></li>
-                    <li class="list-group-item"><a href="http://weekly.pychina.org/"><i
-                            class="icon-Weekly-sign icon-large"></i>Weekly
-                    </a></li>
-                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet"><i
-                            class="icon-weibo-sign icon-large"></i>weibo
-                    </a></li>
 
             <li class="list-group-item"><h4>
                 <i class="icon-th icon-large"></i>Categories</h4></li>
@@ -394,6 +372,32 @@ for i in d.walk():
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
+
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="http://ZoomQuiet.io"><i
+                            class="icon-.io-sign icon-large"></i>.io
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.zoomquiet.io"><i
+                            class="icon-Wiki-sign icon-large"></i>Wiki
+                    </a></li>
+                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧曰-sign icon-large"></i>旧曰
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
+                            class="icon-啄木鸟-sign icon-large"></i>啄木鸟
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/OpenBookProjects/wiki/blob/master/HowToBuildBookOnline.md"><i
+                            class="icon-O.B.P-sign icon-large"></i>O.B.P
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weekly.pychina.org/"><i
+                            class="icon-Weekly-sign icon-large"></i>Weekly
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
 
  
 

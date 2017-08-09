@@ -4,7 +4,7 @@
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
     <title>    131127-yw-on-test-static-analysis
-| #是也乎#
+| 是也乎(￣▽￣)
 | ZoomQuiet.io    </title>
 
     <!-- Using the latest rendering mode for IE -->
@@ -128,22 +128,22 @@
 
                 <p>via:&nbsp;http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/</p>
 <p>Ever since I made a static analysis tool for Python called PySonar, I have been asked about the question: &#8220;What is the difference between testing and static analysis?&#8221; I just replied to a comment asking a similar question, so I think it&#8217;s a good time to write down some systematic answer for this&nbsp;question.</p>
-<h2>Static analysis is static, tests are&nbsp;dynamic</h2>
+<h2 id="static-analysis-is-static-tests-are-dynamic">Static analysis is static, tests are dynamic<a class="headerlink" href="#static-analysis-is-static-tests-are-dynamic" title="Permanent link">&para;</a></h2>
 <p>Static analysis and tests are similar in their purposes. They are both tools for improving code quality. But they are very different in nature: static analysis is static, but tests are dynamic. &#8220;Static&#8221; basically means &#8220;without running the&nbsp;program&#8221;.</p>
 <p>Static analysis is similar to the compiler&#8217;s type checker but usually a lot more powerful. It can find bugs that type checkers cannot find, such as resource leaks, array index out of bounds, security risks etc. Static analysis has the &#8220;reasoning power&#8221; that tests hasn&#8217;t, so static analysis can find problems that testing may never detect. For example, a security static analysis may show you how your website can be hacked after a series of&nbsp;events.</p>
 <p>Tests just run the programs with certain inputs. They are fully dynamic, so you can&#8217;t test all cases but just some of them. But because tests run dynamically, they may detect bugs that static analysis can&#8217;t find. For example, tests may find that your algorithm produces wrong results. Static analysis tools are not (yet) intelligent enough for checking this kind of high-level&nbsp;properties.</p>
 <p>But notice that although tests can tell you that your algorithm is wrong, they can&#8217;t tell you that it is correct. To guarantee the correctness of programs is terribly harder than tests or static analysis. You need a mechanical proof of the program&#8217;s correctness, which means at the moment that you need a theorem prover such as Coq, Isabelle or <span class="caps">ACL2</span>, lots of math/logics knowledge, lots of time, and even with all those you may not be able to prove it, because your program may have encoded the Goldbach conjecture in it. So the program&#8217;s passing the tests doesn&#8217;t mean it is correct. It only means that you haven&#8217;t done terribly stupid&nbsp;things.</p>
-<h2>Huge difference in manual&nbsp;labor</h2>
+<h2 id="huge-difference-in-manual-labor">Huge difference in manual labor<a class="headerlink" href="#huge-difference-in-manual-labor" title="Permanent link">&para;</a></h2>
 <p>Testing requires lots of manual work. Tests for &#8220;silly bugs&#8221; (such as null pointer dereference) are very boring and tedious to make. Because of thedesign flaws of lots of programming languages, those things can happen anywhere in the code, so you need a good coverage in order to prevent&nbsp;them.</p>
 <p>You can&#8217;t just make sure that every line of the code is covered by the tests, you need good path coverage. But in the worst case, the number of execution paths of the program is exponential to its size, so it is almost impossible to get good path coverage however careful you&nbsp;are.</p>
 <p>On the other hand, static analysis is fully automatic. It explores all paths in the program systematically, so you get very high path coverage for free. Because of the exponential algorithm complexity exploring the paths, static analysis tools may use some heuristics to cut down running time, so the coverage may not be 100%, but it&#8217;s still enormously higher than any human test writer can&nbsp;get.</p>
-<h2>Static analysis is&nbsp;symbolic</h2>
+<h2 id="static-analysis-is-symbolic">Static analysis is symbolic<a class="headerlink" href="#static-analysis-is-symbolic" title="Permanent link">&para;</a></h2>
 <p>Even when you get good path coverage in tests, you may still miss lots of bugs. Because you can only pass specific values into the tests, the code can still crash at the values that you haven&#8217;t tested. In comparison, static analysis processes the code symbolically. It doesn&#8217;t assume specific values for variables. It reasons about all possible values for every&nbsp;variable.</p>
 <p>The most powerful static analysis tools can keep track of specific ranges of the numbers that the variables represent, so they may statically detect bugs such as &#8220;array index out of bound&#8221; etc. (PySonar hasn&#8217;t that kind of power yet and I&#8217;m working towards that.) Tests may detect those bugs too, but only if you pass them specific values that hits the boundary conditions. Those tests are painful to make, because the indexes may come after a series of arithmetic operations. You will have a hard time finding the cases where the final result can hit the&nbsp;boundary.</p>
-<h2>Static analysis has false&nbsp;positives</h2>
+<h2 id="static-analysis-has-false-positives">Static analysis has false positives<a class="headerlink" href="#static-analysis-has-false-positives" title="Permanent link">&para;</a></h2>
 <p>Some static analysis tools may be designed to be conservative. That is, whenever it is unsure, it can assume that the worst things can happen and issue a warning: &#8220;You may have a problem here.&#8221; Thus in principle it can tell you whenever some code may cause trouble. But a lot of times the bugs may never happen, this is called a false positive. This is like your doctor misdiagnosed you to have some disease which you don&#8217;t have. Lots of the work in building static analysis tools is about how to reduce the false positive rate, so that the users don&#8217;t lose faith in the diagnosis&nbsp;reports.</p>
 <p>Tests don&#8217;t have false positives, because when they fail your program will surely fail under those&nbsp;conditions.</p>
-<h2>The value of static&nbsp;analysis</h2>
+<h2 id="the-value-of-static-analysis">The value of static analysis<a class="headerlink" href="#the-value-of-static-analysis" title="Permanent link">&para;</a></h2>
 <p>Although static analysis tools don&#8217;t have the power to guarantee the correctness of programs, they are the most powerful bug-finding tools that don&#8217;t need lots of manual labor. They can prevent lots of the silly bugs that we spend a lot of time and energy writing tests for. Some of those bugs are so stupid but so easy to make. Once they happen they may crash an airplane or launch a missile. So static analysis is a very useful and valuable tool. It takes over the mindless and tedious jobs from human testers so that they can focus on more intellectual and interesting&nbsp;tests.</p>
 <blockquote>
 <blockquote>
@@ -152,30 +152,30 @@
 </blockquote>
 </blockquote>
 </blockquote>
-<h1>测试与静态分析</h1>
+<h1 id="_1">测试与静态分析<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>自从俺折腾了Python静态代码分析工具 PySonar, 俺就问过自个儿这个问题:&#8221;究竟测试和静态分析的差异在哪儿?&#8221;&nbsp;这不是一个简单的评注就能回答的了的,现在俺想可以好好解释一下了.</p>
-<h2>静态分析是静态的,测试是动态的</h2>
+<h2 id="_2">静态分析是静态的,测试是动态的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Static analysis is static, tests are dynamic Static analysis and tests are similar in their purposes. They are both tools for improving code quality. But they are very different in nature: static analysis is static, but tests are dynamic. &#8220;Static&#8221; basically means &#8220;without running the&nbsp;program&#8221;.</p>
 <p>Static analysis is similar to the compiler&#8217;s type checker but usually a lot more powerful. It can find bugs that type checkers cannot find, such as resource leaks, array index out of bounds, security risks etc. Static analysis has the &#8220;reasoning power&#8221; that tests hasn&#8217;t, so static analysis can find problems that testing may never detect. For example, a security static analysis may show you how your website can be hacked after a series of&nbsp;events.</p>
 <p>Tests just run the programs with certain inputs. They are fully dynamic, so you can&#8217;t test all cases but just some of them. But because tests run dynamically, they may detect bugs that static analysis can&#8217;t find. For example, tests may find that your algorithm produces wrong results. Static analysis tools are not (yet) intelligent enough for checking this kind of high-level&nbsp;properties.</p>
 <p>But notice that although tests can tell you that your algorithm is wrong, they can&#8217;t tell you that it is correct. To guarantee the correctness of programs is terribly harder than tests or static analysis. You need a mechanical proof of the program&#8217;s correctness, which means at the moment that you need a theorem prover such as Coq, Isabelle or <span class="caps">ACL2</span>, lots of math/logics knowledge, lots of time, and even with all those you may not be able to prove it, because your program may have encoded the Goldbach conjecture in it. So the program&#8217;s passing the tests doesn&#8217;t mean it is correct. It only means that you haven&#8217;t done terribly stupid&nbsp;things.</p>
-<h2>存在巨大的人肉工作量差异</h2>
+<h2 id="_3">存在巨大的人肉工作量差异<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>~ Huge difference in manual&nbsp;labor </p>
 <p>Testing requires lots of manual work. Tests for &#8220;silly bugs&#8221; (such as null pointer dereference) are very boring and tedious to make. Because of thedesign flaws of lots of programming languages, those things can happen anywhere in the code, so you need a good coverage in order to prevent&nbsp;them.</p>
 <p>You can&#8217;t just make sure that every line of the code is covered by the tests, you need good path coverage. But in the worst case, the number of execution paths of the program is exponential to its size, so it is almost impossible to get good path coverage however careful you&nbsp;are.</p>
 <p>On the other hand, static analysis is fully automatic. It explores all paths in the program systematically, so you get very high path coverage for free. Because of the exponential algorithm complexity exploring the paths, static analysis tools may use some heuristics to cut down running time, so the coverage may not be 100%, but it&#8217;s still enormously higher than any human test writer can&nbsp;get.</p>
-<h2>静态分析是符号化的</h2>
+<h2 id="_4">静态分析是符号化的<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>~ Static analysis is&nbsp;symbolic </p>
 <p>Even when you get good path coverage in tests, you may still miss lots of bugs. Because you can only pass specific values into the tests, the code can still crash at the values that you haven&#8217;t tested. In comparison, static analysis processes the code symbolically. It doesn&#8217;t assume specific values for variables. It reasons about all possible values for every&nbsp;variable.</p>
 <p>The most powerful static analysis tools can keep track of specific ranges of the numbers that the variables represent, so they may statically detect bugs such as &#8220;array index out of bound&#8221; etc. (PySonar hasn&#8217;t that kind of power yet and I&#8217;m working towards that.) Tests may detect those bugs too, but only if you pass them specific values that hits the boundary conditions. Those tests are painful to make, because the indexes may come after a series of arithmetic operations. You will have a hard time finding the cases where the final result can hit the&nbsp;boundary.</p>
-<h2>静态分析会误报</h2>
+<h2 id="_5">静态分析会误报<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>~ Static analysis has false&nbsp;positives </p>
 <p>Some static analysis tools may be designed to be conservative. That is, whenever it is unsure, it can assume that the worst things can happen and issue a warning: &#8220;You may have a problem here.&#8221; Thus in principle it can tell you whenever some code may cause trouble. But a lot of times the bugs may never happen, this is called a false positive. This is like your doctor misdiagnosed you to have some disease which you don&#8217;t have. Lots of the work in building static analysis tools is about how to reduce the false positive rate, so that the users don&#8217;t lose faith in the diagnosis&nbsp;reports.</p>
 <p>Tests don&#8217;t have false positives, because when they fail your program will surely fail under those&nbsp;conditions.</p>
-<h2>静态分析的价值</h2>
+<h2 id="_6">静态分析的价值<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>~The value of static&nbsp;analysis </p>
 <p>虽然静态分析工具并不能确保程序的正确性,但却是最强力的bug调查工具,而且不需要大量的手工劳动. 以往我们花费了巨大工作量编写的测试依然包含极其愚蠢的错误.有的蠢到你无法相信是自个儿写出来的.而这种低级问题一但出现,就可能令飞机坠毁导弹发射!&nbsp;因此,静态分析是种非常有用以及有价值的工具.能接管测试人员盲目而乏味的工作,使人类测试工程师能专注更加智能/有趣的测试.</p>
-<h2>Changlog</h2>
+<h2 id="changlog">Changlog<a class="headerlink" href="#changlog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>14010? </li>
 <li>131212 翻越抄录在 medium.com&nbsp;开始翻译</li>
@@ -239,28 +239,6 @@
 <aside>
     <section>
         <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
-                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
-                            class="icon-旧文-sign icon-large"></i>旧文
-                    </a></li>
-                    <li class="list-group-item"><a href="http://ZoomQuiet.io"><i
-                            class="icon-.io-sign icon-large"></i>.io
-                    </a></li>
-                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i
-                            class="icon-GitHub-sign icon-large"></i>GitHub
-                    </a></li>
-                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
-                            class="icon-Wiki-sign icon-large"></i>Wiki
-                    </a></li>
-                    <li class="list-group-item"><a href="http://code.google.com/p/openbookproject/"><i
-                            class="icon-O.B.P-sign icon-large"></i>O.B.P
-                    </a></li>
-                    <li class="list-group-item"><a href="http://weekly.pychina.org/"><i
-                            class="icon-Weekly-sign icon-large"></i>Weekly
-                    </a></li>
-                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet"><i
-                            class="icon-weibo-sign icon-large"></i>weibo
-                    </a></li>
 
             <li class="list-group-item"><h4>
                 <i class="icon-th icon-large"></i>Categories</h4></li>
@@ -304,6 +282,32 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
+
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="http://ZoomQuiet.io"><i
+                            class="icon-.io-sign icon-large"></i>.io
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.zoomquiet.io"><i
+                            class="icon-Wiki-sign icon-large"></i>Wiki
+                    </a></li>
+                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧曰-sign icon-large"></i>旧曰
+                    </a></li>
+                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
+                            class="icon-啄木鸟-sign icon-large"></i>啄木鸟
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/OpenBookProjects/wiki/blob/master/HowToBuildBookOnline.md"><i
+                            class="icon-O.B.P-sign icon-large"></i>O.B.P
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weekly.pychina.org/"><i
+                            class="icon-Weekly-sign icon-large"></i>Weekly
+                    </a></li>
+                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
 
  
 

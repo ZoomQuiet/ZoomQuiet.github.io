@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>http://blog.zoomquiet.io/</link><description></description><lastBuildDate>Tue, 08 Aug 2017 00:00:00 +0800</lastBuildDate><item><title>PyQt4 之消失在 Sierra</title><link>http://blog.zoomquiet.io/pyqt4macos.html</link><description>
+<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>http://blog.zoomquiet.io/</link><description></description><lastBuildDate>Sun, 27 Aug 2017 00:00:00 +0800</lastBuildDate><item><title>用 DSL 们构筑商用系统</title><link>http://blog.zoomquiet.io/dsl-atop-openresty.html</link><description>
+&lt;h1 id="building-business-systems-with-dsls-for-nginx-openresty"&gt;Building Business Systems with DSLs for &lt;span class="caps"&gt;NGINX&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; OpenResty&lt;a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;~ 来自春哥的分享&lt;/p&gt;
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;5年前也听录了一次 春哥的分享:&lt;a href="http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.html"&gt;由Lua 粘合的Nginx生态环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;然后, 神奇的引发了各种后来的然后&lt;/li&gt;
+&lt;li&gt;去年, 在 &lt;span class="caps"&gt;NGINX&lt;/span&gt; 大会上, 春哥才真正讲出了10年前设计 OpenResty 前身时内心的宏大构想&lt;/li&gt;
+&lt;li&gt;所以, 值得认真 review 一下:&lt;ul&gt;
+&lt;li&gt;视频:&lt;a href="https://www.youtube.com/watch?v=w2RAZLptE-U"&gt;Building Business Systems with Domain-Specific Languages for &lt;span class="caps"&gt;NGINX&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; OpenResty | Cloudflare - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;文稿:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-1/"&gt;Domain-Specific Languages for &lt;span class="caps"&gt;NGINX&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; OpenResty, Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-2/"&gt;Domain-Specific Languages for …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sun, 27 Aug 2017 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-08-27:/dsl-atop-openresty.html</guid><category>speech</category><category>openresty</category><category>agentzh</category><category>ngx</category></item><item><title>PyQt4 之消失在 Sierra</title><link>http://blog.zoomquiet.io/pyqt4macos.html</link><description>
 &lt;h3 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,
 用 PyQt 是必然选择哪.&lt;/p&gt;
@@ -70,24 +82,24 @@
 &lt;p&gt;&lt;a href="http://nedbatchelder.com/text/iter.html"&gt;Ned Batchelder: Loop Like A Native&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;迭代基础&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;C样:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;i = 0
-while i &amp;lt; len(my_list):
-    v = my_list[i]
-    print v
-    i += 1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;
+    &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;偏门:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for i in range(len(my_list)):
-    v = my_list[i]
-    print v
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;蠎样:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for v in my_list:
-    print v
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;模式:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for name in iterable:
-    statements
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;iterable&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;statements&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;可 …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 31 May 2016 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2016-05-31:/nedbat-loop-iter.html</guid><category>pythonic</category><category>pythoneer</category><category>loop</category><category>coder</category></item><item><title>站立式办公环境尝试</title><link>http://blog.zoomquiet.io/standing-desk-env.html</link><description>
@@ -169,13 +181,13 @@ while i &amp;lt; len(my_list):
 &lt;h1 id="_2"&gt;新梗&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~ 嗯哼,各种关键记要,不进行解释了…&lt;/p&gt;
 &lt;h2 id="npm"&gt;npm&lt;a class="headerlink" href="#npm" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install &lt;span class="nv"&gt;npm&lt;/span&gt;
-&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Downloading https://homebrew.bintray.com/bottles/node-0.12.2_1.yosemite.bottle.tar.gz
-&lt;span class="c1"&gt;######################################################################## 100.0%&lt;/span&gt;
-&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Pouring node-0.12.2_1.yosemite.bottle.tar.gz
-&lt;span class="o"&gt;==&lt;/span&gt;&amp;gt; Caveats
-If you update npm itself, &lt;span class="k"&gt;do&lt;/span&gt; NOT use the npm update command.
-The upstream-recommended way …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 09 Apr 2015 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-04-09:/jump-into-ssd.html</guid><category>MAC</category><category>Leo</category><category>Pyenv</category><category>ZQ</category></item><item><title>再见了 Python</title><link>http://blog.zoomquiet.io/saying-ggodby-python-zh.html</link><description>&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;npm&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Downloading&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//homebrew.bintray.com/bottles/node-0.12.2_1.yosemite.bottle.tar.gz&lt;/span&gt;
+&lt;span class="cp"&gt;######################################################################## 100.0%&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Pouring&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.12.2&lt;/span&gt;&lt;span class="n"&gt;_1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;yosemite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bottle&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt;
+&lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Caveats&lt;/span&gt;
+&lt;span class="n"&gt;If&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="n"&gt;npm&lt;/span&gt; &lt;span class="n"&gt;itself&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;NOT&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;npm&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;The …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 09 Apr 2015 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-04-09:/jump-into-ssd.html</guid><category>MAC</category><category>Leo</category><category>Pyenv</category><category>ZQ</category></item><item><title>再见了 Python</title><link>http://blog.zoomquiet.io/saying-ggodby-python-zh.html</link><description>&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This post is long overdue; this isn’t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
 &lt;p&gt;While …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sat, 10 Jan 2015 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-01-10:/saying-ggodby-python-zh.html</guid><category>Weekly</category><category>Zh</category></item><item><title>KnewOne-talk 之 大妈 篇</title><link>http://blog.zoomquiet.io/knewone-talk-zoomq-choise.html</link><description>
 &lt;p&gt;~ KnewOne talk question list&lt;/p&gt;
@@ -192,11 +204,11 @@ The upstream-recommended way …&lt;/pre&gt;&lt;/div&gt;</description><dc:creato
 &lt;li&gt;Pythonic入门宣传;实效敏捷配置管理;技术社区文化促生;&lt;/li&gt;
 &lt;li&gt;&lt;span class="caps"&gt;PKM&lt;/span&gt; ~ &lt;span class="caps"&gt;GTD …&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 23 Dec 2014 23:23:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-12-23:/knewone-talk-zoomq-choise.html</guid><category>MAC</category><category>Livin</category><category>Zoomq</category></item><item><title>流行之恶</title><link>http://blog.zoomquiet.io/141212-pop-is-evil.html</link><description>
 &lt;p&gt;&lt;img alt="popular_science_logo.png" src="http://zoomq.qiniudn.com/ZQCollection/logo/popular_science_logo.png?watermark/2/text/Wm9vbS5RdWlldA==/fill/V2hpdGU=/fontsize/320/dissolve/85|imageView2/2/w/320"/&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hello,
-    你觉得有生命力流行的东西就是好的么,
-    俗话说祸害遗千年... 
-    从汉语来看,楚辞也很棒,可是也式微了,
-你怎么想?
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;你觉得有生命力流行的东西就是好的么&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;俗话说祸害遗千年&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; 
+    &lt;span class="err"&gt;从汉语来看&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;楚辞也很棒&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;可是也式微了&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="err"&gt;你怎么想&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!--more--&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -262,16 +274,16 @@ The upstream-recommended way …&lt;/pre&gt;&lt;/div&gt;</description><dc:creato
 &lt;p&gt;&lt;code&gt;Top 10 Python idioms I wish I'd learned earlier&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;ve been programming all my life, but never been a programmer. Most of my work was done in Visual Basic because it&amp;#8217;s what I was most …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 26 Nov 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-11-26:/top10-Py-idioms-wish-learned-earlier.html</guid><category>Pythonic</category><category>FW</category><category>idioms</category><category>tutorial</category></item><item><title>论 Shooter 的关闭</title><link>http://blog.zoomquiet.io/141122-shotter-death.html</link><description>
 &lt;p&gt;&lt;img alt="529.jpg (175×260)" src="http://m.ms10010.com/image/pic/201205/thumb/529.jpg"/&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;And in the naked light I saw ten thousand people, maybe more. 
-People talking without speaking, people hearing without listening. 
-People writing songs that voices never shared, no one dared disturb the sound of silence.
- 　　　　　　　　　　　　　　　
---- The sound of silence 　美利坚合众国,2015年,纽约.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;And&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="kr"&gt;naked&lt;/span&gt; &lt;span class="n"&gt;light&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;saw&lt;/span&gt; &lt;span class="n"&gt;ten&lt;/span&gt; &lt;span class="n"&gt;thousand&lt;/span&gt; &lt;span class="n"&gt;people&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;maybe&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
+&lt;span class="n"&gt;People&lt;/span&gt; &lt;span class="n"&gt;talking&lt;/span&gt; &lt;span class="n"&gt;without&lt;/span&gt; &lt;span class="n"&gt;speaking&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;people&lt;/span&gt; &lt;span class="n"&gt;hearing&lt;/span&gt; &lt;span class="n"&gt;without&lt;/span&gt; &lt;span class="n"&gt;listening&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
+&lt;span class="n"&gt;People&lt;/span&gt; &lt;span class="n"&gt;writing&lt;/span&gt; &lt;span class="n"&gt;songs&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;voices&lt;/span&gt; &lt;span class="n"&gt;never&lt;/span&gt; &lt;span class="n"&gt;shared&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;one&lt;/span&gt; &lt;span class="n"&gt;dared&lt;/span&gt; &lt;span class="n"&gt;disturb&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;sound&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;silence&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+ &lt;span class="err"&gt;　　　　　　　　　　　　　　　&lt;/span&gt;
+&lt;span class="o"&gt;---&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;sound&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;silence&lt;/span&gt; &lt;span class="err"&gt;　美利坚合众国&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="err"&gt;年&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;纽约&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!--more--&gt;
 &lt;p&gt;&lt;img alt="53809965gw1emk7au8650j20xr0w3tat" src="http://ww4.sinaimg.cn/large/53809965gw1emk7au8650j20xr0w3tat.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;慢慢的,它们就没有了,就像从未存在过&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;(原文: http://www.douban.com …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sat, 22 Nov 2014 11:11:11 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-11-22:/141122-shotter-death.html</guid><category>DAMA</category><category>Pythoneer</category><category>PyCon</category></item><item><title>Mavericks 中用 sshfs</title><link>http://blog.zoomquiet.io/sshfs-in-mavericks.html</link><description>
+&lt;p&gt;(原文: http://www.douban …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sat, 22 Nov 2014 11:11:11 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-11-22:/141122-shotter-death.html</guid><category>DAMA</category><category>Pythoneer</category><category>PyCon</category></item><item><title>Mavericks 中用 sshfs</title><link>http://blog.zoomquiet.io/sshfs-in-mavericks.html</link><description>
 &lt;h1 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;自从 2011-12-16 入手 &lt;span class="caps"&gt;MBP&lt;/span&gt; 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便&lt;/p&gt;
 &lt;ul&gt;
@@ -315,7 +327,7 @@ People writing songs that voices never shared, no one dared disturb the sound of
 &lt;/ul&gt;
 &lt;p&gt;果然…四年后:&lt;/p&gt;
 &lt;h3 id="ohlife-is-shutting-down"&gt;OhLife is shutting down&lt;a class="headerlink" href="#ohlife-is-shutting-down" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;    &lt;span class="n"&gt;OhLife&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;cc6632387657&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;ohlife&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;    &lt;span class="n"&gt;OhLife&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;cc6632387657&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;ohlife&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;Quiet&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sun, 21 Sep 2014 11:11:11 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-09-21:/140921-ohlife-death.html</guid><category>DAMA</category><category>Pythoneer</category><category>PyCon</category></item><item><title>Pythonic口号的Pivot</title><link>http://blog.zoomquiet.io/140916-pycon-slogen.html</link><description>
 &lt;p&gt;&lt;img alt="SimpleIsBeautiful(PNG 图像,731x681 像素)" src="http://wiki.woodpecker.org.cn/moin/SimpleIsBeautiful?action=AttachFile&amp;amp;do=get&amp;amp;target=130416-zq-simple-is-beautiful.png"/&gt;&lt;/p&gt;
 &lt;p&gt;可记得去年的&lt;a href="http://python-china.org/topic/544#reply5"&gt;蠎年蠎衫(PythonisT-shirt)设计大赛! — Python China&lt;/a&gt; ?&lt;/p&gt;
@@ -398,22 +410,15 @@ Nick Coghlan
 &lt;li&gt;&lt;a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html"&gt;rst2s5 with syntax highlighting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files"&gt;python - Where can I find a …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 07 May 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-05-07:/rst2s5-upgraded.html</guid><category>MAC</category><category>S5</category><category>rst2s5</category><category>ZQ</category></item><item><title>ScrapBook 生存指南</title><link>http://blog.zoomquiet.io/livin-scrapbook.html</link><description>
 &lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;zoomq @ MBP111216ZQ in ~/KuaiPan/zScrapBook
-$ du -hs *
-4.0K    7niu-devrel.json
-4.0K    7niu-floss.json
-4.0K    7niu-skm.json
-5.5G    ZqDevRel
-6.4G    ZqFLOSS
-3.5G    ZqSKM
- 9.5M    scraotools_ZqDevRel.pkl
- 14M    scraotools_ZqFLOSS.pkl
-1.6M    scraotools_ZqSKM.pkl
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;很久以前, 俺和大家一样,收集整理网络资源的习惯组织方式是:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;目录 (htm …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 26 Feb 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-02-26:/livin-scrapbook.html</guid><category>RTFD</category><category>qiniu</category><category>triggered</category></item><item><title>如何基于CB3构建家庭服务器</title><link>http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html</link><description>
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;MBP111216ZQ&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;    &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="n"&gt;niu&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;devrel&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;
+&lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;    &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="n"&gt;niu&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;floss&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;
+&lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;    &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="n"&gt;niu&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;skm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;
+&lt;span class="mf"&gt;5.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqDevRel&lt;/span&gt;
+&lt;span class="mf"&gt;6.4&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqFLOSS&lt;/span&gt;
+&lt;span class="mf"&gt;3.5&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqSKM&lt;/span&gt;
+ &lt;span class="mf"&gt;9.5&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;    &lt;span class="n"&gt;scraotools_ZqDevRel&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pkl …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 26 Feb 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-02-26:/livin-scrapbook.html</guid><category>RTFD</category><category>qiniu</category><category>triggered</category></item><item><title>如何基于CB3构建家庭服务器</title><link>http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html</link><description>
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h1 id="issue"&gt;Issue&lt;a class="headerlink" href="#issue" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
@@ -547,7 +552,7 @@ $ du -hs *
 &lt;a href="http://xiaolai.github.io/alpha/on-learning/"&gt;学习学习再学习 - xiaolai&lt;/a&gt; 提出的,俺实在无法同意更多..&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Impossible_staircase" src="http://upload.wikimedia.org/wikipedia/commons/3/34/Impossible_staircase.svg"/&gt;&lt;/p&gt;
 &lt;p&gt;这是最难的知识结构——它往往看起来跟线性结构没什么区别，但，最终令人迷惑，甚至懊恼。 用最直白的话来描述，就是：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;初级的知识需要对高级知识深入了解才能真正深入了解
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;初级的知识需要对高级知识深入了解才能真正深入了解&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;——你看看这句话多拗口就多少有点概念了。&lt;/p&gt;
 &lt;p&gt;所以,还是按照 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 19 Dec 2013 10:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2013-12-19:/jekyll-to-pelican.html</guid><category>howto</category><category>pelican</category></item><item><title>Tests and static analysis</title><link>http://blog.zoomquiet.io/131127-yw-on-test-static-analysis.html</link><description>&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/&lt;/p&gt;
@@ -581,7 +586,7 @@ $ du -hs *
 &lt;p&gt;然后,又引发了系列讨论,结果变成了自个儿应该还的一篇文章,,,&amp;nbsp;同样的,由大脑自动后台组稿42天,快速输出一版本先:&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景:&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;首先, 俺自个儿, 社区称号:大妈, 入行以来加入N 多技术社区, 长年混杂在各种企业内外社区中,折腾,再折腾,从来没有什么成型的&lt;span class="caps"&gt;NB&lt;/span&gt;的流传于世或是企业生产系统中的项目&amp;#8230; 按照 Eric&amp;nbsp;Raymond的著名文章:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;如何成为一名黒客
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;如何成为一名黒客&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -631,16 +636,14 @@ server, has the reputation of being complex and difficult to set up.&lt;/p&gt;
 &lt;p&gt;随着各种新技术的广泛应用，将使人类的生存条件和生活方式发生前所未有的改变：环境污染大大减少；资源能够合理开发利用；人口数量得到控制，素质会有较大提高“绿色食品”和新型医药，使人们更加长寿和健康……&lt;/p&gt;
 &lt;p&gt;如此美好的前景 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 01 Jan 1998 11:17:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,1998-01-01:/issue-chinese-for-internet.html</guid><category>thinked</category><category>Livin</category><category>Zoomq</category></item><item><title>who’s gonna…</title><link>http://blog.zoomquiet.io/cipher-who-s-gonna.html</link><description>
 &lt;h1 id="cipher"&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;&lt;span class="caps"&gt;CIPHER&lt;/span&gt;”&lt;a class="headerlink" href="#cipher" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;who's gonna tell you when
-It's too late
-Who's gonna tell you things
-Aren't so great
-You can't go on
-Thinking nothing is wrong
-Who's gonna drive you home tonight
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;who&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;gonna&lt;/span&gt; &lt;span class="n"&gt;tell&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;when&lt;/span&gt;
+&lt;span class="n"&gt;It&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;too&lt;/span&gt; &lt;span class="n"&gt;late&lt;/span&gt;
+&lt;span class="n"&gt;Who&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;gonna&lt;/span&gt; &lt;span class="n"&gt;tell&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;things&lt;/span&gt;
+&lt;span class="n"&gt;Aren&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;so&lt;/span&gt; &lt;span class="n"&gt;great&lt;/span&gt;
+&lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;go&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;
+&lt;span class="n"&gt;Thinking&lt;/span&gt; &lt;span class="n"&gt;nothing&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;wrong&lt;/span&gt;
+&lt;span class="n"&gt;Who&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;gonna&lt;/span&gt; &lt;span class="n"&gt;drive&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;home&lt;/span&gt; &lt;span class="n"&gt;tonight&lt;/span&gt;
 
-Who's gonna pick you up
-When you full
-Who's gonna hang it up
-When you call
-who's gonna pay …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Mon, 11 Nov 1996 11:11:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,1996-11-11:/cipher-who-s-gonna.html</guid><category>manga</category><category>Livin</category><category>Zoomq</category></item></channel></rss>
+&lt;span class="n"&gt;Who&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;gonna&lt;/span&gt; &lt;span class="n"&gt;pick&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt;
+&lt;span class="n"&gt;When&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;full&lt;/span&gt;
+&lt;span class="n"&gt;Who&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;gonna&lt;/span&gt; &lt;span class="n"&gt;hang …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Mon, 11 Nov 1996 11:11:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,1996-11-11:/cipher-who-s-gonna.html</guid><category>manga</category><category>Livin</category><category>Zoomq</category></item></channel></rss>

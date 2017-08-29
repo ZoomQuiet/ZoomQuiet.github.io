@@ -115,11 +115,11 @@
 &lt;p&gt;雖然具體的行動要因人、因事、因地制宜，然而，我相信這份協定的內容在原則層次是跨越文化而共通的，例如，雙方都有責任與義務坦然面對臨終這件事，以及人應該有選擇死得有尊嚴的權利，還有那些從臨終者角度出發的觀點所象徵的尊重臨終者主觀意願的態度，都是很有價值的觀點。&lt;/p&gt;
 &lt;p&gt;Google一下就可以發現台灣已經有很多人在倡導與臨終、安樂死相關的理念，值得我們向她/他們致敬，但我相信他們的努力還沒有受到應有的重視，對於這個議題，我們還有很多要努力的地方。&lt;/p&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Chaos"></category></entry><entry><title>流行之恶</title><link href="http://blog.zoomquiet.io/141212-pop-is-evil.html" rel="alternate"></link><published>2014-12-12T18:18:18+08:00</published><updated>2014-12-12T18:18:18+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:/141212-pop-is-evil.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="popular_science_logo.png" src="http://zoomq.qiniudn.com/ZQCollection/logo/popular_science_logo.png?watermark/2/text/Wm9vbS5RdWlldA==/fill/V2hpdGU=/fontsize/320/dissolve/85|imageView2/2/w/320"/&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hello,
-    你觉得有生命力流行的东西就是好的么,
-    俗话说祸害遗千年... 
-    从汉语来看,楚辞也很棒,可是也式微了,
-你怎么想?
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;你觉得有生命力流行的东西就是好的么&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;俗话说祸害遗千年&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; 
+    &lt;span class="err"&gt;从汉语来看&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;楚辞也很棒&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;可是也式微了&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="err"&gt;你怎么想&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!--more--&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -139,11 +139,11 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;祸害遗千年&lt;/code&gt; 是反诘 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;p&gt;&lt;img alt="popular_science_logo.png" src="http://zoomq.qiniudn.com/ZQCollection/logo/popular_science_logo.png?watermark/2/text/Wm9vbS5RdWlldA==/fill/V2hpdGU=/fontsize/320/dissolve/85|imageView2/2/w/320"/&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hello,
-    你觉得有生命力流行的东西就是好的么,
-    俗话说祸害遗千年... 
-    从汉语来看,楚辞也很棒,可是也式微了,
-你怎么想?
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;你觉得有生命力流行的东西就是好的么&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;俗话说祸害遗千年&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; 
+    &lt;span class="err"&gt;从汉语来看&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;楚辞也很棒&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;可是也式微了&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="err"&gt;你怎么想&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!--more--&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -402,22 +402,22 @@
 &lt;li&gt;141209 受邀回答&lt;/li&gt;
 &lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>论 Shooter 的关闭</title><link href="http://blog.zoomquiet.io/141122-shotter-death.html" rel="alternate"></link><published>2014-11-22T11:11:11+08:00</published><updated>2014-11-22T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-22:/141122-shotter-death.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="529.jpg (175×260)" src="http://m.ms10010.com/image/pic/201205/thumb/529.jpg"/&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;And in the naked light I saw ten thousand people, maybe more. 
-People talking without speaking, people hearing without listening. 
-People writing songs that voices never shared, no one dared disturb the sound of silence.
- 　　　　　　　　　　　　　　　
---- The sound of silence 　美利坚合众国,2015年,纽约.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;And&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="kr"&gt;naked&lt;/span&gt; &lt;span class="n"&gt;light&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;saw&lt;/span&gt; &lt;span class="n"&gt;ten&lt;/span&gt; &lt;span class="n"&gt;thousand&lt;/span&gt; &lt;span class="n"&gt;people&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;maybe&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
+&lt;span class="n"&gt;People&lt;/span&gt; &lt;span class="n"&gt;talking&lt;/span&gt; &lt;span class="n"&gt;without&lt;/span&gt; &lt;span class="n"&gt;speaking&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;people&lt;/span&gt; &lt;span class="n"&gt;hearing&lt;/span&gt; &lt;span class="n"&gt;without&lt;/span&gt; &lt;span class="n"&gt;listening&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
+&lt;span class="n"&gt;People&lt;/span&gt; &lt;span class="n"&gt;writing&lt;/span&gt; &lt;span class="n"&gt;songs&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;voices&lt;/span&gt; &lt;span class="n"&gt;never&lt;/span&gt; &lt;span class="n"&gt;shared&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;one&lt;/span&gt; &lt;span class="n"&gt;dared&lt;/span&gt; &lt;span class="n"&gt;disturb&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;sound&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;silence&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+ &lt;span class="err"&gt;　　　　　　　　　　　　　　　&lt;/span&gt;
+&lt;span class="o"&gt;---&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;sound&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;silence&lt;/span&gt; &lt;span class="err"&gt;　美利坚合众国&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="err"&gt;年&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;纽约&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!--more--&gt;
 &lt;p&gt;&lt;img alt="53809965gw1emk7au8650j20xr0w3tat" src="http://ww4.sinaimg.cn/large/53809965gw1emk7au8650j20xr0w3tat.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;慢慢的,它们就没有了,就像从未存在过&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;(原文: http://www.douban.com …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;(原文: http://www.douban …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;&lt;img alt="529.jpg (175×260)" src="http://m.ms10010.com/image/pic/201205/thumb/529.jpg"/&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;And in the naked light I saw ten thousand people, maybe more. 
-People talking without speaking, people hearing without listening. 
-People writing songs that voices never shared, no one dared disturb the sound of silence.
- 　　　　　　　　　　　　　　　
---- The sound of silence 　美利坚合众国,2015年,纽约.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;And&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="kr"&gt;naked&lt;/span&gt; &lt;span class="n"&gt;light&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;saw&lt;/span&gt; &lt;span class="n"&gt;ten&lt;/span&gt; &lt;span class="n"&gt;thousand&lt;/span&gt; &lt;span class="n"&gt;people&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;maybe&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
+&lt;span class="n"&gt;People&lt;/span&gt; &lt;span class="n"&gt;talking&lt;/span&gt; &lt;span class="n"&gt;without&lt;/span&gt; &lt;span class="n"&gt;speaking&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;people&lt;/span&gt; &lt;span class="n"&gt;hearing&lt;/span&gt; &lt;span class="n"&gt;without&lt;/span&gt; &lt;span class="n"&gt;listening&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
+&lt;span class="n"&gt;People&lt;/span&gt; &lt;span class="n"&gt;writing&lt;/span&gt; &lt;span class="n"&gt;songs&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;voices&lt;/span&gt; &lt;span class="n"&gt;never&lt;/span&gt; &lt;span class="n"&gt;shared&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;one&lt;/span&gt; &lt;span class="n"&gt;dared&lt;/span&gt; &lt;span class="n"&gt;disturb&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;sound&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;silence&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+ &lt;span class="err"&gt;　　　　　　　　　　　　　　　&lt;/span&gt;
+&lt;span class="o"&gt;---&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;sound&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;silence&lt;/span&gt; &lt;span class="err"&gt;　美利坚合众国&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="err"&gt;年&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;纽约&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!--more--&gt;
 &lt;p&gt;&lt;img alt="53809965gw1emk7au8650j20xr0w3tat" src="http://ww4.sinaimg.cn/large/53809965gw1emk7au8650j20xr0w3tat.jpg"/&gt;&lt;/p&gt;
@@ -473,7 +473,7 @@ People writing songs that voices never shared, no one dared disturb the sound of
 &lt;/ul&gt;
 &lt;p&gt;果然…四年后:&lt;/p&gt;
 &lt;h3 id="ohlife-is-shutting-down"&gt;OhLife is shutting down&lt;a class="headerlink" href="#ohlife-is-shutting-down" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;    &lt;span class="n"&gt;OhLife&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;cc6632387657&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;ohlife&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;    &lt;span class="n"&gt;OhLife&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;cc6632387657&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;ohlife&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;Quiet&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
 &lt;p&gt;&lt;img alt="ohlife" src="http://a.36krcnd.com/photo/5dfa0868b7808b19b22eb4617a374923.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -487,7 +487,7 @@ People writing songs that voices never shared, no one dared disturb the sound of
 &lt;/ul&gt;
 &lt;p&gt;果然…四年后:&lt;/p&gt;
 &lt;h3 id="ohlife-is-shutting-down"&gt;OhLife is shutting down&lt;a class="headerlink" href="#ohlife-is-shutting-down" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;    &lt;span class="n"&gt;OhLife&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;cc6632387657&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;ohlife&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;    &lt;span class="n"&gt;OhLife&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;cc6632387657&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;ohlife&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;Quiet&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;
 &lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;    &lt;span class="n"&gt;Sun&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Sep&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;AM&lt;/span&gt;
 &lt;span class="n"&gt;subject&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;     &lt;span class="n"&gt;OhLife&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;shutting&lt;/span&gt; &lt;span class="n"&gt;down&lt;/span&gt;
@@ -514,11 +514,11 @@ If you had the premium version, a few weeks after we shut OhLife down we’ll re
 &lt;/ul&gt;
 &lt;p&gt;官方曰: &lt;code&gt;用户量增长速率没能保持住&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;言下之意,就是&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;銭赚没赚到
-不重要
-重要的是
-用户量的增长
-没能支撑一个大故事
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;銭赚没赚到&lt;/span&gt;
+&lt;span class="err"&gt;不重要&lt;/span&gt;
+&lt;span class="err"&gt;重要的是&lt;/span&gt;
+&lt;span class="err"&gt;用户量的增长&lt;/span&gt;
+&lt;span class="err"&gt;没能支撑一个大故事&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;那又是为什么呢?&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;OhLife&lt;/code&gt; :&lt;/p&gt;
@@ -611,55 +611,55 @@ If you had the premium version, a few weeks after we shut OhLife down we’ll re
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;@ZoomQuiet&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;2007-&amp;gt; Life is short, use Python!
-2013-&amp;gt; Life is shit,go Pythonic!
-2014-&amp;gt; Life is short,suck Python!
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;2007&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="kt"&gt;short&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;shit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;go&lt;/span&gt; &lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="mi"&gt;2014&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="kt"&gt;short&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;suck&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
 
-今年 PyCon 纪念 TEE 的文案,修订为:
-Life such short,be Pythonic !
-有妺纸说,人生苦短应该翻译为
-Life such suck
-很认同,但是,不敢用,,,
+&lt;span class="err"&gt;今年&lt;/span&gt; &lt;span class="n"&gt;PyCon&lt;/span&gt; &lt;span class="err"&gt;纪念&lt;/span&gt; &lt;span class="n"&gt;TEE&lt;/span&gt; &lt;span class="err"&gt;的文案&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;修订为&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;such&lt;/span&gt; &lt;span class="kt"&gt;short&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;Pythonic&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="err"&gt;有妺纸说&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;人生苦短应该翻译为&lt;/span&gt;
+&lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;such&lt;/span&gt; &lt;span class="n"&gt;suck&lt;/span&gt;
+&lt;span class="err"&gt;很认同&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;但是&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;不敢用&lt;/span&gt;&lt;span class="p"&gt;,,,&lt;/span&gt;
 
-Life is short,be Pythonic!
-人生苦短 得Pythonic?
+&lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="kt"&gt;short&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="err"&gt;人生苦短&lt;/span&gt; &lt;span class="err"&gt;得&lt;/span&gt;&lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;@AlbertLee&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Life is short, suck py
-I never stopped pythonic, I just stop showing it
-If you don't python,you don't python
-Pythonic than pythonic 
-    定要难受死处女座的...
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Life&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="kt"&gt;short&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;suck&lt;/span&gt; &lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;never&lt;/span&gt; &lt;span class="n"&gt;stopped&lt;/span&gt; &lt;span class="n"&gt;pythonic&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;just&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="n"&gt;showing&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt;
+&lt;span class="n"&gt;If&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;don&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;don&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;
+&lt;span class="n"&gt;Pythonic&lt;/span&gt; &lt;span class="n"&gt;than&lt;/span&gt; &lt;span class="n"&gt;pythonic&lt;/span&gt; 
+    &lt;span class="err"&gt;定要难受死处女座的&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;@Lothar&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;life's pathetic, let's pythonic
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;life&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pathetic&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;let&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pythonic&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;@Adam:&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;go pythonic, no pathetic... ..
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;go&lt;/span&gt; &lt;span class="n"&gt;pythonic&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;pathetic&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="p"&gt;..&lt;/span&gt;
 
-人生苦短 Pythonic欢
-苦海无涯,python是岸
-人生苦短 Pythonic绽
-总是我就是强迫症想押韵..
+&lt;span class="err"&gt;人生苦短&lt;/span&gt; &lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="err"&gt;欢&lt;/span&gt;
+&lt;span class="err"&gt;苦海无涯&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="err"&gt;是岸&lt;/span&gt;
+&lt;span class="err"&gt;人生苦短&lt;/span&gt; &lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="err"&gt;绽&lt;/span&gt;
+&lt;span class="err"&gt;总是我就是强迫症想押韵&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;为什么python程序员都这么短命… 还都这么痛苦… (逃)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_3"&gt;暂定&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    life's pathetic, let's pythonic
-    人生苦短 得Pythonic?
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;life&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pathetic&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;let&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pythonic&lt;/span&gt;
+    &lt;span class="err"&gt;人生苦短&lt;/span&gt; &lt;span class="err"&gt;得&lt;/span&gt;&lt;span class="n"&gt;Pythonic&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="_4"&gt;思考&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;为什么 程序猿 就是如此纠结呢? 一个单词就可以引发这么多的情绪? 果断那谁无意间道出了真相?&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;为什么python程序员
-都这么短命... 
-还都这么痛苦...
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;为什么&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="err"&gt;程序员&lt;/span&gt;
+&lt;span class="err"&gt;都这么短命&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; 
+&lt;span class="err"&gt;还都这么痛苦&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="changlog"&gt;Changlog&lt;a class="headerlink" href="#changlog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -791,15 +791,15 @@ still believe that the earth is flat and make all kinds of theories to prove it.
 &lt;p&gt;Whenever you criticize Java or C++ for their verbosity, &lt;span class="caps"&gt;OO&lt;/span&gt; proponents will tell you that they are not authentic &lt;span class="caps"&gt;OO&lt;/span&gt; languages. They would ask you to look at Smalltalk. If Smalltalk’s ways are that good, why almost nobody is using Smalltalk now? Because there are real problems in its approach. I think Smalltalk is the origin of over-abstraction and over-complication you find in other &lt;span class="caps"&gt;OO&lt;/span&gt; languages.&lt;/p&gt;
 &lt;p&gt;The “authentic” &lt;span class="caps"&gt;OO&lt;/span&gt; style of Smalltalk promotes the notion of “extremely late binding”, which basically means that the meaning of the program constructs is determined as late as possible. Late binding gives you a chance to swap out the underlying implementation without forcing the upper levels to change, but this also means that you are no longer sure what a piece of code means. When I look at expressions such as ‘1+2′ and ‘if (t) then …  else … ‘ in Java or C++, I at least know for sure that they mean an integer addition and an usual conditional. But I’m no longer sure about this in an “extremely late binding language”, because the meaning of ‘+’ and ‘if” can be redefined. Giving the programmers the power of defining control structures is a bad idea, because soon your language will be abundant of quirky control structures designed by programmers who try to be clever. It will no longer be the language that you used to know.&lt;/p&gt;
 &lt;p&gt;An example for this feature is Smalltalk’s conditional structure, which looks like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nf"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nf"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt;
     &lt;span class="nb"&gt;ifTrue:&lt;/span&gt;[ &lt;span class="s"&gt;'greater'&lt;/span&gt; ]
     &lt;span class="nb"&gt;ifFalse:&lt;/span&gt;[ &lt;span class="s"&gt;'less or equal'&lt;/span&gt; ]
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You send a message ifTrue: to a Boolean object, passing as an argument a block of code to be executed if and only if the Boolean receiver is true.&lt;/p&gt;
 &lt;p&gt;First of all, if you really have a well-designed language, you shouldn’t be wanting to define your own control structures. As a seasoned Lisp/Scheme programmer, I have seen many custom-designed control structures (such as the various looping macros) over the years, but none of them turned out to be good ideas. I’d rather write slightly longer and more verbose code in the vanilla language than to learn those weird control structures. Second, if you are really genius enough to have invented another good control structure, the late binding feature of Smalltalk probably won’t provide you the necessary power for defining it. The power of functions as an abstraction tool is limited. It is strictly less powerful than Lisp/Scheme’s macros. Third, this feature of Smalltalk is not really a novel approach and it has a big problem. A similar but more beautiful conditional construct had been defined in lambda calculus since before computer science was born:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;TRUE&lt;/span&gt; &lt;span class="nb"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;x.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;y.x&lt;/span&gt;
-&lt;span class="nv"&gt;FALSE&lt;/span&gt; &lt;span class="nb"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;x.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;y.y&lt;/span&gt;
-&lt;span class="nv"&gt;IF&lt;/span&gt; &lt;span class="nb"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;b.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;t.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;f.b&lt;/span&gt; &lt;span class="no"&gt;t&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;TRUE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;
+&lt;span class="n"&gt;FALSE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="n"&gt;IF&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This is very beautiful and can be done in any functional language, but why none of the functional languages implement conditionals this way? Because when you see an expression &lt;span class="caps"&gt;IF&lt;/span&gt; b t f, you will have no idea whether it is a conditional or not, because &lt;span class="caps"&gt;IF&lt;/span&gt; can be redefined in the program. Also because &lt;span class="caps"&gt;IF&lt;/span&gt; is just a function, it may also accept unexpected values other than &lt;span class="caps"&gt;TRUE&lt;/span&gt; or &lt;span class="caps"&gt;FALSE&lt;/span&gt;. This may happen to make the conditional construct work but cause trouble later on. This is called “unintentional semantics”. This kind of bug can be very hard to track down.&lt;/p&gt;
 &lt;p&gt;This approach also makes compiler and static analysis hard. When the compiler sees &lt;span class="caps"&gt;IF&lt;/span&gt; b t f, it no longer knows that it is a conditional and thus optimize it that way. It has to treat it as a usual function call. Similarly when the type checker sees it, it doesn’t know what type to expect for b, because it may not be a conditional at all. The above argument against the lambda calculus can easily be adapted to Smalltalk.&lt;/p&gt;
@@ -926,7 +926,7 @@ may be a good starting point.&lt;/p&gt;
 于是我们有了个”对象”, 包含了按钮的属性以及方法(回调). 的确挺方便. 
 但 &lt;span class="caps"&gt;GUI&lt;/span&gt; 应用只是个非常有限的情景,并不能真正证明 “一切皆对象”的普世性. 就象用两里路的平坦是不能证明地球是平的.&lt;/p&gt;
 &lt;p&gt;如果你真的理解什么是抽象, 可能已经注意到,上述故事包含一个微妙的错误:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;按钮的回调是不是一个真正的方法.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;按钮的回调是不是一个真正的方法&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;方法的本质目的是提供抽象的属性,但回调的目的不是为了提供抽象. 在这儿,只是刚好按钮包含了一个触发功能.&lt;/p&gt;
 &lt;p&gt;只有极少数功能应当视作对象的方法.
@@ -980,7 +980,7 @@ may be a good starting point.&lt;/p&gt;
 事实证明,给予程序猿定义控制结构的能力,
 这主意其实很囧, 因为立即就会发现,自作聪明的程序猿都在努力向语言里塞满各种特殊的控制结构.&lt;/p&gt;
 &lt;p&gt;这一特性,可以举个 Smalltalk 的著名条件结构为例:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nf"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nf"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt;
     &lt;span class="nb"&gt;ifTrue:&lt;/span&gt;[ &lt;span class="s"&gt;'greater'&lt;/span&gt; ]
     &lt;span class="nb"&gt;ifFalse:&lt;/span&gt;[ &lt;span class="s"&gt;'less or equal'&lt;/span&gt; ]
 &lt;/pre&gt;&lt;/div&gt;
@@ -996,9 +996,9 @@ Smalltalk 的延迟绑定功能,也难以提供足够的能力来定义它.
 &lt;p&gt;第三,Smalltalk 这一特性并不是新东西,而且包含了一个重大问题.
 类似的但更加优美的控制结构,
 在计算机科学诞生前就已经由 lambda演算科学定义出来了:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;TRUE&lt;/span&gt; &lt;span class="nb"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;x.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;y.x&lt;/span&gt;
-&lt;span class="nv"&gt;FALSE&lt;/span&gt; &lt;span class="nb"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;x.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;y.y&lt;/span&gt;
-&lt;span class="nv"&gt;IF&lt;/span&gt; &lt;span class="nb"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;b.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;t.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="nv"&gt;f.b&lt;/span&gt; &lt;span class="no"&gt;t&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;TRUE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;
+&lt;span class="n"&gt;FALSE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="n"&gt;IF&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;λ&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这是非常漂亮的,可以用任何语言实现的,
 但是为毛没有任何一个函式语言以这种方式来实现条件语句?
@@ -1389,7 +1389,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 &lt;p&gt;然后,又引发了系列讨论,结果变成了自个儿应该还的一篇文章,,,&amp;nbsp;同样的,由大脑自动后台组稿42天,快速输出一版本先:&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景:&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;首先, 俺自个儿, 社区称号:大妈, 入行以来加入N 多技术社区, 长年混杂在各种企业内外社区中,折腾,再折腾,从来没有什么成型的&lt;span class="caps"&gt;NB&lt;/span&gt;的流传于世或是企业生产系统中的项目&amp;#8230; 按照 Eric&amp;nbsp;Raymond的著名文章:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;如何成为一名黒客
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;如何成为一名黒客&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1402,7 +1402,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 &lt;p&gt;然后,又引发了系列讨论,结果变成了自个儿应该还的一篇文章,,,&amp;nbsp;同样的,由大脑自动后台组稿42天,快速输出一版本先:&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景:&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;首先, 俺自个儿, 社区称号:大妈, 入行以来加入N 多技术社区, 长年混杂在各种企业内外社区中,折腾,再折腾,从来没有什么成型的&lt;span class="caps"&gt;NB&lt;/span&gt;的流传于世或是企业生产系统中的项目&amp;#8230; 按照 Eric&amp;nbsp;Raymond的著名文章:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;如何成为一名黒客
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;如何成为一名黒客&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1437,9 +1437,9 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 &lt;p&gt;等等吧&amp;#8230;&amp;nbsp;就不逐一推导了&amp;#8230; &lt;/p&gt;
 &lt;h1 id="_5"&gt;但是!&lt;a class="headerlink" href="#_5" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;以上的一切好处获得的前题是:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;进行真正的开源项目运行
-坚持以纯粹的开源社区形式运营
-公司的真实业务系统真正使用开源项目的代码
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;进行真正的开源项目运行&lt;/span&gt;
+&lt;span class="err"&gt;坚持以纯粹的开源社区形式运营&lt;/span&gt;
+&lt;span class="err"&gt;公司的真实业务系统真正使用开源项目的代码&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1458,8 +1458,8 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;所以? 这些好处,多数情况,要不根本无从质疑 (&lt;span class="caps"&gt;BOSS&lt;/span&gt;稀饭!-) ,&amp;nbsp;要不根本轮不到质疑,也就没有什么反击之说了&amp;#8230; &lt;/p&gt;
 &lt;p&gt;其实!&amp;nbsp;公司里的质疑,根本没有质疑的任何意思在里面,无非是责任推卸:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;我早就质疑过的哟,只是这丫不听,所以,没俺一毛钱关系!&amp;quot;
-&amp;quot;看吧! 要不是早先我质疑过,他们才改进,现在肿么可能成功?!&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="s"&gt;&amp;quot;我早就质疑过的哟,只是这丫不听,所以,没俺一毛钱关系!&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;看吧! 要不是早先我质疑过,他们才改进,现在肿么可能成功?!&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1624,12 +1624,12 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140109 pub. as zoomquiet.io&amp;#8217;s&amp;nbsp;blog&lt;/li&gt;
-&lt;li&gt;120918 邮件 as:&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;发件人:     Zoom.Quiet &amp;lt;zoom.quiet@gmail.com&amp;gt;
-发送至:     shredderyin@gmail.com
-日期:  2012年9月18日 下午5:22
-主题:  [via On Literate Programming] 我的体验
+&lt;li&gt;120918 邮件 as:&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;发件人&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;     &lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Quiet&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;zoom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;quiet&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="err"&gt;发送至&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;     &lt;span class="n"&gt;shredderyin&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+&lt;span class="err"&gt;日期&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="mi"&gt;2012&lt;/span&gt;&lt;span class="err"&gt;年&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="err"&gt;月&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="err"&gt;日&lt;/span&gt; &lt;span class="err"&gt;下午&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;22&lt;/span&gt;
+&lt;span class="err"&gt;主题&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;via&lt;/span&gt; &lt;span class="n"&gt;On&lt;/span&gt; &lt;span class="n"&gt;Literate&lt;/span&gt; &lt;span class="n"&gt;Programming&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="err"&gt;我的体验&lt;/span&gt;
 
-很有感觉,但是没有找到评注入口,只好直接邮件了;
+&lt;span class="err"&gt;很有感觉&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;但是没有找到评注入口&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;只好直接邮件了&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1659,7 +1659,7 @@ has the best one I’ve run across – but none of these examples make much sens
 &lt;p&gt;Nothing’s worked out. That is, nothing’s been able to provide the “continuous” part: builds only continue working as long as there’s someone dedicated around to babysit the system. This sucks: it’s meant that at times Django’s been broken on supported platforms simply because nobody’s been bothering to run the tests.&lt;/p&gt;
 &lt;p&gt;A few weeks ago a few of us started banging on this problem again, determined to get it right this time. Eric set up a new Hudson instance (modeled after the one he’d been using at work), and I dove headlong into Buildbot again. I’m not really going to talk much about Hudson here, but I’ll note that it’s actually been really instructive working on two different systems in parallel. It’s forced us to really think through and formalize our &lt;span class="caps"&gt;CI&lt;/span&gt; needs.&lt;/p&gt;
 &lt;p&gt;This led me to my first big &lt;span class="caps"&gt;CI&lt;/span&gt; revelation: &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;CI is hard.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;CI&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;hard&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;There’s any number of “simple” &lt;span class="caps"&gt;CI&lt;/span&gt; tools out there…  and they appear to work for exactly two projects (the project the tool was built to test, and the &lt;span class="caps"&gt;CI&lt;/span&gt; server itself, natch). The general purpose tools – Hudson, Buildbot, CruiseControl, etc. – are big, complicated, and heavily opinionated. This is a clear sign that we’re in a space where even the basic tenets of the problem can’t be agreed upon by all parties. &lt;span class="caps"&gt;CI&lt;/span&gt; is one of those problems that’s hard because there really isn’t a good core set of needs to be abstracted. Nearly every project has very different &lt;span class="caps"&gt;CI&lt;/span&gt; needs.&lt;/p&gt;
 &lt;p&gt;[This is part of what makes Buildbot so complicated: I think it’s actually trying pretty hard to be completely agnostic and allow any kind of continuous integration system you could think up. If Buildbot was more opinionated it could drop some of the layers of abstraction, but because it’s trying so hard to be everything to everyone it ends up being crazy complex. I’ve not decided if this is admirable or crazy. Both, perhaps.]&lt;/p&gt;

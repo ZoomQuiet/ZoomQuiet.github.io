@@ -53,6 +53,7 @@ twitter 官方帐号是: @OpenResty&lt;/p&gt;
 &lt;li&gt;light threads&lt;/li&gt;
 &lt;li&gt;timers&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id="or"&gt;&lt;span class="caps"&gt;OR&lt;/span&gt; 的世界观&lt;a class="headerlink" href="#or" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="p6" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide6_The-All-Inclusive-Philosophy.png"/&gt;&lt;/p&gt;
 &lt;p&gt;OpenResty 的世界观是 &lt;code&gt;全包容&lt;/code&gt; 的,
 不排斥其它任何技术, 事实上 resty 用户来自从 &lt;span class="caps"&gt;JAVA&lt;/span&gt; 到 Go 各种技术人群.&lt;/p&gt;
@@ -150,6 +151,7 @@ OpenResty 将 Lua 和 &lt;span class="caps"&gt;NGINX&lt;/span&gt; 深度结合,�
 &lt;/ul&gt;
 &lt;p&gt;(&lt;code&gt;是也乎:&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;嗯哼? &lt;span class="caps"&gt;LISP&lt;/span&gt; 构造的系统, 从一开始就这样的哪?! )&lt;/p&gt;
+&lt;h3 id="or_1"&gt;&lt;span class="caps"&gt;OR&lt;/span&gt; 的应用场景&lt;a class="headerlink" href="#or_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="p19" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide19_C2000K.png"/&gt;&lt;/p&gt;
 &lt;p&gt;随着近几个月, 我们发布的重要功能,
 OpenResty 已在真实客户单主机上支持住了 200万 级别的并发请求,&lt;/p&gt;
@@ -242,6 +244,7 @@ MySQL 只能表示 23333 了… )&lt;/p&gt;
 &lt;p&gt;是的, 机制很复杂要说明白得额外2小时…&lt;/p&gt;
 &lt;p&gt;(&lt;code&gt;是也乎:&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;不就是不完备的区块链网络嘛… )&lt;/p&gt;
+&lt;h3 id="sregex"&gt;大事儿: sregex&lt;a class="headerlink" href="#sregex" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="p29" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide29_Sregex.png"/&gt;&lt;/p&gt;
 &lt;p&gt;sregex &amp;lt;— 春哥一直在造的轮那 ~ 正则表达式引擎,&lt;/p&gt;
 &lt;p&gt;当然是为了真实的业务需求&lt;/p&gt;
@@ -322,6 +325,7 @@ MySQL 只能表示 23333 了… )&lt;/p&gt;
 &lt;span class="err"&gt;自己的&lt;/span&gt; &lt;span class="n"&gt;JIT&lt;/span&gt; &lt;span class="err"&gt;引擎比&lt;/span&gt; &lt;span class="n"&gt;Clang&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;GCC&lt;/span&gt; &lt;span class="err"&gt;更好&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;因为优化器更通用&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;(&lt;code&gt;好吧, 重要的事儿得说三次&lt;/code&gt;)&lt;/p&gt;
+&lt;h3 id="dsl-lzsql"&gt;&lt;span class="caps"&gt;DSL&lt;/span&gt;实验: &lt;span class="caps"&gt;LZSQL&lt;/span&gt;&lt;a class="headerlink" href="#dsl-lzsql" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="p38" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide38_A-Web-Platform-As-A-Virtual-Machine.png"/&gt;&lt;/p&gt;
 &lt;p&gt;回到主题: 建立在 OpenResty 上的 &lt;span class="caps"&gt;DSL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;先分享了一系列 OpenResty 的新功能,&lt;/p&gt;
@@ -510,6 +514,7 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 &lt;li&gt;嘦按照规范提供描述&lt;/li&gt;
 &lt;li&gt;服务就能理解并进行对应测试&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id="dsl"&gt;&lt;span class="caps"&gt;DSL&lt;/span&gt; 的爆发&lt;a class="headerlink" href="#dsl" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="p61" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide61_How-About-Tests.png"/&gt;&lt;/p&gt;
 &lt;p&gt;幻灯参考: http://search.cpan.org/perldoc?Cheater&lt;/p&gt;
 &lt;p&gt;接下来的一件大事:&lt;/p&gt;
@@ -630,6 +635,7 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id="or_2"&gt;&lt;span class="caps"&gt;OR&lt;/span&gt; 的目标&lt;a class="headerlink" href="#or_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="p73" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide73_Model-View-Controller.png"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;模式 ~ 不同种类的商业系统都有内在相似的模型,从而抽象为一个 &lt;span class="caps"&gt;DSL&lt;/span&gt;&lt;/li&gt;
@@ -728,7 +734,9 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 &lt;p&gt;)&lt;/p&gt;
 &lt;h2 id="tlog"&gt;TLog&lt;a class="headerlink" href="#tlog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;.5h 决定&lt;/li&gt;
+&lt;li&gt;.5h 决定嗯哼&lt;/li&gt;
+&lt;li&gt;2.h 完成上篇&lt;/li&gt;
+&lt;li&gt;2.5h 完成下篇&lt;/li&gt;
 &lt;/ul&gt;</content><category term="speech"></category><category term="openresty"></category><category term="agentzh"></category><category term="ngx"></category></entry><entry><title>PyQt4 之消失在 Sierra</title><link href="http://blog.zoomquiet.io/pyqt4macos.html" rel="alternate"></link><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-08-08:/pyqt4macos.html</id><summary type="html">
 &lt;h3 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,

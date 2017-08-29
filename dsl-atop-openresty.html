@@ -132,7 +132,15 @@
 <ul>
 <li><a href="#building-business-systems-with-dsls-for-nginx-openresty">Building Business Systems with DSLs for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty</a><ul>
 <li><a href="#_1">背景</a></li>
-<li><a href="#tldr"><span class="caps">TL</span>;<span class="caps">DR</span></a></li>
+<li><a href="#tldr"><span class="caps">TL</span>;<span class="caps">DR</span></a><ul>
+<li><a href="#or"><span class="caps">OR</span> 的世界观</a></li>
+<li><a href="#or_1"><span class="caps">OR</span> 的应用场景</a></li>
+<li><a href="#sregex">大事儿: sregex</a></li>
+<li><a href="#dsl-lzsql"><span class="caps">DSL</span>实验: <span class="caps">LZSQL</span></a></li>
+<li><a href="#dsl"><span class="caps">DSL</span> 的爆发</a></li>
+<li><a href="#or_2"><span class="caps">OR</span> 的目标</a></li>
+</ul>
+</li>
 <li><a href="#tlog">TLog</a></li>
 </ul>
 </li>
@@ -182,6 +190,7 @@ twitter 官方帐号是: @OpenResty</p>
 <li>light threads</li>
 <li>timers</li>
 </ul>
+<h3 id="or"><span class="caps">OR</span> 的世界观<a class="headerlink" href="#or" title="Permanent link">¶</a></h3>
 <p><img alt="p6" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide6_The-All-Inclusive-Philosophy.png"/></p>
 <p>OpenResty 的世界观是 <code>全包容</code> 的,
 不排斥其它任何技术, 事实上 resty 用户来自从 <span class="caps">JAVA</span> 到 Go 各种技术人群.</p>
@@ -279,6 +288,7 @@ OpenResty 将 Lua 和 <span class="caps">NGINX</span> 深度结合, 倍增了�
 </ul>
 <p>(<code>是也乎:</code></p>
 <p>嗯哼? <span class="caps">LISP</span> 构造的系统, 从一开始就这样的哪?! )</p>
+<h3 id="or_1"><span class="caps">OR</span> 的应用场景<a class="headerlink" href="#or_1" title="Permanent link">¶</a></h3>
 <p><img alt="p19" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide19_C2000K.png"/></p>
 <p>随着近几个月, 我们发布的重要功能,
 OpenResty 已在真实客户单主机上支持住了 200万 级别的并发请求,</p>
@@ -371,6 +381,7 @@ MySQL 只能表示 23333 了… )</p>
 <p>是的, 机制很复杂要说明白得额外2小时…</p>
 <p>(<code>是也乎:</code></p>
 <p>不就是不完备的区块链网络嘛… )</p>
+<h3 id="sregex">大事儿: sregex<a class="headerlink" href="#sregex" title="Permanent link">¶</a></h3>
 <p><img alt="p29" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide29_Sregex.png"/></p>
 <p>sregex &lt;— 春哥一直在造的轮那 ~ 正则表达式引擎,</p>
 <p>当然是为了真实的业务需求</p>
@@ -451,6 +462,7 @@ MySQL 只能表示 23333 了… )</p>
 <span class="err">自己的</span> <span class="n">JIT</span> <span class="err">引擎比</span> <span class="n">Clang</span><span class="o">/</span><span class="n">GCC</span> <span class="err">更好</span><span class="p">,</span><span class="err">因为优化器更通用</span>
 </pre></div>
 <p>(<code>好吧, 重要的事儿得说三次</code>)</p>
+<h3 id="dsl-lzsql"><span class="caps">DSL</span>实验: <span class="caps">LZSQL</span><a class="headerlink" href="#dsl-lzsql" title="Permanent link">¶</a></h3>
 <p><img alt="p38" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide38_A-Web-Platform-As-A-Virtual-Machine.png"/></p>
 <p>回到主题: 建立在 OpenResty 上的 <span class="caps">DSL</span></p>
 <p>先分享了一系列 OpenResty 的新功能,</p>
@@ -639,6 +651,7 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 <li>嘦按照规范提供描述</li>
 <li>服务就能理解并进行对应测试</li>
 </ul>
+<h3 id="dsl"><span class="caps">DSL</span> 的爆发<a class="headerlink" href="#dsl" title="Permanent link">¶</a></h3>
 <p><img alt="p61" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide61_How-About-Tests.png"/></p>
 <p>幻灯参考: http://search.cpan.org/perldoc?Cheater</p>
 <p>接下来的一件大事:</p>
@@ -759,6 +772,7 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 </ul>
 </li>
 </ul>
+<h3 id="or_2"><span class="caps">OR</span> 的目标<a class="headerlink" href="#or_2" title="Permanent link">¶</a></h3>
 <p><img alt="p73" src="https://cdn-1.wp.nginx.com/wp-content/uploads/2017/08/Yichun_Zhang-conf2016-slide73_Model-View-Controller.png"/></p>
 <ul>
 <li>模式 ~ 不同种类的商业系统都有内在相似的模型,从而抽象为一个 <span class="caps">DSL</span></li>
@@ -857,7 +871,9 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 <p>)</p>
 <h2 id="tlog">TLog<a class="headerlink" href="#tlog" title="Permanent link">¶</a></h2>
 <ul>
-<li>.5h 决定</li>
+<li>.5h 决定嗯哼</li>
+<li>2.h 完成上篇</li>
+<li>2.5h 完成下篇</li>
 </ul>
             </div>
             <!-- /.entry-content -->

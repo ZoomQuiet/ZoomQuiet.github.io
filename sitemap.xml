@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.zoomquiet.io/index.html</loc>
-<lastmod>2017-08-29T15:52:26-00:00</lastmod>
+<lastmod>2017-10-11T10:15:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2017-08-29T15:52:26-00:00</lastmod>
+<lastmod>2017-10-11T10:15:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2017-08-29T15:52:26-00:00</lastmod>
+<lastmod>2017-10-11T10:15:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2017-08-29T15:52:26-00:00</lastmod>
+<lastmod>2017-10-11T10:15:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -272,6 +272,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html</loc>
 <lastmod>2014-01-27T23:48:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/init-my-qpy-env.html</loc>
+<lastmod>2014-01-26T12:42:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -536,6 +543,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.zoomquiet.io/tag/qpy.html</loc>
+<lastmod>2014-01-26T12:42:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.zoomquiet.io/tag/ipynb.html</loc>
 <lastmod>2014-11-27T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -783,6 +797,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.zoomquiet.io/tag/china.html</loc>
 <lastmod>2013-11-11T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.zoomquiet.io/tag/ssh.html</loc>
+<lastmod>2014-01-26T12:42:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

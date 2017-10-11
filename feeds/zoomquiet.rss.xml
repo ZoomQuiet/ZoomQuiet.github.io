@@ -454,7 +454,17 @@ Nick Coghlan
 &lt;ol&gt;
 &lt;li&gt;通过 &lt;span class="caps"&gt;USB&lt;/span&gt; 挂接 FreeBSD 格式化的 &lt;span class="caps"&gt;UFS&lt;/span&gt; 分区&lt;/li&gt;
 &lt;li&gt;通过板载 &lt;span class="caps"&gt;SATA&lt;/span&gt; 接口,加装 2.5吋 1T 新硬盘&lt;/li&gt;
-&lt;li&gt;安装 Samba 系统 …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Mon, 27 Jan 2014 23:48:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-01-27:/cb3-howto-make-hmsrv.html</guid><category>MAC</category><category>CT</category><category>Cubier</category><category>CubieBoard</category><category>Howto</category></item><item><title>迁出RTFD.org</title><link>http://blog.zoomquiet.io/jump-into-7niu.html</link><description>
+&lt;li&gt;安装 Samba 系统 …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Mon, 27 Jan 2014 23:48:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-01-27:/cb3-howto-make-hmsrv.html</guid><category>MAC</category><category>CT</category><category>Cubier</category><category>CubieBoard</category><category>Howto</category></item><item><title>如何自在的折腾QPy</title><link>http://blog.zoomquiet.io/init-my-qpy-env.html</link><description>
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python（中文版） (豆瓣)&lt;/a&gt; 时,发现竟然有 
+&lt;a href="http://code.google.com/p/android-scripting/"&gt;&lt;span class="caps"&gt;SL4A&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这种神器! Google 果断是业界良心哪,
+可惜: 从&lt;a href="http://code.google.com/p/android-scripting/downloads/list"&gt;Downloads&lt;/a&gt;
+可以看出 ,已经停止有一年多了,目测是 Guido 叔离开后, Python 的地位在 Google 一落千丈就没有人折腾了.&lt;/p&gt;
+&lt;p&gt;好在旧浪两位同事, River和&lt;span class="caps"&gt;CF&lt;/span&gt; 掿起了 &lt;span class="caps"&gt;SL4A&lt;/span&gt; 的旗帜, 变成了一系列准衶器:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.hipipal.qpyplus"&gt;QPython - Python for Android - Google Play 上的 Andr​​oid 应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.hipipal.qpy3"&gt;QPython 3 - Python3 on Android - Google …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sun, 26 Jan 2014 12:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-01-26:/init-my-qpy-env.html</guid><category>howto</category><category>qpy</category><category>pythonic</category><category>ssh</category></item><item><title>迁出RTFD.org</title><link>http://blog.zoomquiet.io/jump-into-7niu.html</link><description>
 &lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;a class="headerlink" href="#rtfdorg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;正名 readthedocs.org&lt;/li&gt;

@@ -5723,7 +5723,471 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;ul&gt;
 &lt;li&gt;140505 快速完结&lt;/li&gt;
 &lt;li&gt;140127 单立文章追踪&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="http://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><published>2014-01-19T00:00:00+08:00</published><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:/jump-into-7niu.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>如何自在的折腾QPy</title><link href="http://blog.zoomquiet.io/init-my-qpy-env.html" rel="alternate"></link><published>2014-01-26T12:42:00+08:00</published><updated>2014-01-26T12:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-26:/init-my-qpy-env.html</id><summary type="html">
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python（中文版） (豆瓣)&lt;/a&gt; 时,发现竟然有 
+&lt;a href="http://code.google.com/p/android-scripting/"&gt;&lt;span class="caps"&gt;SL4A&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这种神器! Google 果断是业界良心哪,
+可惜: 从&lt;a href="http://code.google.com/p/android-scripting/downloads/list"&gt;Downloads&lt;/a&gt;
+可以看出 ,已经停止有一年多了,目测是 Guido 叔离开后, Python 的地位在 Google 一落千丈就没有人折腾了.&lt;/p&gt;
+&lt;p&gt;好在旧浪两位同事, River和&lt;span class="caps"&gt;CF&lt;/span&gt; 掿起了 &lt;span class="caps"&gt;SL4A&lt;/span&gt; 的旗帜, 变成了一系列准衶器:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.hipipal.qpyplus"&gt;QPython - Python for Android - Google Play 上的 Andr​​oid 应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.hipipal.qpy3"&gt;QPython 3 - Python3 on Android - Google …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python（中文版） (豆瓣)&lt;/a&gt; 时,发现竟然有 
+&lt;a href="http://code.google.com/p/android-scripting/"&gt;&lt;span class="caps"&gt;SL4A&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这种神器! Google 果断是业界良心哪,
+可惜: 从&lt;a href="http://code.google.com/p/android-scripting/downloads/list"&gt;Downloads&lt;/a&gt;
+可以看出 ,已经停止有一年多了,目测是 Guido 叔离开后, Python 的地位在 Google 一落千丈就没有人折腾了.&lt;/p&gt;
+&lt;p&gt;好在旧浪两位同事, River和&lt;span class="caps"&gt;CF&lt;/span&gt; 掿起了 &lt;span class="caps"&gt;SL4A&lt;/span&gt; 的旗帜, 变成了一系列准衶器:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.hipipal.qpyplus"&gt;QPython - Python for Android - Google Play 上的 Andr​​oid 应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.hipipal.qpy3"&gt;QPython 3 - Python3 on Android - Google Play 上的 Andr​​oid 应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.hipipal.qpy"&gt;QPython Player for Android - Google Play 上的 Andr​​oid 应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.hipipal.texteditor"&gt;QEdit - Code Editor in Pocket - Google Play 上的 Andr​​oid 应用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目标直指所谓的内什么,,,&lt;/p&gt;
+&lt;p&gt;而且,目测已经有国家高等教育项目中,
+直接使用了 &lt;code&gt;QPython&lt;/code&gt; 来作教学环境!&lt;/p&gt;
+&lt;p&gt;所以,果断要跟上用起来,,,&lt;/p&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.appannie.com/apps/amazon-appstore/top/china/education/"&gt;App Annie 的应用商店数据|Amazon排行榜中国 - Education - 2014年1月27日&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.douban.com/group/topic/17095466/"&gt;让Python在Android系统上飞一会儿:第一节 在手机上…&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_2"&gt;目标&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;哪,俺是 Pythoneer ,不是 &lt;span class="caps"&gt;JAVA&lt;/span&gt; 党,
+更加是 &lt;code&gt;IDE 去死去死团&lt;/code&gt; 的骨灰成员.&lt;/p&gt;
+&lt;p&gt;很辛苦的攒銭搞到了 
+&lt;a href="http://news.mynavi.jp/news/2013/02/07/051/index.html"&gt;&lt;span class="caps"&gt;FILCO&lt;/span&gt; Majestouch &lt;span class="caps"&gt;MINILA&lt;/span&gt;&lt;/a&gt;
+青轴!
+绝对不要回到 &lt;code&gt;一指禅&lt;/code&gt; 的时代哪!!!&lt;/p&gt;
+&lt;p&gt;所以,俺要用 QPython 就是用来快速进行实用mini 应用的,
+而且, 期待的开发流程, 应该完全类似现在的 web server 开发流程:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;本地用喜爱的编辑环境进行代码撰写 (&lt;a href="http://www.sublimetext.com"&gt;Sublime Text 2&lt;/a&gt;, &lt;a href="http://leoeditor.com/"&gt;Leo&lt;/a&gt;, etc.)&lt;/li&gt;
+&lt;li&gt;一键上传手机,并自动运行&lt;/li&gt;
+&lt;li&gt;在手机上真实操作,同时有远程日志可以实时观察,确认问题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上循环&lt;/p&gt;
+&lt;h2 id="_3"&gt;环境准入&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;对了,以下记述充斥了各种非科普性描述, 为了误入的小伙伴不被意外恶心到,得交待一下适合继续阅读的条件:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;42 个月, Linux/Unix 系统使用~注意!是使用不是管理体验;不然各种标准的命令行操作要死人的,,&lt;/li&gt;
+&lt;li&gt;42 周的, 编程体验,不许什么語言,就是 &lt;span class="caps"&gt;JS&lt;/span&gt; 也成,起码要有一丝码感,,,&lt;/li&gt;
+&lt;li&gt;42 次的, 蕃茄工作时间 的经历,至少知道什么是” &lt;a href="http://book.douban.com/reading/12671922/"&gt;心流&lt;/a&gt;“般的专注!&lt;/li&gt;
+&lt;li&gt;42 天的, 相关资料通读,相关社区的加入/旁听,,,一定要摸清楚相关主要开发人员的沟通习惯 ;-)&lt;/li&gt;
+&lt;li&gt;42 小时, 的周边环境整备,熟悉工作系统以及配置好顺手的工具(git/apt/yum/brew …)&lt;/li&gt;
+&lt;li&gt;42 分钟, 当前的空闲时间,能够专注以下描述,不会片面的抽取文字就来吼俺 &lt;code&gt;图样图森破&lt;/code&gt; 什么的..&lt;/li&gt;
+&lt;li&gt;42 秒, 明确以上条件 &lt;code&gt;42%&lt;/code&gt; 吻合,即可继续 ;-)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="_4"&gt;硬件&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;手机: 电信协议 三星 Note2 &lt;span class="caps"&gt;N7108ZMDMF1&lt;/span&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Android 4.1.1 &lt;span class="caps"&gt;JRO03C&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;刷的是 &lt;span class="caps"&gt;MIUI&lt;/span&gt;-3.3.15 野生版&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;CPU&lt;/span&gt; 四核 1.6GHz&lt;/li&gt;
+&lt;li&gt;内存 2G&lt;/li&gt;
+&lt;li&gt;存储 16G&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;主机: &lt;span class="caps"&gt;MBP&lt;/span&gt; 12下半年版 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;OS&lt;/span&gt; X 10.9.1&lt;/li&gt;
+&lt;li&gt;Core i7 2.2GHz&lt;/li&gt;
+&lt;li&gt;8G 内存&lt;/li&gt;
+&lt;li&gt;500G 机械硬盘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;湿件: 30++++++++++岁老程序猿&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;180,180,180,,,&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;ASP&lt;/span&gt;,Basic,C,C++,Clojure,Erlang,Forth,Factor,Go,Haskell,&lt;span class="caps"&gt;JS&lt;/span&gt;,&lt;span class="caps"&gt;JAVA&lt;/span&gt;,Lisp,Node,&lt;span class="caps"&gt;PHP&lt;/span&gt;,Python,Pascal,&lt;span class="caps"&gt;XSLT&lt;/span&gt;,&lt;span class="caps"&gt;REBOL&lt;/span&gt;,Rust,,,少量经验&lt;/li&gt;
+&lt;li&gt;精通26字母, Cnglish 熟练&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_5"&gt;探索&lt;a class="headerlink" href="#_5" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;根据策划的流程,在原作者的帮助下,进行了高强度的折腾,
+经过连续 27 小时探索,基本爽了起来:&lt;/p&gt;
+&lt;h3 id="_6"&gt;上传&lt;a class="headerlink" href="#_6" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Android 呢,就是 Linux 哪,当然应该用 &lt;code&gt;scp&lt;/code&gt; 安全上传了!&lt;/p&gt;
+&lt;p&gt;目测,要依次解决:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;手机上的 &lt;code&gt;SSH&lt;/code&gt; 守护在哪儿,怎么启动&lt;/li&gt;
+&lt;li&gt;脚本应该上传到哪儿 QPython 才能识别?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="ssh"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;a class="headerlink" href="#ssh" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;搜索就有:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://gailly.net/android/android-tips.html"&gt;Android tips&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.linuxplanet.com/linuxplanet/reviews/7301/1"&gt;10 Android Apps for Linux Server Admins - ConnectBot, QuickSSHd, SwiFTP, AndFTP, Wyse PocketCloud - Reviews - LinuxPlanet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://my.oschina.net/winHerson/blog/84716"&gt;SSHDroid（&lt;span class="caps"&gt;SSH&lt;/span&gt; Server for Android）通过&lt;span class="caps"&gt;PC&lt;/span&gt;或命令连接android - bugeasy - 开源中国社区&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;经过快速的尝试,
+明确 &lt;code&gt;SSHDroid&lt;/code&gt; 最简洁可用, 那就上:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-sshdroid.jpg"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安装,配置都没有什么可说的&lt;/li&gt;
+&lt;li&gt;只是,非专业版,只能用口令登录,先忍着&lt;/li&gt;
+&lt;li&gt;扩展一点点儿从 &lt;a href="http://onetimeblog.logdown.com/posts/2014/01/23/first-program-in-qpython"&gt;Hello, QPython! « one-time blog&lt;/a&gt; 来的代码,成 &lt;code&gt;hollo.py&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;androidhelper&lt;/span&gt;
+&lt;span class="n"&gt;droid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;androidhelper&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Android&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;droid&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;makeToast&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;Hello&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Username&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="err"&gt;是也乎&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;上传到哪儿呢?!&lt;/p&gt;
+&lt;p&gt;快速翻找一下,明确几个关键路径:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;SSHDroid&lt;/code&gt;起始可写根:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/data/data/berserker.android.apps.sshdroid/home/&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;即: &lt;code&gt;cd ~&lt;/code&gt; 回到的目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;QPython 环境分:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只读执行文件起点 &lt;code&gt;/data/data/com.hipipal.qpyplus/files/bin/&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;可写资源起点以及目录意义:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;storage&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdcard0&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hipipal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qpyplus&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+    &lt;span class="o"&gt;+-&lt;/span&gt; &lt;span class="n"&gt;cache&lt;/span&gt;         
+    &lt;span class="o"&gt;+-&lt;/span&gt; &lt;span class="n"&gt;lib&lt;/span&gt;        &lt;span class="err"&gt;各&lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="err"&gt;版本的库安装入口&lt;/span&gt; 
+    &lt;span class="o"&gt;+-&lt;/span&gt; &lt;span class="n"&gt;projects&lt;/span&gt;   &lt;span class="err"&gt;俺的&lt;/span&gt;&lt;span class="n"&gt;QPy&lt;/span&gt; &lt;span class="err"&gt;项目入口&lt;/span&gt;
+    &lt;span class="o"&gt;+-&lt;/span&gt; &lt;span class="n"&gt;scripts&lt;/span&gt;    &lt;span class="err"&gt;俺的&lt;/span&gt;&lt;span class="n"&gt;QPy&lt;/span&gt; &lt;span class="err"&gt;脚本入口&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="busybox"&gt;BusyBox&lt;a class="headerlink" href="#busybox" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;等等! &lt;span class="caps"&gt;SSH&lt;/span&gt; 上来后,各种不适应,这什么 shell 环境哪,连 &lt;code&gt;less&lt;/code&gt;, &lt;code&gt;tail&lt;/code&gt;, &lt;code&gt;vi&lt;/code&gt; 都没有
+好意思说自个儿是 &lt;code&gt;Linux&lt;/code&gt; 嘛?!&lt;/p&gt;
+&lt;p&gt;搜索才知道,这货叫 &lt;code&gt;ash&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;躲在 &lt;code&gt;/system/bin/sh&lt;/code&gt; 基本上什么也不会作&lt;/li&gt;
+&lt;li&gt;所以,程序猿有 &lt;a href="http://www.busybox.net/"&gt;BusyBox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;一安装,批量将大堆习惯的工具,灌到 &lt;code&gt;system/xbin/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-busybox-tail.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;这样,才能远程观察, QPython 项目目录中,
+若隐若现的 &lt;code&gt;.run.log&lt;/code&gt; 明显发生什么问题, 快速增补一行:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;androidhelper&lt;/span&gt;
+&lt;span class="n"&gt;droid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;androidhelper&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Android&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;droid&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;makeToast&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;u'Hello, Username!是也乎 ;-)'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;就能运行成功,跳出最简单的发布公告框了!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-hollo.jpg"/&gt;&lt;/p&gt;
+&lt;h3 id="_7"&gt;运行&lt;a class="headerlink" href="#_7" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;好了,进入下一个阶段: &lt;code&gt;怎么让 QPyhon 如系统命令一样在 ash 环境中调用我们的脚本?&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;目测,要依次解决:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ash 环境变量是否兼容 QPython?&lt;/li&gt;
+&lt;li&gt;ash 环境变量如果不兼容 QPython 怎么配置?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将刚刚测试明确可用的脚本从 shell 环境中调用一下:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# cd /storage/sdcard0/com.hipipal.qpyplus/projects/chaos/ &lt;/span&gt;
+&lt;span class="c"&gt;# /data/data/com.hipipal.qpyplus/files/bin/python hollo.py&lt;/span&gt;
+
+Could not find platform independent libraries &amp;lt;prefix&amp;gt;
+Consider setting &lt;span class="nv"&gt;$PYTHONHOME&lt;/span&gt; to &amp;lt;prefix&amp;gt;&lt;span class="o"&gt;[&lt;/span&gt;:&amp;lt;exec_prefix&amp;gt;&lt;span class="o"&gt;]&lt;/span&gt;
+ImportError: No module named site
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;果断没有那么简单, 检查一下系统环境:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xbin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;
+&lt;span class="n"&gt;RANDOM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;25396&lt;/span&gt;
+&lt;span class="n"&gt;ANDROID_DATA&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;
+&lt;span class="n"&gt;BOOTCLASSPATH&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;core&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;core&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;junit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bouncycastle&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ext&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;android&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;policy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;services&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apache&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sec_edm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;seccamera&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;
+&lt;span class="n"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;berserker&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;android&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apps&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sshdroid&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dropbear&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sbin&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;sbin&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sbin&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xbin&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xbin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bb&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;
+&lt;span class="n"&gt;ANDROID_ROOT&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;
+&lt;span class="n"&gt;USER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;
+&lt;span class="n"&gt;LOGNAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;
+&lt;span class="n"&gt;ANDROID_PROPERTY_WORKSPACE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;66560&lt;/span&gt;
+&lt;span class="n"&gt;EXTERNAL_STORAGE&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;storage&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdcard0&lt;/span&gt;
+&lt;span class="n"&gt;ANDROID_ASSETS&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;
+&lt;span class="n"&gt;SHELL&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
+&lt;span class="n"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;vt100&lt;/span&gt;
+&lt;span class="n"&gt;SSH_TTY&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pts&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="n"&gt;SSH_CONNECTION&lt;/span&gt;&lt;span class="o"&gt;=::&lt;/span&gt;&lt;span class="n"&gt;ffff&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;192.168.0.103&lt;/span&gt; &lt;span class="mi"&gt;64228&lt;/span&gt; &lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;ffff&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;192.168.0.100&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;
+&lt;span class="n"&gt;HOME&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;berserker&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;android&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apps&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sshdroid&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;
+&lt;span class="n"&gt;ANDROID_BOOTLOGO&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;跟 Python 没一毛钱关系,怪不得跑不了;
+吼了俩位爷,才知道: &lt;a href="http://wiki.qpython.org/hacker/"&gt;QPython Hackers&lt;/a&gt;
+果断是依赖大堆系统环境变量的,
+以往能在桌面运行起来,
+也是通过 &lt;code&gt;大JAVA&lt;/code&gt; 的相关接口,临时声明的!&lt;/p&gt;
+&lt;p&gt;那就好办了,照此办理:
+&lt;a href="https://gist.github.com/ZoomQuiet/8642464"&gt;gen_qpy_env.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;注意:&lt;/code&gt; 这货一定要加载到 QPython 中,用脚本形式来跑,
+如果也是从后台 shell 环境中跑,是获得不了主要关键参数的!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-gen-profile.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;然后!? 肿么,让 shell 环境每次都能自动加载上这堆配置?&lt;/p&gt;
+&lt;p&gt;综合,搜索来的相关说明:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.cnblogs.com/shyang--TechBlogs/archive/2011/10/27/2226664.html"&gt;【转】linux虚拟内核文件系统介绍 - shy.ang - 博客园&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.xdracco.net/mount-android-system-partition-with-readwrite-access/"&gt;Mount Android System Partition With Read/Rrite Access&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://gailly.net/android/android-tips.html"&gt;Android tips&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;经过尝试,明确这么来:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# mount -o remount,rw /dev/block/mtdblock3 /system&lt;/span&gt;
+&lt;span class="c"&gt;# ln -s /storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profile /etc/profile&lt;/span&gt;
+&lt;span class="c"&gt;# mount -o remount,ro /dev/block/mtdblock3 /system&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;再关闭,重启 &lt;code&gt;SSHDroid&lt;/code&gt; 后,远程登入,测试:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-this-zen.png"/&gt;&lt;/p&gt;
+&lt;p&gt;然后,远程人工从 shell 调用&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# cd /storage/sdcard0/com.hipipal.qpyplus/projects/chaos/ &lt;/span&gt;
+&lt;span class="c"&gt;# /data/data/com.hipipal.qpyplus/files/bin/python hollo.py&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;手机无论在什么桌面,都能跳出来俺的 &lt;code&gt;hollo.py&lt;/code&gt; 运行结果:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-console-hollo.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;然后,本地,习惯性的,就可以用 &lt;a href="http://tmux.sourceforge.net/"&gt;tmux&lt;/a&gt; 同时 观察/管理本地以及远程的开发/测试/运行情况了:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-tumx.png"/&gt;&lt;/p&gt;
+&lt;h4 id="beta"&gt;&lt;span class="caps"&gt;BETA&lt;/span&gt;乱入&lt;a class="headerlink" href="#beta" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;作者看俺这么努力的折腾从内部机密放送俺最新开发版本,兴奋的安装上:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-new-version.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;然后,再运行…&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;most&lt;/span&gt; &lt;span class="nx"&gt;recent&lt;/span&gt; &lt;span class="nb"&gt;call&lt;/span&gt; &lt;span class="nb"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+  &lt;span class="nb"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/storage/sdcard0/com.hipipal.qpyplus/projects/chaos/hollo.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="n"&gt;droid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;androidhelper.Android&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="nb"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"tubelib/sl4a.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;__init__&lt;/span&gt;
+    &lt;span class="bp"&gt;self.&lt;/span&gt;&lt;span class="nx"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;socket.create_connection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;addr&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="nb"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/home/river/android-sdk/workplace/python-for-android/build/python-install/lib/python2.7/socket.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;571&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;create_connection&lt;/span&gt;
+&lt;span class="nx"&gt;socket.error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;Errno&lt;/span&gt; &lt;span class="mi"&gt;111&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; Connection refused
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;/home/river/android-sdk/workplace&lt;/code&gt; 囧rz…&lt;/p&gt;
+&lt;p&gt;什么东西?! 怎么超出来原作的本地目录了?!&lt;/p&gt;
+&lt;p&gt;再问,才知道:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;AP_HANDSHAKE=5873cf77-e70b-4887-a8b2-28b7db3c408e&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;类似 &lt;code&gt;AP_&lt;/code&gt; 前缀的系列环境变量是随发行版,每次不同的,&lt;/li&gt;
+&lt;li&gt;必须匹配上,否则,系统找不到,就只能使用缓存的不知哪儿的路径了…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以,必须:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;从项目中打开脚本:
+&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-env-proj.jpg"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从 QEditor 中运行
+&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-env-run.jpg"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 console 中生成:
+&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-env-gen-again.jpg"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="qpython"&gt;QPython头声明&lt;a class="headerlink" href="#qpython" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;参考: &lt;a href="http://wiki.qpython.org/doc/program_guide/#qpython-header"&gt;Programming Guide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;脚本第一行的不同声明,将由 QPython 智能识别给予不同的运行环境,一定要理解:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#qpy:console&lt;/code&gt; , 是指运行环境为 QPython 的命令行环境&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#qpy:2&lt;/code&gt; 是指运行环境为 QPython 2 的命令行环境&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#qpy:3&lt;/code&gt; 是指运行环境为 QPython 3 的命令行环境&lt;/li&gt;
+&lt;li&gt;没有 &lt;code&gt;#qpy:*&lt;/code&gt; 的是指基于 &lt;a href="http://kylelk.github.io/html-examples/androidhelper.html"&gt;&lt;span class="caps"&gt;SL4A&lt;/span&gt;&lt;/a&gt; 的&lt;span class="caps"&gt;GUI&lt;/span&gt; 依赖环境&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2014 追加支持的&lt;/p&gt;
+&lt;h1 id="qpywebapp"&gt;qpy:webapp:&lt;app title=""&gt;&lt;a class="headerlink" href="#qpywebapp" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/app&gt;&lt;/h1&gt;
+&lt;h1 id="qpyfullscreen"&gt;qpy:fullscreen&lt;a class="headerlink" href="#qpyfullscreen" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="qpylocalhost8080"&gt;qpy://localhost:8080&lt;a class="headerlink" href="#qpylocalhost8080" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;””
+Launching the web service on localhost:8080 
+without android titlebar (fullscreen) “”“&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="_8"&gt;自动&lt;a class="headerlink" href="#_8" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;好了,进入最后一个阶段: &lt;code&gt;怎么让所有的上传-&amp;gt;配置-&amp;gt;运行-&amp;gt;日志收集 全部自动化一键完成?&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;目测,要依次解决:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;自动上传?!(怎么通过公匙的部署,来达到无口令远程登录手机?)&lt;/li&gt;
+&lt;li&gt;自动运行手机端的脚本?!&lt;/li&gt;
+&lt;li&gt;自动收集日志?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;问题一,参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/8291380/how-to-get-fabric-to-automatically-instead-of-user-interactively-interact-with/10007635#10007635"&gt;python - How to get Fabric to automatically (instead of user-interactively) interact with shell commands? Combine with pexpect? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ilogue.com/jasper/blog/fexpect--dealing-with-prompts-in-fabric-with-pexpect/"&gt;Fexpect adds answering to prompts to fabric with use of pexpect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.noah.org/wiki/pexpect"&gt;pexpect - Noah.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;总之,对口令,没有什么好办法,大家都是通过获取反馈,匹配期待,自动输入…&lt;/p&gt;
+&lt;p&gt;只是,这样折腾,很扯蛋! 用口令登录的安全隐患怎么强调都不过份!&lt;/p&gt;
+&lt;p&gt;何况,通过 &lt;span class="caps"&gt;RSA&lt;/span&gt;/&lt;span class="caps"&gt;DSA&lt;/span&gt; 密匙对加密,公匙部署,自动双向加密, 安定,稳定,方便的用了多少年?!&lt;/p&gt;
+&lt;p&gt;没理由在 Android 这儿栽了哪! 果断的: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先将本地公匙用口令登录的方式推上手机&lt;/li&gt;
+&lt;li&gt;然后,&lt;a href="http://zoomq.qiniudn.com/CPyUG/QPython/apk/berserker.android.apps.sshdroid-cracked-signed.apk"&gt;sshdroid-cracked.apk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;然后,就没有然后了 ;-)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;只是,唯一的问题:
+- 因为 &lt;span class="caps"&gt;SSH&lt;/span&gt; 服务端切换了, 导致 &lt;span class="caps"&gt;SSH&lt;/span&gt; 认证冲突,要清除对应的配置行
+- 每次都要全部清除,或是人工清除?
+- 不用这么 Naive ,参考:&lt;a href="http://floss.qiniudn.com/data/20130327153058/index.html"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Warning: the &lt;span class="caps"&gt;RSA&lt;/span&gt; host key for differs from the key for the &lt;span class="caps"&gt;IP&lt;/span&gt; address - zhangp专栏&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一行解决:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sed -i -e ’36d’ ~/.ssh/known_hosts
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="fabric"&gt;&lt;a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation"&gt;Fabric&lt;/a&gt;&lt;a class="headerlink" href="#fabric" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;非 &lt;code&gt;C/S&lt;/code&gt; 结构的脚本化自动部署工具!&lt;/p&gt;
+&lt;p&gt;嘦在本地安装好&lt;a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation"&gt;Fabric&lt;/a&gt;
+再在本地工程目录中放一个 &lt;code&gt;fabfile.py&lt;/code&gt;, 就可以:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;fab&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt;
+
+&lt;span class="nl"&gt;Warning:&lt;/span&gt; &lt;span class="n"&gt;Command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;?&lt;/span&gt;
+
+&lt;span class="n"&gt;Available&lt;/span&gt; &lt;span class="n"&gt;commands&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+
+    &lt;span class="n"&gt;env&lt;/span&gt;         &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Android&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;env&lt;/span&gt;
+    &lt;span class="n"&gt;genenv&lt;/span&gt;      &lt;span class="n"&gt;gen&lt;/span&gt; &lt;span class="n"&gt;qpy&lt;/span&gt; &lt;span class="n"&gt;need&lt;/span&gt; &lt;span class="n"&gt;env&lt;/span&gt; &lt;span class="n"&gt;into&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;storage&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sdcard0&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hipipal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qpyplus&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;projects&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;qpy_profile&lt;/span&gt;
+    &lt;span class="n"&gt;pushproj&lt;/span&gt;    &lt;span class="n"&gt;scp&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;into&lt;/span&gt; &lt;span class="n"&gt;Android&lt;/span&gt; &lt;span class="n"&gt;QPython&lt;/span&gt; &lt;span class="n"&gt;projects&lt;/span&gt; &lt;span class="n"&gt;dir&lt;/span&gt;
+    &lt;span class="n"&gt;qpy&lt;/span&gt;         &lt;span class="n"&gt;main&lt;/span&gt; &lt;span class="n"&gt;develop&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;auto&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;running&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Android&lt;/span&gt;
+    &lt;span class="n"&gt;qpy_run_it&lt;/span&gt;  &lt;span class="n"&gt;fab&lt;/span&gt; &lt;span class="n"&gt;qpy_run_it&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;MY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+    &lt;span class="n"&gt;uname&lt;/span&gt;       &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Android&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;日常,无论折腾多少个项目,都可以统一部署此脚本到目录中,
+&lt;a href="https://gist.github.com/ZoomQuiet/8645207"&gt;Fabric for QPython auto upload/running script/collect log etc… from local through &lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;只要定制一两只参数, 平时的开发流程就变成了:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;本地用喜爱的编辑环境进行代码撰写 (&lt;a href="http://www.sublimetext.com"&gt;Sublime Text 2&lt;/a&gt;, &lt;a href="http://leoeditor.com/"&gt;Leo&lt;/a&gt;, etc.)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fab qpy:script=当前调试的主脚本.py&lt;/code&gt; 一键上传手机,并自动运行&lt;/li&gt;
+&lt;li&gt;在手机上真实操作,明确效果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="_9"&gt;日志&lt;a class="headerlink" href="#_9" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;目测同最初设想的理想开发流程相比:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;1. 本地用喜爱的编辑环境进行代码撰写
+2. 一键上传手机,并自动运行
+3. 在手机上真实操作,同时有远程日志可以实时观察,确认问题
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;只差一个运行日志的实时观察了哪,,,&lt;/p&gt;
+&lt;p&gt;本来想着很简洁的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://tmux.sourceforge.net/"&gt;tmux&lt;/a&gt; 再多开个窗口&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tail -f /PATH/2/MY/QPY/PROJECT/.run.log&lt;/code&gt; 就完事儿的哪!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结果,不得不提交个 Issue:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/qpython-android/QPython.org/issues/2"&gt;.run.log is odd · Issue #2 · qpython-android/QPython.org&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="_10"&gt;结论&lt;a class="headerlink" href="#_10" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;虽然, 最后集中成了一份儿 
+&lt;a href="https://gist.github.com/ZoomQuiet/8645207"&gt;fabfile.py&lt;/a&gt;
+脚本,但是涉及的工具还是很多的,
+所以, 整体上,最终可用的组合关系是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;[[Android in mobile]]&lt;/span&gt;
+    &lt;span class="err"&gt;+-&lt;/span&gt; &lt;span class="err"&gt;/etc/profile&lt;/span&gt; &lt;span class="err"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;ln&lt;/span&gt; &lt;span class="err"&gt;-s&lt;/span&gt;
+    &lt;span class="err"&gt;|&lt;/span&gt;                  &lt;span class="err"&gt;V&lt;/span&gt;
+    &lt;span class="err"&gt;|&lt;/span&gt;                  &lt;span class="err"&gt;V&lt;/span&gt;
+    &lt;span class="err"&gt;|&lt;/span&gt;    &lt;span class="err"&gt;/storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profil&lt;/span&gt;
+    &lt;span class="err"&gt;|&lt;/span&gt;                  &lt;span class="err"&gt;^&lt;/span&gt;
+    &lt;span class="err"&gt;|&lt;/span&gt;                  &lt;span class="err"&gt;^&lt;/span&gt;
+    &lt;span class="err"&gt;+-&lt;/span&gt; &lt;span class="err"&gt;QPython&lt;/span&gt; &lt;span class="err"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;gen_qpy_env.py&lt;/span&gt;
+    &lt;span class="err"&gt;|&lt;/span&gt;    &lt;span class="err"&gt;.../projects/MyProject&lt;/span&gt;
+    &lt;span class="err"&gt;|&lt;/span&gt;             &lt;span class="err"&gt;^&lt;/span&gt;
+    &lt;span class="err"&gt;|&lt;/span&gt;             &lt;span class="err"&gt;^&lt;/span&gt;
+    &lt;span class="err"&gt;|&lt;/span&gt;             &lt;span class="err"&gt;^&lt;/span&gt;
+    &lt;span class="err"&gt;`-&lt;/span&gt; &lt;span class="err"&gt;SSHDriod&lt;/span&gt; &lt;span class="err"&gt;+&lt;/span&gt; &lt;span class="err"&gt;id_rsa.pub&lt;/span&gt;
+              &lt;span class="err"&gt;^&lt;/span&gt;
+              &lt;span class="err"&gt;^&lt;/span&gt;   &lt;span class="err"&gt;scp,and&lt;/span&gt; &lt;span class="err"&gt;run()&lt;/span&gt;
+              &lt;span class="err"&gt;^&lt;/span&gt;
+        &lt;span class="err"&gt;/-&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;base&lt;/span&gt; &lt;span class="err"&gt;fabfile.py&lt;/span&gt;
+        &lt;span class="err"&gt;|&lt;/span&gt;
+    &lt;span class="err"&gt;+-&lt;/span&gt; &lt;span class="err"&gt;Fabric&lt;/span&gt;
+    &lt;span class="err"&gt;+-&lt;/span&gt; &lt;span class="err"&gt;pip&lt;/span&gt;
+    &lt;span class="err"&gt;+-&lt;/span&gt; &lt;span class="err"&gt;Python&lt;/span&gt;
+    &lt;span class="err"&gt;|&lt;/span&gt;
+&lt;span class="k"&gt;[[MBP in local]]&lt;/span&gt;
+&lt;span class="err"&gt;all&lt;/span&gt; &lt;span class="err"&gt;in&lt;/span&gt; &lt;span class="err"&gt;same&lt;/span&gt; &lt;span class="err"&gt;wifi&lt;/span&gt; &lt;span class="err"&gt;net&lt;/span&gt; &lt;span class="err"&gt;domain&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="todo"&gt;&lt;span class="caps"&gt;TODO&lt;/span&gt;&lt;a class="headerlink" href="#todo" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;然后, 有个比较顺心的 QPython 折腾环境了, 就可以进一步的折腾各种想玩/能玩能玩的了!&lt;/p&gt;
+&lt;h3 id="pip"&gt;pip&lt;a class="headerlink" href="#pip" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;没有 pip 的世界是艰难的世界,所以,,,&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.pip-installer.org/en/latest/installing.html"&gt;Installation — pip 1.5.2 documentation&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# python get-pip.py&lt;/span&gt;
+Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call last&lt;span class="o"&gt;)&lt;/span&gt;:
+  File &lt;span class="s2"&gt;"get-pip.py"&lt;/span&gt;, line 21343, in &amp;lt;module&amp;gt;
+    import bz2
+ImportError: No module named bz2
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;那么回到老方式, &lt;code&gt;setuptools-&amp;gt;easy_install pip-&amp;gt;pip&lt;/code&gt;
+&lt;a href="https://pypi.python.org/pypi/setuptools#installation-instructions"&gt;setuptools 2.1 : Python Package Index&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# python ez_setup.py&lt;/span&gt;
+Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-2.1.tar.gz
+Extracting in /storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8
+Now working in /storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1
+Installing Setuptools
+Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call last&lt;span class="o"&gt;)&lt;/span&gt;:
+  File &lt;span class="s2"&gt;"setup.py"&lt;/span&gt;, line 28, in &amp;lt;module&amp;gt;
+    from setuptools.command.test import &lt;span class="nb"&gt;test &lt;/span&gt;as _test
+  File &lt;span class="s2"&gt;"/storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1/setuptools/command/test.py"&lt;/span&gt;, line 6, in &amp;lt;module&amp;gt;
+    from unittest import TestLoader, main
+ImportError: No module named unittest
+Something went wrong during the installation.
+See the error message above.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;好吧,只能先放下了, 
+但是,没有 pip 怎么安装上 &lt;a href="http://mercurial.selenic.com/"&gt;Mercurial&lt;/a&gt; 呢?&lt;/p&gt;
+&lt;p&gt;有了 &lt;a href="http://mercurial.selenic.com/"&gt;Hg&lt;/a&gt; 才真正海阔天空了呢…&lt;/p&gt;
+&lt;h3 id="restful-onering"&gt;RESTful “OneRing”&lt;a class="headerlink" href="#restful-onering" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;不知道大家记得 &lt;a href="http://code.google.com/p/onering-desktop/wiki/OneRing"&gt;OneRing&lt;/a&gt; 卟?!&lt;/p&gt;
+&lt;p&gt;豆瓣首席架构师/布道官/&lt;span class="caps"&gt;CTO&lt;/span&gt; 洪教授 亲手玩的项目:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;跨平台的桌面应用开发库，
+使用HTML5+CSS3制作用户界面，
+用Javascript编写交互逻辑，
+同时提供用写web后端的技术编写后台逻辑!
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;但素,现在有了 QPython 完全可以0成本山寨一个移动版的 MyRing 了哪:&lt;/p&gt;
+&lt;p&gt;呼应各种本地的 &lt;a href="http://floss.qiniudn.com/data/20110818160723/index.html"&gt;RESTful&lt;/a&gt;
+请求,总是要有一个内置的web 服务的,&lt;/p&gt;
+&lt;p&gt;当然上 
+&lt;a href="http://bottlepy.org/"&gt;Bottle&lt;/a&gt; 了,只有一个文件的越级微框架,不用安装,随项目目录发布就好.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#qpy:console&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;template&lt;/span&gt;
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'/hello/&amp;lt;name&amp;gt;'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'&amp;lt;b&amp;gt;Hello {{name}}&amp;lt;/b&amp;gt;!'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'localhost'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8080&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;因为是要守护在后台长期运行的,所以用 &lt;code&gt;#qpy:console&lt;/code&gt; 标定&lt;/p&gt;
+&lt;p&gt;可惜:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-bottle-error.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;原来:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-install-wsgi.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;然后:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-bottle-running.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;没有然后:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-bottle-hello.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;哈哈! 一切如愿!&lt;/p&gt;
+&lt;h2 id="_11"&gt;专题体例:&lt;a class="headerlink" href="#_11" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;QPy 的大妈们曰了: 每个专题应该包括 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Introduction&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+&lt;span class="n"&gt;getting&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;include&lt;/span&gt; &lt;span class="n"&gt;sample&lt;/span&gt; &lt;span class="n"&gt;better&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
+&lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+&lt;span class="n"&gt;videos&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;searched&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;youtube&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;directly&lt;/span&gt; &lt;span class="n"&gt;video&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;好吧,慢慢来,,,下次专注 Bottle 结合 QPython 实现可用随身小工具.&lt;/p&gt;
+&lt;h2 id="_12"&gt;时间帐单:&lt;a class="headerlink" href="#_12" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;简单回顾一下整个从完全小白到折腾出当前扫盲文章的时间投入:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1H: 动心,所有相关资料收集,概览&lt;/li&gt;
+&lt;li&gt;2H: &lt;span class="caps"&gt;SSH&lt;/span&gt; 登录成功, 不用口令,未果&lt;/li&gt;
+&lt;li&gt;2H: env 确认问题,解决问题&lt;/li&gt;
+&lt;li&gt;1H: BusyBox 熟悉手机上的shell 环境&lt;/li&gt;
+&lt;li&gt;8H: Fabric 打通, 还是env 问题,以及版本变化后要重新生成 env 配置&lt;/li&gt;
+&lt;li&gt;4H: 整理为文章&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;18H&lt;/code&gt; 总计可统计的大块时间, 其它基本有几乎相同的沟通时间,用在
+通过 微信/邮件/github 等等方式沟通&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;171011 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 迁移到 .io 私人域名中&lt;ul&gt;
+&lt;li&gt;官方文档-&amp;gt; &lt;a href="http://www.qpython.org/document.html"&gt;Welcome to read the QPython guide! — QPython 0.9 documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;140127 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 增补所有细节&lt;/li&gt;
+&lt;li&gt;140126 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 创建&lt;/li&gt;
+&lt;/ul&gt;</content><category term="howto"></category><category term="qpy"></category><category term="pythonic"></category><category term="ssh"></category></entry><entry><title>迁出RTFD.org</title><link href="http://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><published>2014-01-19T00:00:00+08:00</published><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:/jump-into-7niu.html</id><summary type="html">
 &lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;a class="headerlink" href="#rtfdorg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;正名 readthedocs.org&lt;/li&gt;

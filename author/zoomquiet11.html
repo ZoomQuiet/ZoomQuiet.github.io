@@ -85,18 +85,47 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="http://blog.zoomquiet.io/rst2s5-upgraded.html">rst2s5&nbsp;小折腾</a></h2>
+                <div class="summary">
+<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p><a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html">rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging</a></p>
+<p>所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:</p>
+<p><a href="http://s5.zoomquiet.io/">s5.zoomquiet.io</a></p>
+<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<p>忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见</p>
+<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
+<p>4年前的生成脚本,和最新 pygments 接口不匹配了,,,</p>
+<h1 id="_4">解决<a class="headerlink" href="#_4" title="Permanent link">¶</a></h1>
+<p>参考:</p>
+<ul>
+<li><a href="http://pygments.org/docs/rstdirective/">Using Pygments in ReST documents — Pygments</a></li>
+<li><a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/">Using rst for presentations</a></li>
+<li><a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html">rst2s5 with syntax highlighting</a></li>
+<li><a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files">python - Where can I find a …</a></li></ul>
+                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/rst2s5-upgraded.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://blog.zoomquiet.io/livin-scrapbook.html">ScrapBook&nbsp;生存指南</a></h2>
                 <div class="summary">
 <p><code>7.7G    ZqFLOSS</code> 复制改进后,为毛多了?!</p>
-<div class="highlight"><pre><span class="n">zoomq</span> <span class="err">@</span> <span class="n">MBP111216ZQ</span> <span class="n">in</span> <span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
-<span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
-<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">devrel</span><span class="p">.</span><span class="n">json</span>
-<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">floss</span><span class="p">.</span><span class="n">json</span>
-<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">skm</span><span class="p">.</span><span class="n">json</span>
-<span class="mf">5.5</span><span class="n">G</span>    <span class="n">ZqDevRel</span>
-<span class="mf">6.4</span><span class="n">G</span>    <span class="n">ZqFLOSS</span>
-<span class="mf">3.5</span><span class="n">G</span>    <span class="n">ZqSKM</span>
- <span class="mf">9.5</span><span class="n">M</span>    <span class="n">scraotools_ZqDevRel</span><span class="p">.</span><span class="n">pkl …</span></pre></div>
+<div class="highlight"><pre><span></span>zoomq @ MBP111216ZQ in ~/KuaiPan/zScrapBook
+$ du -hs *
+4.0K    7niu-devrel.json
+4.0K    7niu-floss.json
+4.0K    7niu-skm.json
+5.5G    ZqDevRel
+6.4G    ZqFLOSS
+3.5G    ZqSKM
+ 9.5M    scraotools_ZqDevRel.pkl
+ 14M    scraotools_ZqFLOSS.pkl
+1.6M    scraotools_ZqSKM.pkl
+</pre></div>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>很久以前, 俺和大家一样,收集整理网络资源的习惯组织方式是:</p>
+<ul>
+<li>目录 (htm …</li></ul>
                     <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/livin-scrapbook.html">more ...</a>
                 </div>
             </article>
@@ -144,23 +173,6 @@
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="http://blog.zoomquiet.io/init-my-qpy-env.html">如何自在的折腾QPy</a></h2>
-                <div class="summary">
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>QPython 知道有两年了,是看 <a href="http://book.douban.com/subject/10561367/">Head First Python（中文版） (豆瓣)</a> 时,发现竟然有 
-<a href="http://code.google.com/p/android-scripting/"><span class="caps">SL4A</span></a></p>
-<p>这种神器! Google 果断是业界良心哪,
-可惜: 从<a href="http://code.google.com/p/android-scripting/downloads/list">Downloads</a>
-可以看出 ,已经停止有一年多了,目测是 Guido 叔离开后, Python 的地位在 Google 一落千丈就没有人折腾了.</p>
-<p>好在旧浪两位同事, River和<span class="caps">CF</span> 掿起了 <span class="caps">SL4A</span> 的旗帜, 变成了一系列准衶器:</p>
-<ul>
-<li><a href="https://play.google.com/store/apps/details?id=com.hipipal.qpyplus">QPython - Python for Android - Google Play 上的 Andr​​oid 应用</a></li>
-<li><a href="https://play.google.com/store/apps/details?id=com.hipipal.qpy3">QPython 3 - Python3 on Android - Google …</a></li></ul>
-                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/init-my-qpy-env.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         <ul class="pagination">
                 <li class="prev"><a href="http://blog.zoomquiet.io/author/zoomquiet10.html">&laquo;</a>
@@ -199,6 +211,8 @@
                         href="http://blog.zoomquiet.io/author/zoomquiet16.html">16</a></li>
                 <li class=""><a
                         href="http://blog.zoomquiet.io/author/zoomquiet17.html">17</a></li>
+                <li class=""><a
+                        href="http://blog.zoomquiet.io/author/zoomquiet18.html">18</a></li>
                 <li class="next"><a
                         href="http://blog.zoomquiet.io/author/zoomquiet12.html">&raquo;</a></li>
         </ul>

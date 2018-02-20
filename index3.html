@@ -85,6 +85,38 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="http://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
+                <div class="summary">
+<p>来自 @nedbat 的分享:</p>
+<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
+<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>C样:</p>
+<div class="highlight"><pre><span></span>i = 0
+while i &lt; len(my_list):
+    v = my_list[i]
+    print v
+    i += 1
+</pre></div>
+<p>偏门:</p>
+<div class="highlight"><pre><span></span>for i in range(len(my_list)):
+    v = my_list[i]
+    print v
+</pre></div>
+<p>蠎样:</p>
+<div class="highlight"><pre><span></span>for v in my_list:
+    print v
+</pre></div>
+<p>模式:</p>
+<div class="highlight"><pre><span></span>for name in iterable:
+    statements
+</pre></div>
+<ul>
+<li>可 …</li></ul>
+                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://blog.zoomquiet.io/standing-desk-env.html">站立式办公环境尝试</a></h2>
                 <div class="summary">
 <h1 id="_1">立<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
@@ -138,29 +170,6 @@
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="http://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme&nbsp;custom</a></h2>
-                <div class="summary">
-<h1 id="en"><span class="caps">EN</span><a class="headerlink" href="#en" title="Permanent link">¶</a></h1>
-<p>thanks guys in <code>leo-editor@googlegroups.com</code> :</p>
-<ul>
-<li>Terry Brown</li>
-<li>john lunzer</li>
-</ul>
-<p>make me know how to custom Leo theme step by step:</p>
-<ul>
-<li>old versions <code>myLeoSettings.leo</code> appended buttons :<ul>
-<li>at <code>leo/myLeoSettings.leo#Startup--&gt;Local buttons</code></li>
-<li>need copy from  <code>leoSettings.leo</code> </li>
-</ul>
-</li>
-<li>so my custome flow as:<ul>
-<li>try edit some node</li>
-<li>click …</li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/leo5theme.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         <ul class="pagination">
                 <li class="prev"><a href="http://blog.zoomquiet.io/index2.html">&laquo;</a>
@@ -199,6 +208,8 @@
                         href="http://blog.zoomquiet.io/index16.html">16</a></li>
                 <li class=""><a
                         href="http://blog.zoomquiet.io/index17.html">17</a></li>
+                <li class=""><a
+                        href="http://blog.zoomquiet.io/index18.html">18</a></li>
                 <li class="next"><a
                         href="http://blog.zoomquiet.io/index4.html">&raquo;</a></li>
         </ul>

@@ -166,13 +166,13 @@
 <li>先停了以往各种版本的 <code>FUSE</code></li>
 <li>正常的安装</li>
 </ul>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
+<div class="highlight"><pre><span></span>$ brew install sshfs
 </pre></div>
 <p>由脚本自动安装所有依赖包.</p>
 <p>并根据安装提示进行必要的系统配置</p>
-<div class="highlight"><pre><span class="n">sudo</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cp</span> <span class="o">-</span><span class="n">RfX</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="p">.</span><span class="n">fs</span> \
-    <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span>
-<span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">s</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="p">.</span><span class="n">fs</span><span class="o">/</span><span class="n">Support</span><span class="o">/</span><span class="n">load_osxfusefs</span>
+<div class="highlight"><pre><span></span>sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs \
+    /Library/Filesystems/
+sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
 </pre></div>
 <p>首次,进行挂接时,会有驱动非官方的警告,知道就好,
 其它一切正常的了 ;-)</p>

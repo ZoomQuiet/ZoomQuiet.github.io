@@ -268,9 +268,9 @@
 <li>只是,非专业版,只能用口令登录,先忍着</li>
 <li>扩展一点点儿从 <a href="http://onetimeblog.logdown.com/posts/2014/01/23/first-program-in-qpython">Hello, QPython! « one-time blog</a> 来的代码,成 <code>hollo.py</code></li>
 </ul>
-<div class="highlight"><pre><span class="n">import</span> <span class="n">androidhelper</span>
-<span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="p">.</span><span class="n">Android</span><span class="p">()</span>
-<span class="n">droid</span><span class="p">.</span><span class="n">makeToast</span><span class="p">(</span><span class="n">u</span><span class="err">'</span><span class="n">Hello</span><span class="p">,</span> <span class="n">Username</span><span class="o">!</span><span class="err">是也乎</span> <span class="p">;</span><span class="o">-</span><span class="p">)</span><span class="err">'</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">androidhelper</span>
+<span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
+<span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="sa">u</span><span class="s1">'Hello, Username!是也乎 ;-)'</span><span class="p">)</span>
 </pre></div>
 <p>上传到哪儿呢?!</p>
 <p>快速翻找一下,明确几个关键路径:</p>
@@ -292,11 +292,11 @@
 </li>
 <li>可写资源起点以及目录意义:</li>
 </ul>
-<div class="highlight"><pre><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">sdcard0</span><span class="o">/</span><span class="n">com</span><span class="p">.</span><span class="n">hipipal</span><span class="p">.</span><span class="n">qpyplus</span><span class="o">/</span>
-    <span class="o">+-</span> <span class="n">cache</span>         
-    <span class="o">+-</span> <span class="n">lib</span>        <span class="err">各</span><span class="n">Python</span><span class="err">版本的库安装入口</span> 
-    <span class="o">+-</span> <span class="n">projects</span>   <span class="err">俺的</span><span class="n">QPy</span> <span class="err">项目入口</span>
-    <span class="o">+-</span> <span class="n">scripts</span>    <span class="err">俺的</span><span class="n">QPy</span> <span class="err">脚本入口</span>
+<div class="highlight"><pre><span></span>/storage/sdcard0/com.hipipal.qpyplus/
+    +- cache         
+    +- lib        各Python版本的库安装入口 
+    +- projects   俺的QPy 项目入口
+    +- scripts    俺的QPy 脚本入口
 </pre></div>
 <h4 id="busybox">BusyBox<a class="headerlink" href="#busybox" title="Permanent link">¶</a></h4>
 <p>等等! <span class="caps">SSH</span> 上来后,各种不适应,这什么 shell 环境哪,连 <code>less</code>, <code>tail</code>, <code>vi</code> 都没有
@@ -310,10 +310,10 @@
 <p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-busybox-tail.jpg"/></p>
 <p>这样,才能远程观察, QPython 项目目录中,
 若隐若现的 <code>.run.log</code> 明显发生什么问题, 快速增补一行:</p>
-<div class="highlight"><pre><span class="c"># -*- coding: utf-8 -*-</span>
+<div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">androidhelper</span>
 <span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
-<span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="s">u'Hello, Username!是也乎 ;-)'</span><span class="p">)</span>
+<span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="sa">u</span><span class="s1">'Hello, Username!是也乎 ;-)'</span><span class="p">)</span>
 </pre></div>
 <p>就能运行成功,跳出最简单的发布公告框了!</p>
 <p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-hollo.jpg"/></p>
@@ -325,31 +325,31 @@
 <li>ash 环境变量如果不兼容 QPython 怎么配置?</li>
 </ol>
 <p>将刚刚测试明确可用的脚本从 shell 环境中调用一下:</p>
-<div class="highlight"><pre><span class="c"># cd /storage/sdcard0/com.hipipal.qpyplus/projects/chaos/ </span>
-<span class="c"># /data/data/com.hipipal.qpyplus/files/bin/python hollo.py</span>
+<div class="highlight"><pre><span></span><span class="c1"># cd /storage/sdcard0/com.hipipal.qpyplus/projects/chaos/ </span>
+<span class="c1"># /data/data/com.hipipal.qpyplus/files/bin/python hollo.py</span>
 
 Could not find platform independent libraries &lt;prefix&gt;
 Consider setting <span class="nv">$PYTHONHOME</span> to &lt;prefix&gt;<span class="o">[</span>:&lt;exec_prefix&gt;<span class="o">]</span>
 ImportError: No module named site
 </pre></div>
 <p>果断没有那么简单, 检查一下系统环境:</p>
-<div class="highlight"><pre><span class="n">_</span><span class="o">=/</span><span class="n">system</span><span class="o">/</span><span class="n">xbin</span><span class="o">/</span><span class="n">env</span>
-<span class="n">RANDOM</span><span class="o">=</span><span class="mi">25396</span>
-<span class="n">ANDROID_DATA</span><span class="o">=/</span><span class="n">data</span>
-<span class="n">BOOTCLASSPATH</span><span class="o">=/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">core</span><span class="p">.</span><span class="n">jar</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">core</span><span class="o">-</span><span class="n">junit</span><span class="p">.</span><span class="n">jar</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">bouncycastle</span><span class="p">.</span><span class="n">jar</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">ext</span><span class="p">.</span><span class="n">jar</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">framework</span><span class="p">.</span><span class="n">jar</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">framework2</span><span class="p">.</span><span class="n">jar</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">android</span><span class="p">.</span><span class="n">policy</span><span class="p">.</span><span class="n">jar</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">services</span><span class="p">.</span><span class="n">jar</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">apache</span><span class="o">-</span><span class="n">xml</span><span class="p">.</span><span class="n">jar</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">sec_edm</span><span class="p">.</span><span class="n">jar</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">seccamera</span><span class="p">.</span><span class="n">jar</span>
-<span class="n">PATH</span><span class="o">=/</span><span class="n">data</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">berserker</span><span class="p">.</span><span class="n">android</span><span class="p">.</span><span class="n">apps</span><span class="p">.</span><span class="n">sshdroid</span><span class="o">/</span><span class="n">dropbear</span><span class="o">:/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">:/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">:/</span><span class="n">bin</span><span class="o">:/</span><span class="n">sbin</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">sbin</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">bin</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">xbin</span><span class="o">:/</span><span class="n">system</span><span class="o">/</span><span class="n">xbin</span><span class="o">/</span><span class="n">bb</span><span class="o">:/</span><span class="n">data</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span>
-<span class="n">ANDROID_ROOT</span><span class="o">=/</span><span class="n">system</span>
-<span class="n">USER</span><span class="o">=</span><span class="n">root</span>
-<span class="n">LOGNAME</span><span class="o">=</span><span class="n">root</span>
-<span class="n">ANDROID_PROPERTY_WORKSPACE</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span><span class="mi">66560</span>
-<span class="n">EXTERNAL_STORAGE</span><span class="o">=/</span><span class="n">storage</span><span class="o">/</span><span class="n">sdcard0</span>
-<span class="n">ANDROID_ASSETS</span><span class="o">=/</span><span class="n">system</span><span class="o">/</span><span class="n">app</span>
-<span class="n">SHELL</span><span class="o">=/</span><span class="n">system</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">sh</span>
-<span class="n">TERM</span><span class="o">=</span><span class="n">vt100</span>
-<span class="n">SSH_TTY</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">pts</span><span class="o">/</span><span class="mi">1</span>
-<span class="n">SSH_CONNECTION</span><span class="o">=::</span><span class="n">ffff</span><span class="o">:</span><span class="mf">192.168.0.103</span> <span class="mi">64228</span> <span class="o">::</span><span class="n">ffff</span><span class="o">:</span><span class="mf">192.168.0.100</span> <span class="mi">22</span>
-<span class="n">HOME</span><span class="o">=/</span><span class="n">data</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">berserker</span><span class="p">.</span><span class="n">android</span><span class="p">.</span><span class="n">apps</span><span class="p">.</span><span class="n">sshdroid</span><span class="o">/</span><span class="n">home</span>
-<span class="n">ANDROID_BOOTLOGO</span><span class="o">=</span><span class="mi">1</span>
+<div class="highlight"><pre><span></span><span class="nv">_</span><span class="o">=</span>/system/xbin/env
+<span class="nv">RANDOM</span><span class="o">=</span><span class="m">25396</span>
+<span class="nv">ANDROID_DATA</span><span class="o">=</span>/data
+<span class="nv">BOOTCLASSPATH</span><span class="o">=</span>/system/framework/core.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/sec_edm.jar:/system/framework/seccamera.jar
+<span class="nv">PATH</span><span class="o">=</span>/data/data/berserker.android.apps.sshdroid/dropbear:/usr/bin:/usr/sbin:/bin:/sbin:/system/sbin:/system/bin:/system/xbin:/system/xbin/bb:/data/local/bin
+<span class="nv">ANDROID_ROOT</span><span class="o">=</span>/system
+<span class="nv">USER</span><span class="o">=</span>root
+<span class="nv">LOGNAME</span><span class="o">=</span>root
+<span class="nv">ANDROID_PROPERTY_WORKSPACE</span><span class="o">=</span><span class="m">9</span>,66560
+<span class="nv">EXTERNAL_STORAGE</span><span class="o">=</span>/storage/sdcard0
+<span class="nv">ANDROID_ASSETS</span><span class="o">=</span>/system/app
+<span class="nv">SHELL</span><span class="o">=</span>/system/bin/sh
+<span class="nv">TERM</span><span class="o">=</span>vt100
+<span class="nv">SSH_TTY</span><span class="o">=</span>/dev/pts/1
+<span class="nv">SSH_CONNECTION</span><span class="o">=</span>::ffff:192.168.0.103 <span class="m">64228</span> ::ffff:192.168.0.100 <span class="m">22</span>
+<span class="nv">HOME</span><span class="o">=</span>/data/data/berserker.android.apps.sshdroid/home
+<span class="nv">ANDROID_BOOTLOGO</span><span class="o">=</span><span class="m">1</span>
 </pre></div>
 <p>跟 Python 没一毛钱关系,怪不得跑不了;
 吼了俩位爷,才知道: <a href="http://wiki.qpython.org/hacker/">QPython Hackers</a>
@@ -369,15 +369,15 @@ ImportError: No module named site
 <li><a href="http://gailly.net/android/android-tips.html">Android tips</a> </li>
 </ul>
 <p>经过尝试,明确这么来:</p>
-<div class="highlight"><pre><span class="c"># mount -o remount,rw /dev/block/mtdblock3 /system</span>
-<span class="c"># ln -s /storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profile /etc/profile</span>
-<span class="c"># mount -o remount,ro /dev/block/mtdblock3 /system</span>
+<div class="highlight"><pre><span></span><span class="c1"># mount -o remount,rw /dev/block/mtdblock3 /system</span>
+<span class="c1"># ln -s /storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profile /etc/profile</span>
+<span class="c1"># mount -o remount,ro /dev/block/mtdblock3 /system</span>
 </pre></div>
 <p>再关闭,重启 <code>SSHDroid</code> 后,远程登入,测试:</p>
 <p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-this-zen.png"/></p>
 <p>然后,远程人工从 shell 调用</p>
-<div class="highlight"><pre><span class="c"># cd /storage/sdcard0/com.hipipal.qpyplus/projects/chaos/ </span>
-<span class="c"># /data/data/com.hipipal.qpyplus/files/bin/python hollo.py</span>
+<div class="highlight"><pre><span></span><span class="c1"># cd /storage/sdcard0/com.hipipal.qpyplus/projects/chaos/ </span>
+<span class="c1"># /data/data/com.hipipal.qpyplus/files/bin/python hollo.py</span>
 </pre></div>
 <p>手机无论在什么桌面,都能跳出来俺的 <code>hollo.py</code> 运行结果:</p>
 <p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-console-hollo.jpg"/></p>
@@ -387,13 +387,13 @@ ImportError: No module named site
 <p>作者看俺这么努力的折腾从内部机密放送俺最新开发版本,兴奋的安装上:</p>
 <p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-new-version.jpg"/></p>
 <p>然后,再运行…</p>
-<div class="highlight"><pre><span class="nx">Traceback</span> <span class="p">(</span><span class="nx">most</span> <span class="nx">recent</span> <span class="nb">call</span> <span class="nb">last</span><span class="p">):</span>
-  <span class="nb">File</span> <span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/projects/chaos/hollo.py"</span><span class="p">,</span> <span class="nb">line</span> <span class="mi">3</span><span class="p">,</span> <span class="k">in</span> <span class="o">&lt;</span><span class="nx">module</span><span class="o">&gt;</span>
-    <span class="n">droid</span> <span class="o">=</span> <span class="nx">androidhelper.Android</span><span class="p">()</span>
-  <span class="nb">File</span> <span class="s2">"tubelib/sl4a.py"</span><span class="p">,</span> <span class="nb">line</span> <span class="mi">34</span><span class="p">,</span> <span class="k">in</span> <span class="nx">__init__</span>
-    <span class="bp">self.</span><span class="nx">conn</span> <span class="o">=</span> <span class="nx">socket.create_connection</span><span class="p">(</span><span class="nx">addr</span><span class="p">)</span>
-  <span class="nb">File</span> <span class="s2">"/home/river/android-sdk/workplace/python-for-android/build/python-install/lib/python2.7/socket.py"</span><span class="p">,</span> <span class="nb">line</span> <span class="mi">571</span><span class="p">,</span> <span class="k">in</span> <span class="nx">create_connection</span>
-<span class="nx">socket.error</span><span class="p">:</span> <span class="err">[</span><span class="nx">Errno</span> <span class="mi">111</span><span class="cp">]</span> Connection refused
+<div class="highlight"><pre><span></span>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/projects/chaos/hollo.py"</span>, line <span class="m">3</span>, in &lt;module&gt;
+    <span class="nv">droid</span> <span class="o">=</span> androidhelper.Android<span class="o">()</span>
+  File <span class="s2">"tubelib/sl4a.py"</span>, line <span class="m">34</span>, in __init__
+    self.conn <span class="o">=</span> socket.create_connection<span class="o">(</span>addr<span class="o">)</span>
+  File <span class="s2">"/home/river/android-sdk/workplace/python-for-android/build/python-install/lib/python2.7/socket.py"</span>, line <span class="m">571</span>, in create_connection
+socket.error: <span class="o">[</span>Errno <span class="m">111</span><span class="o">]</span> Connection refused
 </pre></div>
 <p><code>/home/river/android-sdk/workplace</code> 囧rz…</p>
 <p>什么东西?! 怎么超出来原作的本地目录了?!</p>
@@ -464,25 +464,25 @@ without android titlebar (fullscreen) “”“</p>
 - 每次都要全部清除,或是人工清除?
 - 不用这么 Naive ,参考:<a href="http://floss.qiniudn.com/data/20130327153058/index.html"><span class="caps">SSH</span> Warning: the <span class="caps">RSA</span> host key for differs from the key for the <span class="caps">IP</span> address - zhangp专栏</a></p>
 <p>一行解决:</p>
-<div class="highlight"><pre><span class="nv">$ </span>sed -i -e ’36d’ ~/.ssh/known_hosts
+<div class="highlight"><pre><span></span>$ sed -i -e ’36d’ ~/.ssh/known_hosts
 </pre></div>
 <h4 id="fabric"><a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation">Fabric</a><a class="headerlink" href="#fabric" title="Permanent link">¶</a></h4>
 <p>非 <code>C/S</code> 结构的脚本化自动部署工具!</p>
 <p>嘦在本地安装好<a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation">Fabric</a>
 再在本地工程目录中放一个 <code>fabfile.py</code>, 就可以:</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">fab</span> <span class="o">?</span>
+<div class="highlight"><pre><span></span>$ fab ?
 
-<span class="nl">Warning:</span> <span class="n">Command</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">not</span> <span class="n">found</span><span class="o">:</span>
-    <span class="o">?</span>
+Warning: Command<span class="o">(</span>s<span class="o">)</span> not found:
+    ?
 
-<span class="n">Available</span> <span class="n">commands</span><span class="o">:</span>
+Available commands:
 
-    <span class="n">env</span>         <span class="n">print</span> <span class="n">Android</span> <span class="n">sys</span><span class="p">.</span> <span class="n">env</span>
-    <span class="n">genenv</span>      <span class="n">gen</span> <span class="n">qpy</span> <span class="n">need</span> <span class="n">env</span> <span class="n">into</span><span class="o">:</span> <span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">sdcard0</span><span class="o">/</span><span class="n">com</span><span class="p">.</span><span class="n">hipipal</span><span class="p">.</span><span class="n">qpyplus</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">qpy_profile</span>
-    <span class="n">pushproj</span>    <span class="n">scp</span> <span class="n">all</span> <span class="p">.</span><span class="n">py</span> <span class="n">into</span> <span class="n">Android</span> <span class="n">QPython</span> <span class="n">projects</span> <span class="n">dir</span>
-    <span class="n">qpy</span>         <span class="n">main</span> <span class="n">develop</span> <span class="n">tools</span><span class="p">,</span> <span class="k">auto</span> <span class="n">upload</span> <span class="n">and</span> <span class="n">running</span> <span class="n">in</span> <span class="n">Android</span>
-    <span class="n">qpy_run_it</span>  <span class="n">fab</span> <span class="n">qpy_run_it</span><span class="o">:</span><span class="n">script</span><span class="o">=</span><span class="n">MY</span><span class="p">.</span><span class="n">py</span>
-    <span class="n">uname</span>       <span class="n">print</span> <span class="n">Android</span> <span class="n">sys</span><span class="p">.</span> <span class="n">info</span><span class="p">.</span>
+    env         print Android sys. env
+    genenv      gen qpy need env into: /storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profile
+    pushproj    scp all .py into Android QPython projects dir
+    qpy         main develop tools, auto upload and running in Android
+    qpy_run_it  fab qpy_run_it:script<span class="o">=</span>MY.py
+    uname       print Android sys. info.
 </pre></div>
 <p>日常,无论折腾多少个项目,都可以统一部署此脚本到目录中,
 <a href="https://gist.github.com/ZoomQuiet/8645207">Fabric for QPython auto upload/running script/collect log etc… from local through <span class="caps">SSH</span></a></p>
@@ -494,7 +494,7 @@ without android titlebar (fullscreen) “”“</p>
 </ol>
 <h4 id="_9">日志<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
 <p>目测同最初设想的理想开发流程相比:</p>
-<div class="highlight"><pre>1. 本地用喜爱的编辑环境进行代码撰写
+<div class="highlight"><pre><span></span>1. 本地用喜爱的编辑环境进行代码撰写
 2. 一键上传手机,并自动运行
 3. 在手机上真实操作,同时有远程日志可以实时观察,确认问题
 </pre></div>
@@ -511,53 +511,53 @@ without android titlebar (fullscreen) “”“</p>
 <a href="https://gist.github.com/ZoomQuiet/8645207">fabfile.py</a>
 脚本,但是涉及的工具还是很多的,
 所以, 整体上,最终可用的组合关系是:</p>
-<div class="highlight"><pre><span class="k">[[Android in mobile]]</span>
-    <span class="err">+-</span> <span class="err">/etc/profile</span> <span class="err">-&gt;</span> <span class="err">ln</span> <span class="err">-s</span>
-    <span class="err">|</span>                  <span class="err">V</span>
-    <span class="err">|</span>                  <span class="err">V</span>
-    <span class="err">|</span>    <span class="err">/storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profil</span>
-    <span class="err">|</span>                  <span class="err">^</span>
-    <span class="err">|</span>                  <span class="err">^</span>
-    <span class="err">+-</span> <span class="err">QPython</span> <span class="err">-&gt;</span> <span class="err">gen_qpy_env.py</span>
-    <span class="err">|</span>    <span class="err">.../projects/MyProject</span>
-    <span class="err">|</span>             <span class="err">^</span>
-    <span class="err">|</span>             <span class="err">^</span>
-    <span class="err">|</span>             <span class="err">^</span>
-    <span class="err">`-</span> <span class="err">SSHDriod</span> <span class="err">+</span> <span class="err">id_rsa.pub</span>
-              <span class="err">^</span>
-              <span class="err">^</span>   <span class="err">scp,and</span> <span class="err">run()</span>
-              <span class="err">^</span>
-        <span class="err">/-&gt;</span> <span class="err">base</span> <span class="err">fabfile.py</span>
-        <span class="err">|</span>
-    <span class="err">+-</span> <span class="err">Fabric</span>
-    <span class="err">+-</span> <span class="err">pip</span>
-    <span class="err">+-</span> <span class="err">Python</span>
-    <span class="err">|</span>
+<div class="highlight"><pre><span></span><span class="k">[[Android in mobile]]</span>
+    <span class="na">+- /etc/profile -&gt; ln -s</span>
+    <span class="na">|                  V</span>
+    <span class="na">|                  V</span>
+    <span class="na">|    /storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profil</span>
+    <span class="na">|                  ^</span>
+    <span class="na">|                  ^</span>
+    <span class="na">+- QPython -&gt; gen_qpy_env.py</span>
+    <span class="na">|    .../projects/MyProject</span>
+    <span class="na">|             ^</span>
+    <span class="na">|             ^</span>
+    <span class="na">|             ^</span>
+    <span class="na">`- SSHDriod + id_rsa.pub</span>
+              <span class="na">^</span>
+              <span class="na">^   scp,and run()</span>
+              <span class="na">^</span>
+        <span class="na">/-&gt; base fabfile.py</span>
+        <span class="na">|</span>
+    <span class="na">+- Fabric</span>
+    <span class="na">+- pip</span>
+    <span class="na">+- Python</span>
+    <span class="na">|</span>
 <span class="k">[[MBP in local]]</span>
-<span class="err">all</span> <span class="err">in</span> <span class="err">same</span> <span class="err">wifi</span> <span class="err">net</span> <span class="err">domain</span>
+<span class="na">all in same wifi net domain</span>
 </pre></div>
 <h3 id="todo"><span class="caps">TODO</span><a class="headerlink" href="#todo" title="Permanent link">¶</a></h3>
 <p>然后, 有个比较顺心的 QPython 折腾环境了, 就可以进一步的折腾各种想玩/能玩能玩的了!</p>
 <h3 id="pip">pip<a class="headerlink" href="#pip" title="Permanent link">¶</a></h3>
 <p>没有 pip 的世界是艰难的世界,所以,,,</p>
 <p><a href="http://www.pip-installer.org/en/latest/installing.html">Installation — pip 1.5.2 documentation</a></p>
-<div class="highlight"><pre><span class="c"># python get-pip.py</span>
+<div class="highlight"><pre><span></span><span class="c1"># python get-pip.py</span>
 Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-  File <span class="s2">"get-pip.py"</span>, line 21343, in &lt;module&gt;
+  File <span class="s2">"get-pip.py"</span>, line <span class="m">21343</span>, in &lt;module&gt;
     import bz2
 ImportError: No module named bz2
 </pre></div>
 <p>那么回到老方式, <code>setuptools-&gt;easy_install pip-&gt;pip</code>
 <a href="https://pypi.python.org/pypi/setuptools#installation-instructions">setuptools 2.1 : Python Package Index</a></p>
-<div class="highlight"><pre><span class="c"># python ez_setup.py</span>
+<div class="highlight"><pre><span></span><span class="c1"># python ez_setup.py</span>
 Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-2.1.tar.gz
 Extracting in /storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8
 Now working in /storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1
 Installing Setuptools
 Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-  File <span class="s2">"setup.py"</span>, line 28, in &lt;module&gt;
-    from setuptools.command.test import <span class="nb">test </span>as _test
-  File <span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1/setuptools/command/test.py"</span>, line 6, in &lt;module&gt;
+  File <span class="s2">"setup.py"</span>, line <span class="m">28</span>, in &lt;module&gt;
+    from setuptools.command.test import <span class="nb">test</span> as _test
+  File <span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1/setuptools/command/test.py"</span>, line <span class="m">6</span>, in &lt;module&gt;
     from unittest import TestLoader, main
 ImportError: No module named unittest
 Something went wrong during the installation.
@@ -569,7 +569,7 @@ See the error message above.
 <h3 id="restful-onering">RESTful “OneRing”<a class="headerlink" href="#restful-onering" title="Permanent link">¶</a></h3>
 <p>不知道大家记得 <a href="http://code.google.com/p/onering-desktop/wiki/OneRing">OneRing</a> 卟?!</p>
 <p>豆瓣首席架构师/布道官/<span class="caps">CTO</span> 洪教授 亲手玩的项目:</p>
-<div class="highlight"><pre>跨平台的桌面应用开发库，
+<div class="highlight"><pre><span></span>跨平台的桌面应用开发库，
 使用HTML5+CSS3制作用户界面，
 用Javascript编写交互逻辑，
 同时提供用写web后端的技术编写后台逻辑!
@@ -579,14 +579,14 @@ See the error message above.
 请求,总是要有一个内置的web 服务的,</p>
 <p>当然上 
 <a href="http://bottlepy.org/">Bottle</a> 了,只有一个文件的越级微框架,不用安装,随项目目录发布就好.</p>
-<div class="highlight"><pre><span class="c">#qpy:console</span>
+<div class="highlight"><pre><span></span><span class="c1">#qpy:console</span>
 <span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">template</span>
 
-<span class="nd">@route</span><span class="p">(</span><span class="s">'/hello/&lt;name&gt;'</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">'/hello/&lt;name&gt;'</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s">'&lt;b&gt;Hello {{name}}&lt;/b&gt;!'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">'&lt;b&gt;Hello {{name}}&lt;/b&gt;!'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 
-<span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">'localhost'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+<span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
 </pre></div>
 <p>因为是要守护在后台长期运行的,所以用 <code>#qpy:console</code> 标定</p>
 <p>可惜:</p>
@@ -600,10 +600,10 @@ See the error message above.
 <p>哈哈! 一切如愿!</p>
 <h2 id="_11">专题体例:<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
 <p>QPy 的大妈们曰了: 每个专题应该包括 </p>
-<div class="highlight"><pre><span class="n">Introduction</span><span class="p">,</span> 
-<span class="n">getting</span> <span class="n">start</span><span class="p">(</span><span class="n">include</span> <span class="n">sample</span> <span class="n">better</span><span class="p">),</span> 
-<span class="n">packages</span><span class="p">,</span> 
-<span class="n">videos</span> <span class="p">(</span><span class="n">searched</span> <span class="n">result</span> <span class="n">from</span> <span class="n">youtube</span> <span class="n">or</span> <span class="n">directly</span> <span class="n">video</span> <span class="n">link</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span>Introduction, 
+getting start(include sample better), 
+packages, 
+videos (searched result from youtube or directly video link )
 </pre></div>
 <p>好吧,慢慢来,,,下次专注 Bottle 结合 QPython 实现可用随身小工具.</p>
 <h2 id="_12">时间帐单:<a class="headerlink" href="#_12" title="Permanent link">¶</a></h2>

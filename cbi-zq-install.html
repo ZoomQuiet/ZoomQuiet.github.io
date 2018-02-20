@@ -251,8 +251,8 @@ ct-lubuntu-nand-v1.00/<span class="caps">VGA</span>/lubuntu-server-nand.img.gz</
 都是 <code>lubuntu-server-nand.img.gz</code>
 解压缩 也都是 <code>lubuntu-server-nand.img</code>
 根本就看不出什么是什么了! 强烈建议,重新制定版本规范,也包含最终下载文件名;比如:</p>
-<div class="highlight"><pre><span class="n">ct</span><span class="o">-</span><span class="n">lubuntu</span><span class="o">-</span><span class="mf">13.06</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">nand</span><span class="p">.</span><span class="n">img</span><span class="p">.</span><span class="n">gz</span>
-<span class="n">ct</span><span class="o">-</span><span class="n">vga</span><span class="o">-</span><span class="n">lubuntu</span><span class="o">-</span><span class="mf">13.06</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">nand</span><span class="p">.</span><span class="n">img</span><span class="p">.</span><span class="n">gz</span>
+<div class="highlight"><pre><span></span>ct-lubuntu-13.06-server-nand.img.gz
+ct-vga-lubuntu-13.06-server-nand.img.gz
 </pre></div>
 <h3 id="vga"><span class="caps">VGA</span><a class="headerlink" href="#vga" title="Permanent link">¶</a></h3>
 <p>是的,兴冲冲,回家准备接上网络,开始家庭服务器的配置!
@@ -268,7 +268,7 @@ ct-lubuntu-nand-v1.00/<span class="caps">VGA</span>/lubuntu-server-nand.img.gz</
 <code>lubuntu-nand-v1.01</code> 中还没有完成兼容!</p>
 <p>重新刷上对口的 <span class="caps">OS</span>, 这下子终于见到熟悉的命令行界面了!!!</p>
 <p>但是:</p>
-<div class="highlight"><pre>Welcome to Linaro 13.08 (GNU/Linux 3.4.61+ armv7l)
+<div class="highlight"><pre><span></span>Welcome to Linaro 13.08 (GNU/Linux 3.4.61+ armv7l)
 
  * Documentation:  https://wiki.linaro.org/
 New release '13.10' available.
@@ -277,19 +277,19 @@ Run 'do-release-upgrade' to upgrade to it.
 <p>这倒底是升级呢? 还是不升级呢?!</p>
 <h3 id="ip"><span class="caps">IP</span><a class="headerlink" href="#ip" title="Permanent link">¶</a></h3>
 <p>修订: <code>/etc/network/interfaces</code> 为:</p>
-<div class="highlight"><pre>auto lo eth0
+<div class="highlight"><pre><span></span>auto lo eth0
 iface lo inet loopback
-<span class="c">#iface eth0 inet dhcp</span>
+<span class="c1">#iface eth0 inet dhcp</span>
 iface eth0 inet static
 
-address 192.168.0.111
-gateway 192.168.0.1
-netmask 255.255.255.0
-network 192.168.0.0
-broadcast 192.168.0.255
+address <span class="m">192</span>.168.0.111
+gateway <span class="m">192</span>.168.0.1
+netmask <span class="m">255</span>.255.255.0
+network <span class="m">192</span>.168.0.0
+broadcast <span class="m">192</span>.168.0.255
 </pre></div>
 <p>重启网络:</p>
-<div class="highlight"><pre>/etc/init.d/networking restart
+<div class="highlight"><pre><span></span>/etc/init.d/networking restart
 </pre></div>
 <p>就将原先每次重启时,可能变化的动态 <span class="caps">IP</span> 变成内网的静态 <span class="caps">IP</span> 了</p>
 <h3 id="connection-refused">Connection refused<a class="headerlink" href="#connection-refused" title="Permanent link">¶</a></h3>
@@ -298,67 +298,67 @@ broadcast 192.168.0.255
 <p>果断 Google 发布,是常见问题!</p>
 <p><a href="http://askubuntu.com/questions/30080/how-to-solve-connection-refused-errors-in-ssh-connection">openssh - How to solve ‘Connection refused’ errors in <span class="caps">SSH</span> connection? - Ask Ubuntu</a></p>
 <p>完全无法相信自个儿的眼睛! 竟然是因为根本没有 <code>sshd</code> 进程运行的原因!</p>
-<div class="highlight"><pre>sudo apt-get install openssh-server openssh-client
+<div class="highlight"><pre><span></span>sudo apt-get install openssh-server openssh-client
 sudo /etc/init.d/ssh start
 </pre></div>
 <p>再尝试</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">ssh</span> <span class="mf">192.168.0.111</span>
+<div class="highlight"><pre><span></span>$ ssh <span class="m">192</span>.168.0.111
 </pre></div>
 <p>一切正常了!</p>
 <h3 id="ftab">ftab<a class="headerlink" href="#ftab" title="Permanent link">¶</a></h3>
 <p>看<span class="caps">CB3</span> 的硬件参数,应该有8G 内置空间的, 但是查询:</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">df</span> <span class="o">-</span><span class="n">h</span>
-<span class="n">Filesystem</span>      <span class="n">Size</span>  <span class="n">Used</span> <span class="n">Avail</span> <span class="n">Use</span><span class="o">%</span> <span class="n">Mounted</span> <span class="n">on</span>
-<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">root</span>       <span class="mf">2.0</span><span class="n">G</span> <span class="mi">1019</span><span class="n">M</span>  <span class="mi">907</span><span class="n">M</span>  <span class="mi">53</span><span class="o">%</span> <span class="o">/</span>
-<span class="n">devtmpfs</span>        <span class="mi">913</span><span class="n">M</span>  <span class="mf">4.0</span><span class="n">K</span>  <span class="mi">913</span><span class="n">M</span>   <span class="mi">1</span><span class="o">%</span> <span class="o">/</span><span class="n">dev</span>
-<span class="n">none</span>            <span class="mf">4.0</span><span class="n">K</span>     <span class="mi">0</span>  <span class="mf">4.0</span><span class="n">K</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">fs</span><span class="o">/</span><span class="n">cgroup</span>
-<span class="n">none</span>            <span class="mi">183</span><span class="n">M</span>  <span class="mi">160</span><span class="n">K</span>  <span class="mi">183</span><span class="n">M</span>   <span class="mi">1</span><span class="o">%</span> <span class="o">/</span><span class="n">run</span>
-<span class="n">none</span>            <span class="mf">5.0</span><span class="n">M</span>     <span class="mi">0</span>  <span class="mf">5.0</span><span class="n">M</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">lock</span>
-<span class="n">none</span>            <span class="mi">913</span><span class="n">M</span>     <span class="mi">0</span>  <span class="mi">913</span><span class="n">M</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">shm</span>
-<span class="n">none</span>            <span class="mi">100</span><span class="n">M</span>     <span class="mi">0</span>  <span class="mi">100</span><span class="n">M</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">user</span>
+<div class="highlight"><pre><span></span>$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       <span class="m">2</span>.0G 1019M  907M  <span class="m">53</span>% /
+devtmpfs        913M  <span class="m">4</span>.0K  913M   <span class="m">1</span>% /dev
+none            <span class="m">4</span>.0K     <span class="m">0</span>  <span class="m">4</span>.0K   <span class="m">0</span>% /sys/fs/cgroup
+none            183M  160K  183M   <span class="m">1</span>% /run
+none            <span class="m">5</span>.0M     <span class="m">0</span>  <span class="m">5</span>.0M   <span class="m">0</span>% /run/lock
+none            913M     <span class="m">0</span>  913M   <span class="m">0</span>% /run/shm
+none            100M     <span class="m">0</span>  100M   <span class="m">0</span>% /run/user
 </pre></div>
 <p>不对哪,肿么只有2G 的空间?</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">sudo</span> <span class="n">fdisk</span> <span class="o">-</span><span class="n">l</span>
+<div class="highlight"><pre><span></span>$ sudo fdisk -l
 
-<span class="n">Disk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nand</span><span class="o">:</span> <span class="mi">7700</span> <span class="n">MB</span><span class="p">,</span> <span class="mi">7700742144</span> <span class="n">bytes</span>
-<span class="mi">255</span> <span class="n">heads</span><span class="p">,</span> <span class="mi">63</span> <span class="n">sectors</span><span class="o">/</span><span class="n">track</span><span class="p">,</span> <span class="mi">936</span> <span class="n">cylinders</span><span class="p">,</span> <span class="n">total</span> <span class="mi">15040512</span> <span class="n">sectors</span>
-<span class="n">Units</span> <span class="o">=</span> <span class="n">sectors</span> <span class="n">of</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">512</span> <span class="o">=</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">Sector</span> <span class="n">size</span> <span class="p">(</span><span class="n">logical</span><span class="o">/</span><span class="n">physical</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">size</span> <span class="p">(</span><span class="n">minimum</span><span class="o">/</span><span class="n">optimal</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">Disk</span> <span class="n">identifier</span><span class="o">:</span> <span class="mh">0x00000000</span>
+Disk /dev/nand: <span class="m">7700</span> MB, <span class="m">7700742144</span> bytes
+<span class="m">255</span> heads, <span class="m">63</span> sectors/track, <span class="m">936</span> cylinders, total <span class="m">15040512</span> sectors
+<span class="nv">Units</span> <span class="o">=</span> sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
+Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+Disk identifier: 0x00000000
 
-<span class="n">Disk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nand</span> <span class="n">doesn</span><span class="err">'</span><span class="n">t</span> <span class="n">contain</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">partition</span> <span class="n">table</span>
+Disk /dev/nand doesn<span class="s1">'t contain a valid partition table</span>
 
-<span class="n">Disk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nanda</span><span class="o">:</span> <span class="mi">67</span> <span class="n">MB</span><span class="p">,</span> <span class="mi">67108864</span> <span class="n">bytes</span>
-<span class="mi">255</span> <span class="n">heads</span><span class="p">,</span> <span class="mi">63</span> <span class="n">sectors</span><span class="o">/</span><span class="n">track</span><span class="p">,</span> <span class="mi">8</span> <span class="n">cylinders</span><span class="p">,</span> <span class="n">total</span> <span class="mi">131072</span> <span class="n">sectors</span>
-<span class="n">Units</span> <span class="o">=</span> <span class="n">sectors</span> <span class="n">of</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">512</span> <span class="o">=</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">Sector</span> <span class="n">size</span> <span class="p">(</span><span class="n">logical</span><span class="o">/</span><span class="n">physical</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">size</span> <span class="p">(</span><span class="n">minimum</span><span class="o">/</span><span class="n">optimal</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">Disk</span> <span class="n">identifier</span><span class="o">:</span> <span class="mh">0x00000000</span>
+<span class="s1">Disk /dev/nanda: 67 MB, 67108864 bytes</span>
+<span class="s1">255 heads, 63 sectors/track, 8 cylinders, total 131072 sectors</span>
+<span class="s1">Units = sectors of 1 * 512 = 512 bytes</span>
+<span class="s1">Sector size (logical/physical): 512 bytes / 512 bytes</span>
+<span class="s1">I/O size (minimum/optimal): 512 bytes / 512 bytes</span>
+<span class="s1">Disk identifier: 0x00000000</span>
 
-     <span class="n">Device</span> <span class="n">Boot</span>      <span class="n">Start</span>         <span class="n">End</span>      <span class="n">Blocks</span>   <span class="n">Id</span>  <span class="n">System</span>
+<span class="s1">     Device Boot      Start         End      Blocks   Id  System</span>
 
-<span class="n">Disk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nandb</span><span class="o">:</span> <span class="mi">2147</span> <span class="n">MB</span><span class="p">,</span> <span class="mi">2147483648</span> <span class="n">bytes</span>
-<span class="mi">255</span> <span class="n">heads</span><span class="p">,</span> <span class="mi">63</span> <span class="n">sectors</span><span class="o">/</span><span class="n">track</span><span class="p">,</span> <span class="mi">261</span> <span class="n">cylinders</span><span class="p">,</span> <span class="n">total</span> <span class="mi">4194304</span> <span class="n">sectors</span>
-<span class="n">Units</span> <span class="o">=</span> <span class="n">sectors</span> <span class="n">of</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">512</span> <span class="o">=</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">Sector</span> <span class="n">size</span> <span class="p">(</span><span class="n">logical</span><span class="o">/</span><span class="n">physical</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">size</span> <span class="p">(</span><span class="n">minimum</span><span class="o">/</span><span class="n">optimal</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">Disk</span> <span class="n">identifier</span><span class="o">:</span> <span class="mh">0x00000000</span>
+<span class="s1">Disk /dev/nandb: 2147 MB, 2147483648 bytes</span>
+<span class="s1">255 heads, 63 sectors/track, 261 cylinders, total 4194304 sectors</span>
+<span class="s1">Units = sectors of 1 * 512 = 512 bytes</span>
+<span class="s1">Sector size (logical/physical): 512 bytes / 512 bytes</span>
+<span class="s1">I/O size (minimum/optimal): 512 bytes / 512 bytes</span>
+<span class="s1">Disk identifier: 0x00000000</span>
 
-<span class="n">Disk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nandb</span> <span class="n">doesn</span><span class="err">'</span><span class="n">t</span> <span class="n">contain</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">partition</span> <span class="n">table</span>
+<span class="s1">Disk /dev/nandb doesn'</span>t contain a valid partition table
 
-<span class="n">Disk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nandc</span><span class="o">:</span> <span class="mi">5469</span> <span class="n">MB</span><span class="p">,</span> <span class="mi">5469372416</span> <span class="n">bytes</span>
-<span class="mi">255</span> <span class="n">heads</span><span class="p">,</span> <span class="mi">63</span> <span class="n">sectors</span><span class="o">/</span><span class="n">track</span><span class="p">,</span> <span class="mi">664</span> <span class="n">cylinders</span><span class="p">,</span> <span class="n">total</span> <span class="mi">10682368</span> <span class="n">sectors</span>
-<span class="n">Units</span> <span class="o">=</span> <span class="n">sectors</span> <span class="n">of</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">512</span> <span class="o">=</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">Sector</span> <span class="n">size</span> <span class="p">(</span><span class="n">logical</span><span class="o">/</span><span class="n">physical</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">size</span> <span class="p">(</span><span class="n">minimum</span><span class="o">/</span><span class="n">optimal</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">512</span> <span class="n">bytes</span>
-<span class="n">Disk</span> <span class="n">identifier</span><span class="o">:</span> <span class="mh">0x00000000</span>
+Disk /dev/nandc: <span class="m">5469</span> MB, <span class="m">5469372416</span> bytes
+<span class="m">255</span> heads, <span class="m">63</span> sectors/track, <span class="m">664</span> cylinders, total <span class="m">10682368</span> sectors
+<span class="nv">Units</span> <span class="o">=</span> sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
+Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+Disk identifier: 0x00000000
 
-<span class="n">Disk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nandc</span> <span class="n">doesn</span><span class="err">'</span><span class="n">t</span> <span class="n">contain</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">partition</span> <span class="n">table</span>
+Disk /dev/nandc doesn<span class="err">'</span>t contain a valid partition table
 </pre></div>
 <p>果然有 <code>/dev/nandc</code> 没有挂上;</p>
 <p>于是,先建立文件系统:</p>
-<div class="highlight"><pre>mkfs.ext4 /dev/nandc
+<div class="highlight"><pre><span></span>mkfs.ext4 /dev/nandc
 mke2fs 1.42.5 (29-Jul-2012)
 Filesystem label=
 OS type: Linux
@@ -373,7 +373,7 @@ done
 Writing superblocks and filesystem accounting information: done
 </pre></div>
 <p>然后,不折腾,直接使用: <code>/etc/rc.local</code></p>
-<div class="highlight"><pre><span class="n">sudo</span> <span class="n">mount</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nandc</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">nandc</span>
+<div class="highlight"><pre><span></span>sudo mount /dev/nandc /mnt/nandc
 </pre></div>
 <p>追加一行,完成! 这样重启时,将在最后一刻重新挂接上丢失的分区</p>
 <h3 id="_6">其它<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>

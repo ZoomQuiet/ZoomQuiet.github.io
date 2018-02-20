@@ -186,24 +186,24 @@
 <p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
 <h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>C样:</p>
-<div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight"><pre><span></span>i = 0
+while i &lt; len(my_list):
+    v = my_list[i]
+    print v
+    i += 1
 </pre></div>
 <p>偏门:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
+<div class="highlight"><pre><span></span>for i in range(len(my_list)):
+    v = my_list[i]
+    print v
 </pre></div>
 <p>蠎样:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">v</span> <span class="n">in</span> <span class="n">my_list</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">v</span>
+<div class="highlight"><pre><span></span>for v in my_list:
+    print v
 </pre></div>
 <p>模式:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">name</span> <span class="n">in</span> <span class="n">iterable</span><span class="o">:</span>
-    <span class="n">statements</span>
+<div class="highlight"><pre><span></span>for name in iterable:
+    statements
 </pre></div>
 <ul>
 <li>可 <code>iterable</code> 的对象可以生成值流</li>
@@ -212,33 +212,33 @@
 <li>Python 中太多对象可以直接迭代的…</li>
 </ul>
 <h3 id="list-elements">list ⇒ elements<a class="headerlink" href="#list-elements" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">e</span> <span class="n">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">e</span>
+<div class="highlight"><pre><span></span>for e in [1, 2, 3, 4]:
+    print e
 
-<span class="mi">1</span>
-<span class="mi">2</span>
-<span class="mi">3</span>
-<span class="mi">4</span>
+1
+2
+3
+4
 </pre></div>
 <h3 id="strings-characters">Strings ⇒ characters<a class="headerlink" href="#strings-characters" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">c</span> <span class="n">in</span> <span class="s">"Hello"</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">c</span>
+<div class="highlight"><pre><span></span>for c in "Hello":
+    print c
 
-<span class="n">H</span>
-<span class="n">e</span>
-<span class="n">l</span>
-<span class="n">l</span>
-<span class="n">o</span>
+H
+e
+l
+l
+o
 </pre></div>
 <h3 id="dicts-keys">Dicts ⇒ keys<a class="headerlink" href="#dicts-keys" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">d</span> <span class="o">=</span> <span class="p">{</span> <span class="sc">'a'</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="sc">'b'</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="sc">'c'</span><span class="o">:</span> <span class="mi">3</span> <span class="p">}</span>
+<div class="highlight"><pre><span></span>d = { 'a': 1,  'b': 2,  'c': 3 }
 
-<span class="k">for</span> <span class="n">k</span> <span class="n">in</span> <span class="n">d</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">k</span>
+for k in d:
+    print k
 
-<span class="n">a</span>
-<span class="n">c</span>
-<span class="n">b</span>
+a
+c
+b
 </pre></div>
 <ul>
 <li>当然顺序是没有的</li>
@@ -250,241 +250,241 @@
 </li>
 </ul>
 <h3 id="files-lines">Files ⇒ lines<a class="headerlink" href="#files-lines" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="s">"gettysburg.txt"</span><span class="p">)</span> <span class="n">as</span> <span class="n">f</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="n">in</span> <span class="n">f</span><span class="o">:</span>
-        <span class="n">print</span> <span class="n">repr</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>with open("gettysburg.txt") as f:
+    for line in f:
+        print repr(line)
 
-<span class="err">'</span><span class="n">Four</span><span class="o">-</span><span class="n">score</span> <span class="n">and</span> <span class="n">seven</span> <span class="n">years</span> <span class="n">ago</span><span class="p">,</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-<span class="err">'</span><span class="n">our</span> <span class="n">fathers</span> <span class="n">brought</span> <span class="n">forth</span> <span class="n">on</span> <span class="n">this</span> <span class="n">continent</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-<span class="err">'</span><span class="n">a</span> <span class="n">new</span> <span class="n">nation</span><span class="p">,</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-<span class="err">'</span><span class="n">conceived</span> <span class="n">in</span> <span class="n">liberty</span><span class="p">,</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-<span class="err">'</span><span class="n">and</span> <span class="n">dedicated</span> <span class="n">to</span> <span class="n">the</span> <span class="n">proposition</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-<span class="err">'</span><span class="n">that</span> <span class="n">all</span> <span class="n">men</span> <span class="n">are</span> <span class="n">created</span> <span class="n">equal</span><span class="p">.</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
+'Four-score and seven years ago,\n'
+'our fathers brought forth on this continent\n'
+'a new nation,\n'
+'conceived in liberty,\n'
+'and dedicated to the proposition\n'
+'that all men are created equal.\n'
 </pre></div>
 <h3 id="_2">标准库中有趣的迭代<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
 <p>正则表达式:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">match</span> <span class="n">in</span> <span class="n">re</span><span class="p">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span> <span class="n">once</span> <span class="k">for</span> <span class="n">each</span> <span class="n">regex</span> <span class="n">match</span><span class="p">...</span>
+<div class="highlight"><pre><span></span>for match in re.finditer(pattern, string):
+    # once for each regex match...
 </pre></div>
 <p>文件系统:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="n">in</span> <span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="err">'</span><span class="o">/</span><span class="n">some</span><span class="o">/</span><span class="n">dir</span><span class="err">'</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span> <span class="n">once</span> <span class="k">for</span> <span class="n">each</span> <span class="n">sub</span><span class="o">-</span><span class="n">directory</span><span class="p">...</span>
+<div class="highlight"><pre><span></span>for root, dirs, files in os.walk('/some/dir'):
+    # once for each sub-directory...
 </pre></div>
 <p>迭代工具:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">num</span> <span class="n">in</span> <span class="n">itertools</span><span class="p">.</span><span class="n">count</span><span class="p">()</span><span class="o">:</span>
-    <span class="err">#</span> <span class="n">once</span> <span class="k">for</span> <span class="n">each</span> <span class="n">integer</span><span class="p">...</span> <span class="n">Infinite</span><span class="o">!</span>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">():</span>
+    <span class="c1"># once for each integer... Infinite!</span>
 
-<span class="n">from</span> <span class="n">itertools</span> <span class="n">import</span> <span class="n">chain</span><span class="p">,</span> <span class="n">repeat</span><span class="p">,</span> <span class="n">cycle</span>
-<span class="n">seq</span> <span class="o">=</span> <span class="n">chain</span><span class="p">(</span><span class="n">repeat</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">cycle</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)))</span>
-<span class="k">for</span> <span class="n">num</span> <span class="n">in</span> <span class="n">seq</span><span class="o">:</span>
-    <span class="err">#</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">...</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span><span class="p">,</span> <span class="n">repeat</span><span class="p">,</span> <span class="n">cycle</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">chain</span><span class="p">(</span><span class="n">repeat</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">cycle</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)))</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
+    <span class="c1"># 17, 17, 17, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, ...</span>
 </pre></div>
 <h3 id="_3">其它的迭代形式<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">new_list</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>new_list = list(iterable)
 
-<span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="n">in</span> <span class="n">iterable</span><span class="p">]</span>
+results = [f(x) for x in iterable]
 
-<span class="n">total</span> <span class="o">=</span> <span class="n">sum</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+total = sum(iterable)
 
-<span class="n">smallest</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
-<span class="n">largest</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+smallest = min(iterable)
+largest = max(iterable)
 
-<span class="n">combined</span> <span class="o">=</span> <span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+combined = "".join(iterable)
 </pre></div>
 <h2 id="_4">基本设问<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <h3 id="q">Q: 如何获得索引号?<a class="headerlink" href="#q" title="Permanent link">¶</a></h3>
 <p>别:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
+<div class="highlight"><pre><span></span>for i in range(len(my_list)):
+    v = my_list[i]
+    print i, v
 </pre></div>
 <p>赞:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="n">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
+<div class="highlight"><pre><span></span>for i, v in enumerate(my_list):
+    print i, v
 </pre></div>
 <h4 id="enumerate">enumerate() 制造好用的值对<a class="headerlink" href="#enumerate" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Eiffel Tower"</span><span class="p">,</span> <span class="s">"Empire State"</span><span class="p">,</span> <span class="s">"Sears Tower"</span><span class="p">]</span>
-<span class="n">list</span><span class="p">(</span><span class="n">enumerate</span><span class="p">(</span><span class="n">names</span><span class="p">))</span>
+<div class="highlight"><pre><span></span>names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+list(enumerate(names))
 
-<span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="err">'</span><span class="n">Eiffel</span> <span class="n">Tower</span><span class="err">'</span><span class="p">),</span> 
- <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="err">'</span><span class="n">Empire</span> <span class="n">State</span><span class="err">'</span><span class="p">),</span> 
- <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="err">'</span><span class="n">Sears</span> <span class="n">Tower</span><span class="err">'</span><span class="p">)]</span>
+[(0, 'Eiffel Tower'), 
+ (1, 'Empire State'), 
+ (2, 'Sears Tower')]
 
-<span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">name</span> <span class="n">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">names</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">num</span><span class="p">,</span> <span class="n">name</span>
+for num, name in enumerate(names):
+    print num, name
 
-<span class="mi">0</span> <span class="n">Eiffel</span> <span class="n">Tower</span>
-<span class="mi">1</span> <span class="n">Empire</span> <span class="n">State</span>
-<span class="mi">2</span> <span class="n">Sears</span> <span class="n">Tower</span>
+0 Eiffel Tower
+1 Empire State
+2 Sears Tower
 </pre></div>
 <h4 id="vs">迭代 vs 索引<a class="headerlink" href="#vs" title="Permanent link">¶</a></h4>
 <p>受限:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>    <span class="err">#</span> <span class="n">indexing</span><span class="o">!</span>
-    <span class="n">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
+<div class="highlight"><pre><span></span>for i in range(len(my_list)):
+    v = my_list[i]    # indexing!
+    print i, v
 </pre></div>
 <p>更强:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="n">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
+<div class="highlight"><pre><span></span>for i, v in enumerate(iterable):
+    print i, v
 
-<span class="k">for</span> <span class="n">linenum</span><span class="p">,</span> <span class="n">line</span> <span class="n">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span><span class="p">...</span>
+for linenum, line in enumerate(f, start=1):
+    #...
 </pre></div>
 <p>C样坏形:</p>
-<div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">v</span> <span class="n">in</span> <span class="n">iterable</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight"><pre><span></span>i = 0
+for v in iterable:
+    print i, v
+    i += 1
 </pre></div>
 <h3 id="q_1">Q: 如何对两个列表循环?<a class="headerlink" href="#q_1" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Eiffel Tower"</span><span class="p">,</span> <span class="s">"Empire State"</span><span class="p">,</span> <span class="s">"Sears Tower"</span><span class="p">]</span>
-<span class="n">heights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">324</span><span class="p">,</span> <span class="mi">381</span><span class="p">,</span> <span class="mi">442</span><span class="p">]</span>
+<div class="highlight"><pre><span></span>names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+heights = [324, 381, 442]
 
-<span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">names</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">height</span> <span class="o">=</span> <span class="n">heights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="s">"%s: %s meters"</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+for i in range(len(names)):
+    name = names[i]
+    height = heights[i]
+    print "%s: %s meters" % (name, height)
 
-<span class="n">Eiffel</span> <span class="n">Tower</span><span class="o">:</span> <span class="mi">324</span> <span class="n">meters</span>
-<span class="n">Empire</span> <span class="n">State</span><span class="o">:</span> <span class="mi">381</span> <span class="n">meters</span>
-<span class="n">Sears</span> <span class="n">Tower</span><span class="o">:</span> <span class="mi">442</span> <span class="n">meters</span>
+Eiffel Tower: 324 meters
+Empire State: 381 meters
+Sears Tower: 442 meters
 </pre></div>
 <h4 id="zip">zip() 生成弱对关系循环<a class="headerlink" href="#zip" title="Permanent link">¶</a></h4>
 <p>将一对循环,变成一个流循环:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">height</span> <span class="n">in</span> <span class="n">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">heights</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="s">"%s: %s meters"</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>for name, height in zip(names, heights):
+    print "%s: %s meters" % (name, height)
 
-<span class="n">Eiffel</span> <span class="n">Tower</span><span class="o">:</span> <span class="mi">324</span> <span class="n">meters</span>
-<span class="n">Empire</span> <span class="n">State</span><span class="o">:</span> <span class="mi">381</span> <span class="n">meters</span>
-<span class="n">Sears</span> <span class="n">Tower</span><span class="o">:</span> <span class="mi">442</span> <span class="n">meters</span>
+Eiffel Tower: 324 meters
+Empire State: 381 meters
+Sears Tower: 442 meters
 </pre></div>
 <h4 id="dict">dict() 是接收一对流的<a class="headerlink" href="#dict" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Eiffel Tower"</span><span class="p">,</span> <span class="s">"Empire State"</span><span class="p">,</span> <span class="s">"Sears Tower"</span><span class="p">]</span>
-<span class="n">heights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">324</span><span class="p">,</span> <span class="mi">381</span><span class="p">,</span> <span class="mi">442</span><span class="p">]</span>
+<div class="highlight"><pre><span></span>names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+heights = [324, 381, 442]
 
-<span class="n">dict</span><span class="p">(</span><span class="n">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">heights</span><span class="p">))</span>
+dict(zip(names, heights))
 
-<span class="p">{</span><span class="err">'</span><span class="n">Empire</span> <span class="n">State</span><span class="err">'</span><span class="o">:</span> <span class="mi">381</span><span class="p">,</span> 
- <span class="err">'</span><span class="n">Sears</span> <span class="n">Tower</span><span class="err">'</span><span class="o">:</span> <span class="mi">442</span><span class="p">,</span> 
- <span class="err">'</span><span class="n">Eiffel</span> <span class="n">Tower</span><span class="err">'</span><span class="o">:</span> <span class="mi">324</span><span class="p">}</span>
+{'Empire State': 381, 
+ 'Sears Tower': 442, 
+ 'Eiffel Tower': 324}
 </pre></div>
 <h4 id="_5">最赞<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">tall_buildings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s">"Empire State"</span><span class="o">:</span> <span class="mi">381</span><span class="p">,</span> <span class="s">"Sears Tower"</span><span class="o">:</span> <span class="mi">442</span><span class="p">,</span>
-  <span class="s">"Burj Khalifa"</span><span class="o">:</span> <span class="mi">828</span><span class="p">,</span> <span class="s">"Taipei 101"</span><span class="o">:</span> <span class="mi">509</span><span class="p">,</span>
-  <span class="p">}</span>
+<div class="highlight"><pre><span></span>tall_buildings = {
+  "Empire State": 381, "Sears Tower": 442,
+  "Burj Khalifa": 828, "Taipei 101": 509,
+  }
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="n">max</span><span class="p">(</span><span class="n">tall_buildings</span><span class="p">.</span><span class="n">values</span><span class="p">())</span>
-<span class="mi">828</span>
+&gt;&gt;&gt; print max(tall_buildings.values())
+828
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="n">max</span><span class="p">(</span><span class="n">tall_buildings</span><span class="p">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">lambda</span> <span class="n">b</span><span class="o">:</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="p">(</span><span class="err">'</span><span class="n">Burj</span> <span class="n">Khalifa</span><span class="err">'</span><span class="p">,</span> <span class="mi">828</span><span class="p">)</span>
+&gt;&gt;&gt; print max(tall_buildings.items(), key=lambda b: b[1])
+('Burj Khalifa', 828)
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="n">max</span><span class="p">(</span><span class="n">tall_buildings</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">tall_buildings</span><span class="p">.</span><span class="n">get</span><span class="p">)</span>
-<span class="err">'</span><span class="n">Burj</span> <span class="n">Khalifa</span><span class="err">'</span>
+&gt;&gt;&gt; print max(tall_buildings, key=tall_buildings.get)
+'Burj Khalifa'
 </pre></div>
 <h2 id="_6">自制迭代<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
 <h3 id="_7">生成自有迭代<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">72</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">n</span> <span class="n">in</span> <span class="n">nums</span><span class="o">:</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">:</span>
-        <span class="n">do_something</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>nums = [88, 73, 92, 72, 40, 38, 25, 20, 90, 72]
+for n in nums:
+    if n % 2 == 0:
+        do_something(n)
 
-<span class="n">def</span> <span class="n">evens</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">them</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">n</span> <span class="n">in</span> <span class="n">stream</span><span class="o">:</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">:</span>
-            <span class="n">them</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">them</span>
+def evens(stream):
+    them = []
+    for n in stream:
+        if n % 2 == 0:
+            them.append(n)
+    return them
 
-<span class="k">for</span> <span class="n">n</span> <span class="n">in</span> <span class="n">evens</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">do_something</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+for n in evens(nums):
+    do_something(n)
 </pre></div>
 <h3 id="_8">生成器<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
 <p>函式返回一个值 —&gt; 生成器生成一个流</p>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">hello_world</span><span class="p">()</span><span class="o">:</span>
-    <span class="n">yield</span> <span class="s">"Hello"</span>
-    <span class="n">yield</span> <span class="s">"world"</span>
+<div class="highlight"><pre><span></span>def hello_world():
+    yield "Hello"
+    yield "world"
 
-<span class="k">for</span> <span class="n">x</span> <span class="n">in</span> <span class="n">hello_world</span><span class="p">()</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">x</span>
+for x in hello_world():
+    print x
 
-<span class="n">Hello</span>
-<span class="n">world</span>
+Hello
+world
 </pre></div>
 <h4 id="evens-generator">Evens generator<a class="headerlink" href="#evens-generator" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">evens</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">n</span> <span class="n">in</span> <span class="n">stream</span><span class="o">:</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">:</span>
-            <span class="n">yield</span> <span class="n">n</span>
+<div class="highlight"><pre><span></span>def evens(stream):
+    for n in stream:
+        if n % 2 == 0:
+            yield n
 
-<span class="k">for</span> <span class="n">n</span> <span class="n">in</span> <span class="n">evens</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">do_something</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+for n in evens(nums):
+    do_something(n)
 </pre></div>
 <h4 id="_9">对迭代提炼<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
 <p>~ Abstracting your iteration</p>
-<div class="highlight"><pre><span class="n">f</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="s">"my_config.ini"</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">line</span> <span class="n">in</span> <span class="n">f</span><span class="o">:</span>
-    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="sc">'#'</span><span class="p">)</span><span class="o">:</span>
-        <span class="err">#</span> <span class="n">A</span> <span class="n">comment</span> <span class="n">line</span><span class="p">,</span> <span class="n">skip</span> <span class="n">it</span><span class="p">.</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">not</span> <span class="n">line</span><span class="o">:</span>
-        <span class="err">#</span> <span class="n">A</span> <span class="n">blank</span> <span class="n">line</span><span class="p">,</span> <span class="n">skip</span> <span class="n">it</span><span class="p">.</span>
-        <span class="k">continue</span>
+<div class="highlight"><pre><span></span>f = open("my_config.ini")
+for line in f:
+    line = line.strip()
+    if line.startswith('#'):
+        # A comment line, skip it.
+        continue
+    if not line:
+        # A blank line, skip it.
+        continue
 
-    <span class="err">#</span> <span class="n">An</span> <span class="n">interesting</span> <span class="n">line</span><span class="p">.</span>
-    <span class="n">do_something</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    # An interesting line.
+    do_something(line)
 </pre></div>
 <p>自制生成器:</p>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">interesting_lines</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="n">in</span> <span class="n">f</span><span class="o">:</span>
-        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="sc">'#'</span><span class="p">)</span><span class="o">:</span>
-            <span class="k">continue</span>
-        <span class="k">if</span> <span class="n">not</span> <span class="n">line</span><span class="o">:</span>
-            <span class="k">continue</span>
-        <span class="n">yield</span> <span class="n">line</span>
+<div class="highlight"><pre><span></span>def interesting_lines(f):
+    for line in f:
+        line = line.strip()
+        if line.startswith('#'):
+            continue
+        if not line:
+            continue
+        yield line
 
-<span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="s">"my_config.ini"</span><span class="p">)</span> <span class="n">as</span> <span class="n">f</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="n">in</span> <span class="n">interesting_lines</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">do_something</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+with open("my_config.ini") as f:
+    for line in interesting_lines(f):
+        do_something(line)
 
-<span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="s">"my_other.dat"</span><span class="p">)</span> <span class="n">as</span> <span class="n">f2</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="n">in</span> <span class="n">interesting_lines</span><span class="p">(</span><span class="n">f2</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">do_something_else</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+with open("my_other.dat") as f2:
+    for line in interesting_lines(f2):
+        do_something_else(line)
 </pre></div>
 <h3 id="q_2">Q: 如何从两层循环中退出?<a class="headerlink" href="#q_2" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">row</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">col</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">width</span><span class="p">)</span><span class="o">:</span>
+<div class="highlight"><pre><span></span>for row in range(height):
+    for col in range(width):
 
-        <span class="n">value</span> <span class="o">=</span> <span class="n">spreadsheet</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
-        <span class="n">do_something</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        value = spreadsheet.get_value(col, row)
+        do_something(value)
 
-        <span class="k">if</span> <span class="n">this_is_my_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">:</span>
-            <span class="k">break</span>   <span class="err">#</span> <span class="err">←</span> <span class="o">???</span>
+        if this_is_my_value(value):
+            break   # ← ???
 </pre></div>
 <h4 id="a">A: 合并循环<a class="headerlink" href="#a" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">range_2d</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span><span class="o">:</span>
-    <span class="s">"""Produce a stream of two-D coordinates."""</span>
-    <span class="k">for</span> <span class="n">y</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">for</span> <span class="n">x</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">width</span><span class="p">)</span><span class="o">:</span>
-            <span class="n">yield</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+<div class="highlight"><pre><span></span>def range_2d(width, height):
+    """Produce a stream of two-D coordinates."""
+    for y in range(height):
+        for x in range(width):
+            yield x, y
 
-<span class="k">for</span> <span class="n">col</span><span class="p">,</span> <span class="n">row</span> <span class="n">in</span> <span class="n">range_2d</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">value</span> <span class="o">=</span> <span class="n">spreadsheet</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
-    <span class="n">do_something</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+for col, row in range_2d(width, height):
+    value = spreadsheet.get_value(col, row)
+    do_something(value)
 
-    <span class="k">if</span> <span class="n">this_is_my_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">break</span>
+    if this_is_my_value(value):
+        break
 </pre></div>
 <h4 id="better">Better: 单元迭代<a class="headerlink" href="#better" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">cell</span> <span class="n">in</span> <span class="n">spreadsheet</span><span class="p">.</span><span class="n">cells</span><span class="p">()</span><span class="o">:</span>
-    <span class="n">value</span> <span class="o">=</span> <span class="n">cell</span><span class="p">.</span><span class="n">get_value</span><span class="p">()</span>
-    <span class="n">do_something</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>for cell in spreadsheet.cells():
+    value = cell.get_value()
+    do_something(value)
 
-    <span class="k">if</span> <span class="n">this_is_my_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">break</span>
+    if this_is_my_value(value):
+        break
 </pre></div>
 <h2 id="_10">底层迭代<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
 <ul>
@@ -499,45 +499,45 @@ value = next(iterator) …</p>
 <p>迭代器仅有一个操作: <code>next()</code></p>
 <h3 id="_11">迭代基层操作<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
 <p>有时很有用:</p>
-<div class="highlight"><pre><span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="s">"blah.dat"</span><span class="p">)</span> <span class="n">as</span> <span class="n">f</span><span class="o">:</span>
-    <span class="err">#</span> <span class="n">Read</span> <span class="n">the</span> <span class="n">first</span> <span class="n">line</span>
-    <span class="n">header_line</span> <span class="o">=</span> <span class="n">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>with open("blah.dat") as f:
+    # Read the first line
+    header_line = next(f)
 
-    <span class="err">#</span> <span class="n">Read</span> <span class="n">the</span> <span class="n">rest</span>
-    <span class="k">for</span> <span class="n">data_line</span> <span class="n">in</span> <span class="n">f</span><span class="o">:</span>
-        <span class="err">#</span> <span class="p">...</span>
+    # Read the rest
+    for data_line in f:
+        # ...
 </pre></div>
 <h3 id="_12">构造自制对象可迭代<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">ToDoList</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">tasks</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">ToDoList</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">tasks</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="n">def</span> <span class="n">__iter__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="n">iter</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">tasks</span><span class="p">)</span>
+    <span class="nx">def</span> <span class="nx">__iter__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="nx">iter</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">tasks</span><span class="p">)</span>
 
-<span class="n">todo</span> <span class="o">=</span> <span class="n">ToDoList</span><span class="p">()</span>
+<span class="nx">todo</span> <span class="o">=</span> <span class="nx">ToDoList</span><span class="p">()</span>
 <span class="p">...</span>
-<span class="k">for</span> <span class="n">task</span> <span class="n">in</span> <span class="n">todo</span><span class="o">:</span>
+<span class="k">for</span> <span class="nx">task</span> <span class="k">in</span> <span class="nx">todo</span><span class="o">:</span>
     <span class="err">#</span> <span class="p">...</span>
 </pre></div>
 <ul>
 <li>仅仅需要定义 <code>__iter__()</code></li>
 </ul>
 <h4 id="iter"><strong>iter</strong> 生成器<a class="headerlink" href="#iter" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">ToDoList</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">tasks</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">ToDoList</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">tasks</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="n">def</span> <span class="n">__iter__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">for</span> <span class="n">task</span> <span class="n">in</span> <span class="n">self</span><span class="p">.</span><span class="n">tasks</span><span class="o">:</span>
-            <span class="k">if</span> <span class="n">not</span> <span class="n">task</span><span class="p">.</span><span class="n">done</span><span class="o">:</span>
-                <span class="n">yield</span> <span class="n">task</span>
+    <span class="nx">def</span> <span class="nx">__iter__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">for</span> <span class="nx">task</span> <span class="k">in</span> <span class="nx">self.tasks</span>:
+            <span class="kt">if</span> <span class="nx">not</span> <span class="nx">task.done</span>:
+                <span class="kt">yield</span> <span class="nx">task</span>
 
-    <span class="n">def</span> <span class="n">all</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="n">iter</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">tasks</span><span class="p">)</span>
+    <span class="nx">def</span> <span class="nx">all</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="nx">iter</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">tasks</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">done</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="n">in</span> <span class="n">self</span><span class="p">.</span><span class="n">tasks</span> <span class="k">if</span> <span class="n">t</span><span class="p">.</span><span class="n">done</span><span class="p">)</span>
+    <span class="nx">def</span> <span class="nx">done</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nx">t</span> <span class="k">for</span> <span class="nx">t</span> <span class="k">in</span> <span class="nx">self</span><span class="p">.</span><span class="nx">tasks</span> <span class="k">if</span> <span class="nx">t</span><span class="p">.</span><span class="nx">done</span><span class="p">)</span>
 </pre></div>
 <h2 id="_13">(￣▽￣)<a class="headerlink" href="#_13" title="Permanent link">¶</a></h2>
 <ul>

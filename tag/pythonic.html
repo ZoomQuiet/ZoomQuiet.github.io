@@ -92,24 +92,24 @@
 <p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
 <h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>C样:</p>
-<div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight"><pre><span></span>i = 0
+while i &lt; len(my_list):
+    v = my_list[i]
+    print v
+    i += 1
 </pre></div>
 <p>偏门:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
+<div class="highlight"><pre><span></span>for i in range(len(my_list)):
+    v = my_list[i]
+    print v
 </pre></div>
 <p>蠎样:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">v</span> <span class="n">in</span> <span class="n">my_list</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">v</span>
+<div class="highlight"><pre><span></span>for v in my_list:
+    print v
 </pre></div>
 <p>模式:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">name</span> <span class="n">in</span> <span class="n">iterable</span><span class="o">:</span>
-    <span class="n">statements</span>
+<div class="highlight"><pre><span></span>for name in iterable:
+    statements
 </pre></div>
 <ul>
 <li>可 …</li></ul>

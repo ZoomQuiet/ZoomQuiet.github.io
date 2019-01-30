@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>- Zoom.Quiet</title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2019-01-30T10:10:00+08:00</updated><entry><title>如何持证 (SSL) 开车</title><link href="http://blog.zoomquiet.io/jump-into-ssl.html" rel="alternate"></link><published>2019-01-30T10:10:00+08:00</published><updated>2019-01-30T10:10:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-01-30:/jump-into-ssl.html</id><summary type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg"&gt;Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;被成功安利…&lt;/p&gt;
 &lt;h2 id="goal"&gt;goal&lt;a class="headerlink" href="#goal" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;h2 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;h2 id="summary"&gt;summary&lt;a class="headerlink" href="#summary" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -24,9 +26,10 @@
 &lt;h2 id="refer"&gt;refer&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://yixuan.li/geek/2019/01/21/howToDriveWithHTTPS/"&gt;如何持证 (&lt;span class="caps"&gt;HTTPS&lt;/span&gt;) 开车 · Yixuan&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;[GitHub Pages &lt;span class="caps"&gt;HTTPS&lt;/span&gt; 设置 | 查错指南][https://help.github.com/articles/troubleshooting-custom-domains/]&lt;/li&gt;
-&lt;li&gt;[如何给你的 GitHub Pages 加上 &lt;span class="caps"&gt;HTTPS&lt;/span&gt; 证书 …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;li&gt;[GitHub Pages &lt;span class="caps"&gt;HTTPS&lt;/span&gt; 设置 | 查错指南][https://help.github.com/articles …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg"&gt;Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;被成功安利…&lt;/p&gt;
 &lt;h2 id="goal"&gt;goal&lt;a class="headerlink" href="#goal" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;h2 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;h2 id="summary"&gt;summary&lt;a class="headerlink" href="#summary" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;

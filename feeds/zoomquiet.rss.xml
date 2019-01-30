@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>- Zoom.Quiet</title><link>http://blog.zoomquiet.io/</link><description></description><lastBuildDate>Wed, 30 Jan 2019 10:10:00 +0800</lastBuildDate><item><title>如何持证 (SSL) 开车</title><link>http://blog.zoomquiet.io/jump-into-ssl.html</link><description>
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg"&gt;Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;被成功安利…&lt;/p&gt;
 &lt;h2 id="goal"&gt;goal&lt;a class="headerlink" href="#goal" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;h2 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;h2 id="summary"&gt;summary&lt;a class="headerlink" href="#summary" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -24,8 +26,7 @@
 &lt;h2 id="refer"&gt;refer&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://yixuan.li/geek/2019/01/21/howToDriveWithHTTPS/"&gt;如何持证 (&lt;span class="caps"&gt;HTTPS&lt;/span&gt;) 开车 · Yixuan&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;[GitHub Pages &lt;span class="caps"&gt;HTTPS&lt;/span&gt; 设置 | 查错指南][https://help.github.com/articles/troubleshooting-custom-domains/]&lt;/li&gt;
-&lt;li&gt;[如何给你的 GitHub Pages 加上 &lt;span class="caps"&gt;HTTPS&lt;/span&gt; 证书 …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 30 Jan 2019 10:10:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2019-01-30:/jump-into-ssl.html</guid><category>MAC</category><category>Livin</category><category>SCM</category><category>SSL</category></item><item><title>内圈梗集锦(人工智能简史)书评</title><link>http://blog.zoomquiet.io/180220-book-ai-historic.html</link><description>
+&lt;li&gt;[GitHub Pages &lt;span class="caps"&gt;HTTPS&lt;/span&gt; 设置 | 查错指南][https://help.github.com/articles …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 30 Jan 2019 10:10:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2019-01-30:/jump-into-ssl.html</guid><category>MAC</category><category>Livin</category><category>SCM</category><category>SSL</category></item><item><title>内圈梗集锦(人工智能简史)书评</title><link>http://blog.zoomquiet.io/180220-book-ai-historic.html</link><description>
 &lt;p&gt;版权归作者所有,任何形式转载请联系作者. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;作者&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Quiet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;来自豆瓣&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="err"&gt;来源&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//book.douban.com/review/9167418/&lt;/span&gt;

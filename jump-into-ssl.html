@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="jump-into-ssl"/>
             <meta property="og:url" content="http://blog.zoomquiet.io/jump-into-ssl.html"/>
-            <meta property="og:description" content="BG¶ Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国 被成功安利… goal¶ 因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 *-pages 服务快速发布: github/gitlab 为核心 免费 SSL 认证为基础 最好能一次配置长期可用 logging¶ summary¶ DNSPod 彻底腐化了, 能迁走就迁吧… gitlab 比 github 要 hardcore 很多 但是, 乐趣也更多也 嫑怕嫑怕嫑怕 官方文档, 总是最合理的 一定要安心静静读一遍, 比查找多少中文说明都好用 所以, 俺这篇, 也纯粹是私人 BDD, 包含一些隐坑, 不好意思提了 就渴望您也撞到 好一起呵呵… refer¶ 如何持证 (HTTPS …"/>
+            <meta property="og:description" content="BG¶ Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国 被成功安利… goal¶ 因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 *-pages 服务快速发布: github/gitlab 为核心 免费 SSL 认证为基础 最好能一次配置长期可用 logging¶ gh-pages¶ 原先的: ༄ dig blog.zoomquiet.io +nostats +nocomments +nocmd ; &lt;&lt;&gt;&gt; DiG 9.8.3-P1 &lt;&lt;&gt;&gt; blog.zoomquiet.io +nostats +nocomments +nocmd ;; global options: +cmd ;blog.zoomquiet.io. IN A …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -132,7 +132,11 @@
 <ul>
 <li><a href="#bg"><span class="caps">BG</span></a></li>
 <li><a href="#goal">goal</a></li>
-<li><a href="#logging">logging</a></li>
+<li><a href="#logging">logging</a><ul>
+<li><a href="#gh-pages">gh-pages</a></li>
+<li><a href="#gl-pages">gl-pages</a></li>
+</ul>
+</li>
 <li><a href="#summary">summary</a></li>
 <li><a href="#refer">refer</a></li>
 </ul>
@@ -151,9 +155,63 @@
 <li>最好能一次配置长期可用</li>
 </ul>
 <h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
+<p>原先的:</p>
+<blockquote>
+<p>༄  dig blog.zoomquiet.io +nostats +nocomments +nocmd</p>
+</blockquote>
+<div class="highlight"><pre><span class="p">;</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">DiG</span> <span class="mf">9.8.3</span><span class="o">-</span><span class="n">P1</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span> <span class="o">+</span><span class="n">nostats</span> <span class="o">+</span><span class="n">nocomments</span> <span class="o">+</span><span class="n">nocmd</span>
+<span class="p">;;</span> <span class="n">global</span> <span class="n">options</span><span class="o">:</span> <span class="o">+</span><span class="n">cmd</span>
+<span class="p">;</span><span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>     <span class="n">IN</span>  <span class="n">A</span>
+<span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>  <span class="mi">600</span> <span class="n">IN</span>  <span class="n">CNAME</span>   <span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">3251</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.108.153</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">3251</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.109.153</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">3251</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.110.153</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">3251</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.111.153</span>
+</pre></div>
+<ul>
+<li>暂停原先 <code>CNAME</code> -&gt; <code>ZoomQuiet.github.io.</code></li>
+<li>追加新 <code>A</code> 记录-&gt;<code>185.199.111.153</code></li>
+<li>立即…</li>
+</ul>
+<blockquote>
+<p>༄  dig blog.zoomquiet.io +nostats +nocomments +nocmd</p>
+</blockquote>
+<div class="highlight"><pre><span class="p">;</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">DiG</span> <span class="mf">9.8.3</span><span class="o">-</span><span class="n">P1</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span> <span class="o">+</span><span class="n">nostats</span> <span class="o">+</span><span class="n">nocomments</span> <span class="o">+</span><span class="n">nocmd</span>
+<span class="p">;;</span> <span class="n">global</span> <span class="n">options</span><span class="o">:</span> <span class="o">+</span><span class="n">cmd</span>
+<span class="p">;</span><span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>     <span class="n">IN</span>  <span class="n">A</span>
+<span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>  <span class="mi">600</span> <span class="n">IN</span>  <span class="n">CNAME</span>   <span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">2989</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.111.153</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">2989</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.108.153</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">2989</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.109.153</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">2989</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.110.153</span>
+</pre></div>
+<p><img alt="" src="_images/ssl-gh-pages-alert-cname.png"/></p>
+<h3 id="gl-pages">gl-pages<a class="headerlink" href="#gl-pages" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>༄  dig 101.camp +nostats +nocomments +nocmd</p>
+</blockquote>
+<div class="highlight"><pre><span class="p">;</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">DiG</span> <span class="mf">9.8.3</span><span class="o">-</span><span class="n">P1</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="mf">101.</span><span class="n">camp</span> <span class="o">+</span><span class="n">nostats</span> <span class="o">+</span><span class="n">nocomments</span> <span class="o">+</span><span class="n">nocmd</span>
+<span class="p">;;</span> <span class="n">global</span> <span class="n">options</span><span class="o">:</span> <span class="o">+</span><span class="n">cmd</span>
+<span class="p">;</span><span class="mf">101.</span><span class="n">camp</span><span class="p">.</span>          <span class="n">IN</span>  <span class="n">A</span>
+<span class="mf">101.</span><span class="n">camp</span><span class="p">.</span>       <span class="mi">1799</span>    <span class="n">IN</span>  <span class="n">CNAME</span>   <span class="n">pythonicamp</span><span class="p">.</span><span class="n">gitlab</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>
+<span class="n">pythonicamp</span><span class="p">.</span><span class="n">gitlab</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>  <span class="mi">300</span> <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">35.185.44.232</span>
+<span class="n">gitlab</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>      <span class="mi">48445</span>   <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">ns</span><span class="o">-</span><span class="mf">1116.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">11.</span><span class="n">org</span><span class="p">.</span>
+<span class="n">gitlab</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>      <span class="mi">48445</span>   <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">ns</span><span class="o">-</span><span class="mf">926.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">51.</span><span class="n">net</span><span class="p">.</span>
+<span class="n">gitlab</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>      <span class="mi">48445</span>   <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">ns</span><span class="o">-</span><span class="mf">1697.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">20.</span><span class="n">co</span><span class="p">.</span><span class="n">uk</span><span class="p">.</span>
+<span class="n">gitlab</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>      <span class="mi">48445</span>   <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">ns</span><span class="o">-</span><span class="mf">288.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">36.</span><span class="n">com</span><span class="p">.</span>
+<span class="n">ns</span><span class="o">-</span><span class="mf">288.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">36.</span><span class="n">com</span><span class="p">.</span>   <span class="mi">147125</span>  <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">205.251.193.32</span>
+<span class="n">ns</span><span class="o">-</span><span class="mf">926.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">51.</span><span class="n">net</span><span class="p">.</span>   <span class="mi">48349</span>   <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">205.251.195.158</span>
+<span class="n">ns</span><span class="o">-</span><span class="mf">1116.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">11.</span><span class="n">org</span><span class="p">.</span>  <span class="mi">136520</span>  <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">205.251.196.92</span>
+<span class="n">ns</span><span class="o">-</span><span class="mf">1697.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">20.</span><span class="n">co</span><span class="p">.</span><span class="n">uk</span><span class="p">.</span> <span class="mi">48327</span>  <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">205.251.198.161</span>
+<span class="n">ns</span><span class="o">-</span><span class="mf">288.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">36.</span><span class="n">com</span><span class="p">.</span>   <span class="mi">136726</span>  <span class="n">IN</span>  <span class="n">AAAA</span>    <span class="mi">2600</span><span class="o">:</span><span class="mi">9000</span><span class="o">:</span><span class="mi">5301</span><span class="o">:</span><span class="mi">2000</span><span class="o">::</span><span class="mi">1</span>
+<span class="n">ns</span><span class="o">-</span><span class="mf">926.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">51.</span><span class="n">net</span><span class="p">.</span>   <span class="mi">48349</span>   <span class="n">IN</span>  <span class="n">AAAA</span>    <span class="mi">2600</span><span class="o">:</span><span class="mi">9000</span><span class="o">:</span><span class="mi">5303</span><span class="o">:</span><span class="mf">9e00</span><span class="o">::</span><span class="mi">1</span>
+<span class="n">ns</span><span class="o">-</span><span class="mf">1116.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">11.</span><span class="n">org</span><span class="p">.</span>  <span class="mi">136520</span>  <span class="n">IN</span>  <span class="n">AAAA</span>    <span class="mi">2600</span><span class="o">:</span><span class="mi">9000</span><span class="o">:</span><span class="mi">5304</span><span class="o">:</span><span class="mi">5</span><span class="n">c00</span><span class="o">::</span><span class="mi">1</span>
+<span class="n">ns</span><span class="o">-</span><span class="mf">1697.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">20.</span><span class="n">co</span><span class="p">.</span><span class="n">uk</span><span class="p">.</span> <span class="mi">48327</span>  <span class="n">IN</span>  <span class="n">AAAA</span>    <span class="mi">2600</span><span class="o">:</span><span class="mi">9000</span><span class="o">:</span><span class="mi">5306</span><span class="o">:</span><span class="n">a100</span><span class="o">::</span><span class="mi">1</span>
+</pre></div>
 <h2 id="summary">summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <ul>
-<li>DNSPod 彻底腐化了, 能迁走就迁吧…</li>
+<li>DNSPod 依然是感觉最舒服的 <span class="caps">DNS</span> 管理界面, 可惜彻底被放弃了, 能迁走就迁吧…</li>
 <li>gitlab 比 github 要 hardcore 很多<ul>
 <li>但是, 乐趣也更多也</li>
 </ul>
@@ -172,8 +230,8 @@
 <h2 id="refer">refer<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://yixuan.li/geek/2019/01/21/howToDriveWithHTTPS/">如何持证 (<span class="caps">HTTPS</span>) 开车 · Yixuan</a><ul>
-<li>[GitHub Pages <span class="caps">HTTPS</span> 设置 | 查错指南][https://help.github.com/articles/troubleshooting-custom-domains/]</li>
-<li>[如何给你的 GitHub Pages 加上 <span class="caps">HTTPS</span> 证书][https://help.github.com/articles/securing-your-github-pages-site-with-https/]</li>
+<li><a href="https://help.github.com/articles/troubleshooting-custom-domains/">GitHub Pages <span class="caps">HTTPS</span> 设置 | 查错指南</a></li>
+<li><a href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">如何给你的 GitHub Pages 加上 <span class="caps">HTTPS</span> 证书</a></li>
 </ul>
 </li>
 <li><a href="https://gitlab.com/help/user/project/pages/lets_encrypt_for_gitlab_pages.md">Lets encrypt for gitlab pages · Pages · Project · User · Help · GitLab</a><ul>
@@ -185,7 +243,11 @@
 </ul>
             </div>
             <!-- /.entry-content -->
+
     <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
 <script src="https://utteranc.es/client.js"
         repo="ZoomQuiet/ZoomQuiet.io"
         issue-term="url"
@@ -193,10 +255,7 @@
         crossorigin="anonymous"
         async>
 </script>
-
     <hr />
-    <section class="comments" id="comments">
-        <h2>Comments</h2>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

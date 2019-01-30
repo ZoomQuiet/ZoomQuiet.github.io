@@ -237,11 +237,11 @@
 之后,总是要一步步完成心目中的 家服务器</p>
 <h2 id="_3">系统整顿<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p><span class="caps">CB</span> 自制的 lubuntu 系统,最扯的事儿是:</p>
-<div class="highlight"><pre><span></span>居然
-没有
-默认
-安装
-SSH
+<div class="highlight"><pre><span class="err">居然</span>
+<span class="err">没有</span>
+<span class="err">默认</span>
+<span class="err">安装</span>
+<span class="n">SSH</span>
 </pre></div>
 <p>真心让俺折腾了很久才发现这么奇葩的设计…</p>
 <p>然后进行一系列习惯环境的配置, 特别是:</p>
@@ -282,7 +282,7 @@ $ sudo rm -rf /var/lib/mysql</p>
 </ul>
 <h3 id="utf8"><span class="caps">UTF8</span><a class="headerlink" href="#utf8" title="Permanent link">¶</a></h3>
 <p>默认的: </p>
-<div class="highlight"><pre><span></span>$ locale
+<div class="highlight"><pre><span class="nv">$ </span>locale
 <span class="nv">LANG</span><span class="o">=</span>
 <span class="nv">LANGUAGE</span><span class="o">=</span>
 <span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">"POSIX"</span>
@@ -305,7 +305,7 @@ $ sudo rm -rf /var/lib/mysql</p>
 <li><a href="http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale">修改locale - Ubuntu中文</a></li>
 </ul>
 <p>重启后依然!</p>
-<div class="highlight"><pre><span></span>zoomq@cubietruck:~$ locale
+<div class="highlight"><pre>zoomq@cubietruck:~<span class="nv">$ </span>locale
 <span class="nv">LANG</span><span class="o">=</span>
 <span class="nv">LANGUAGE</span><span class="o">=</span>
 <span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">"POSIX"</span>
@@ -323,7 +323,7 @@ $ sudo rm -rf /var/lib/mysql</p>
 <span class="nv">LC_ALL</span><span class="o">=</span>
 </pre></div>
 <p>但是,从 screen 中进入时,就已经</p>
-<div class="highlight"><pre><span></span>$ locale
+<div class="highlight"><pre><span class="nv">$ </span>locale
 <span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
 <span class="nv">LANGUAGE</span><span class="o">=</span>en_US:en
 <span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">"en_US.UTF-8"</span>
@@ -345,7 +345,7 @@ $ sudo rm -rf /var/lib/mysql</p>
 但是,一般俺只在 Screen 光辉中生存的,所以,不是问题.</p>
 <h2 id="_4">数据迁移<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <p>专门问过高人:</p>
-<div class="highlight"><pre><span></span><span class="n">from</span><span class="o">:</span>  <span class="n">Zoom</span><span class="o">.</span><span class="na">Quiet</span> <span class="o">&lt;</span><span class="n">zoom</span><span class="o">.</span><span class="na">quiet</span><span class="err">@</span><span class="n">gmail</span><span class="o">.</span><span class="na">com</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span class="n">from</span><span class="o">:</span>  <span class="n">Zoom</span><span class="o">.</span><span class="na">Quiet</span> <span class="o">&lt;</span><span class="n">zoom</span><span class="o">.</span><span class="na">quiet</span><span class="err">@</span><span class="n">gmail</span><span class="o">.</span><span class="na">com</span><span class="o">&gt;</span>
 <span class="n">to</span><span class="o">:</span>  <span class="n">shlug</span> <span class="o">&lt;</span><span class="n">shlug</span><span class="err">@</span><span class="n">googlegroups</span><span class="o">.</span><span class="na">com</span><span class="o">&gt;</span>
 <span class="n">date</span><span class="o">:</span>  <span class="n">Mon</span><span class="o">,</span> <span class="n">Jan</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">2014</span> <span class="n">at</span> <span class="mi">4</span><span class="o">:</span><span class="mi">35</span> <span class="n">PM</span>
 <span class="n">subject</span><span class="o">:</span>   <span class="mi">1</span><span class="n">Tb</span> <span class="err">的</span><span class="mf">2.5</span><span class="err">吋盘给</span> <span class="n">Ubuntu</span> <span class="err">用应该选择什么</span><span class="n">FS</span><span class="o">?</span>
@@ -388,21 +388,21 @@ $ sudo rm -rf /var/lib/mysql</p>
 </ul>
 <p>整个 700多G 数据,就这样迁移到了 <span class="caps">CB</span> 控制的两个硬盘共 2T 空间中…</p>
 <h3 id="_5">相关片段<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span>$ cat /proc/partitions
-major minor  <span class="c1">#blocks  name</span>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">cat</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">partitions</span>
+<span class="n">major</span> <span class="n">minor</span>  <span class="err">#</span><span class="n">blocks</span>  <span class="n">name</span>
 
-  <span class="m">93</span>        <span class="m">0</span>    <span class="m">7520256</span> nand
-  <span class="m">93</span>        <span class="m">1</span>      <span class="m">65536</span> nanda
-  <span class="m">93</span>        <span class="m">2</span>    <span class="m">2097152</span> nandb
-  <span class="m">93</span>        <span class="m">3</span>    <span class="m">5341184</span> nandc
-   <span class="m">8</span>        <span class="m">0</span>  <span class="m">976762584</span> sda
-   <span class="m">8</span>       <span class="m">16</span> <span class="m">1953514584</span> sdb
-   <span class="m">8</span>       <span class="m">17</span>     <span class="m">204800</span> sdb1
-   <span class="m">8</span>       <span class="m">18</span>  <span class="m">781380608</span> sdb2
-   <span class="m">8</span>       <span class="m">19</span> <span class="m">1171928064</span> sdb3
+  <span class="mi">93</span>        <span class="mi">0</span>    <span class="mi">7520256</span> <span class="n">nand</span>
+  <span class="mi">93</span>        <span class="mi">1</span>      <span class="mi">65536</span> <span class="n">nanda</span>
+  <span class="mi">93</span>        <span class="mi">2</span>    <span class="mi">2097152</span> <span class="n">nandb</span>
+  <span class="mi">93</span>        <span class="mi">3</span>    <span class="mi">5341184</span> <span class="n">nandc</span>
+   <span class="mi">8</span>        <span class="mi">0</span>  <span class="mi">976762584</span> <span class="n">sda</span>
+   <span class="mi">8</span>       <span class="mi">16</span> <span class="mi">1953514584</span> <span class="n">sdb</span>
+   <span class="mi">8</span>       <span class="mi">17</span>     <span class="mi">204800</span> <span class="n">sdb1</span>
+   <span class="mi">8</span>       <span class="mi">18</span>  <span class="mi">781380608</span> <span class="n">sdb2</span>
+   <span class="mi">8</span>       <span class="mi">19</span> <span class="mi">1171928064</span> <span class="n">sdb3</span>
 
-$ sudo mount.exfat-fuse /dev/sdb2 /mnt/bk2wk
-$ sudo mount.exfat-fuse /dev/sdb3 /mnt/dl4p2p
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">mount</span><span class="p">.</span><span class="n">exfat</span><span class="o">-</span><span class="n">fuse</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb2</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">bk2wk</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">mount</span><span class="p">.</span><span class="n">exfat</span><span class="o">-</span><span class="n">fuse</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb3</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">dl4p2p</span>
 </pre></div>
 <p>但是, 远程 sshfs 后目录只读!?</p>
 <ul>
@@ -411,171 +411,171 @@ $ sudo mount.exfat-fuse /dev/sdb3 /mnt/dl4p2p
 <li><a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys"><span class="caps">SSH</span>/OpenSSH/Keys - Community Ubuntu Documentation</a></li>
 </ul>
 <h3 id="_6">外置硬盘盒<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span>$ dmesg <span class="p">|</span> grep da0
-ada0 at ata4 bus <span class="m">0</span> scbus2 target <span class="m">0</span> lun <span class="m">0</span>
-ada0: &lt;ST3160815AS <span class="m">3</span>.ADA&gt; ATA-7 SATA <span class="m">2</span>.x device
-ada0: <span class="m">300</span>.000MB/s transfers <span class="o">(</span>SATA <span class="m">2</span>.x, UDMA5, PIO 8192bytes<span class="o">)</span>
-ada0: 152587MB <span class="o">(</span><span class="m">312500000</span> <span class="m">512</span> byte sectors: 16H 63S/T 16383C<span class="o">)</span>
-ada0: Previously was known as ad8
-Trying to mount root from ufs:/dev/ada0s1a <span class="o">[</span>rw<span class="o">]</span>...
-da0 at umass-sim0 bus <span class="m">0</span> scbus6 target <span class="m">0</span> lun <span class="m">0</span>
-da0: &lt;ATA ST2000DL003-9VT1 CC3C&gt; Fixed Direct Access SCSI-6 device
-da0: <span class="m">40</span>.000MB/s transfers
-da0: 1907729MB <span class="o">(</span><span class="m">3907029168</span> <span class="m">512</span> byte sectors: 255H 63S/T 243201C<span class="o">)</span>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">dmesg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">da0</span>
+<span class="n">ada0</span> <span class="n">at</span> <span class="n">ata4</span> <span class="n">bus</span> <span class="mi">0</span> <span class="n">scbus2</span> <span class="n">target</span> <span class="mi">0</span> <span class="n">lun</span> <span class="mi">0</span>
+<span class="nl">ada0:</span> <span class="o">&lt;</span><span class="n">ST3160815AS</span> <span class="mf">3.</span><span class="n">ADA</span><span class="o">&gt;</span> <span class="n">ATA</span><span class="o">-</span><span class="mi">7</span> <span class="n">SATA</span> <span class="mf">2.</span><span class="n">x</span> <span class="n">device</span>
+<span class="nl">ada0:</span> <span class="mf">300.000</span><span class="n">MB</span><span class="o">/</span><span class="n">s</span> <span class="n">transfers</span> <span class="p">(</span><span class="n">SATA</span> <span class="mf">2.</span><span class="n">x</span><span class="p">,</span> <span class="n">UDMA5</span><span class="p">,</span> <span class="n">PIO</span> <span class="mi">8192</span><span class="n">bytes</span><span class="p">)</span>
+<span class="nl">ada0:</span> <span class="mi">152587</span><span class="n">MB</span> <span class="p">(</span><span class="mi">312500000</span> <span class="mi">512</span> <span class="n">byte</span> <span class="n">sectors</span><span class="o">:</span> <span class="mi">16</span><span class="n">H</span> <span class="mi">63</span><span class="n">S</span><span class="o">/</span><span class="n">T</span> <span class="mi">16383</span><span class="n">C</span><span class="p">)</span>
+<span class="nl">ada0:</span> <span class="n">Previously</span> <span class="n">was</span> <span class="n">known</span> <span class="n">as</span> <span class="n">ad8</span>
+<span class="n">Trying</span> <span class="n">to</span> <span class="n">mount</span> <span class="n">root</span> <span class="n">from</span> <span class="n">ufs</span><span class="o">:/</span><span class="n">dev</span><span class="o">/</span><span class="n">ada0s1a</span> <span class="p">[</span><span class="n">rw</span><span class="p">]...</span>
+<span class="n">da0</span> <span class="n">at</span> <span class="n">umass</span><span class="o">-</span><span class="n">sim0</span> <span class="n">bus</span> <span class="mi">0</span> <span class="n">scbus6</span> <span class="n">target</span> <span class="mi">0</span> <span class="n">lun</span> <span class="mi">0</span>
+<span class="nl">da0:</span> <span class="o">&lt;</span><span class="n">ATA</span> <span class="n">ST2000DL003</span><span class="o">-</span><span class="mi">9</span><span class="n">VT1</span> <span class="n">CC3C</span><span class="o">&gt;</span> <span class="n">Fixed</span> <span class="n">Direct</span> <span class="n">Access</span> <span class="n">SCSI</span><span class="o">-</span><span class="mi">6</span> <span class="n">device</span>
+<span class="nl">da0:</span> <span class="mf">40.000</span><span class="n">MB</span><span class="o">/</span><span class="n">s</span> <span class="n">transfers</span>
+<span class="nl">da0:</span> <span class="mi">1907729</span><span class="n">MB</span> <span class="p">(</span><span class="mi">3907029168</span> <span class="mi">512</span> <span class="n">byte</span> <span class="n">sectors</span><span class="o">:</span> <span class="mi">255</span><span class="n">H</span> <span class="mi">63</span><span class="n">S</span><span class="o">/</span><span class="n">T</span> <span class="mi">243201</span><span class="n">C</span><span class="p">)</span>
 
-$ gpart show /dev/da0
-<span class="o">=</span>&gt;        <span class="m">34</span>  <span class="m">3907029101</span>  da0  GPT  <span class="o">(</span><span class="m">1</span>.8T<span class="o">)</span>
-          <span class="m">34</span>           <span class="m">6</span>       - free -  <span class="o">(</span><span class="m">3</span>.0k<span class="o">)</span>
-          <span class="m">40</span>         <span class="m">128</span>    <span class="m">1</span>  freebsd-boot  <span class="o">(</span>64k<span class="o">)</span>
-         <span class="m">168</span>    <span class="m">16777216</span>    <span class="m">2</span>  freebsd-ufs  <span class="o">(</span><span class="m">8</span>.0G<span class="o">)</span>
-    <span class="m">16777384</span>  <span class="m">3886022656</span>    <span class="m">3</span>  freebsd-ufs  <span class="o">(</span><span class="m">1</span>.8T<span class="o">)</span>
-  <span class="m">3902800040</span>     <span class="m">4229094</span>    <span class="m">4</span>  freebsd-swap  <span class="o">(</span><span class="m">2</span>.0G<span class="o">)</span>
-  <span class="m">3907029134</span>           <span class="m">1</span>       - free -  <span class="o">(</span>512B<span class="o">)</span>
+<span class="err">$</span> <span class="n">gpart</span> <span class="n">show</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">da0</span>
+<span class="o">=&gt;</span>        <span class="mi">34</span>  <span class="mi">3907029101</span>  <span class="n">da0</span>  <span class="n">GPT</span>  <span class="p">(</span><span class="mf">1.8</span><span class="n">T</span><span class="p">)</span>
+          <span class="mi">34</span>           <span class="mi">6</span>       <span class="o">-</span> <span class="n">free</span> <span class="o">-</span>  <span class="p">(</span><span class="mf">3.0</span><span class="n">k</span><span class="p">)</span>
+          <span class="mi">40</span>         <span class="mi">128</span>    <span class="mi">1</span>  <span class="n">freebsd</span><span class="o">-</span><span class="n">boot</span>  <span class="p">(</span><span class="mi">64</span><span class="n">k</span><span class="p">)</span>
+         <span class="mi">168</span>    <span class="mi">16777216</span>    <span class="mi">2</span>  <span class="n">freebsd</span><span class="o">-</span><span class="n">ufs</span>  <span class="p">(</span><span class="mf">8.0</span><span class="n">G</span><span class="p">)</span>
+    <span class="mi">16777384</span>  <span class="mi">3886022656</span>    <span class="mi">3</span>  <span class="n">freebsd</span><span class="o">-</span><span class="n">ufs</span>  <span class="p">(</span><span class="mf">1.8</span><span class="n">T</span><span class="p">)</span>
+  <span class="mi">3902800040</span>     <span class="mi">4229094</span>    <span class="mi">4</span>  <span class="n">freebsd</span><span class="o">-</span><span class="n">swap</span>  <span class="p">(</span><span class="mf">2.0</span><span class="n">G</span><span class="p">)</span>
+  <span class="mi">3907029134</span>           <span class="mi">1</span>       <span class="o">-</span> <span class="n">free</span> <span class="o">-</span>  <span class="p">(</span><span class="mi">512</span><span class="n">B</span><span class="p">)</span>
 </pre></div>
 <h3 id="sshfs">伟光大的 sshfs<a class="headerlink" href="#sshfs" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span>$ brew link fuse4x
-Linking /usr/local/Cellar/fuse4x/0.9.2... Warning: Could not link fuse4x. Unlinking...
+<div class="highlight"><pre><span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="n">fuse4x</span>
+<span class="n">Linking</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="p">...</span> <span class="n">Warning</span><span class="o">:</span> <span class="n">Could</span> <span class="n">not</span> <span class="n">link</span> <span class="n">fuse4x</span><span class="p">.</span> <span class="n">Unlinking</span><span class="p">...</span>
 
-Error: Could not symlink file: /usr/local/Cellar/fuse4x/0.9.2/lib/pkgconfig/fuse.pc
-Target /usr/local/lib/pkgconfig/fuse.pc already exists. You may need to delete it.
-To force the link and overwrite all other conflicting files, <span class="k">do</span>:
-  brew link --overwrite formula_name
+<span class="nl">Error:</span> <span class="n">Could</span> <span class="n">not</span> <span class="n">symlink</span> <span class="n">file</span><span class="o">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span><span class="o">/</span><span class="n">fuse</span><span class="p">.</span><span class="n">pc</span>
+<span class="n">Target</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span><span class="o">/</span><span class="n">fuse</span><span class="p">.</span><span class="n">pc</span> <span class="n">already</span> <span class="n">exists</span><span class="p">.</span> <span class="n">You</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">it</span><span class="p">.</span>
+<span class="n">To</span> <span class="n">force</span> <span class="n">the</span> <span class="n">link</span> <span class="n">and</span> <span class="n">overwrite</span> <span class="n">all</span> <span class="n">other</span> <span class="n">conflicting</span> <span class="n">files</span><span class="p">,</span> <span class="k">do</span><span class="o">:</span>
+  <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">formula_name</span>
 
-To list all files that would be deleted:
-  brew link --overwrite --dry-run formula_name
+<span class="n">To</span> <span class="n">list</span> <span class="n">all</span> <span class="n">files</span> <span class="n">that</span> <span class="n">would</span> <span class="n">be</span> <span class="n">deleted</span><span class="o">:</span>
+  <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="o">--</span><span class="n">dry</span><span class="o">-</span><span class="n">run</span> <span class="n">formula_name</span>
 
-zoomq @ MBP111216ZQ in /usr/local/lib
-$ brew link --overwrite fuse4x
-Linking /usr/local/Cellar/fuse4x/0.9.2... <span class="m">7</span> symlinks created
+<span class="n">zoomq</span> <span class="err">@</span> <span class="n">MBP111216ZQ</span> <span class="n">in</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span>
+<span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">fuse4x</span>
+<span class="n">Linking</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="p">...</span> <span class="mi">7</span> <span class="n">symlinks</span> <span class="n">created</span>
 
 
-$ brew install <span class="nv">osxfuse</span>
-<span class="o">==</span>&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz
-<span class="o">==</span>&gt; Pouring osxfuse-2.6.2.mavericks.bottle.tar.gz
-<span class="o">==</span>&gt; Caveats
-If upgrading from a previous version of osxfuse, the previous kernel extension
-will need to be unloaded before installing the new version. First, check that
-no FUSE-based file systems are running:
+<span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">osxfuse</span>
+<span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="o">:</span><span class="c1">//downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz</span>
+<span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">osxfuse</span><span class="o">-</span><span class="mf">2.6.2</span><span class="p">.</span><span class="n">mavericks</span><span class="p">.</span><span class="n">bottle</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+<span class="o">==&gt;</span> <span class="n">Caveats</span>
+<span class="n">If</span> <span class="n">upgrading</span> <span class="n">from</span> <span class="n">a</span> <span class="n">previous</span> <span class="n">version</span> <span class="n">of</span> <span class="n">osxfuse</span><span class="p">,</span> <span class="n">the</span> <span class="n">previous</span> <span class="n">kernel</span> <span class="n">extension</span>
+<span class="n">will</span> <span class="n">need</span> <span class="n">to</span> <span class="n">be</span> <span class="n">unloaded</span> <span class="n">before</span> <span class="n">installing</span> <span class="n">the</span> <span class="n">new</span> <span class="n">version</span><span class="p">.</span> <span class="n">First</span><span class="p">,</span> <span class="n">check</span> <span class="n">that</span>
+<span class="n">no</span> <span class="n">FUSE</span><span class="o">-</span><span class="n">based</span> <span class="n">file</span> <span class="n">systems</span> <span class="n">are</span> <span class="n">running</span><span class="o">:</span>
 
-  mount -t osxfusefs
+  <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">osxfusefs</span>
 
-Unmount all FUSE file systems and <span class="k">then</span> unload the kernel extension:
+<span class="n">Unmount</span> <span class="n">all</span> <span class="n">FUSE</span> <span class="n">file</span> <span class="n">systems</span> <span class="n">and</span> <span class="n">then</span> <span class="n">unload</span> <span class="n">the</span> <span class="n">kernel</span> <span class="n">extension</span><span class="o">:</span>
 
-  sudo kextunload -b com.github.osxfuse.filesystems.osxfusefs
+  <span class="n">sudo</span> <span class="n">kextunload</span> <span class="o">-</span><span class="n">b</span> <span class="n">com</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">osxfuse</span><span class="p">.</span><span class="n">filesystems</span><span class="p">.</span><span class="n">osxfusefs</span>
 
-The new osxfuse file system bundle needs to be installed by the root user:
+<span class="n">The</span> <span class="n">new</span> <span class="n">osxfuse</span> <span class="n">file</span> <span class="n">system</span> <span class="n">bundle</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">be</span> <span class="n">installed</span> <span class="n">by</span> <span class="n">the</span> <span class="n">root</span> <span class="n">user</span><span class="o">:</span>
 
-  sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.2/Library/Filesystems/osxfusefs.fs /Library/Filesystems
-  sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
-<span class="o">==</span>&gt; Summary
-🍺  /usr/local/Cellar/osxfuse/2.6.2: <span class="m">84</span> files, <span class="m">5</span>.0M
+  <span class="n">sudo</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cp</span> <span class="o">-</span><span class="n">RfX</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="mf">2.6.2</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="p">.</span><span class="n">fs</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span>
+  <span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">s</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="p">.</span><span class="n">fs</span><span class="o">/</span><span class="n">Support</span><span class="o">/</span><span class="n">load_osxfusefs</span>
+<span class="o">==&gt;</span> <span class="n">Summary</span>
+<span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="mf">2.6.2</span><span class="o">:</span> <span class="mi">84</span> <span class="n">files</span><span class="p">,</span> <span class="mf">5.0</span><span class="n">M</span>
 </pre></div>
 <h3 id="exfat">exFAT<a class="headerlink" href="#exfat" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span>$ cat /etc/lsb-release.bk
-<span class="nv">DISTRIB_ID</span><span class="o">=</span>Linaro
-<span class="nv">DISTRIB_RELEASE</span><span class="o">=</span><span class="m">13</span>.08
-<span class="nv">DISTRIB_CODENAME</span><span class="o">=</span>raring
-<span class="nv">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s2">"Linaro 13.08"</span>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lsb</span><span class="o">-</span><span class="n">release</span><span class="p">.</span><span class="n">bk</span>
+<span class="n">DISTRIB_ID</span><span class="o">=</span><span class="n">Linaro</span>
+<span class="n">DISTRIB_RELEASE</span><span class="o">=</span><span class="mf">13.08</span>
+<span class="n">DISTRIB_CODENAME</span><span class="o">=</span><span class="n">raring</span>
+<span class="n">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s">"Linaro 13.08"</span>
 
-$ sudo vi /etc/lsb-release
-<span class="nv">DISTRIB_ID</span><span class="o">=</span>Ubuntu
-<span class="nv">DISTRIB_RELEASE</span><span class="o">=</span><span class="m">13</span>.04
-<span class="nv">DISTRIB_CODENAME</span><span class="o">=</span>raring
-<span class="nv">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s2">"Ubuntu 13.04"</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lsb</span><span class="o">-</span><span class="n">release</span>
+<span class="n">DISTRIB_ID</span><span class="o">=</span><span class="n">Ubuntu</span>
+<span class="n">DISTRIB_RELEASE</span><span class="o">=</span><span class="mf">13.04</span>
+<span class="n">DISTRIB_CODENAME</span><span class="o">=</span><span class="n">raring</span>
+<span class="n">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s">"Ubuntu 13.04"</span>
 
-$ sudo apt-add-repository ppa:relan/exfat
-你将向系统添加如下 PPA：
- PPA <span class="k">for</span> the free exFAT file system implementation project: http://code.google.com/p/exfat/
- 更多信息： https://launchpad.net/~relan/+archive/exfat
-按回车继续或者 Ctrl+c 取消添加
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">add</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="o">:</span><span class="n">relan</span><span class="o">/</span><span class="n">exfat</span>
+<span class="err">你将向系统添加如下</span> <span class="n">PPA</span><span class="err">：</span>
+ <span class="n">PPA</span> <span class="k">for</span> <span class="n">the</span> <span class="n">free</span> <span class="n">exFAT</span> <span class="n">file</span> <span class="n">system</span> <span class="n">implementation</span> <span class="n">project</span><span class="o">:</span> <span class="n">http</span><span class="o">:</span><span class="c1">//code.google.com/p/exfat/</span>
+ <span class="err">更多信息：</span> <span class="n">https</span><span class="o">:</span><span class="c1">//launchpad.net/~relan/+archive/exfat</span>
+<span class="err">按回车继续或者</span> <span class="n">Ctrl</span><span class="o">+</span><span class="n">c</span> <span class="err">取消添加</span>
 
-gpg: 钥匙环‘/tmp/tmppjaczn/secring.gpg’已建立
-gpg: 钥匙环‘/tmp/tmppjaczn/pubring.gpg’已建立
-gpg: 下载密钥‘A252A784’，从 hkp 服务器 keyserver.ubuntu.com
-gpg: /tmp/tmppjaczn/trustdb.gpg：建立了信任度数据库
-gpg: 密钥 A252A784：公钥“Launchpad Free exFAT file system implementation”已导入
-gpg: 合计被处理的数量：1
-gpg:               已导入：1  <span class="o">(</span>RSA: <span class="m">1</span><span class="o">)</span>
-OK
-
-
-$ acs exfat
-exfat-fuse - <span class="nb">read</span> and write exFAT driver <span class="k">for</span> FUSE
-exfat-utils - utilities to create, check, label and dump exFAT filesystem
-
-$ agi exfat-fuse
-
- Working... this may take a <span class="k">while</span>.
-<span class="c1"># apt-fast mirror list: Mon Jan 27 16:42:10 UTC 2014</span>
-http://ports.ubuntu.com/ubuntu-ports/pool/universe/f/fuse-exfat/exfat-fuse_1.0.1-1_armhf.deb
- <span class="nv">checksum</span><span class="o">=</span><span class="nv">md5</span><span class="o">=</span>fcacfbade2df1f97d72ba9912961883f
- <span class="nv">out</span><span class="o">=</span>exfat-fuse_1.0.1-1_armhf.deb
-http://ports.ubuntu.com/ubuntu-ports/pool/universe/e/exfat-utils/exfat-utils_1.0.1-1_armhf.deb
- <span class="nv">checksum</span><span class="o">=</span><span class="nv">md5</span><span class="o">=</span>ef8bc2e59569645b7140e930e81809f3
- <span class="nv">out</span><span class="o">=</span>exfat-utils_1.0.1-1_armhf.deb
-...
-
-下载结果：
-gid   <span class="p">|</span>stat<span class="p">|</span>avg speed  <span class="p">|</span>path/URI
-<span class="o">======</span>+<span class="o">====</span>+<span class="o">===========</span>+<span class="o">=======================================================</span>
-07028f<span class="p">|</span>OK  <span class="p">|</span>    66KiB/s<span class="p">|</span>/var/cache/apt/archives/apt-fast/exfat-fuse_1.0.1-1_armhf.deb
-e4fa30<span class="p">|</span>OK  <span class="p">|</span>    40KiB/s<span class="p">|</span>/var/cache/apt/archives/apt-fast/exfat-utils_1.0.1-1_armhf.deb
-
-状态标识：
-<span class="o">(</span>OK<span class="o">)</span>：完成下载。
-正在读取软件包列表... 完成
-正在分析软件包的依赖关系树
-正在读取状态信息... 完成
-将会安装下列额外的软件包：
-  exfat-utils
-下列【新】软件包将被安装：
-  exfat-fuse exfat-utils
-升级了 <span class="m">0</span> 个软件包，新安装了 <span class="m">2</span> 个软件包，要卸载 <span class="m">0</span> 个软件包，有 <span class="m">1</span> 个软件包未被升级。
-需要下载 <span class="m">0</span> B/80.7 kB 的软件包。
-解压缩后会消耗掉 <span class="m">248</span> kB 的额外空间。
-您希望继续执行吗？<span class="o">[</span>Y/n<span class="o">]</span>
-【警告】：下列软件包不能通过验证！
-  exfat-fuse exfat-utils
-忽略了认证警告。
-Selecting previously unselected package exfat-fuse.
-<span class="o">(</span>正在读取数据库 ... 系统当前共安装有 <span class="m">27896</span> 个文件和目录。<span class="o">)</span>
-正在解压缩 exfat-fuse <span class="o">(</span>从 .../exfat-fuse_1.0.1-1_armhf.deb<span class="o">)</span> ...
-Selecting previously unselected package exfat-utils.
-正在解压缩 exfat-utils <span class="o">(</span>从 .../exfat-utils_1.0.1-1_armhf.deb<span class="o">)</span> ...
-正在处理用于 man-db 的触发器...
-正在设置 exfat-fuse <span class="o">(</span><span class="m">1</span>.0.1-1<span class="o">)</span> ...
-正在设置 exfat-utils <span class="o">(</span><span class="m">1</span>.0.1-1<span class="o">)</span> ...
+<span class="nl">gpg:</span> <span class="err">钥匙环‘</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">tmppjaczn</span><span class="o">/</span><span class="n">secring</span><span class="p">.</span><span class="n">gpg</span><span class="err">’已建立</span>
+<span class="nl">gpg:</span> <span class="err">钥匙环‘</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">tmppjaczn</span><span class="o">/</span><span class="n">pubring</span><span class="p">.</span><span class="n">gpg</span><span class="err">’已建立</span>
+<span class="nl">gpg:</span> <span class="err">下载密钥‘</span><span class="n">A252A784</span><span class="err">’，从</span> <span class="n">hkp</span> <span class="err">服务器</span> <span class="n">keyserver</span><span class="p">.</span><span class="n">ubuntu</span><span class="p">.</span><span class="n">com</span>
+<span class="nl">gpg:</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">tmppjaczn</span><span class="o">/</span><span class="n">trustdb</span><span class="p">.</span><span class="n">gpg</span><span class="err">：建立了信任度数据库</span>
+<span class="nl">gpg:</span> <span class="err">密钥</span> <span class="n">A252A784</span><span class="err">：公钥“</span><span class="n">Launchpad</span> <span class="n">Free</span> <span class="n">exFAT</span> <span class="n">file</span> <span class="n">system</span> <span class="n">implementation</span><span class="err">”已导入</span>
+<span class="nl">gpg:</span> <span class="err">合计被处理的数量：</span><span class="mi">1</span>
+<span class="nl">gpg:</span>               <span class="err">已导入：</span><span class="mi">1</span>  <span class="p">(</span><span class="n">RSA</span><span class="o">:</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">OK</span>
 
 
-$ sudo fdisk -l /dev/sdb
+<span class="err">$</span> <span class="n">acs</span> <span class="n">exfat</span>
+<span class="n">exfat</span><span class="o">-</span><span class="n">fuse</span> <span class="o">-</span> <span class="n">read</span> <span class="n">and</span> <span class="n">write</span> <span class="n">exFAT</span> <span class="n">driver</span> <span class="k">for</span> <span class="n">FUSE</span>
+<span class="n">exfat</span><span class="o">-</span><span class="n">utils</span> <span class="o">-</span> <span class="n">utilities</span> <span class="n">to</span> <span class="n">create</span><span class="p">,</span> <span class="n">check</span><span class="p">,</span> <span class="n">label</span> <span class="n">and</span> <span class="n">dump</span> <span class="n">exFAT</span> <span class="n">filesystem</span>
 
-WARNING: GPT <span class="o">(</span>GUID Partition Table<span class="o">)</span> detected on <span class="s1">'/dev/sdb'</span>! The util fdisk doesn<span class="err">'</span>t support GPT. Use GNU Parted.
+<span class="err">$</span> <span class="n">agi</span> <span class="n">exfat</span><span class="o">-</span><span class="n">fuse</span>
+
+ <span class="n">Working</span><span class="p">...</span> <span class="n">this</span> <span class="n">may</span> <span class="n">take</span> <span class="n">a</span> <span class="k">while</span><span class="p">.</span>
+<span class="cp"># apt-fast mirror list: Mon Jan 27 16:42:10 UTC 2014</span>
+<span class="nl">http:</span><span class="c1">//ports.ubuntu.com/ubuntu-ports/pool/universe/f/fuse-exfat/exfat-fuse_1.0.1-1_armhf.deb</span>
+ <span class="n">checksum</span><span class="o">=</span><span class="n">md5</span><span class="o">=</span><span class="n">fcacfbade2df1f97d72ba9912961883f</span>
+ <span class="n">out</span><span class="o">=</span><span class="n">exfat</span><span class="o">-</span><span class="n">fuse_1</span><span class="mf">.0.1</span><span class="o">-</span><span class="mi">1</span><span class="n">_armhf</span><span class="p">.</span><span class="n">deb</span>
+<span class="nl">http:</span><span class="c1">//ports.ubuntu.com/ubuntu-ports/pool/universe/e/exfat-utils/exfat-utils_1.0.1-1_armhf.deb</span>
+ <span class="n">checksum</span><span class="o">=</span><span class="n">md5</span><span class="o">=</span><span class="n">ef8bc2e59569645b7140e930e81809f3</span>
+ <span class="n">out</span><span class="o">=</span><span class="n">exfat</span><span class="o">-</span><span class="n">utils_1</span><span class="mf">.0.1</span><span class="o">-</span><span class="mi">1</span><span class="n">_armhf</span><span class="p">.</span><span class="n">deb</span>
+<span class="p">...</span>
+
+<span class="err">下载结果：</span>
+<span class="n">gid</span>   <span class="o">|</span><span class="n">stat</span><span class="o">|</span><span class="n">avg</span> <span class="n">speed</span>  <span class="o">|</span><span class="n">path</span><span class="o">/</span><span class="n">URI</span>
+<span class="o">======+====+===========+=======================================================</span>
+<span class="mf">07028f</span><span class="o">|</span><span class="n">OK</span>  <span class="o">|</span>    <span class="mi">66</span><span class="n">KiB</span><span class="o">/</span><span class="n">s</span><span class="o">|/</span><span class="n">var</span><span class="o">/</span><span class="n">cache</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">archives</span><span class="o">/</span><span class="n">apt</span><span class="o">-</span><span class="n">fast</span><span class="o">/</span><span class="n">exfat</span><span class="o">-</span><span class="n">fuse_1</span><span class="mf">.0.1</span><span class="o">-</span><span class="mi">1</span><span class="n">_armhf</span><span class="p">.</span><span class="n">deb</span>
+<span class="n">e4fa30</span><span class="o">|</span><span class="n">OK</span>  <span class="o">|</span>    <span class="mi">40</span><span class="n">KiB</span><span class="o">/</span><span class="n">s</span><span class="o">|/</span><span class="n">var</span><span class="o">/</span><span class="n">cache</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">archives</span><span class="o">/</span><span class="n">apt</span><span class="o">-</span><span class="n">fast</span><span class="o">/</span><span class="n">exfat</span><span class="o">-</span><span class="n">utils_1</span><span class="mf">.0.1</span><span class="o">-</span><span class="mi">1</span><span class="n">_armhf</span><span class="p">.</span><span class="n">deb</span>
+
+<span class="err">状态标识：</span>
+<span class="p">(</span><span class="n">OK</span><span class="p">)</span><span class="err">：完成下载。</span>
+<span class="err">正在读取软件包列表</span><span class="p">...</span> <span class="err">完成</span>
+<span class="err">正在分析软件包的依赖关系树</span>
+<span class="err">正在读取状态信息</span><span class="p">...</span> <span class="err">完成</span>
+<span class="err">将会安装下列额外的软件包：</span>
+  <span class="n">exfat</span><span class="o">-</span><span class="n">utils</span>
+<span class="err">下列【新】软件包将被安装：</span>
+  <span class="n">exfat</span><span class="o">-</span><span class="n">fuse</span> <span class="n">exfat</span><span class="o">-</span><span class="n">utils</span>
+<span class="err">升级了</span> <span class="mi">0</span> <span class="err">个软件包，新安装了</span> <span class="mi">2</span> <span class="err">个软件包，要卸载</span> <span class="mi">0</span> <span class="err">个软件包，有</span> <span class="mi">1</span> <span class="err">个软件包未被升级。</span>
+<span class="err">需要下载</span> <span class="mi">0</span> <span class="n">B</span><span class="o">/</span><span class="mf">80.7</span> <span class="n">kB</span> <span class="err">的软件包。</span>
+<span class="err">解压缩后会消耗掉</span> <span class="mi">248</span> <span class="n">kB</span> <span class="err">的额外空间。</span>
+<span class="err">您希望继续执行吗？</span><span class="p">[</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">]</span>
+<span class="err">【警告】：下列软件包不能通过验证！</span>
+  <span class="n">exfat</span><span class="o">-</span><span class="n">fuse</span> <span class="n">exfat</span><span class="o">-</span><span class="n">utils</span>
+<span class="err">忽略了认证警告。</span>
+<span class="n">Selecting</span> <span class="n">previously</span> <span class="n">unselected</span> <span class="n">package</span> <span class="n">exfat</span><span class="o">-</span><span class="n">fuse</span><span class="p">.</span>
+<span class="p">(</span><span class="err">正在读取数据库</span> <span class="p">...</span> <span class="err">系统当前共安装有</span> <span class="mi">27896</span> <span class="err">个文件和目录。</span><span class="p">)</span>
+<span class="err">正在解压缩</span> <span class="n">exfat</span><span class="o">-</span><span class="n">fuse</span> <span class="p">(</span><span class="err">从</span> <span class="p">...</span><span class="o">/</span><span class="n">exfat</span><span class="o">-</span><span class="n">fuse_1</span><span class="mf">.0.1</span><span class="o">-</span><span class="mi">1</span><span class="n">_armhf</span><span class="p">.</span><span class="n">deb</span><span class="p">)</span> <span class="p">...</span>
+<span class="n">Selecting</span> <span class="n">previously</span> <span class="n">unselected</span> <span class="n">package</span> <span class="n">exfat</span><span class="o">-</span><span class="n">utils</span><span class="p">.</span>
+<span class="err">正在解压缩</span> <span class="n">exfat</span><span class="o">-</span><span class="n">utils</span> <span class="p">(</span><span class="err">从</span> <span class="p">...</span><span class="o">/</span><span class="n">exfat</span><span class="o">-</span><span class="n">utils_1</span><span class="mf">.0.1</span><span class="o">-</span><span class="mi">1</span><span class="n">_armhf</span><span class="p">.</span><span class="n">deb</span><span class="p">)</span> <span class="p">...</span>
+<span class="err">正在处理用于</span> <span class="n">man</span><span class="o">-</span><span class="n">db</span> <span class="err">的触发器</span><span class="p">...</span>
+<span class="err">正在设置</span> <span class="n">exfat</span><span class="o">-</span><span class="n">fuse</span> <span class="p">(</span><span class="mf">1.0.1</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">...</span>
+<span class="err">正在设置</span> <span class="n">exfat</span><span class="o">-</span><span class="n">utils</span> <span class="p">(</span><span class="mf">1.0.1</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">...</span>
 
 
-Disk /dev/sdb: <span class="m">2000</span>.4 GB, <span class="m">2000398934016</span> bytes
-<span class="m">255</span> heads, <span class="m">63</span> sectors/track, <span class="m">243201</span> cylinders, total <span class="m">3907029168</span> sectors
-<span class="nv">Units</span> <span class="o">=</span> sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
-Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
-I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
-Disk identifier: 0x00000000
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">fdisk</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb</span>
 
-   Device Boot      Start         End      Blocks   Id  System
-/dev/sdb1               <span class="m">1</span>      <span class="m">409639</span>      <span class="m">204819</span>+  ee  GPT
-/dev/sdb2          <span class="m">411648</span>  <span class="m">1563172863</span>   <span class="m">781380608</span>    <span class="m">7</span>  HPFS/NTFS/exFAT
-/dev/sdb3      <span class="m">1563172864</span>  <span class="m">3907028991</span>  <span class="m">1171928064</span>    <span class="m">7</span>  HPFS/NTFS/exFAT
+<span class="nl">WARNING:</span> <span class="n">GPT</span> <span class="p">(</span><span class="n">GUID</span> <span class="n">Partition</span> <span class="n">Table</span><span class="p">)</span> <span class="n">detected</span> <span class="n">on</span> <span class="err">'</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb</span><span class="err">'</span><span class="o">!</span> <span class="n">The</span> <span class="n">util</span> <span class="n">fdisk</span> <span class="n">doesn</span><span class="err">'</span><span class="n">t</span> <span class="n">support</span> <span class="n">GPT</span><span class="p">.</span> <span class="n">Use</span> <span class="n">GNU</span> <span class="n">Parted</span><span class="p">.</span>
+
+
+<span class="n">Disk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb</span><span class="o">:</span> <span class="mf">2000.4</span> <span class="n">GB</span><span class="p">,</span> <span class="mi">2000398934016</span> <span class="n">bytes</span>
+<span class="mi">255</span> <span class="n">heads</span><span class="p">,</span> <span class="mi">63</span> <span class="n">sectors</span><span class="o">/</span><span class="n">track</span><span class="p">,</span> <span class="mi">243201</span> <span class="n">cylinders</span><span class="p">,</span> <span class="n">total</span> <span class="mi">3907029168</span> <span class="n">sectors</span>
+<span class="n">Units</span> <span class="o">=</span> <span class="n">sectors</span> <span class="n">of</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">512</span> <span class="o">=</span> <span class="mi">512</span> <span class="n">bytes</span>
+<span class="n">Sector</span> <span class="n">size</span> <span class="p">(</span><span class="n">logical</span><span class="o">/</span><span class="n">physical</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">512</span> <span class="n">bytes</span>
+<span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">size</span> <span class="p">(</span><span class="n">minimum</span><span class="o">/</span><span class="n">optimal</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">512</span> <span class="n">bytes</span>
+<span class="n">Disk</span> <span class="n">identifier</span><span class="o">:</span> <span class="mh">0x00000000</span>
+
+   <span class="n">Device</span> <span class="n">Boot</span>      <span class="n">Start</span>         <span class="n">End</span>      <span class="n">Blocks</span>   <span class="n">Id</span>  <span class="n">System</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb1</span>               <span class="mi">1</span>      <span class="mi">409639</span>      <span class="mi">204819</span><span class="o">+</span>  <span class="n">ee</span>  <span class="n">GPT</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb2</span>          <span class="mi">411648</span>  <span class="mi">1563172863</span>   <span class="mi">781380608</span>    <span class="mi">7</span>  <span class="n">HPFS</span><span class="o">/</span><span class="n">NTFS</span><span class="o">/</span><span class="n">exFAT</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb3</span>      <span class="mi">1563172864</span>  <span class="mi">3907028991</span>  <span class="mi">1171928064</span>    <span class="mi">7</span>  <span class="n">HPFS</span><span class="o">/</span><span class="n">NTFS</span><span class="o">/</span><span class="n">exFAT</span>
 </pre></div>
 <h3 id="_7">系统硬盘<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
 <p>观察:</p>
-<div class="highlight"><pre><span></span>$ sudo fdisk -l /dev/sda
+<div class="highlight"><pre><span class="err">$</span> <span class="n">sudo</span> <span class="n">fdisk</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span>
 
-Disk /dev/sda: <span class="m">1000</span>.2 GB, <span class="m">1000204886016</span> bytes
-<span class="m">255</span> heads, <span class="m">63</span> sectors/track, <span class="m">121601</span> cylinders, total <span class="m">1953525168</span> sectors
-<span class="nv">Units</span> <span class="o">=</span> sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
-Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">4096</span> bytes
-I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">4096</span> bytes / <span class="m">4096</span> bytes
-Disk identifier: 0x00000000
+<span class="n">Disk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span><span class="o">:</span> <span class="mf">1000.2</span> <span class="n">GB</span><span class="p">,</span> <span class="mi">1000204886016</span> <span class="n">bytes</span>
+<span class="mi">255</span> <span class="n">heads</span><span class="p">,</span> <span class="mi">63</span> <span class="n">sectors</span><span class="o">/</span><span class="n">track</span><span class="p">,</span> <span class="mi">121601</span> <span class="n">cylinders</span><span class="p">,</span> <span class="n">total</span> <span class="mi">1953525168</span> <span class="n">sectors</span>
+<span class="n">Units</span> <span class="o">=</span> <span class="n">sectors</span> <span class="n">of</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">512</span> <span class="o">=</span> <span class="mi">512</span> <span class="n">bytes</span>
+<span class="n">Sector</span> <span class="n">size</span> <span class="p">(</span><span class="n">logical</span><span class="o">/</span><span class="n">physical</span><span class="p">)</span><span class="o">:</span> <span class="mi">512</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">4096</span> <span class="n">bytes</span>
+<span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">size</span> <span class="p">(</span><span class="n">minimum</span><span class="o">/</span><span class="n">optimal</span><span class="p">)</span><span class="o">:</span> <span class="mi">4096</span> <span class="n">bytes</span> <span class="o">/</span> <span class="mi">4096</span> <span class="n">bytes</span>
+<span class="n">Disk</span> <span class="n">identifier</span><span class="o">:</span> <span class="mh">0x00000000</span>
 
-Disk /dev/sda doesn<span class="err">'</span>t contain a valid partition table
+<span class="n">Disk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span> <span class="n">doesn</span><span class="err">'</span><span class="n">t</span> <span class="n">contain</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">partition</span> <span class="n">table</span>
 </pre></div>
 <p>参考:</p>
 <ul>
@@ -583,35 +583,35 @@ Disk /dev/sda doesn<span class="err">'</span>t contain a valid partition table
 <li><a href="http://blog.itpub.net/26686207/viewspace-765782/">多硬盘分区管理fdisk-张丹-leonarding-<span class="caps">ITPUB</span>博客</a></li>
 </ul>
 <p>格式化:</p>
-<div class="highlight"><pre><span></span>$ sudo mkfs.ext4 /dev/sda3
+<div class="highlight"><pre><span class="err">$</span> <span class="n">sudo</span> <span class="n">mkfs</span><span class="p">.</span><span class="n">ext4</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda3</span>
 </pre></div>
 <h4 id="fatab">fatab<a class="headerlink" href="#fatab" title="Permanent link">¶</a></h4>
 <p>观察:</p>
-<div class="highlight"><pre><span></span>$ cat /proc/partitions
-major minor  <span class="c1">#blocks  name</span>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">cat</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">partitions</span>
+<span class="n">major</span> <span class="n">minor</span>  <span class="err">#</span><span class="n">blocks</span>  <span class="n">name</span>
 
-  <span class="m">93</span>        <span class="m">0</span>    <span class="m">7520256</span> nand
-  <span class="m">93</span>        <span class="m">1</span>      <span class="m">65536</span> nanda
-  <span class="m">93</span>        <span class="m">2</span>    <span class="m">2097152</span> nandb
-  <span class="m">93</span>        <span class="m">3</span>    <span class="m">5341184</span> nandc
-   <span class="m">8</span>        <span class="m">0</span>  <span class="m">976762584</span> sda
-   <span class="m">8</span>        <span class="m">1</span>    <span class="m">8388608</span> sda1
-   <span class="m">8</span>        <span class="m">2</span>    <span class="m">2097152</span> sda2
-   <span class="m">8</span>        <span class="m">3</span>  <span class="m">966275800</span> sda3
-   <span class="m">8</span>       <span class="m">16</span> <span class="m">1953514584</span> sdb
-   <span class="m">8</span>       <span class="m">17</span>     <span class="m">204800</span> sdb1
-   <span class="m">8</span>       <span class="m">18</span>  <span class="m">781380608</span> sdb2
-   <span class="m">8</span>       <span class="m">19</span> <span class="m">1171928064</span> sdb3
+  <span class="mi">93</span>        <span class="mi">0</span>    <span class="mi">7520256</span> <span class="n">nand</span>
+  <span class="mi">93</span>        <span class="mi">1</span>      <span class="mi">65536</span> <span class="n">nanda</span>
+  <span class="mi">93</span>        <span class="mi">2</span>    <span class="mi">2097152</span> <span class="n">nandb</span>
+  <span class="mi">93</span>        <span class="mi">3</span>    <span class="mi">5341184</span> <span class="n">nandc</span>
+   <span class="mi">8</span>        <span class="mi">0</span>  <span class="mi">976762584</span> <span class="n">sda</span>
+   <span class="mi">8</span>        <span class="mi">1</span>    <span class="mi">8388608</span> <span class="n">sda1</span>
+   <span class="mi">8</span>        <span class="mi">2</span>    <span class="mi">2097152</span> <span class="n">sda2</span>
+   <span class="mi">8</span>        <span class="mi">3</span>  <span class="mi">966275800</span> <span class="n">sda3</span>
+   <span class="mi">8</span>       <span class="mi">16</span> <span class="mi">1953514584</span> <span class="n">sdb</span>
+   <span class="mi">8</span>       <span class="mi">17</span>     <span class="mi">204800</span> <span class="n">sdb1</span>
+   <span class="mi">8</span>       <span class="mi">18</span>  <span class="mi">781380608</span> <span class="n">sdb2</span>
+   <span class="mi">8</span>       <span class="mi">19</span> <span class="mi">1171928064</span> <span class="n">sdb3</span>
 
-$ sudo blkid
-/dev/nanda: <span class="nv">SEC_TYPE</span><span class="o">=</span><span class="s2">"msdos"</span> <span class="nv">LABEL</span><span class="o">=</span><span class="s2">"Volumn"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"vfat"</span>
-/dev/nandb: <span class="nv">UUID</span><span class="o">=</span><span class="s2">"d20c81fd-3188-4650-b124-2fa090bb7920"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"ext4"</span>
-/dev/nandc: <span class="nv">UUID</span><span class="o">=</span><span class="s2">"1914bbf8-2641-4b3f-a00e-4afa65d0ed8f"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"ext4"</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">blkid</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nanda</span><span class="o">:</span> <span class="n">SEC_TYPE</span><span class="o">=</span><span class="s">"msdos"</span> <span class="n">LABEL</span><span class="o">=</span><span class="s">"Volumn"</span> <span class="n">TYPE</span><span class="o">=</span><span class="s">"vfat"</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nandb</span><span class="o">:</span> <span class="n">UUID</span><span class="o">=</span><span class="s">"d20c81fd-3188-4650-b124-2fa090bb7920"</span> <span class="n">TYPE</span><span class="o">=</span><span class="s">"ext4"</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nandc</span><span class="o">:</span> <span class="n">UUID</span><span class="o">=</span><span class="s">"1914bbf8-2641-4b3f-a00e-4afa65d0ed8f"</span> <span class="n">TYPE</span><span class="o">=</span><span class="s">"ext4"</span>
 
-/dev/sda3: <span class="nv">UUID</span><span class="o">=</span><span class="s2">"b9db3117-90d7-48a6-8302-0b316b9745fd"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"ext4"</span>
-/dev/sdb1: <span class="nv">LABEL</span><span class="o">=</span><span class="s2">"EFI"</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">"67E3-17ED"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"vfat"</span>
-/dev/sdb2: <span class="nv">LABEL</span><span class="o">=</span><span class="s2">"bk4wk"</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">"52E4-78FF"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"exfat"</span>
-/dev/sdb3: <span class="nv">LABEL</span><span class="o">=</span><span class="s2">"dl4p2p"</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">"52E4-7901"</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">"exfat"</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda3</span><span class="o">:</span> <span class="n">UUID</span><span class="o">=</span><span class="s">"b9db3117-90d7-48a6-8302-0b316b9745fd"</span> <span class="n">TYPE</span><span class="o">=</span><span class="s">"ext4"</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb1</span><span class="o">:</span> <span class="n">LABEL</span><span class="o">=</span><span class="s">"EFI"</span> <span class="n">UUID</span><span class="o">=</span><span class="s">"67E3-17ED"</span> <span class="n">TYPE</span><span class="o">=</span><span class="s">"vfat"</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb2</span><span class="o">:</span> <span class="n">LABEL</span><span class="o">=</span><span class="s">"bk4wk"</span> <span class="n">UUID</span><span class="o">=</span><span class="s">"52E4-78FF"</span> <span class="n">TYPE</span><span class="o">=</span><span class="s">"exfat"</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb3</span><span class="o">:</span> <span class="n">LABEL</span><span class="o">=</span><span class="s">"dl4p2p"</span> <span class="n">UUID</span><span class="o">=</span><span class="s">"52E4-7901"</span> <span class="n">TYPE</span><span class="o">=</span><span class="s">"exfat"</span>
 </pre></div>
 <p>参考:</p>
 <ul>
@@ -619,12 +619,12 @@ $ sudo blkid
 <li><a href="http://www.bango29.com/cubieboard-part-1/">Cubieboard - Part 1</a></li>
 </ul>
 <p>配置:</p>
-<div class="highlight"><pre><span></span>/dev/sda1    /media/ext  ext4    defaults    0   2
-/dev/nandc    /mnt/nandc  ext4    defaults    0   2
-/mnt/nandc/swapfile    none    swap    sw  0   0
-/dev/sda3    /mnt/data  ext4    defaults    0   2
-/dev/sdb2    /mnt/bk4wk  exfat    rw,async,umask=0   0   0
-/dev/sdb3    /mnt/dl4p2p  exfat    rw,async,umask=0   0   0
+<div class="highlight"><pre><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda1</span>    <span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">ext</span>  <span class="n">ext4</span>    <span class="n">defaults</span>    <span class="mi">0</span>   <span class="mi">2</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">nandc</span>    <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">nandc</span>  <span class="n">ext4</span>    <span class="n">defaults</span>    <span class="mi">0</span>   <span class="mi">2</span>
+<span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">nandc</span><span class="o">/</span><span class="n">swapfile</span>    <span class="n">none</span>    <span class="n">swap</span>    <span class="n">sw</span>  <span class="mi">0</span>   <span class="mi">0</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda3</span>    <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">data</span>  <span class="n">ext4</span>    <span class="n">defaults</span>    <span class="mi">0</span>   <span class="mi">2</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb2</span>    <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">bk4wk</span>  <span class="n">exfat</span>    <span class="n">rw</span><span class="p">,</span><span class="n">async</span><span class="p">,</span><span class="n">umask</span><span class="o">=</span><span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">0</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb3</span>    <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">dl4p2p</span>  <span class="n">exfat</span>    <span class="n">rw</span><span class="p">,</span><span class="n">async</span><span class="p">,</span><span class="n">umask</span><span class="o">=</span><span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">0</span>
 </pre></div>
 <h4 id="_8">你不能在当前挂载着的分区上扩容的<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
 <p>~ <code>NoZuoNoDieWhyUtry</code></p>
@@ -662,7 +662,7 @@ partition  3: class =         <span class="caps">DISK</span>, name =        <spa
 </ul>
 <h3 id="mldonkey">MLDonkey<a class="headerlink" href="#mldonkey" title="Permanent link">¶</a></h3>
 <p>安装:</p>
-<div class="highlight"><pre><span></span>$ agi -y mldonkey-server
+<div class="highlight"><pre><span class="err">$</span> <span class="n">agi</span> <span class="o">-</span><span class="n">y</span> <span class="n">mldonkey</span><span class="o">-</span><span class="n">server</span>
 </pre></div>
 <p>就没有然后了,
 启动,远程用网页控制就好,
@@ -670,7 +670,7 @@ partition  3: class =         <span class="caps">DISK</span>, name =        <spa
 <h3 id="samba">samba<a class="headerlink" href="#samba" title="Permanent link">¶</a></h3>
 <p>这是标准的跨平台文件分享服务了:</p>
 <p>安装:</p>
-<div class="highlight"><pre><span></span>$ agi -y samba
+<div class="highlight"><pre><span class="err">$</span> <span class="n">agi</span> <span class="o">-</span><span class="n">y</span> <span class="n">samba</span>
 </pre></div>
 <p>配置也非常直接..</p>
 <h3 id="minidlna">MiniDLNA<a class="headerlink" href="#minidlna" title="Permanent link">¶</a></h3>
@@ -921,6 +921,14 @@ partition  3: class =         <span class="caps">DISK</span>, name =        <spa
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="http://blog.zoomquiet.io/theme/js/respond.min.js"></script>
 
+<script src="https://utteranc.es/client.js"
+        repo="ZoomQuiet/ZoomQuiet.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
 <!--
     <script type="text/javascript">
         var disqus_shortname = 'blogzoomquietio';
@@ -948,6 +956,7 @@ partition  3: class =         <span class="caps">DISK</span>, name =        <spa
         }());
     </script>
     
+
 
 </body>
 </html>

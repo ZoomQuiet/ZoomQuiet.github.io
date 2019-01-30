@@ -131,12 +131,12 @@
                 <p>原文: <a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html">prooffreader plus: How to quickly turn an IPython notebook into a blog&nbsp;post</a></p>
 <p>IPython notebooks are great for many things, but they&#8217;re a little awkward to embed in blog post platforms like Blogger, Wordpress, etc. When the nbconvert feature was a standalone command-line tool, there was a blog export template, but that seems to have disappeared now that nbconvert has been folded within&nbsp;IPython.</p>
 <p>Out of the box, nbconvert just has two html export&nbsp;options:</p>
-<div class="highlight"><pre><span></span>--html
+<div class="highlight"><pre><span class="o">--</span><span class="n">html</span>
 </pre></div>
 
 
 <p>which includes a lot of <span class="caps">CSS</span> that interferes with a blog&#8217;s <span class="caps">CSS</span>,&nbsp;and:</p>
-<div class="highlight"><pre><span></span>--html --template basic
+<div class="highlight"><pre><span class="o">--</span><span class="n">html</span> <span class="o">--</span><span class="n">template</span> <span class="n">basic</span>
 </pre></div>
 
 
@@ -147,14 +147,14 @@
 <li>the <a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html">blog version</a> after applying this&nbsp;stylesheet.</li>
 </ul>
 <p>Note that, for aesthetic reasons, I removed all&nbsp;the</p>
-<div class="highlight"><pre><span></span>In [1]
+<div class="highlight"><pre><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 
 
 <p>-style tags because of the narrow columns on this blog. Your mileage may&nbsp;vary.</p>
 <h2 id="1-convert-ipynb-notebook-to-html">1. Convert .ipynb notebook to <span class="caps">HTML</span><a class="headerlink" href="#1-convert-ipynb-notebook-to-html" title="Permanent link">&para;</a></h2>
 <p>In the terminal, navigate to the folder containing the .ipynb file and&nbsp;type:</p>
-<div class="highlight"><pre><span></span>ipython nbconvert --to html --template basic filename.ipynb
+<div class="highlight"><pre><span class="n">ipython</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="o">--</span><span class="n">template</span> <span class="n">basic</span> <span class="n">filename</span><span class="p">.</span><span class="n">ipynb</span>
 </pre></div>
 
 
@@ -162,7 +162,7 @@
 <p>Note: if you&#8217;re using the Blogger platform, never switch back to the Compose interface after you use the <span class="caps">HTML</span> interface, it changes all your&nbsp;tags.</p>
 <h2 id="3-add-css-to-blog-html">3. Add <span class="caps">CSS</span> to blog <span class="caps">HTML</span><a class="headerlink" href="#3-add-css-to-blog-html" title="Permanent link">&para;</a></h2>
 <p>This seems to reproduce the native syntax highlighting of&nbsp;IPython.</p>
-<div class="highlight"><pre><span></span><span class="nt">&lt;style</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span class="nt">&lt;style</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
 .highlight{background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:0em .5em;border-radius: 4px;}
 .k{color: #338822; font-weight: bold;}
 .kn{color: #338822; font-weight: bold;}
@@ -432,6 +432,14 @@
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="http://blog.zoomquiet.io/theme/js/respond.min.js"></script>
 
+<script src="https://utteranc.es/client.js"
+        repo="ZoomQuiet/ZoomQuiet.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
 <!--
     <script type="text/javascript">
         var disqus_shortname = 'blogzoomquietio';
@@ -459,6 +467,7 @@
         }());
     </script>
     
+
 
 </body>
 </html>

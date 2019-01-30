@@ -86,25 +86,40 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="http://blog.zoomquiet.io/rst2s5-upgraded.html">rst2s5&nbsp;小折腾</a></h2>
+                <div class="summary">
+<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p><a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html">rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging</a></p>
+<p>所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:</p>
+<p><a href="http://s5.zoomquiet.io/">s5.zoomquiet.io</a></p>
+<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<p>忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见</p>
+<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
+<p>4年前的生成脚本,和最新 pygments 接口不匹配了,,,</p>
+<h1 id="_4">解决<a class="headerlink" href="#_4" title="Permanent link">¶</a></h1>
+<p>参考:</p>
+<ul>
+<li><a href="http://pygments.org/docs/rstdirective/">Using Pygments in ReST documents — Pygments</a></li>
+<li><a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/">Using rst for presentations</a></li>
+<li><a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html">rst2s5 with syntax highlighting</a></li>
+<li><a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files">python - Where can I find a …</a></li></ul>
+                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/rst2s5-upgraded.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://blog.zoomquiet.io/livin-scrapbook.html">ScrapBook&nbsp;生存指南</a></h2>
                 <div class="summary">
 <p><code>7.7G    ZqFLOSS</code> 复制改进后,为毛多了?!</p>
-<div class="highlight"><pre><span></span>zoomq @ MBP111216ZQ in ~/KuaiPan/zScrapBook
-$ du -hs *
-4.0K    7niu-devrel.json
-4.0K    7niu-floss.json
-4.0K    7niu-skm.json
-5.5G    ZqDevRel
-6.4G    ZqFLOSS
-3.5G    ZqSKM
- 9.5M    scraotools_ZqDevRel.pkl
- 14M    scraotools_ZqFLOSS.pkl
-1.6M    scraotools_ZqSKM.pkl
-</pre></div>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>很久以前, 俺和大家一样,收集整理网络资源的习惯组织方式是:</p>
-<ul>
-<li>目录 (htm …</li></ul>
+<div class="highlight"><pre><span class="n">zoomq</span> <span class="err">@</span> <span class="n">MBP111216ZQ</span> <span class="n">in</span> <span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
+<span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
+<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">devrel</span><span class="p">.</span><span class="n">json</span>
+<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">floss</span><span class="p">.</span><span class="n">json</span>
+<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">skm</span><span class="p">.</span><span class="n">json</span>
+<span class="mf">5.5</span><span class="n">G</span>    <span class="n">ZqDevRel</span>
+<span class="mf">6.4</span><span class="n">G</span>    <span class="n">ZqFLOSS</span>
+<span class="mf">3.5</span><span class="n">G</span>    <span class="n">ZqSKM</span>
+ <span class="mf">9.5</span><span class="n">M</span>    <span class="n">scraotools_ZqDevRel</span><span class="p">.</span><span class="n">pkl …</span></pre></div>
                     <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/livin-scrapbook.html">more ...</a>
                 </div>
             </article>
@@ -152,27 +167,6 @@ $ du -hs *
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="http://blog.zoomquiet.io/jump-into-7niu.html">迁出<span class="caps">RTFD</span>.org</a></h2>
-                <div class="summary">
-<h1 id="rtfdorg"><span class="caps">RTFD</span>.org<a class="headerlink" href="#rtfdorg" title="Permanent link">¶</a></h1>
-<ul>
-<li>正名 readthedocs.org</li>
-<li>别名儿 <code>RTFD</code>.org</li>
-</ul>
-<p>是一个良心服务, 自动将指定的任何一个仓库中的 Sphinx 工程, 根据提交事件,自动同步,编译,发布.</p>
-<p>完全 0 配置,以及不占用大家的任何网络资源,完全免费!</p>
-<h2 id="_1">原先<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>发现后,高兴的大规模使用中,并配置了 Disqus 等等好物…</p>
-<h2 id="_2">现在<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p><img alt="d005a8bd08c1" src="https://f.cloud.github.com/assets/834231/1538179/849551c2-4cdc-11e3-9759-d005a8bd08c1.jpg"/></p>
-<ul>
-<li><a href="https://github.com/rtfd/readthedocs.org/issues/435">Many builds stuck in “triggered” state · Issue #435 · rtfd/readthedocs.org</a></li>
-<li><a href="https://github.com/rtfd/readthedocs.org/issues/592">how stop a build triggered from long time ago with finish …</a></li></ul>
-                    <a class="btn btn-default btn-xs" href="http://blog.zoomquiet.io/jump-into-7niu.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         <ul class="pagination">
                 <li class="prev"><a href="http://blog.zoomquiet.io/category/livin2.html">&laquo;</a>
@@ -185,6 +179,8 @@ $ du -hs *
                         href="http://blog.zoomquiet.io/category/livin3.html">3</a></li>
                 <li class=""><a
                         href="http://blog.zoomquiet.io/category/livin4.html">4</a></li>
+                <li class=""><a
+                        href="http://blog.zoomquiet.io/category/livin5.html">5</a></li>
                 <li class="next"><a
                         href="http://blog.zoomquiet.io/category/livin4.html">&raquo;</a></li>
         </ul>
@@ -399,6 +395,14 @@ $ du -hs *
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="http://blog.zoomquiet.io/theme/js/respond.min.js"></script>
 
+<script src="https://utteranc.es/client.js"
+        repo="ZoomQuiet/ZoomQuiet.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
 <!--
     <script type="text/javascript">
         var disqus_shortname = 'blogzoomquietio';
@@ -426,6 +430,7 @@ $ du -hs *
         }());
     </script>
     
+
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2019-01-30T10:10:00+08:00</updated><entry><title>如何持证 (SSL) 开车</title><link href="http://blog.zoomquiet.io/jump-into-ssl.html" rel="alternate"></link><published>2019-01-30T10:10:00+08:00</published><updated>2019-01-30T10:10:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-01-30:/jump-into-ssl.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2019-01-30T10:10:00+08:00</updated><entry><title>如何持证 (SSL) 开车</title><link href="https://blog.zoomquiet.io/jump-into-ssl.html" rel="alternate"></link><published>2019-01-30T10:10:00+08:00</published><updated>2019-01-30T10:10:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-01-30:/jump-into-ssl.html</id><summary type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg"&gt;Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;被成功安利…&lt;/p&gt;
@@ -115,6 +115,7 @@
 &lt;ul&gt;
 &lt;li&gt;而且人家立即有挽救邮件来问, 为毛走哪….&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img alt="邮件事务" src="_images/ssl-domain-transfer-flow.png"/&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;namecheap 中进行恢复&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -167,6 +168,11 @@
 &lt;p&gt;&lt;img alt="检验" src="_images/ssl-chrome-chk.png"/&gt;&lt;/p&gt;
 &lt;p&gt;当然, 原先模板中一系列资源指向老 &lt;code&gt;http&lt;/code&gt; 资源都无法使用了&lt;/p&gt;
 &lt;p&gt;&lt;img alt="资源丢失" src="_images/ssl-res-load-err.png"/&gt;&lt;/p&gt;
+&lt;p&gt;修订配置文件 &lt;code&gt;pelicanconf.py&lt;/code&gt;: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SITEURL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//blog.zoomquiet.io'&lt;/span&gt;
+&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;
+        &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//blog.zoomquiet.io'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="gl-pages"&gt;gl-pages&lt;a class="headerlink" href="#gl-pages" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;༄  dig 101.camp +nostats +nocomments +nocmd&lt;/p&gt;
@@ -238,7 +244,16 @@
 &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="Livin"></category><category term="SCM"></category><category term="SSL"></category></entry><entry><title>内圈梗集锦(人工智能简史)书评</title><link href="http://blog.zoomquiet.io/180220-book-ai-historic.html" rel="alternate"></link><published>2018-02-20T16:42:24+08:00</published><updated>2018-02-20T16:42:24+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2018-02-20:/180220-book-ai-historic.html</id><summary type="html">
+&lt;/ul&gt;
+&lt;h2 id="sayeahooo"&gt;Sayeahooo&lt;a class="headerlink" href="#sayeahooo" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;4h 资料搜索理解&lt;/li&gt;
+&lt;li&gt;2d gitlab 尝试/生效&lt;/li&gt;
+&lt;li&gt;4h github 嗯哼&lt;ul&gt;
+&lt;li&gt;3h 域名迁移尝试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="MAC"></category><category term="Livin"></category><category term="SCM"></category><category term="SSL"></category></entry><entry><title>内圈梗集锦(人工智能简史)书评</title><link href="https://blog.zoomquiet.io/180220-book-ai-historic.html" rel="alternate"></link><published>2018-02-20T16:42:24+08:00</published><updated>2018-02-20T16:42:24+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2018-02-20:/180220-book-ai-historic.html</id><summary type="html">
 &lt;p&gt;版权归作者所有,任何形式转载请联系作者. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;作者&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Quiet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;来自豆瓣&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="err"&gt;来源&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//book.douban.com/review/9167418/&lt;/span&gt;
@@ -295,7 +310,7 @@
 &lt;p&gt;对于准备或是从事 &lt;span class="caps"&gt;AI&lt;/span&gt; 开发工作的程序猿来说,
 最大的功能就是知道自己袓师爷们的关系,
 以及知道想深入下去, 应该补什么书了. &lt;/p&gt;
-&lt;p&gt;~ &lt;a href="https://book.douban.com/review/9167418/"&gt;内圈梗集锦(人工智能简史)书评&lt;/a&gt;&lt;/p&gt;</content><category term="DAMA"></category><category term="Book"></category><category term="Chaos"></category></entry><entry><title>用 DSL 们构筑商用系统</title><link href="http://blog.zoomquiet.io/dsl-atop-openresty.html" rel="alternate"></link><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-08-27:/dsl-atop-openresty.html</id><summary type="html">
+&lt;p&gt;~ &lt;a href="https://book.douban.com/review/9167418/"&gt;内圈梗集锦(人工智能简史)书评&lt;/a&gt;&lt;/p&gt;</content><category term="DAMA"></category><category term="Book"></category><category term="Chaos"></category></entry><entry><title>用 DSL 们构筑商用系统</title><link href="https://blog.zoomquiet.io/dsl-atop-openresty.html" rel="alternate"></link><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-08-27:/dsl-atop-openresty.html</id><summary type="html">
 &lt;h1 id="building-business-systems-with-dsls-for-nginx-openresty"&gt;Building Business Systems with DSLs for &lt;span class="caps"&gt;NGINX&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; OpenResty&lt;a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~ 来自春哥的分享&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -1033,7 +1048,7 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 &lt;li&gt;.5h 决定嗯哼&lt;/li&gt;
 &lt;li&gt;2.h 完成上篇&lt;/li&gt;
 &lt;li&gt;2.5h 完成下篇&lt;/li&gt;
-&lt;/ul&gt;</content><category term="speech"></category><category term="openresty"></category><category term="agentzh"></category><category term="ngx"></category></entry><entry><title>PyQt4 之消失在 Sierra</title><link href="http://blog.zoomquiet.io/pyqt4macos.html" rel="alternate"></link><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-08-08:/pyqt4macos.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="speech"></category><category term="openresty"></category><category term="agentzh"></category><category term="ngx"></category></entry><entry><title>PyQt4 之消失在 Sierra</title><link href="https://blog.zoomquiet.io/pyqt4macos.html" rel="alternate"></link><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-08-08:/pyqt4macos.html</id><summary type="html">
 &lt;h3 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,
 用 PyQt 是必然选择哪.&lt;/p&gt;
@@ -1112,7 +1127,7 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 &lt;ul&gt;
 &lt;li&gt;170809 blogging&lt;/li&gt;
 &lt;li&gt;170808 inti.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="mac"></category><category term="pyqt"></category><category term="howto"></category><category term="sierra"></category></entry><entry><title>Leo 5.4 theme custom</title><link href="http://blog.zoomquiet.io/leo5theme-key-words.html" rel="alternate"></link><published>2016-11-17T00:00:00+08:00</published><updated>2016-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-11-17:/leo5theme-key-words.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="mac"></category><category term="pyqt"></category><category term="howto"></category><category term="sierra"></category></entry><entry><title>Leo 5.4 theme custom</title><link href="https://blog.zoomquiet.io/leo5theme-key-words.html" rel="alternate"></link><published>2016-11-17T00:00:00+08:00</published><updated>2016-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-11-17:/leo5theme-key-words.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/leo5theme.html"&gt;Leo 5.2 theme custom&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Leo 是灵活的完全 Pythonic 的可定制 &lt;code&gt;文学化编辑环境&lt;/code&gt; …&lt;/p&gt;
@@ -1185,7 +1200,7 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 &lt;li&gt;161011 有空尝试解决&lt;/li&gt;
 &lt;li&gt;161111 通过社区解决&lt;/li&gt;
 &lt;li&gt;161201 才有空补全&lt;/li&gt;
-&lt;/ul&gt;</content><category term="python"></category><category term="howto"></category><category term="leo"></category><category term="theme"></category></entry><entry><title>rMBP 坠入纪</title><link href="http://blog.zoomquiet.io/break-into-rMBP13.html" rel="alternate"></link><published>2016-06-28T00:00:00+08:00</published><updated>2016-06-28T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-06-28:/break-into-rMBP13.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="python"></category><category term="howto"></category><category term="leo"></category><category term="theme"></category></entry><entry><title>rMBP 坠入纪</title><link href="https://blog.zoomquiet.io/break-into-rMBP13.html" rel="alternate"></link><published>2016-06-28T00:00:00+08:00</published><updated>2016-06-28T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-06-28:/break-into-rMBP13.html</id><summary type="html">
 &lt;h1 id="_1"&gt;崩&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;160625, 一个平常的早晨, 俺的世界崩溃了一大坨…
 5年前老婆大人开恩准购的: 高配版, 8G, 512G+256G &lt;span class="caps"&gt;SSD&lt;/span&gt; 的&lt;span class="caps"&gt;MBP&lt;/span&gt; 15吋 无法开机!&lt;/p&gt;
@@ -1491,7 +1506,7 @@ Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
 &lt;li&gt;160628 发布&lt;/li&gt;
 &lt;li&gt;160627 随笔&lt;/li&gt;
 &lt;li&gt;160626 开始&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="rMBP"></category><category term="DAMA"></category></entry><entry><title>最后的协议</title><link href="http://blog.zoomquiet.io/160619-protocol4dying.html" rel="alternate"></link><published>2016-06-19T21:12:21+08:00</published><updated>2016-06-19T21:12:21+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-06-19:/160619-protocol4dying.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="rMBP"></category><category term="DAMA"></category></entry><entry><title>最后的协议</title><link href="https://blog.zoomquiet.io/160619-protocol4dying.html" rel="alternate"></link><published>2016-06-19T21:12:21+08:00</published><updated>2016-06-19T21:12:21+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-06-19:/160619-protocol4dying.html</id><summary type="html">
 &lt;ul&gt;
 &lt;li&gt;来自: &lt;a href="https://www.facebook.com/notes/%E8%91%89%E4%BF%A1%E6%BA%90/%E8%87%A8%E7%B5%82%E5%8D%94%E5%AE%9Aa-protocol-for-dying/10153556546128601"&gt;臨終協定(A Protocol for Dying)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;原文: &lt;a href="http://hintjens.com/blog:115"&gt;A Protocol for Dying - Hintjens.com&lt;/a&gt;&lt;/li&gt;
@@ -1605,7 +1620,7 @@ Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
 &lt;p&gt;我們都有機會面對臨終者,遲早有一天我們也都會成為臨終者,然而在成長過程中很少有機會學習如何地去面對臨終相關問題,如果因為無知而犯錯,將會是無法彌補的,一輩子都會在良心上感覺到虧欠. &lt;/p&gt;
 &lt;p&gt;我翻譯這篇文章,並非主張本協定的內容可以完全原封不動地套用到每一個個別的情境. 不僅是文化差異而已,甚至不同的家庭,臨終者的性格特質,彼此的角色等等都需要列入考量(例如關於提起聖經章節這一件事),這個議題是沒有&lt;span class="caps"&gt;SOP&lt;/span&gt;的,每個個案都有屬於該個案當下的協定. 如果是家屬或者病患本人,或許可以向醫院的社工師作相關諮詢. &lt;/p&gt;
 &lt;p&gt;雖然具體的行動要因人,因事,因地制宜,然而,我相信這份協定的內容在原則層次是跨越文化而共通的,例如,雙方都有責任與義務坦然面對臨終這件事,以及人應該有選擇死得有尊嚴的權利,還有那些從臨終者角度出發的觀點所象徵的尊重臨終者主觀意願的態度,都是很有價值的觀點. &lt;/p&gt;
-&lt;p&gt;Google一下就可以發現台灣已經有很多人在倡導與臨終,安樂死相關的理念,值得我們向她/他們致敬,但我相信他們的努力還沒有受到應有的重視,對於這個議題,我們還有很多要努力的地方. &lt;/p&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Chaos"></category></entry><entry><title>天然样循环</title><link href="http://blog.zoomquiet.io/nedbat-loop-iter.html" rel="alternate"></link><published>2016-05-31T00:00:00+08:00</published><updated>2016-05-31T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-05-31:/nedbat-loop-iter.html</id><summary type="html">
+&lt;p&gt;Google一下就可以發現台灣已經有很多人在倡導與臨終,安樂死相關的理念,值得我們向她/他們致敬,但我相信他們的努力還沒有受到應有的重視,對於這個議題,我們還有很多要努力的地方. &lt;/p&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Chaos"></category></entry><entry><title>天然样循环</title><link href="https://blog.zoomquiet.io/nedbat-loop-iter.html" rel="alternate"></link><published>2016-05-31T00:00:00+08:00</published><updated>2016-05-31T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-05-31:/nedbat-loop-iter.html</id><summary type="html">
 &lt;p&gt;来自 @nedbat 的分享:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://nedbatchelder.com/text/iter.html"&gt;Ned Batchelder: Loop Like A Native&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;迭代基础&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -1998,7 +2013,7 @@ value = next(iterator) …&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;160613 空先发&lt;/li&gt;
 &lt;li&gt;160531 动念&lt;/li&gt;
-&lt;/ul&gt;</content><category term="pythonic"></category><category term="pythoneer"></category><category term="loop"></category><category term="coder"></category></entry><entry><title>站立式办公环境尝试</title><link href="http://blog.zoomquiet.io/standing-desk-env.html" rel="alternate"></link><published>2016-05-01T00:00:00+08:00</published><updated>2016-05-01T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-05-01:/standing-desk-env.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="pythonic"></category><category term="pythoneer"></category><category term="loop"></category><category term="coder"></category></entry><entry><title>站立式办公环境尝试</title><link href="https://blog.zoomquiet.io/standing-desk-env.html" rel="alternate"></link><published>2016-05-01T00:00:00+08:00</published><updated>2016-05-01T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-05-01:/standing-desk-env.html</id><summary type="html">
 &lt;h1 id="_1"&gt;立&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;人之所以为人, 就是因为站立解放了双手, 提升了视野, 刺激了心智, 勃发了野心…&lt;/p&gt;
 &lt;p&gt;所以,我们用了几亿年进化, 才站立了起来,
@@ -2079,7 +2094,7 @@ value = next(iterator) …&lt;/p&gt;
 &lt;li&gt;160601 总结&lt;/li&gt;
 &lt;li&gt;160501 身动&lt;/li&gt;
 &lt;li&gt;160401 动心&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="SOHO"></category><category term="DAMA"></category></entry><entry><title>如何在 Leo 中协作?!</title><link href="http://blog.zoomquiet.io/how2collaborate-with-leo.html" rel="alternate"></link><published>2016-04-17T00:00:00+08:00</published><updated>2016-04-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-17:/how2collaborate-with-leo.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="SOHO"></category><category term="DAMA"></category></entry><entry><title>如何在 Leo 中协作?!</title><link href="https://blog.zoomquiet.io/how2collaborate-with-leo.html" rel="alternate"></link><published>2016-04-17T00:00:00+08:00</published><updated>2016-04-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-17:/how2collaborate-with-leo.html</id><summary type="html">
 &lt;h1 id="leo"&gt;Leo?&lt;a class="headerlink" href="#leo" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~ 嗯哼&lt;/p&gt;
 &lt;p&gt;研究什么是 Leo ? 非要一句话说清查的话,只能是:&lt;/p&gt;
@@ -2426,7 +2441,7 @@ Overwrite the outline node?&lt;/p&gt;
 &lt;li&gt;160417 整理分享&lt;/li&gt;
 &lt;li&gt;160416 惊悚故事&lt;/li&gt;
 &lt;li&gt;131024 发愿&lt;/li&gt;
-&lt;/ul&gt;</content><category term="EKR"></category><category term="Leo"></category><category term="pythonic"></category></entry><entry><title>Leo 5.2 theme custom</title><link href="http://blog.zoomquiet.io/leo5theme.html" rel="alternate"></link><published>2016-04-15T00:00:00+08:00</published><updated>2016-04-15T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-15:/leo5theme.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="EKR"></category><category term="Leo"></category><category term="pythonic"></category></entry><entry><title>Leo 5.2 theme custom</title><link href="https://blog.zoomquiet.io/leo5theme.html" rel="alternate"></link><published>2016-04-15T00:00:00+08:00</published><updated>2016-04-15T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-15:/leo5theme.html</id><summary type="html">
 &lt;h1 id="en"&gt;&lt;span class="caps"&gt;EN&lt;/span&gt;&lt;a class="headerlink" href="#en" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;thanks guys in &lt;code&gt;leo-editor@googlegroups.com&lt;/code&gt; :&lt;/p&gt;
 &lt;ul&gt;
@@ -2695,7 +2710,7 @@ Overwrite the outline node?&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;参考颜色: &lt;a href="http://leo-editor.github.io/snippets/colormap.html"&gt;Leo Color Map&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="python"></category><category term="howto"></category><category term="leo"></category><category term="theme"></category></entry><entry><title>Linux 后的思想</title><link href="http://blog.zoomquiet.io/linux-linus-not-only-be-fun.html" rel="alternate"></link><published>2016-04-10T00:00:00+08:00</published><updated>2016-04-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-10:/linux-linus-not-only-be-fun.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="python"></category><category term="howto"></category><category term="leo"></category><category term="theme"></category></entry><entry><title>Linux 后的思想</title><link href="https://blog.zoomquiet.io/linux-linus-not-only-be-fun.html" rel="alternate"></link><published>2016-04-10T00:00:00+08:00</published><updated>2016-04-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-10:/linux-linus-not-only-be-fun.html</id><summary type="html">
 &lt;p&gt;来自 &lt;span class="caps"&gt;TED2016&lt;/span&gt; 的分享:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux"&gt;Linus Torvalds: The mind behind Linux | &lt;span class="caps"&gt;TED&lt;/span&gt; Talk | &lt;span class="caps"&gt;TED&lt;/span&gt;.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;戳中泪点的:&lt;/p&gt;
@@ -2729,7 +2744,7 @@ Overwrite the outline node?&lt;/p&gt;
 &lt;li&gt;嗯哼,这就是失控控制法&lt;/li&gt;
 &lt;li&gt;不控制的控制才是最好的控制&lt;/li&gt;
 &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;</content><category term="geek"></category><category term="linux"></category><category term="floss"></category></entry><entry><title>jump into SSD with Yoesmite</title><link href="http://blog.zoomquiet.io/jump-into-ssd.html" rel="alternate"></link><published>2015-04-09T00:00:00+08:00</published><updated>2015-04-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-04-09:/jump-into-ssd.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="geek"></category><category term="linux"></category><category term="floss"></category></entry><entry><title>jump into SSD with Yoesmite</title><link href="https://blog.zoomquiet.io/jump-into-ssd.html" rel="alternate"></link><published>2015-04-09T00:00:00+08:00</published><updated>2015-04-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-04-09:/jump-into-ssd.html</id><summary type="html">
 &lt;h1 id="_1"&gt;为毛&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;不解释, 人家都免费给你升级了哪!&lt;/p&gt;
 &lt;h1 id="_2"&gt;新梗&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
@@ -3145,7 +3160,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
 &lt;li&gt;140505 快速简述完成&lt;/li&gt;
 &lt;li&gt;140110 起意,总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>再见了 Python</title><link href="http://blog.zoomquiet.io/saying-ggodby-python-zh.html" rel="alternate"></link><published>2015-01-10T00:00:00+08:00</published><updated>2015-01-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-01-10:/saying-ggodby-python-zh.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>再见了 Python</title><link href="https://blog.zoomquiet.io/saying-ggodby-python-zh.html" rel="alternate"></link><published>2015-01-10T00:00:00+08:00</published><updated>2015-01-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-01-10:/saying-ggodby-python-zh.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This post is long overdue; this isn’t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
 &lt;p&gt;While …&lt;/p&gt;</summary><content type="html">&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This post is long overdue; this isn’t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
@@ -3237,7 +3252,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;150112 整理到个人&amp;nbsp;blog&lt;/li&gt;
 &lt;li&gt;150110&amp;nbsp;从周刊中发现,决定翻译&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Weekly"></category><category term="Zh"></category></entry><entry><title>KnewOne-talk 之 大妈 篇</title><link href="http://blog.zoomquiet.io/knewone-talk-zoomq-choise.html" rel="alternate"></link><published>2014-12-23T23:23:00+08:00</published><updated>2014-12-23T23:23:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-23:/knewone-talk-zoomq-choise.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Weekly"></category><category term="Zh"></category></entry><entry><title>KnewOne-talk 之 大妈 篇</title><link href="https://blog.zoomquiet.io/knewone-talk-zoomq-choise.html" rel="alternate"></link><published>2014-12-23T23:23:00+08:00</published><updated>2014-12-23T23:23:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-23:/knewone-talk-zoomq-choise.html</id><summary type="html">
 &lt;p&gt;~ KnewOne talk question list&lt;/p&gt;
 &lt;h2 id="_1"&gt;分享你的生活方式&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;整体上,俺是一头程序猿,所以,,,&lt;/p&gt;
@@ -3367,7 +3382,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;可以提pr提交回答,感谢:)&lt;/li&gt;
 &lt;li&gt;产品使用体验方面,请稍微写得详细一些,谢谢&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="Livin"></category><category term="Zoomq"></category></entry><entry><title>流行之恶</title><link href="http://blog.zoomquiet.io/141212-pop-is-evil.html" rel="alternate"></link><published>2014-12-12T18:18:18+08:00</published><updated>2014-12-12T18:18:18+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:/141212-pop-is-evil.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="Livin"></category><category term="Zoomq"></category></entry><entry><title>流行之恶</title><link href="https://blog.zoomquiet.io/141212-pop-is-evil.html" rel="alternate"></link><published>2014-12-12T18:18:18+08:00</published><updated>2014-12-12T18:18:18+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:/141212-pop-is-evil.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="popular_science_logo.png" src="http://zoomq.qiniudn.com/ZQCollection/logo/popular_science_logo.png?watermark/2/text/Wm9vbS5RdWlldA==/fill/V2hpdGU=/fontsize/320/dissolve/85|imageView2/2/w/320"/&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="err"&gt;你觉得有生命力流行的东西就是好的么&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -3513,7 +3528,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;141212 后台运算了两天,尝试输出第一次&lt;/li&gt;
 &lt;li&gt;141210 被戳提问&lt;/li&gt;
-&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Chaos"></category></entry><entry><title>论如何艺术的骂人</title><link href="http://blog.zoomquiet.io/141212-hierarchy-of-disagreement.html" rel="alternate"></link><published>2014-12-12T12:12:12+08:00</published><updated>2014-12-12T12:12:12+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:/141212-hierarchy-of-disagreement.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Chaos"></category></entry><entry><title>论如何艺术的骂人</title><link href="https://blog.zoomquiet.io/141212-hierarchy-of-disagreement.html" rel="alternate"></link><published>2014-12-12T12:12:12+08:00</published><updated>2014-12-12T12:12:12+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-12:/141212-hierarchy-of-disagreement.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="141212-ask-binghe.lisp.jpg(JPEG 图像,1024x650 像素)" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-ask-binghe.lisp.jpg?imageView2/2/w/512"/&gt;&lt;/p&gt;
 &lt;p&gt;人称伞哥的传奇人物: &lt;a href="http://www.ituring.com.cn/article/553"&gt;田春&lt;/a&gt; 怎么应对的呢?…&lt;/p&gt;
 &lt;!--more--&gt;
@@ -3584,7 +3599,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;h2 id="change-log"&gt;Change log&lt;a class="headerlink" href="#change-log" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;141212 有感速发&lt;/li&gt;
-&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>熟练使用文学编程(literate programming)是怎样一番体验?</title><link href="http://blog.zoomquiet.io/141209-leo-literate-programming.html" rel="alternate"></link><published>2014-12-09T21:21:21+08:00</published><updated>2014-12-09T21:21:21+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-09:/141209-leo-literate-programming.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>熟练使用文学编程(literate programming)是怎样一番体验?</title><link href="https://blog.zoomquiet.io/141209-leo-literate-programming.html" rel="alternate"></link><published>2014-12-09T21:21:21+08:00</published><updated>2014-12-09T21:21:21+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-09:/141209-leo-literate-programming.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="Literate_Programming_book_cover" src="http://upload.wikimedia.org/wikipedia/en/thumb/6/62/Literate_Programming_book_cover.jpg/220px-Literate_Programming_book_cover.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.zhihu.com/question/26978956"&gt;熟练使用文学编程(literate programming)是怎样一番体验? - 知乎&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;然后有人戳了俺…&lt;/p&gt;
@@ -3654,7 +3669,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;h2 id="changlog"&gt;Changlog&lt;a class="headerlink" href="#changlog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;141209 受邀回答&lt;/li&gt;
-&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>如何将 ipynb 发布到 blog 中?</title><link href="http://blog.zoomquiet.io/141127-ipynb-into-blog.html" rel="alternate"></link><published>2014-11-27T00:00:00+08:00</published><updated>2014-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-27:/141127-ipynb-into-blog.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html"&gt;prooffreader plus: How to quickly turn an IPython notebook into a blog&amp;nbsp;post&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Leo"></category></entry><entry><title>如何将 ipynb 发布到 blog 中?</title><link href="https://blog.zoomquiet.io/141127-ipynb-into-blog.html" rel="alternate"></link><published>2014-11-27T00:00:00+08:00</published><updated>2014-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-27:/141127-ipynb-into-blog.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html"&gt;prooffreader plus: How to quickly turn an IPython notebook into a blog&amp;nbsp;post&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;IPython notebooks are great for many things, but they&amp;#8217;re a little awkward to embed in blog post platforms like Blogger, Wordpress, etc. When the nbconvert feature was a standalone command-line tool, there was a blog …&lt;/p&gt;</summary><content type="html">&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html"&gt;prooffreader plus: How to quickly turn an IPython notebook into a blog&amp;nbsp;post&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;IPython notebooks are great for many things, but they&amp;#8217;re a little awkward to embed in blog post platforms like Blogger, Wordpress, etc. When the nbconvert feature was a standalone command-line tool, there was a blog export template, but that seems to have disappeared now that nbconvert has been folded within&amp;nbsp;IPython.&lt;/p&gt;
 &lt;p&gt;Out of the box, nbconvert just has two html export&amp;nbsp;options:&lt;/p&gt;
@@ -3717,7 +3732,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131106 pub. &lt;a href="https://medium.com/i-m-h-o/9520fee0b59f"&gt;&lt;span class="caps"&gt;EKR&lt;/span&gt; to Chinese programmer — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Pythonic"></category><category term="FW"></category><category term="ipynb"></category><category term="tutorial"></category></entry><entry><title>十大早该知道的Python技巧</title><link href="http://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html" rel="alternate"></link><published>2014-11-26T00:00:00+08:00</published><updated>2014-11-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-26:/top10-Py-idioms-wish-learned-earlier.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html"&gt;prooffreader plus: Top 10 Python idioms I wish I&amp;#8217;d learned&amp;nbsp;earlier&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="FW"></category><category term="ipynb"></category><category term="tutorial"></category></entry><entry><title>十大早该知道的Python技巧</title><link href="https://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html" rel="alternate"></link><published>2014-11-26T00:00:00+08:00</published><updated>2014-11-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-26:/top10-Py-idioms-wish-learned-earlier.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html"&gt;prooffreader plus: Top 10 Python idioms I wish I&amp;#8217;d learned&amp;nbsp;earlier&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Top 10 Python idioms I wish I'd learned earlier&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;ve been programming all my life, but never been a programmer. Most of my work was done in Visual Basic because it&amp;#8217;s what I was most …&lt;/p&gt;</summary><content type="html">&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html"&gt;prooffreader plus: Top 10 Python idioms I wish I&amp;#8217;d learned&amp;nbsp;earlier&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Top 10 Python idioms I wish I'd learned earlier&lt;/code&gt;&lt;/p&gt;
@@ -3991,7 +4006,7 @@ is the style guide for Python code. Among other things, it directs that lines no
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;141130 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Pythonic"></category><category term="FW"></category><category term="idioms"></category><category term="tutorial"></category></entry><entry><title>论 Shooter 的关闭</title><link href="http://blog.zoomquiet.io/141122-shotter-death.html" rel="alternate"></link><published>2014-11-22T11:11:11+08:00</published><updated>2014-11-22T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-22:/141122-shotter-death.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="FW"></category><category term="idioms"></category><category term="tutorial"></category></entry><entry><title>论 Shooter 的关闭</title><link href="https://blog.zoomquiet.io/141122-shotter-death.html" rel="alternate"></link><published>2014-11-22T11:11:11+08:00</published><updated>2014-11-22T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-11-22:/141122-shotter-death.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="529.jpg (175×260)" src="http://m.ms10010.com/image/pic/201205/thumb/529.jpg"/&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;And&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="kr"&gt;naked&lt;/span&gt; &lt;span class="n"&gt;light&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;saw&lt;/span&gt; &lt;span class="n"&gt;ten&lt;/span&gt; &lt;span class="n"&gt;thousand&lt;/span&gt; &lt;span class="n"&gt;people&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;maybe&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
 &lt;span class="n"&gt;People&lt;/span&gt; &lt;span class="n"&gt;talking&lt;/span&gt; &lt;span class="n"&gt;without&lt;/span&gt; &lt;span class="n"&gt;speaking&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;people&lt;/span&gt; &lt;span class="n"&gt;hearing&lt;/span&gt; &lt;span class="n"&gt;without&lt;/span&gt; &lt;span class="n"&gt;listening&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
@@ -4051,7 +4066,7 @@ is the style guide for Python code. Among other things, it directs that lines no
 &lt;ul&gt;
 &lt;li&gt;141125 没忍住…&lt;/li&gt;
 &lt;li&gt;141121 起意&lt;/li&gt;
-&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>Mavericks 中用 sshfs</title><link href="http://blog.zoomquiet.io/sshfs-in-mavericks.html" rel="alternate"></link><published>2014-10-24T00:00:00+08:00</published><updated>2014-10-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-10-24:/sshfs-in-mavericks.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>Mavericks 中用 sshfs</title><link href="https://blog.zoomquiet.io/sshfs-in-mavericks.html" rel="alternate"></link><published>2014-10-24T00:00:00+08:00</published><updated>2014-10-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-10-24:/sshfs-in-mavericks.html</id><summary type="html">
 &lt;h1 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;自从 2011-12-16 入手 &lt;span class="caps"&gt;MBP&lt;/span&gt; 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便&lt;/p&gt;
 &lt;ul&gt;
@@ -4116,7 +4131,7 @@ is the style guide for Python code. Among other things, it directs that lines no
 &lt;li&gt;&lt;a href="http://michael.terretta.com/fix-to-remove-or-uninstall-macfuse-on-mountain-lion-when-you-get-the-error-macfuse-uninstaller-can-not-find-the-archive-dot-bom-for-macfuse-core-package-dot"&gt;Fix to remove or uninstall MacFuse on Mountain Lion when you get the error “MacFUSE Uninstaller: Can not find the Archive.bom for MacFUSE Core package.” - Crude Technologies&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://discussions.apple.com/message/18355704#18355704"&gt;how to remove macfuse and ntfs 3g on osx lion? | Apple Support Communities&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;… etc.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="sshfs"></category></entry><entry><title>寻路ing Guido van Rossum</title><link href="http://blog.zoomquiet.io/guido-finding-his-way.html" rel="alternate"></link><published>2014-09-21T13:13:13+08:00</published><updated>2014-09-21T13:13:13+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-21:/guido-finding-his-way.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="sshfs"></category></entry><entry><title>寻路ing Guido van Rossum</title><link href="https://blog.zoomquiet.io/guido-finding-his-way.html" rel="alternate"></link><published>2014-09-21T13:13:13+08:00</published><updated>2014-09-21T13:13:13+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-21:/guido-finding-his-way.html</id><summary type="html">
 &lt;p&gt;&lt;a href="https://medium.com/dropbox-makers/guido-van-rossum-on-finding-his-way-e018e8b5f6b1"&gt;Guido van Rossum on finding his way — Dropbox Makers — Medium&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;~ Python 缔造者,当前 Dropbox 工程师, 近期编程思考&lt;/p&gt;
 &lt;p&gt;Guido van Rossum 作为Python 的创造者,
@@ -4257,7 +4272,7 @@ is the style guide for Python code. Among other things, it directs that lines no
 &lt;h2 id="changlog"&gt;Changlog&lt;a class="headerlink" href="#changlog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140921 蠎周刊:133 期,推荐文章,不自觉的认真读完,形成了这一快译.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Guido"></category></entry><entry><title>论 OhLife 的倒掉</title><link href="http://blog.zoomquiet.io/140921-ohlife-death.html" rel="alternate"></link><published>2014-09-21T11:11:11+08:00</published><updated>2014-09-21T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-21:/140921-ohlife-death.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="Guido"></category></entry><entry><title>论 OhLife 的倒掉</title><link href="https://blog.zoomquiet.io/140921-ohlife-death.html" rel="alternate"></link><published>2014-09-21T11:11:11+08:00</published><updated>2014-09-21T11:11:11+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-21:/140921-ohlife-death.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="ohlife" src="http://a.36krcnd.com/photo/5dfa0868b7808b19b22eb4617a374923.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://www.36kr.com/p/2934.html"&gt;OhLife:抛弃你的日记本吧!来自Y Combinator的第三个项目 | 36氪&lt;/a&gt;&lt;/p&gt;
@@ -4363,7 +4378,7 @@ If you had the premium version, a few weeks after we shut OhLife down we’ll re
 &lt;h2 id="changlog"&gt;Changlog&lt;a class="headerlink" href="#changlog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140921 官方通知邮件引发直觉思考&lt;/li&gt;
-&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>Pythonic口号的Pivot</title><link href="http://blog.zoomquiet.io/140916-pycon-slogen.html" rel="alternate"></link><published>2014-09-16T19:42:42+08:00</published><updated>2014-09-16T19:42:42+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-16:/140916-pycon-slogen.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>Pythonic口号的Pivot</title><link href="https://blog.zoomquiet.io/140916-pycon-slogen.html" rel="alternate"></link><published>2014-09-16T19:42:42+08:00</published><updated>2014-09-16T19:42:42+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-16:/140916-pycon-slogen.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="SimpleIsBeautiful(PNG 图像,731x681 像素)" src="http://wiki.woodpecker.org.cn/moin/SimpleIsBeautiful?action=AttachFile&amp;amp;do=get&amp;amp;target=130416-zq-simple-is-beautiful.png"/&gt;&lt;/p&gt;
 &lt;p&gt;可记得去年的&lt;a href="http://python-china.org/topic/544#reply5"&gt;蠎年蠎衫(PythonisT-shirt)设计大赛! — Python China&lt;/a&gt; ?&lt;/p&gt;
 &lt;p&gt;今年又来尝试了….&lt;/p&gt;
@@ -4461,7 +4476,7 @@ If you had the premium version, a few weeks after we shut OhLife down we’ll re
 &lt;h2 id="changlog"&gt;Changlog&lt;a class="headerlink" href="#changlog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140916 微信群引发&lt;/li&gt;
-&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>Python 101: 传播Python时几点建议</title><link href="http://blog.zoomquiet.io/py101-taching-suggestions.html" rel="alternate"></link><published>2014-08-08T00:00:00+08:00</published><updated>2014-08-08T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-08-08:/py101-taching-suggestions.html</id><summary type="html">&lt;p&gt;&lt;img alt="/chinese-python-poster" src="https://datalabcc.files.wordpress.com/2014/05/chinese-python-poster.jpg?w=590"/&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="DAMA"></category><category term="Pythoneer"></category><category term="PyCon"></category></entry><entry><title>Python 101: 传播Python时几点建议</title><link href="https://blog.zoomquiet.io/py101-taching-suggestions.html" rel="alternate"></link><published>2014-08-08T00:00:00+08:00</published><updated>2014-08-08T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-08-08:/py101-taching-suggestions.html</id><summary type="html">&lt;p&gt;&lt;img alt="/chinese-python-poster" src="https://datalabcc.files.wordpress.com/2014/05/chinese-python-poster.jpg?w=590"/&gt;&lt;/p&gt;
 
 &lt;p&gt;来自: &lt;a href="http://www.curiousefficiency.org/posts/2014/08/python-teaching-suggestions.html"&gt;Some Suggestions for Teaching Python | Curious Efficiency&lt;/a&gt; 
 Nick Coghlan
@@ -4559,7 +4574,7 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140811 翻译 Weekly issue:127 时发现,转译学习&lt;/li&gt;
-&lt;/ul&gt;</content><category term="press"></category><category term="101"></category><category term="Zh"></category></entry><entry><title>电邮的自我防护</title><link href="http://blog.zoomquiet.io/140718-fsf-emailselfdefense-mac.html" rel="alternate"></link><published>2014-08-03T00:00:00+08:00</published><updated>2014-08-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-08-03:/140718-fsf-emailselfdefense-mac.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="press"></category><category term="101"></category><category term="Zh"></category></entry><entry><title>电邮的自我防护</title><link href="https://blog.zoomquiet.io/140718-fsf-emailselfdefense-mac.html" rel="alternate"></link><published>2014-08-03T00:00:00+08:00</published><updated>2014-08-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-08-03:/140718-fsf-emailselfdefense-mac.html</id><summary type="html">
 &lt;p&gt;&lt;img alt="infographic" src="https://static.fsf.org/nosvn/enc-dev0/img/en/infographic-button.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://emailselfdefense.fsf.org/en/mac.html"&gt;Email Self-Defense - a guide to fighting surveillance with GnuPG encryption&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;原主忒啰嗦了!&lt;/p&gt;
@@ -4579,7 +4594,7 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;ul&gt;
 &lt;li&gt;140916 转发 &lt;a href="https://tonghuix.io/2014/06/email-selfdefence-gnupg/#"&gt;使用 GnuPG 进行电子邮件的自我防御[&lt;span class="caps"&gt;FSF&lt;/span&gt;信息图中译] » Open Source Geek | 爱开源未来&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;140803 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</content><category term="fsf"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>How to argue for Python’s use</title><link href="http://blog.zoomquiet.io/140718_Brett_Cannon-How2argue4Python-use.html" rel="alternate"></link><published>2014-07-18T00:00:00+08:00</published><updated>2014-07-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-18:/140718_Brett_Cannon-How2argue4Python-use.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="fsf"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>How to argue for Python’s use</title><link href="https://blog.zoomquiet.io/140718_Brett_Cannon-How2argue4Python-use.html" rel="alternate"></link><published>2014-07-18T00:00:00+08:00</published><updated>2014-07-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-18:/140718_Brett_Cannon-How2argue4Python-use.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://nothingbutsnark.svbtle.com/how-to-argue-for-pythons-use"&gt;How to argue for Python’s use&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Recently I wrote a blog post about how I don’t worry about Python losing users. Within minutes I had people asking about Python’s usage, which the post was not about and is a very different thing to worry about. See, it …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;&lt;a href="http://nothingbutsnark.svbtle.com/how-to-argue-for-pythons-use"&gt;How to argue for Python’s use&lt;/a&gt;&lt;/p&gt;
@@ -4628,7 +4643,7 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;ul&gt;
 &lt;li&gt;1406?? &lt;/li&gt;
 &lt;li&gt;140728 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Brett"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>为毛俺不担心所谓Python用户流失</title><link href="http://blog.zoomquiet.io/why-i-dont-worry-about-pythons-popularity.html" rel="alternate"></link><published>2014-07-11T00:00:00+08:00</published><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:/why-i-dont-worry-about-pythons-popularity.html</id><summary type="html">&lt;h2 id="why-i-dont-worry-about-python-losing-users"&gt;Why I don’t worry about Python losing users&lt;a class="headerlink" href="#why-i-dont-worry-about-python-losing-users" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="Brett"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>为毛俺不担心所谓Python用户流失</title><link href="https://blog.zoomquiet.io/why-i-dont-worry-about-pythons-popularity.html" rel="alternate"></link><published>2014-07-11T00:00:00+08:00</published><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:/why-i-dont-worry-about-pythons-popularity.html</id><summary type="html">&lt;h2 id="why-i-dont-worry-about-python-losing-users"&gt;Why I don’t worry about Python losing users&lt;a class="headerlink" href="#why-i-dont-worry-about-python-losing-users" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I just had a need to read two files that were line-delimited lists of domains, consolidate the data, and then output the domains sorted and all lowercased to a new file. It took me 10 lines of Python code and worked …&lt;/p&gt;</summary><content type="html">&lt;h2 id="why-i-dont-worry-about-python-losing-users"&gt;Why I don’t worry about Python losing users&lt;a class="headerlink" href="#why-i-dont-worry-about-python-losing-users" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I just had a need to read two files that were line-delimited lists of domains, consolidate the data, and then output the domains sorted and all lowercased to a new file. It took me 10 lines of Python code and worked perfectly on the first&amp;nbsp;try.&lt;/p&gt;
 &lt;p&gt;Out of curiosity and to make sure I keep learning Go (my team at work uses it whenever possible), I decided to re-implement the same functionality. That took 
@@ -4653,7 +4668,7 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;140728&amp;nbsp;从周刊中发现,决定翻译&lt;/li&gt;
-&lt;/ul&gt;</content><category term="BRETT"></category><category term="Leo"></category><category term="PyConChina"></category><category term="Zh"></category></entry><entry><title>ScrapBook彻查成果</title><link href="http://blog.zoomquiet.io/zq-chk4scrapbook.html" rel="alternate"></link><published>2014-07-11T00:00:00+08:00</published><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:/zq-chk4scrapbook.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="BRETT"></category><category term="Leo"></category><category term="PyConChina"></category><category term="Zh"></category></entry><entry><title>ScrapBook彻查成果</title><link href="https://blog.zoomquiet.io/zq-chk4scrapbook.html" rel="alternate"></link><published>2014-07-11T00:00:00+08:00</published><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:/zq-chk4scrapbook.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill"&gt;我的学习&amp;amp;工具&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;从06年,就将个人网络资料收集/整理/发布,
@@ -5195,7 +5210,7 @@ IndexError: Unknown key &lt;span class="err"&gt;&amp;lt;&lt;/span&gt;__getstate_
     &lt;span class="mf"&gt;5.2&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqPythonic&lt;/span&gt;
     &lt;span class="mf"&gt;5.3&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;zqSCM&lt;/span&gt;
 &lt;span class="mf"&gt;3.7&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqSKM&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="scrapbook"></category><category term="python"></category><category term="howto"></category><category term="mavericks"></category></entry><entry><title>pydata笔记:环境配置</title><link href="http://blog.zoomquiet.io/pydata-0-mavericks.html" rel="alternate"></link><published>2014-06-03T00:00:00+08:00</published><updated>2014-06-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-06-03:/pydata-0-mavericks.html</id><summary type="html">
+&lt;/pre&gt;&lt;/div&gt;</content><category term="scrapbook"></category><category term="python"></category><category term="howto"></category><category term="mavericks"></category></entry><entry><title>pydata笔记:环境配置</title><link href="https://blog.zoomquiet.io/pydata-0-mavericks.html" rel="alternate"></link><published>2014-06-03T00:00:00+08:00</published><updated>2014-06-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-06-03:/pydata-0-mavericks.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="s27157694.jpg（JPEG 图像，300x300 像素）" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;
@@ -5317,7 +5332,7 @@ export PATH
 &lt;ul&gt;
 &lt;li&gt;140603 完成环境探索,总结&lt;/li&gt;
 &lt;li&gt;140527 &lt;a href="http://www.amazon.cn/gp/product/B00KD7Q7U2/ref=oh_d__o00_details_o00__i00?ie=UTF8&amp;amp;psc=1"&gt;《利用Python进行数据分析》 Wes McKinney, 唐学韬 (Kindle电子书)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="pandas"></category><category term="ipython"></category><category term="pydata"></category><category term="mavericks"></category></entry><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><published>2014-05-07T00:00:00+08:00</published><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:/rst2s5-upgraded.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="pandas"></category><category term="ipython"></category><category term="pydata"></category><category term="mavericks"></category></entry><entry><title>rst2s5 小折腾</title><link href="https://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><published>2014-05-07T00:00:00+08:00</published><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:/rst2s5-upgraded.html</id><summary type="html">
 &lt;h1 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:&lt;/p&gt;
@@ -5373,7 +5388,7 @@ export PATH
 &lt;p&gt;这样俺在 Leo 中写:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png"/&gt;&lt;/p&gt;
 &lt;p&gt;就可以一键生成为幻灯中的:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/&gt;&lt;/p&gt;</content><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><published>2014-02-26T00:00:00+08:00</published><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:/livin-scrapbook.html</id><summary type="html">
+&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/&gt;&lt;/p&gt;</content><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="https://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><published>2014-02-26T00:00:00+08:00</published><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:/livin-scrapbook.html</id><summary type="html">
 &lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;MBP111216ZQ&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
 &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
@@ -5472,7 +5487,7 @@ export PATH
 &lt;ul&gt;
 &lt;li&gt;140405 无解的快速总结&lt;/li&gt;
 &lt;li&gt;140217 开始回顾&lt;/li&gt;
-&lt;/ul&gt;</content><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><published>2014-01-27T23:48:00+08:00</published><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:/cb3-howto-make-hmsrv.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><published>2014-01-27T23:48:00+08:00</published><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:/cb3-howto-make-hmsrv.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h1 id="issue"&gt;Issue&lt;a class="headerlink" href="#issue" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
@@ -6019,7 +6034,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;ul&gt;
 &lt;li&gt;140505 快速完结&lt;/li&gt;
 &lt;li&gt;140127 单立文章追踪&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>如何自在的折腾QPy</title><link href="http://blog.zoomquiet.io/init-my-qpy-env.html" rel="alternate"></link><published>2014-01-26T12:42:00+08:00</published><updated>2014-01-26T12:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-26:/init-my-qpy-env.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>如何自在的折腾QPy</title><link href="https://blog.zoomquiet.io/init-my-qpy-env.html" rel="alternate"></link><published>2014-01-26T12:42:00+08:00</published><updated>2014-01-26T12:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-26:/init-my-qpy-env.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python（中文版） (豆瓣)&lt;/a&gt; 时,发现竟然有 
 &lt;a href="http://code.google.com/p/android-scripting/"&gt;&lt;span class="caps"&gt;SL4A&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
@@ -6483,7 +6498,7 @@ See the error message above.
 &lt;/li&gt;
 &lt;li&gt;140127 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 增补所有细节&lt;/li&gt;
 &lt;li&gt;140126 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 创建&lt;/li&gt;
-&lt;/ul&gt;</content><category term="howto"></category><category term="qpy"></category><category term="pythonic"></category><category term="ssh"></category></entry><entry><title>迁出RTFD.org</title><link href="http://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><published>2014-01-19T00:00:00+08:00</published><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:/jump-into-7niu.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="howto"></category><category term="qpy"></category><category term="pythonic"></category><category term="ssh"></category></entry><entry><title>迁出RTFD.org</title><link href="https://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><published>2014-01-19T00:00:00+08:00</published><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:/jump-into-7niu.html</id><summary type="html">
 &lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;a class="headerlink" href="#rtfdorg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;正名 readthedocs.org&lt;/li&gt;
@@ -6546,7 +6561,7 @@ See the error message above.
 &lt;h1 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140119 开始总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="http://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><published>2014-01-11T00:00:00+08:00</published><updated>2014-01-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:/cbi-zq-install.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="https://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><published>2014-01-11T00:00:00+08:00</published><updated>2014-01-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:/cbi-zq-install.html</id><summary type="html">
 &lt;h2 id="cbi"&gt;&lt;span class="caps"&gt;CBI&lt;/span&gt;&lt;a class="headerlink" href="#cbi" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://blog.zhgdg.org/2014-01/et-cbi1/"&gt;CBInstall.1 欢乐完成&lt;/a&gt; 记要了现场活动的情况;&lt;/p&gt;
 &lt;p&gt;当然,俺也是学员之一,要交作业的,所以,俺的刷机笔记如下:&lt;/p&gt;
@@ -6835,7 +6850,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;ul&gt;
 &lt;li&gt;140119 终于汇集了所有唠叨!&lt;/li&gt;
 &lt;li&gt;140111 开始总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>PythonisT happy guido ;-)</title><link href="http://blog.zoomquiet.io/140106-pycon2013tee-guido.html" rel="alternate"></link><published>2014-01-07T00:00:00+08:00</published><updated>2014-01-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-07:/140106-pycon2013tee-guido.html</id><summary type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
+&lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>PythonisT happy guido ;-)</title><link href="https://blog.zoomquiet.io/140106-pycon2013tee-guido.html" rel="alternate"></link><published>2014-01-07T00:00:00+08:00</published><updated>2014-01-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-07:/140106-pycon2013tee-guido.html</id><summary type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;起初&lt;span class="caps"&gt;ZEUUX&lt;/span&gt; 作&lt;span class="caps"&gt;TEE&lt;/span&gt; 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;然后,就没有然后了&amp;#8230;&lt;/li&gt;
@@ -6884,7 +6899,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="140107-guido-twitter.png（PNG 图像，558x580 像素）" src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/140107-guido-twitter.png"&gt;&lt;/p&gt;
 &lt;p&gt;以上,有关蠎衫的故事,就是这些,再过12年,又能发生什么?!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="design-by zoomquiet " src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/favicon/140101-design-by.png"&gt;&lt;/p&gt;</content><category term="Guido"></category><category term="Pythonner"></category><category term="PyConChina"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="http://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><published>2013-12-30T00:00:00+08:00</published><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:/jump-into-mavericks.html</id><summary type="html">
+&lt;p&gt;&lt;img alt="design-by zoomquiet " src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/favicon/140101-design-by.png"&gt;&lt;/p&gt;</content><category term="Guido"></category><category term="Pythonner"></category><category term="PyConChina"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="https://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><published>2013-12-30T00:00:00+08:00</published><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:/jump-into-mavericks.html</id><summary type="html">
 &lt;h1 id="_1"&gt;为毛&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;得承认是被 老池的文章忽悠到了, 
 而且, 10.9 免费了, 进一步的通过&lt;span class="caps"&gt;OS&lt;/span&gt; 提高了电池/内存的使用效率,
@@ -7062,7 +7077,7 @@ READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
 &lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
 &lt;li&gt;140505 快速简述完成&lt;/li&gt;
 &lt;li&gt;140110 起意,总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>On object-oriented programming</title><link href="http://blog.zoomquiet.io/131224-yw-on-oop.html" rel="alternate"></link><published>2013-12-24T00:00:00+08:00</published><updated>2013-12-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-24:/131224-yw-on-oop.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>On object-oriented programming</title><link href="https://blog.zoomquiet.io/131224-yw-on-oop.html" rel="alternate"></link><published>2013-12-24T00:00:00+08:00</published><updated>2013-12-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-24:/131224-yw-on-oop.html</id><summary type="html">
 &lt;h1 id="_1"&gt;翻越分享原文&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;via: http://yinwang0.wordpress.com/2013/12/24/on-object-oriented-programming/&lt;/li&gt;
@@ -7656,7 +7671,7 @@ lambda 演算以上参数形式却是可以对应到 Smalltalk 的.&lt;/p&gt;
 俺可以作任何事儿,
 包括所谓 访问者模式 提供的所有先进东西, 但是,不通用使用模式.&lt;/p&gt;
 &lt;p&gt;I owe my insights into design patterns to some functional programming people. If you really want to understand the essence of &lt;span class="caps"&gt;OO&lt;/span&gt; design patterns, and how &lt;span class="caps"&gt;NOT&lt;/span&gt; to use them, take a look at this little book other than the GoF one.&lt;/p&gt;
-&lt;p&gt;…&lt;/p&gt;</content><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>How to from Jekyll jump into Pelican</title><link href="http://blog.zoomquiet.io/jekyll-to-pelican.html" rel="alternate"></link><published>2013-12-19T10:42:00+08:00</published><updated>2013-12-19T10:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-19:/jekyll-to-pelican.html</id><summary type="html">
+&lt;p&gt;…&lt;/p&gt;</content><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>How to from Jekyll jump into Pelican</title><link href="https://blog.zoomquiet.io/jekyll-to-pelican.html" rel="alternate"></link><published>2013-12-19T10:42:00+08:00</published><updated>2013-12-19T10:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-19:/jekyll-to-pelican.html</id><summary type="html">
 &lt;h1 id="jekyll-pelican"&gt;如何从 Jekyll 转进入 Pelican&lt;a class="headerlink" href="#jekyll-pelican" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;简述静态网站从 Jekyll 环境中迁移为 纯 Python 
 &lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;…&lt;/p&gt;
@@ -7892,7 +7907,7 @@ Python 世界中大堆静态网站发布工具中的一个,
 &lt;li&gt;140120 ZoomQuiet 复制到 QPython 的 Pelican 工程&lt;/li&gt;
 &lt;li&gt;131219 ZoomQuiet 为 &lt;a href="https://gitcafe.com/CPyUG/weekly/blob/master/README.md"&gt;CPyUG/weekly - GitCafe&lt;/a&gt; 创建&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;…&lt;/p&gt;</content><category term="howto"></category><category term="pelican"></category></entry><entry><title>Tests and static analysis</title><link href="http://blog.zoomquiet.io/131127-yw-on-test-static-analysis.html" rel="alternate"></link><published>2013-11-27T00:00:00+08:00</published><updated>2013-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-27:/131127-yw-on-test-static-analysis.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;</content><category term="howto"></category><category term="pelican"></category></entry><entry><title>Tests and static analysis</title><link href="https://blog.zoomquiet.io/131127-yw-on-test-static-analysis.html" rel="alternate"></link><published>2013-11-27T00:00:00+08:00</published><updated>2013-11-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-27:/131127-yw-on-test-static-analysis.html</id><summary type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/&lt;/p&gt;
 &lt;p&gt;Ever since I made a static analysis tool for Python called PySonar, I have been asked about the question: &amp;#8220;What is the difference between testing and static analysis?&amp;#8221; I just replied to a comment asking a similar question, so I think …&lt;/p&gt;</summary><content type="html">&lt;p&gt;via:&amp;nbsp;http://yinwang0.wordpress.com/2013/12/27/tests-and-static-anaysis/&lt;/p&gt;
 &lt;p&gt;Ever since I made a static analysis tool for Python called PySonar, I have been asked about the question: &amp;#8220;What is the difference between testing and static analysis?&amp;#8221; I just replied to a comment asking a similar question, so I think it&amp;#8217;s a good time to write down some systematic answer for this&amp;nbsp;question.&lt;/p&gt;
 &lt;h2 id="static-analysis-is-static-tests-are-dynamic"&gt;Static analysis is static, tests are dynamic&lt;a class="headerlink" href="#static-analysis-is-static-tests-are-dynamic" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
@@ -7946,7 +7961,7 @@ Python 世界中大堆静态网站发布工具中的一个,
 &lt;ul&gt;
 &lt;li&gt;14010? &lt;/li&gt;
 &lt;li&gt;131212 翻越抄录在 medium.com&amp;nbsp;开始翻译&lt;/li&gt;
-&lt;/ul&gt;</content><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Python 101: Writing a cleanup script</title><link href="http://blog.zoomquiet.io/py101-cleanup-script.html" rel="alternate"></link><published>2013-11-23T00:00:00+08:00</published><updated>2013-11-23T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-23:/py101-cleanup-script.html</id><summary type="html">&lt;p&gt;&lt;a href="http://freepythontips.wordpress.com/2014/01/23/python-101-writing-a-cleanup-script/"&gt;Python 101: Writing a cleanup script | Bite Sized Python&amp;nbsp;Tips&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="YinWang"></category><category term="Pythonner"></category><category term="Zh"></category></entry><entry><title>Python 101: Writing a cleanup script</title><link href="https://blog.zoomquiet.io/py101-cleanup-script.html" rel="alternate"></link><published>2013-11-23T00:00:00+08:00</published><updated>2013-11-23T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-23:/py101-cleanup-script.html</id><summary type="html">&lt;p&gt;&lt;a href="http://freepythontips.wordpress.com/2014/01/23/python-101-writing-a-cleanup-script/"&gt;Python 101: Writing a cleanup script | Bite Sized Python&amp;nbsp;Tips&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;So hi there guys! I hope you are fine. So what is in this post? Today we will be writing a cleanup script. The idea for this post came from Mike Driscol who recently wrote a very useful post about …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://freepythontips.wordpress.com/2014/01/23/python-101-writing-a-cleanup-script/"&gt;Python 101: Writing a cleanup script | Bite Sized Python&amp;nbsp;Tips&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;So hi there guys! I hope you are fine. So what is in this post? Today we will be writing a cleanup script. The idea for this post came from Mike Driscol who recently wrote a very useful post about writing a cleanup script in python. So how is my post different from his post? In my post I will be using path.py. When I used path.py for the first time I just fell in love with&amp;nbsp;it.&lt;/p&gt;
 &lt;h2 id="installing-pathpy"&gt;Installing path.py:&lt;a class="headerlink" href="#installing-pathpy" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
@@ -8090,7 +8105,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140125 翻译 Weekly issue:99.5&amp;nbsp;时发现,转抄学习&lt;/li&gt;
-&lt;/ul&gt;</content><category term="wordpress"></category><category term="101"></category><category term="Zh"></category></entry><entry><title>Zoom.Quiuet</title><link href="http://blog.zoomquiet.io/zoom-quiet.html" rel="alternate"></link><published>2013-11-17T00:00:00+08:00</published><updated>2013-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-17:/zoom-quiet.html</id><summary type="html">&lt;h1 id="zoomquiet"&gt;Zoom.Quiet (大妈)&lt;a class="headerlink" href="#zoomquiet" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="wordpress"></category><category term="101"></category><category term="Zh"></category></entry><entry><title>Zoom.Quiuet</title><link href="https://blog.zoomquiet.io/zoom-quiet.html" rel="alternate"></link><published>2013-11-17T00:00:00+08:00</published><updated>2013-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-17:/zoom-quiet.html</id><summary type="html">&lt;h1 id="zoomquiet"&gt;Zoom.Quiet (大妈)&lt;a class="headerlink" href="#zoomquiet" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="zhouqi" src="http://pyconcn.qiniudn.com/images/volunteer/zhouqi.png"&gt;&lt;/p&gt;
 &lt;p&gt;Python中文社区创始人(之一) / 管理员,
 热心于 Python 等等社区的公益事业,&amp;nbsp;大家熟知的社区&amp;#8221;大妈&amp;#8221;;&lt;/p&gt;
@@ -8125,7 +8140,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;li&gt;G+:&amp;nbsp;https://plus.google.com/+ZoomQuiet/&lt;/li&gt;
 &lt;li&gt;Blog:&amp;nbsp;http://blog.zoomquiet.org/&lt;/li&gt;
 &lt;li&gt;微博:&amp;nbsp;http://weibo.com/zoomquiet&lt;/li&gt;
-&lt;/ul&gt;</content><category term="people"></category></entry><entry><title>Letter to a young programmer</title><link href="http://blog.zoomquiet.io/guido-letter-2-young.html" rel="alternate"></link><published>2013-11-11T00:00:00+08:00</published><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:/guido-letter-2-young.html</id><summary type="html">&lt;p&gt;&lt;img alt="guido" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png"&gt;
+&lt;/ul&gt;</content><category term="people"></category></entry><entry><title>Letter to a young programmer</title><link href="https://blog.zoomquiet.io/guido-letter-2-young.html" rel="alternate"></link><published>2013-11-11T00:00:00+08:00</published><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:/guido-letter-2-young.html</id><summary type="html">&lt;p&gt;&lt;img alt="guido" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png"&gt;
 ~ Guido van Rossum (inventor of&amp;nbsp;Python)&lt;/p&gt;
 &lt;h1 id="letter-to-a-young-programmer"&gt;&lt;a href="http://neopythonic.blogspot.ca/2013/10/letter-to-young-programmer.html"&gt;Letter to a young programmer&lt;/a&gt;&lt;a class="headerlink" href="#letter-to-a-young-programmer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Dear (insert name&amp;nbsp;here),&lt;/p&gt;
@@ -8172,7 +8187,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;ul&gt;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/e701a9dc714e"&gt;Letter to a young programmer — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>OSS good for enterprise</title><link href="http://blog.zoomquiet.io/oss-good-4-china-com.html" rel="alternate"></link><published>2013-11-11T00:00:00+08:00</published><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:/oss-good-4-china-com.html</id><summary type="html">&lt;h1 id="oss"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处&lt;a class="headerlink" href="#oss" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>OSS good for enterprise</title><link href="https://blog.zoomquiet.io/oss-good-4-china-com.html" rel="alternate"></link><published>2013-11-11T00:00:00+08:00</published><updated>2013-11-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-11:/oss-good-4-china-com.html</id><summary type="html">&lt;h1 id="oss"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处&lt;a class="headerlink" href="#oss" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;~中国绝大多数IT企业&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="oss" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png"&gt;&lt;/p&gt;
 &lt;p&gt;其实也是欠稿一篇, 先是忽悠朋友完成了作文:
@@ -8263,7 +8278,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131114&amp;nbsp;增补后续地图炮&lt;/li&gt;
 &lt;li&gt;131112 初放 &lt;a href="https://medium.com/i-m-h-o/74caad149e7e"&gt;企业进行&lt;span class="caps"&gt;OSS&lt;/span&gt;的好处 — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>EKR to Chinese programmer</title><link href="http://blog.zoomquiet.io/ekr-selfintro-for-chinese.html" rel="alternate"></link><published>2013-11-06T00:00:00+08:00</published><updated>2013-11-06T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-06:/ekr-selfintro-for-chinese.html</id><summary type="html">&lt;h1 id="leo"&gt;Leo 作者向中国开发者的自述&lt;a class="headerlink" href="#leo" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="OSS"></category><category term="Think"></category><category term="China"></category></entry><entry><title>EKR to Chinese programmer</title><link href="https://blog.zoomquiet.io/ekr-selfintro-for-chinese.html" rel="alternate"></link><published>2013-11-06T00:00:00+08:00</published><updated>2013-11-06T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-11-06:/ekr-selfintro-for-chinese.html</id><summary type="html">&lt;h1 id="leo"&gt;Leo 作者向中国开发者的自述&lt;a class="headerlink" href="#leo" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="EKR" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*yKVZtcJyfh-FHNEtXrqjPw.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://leoeditor.com/"&gt;Leo&lt;/a&gt; is OpenSource,written by Python,can run in M$/Linux/&lt;span class="caps"&gt;MAC&lt;/span&gt;/etc. ,Leo is Literate Environment Outline-oriented ;-)
 &lt;span class="caps"&gt;EKR&lt;/span&gt; is her&amp;nbsp;father.&lt;/p&gt;
@@ -8360,7 +8375,7 @@ Leo 其余的历史可以在这儿查阅:&amp;nbsp;http://leoeditor.com/appendic
 &lt;ul&gt;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131106 pub. &lt;a href="https://medium.com/i-m-h-o/9520fee0b59f"&gt;&lt;span class="caps"&gt;EKR&lt;/span&gt; to Chinese programmer — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="EKR"></category><category term="Leo"></category><category term="PyConChina"></category><category term="Zh"></category></entry><entry><title>Collections and Embedded Documents in MongoDB</title><link href="http://blog.zoomquiet.io/mongo-collections-embdded-think.html" rel="alternate"></link><published>2013-10-27T00:00:00+08:00</published><updated>2013-10-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-10-27:/mongo-collections-embdded-think.html</id><summary type="html">&lt;h1 id="mongodb"&gt;MongoDB 中的集合或嵌入式文档&lt;a class="headerlink" href="#mongodb" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="EKR"></category><category term="Leo"></category><category term="PyConChina"></category><category term="Zh"></category></entry><entry><title>Collections and Embedded Documents in MongoDB</title><link href="https://blog.zoomquiet.io/mongo-collections-embdded-think.html" rel="alternate"></link><published>2013-10-27T00:00:00+08:00</published><updated>2013-10-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-10-27:/mongo-collections-embdded-think.html</id><summary type="html">&lt;h1 id="mongodb"&gt;MongoDB 中的集合或嵌入式文档&lt;a class="headerlink" href="#mongodb" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="mongo" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*cwCnTFQEbcUSy1KvoiIqXg.png"&gt;&lt;/p&gt;
 &lt;p&gt;[via]&amp;nbsp;http://fosterelli.co/collections-and-embedded-documents-in-mongodb.html&lt;/p&gt;
 &lt;p&gt;When someone is approaching MongoDB from the &lt;span class="caps"&gt;SQL&lt;/span&gt; world, a very common confusion regarding database structure is when to use embedded documents, and when to create an entirely new collection. This distinction is very important because, although MongoDB is schemaless in nature …&lt;/p&gt;</summary><content type="html">&lt;h1 id="mongodb"&gt;MongoDB 中的集合或嵌入式文档&lt;a class="headerlink" href="#mongodb" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
@@ -8437,7 +8452,7 @@ Leo 其余的历史可以在这儿查阅:&amp;nbsp;http://leoeditor.com/appendic
 &lt;ul&gt;
 &lt;li&gt;140107 move into Pelican as&amp;nbsp;zoomquiet.io&lt;/li&gt;
 &lt;li&gt;131027 pub. &lt;a href="https://medium.com/i-m-h-o/c161d7036f89"&gt;Collections and Embedded Documents in MongoDB — &lt;span class="caps"&gt;I. M. H. O.&lt;/span&gt;—&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="NoSQL"></category><category term="Mongo"></category><category term="Zh"></category></entry><entry><title>reply On literate programming</title><link href="http://blog.zoomquiet.io/reply-yw-on-literate-programming.html" rel="alternate"></link><published>2012-09-18T00:00:00+08:00</published><updated>2012-09-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-09-18:/reply-yw-on-literate-programming.html</id><summary type="html">&lt;p&gt;&lt;a href="http://yinwang0.wordpress.com/2011/05/18/literate-programming/"&gt;On Literate Programming | Surely I Am&amp;nbsp;Joking&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="NoSQL"></category><category term="Mongo"></category><category term="Zh"></category></entry><entry><title>reply On literate programming</title><link href="https://blog.zoomquiet.io/reply-yw-on-literate-programming.html" rel="alternate"></link><published>2012-09-18T00:00:00+08:00</published><updated>2012-09-18T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2012-09-18:/reply-yw-on-literate-programming.html</id><summary type="html">&lt;p&gt;&lt;a href="http://yinwang0.wordpress.com/2011/05/18/literate-programming/"&gt;On Literate Programming | Surely I Am&amp;nbsp;Joking&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;对于文学化编程,俺使用的是 Leo :&amp;nbsp;http://wiki.woodpecker.org.cn/moin/LeoEnvironment&lt;/p&gt;
 &lt;p&gt;你提及的:&lt;/p&gt;
 &lt;ul&gt;
@@ -8522,7 +8537,7 @@ Leo 其余的历史可以在这儿查阅:&amp;nbsp;http://leoeditor.com/appendic
 
 
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>CI is hard!</title><link href="http://blog.zoomquiet.io/101028_jacob-ci-is-hard.html" rel="alternate"></link><published>2010-10-09T00:00:00+08:00</published><updated>2010-10-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2010-10-09:/101028_jacob-ci-is-hard.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="LP"></category><category term="Think"></category><category term="Leo"></category></entry><entry><title>CI is hard!</title><link href="https://blog.zoomquiet.io/101028_jacob-ci-is-hard.html" rel="alternate"></link><published>2010-10-09T00:00:00+08:00</published><updated>2010-10-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2010-10-09:/101028_jacob-ci-is-hard.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://buildbot.net/"&gt;Buildbot&lt;/a&gt;, 
 the venerable Python 
 &lt;a href="http://en.wikipedia.org/wiki/Continuous_integration"&gt;continuous integration&lt;/a&gt;
@@ -8582,7 +8597,7 @@ has the best one I’ve run across – but none of these examples make much sens
 &lt;ul&gt;
 &lt;li&gt;1406?? &lt;/li&gt;
 &lt;li&gt;140618 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>What to write</title><link href="http://blog.zoomquiet.io/091110_jacob-what2write.html" rel="alternate"></link><published>2009-11-10T00:00:00+08:00</published><updated>2009-11-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2009-11-10:/091110_jacob-what2write.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>What to write</title><link href="https://blog.zoomquiet.io/091110_jacob-what2write.html" rel="alternate"></link><published>2009-11-10T00:00:00+08:00</published><updated>2009-11-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2009-11-10:/091110_jacob-what2write.html</id><summary type="html">
 &lt;p&gt;Tech docs can take a bunch of different forms ranging from high-level overviews, to step-by-step walkthroughs, to auto-generated &lt;span class="caps"&gt;API&lt;/span&gt; documentation. Unfortunately, no single format works for all users; there’s huge differences in the way that people learn, so a well-documented project needs to provide many different forms of documentation …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;Tech docs can take a bunch of different forms ranging from high-level overviews, to step-by-step walkthroughs, to auto-generated &lt;span class="caps"&gt;API&lt;/span&gt; documentation. Unfortunately, no single format works for all users; there’s huge differences in the way that people learn, so a well-documented project needs to provide many different forms of documentation.&lt;/p&gt;
 &lt;p&gt;At a high level, you can break down the different types of documentation you need to provide into three different formats:&lt;/p&gt;
@@ -8645,7 +8660,7 @@ implementation in collections.deque you’ll probably end up missing the library
 &lt;ul&gt;
 &lt;li&gt;1406?? &lt;/li&gt;
 &lt;li&gt;140618 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>探讨 信息化社会中 中国传统思想的作用</title><link href="http://blog.zoomquiet.io/issue-chinese-for-internet.html" rel="alternate"></link><published>1998-01-01T11:17:00+08:00</published><updated>1998-01-01T11:17:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1998-01-01:/issue-chinese-for-internet.html</id><summary type="html">&lt;p&gt;(&lt;code&gt;是也乎:&lt;/code&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>探讨 信息化社会中 中国传统思想的作用</title><link href="https://blog.zoomquiet.io/issue-chinese-for-internet.html" rel="alternate"></link><published>1998-01-01T11:17:00+08:00</published><updated>1998-01-01T11:17:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1998-01-01:/issue-chinese-for-internet.html</id><summary type="html">&lt;p&gt;(&lt;code&gt;是也乎:&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;这是大学选修课:&lt;code&gt;科学史&lt;/code&gt; 的论文,
 算是自个儿思想的黑历史…总算能有足够的心力来直面互联网时代前的5毛思想了… )&lt;/p&gt;
 
@@ -8862,7 +8877,7 @@ implementation in collections.deque you’ll probably end up missing the library
 &lt;li&gt;技术是集约的,解决问题是一切目的而不论问题何来,最终总是被利益集团控制,毕竟技术需要经济的投入…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="thinked"></category><category term="Livin"></category><category term="Zoomq"></category></entry><entry><title>who’s gonna…</title><link href="http://blog.zoomquiet.io/cipher-who-s-gonna.html" rel="alternate"></link><published>1996-11-11T11:11:00+08:00</published><updated>1996-11-11T11:11:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1996-11-11:/cipher-who-s-gonna.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="thinked"></category><category term="Livin"></category><category term="Zoomq"></category></entry><entry><title>who’s gonna…</title><link href="https://blog.zoomquiet.io/cipher-who-s-gonna.html" rel="alternate"></link><published>1996-11-11T11:11:00+08:00</published><updated>1996-11-11T11:11:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1996-11-11:/cipher-who-s-gonna.html</id><summary type="html">
 &lt;h1 id="cipher"&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;&lt;span class="caps"&gt;CIPHER&lt;/span&gt;”&lt;a class="headerlink" href="#cipher" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;who&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;gonna&lt;/span&gt; &lt;span class="n"&gt;tell&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;when&lt;/span&gt;
 &lt;span class="n"&gt;It&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;too&lt;/span&gt; &lt;span class="n"&gt;late&lt;/span&gt;

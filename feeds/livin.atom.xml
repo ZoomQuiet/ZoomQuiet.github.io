@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- Livin</title><link href="http://blog.zoomquiet.io/" rel="alternate"></link><link href="http://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>http://blog.zoomquiet.io/</id><updated>2019-01-30T10:10:00+08:00</updated><entry><title>如何持证 (SSL) 开车</title><link href="http://blog.zoomquiet.io/jump-into-ssl.html" rel="alternate"></link><published>2019-01-30T10:10:00+08:00</published><updated>2019-01-30T10:10:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-01-30:/jump-into-ssl.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- Livin</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/livin.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2019-01-30T10:10:00+08:00</updated><entry><title>如何持证 (SSL) 开车</title><link href="https://blog.zoomquiet.io/jump-into-ssl.html" rel="alternate"></link><published>2019-01-30T10:10:00+08:00</published><updated>2019-01-30T10:10:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-01-30:/jump-into-ssl.html</id><summary type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg"&gt;Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;被成功安利…&lt;/p&gt;
@@ -115,6 +115,7 @@
 &lt;ul&gt;
 &lt;li&gt;而且人家立即有挽救邮件来问, 为毛走哪….&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img alt="邮件事务" src="_images/ssl-domain-transfer-flow.png"/&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;namecheap 中进行恢复&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -167,6 +168,11 @@
 &lt;p&gt;&lt;img alt="检验" src="_images/ssl-chrome-chk.png"/&gt;&lt;/p&gt;
 &lt;p&gt;当然, 原先模板中一系列资源指向老 &lt;code&gt;http&lt;/code&gt; 资源都无法使用了&lt;/p&gt;
 &lt;p&gt;&lt;img alt="资源丢失" src="_images/ssl-res-load-err.png"/&gt;&lt;/p&gt;
+&lt;p&gt;修订配置文件 &lt;code&gt;pelicanconf.py&lt;/code&gt;: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SITEURL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//blog.zoomquiet.io'&lt;/span&gt;
+&lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;
+        &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//blog.zoomquiet.io'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="gl-pages"&gt;gl-pages&lt;a class="headerlink" href="#gl-pages" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;༄  dig 101.camp +nostats +nocomments +nocmd&lt;/p&gt;
@@ -238,7 +244,16 @@
 &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="Livin"></category><category term="SCM"></category><category term="SSL"></category></entry><entry><title>rMBP 坠入纪</title><link href="http://blog.zoomquiet.io/break-into-rMBP13.html" rel="alternate"></link><published>2016-06-28T00:00:00+08:00</published><updated>2016-06-28T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-06-28:/break-into-rMBP13.html</id><summary type="html">
+&lt;/ul&gt;
+&lt;h2 id="sayeahooo"&gt;Sayeahooo&lt;a class="headerlink" href="#sayeahooo" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;4h 资料搜索理解&lt;/li&gt;
+&lt;li&gt;2d gitlab 尝试/生效&lt;/li&gt;
+&lt;li&gt;4h github 嗯哼&lt;ul&gt;
+&lt;li&gt;3h 域名迁移尝试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="MAC"></category><category term="Livin"></category><category term="SCM"></category><category term="SSL"></category></entry><entry><title>rMBP 坠入纪</title><link href="https://blog.zoomquiet.io/break-into-rMBP13.html" rel="alternate"></link><published>2016-06-28T00:00:00+08:00</published><updated>2016-06-28T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-06-28:/break-into-rMBP13.html</id><summary type="html">
 &lt;h1 id="_1"&gt;崩&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;160625, 一个平常的早晨, 俺的世界崩溃了一大坨…
 5年前老婆大人开恩准购的: 高配版, 8G, 512G+256G &lt;span class="caps"&gt;SSD&lt;/span&gt; 的&lt;span class="caps"&gt;MBP&lt;/span&gt; 15吋 无法开机!&lt;/p&gt;
@@ -544,7 +559,7 @@ Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
 &lt;li&gt;160628 发布&lt;/li&gt;
 &lt;li&gt;160627 随笔&lt;/li&gt;
 &lt;li&gt;160626 开始&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="rMBP"></category><category term="DAMA"></category></entry><entry><title>站立式办公环境尝试</title><link href="http://blog.zoomquiet.io/standing-desk-env.html" rel="alternate"></link><published>2016-05-01T00:00:00+08:00</published><updated>2016-05-01T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-05-01:/standing-desk-env.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="rMBP"></category><category term="DAMA"></category></entry><entry><title>站立式办公环境尝试</title><link href="https://blog.zoomquiet.io/standing-desk-env.html" rel="alternate"></link><published>2016-05-01T00:00:00+08:00</published><updated>2016-05-01T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-05-01:/standing-desk-env.html</id><summary type="html">
 &lt;h1 id="_1"&gt;立&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;人之所以为人, 就是因为站立解放了双手, 提升了视野, 刺激了心智, 勃发了野心…&lt;/p&gt;
 &lt;p&gt;所以,我们用了几亿年进化, 才站立了起来,
@@ -625,7 +640,7 @@ Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
 &lt;li&gt;160601 总结&lt;/li&gt;
 &lt;li&gt;160501 身动&lt;/li&gt;
 &lt;li&gt;160401 动心&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="SOHO"></category><category term="DAMA"></category></entry><entry><title>jump into SSD with Yoesmite</title><link href="http://blog.zoomquiet.io/jump-into-ssd.html" rel="alternate"></link><published>2015-04-09T00:00:00+08:00</published><updated>2015-04-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-04-09:/jump-into-ssd.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="SOHO"></category><category term="DAMA"></category></entry><entry><title>jump into SSD with Yoesmite</title><link href="https://blog.zoomquiet.io/jump-into-ssd.html" rel="alternate"></link><published>2015-04-09T00:00:00+08:00</published><updated>2015-04-09T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-04-09:/jump-into-ssd.html</id><summary type="html">
 &lt;h1 id="_1"&gt;为毛&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;不解释, 人家都免费给你升级了哪!&lt;/p&gt;
 &lt;h1 id="_2"&gt;新梗&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
@@ -1041,7 +1056,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
 &lt;li&gt;140505 快速简述完成&lt;/li&gt;
 &lt;li&gt;140110 起意,总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>KnewOne-talk 之 大妈 篇</title><link href="http://blog.zoomquiet.io/knewone-talk-zoomq-choise.html" rel="alternate"></link><published>2014-12-23T23:23:00+08:00</published><updated>2014-12-23T23:23:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-23:/knewone-talk-zoomq-choise.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>KnewOne-talk 之 大妈 篇</title><link href="https://blog.zoomquiet.io/knewone-talk-zoomq-choise.html" rel="alternate"></link><published>2014-12-23T23:23:00+08:00</published><updated>2014-12-23T23:23:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-12-23:/knewone-talk-zoomq-choise.html</id><summary type="html">
 &lt;p&gt;~ KnewOne talk question list&lt;/p&gt;
 &lt;h2 id="_1"&gt;分享你的生活方式&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;整体上,俺是一头程序猿,所以,,,&lt;/p&gt;
@@ -1171,7 +1186,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;可以提pr提交回答,感谢:)&lt;/li&gt;
 &lt;li&gt;产品使用体验方面,请稍微写得详细一些,谢谢&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="Livin"></category><category term="Zoomq"></category></entry><entry><title>Mavericks 中用 sshfs</title><link href="http://blog.zoomquiet.io/sshfs-in-mavericks.html" rel="alternate"></link><published>2014-10-24T00:00:00+08:00</published><updated>2014-10-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-10-24:/sshfs-in-mavericks.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="Livin"></category><category term="Zoomq"></category></entry><entry><title>Mavericks 中用 sshfs</title><link href="https://blog.zoomquiet.io/sshfs-in-mavericks.html" rel="alternate"></link><published>2014-10-24T00:00:00+08:00</published><updated>2014-10-24T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-10-24:/sshfs-in-mavericks.html</id><summary type="html">
 &lt;h1 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;自从 2011-12-16 入手 &lt;span class="caps"&gt;MBP&lt;/span&gt; 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便&lt;/p&gt;
 &lt;ul&gt;
@@ -1236,7 +1251,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;li&gt;&lt;a href="http://michael.terretta.com/fix-to-remove-or-uninstall-macfuse-on-mountain-lion-when-you-get-the-error-macfuse-uninstaller-can-not-find-the-archive-dot-bom-for-macfuse-core-package-dot"&gt;Fix to remove or uninstall MacFuse on Mountain Lion when you get the error “MacFUSE Uninstaller: Can not find the Archive.bom for MacFUSE Core package.” - Crude Technologies&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://discussions.apple.com/message/18355704#18355704"&gt;how to remove macfuse and ntfs 3g on osx lion? | Apple Support Communities&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;… etc.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="sshfs"></category></entry><entry><title>rst2s5 小折腾</title><link href="http://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><published>2014-05-07T00:00:00+08:00</published><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:/rst2s5-upgraded.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="sshfs"></category></entry><entry><title>rst2s5 小折腾</title><link href="https://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><published>2014-05-07T00:00:00+08:00</published><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:/rst2s5-upgraded.html</id><summary type="html">
 &lt;h1 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:&lt;/p&gt;
@@ -1292,7 +1307,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;p&gt;这样俺在 Leo 中写:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png"/&gt;&lt;/p&gt;
 &lt;p&gt;就可以一键生成为幻灯中的:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/&gt;&lt;/p&gt;</content><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="http://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><published>2014-02-26T00:00:00+08:00</published><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:/livin-scrapbook.html</id><summary type="html">
+&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/&gt;&lt;/p&gt;</content><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="https://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><published>2014-02-26T00:00:00+08:00</published><updated>2014-02-26T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:/livin-scrapbook.html</id><summary type="html">
 &lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;MBP111216ZQ&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
 &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
@@ -1391,7 +1406,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;140405 无解的快速总结&lt;/li&gt;
 &lt;li&gt;140217 开始回顾&lt;/li&gt;
-&lt;/ul&gt;</content><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="http://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><published>2014-01-27T23:48:00+08:00</published><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:/cb3-howto-make-hmsrv.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><published>2014-01-27T23:48:00+08:00</published><updated>2014-01-27T23:48:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:/cb3-howto-make-hmsrv.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h1 id="issue"&gt;Issue&lt;a class="headerlink" href="#issue" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
@@ -1938,7 +1953,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;ul&gt;
 &lt;li&gt;140505 快速完结&lt;/li&gt;
 &lt;li&gt;140127 单立文章追踪&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="http://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><published>2014-01-19T00:00:00+08:00</published><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:/jump-into-7niu.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>迁出RTFD.org</title><link href="https://blog.zoomquiet.io/jump-into-7niu.html" rel="alternate"></link><published>2014-01-19T00:00:00+08:00</published><updated>2014-01-19T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-19:/jump-into-7niu.html</id><summary type="html">
 &lt;h1 id="rtfdorg"&gt;&lt;span class="caps"&gt;RTFD&lt;/span&gt;.org&lt;a class="headerlink" href="#rtfdorg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;正名 readthedocs.org&lt;/li&gt;
@@ -2001,7 +2016,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;h1 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140119 开始总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="http://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><published>2014-01-11T00:00:00+08:00</published><updated>2014-01-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:/cbi-zq-install.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="https://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><published>2014-01-11T00:00:00+08:00</published><updated>2014-01-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:/cbi-zq-install.html</id><summary type="html">
 &lt;h2 id="cbi"&gt;&lt;span class="caps"&gt;CBI&lt;/span&gt;&lt;a class="headerlink" href="#cbi" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://blog.zhgdg.org/2014-01/et-cbi1/"&gt;CBInstall.1 欢乐完成&lt;/a&gt; 记要了现场活动的情况;&lt;/p&gt;
 &lt;p&gt;当然,俺也是学员之一,要交作业的,所以,俺的刷机笔记如下:&lt;/p&gt;
@@ -2290,7 +2305,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;ul&gt;
 &lt;li&gt;140119 终于汇集了所有唠叨!&lt;/li&gt;
 &lt;li&gt;140111 开始总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="http://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><published>2013-12-30T00:00:00+08:00</published><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:/jump-into-mavericks.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="https://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><published>2013-12-30T00:00:00+08:00</published><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:/jump-into-mavericks.html</id><summary type="html">
 &lt;h1 id="_1"&gt;为毛&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;得承认是被 老池的文章忽悠到了, 
 而且, 10.9 免费了, 进一步的通过&lt;span class="caps"&gt;OS&lt;/span&gt; 提高了电池/内存的使用效率,
@@ -2468,7 +2483,7 @@ READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
 &lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
 &lt;li&gt;140505 快速简述完成&lt;/li&gt;
 &lt;li&gt;140110 起意,总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>who’s gonna…</title><link href="http://blog.zoomquiet.io/cipher-who-s-gonna.html" rel="alternate"></link><published>1996-11-11T11:11:00+08:00</published><updated>1996-11-11T11:11:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1996-11-11:/cipher-who-s-gonna.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>who’s gonna…</title><link href="https://blog.zoomquiet.io/cipher-who-s-gonna.html" rel="alternate"></link><published>1996-11-11T11:11:00+08:00</published><updated>1996-11-11T11:11:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1996-11-11:/cipher-who-s-gonna.html</id><summary type="html">
 &lt;h1 id="cipher"&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;&lt;span class="caps"&gt;CIPHER&lt;/span&gt;”&lt;a class="headerlink" href="#cipher" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;who&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;gonna&lt;/span&gt; &lt;span class="n"&gt;tell&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;when&lt;/span&gt;
 &lt;span class="n"&gt;It&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;too&lt;/span&gt; &lt;span class="n"&gt;late&lt;/span&gt;

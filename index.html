@@ -98,14 +98,22 @@
 <li>最好能一次配置长期可用</li>
 </ul>
 <h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<p>整体上, 无论在哪个 <code>*-pages</code> 平台, 要折腾的事儿相似, 就3步:</p>
+<ul>
+<li>追加配置含 <code>SSL</code> 解析能力的 <span class="caps">DNS</span> 服务主机 <code>A</code> 地址<ul>
+<li>并解决引发的有关 <code>CANEM</code> 冲突问题</li>
+</ul>
+</li>
+<li>在 <code>*-pages</code> 平台配置 <code>Enforce HTTPS</code> 有关嗯哼</li>
+<li>优雅的等待一切生效 ;-)<ul>
+<li>并解决可能的资源冲突问题</li>
+</ul>
+</li>
+</ul>
 <h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
 <p>原先的:</p>
 <blockquote>
-<p>༄  dig blog.zoomquiet.io +nostats +nocomments +nocmd</p>
-</blockquote>
-<div class="highlight"><pre><span class="p">;</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">DiG</span> <span class="mf">9.8.3</span><span class="o">-</span><span class="n">P1</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span> <span class="o">+</span><span class="n">nostats</span> <span class="o">+</span><span class="n">nocomments</span> <span class="o">+</span><span class="n">nocmd</span>
-<span class="p">;;</span> <span class="n">global</span> <span class="n">options</span><span class="o">:</span> <span class="o">+</span><span class="n">cmd</span>
-<span class="p">;</span><span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>     <span class="n">IN</span>  <span class="n">A …</span></pre></div>
+<p>༄  dig blog …</p></blockquote>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssl.html">more ...</a>
                 </div>
             </article>

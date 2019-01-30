@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="jump-into-ssl"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/jump-into-ssl.html"/>
-            <meta property="og:description" content="BG¶ Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国 被成功安利… goal¶ 因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 *-pages 服务快速发布: github/gitlab 为核心 免费 SSL 认证为基础 最好能一次配置长期可用 logging¶ gh-pages¶ 原先的: ༄ dig blog.zoomquiet.io +nostats +nocomments +nocmd ; &lt;&lt;&gt;&gt; DiG 9.8.3-P1 &lt;&lt;&gt;&gt; blog.zoomquiet.io +nostats +nocomments +nocmd ;; global options: +cmd ;blog.zoomquiet.io. IN A …"/>
+            <meta property="og:description" content="BG¶ Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国 被成功安利… goal¶ 因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 *-pages 服务快速发布: github/gitlab 为核心 免费 SSL 认证为基础 最好能一次配置长期可用 logging¶ 整体上, 无论在哪个 *-pages 平台, 要折腾的事儿相似, 就3步: 追加配置含 SSL 解析能力的 DNS 服务主机 A 地址 并解决引发的有关 CANEM 冲突问题 在 *-pages 平台配置 Enforce HTTPS 有关嗯哼 优雅的等待一切生效 ;-) 并解决可能的资源冲突问题 gh-pages¶ 原先的: ༄ dig blog …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -134,7 +134,12 @@
 <li><a href="#goal">goal</a></li>
 <li><a href="#logging">logging</a><ul>
 <li><a href="#gh-pages">gh-pages</a></li>
-<li><a href="#gl-pages">gl-pages</a></li>
+<li><a href="#gl-pages">gl-pages</a><ul>
+<li><a href="#domain">domain</a></li>
+<li><a href="#pages">pages</a></li>
+<li><a href="#waitting">waitting</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#summary">summary</a></li>
@@ -156,6 +161,18 @@
 <li>最好能一次配置长期可用</li>
 </ul>
 <h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<p>整体上, 无论在哪个 <code>*-pages</code> 平台, 要折腾的事儿相似, 就3步:</p>
+<ul>
+<li>追加配置含 <code>SSL</code> 解析能力的 <span class="caps">DNS</span> 服务主机 <code>A</code> 地址<ul>
+<li>并解决引发的有关 <code>CANEM</code> 冲突问题</li>
+</ul>
+</li>
+<li>在 <code>*-pages</code> 平台配置 <code>Enforce HTTPS</code> 有关嗯哼</li>
+<li>优雅的等待一切生效 ;-)<ul>
+<li>并解决可能的资源冲突问题</li>
+</ul>
+</li>
+</ul>
 <h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
 <p>原先的:</p>
 <blockquote>
@@ -299,7 +316,31 @@
 <span class="o">--&gt;</span>
         <span class="err">'</span><span class="n">https</span><span class="o">:</span><span class="c1">//blog.zoomquiet.io'</span>
 </pre></div>
+<p>但是, 进行 push 失败:</p>
+<div class="highlight"><pre><span class="err">༄</span>  <span class="n">git</span> <span class="n">pu</span>
+
+<span class="n">To</span> <span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">ZoomQuiet</span><span class="o">/</span><span class="n">ZoomQuiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span>
+ <span class="o">!</span> <span class="p">[</span><span class="n">rejected</span><span class="p">]</span>        <span class="n">master</span> <span class="o">-&gt;</span> <span class="n">master</span> <span class="p">(</span><span class="n">fetch</span> <span class="n">first</span><span class="p">)</span>
+<span class="nl">error:</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">push</span> <span class="n">some</span> <span class="n">refs</span> <span class="n">to</span> <span class="err">'</span><span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">ZoomQuiet</span><span class="o">/</span><span class="n">ZoomQuiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span><span class="err">'</span>
+<span class="nl">hint:</span> <span class="n">Updates</span> <span class="n">were</span> <span class="n">rejected</span> <span class="n">because</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">contains</span> <span class="n">work</span> <span class="n">that</span> <span class="n">you</span> <span class="k">do</span>
+<span class="nl">hint:</span> <span class="n">not</span> <span class="n">have</span> <span class="n">locally</span><span class="p">.</span> <span class="n">This</span> <span class="n">is</span> <span class="n">usually</span> <span class="n">caused</span> <span class="n">by</span> <span class="n">another</span> <span class="n">repository</span> <span class="n">pushing</span>
+<span class="nl">hint:</span> <span class="n">to</span> <span class="n">the</span> <span class="n">same</span> <span class="n">ref</span><span class="p">.</span> <span class="n">You</span> <span class="n">may</span> <span class="n">want</span> <span class="n">to</span> <span class="n">first</span> <span class="n">integrate</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">changes</span>
+<span class="nl">hint:</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span> <span class="err">'</span><span class="n">git</span> <span class="n">pull</span> <span class="p">...</span><span class="err">'</span><span class="p">)</span> <span class="n">before</span> <span class="n">pushing</span> <span class="n">again</span><span class="p">.</span>
+<span class="nl">hint:</span> <span class="n">See</span> <span class="n">the</span> <span class="err">'</span><span class="n">Note</span> <span class="n">about</span> <span class="n">fast</span><span class="o">-</span><span class="n">forwards</span><span class="err">'</span> <span class="n">in</span> <span class="err">'</span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="n">help</span><span class="err">'</span> <span class="k">for</span> <span class="n">details</span><span class="p">.</span>
+</pre></div>
+<blockquote>
+<p>因为仓库目录中 <code>CNAME</code> 文件自动构建过,和本地没同步上</p>
+</blockquote>
+<p><img alt="CNAME 重建" src="_images/ssl-domain-cname-renew.png"/></p>
+<blockquote>
+<p>再重新编译-&gt;push-&gt;等待 gh-pages 完成发布</p>
+</blockquote>
+<p><img alt="等待部署" src="_images/gh-pages-waitting.png"/></p>
+<p>那个褐色小点, 变成绿色对勾, 就说明一切安好…</p>
+<p><img alt="WOLA" src="_images/ssl-all-ok.png"/></p>
 <h3 id="gl-pages">gl-pages<a class="headerlink" href="#gl-pages" title="Permanent link">¶</a></h3>
+<p>其实, gitlab 上网站先持证上岗的…</p>
+<p>先出示一下成果:</p>
 <blockquote>
 <p>༄  dig 101.camp +nostats +nocomments +nocmd</p>
 </blockquote>
@@ -312,15 +353,138 @@
 <span class="n">gitlab</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>      <span class="mi">48445</span>   <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">ns</span><span class="o">-</span><span class="mf">926.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">51.</span><span class="n">net</span><span class="p">.</span>
 <span class="n">gitlab</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>      <span class="mi">48445</span>   <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">ns</span><span class="o">-</span><span class="mf">1697.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">20.</span><span class="n">co</span><span class="p">.</span><span class="n">uk</span><span class="p">.</span>
 <span class="n">gitlab</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>      <span class="mi">48445</span>   <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">ns</span><span class="o">-</span><span class="mf">288.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">36.</span><span class="n">com</span><span class="p">.</span>
-<span class="n">ns</span><span class="o">-</span><span class="mf">288.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">36.</span><span class="n">com</span><span class="p">.</span>   <span class="mi">147125</span>  <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">205.251.193.32</span>
-<span class="n">ns</span><span class="o">-</span><span class="mf">926.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">51.</span><span class="n">net</span><span class="p">.</span>   <span class="mi">48349</span>   <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">205.251.195.158</span>
-<span class="n">ns</span><span class="o">-</span><span class="mf">1116.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">11.</span><span class="n">org</span><span class="p">.</span>  <span class="mi">136520</span>  <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">205.251.196.92</span>
-<span class="n">ns</span><span class="o">-</span><span class="mf">1697.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">20.</span><span class="n">co</span><span class="p">.</span><span class="n">uk</span><span class="p">.</span> <span class="mi">48327</span>  <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">205.251.198.161</span>
-<span class="n">ns</span><span class="o">-</span><span class="mf">288.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">36.</span><span class="n">com</span><span class="p">.</span>   <span class="mi">136726</span>  <span class="n">IN</span>  <span class="n">AAAA</span>    <span class="mi">2600</span><span class="o">:</span><span class="mi">9000</span><span class="o">:</span><span class="mi">5301</span><span class="o">:</span><span class="mi">2000</span><span class="o">::</span><span class="mi">1</span>
-<span class="n">ns</span><span class="o">-</span><span class="mf">926.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">51.</span><span class="n">net</span><span class="p">.</span>   <span class="mi">48349</span>   <span class="n">IN</span>  <span class="n">AAAA</span>    <span class="mi">2600</span><span class="o">:</span><span class="mi">9000</span><span class="o">:</span><span class="mi">5303</span><span class="o">:</span><span class="mf">9e00</span><span class="o">::</span><span class="mi">1</span>
-<span class="n">ns</span><span class="o">-</span><span class="mf">1116.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">11.</span><span class="n">org</span><span class="p">.</span>  <span class="mi">136520</span>  <span class="n">IN</span>  <span class="n">AAAA</span>    <span class="mi">2600</span><span class="o">:</span><span class="mi">9000</span><span class="o">:</span><span class="mi">5304</span><span class="o">:</span><span class="mi">5</span><span class="n">c00</span><span class="o">::</span><span class="mi">1</span>
-<span class="n">ns</span><span class="o">-</span><span class="mf">1697.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">20.</span><span class="n">co</span><span class="p">.</span><span class="n">uk</span><span class="p">.</span> <span class="mi">48327</span>  <span class="n">IN</span>  <span class="n">AAAA</span>    <span class="mi">2600</span><span class="o">:</span><span class="mi">9000</span><span class="o">:</span><span class="mi">5306</span><span class="o">:</span><span class="n">a100</span><span class="o">::</span><span class="mi">1</span>
+<span class="p">...</span>
 </pre></div>
+<h4 id="domain">domain<a class="headerlink" href="#domain" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>首先操作就撞到神奇形象</p>
+</blockquote>
+<p><img alt="DNSPod 升级?" src="_images/SSL-dnspod-acord-error.png"/></p>
+<p><img alt="DNSPod 冲突" src="_images/SSL-dnspod-cname-error.png"/></p>
+<blockquote>
+<p>不得以, 迁移回 neamcheap 来配置, 顺畅完成:</p>
+</blockquote>
+<p><img alt="neamcheap 可配" src="_images/SSL-namecheap-acords.png"/></p>
+<ul>
+<li>当然, 这波配置, 看错文档, 配置成 github 解析主机了</li>
+<li>但是, 证明 DNSPod 完全不可用了…</li>
+</ul>
+<h4 id="pages">pages<a class="headerlink" href="#pages" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>配置证书前, 得先生成, gitlab 不象 github 为用户自动生成, 得自行嗯哼</p>
+</blockquote>
+<ul>
+<li>先安装 <a href="https://certbot.eff.org/">Certbot</a></li>
+<li><a href="https://letsencrypt.org/">Let’s Encrypt</a> 官方推出的证书生成工具</li>
+</ul>
+<blockquote>
+<p>brew install certbot</p>
+</blockquote>
+<p>然后手工给对应域名生成密匙对:</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">sudo</span> <span class="n">certbot</span> <span class="n">certonly</span> <span class="o">-</span><span class="n">a</span> <span class="n">manual</span> <span class="o">-</span><span class="n">d</span> <span class="mf">101.</span><span class="n">camp</span> <span class="o">--</span><span class="n">email</span> <span class="n">zoom</span><span class="p">.</span><span class="n">quiet</span><span class="err">@</span><span class="n">gmail</span><span class="p">.</span><span class="n">com</span>
+</pre></div>
+<ul>
+<li>注意, 这里 <code>-d</code> 参数可以叠加</li>
+<li>不过, 毎生成一个, 必须同时完成自证检验,才能继续</li>
+<li>否则, 等于放弃当前生成的密匙</li>
+</ul>
+<blockquote>
+<p>即, 蔱根据提示完成:</p>
+</blockquote>
+<hr>
+<div class="highlight"><pre><span class="n">Create</span> <span class="n">a</span> <span class="n">file</span> <span class="n">containing</span> <span class="n">just</span> <span class="n">this</span> <span class="n">data</span><span class="o">:</span>
+
+<span class="n">iIpSoAbePD</span> <span class="p">...</span> <span class="mi">1</span><span class="n">tTDSskcHQFs</span>
+
+<span class="n">And</span> <span class="n">make</span> <span class="n">it</span> <span class="n">available</span> <span class="n">on</span> <span class="n">your</span> <span class="n">web</span> <span class="n">server</span> <span class="n">at</span> <span class="n">this</span> <span class="n">URL</span><span class="o">:</span>
+
+<span class="nl">http:</span><span class="c1">//101.camp/.well-known/acme-challenge/iIpSoAbePDhDmGwPUDfER-Czl_bxduu2Cp6qE-IxjLI</span>
+
+<span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
+<span class="n">Press</span> <span class="n">Enter</span> <span class="n">to</span> <span class="n">Continue</span>
+</pre></div>
+<p>此时, 千万别按回车:</p>
+<ul>
+<li>得回到仓库中</li>
+<li>构建 <code>.well-known/acme-challenge/iIpSoAbePDhDmGwPUDfER-Czl_bxduu2Cp6qE-IxjLI</code> 目录</li>
+<li>并在其中构建 <code>index.html</code> 文件</li>
+<li>文件内容就那一行提供的用来检验的数据</li>
+<li>当然, 对于 gl-pages 网站</li>
+<li>只是手工建立目录和文件, 复制进入数据</li>
+<li>再 <code>git push</code> 就好</li>
+<li>只是, 按回车前, 一定要先<ul>
+<li>访问那个 <span class="caps">URI</span></li>
+<li>看一眼, 是否可以获得对应数据</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>按下回车</p>
+</blockquote>
+<div class="highlight"><pre><span class="n">Waiting</span> <span class="k">for</span> <span class="n">verification</span><span class="p">...</span>
+<span class="n">Cleaning</span> <span class="n">up</span> <span class="n">challenges</span>
+
+<span class="n">IMPORTANT</span> <span class="n">NOTES</span><span class="o">:</span>
+ <span class="o">-</span> <span class="n">Congratulations</span><span class="o">!</span> <span class="n">Your</span> <span class="n">certificate</span> <span class="n">and</span> <span class="n">chain</span> <span class="n">have</span> <span class="n">been</span> <span class="n">saved</span> <span class="n">at</span><span class="o">:</span>
+   <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">letsencrypt</span><span class="o">/</span><span class="n">live</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">fullchain</span><span class="p">.</span><span class="n">pem</span>
+   <span class="n">Your</span> <span class="n">key</span> <span class="n">file</span> <span class="n">has</span> <span class="n">been</span> <span class="n">saved</span> <span class="n">at</span><span class="o">:</span>
+   <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">letsencrypt</span><span class="o">/</span><span class="n">live</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">privkey</span><span class="p">.</span><span class="n">pem</span>
+   <span class="n">Your</span> <span class="n">cert</span> <span class="n">will</span> <span class="n">expire</span> <span class="n">on</span> <span class="mi">2019</span><span class="o">-</span><span class="mo">04</span><span class="o">-</span><span class="mf">23.</span> <span class="n">To</span> <span class="n">obtain</span> <span class="n">a</span> <span class="n">new</span> <span class="n">or</span> <span class="n">tweaked</span>
+   <span class="n">version</span> <span class="n">of</span> <span class="n">this</span> <span class="n">certificate</span> <span class="n">in</span> <span class="n">the</span> <span class="n">future</span><span class="p">,</span> <span class="n">simply</span> <span class="n">run</span> <span class="n">certbot</span>
+   <span class="n">again</span><span class="p">.</span> <span class="n">To</span> <span class="n">non</span><span class="o">-</span><span class="n">interactively</span> <span class="n">renew</span> <span class="o">*</span><span class="n">all</span><span class="o">*</span> <span class="n">of</span> <span class="n">your</span> <span class="n">certificates</span><span class="p">,</span> <span class="n">run</span>
+   <span class="s">"certbot renew"</span>
+ <span class="o">-</span> <span class="n">If</span> <span class="n">you</span> <span class="n">like</span> <span class="n">Certbot</span><span class="p">,</span> <span class="n">please</span> <span class="n">consider</span> <span class="n">supporting</span> <span class="n">our</span> <span class="n">work</span> <span class="n">by</span><span class="o">:</span>
+
+   <span class="n">Donating</span> <span class="n">to</span> <span class="n">ISRG</span> <span class="o">/</span> <span class="n">Let</span><span class="err">'</span><span class="n">s</span> <span class="n">Encrypt</span><span class="o">:</span>   <span class="n">https</span><span class="o">:</span><span class="c1">//letsencrypt.org/donate</span>
+   <span class="n">Donating</span> <span class="n">to</span> <span class="n">EFF</span><span class="o">:</span>                    <span class="n">https</span><span class="o">:</span><span class="c1">//eff.org/donate-le</span>
+</pre></div>
+<p>嗯哼, 好了, 出现以上类似信息</p>
+<ul>
+<li>说明, 已经在官方注册好并检验通过私人证书了</li>
+<li>不过, 这种证书只有 4个月 寿命</li>
+<li>到时得运行 <code>certbot renew</code> 一下</li>
+</ul>
+<p>接下来正常重新配置一下 gl-pages 中的域名</p>
+<p><img alt="gl 强制嗯哼" src="_images/SSL-gl-pages-ssl.png"/></p>
+<blockquote>
+<p>打开 <span class="caps">HTTPS</span> 开关</p>
+</blockquote>
+<p><img alt="gl 域名上证" src="_images/SSL-gl-pages-redomain.png"/></p>
+<blockquote>
+<p>根据提示, 从本地 <code>letsencrypt</code> 证书目录中复制出有关嗯哼就好</p>
+</blockquote>
+<ul>
+<li>当然, 别忘记重新在域名解析商, 配置新的 <code>TXT</code> 字串</li>
+</ul>
+<h4 id="waitting">waitting<a class="headerlink" href="#waitting" title="Permanent link">¶</a></h4>
+<p>首先..</p>
+<p><img alt="证件无效" src="_images/SSL-chrome-chk-CA-not.png"/></p>
+<p>然后可以看到:</p>
+<p><img alt="检验通过" src="_images/SSL-CAX3-ok.png"/></p>
+<p>接着…</p>
+<p><img alt="还未安全" src="_images/SSL-chrome-chk-CA-ok.png"/></p>
+<p>最后…</p>
+<p><img alt="部分安全" src="_images/SSL-chrome-chk-info.png"/></p>
+<p>这是因为有的图片/css/js 资源, 还是用 hhtp 引用的, 得升级:</p>
+<p><img alt="iPic" src="_images/ipic-http.png"/></p>
+<p>俺采购的工具, 才发现主要图床还是 http 的</p>
+<p>追查文档:</p>
+<p><img alt="7牛有关页面" src="_images/SSL-7niu-cdn.png"/></p>
+<blockquote>
+<p>对比隔壁 …</p>
+</blockquote>
+<p><img alt="UPYUN 有关页面" src="_images/SSL-upyun-https.png"/></p>
+<p>嚓, 这不很明显, 只能选择后者了…</p>
+<ul>
+<li>当然, 又引发了欠费等等额外处置事务</li>
+<li>那就是另外的故事了</li>
+<li>但是, 反正可以先直接用 gl-pages 空间嘛<ul>
+<li>已经 <span class="caps">HHTPS</span> 光辉笼罩下的资源渠道…</li>
+</ul>
+</li>
+</ul>
+<p><img alt="一切安全" src="_images/SSL-chrome-chk-good.png"/></p>
+<p>终于…收功</p>
 <h2 id="summary">summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <ul>
 <li>DNSPod 依然是感觉最舒服的 <span class="caps">DNS</span> 管理界面, 可惜彻底被放弃了, 能迁走就迁吧…<ul>
@@ -379,7 +543,8 @@
 <li>3h 域名迁移尝试</li>
 </ul>
 </li>
-</ul>
+<li>2h 截屏,文档嗯哼…</li>
+</ul></hr>
             </div>
             <!-- /.entry-content -->
 

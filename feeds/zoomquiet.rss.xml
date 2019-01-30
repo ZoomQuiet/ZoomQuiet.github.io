@@ -11,14 +11,22 @@
 &lt;li&gt;最好能一次配置长期可用&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;整体上, 无论在哪个 &lt;code&gt;*-pages&lt;/code&gt; 平台, 要折腾的事儿相似, 就3步:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;追加配置含 &lt;code&gt;SSL&lt;/code&gt; 解析能力的 &lt;span class="caps"&gt;DNS&lt;/span&gt; 服务主机 &lt;code&gt;A&lt;/code&gt; 地址&lt;ul&gt;
+&lt;li&gt;并解决引发的有关 &lt;code&gt;CANEM&lt;/code&gt; 冲突问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;*-pages&lt;/code&gt; 平台配置 &lt;code&gt;Enforce HTTPS&lt;/code&gt; 有关嗯哼&lt;/li&gt;
+&lt;li&gt;优雅的等待一切生效 ;-)&lt;ul&gt;
+&lt;li&gt;并解决可能的资源冲突问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id="gh-pages"&gt;gh-pages&lt;a class="headerlink" href="#gh-pages" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;原先的:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;༄  dig blog.zoomquiet.io +nostats +nocomments +nocmd&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;DiG&lt;/span&gt; &lt;span class="mf"&gt;9.8.3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;P1&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zoomquiet&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nostats&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nocomments&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nocmd&lt;/span&gt;
-&lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="n"&gt;global&lt;/span&gt; &lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;
-&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zoomquiet&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;     &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;A …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 30 Jan 2019 10:10:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2019-01-30:/jump-into-ssl.html</guid><category>MAC</category><category>Livin</category><category>SCM</category><category>SSL</category></item><item><title>内圈梗集锦(人工智能简史)书评</title><link>https://blog.zoomquiet.io/180220-book-ai-historic.html</link><description>
+&lt;p&gt;༄  dig blog …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 30 Jan 2019 10:10:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2019-01-30:/jump-into-ssl.html</guid><category>MAC</category><category>Livin</category><category>SCM</category><category>SSL</category></item><item><title>内圈梗集锦(人工智能简史)书评</title><link>https://blog.zoomquiet.io/180220-book-ai-historic.html</link><description>
 &lt;p&gt;版权归作者所有,任何形式转载请联系作者. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;作者&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Quiet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;来自豆瓣&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="err"&gt;来源&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//book.douban.com/review/9167418/&lt;/span&gt;

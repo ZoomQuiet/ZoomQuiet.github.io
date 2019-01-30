@@ -186,7 +186,112 @@
 <span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">2989</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.109.153</span>
 <span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">2989</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.110.153</span>
 </pre></div>
-<p><img alt="" src="_images/ssl-gh-pages-alert-cname.png"/></p>
+<p>触发对应 gh-pages 配置处 <code>CNAME</code> 冲突报警</p>
+<p><img alt="冲突报警" src="_images/ssl-gh-pages-alert-cname.png"/></p>
+<p>删除原先 <code>blog.zoomquiet.io</code> 定制域名后, gh-pages 状态恢复:</p>
+<p><img alt="暂时默认" src="_images/ssl-gh-pages-revert-domain.png"/></p>
+<ul>
+<li>然而, 这肯定不是俺要的效果哪…</li>
+<li>进一步的, 发现, 这是 <code>DNSPod</code> 的问题</li>
+<li>namecheap 等等, 其它老厂, 是支持这种 <code>A</code> 记录和 <code>CNAME</code> 记录指向不同的</li>
+<li>
+<p>所以, 回查当初域名服务商:</p>
+<ul>
+<li>才发现, 因为抢注的早, 当年支付私人购买 <code>.io</code> 的 iwantmyname.com</li>
+<li>实在太弱, 根本没有完备的域名配置服务</li>
+<li>而且一直以来域名托管年费也比其它大厂贵一倍</li>
+<li>说不得, 只能迁移了:</li>
+</ul>
+</li>
+<li>
+<p>先 <code>unlock</code></p>
+</li>
+<li>获得 <code>Transfer Auth Code</code></li>
+<li>再到 namecheap 发起转移工单</li>
+<li>再回 iwantmyname 同意转移</li>
+<li>等待生效</li>
+<li>再将 DNSPod 上对应各种配置, 逐一手工配置回 namecheap 中</li>
+<li>再对应增补 <span class="caps">SSL</span> 依赖的 gh-pages 有关配置:<ul>
+<li>blog 主机 <code>A</code> 记录-&gt;<code>185.199.111.153</code></li>
+<li>blog 主机 <code>CNAME</code> -&gt; <code>ZoomQuiet.github.io.</code></li>
+</ul>
+</li>
+</ul>
+<p>迁移前:</p>
+<blockquote>
+<p>༄  dig zoomquiet.io +nostats +nocomments +nocmd</p>
+</blockquote>
+<div class="highlight"><pre><span class="p">;</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">DiG</span> <span class="mf">9.8.3</span><span class="o">-</span><span class="n">P1</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span> <span class="o">+</span><span class="n">nostats</span> <span class="o">+</span><span class="n">nocomments</span> <span class="o">+</span><span class="n">nocmd</span>
+<span class="p">;;</span> <span class="n">global</span> <span class="n">options</span><span class="o">:</span> <span class="o">+</span><span class="n">cmd</span>
+<span class="p">;</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>          <span class="n">IN</span>  <span class="n">A</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>       <span class="mi">600</span> <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">172.105.199.192</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>       <span class="mi">600</span> <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">f1g1ns1</span><span class="p">.</span><span class="n">dnspod</span><span class="p">.</span><span class="n">net</span><span class="p">.</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>       <span class="mi">600</span> <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">f1g1ns2</span><span class="p">.</span><span class="n">dnspod</span><span class="p">.</span><span class="n">net</span><span class="p">.</span>
+<span class="p">...</span>
+</pre></div>
+<blockquote>
+<p>先给銭:</p>
+</blockquote>
+<p><img alt="迁移费用" src="_images/ssl-domain-transfer-pay.png"/></p>
+<blockquote>
+<p>再同意…</p>
+</blockquote>
+<p><img alt="同意迁移" src="_images/ssl-domain-transfer.png"/></p>
+<ul>
+<li>而且人家立即有挽救邮件来问, 为毛走哪….</li>
+</ul>
+<blockquote>
+<p>namecheap 中进行恢复</p>
+</blockquote>
+<p><img alt="旧解析" src="_images/ssl-domain-dnspod.png"/></p>
+<blockquote>
+<p>使用官方模板, 替代 <code>DNSPod</code> 代理的…</p>
+</blockquote>
+<p><img alt="解析模板" src="_images/ssl-domain-dns2namecheap.png"/></p>
+<p><img alt="生效等待" src="_images/ssl-domain-waitting.png"/></p>
+<p><img alt="迁移成功" src="_images/ssl-domain-in-namecheap.png"/></p>
+<p>迁移并重置后:</p>
+<blockquote>
+<p>༄  dig zoomquiet.io +nostats +nocomments +nocmd</p>
+</blockquote>
+<div class="highlight"><pre><span class="p">;</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">DiG</span> <span class="mf">9.8.3</span><span class="o">-</span><span class="n">P1</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span> <span class="o">+</span><span class="n">nostats</span> <span class="o">+</span><span class="n">nocomments</span> <span class="o">+</span><span class="n">nocmd</span>
+<span class="p">;;</span> <span class="n">global</span> <span class="n">options</span><span class="o">:</span> <span class="o">+</span><span class="n">cmd</span>
+<span class="p">;</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>          <span class="n">IN</span>  <span class="n">A</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>       <span class="mi">600</span> <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">172.105.199.192</span>
+</pre></div>
+<ul>
+<li>然后, 逐一先将老的 几十条配置, 逐一复制到 namecheap 解析面板中</li>
+<li>然后, 按照文档要求的,配置好:</li>
+</ul>
+<p><img alt="全部OK" src="_images/ssl-domain-ko.png"/></p>
+<blockquote>
+<p>༄  dig blog.zoomquiet.io +nostats +nocomments +nocmd</p>
+</blockquote>
+<div class="highlight"><pre><span class="p">;</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">DiG</span> <span class="mf">9.8.3</span><span class="o">-</span><span class="n">P1</span> <span class="o">&lt;&lt;&gt;&gt;</span> <span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span> <span class="o">+</span><span class="n">nostats</span> <span class="o">+</span><span class="n">nocomments</span> <span class="o">+</span><span class="n">nocmd</span>
+<span class="p">;;</span> <span class="n">global</span> <span class="n">options</span><span class="o">:</span> <span class="o">+</span><span class="n">cmd</span>
+<span class="p">;</span><span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>     <span class="n">IN</span>  <span class="n">A</span>
+<span class="n">blog</span><span class="p">.</span><span class="n">zoomquiet</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>  <span class="mi">1799</span>    <span class="n">IN</span>  <span class="n">CNAME</span>   <span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">3600</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.111.153</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">3600</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.110.153</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">3600</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.109.153</span>
+<span class="n">zoomquiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>    <span class="mi">3600</span>    <span class="n">IN</span>  <span class="n">A</span>   <span class="mf">185.199.108.153</span>
+<span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>      <span class="mi">698</span> <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">ns</span><span class="o">-</span><span class="mf">1622.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">10.</span><span class="n">co</span><span class="p">.</span><span class="n">uk</span><span class="p">.</span>
+<span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>      <span class="mi">698</span> <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">ns</span><span class="o">-</span><span class="mf">393.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">49.</span><span class="n">com</span><span class="p">.</span>
+<span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span>      <span class="mi">698</span> <span class="n">IN</span>  <span class="n">NS</span>  <span class="n">ns</span><span class="o">-</span><span class="mf">692.</span><span class="n">awsdns</span><span class="o">-</span><span class="mf">22.</span><span class="n">net</span><span class="p">.</span>
+<span class="p">...</span>
+</pre></div>
+<blockquote>
+<p>可以看到, 壕 github 全部用 <span class="caps">AWS</span> 域名服务来解析的…</p>
+</blockquote>
+<p><img alt="gh 正常" src="_images/ssl-gh-pages-ko.png"/></p>
+<blockquote>
+<p>此时 gi-pages 配置已经感知到一切良好</p>
+</blockquote>
+<p><img alt="证书有效" src="_images/ssl-chrome-info.png"/></p>
+<p>点击 chrom 域名前的小图标, 可以看到 <span class="caps">SSL</span> 已生效</p>
+<p><img alt="检验" src="_images/ssl-chrome-chk.png"/></p>
+<p>当然, 原先模板中一系列资源指向老 <code>http</code> 资源都无法使用了</p>
+<p><img alt="资源丢失" src="_images/ssl-res-load-err.png"/></p>
 <h3 id="gl-pages">gl-pages<a class="headerlink" href="#gl-pages" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>༄  dig 101.camp +nostats +nocomments +nocmd</p>
@@ -211,7 +316,13 @@
 </pre></div>
 <h2 id="summary">summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <ul>
-<li>DNSPod 依然是感觉最舒服的 <span class="caps">DNS</span> 管理界面, 可惜彻底被放弃了, 能迁走就迁吧…</li>
+<li>DNSPod 依然是感觉最舒服的 <span class="caps">DNS</span> 管理界面, 可惜彻底被放弃了, 能迁走就迁吧…<ul>
+<li>而且功能已经落后</li>
+</ul>
+</li>
+</ul>
+<p><img alt="报警" src="_images/ssl-dnspod-err.png"/></p>
+<ul>
 <li>gitlab 比 github 要 hardcore 很多<ul>
 <li>但是, 乐趣也更多也</li>
 </ul>
@@ -232,11 +343,23 @@
 <li><a href="https://yixuan.li/geek/2019/01/21/howToDriveWithHTTPS/">如何持证 (<span class="caps">HTTPS</span>) 开车 · Yixuan</a><ul>
 <li><a href="https://help.github.com/articles/troubleshooting-custom-domains/">GitHub Pages <span class="caps">HTTPS</span> 设置 | 查错指南</a></li>
 <li><a href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">如何给你的 GitHub Pages 加上 <span class="caps">HTTPS</span> 证书</a></li>
+<li><a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">Using a custom domain with GitHub Pages - User Documentation</a><ul>
+<li><a href="https://help.github.com/articles/setting-up-a-custom-subdomain/">Setting up a custom subdomain - User Documentation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="https://gitlab.com/help/user/project/pages/lets_encrypt_for_gitlab_pages.md">Lets encrypt for gitlab pages · Pages · Project · User · Help · GitLab</a><ul>
 <li><a href="https://github.com/rolodato/gitlab-letsencrypt">rolodato/gitlab-letsencrypt: Easily generate a Let’s Encrypt certificate for GitLab Pages</a></li>
 <li><a href="https://gitlab.com/help/user/project/pages/getting_started_part_three.md#dns-records">Getting started part three · Pages · Project · User · Help · GitLab</a></li>
+<li>…</li>
+</ul>
+</li>
+<li><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9175/83/how-to-transfer-a-domain">How to Transfer a Domain - Domain Transfers -Namecheap</a><ul>
+<li><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/255/83/how-do-i-transfer-my-existing-domain-to-namecheap">How do I transfer my existing domain to Namecheap? - Domain Transfers</a></li>
+<li><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9798/83/how-do-i-verify-that-my-domain-is-eligible-for-transfer">How do I verify that my domain is eligible for transfer? - Domain Transfers</a></li>
+<li><a href="https://help.iwantmyname.com/customer/portal/articles/184477-how-do-i-transfer-a-domain-to-another-registrar-">iwantmyname | How do I transfer a domain to another re…</a></li>
+<li><a href="https://help.iwantmyname.com/customer/portal/topics/83858-domain-transfer">iwantmyname | Domain Transfer</a></li>
 <li>…</li>
 </ul>
 </li>

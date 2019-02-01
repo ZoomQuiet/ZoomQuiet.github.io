@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Wed, 30 Jan 2019 10:10:00 +0800</lastBuildDate><item><title>如何持证 (SSL) 开车</title><link>https://blog.zoomquiet.io/jump-into-ssl.html</link><description>
+<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Fri, 01 Feb 2019 10:42:00 +0800</lastBuildDate><item><title>如何配置 rIME 支持 GitChat 规范?</title><link>https://blog.zoomquiet.io/rime4gitchat.html</link><description>
+&lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;新年了, 发现有 &lt;code&gt;长徦式学习症&lt;/code&gt; , 很多不敢肥家被逼婚的程序猿, 宁可呆在公司一边值班一边刷课&lt;/li&gt;
+&lt;li&gt;同时, GitChat 也空降新领导, 启动叕一波作者鼓动&lt;/li&gt;
+&lt;li&gt;所以, 响应号召, 尝试分享这年几点感触&lt;/li&gt;
+&lt;li&gt;只是, 没想到, 对提交文章, 有了细致要求, 任何一点不达标, 直接退稿, 不允许发布&lt;/li&gt;
+&lt;li&gt;虽然, 申述说:&lt;ul&gt;
+&lt;li&gt;通过配置输入法, 已经有15年从来不用中文标点了&lt;/li&gt;
+&lt;li&gt;不仅在编程时杜绝了因为中文标点引发血案&lt;/li&gt;
+&lt;li&gt;同时, 也确保行动更加国际化, 也从来没因为标点而引发误解&lt;/li&gt;
+&lt;li&gt;但是, GitChat 方面不认为这是读者可以接受的&lt;/li&gt;
+&lt;li&gt;其它作者也劝:”从了吧, 您就…”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所以…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="goal"&gt;goal&lt;a class="headerlink" href="#goal" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;找到配置, 恢复全角标点输入&lt;/li&gt;
+&lt;li&gt;同时兼容以往全部半角标点输入习惯&lt;/li&gt;
+&lt;li&gt;进一步, 是否可以用工具来完成自动化修改?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;快速记录应对嗯哼&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="sed"&gt;sed&lt;a class="headerlink" href="#sed" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/ZoomQuiet/53439dd21c60a935e793"&gt;i hate Chinese symbol! so usage …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Fri, 01 Feb 2019 10:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2019-02-01:/rime4gitchat.html</guid><category>MAC</category><category>Livin</category><category>SCM</category><category>markdown</category></item><item><title>如何持证 (SSL) 开车</title><link>https://blog.zoomquiet.io/jump-into-ssl.html</link><description>
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg"&gt;Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;被成功安利…&lt;/p&gt;

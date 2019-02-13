@@ -564,6 +564,25 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="一切安全" src="_images/SSL-chrome-chk-good.png"/&gt;&lt;/p&gt;
 &lt;p&gt;终于…收功&lt;/p&gt;
+&lt;h2 id="ipic"&gt;iPic&lt;a class="headerlink" href="#ipic" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;是的, mac 下 docker 工具中最接地气的了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在和有关人士沟通后, 人工通过了俺单域名免费 &lt;span class="caps"&gt;SSL&lt;/span&gt; 的订单,
+然后发现和对应 bucket 的配合是这样的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先,在 &lt;span class="caps"&gt;SSL&lt;/span&gt; 采购界面中,点击 &lt;code&gt;补全&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="补全" src="https://ipic.zoomquiet.tio/2019-02-13-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-13%2016.19.48.png"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;然后才有域名绑定界面出现, 当然的要求先备案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="SSL 配置" src="https://ipic.zoomquiet.tio/2019-02-13-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-13%2016.32.44.png"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最后再回到对应云存储控制界面中, 再次绑定域名&lt;/li&gt;
+&lt;li&gt;这样就完成了隐藏的云端 &lt;span class="caps"&gt;SSL&lt;/span&gt; 密匙部署, 以及空间域名绑定过程&lt;/li&gt;
+&lt;li&gt;是的, 以上两张图片都是 &lt;code&gt;HTTPS&lt;/code&gt; 持证资源了&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="summary"&gt;summary&lt;a class="headerlink" href="#summary" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;DNSPod 依然是感觉最舒服的 &lt;span class="caps"&gt;DNS&lt;/span&gt; 管理界面, 可惜彻底被放弃了, 能迁走就迁吧…&lt;ul&gt;
@@ -623,6 +642,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;2h 截屏,文档嗯哼…&lt;/li&gt;
+&lt;li&gt;190213 2h 沟通以及尝试&lt;ul&gt;
+&lt;li&gt;iPic 获得一个稳定 &lt;span class="caps"&gt;HTTPS&lt;/span&gt; 入口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;&lt;/hr&gt;</content><category term="MAC"></category><category term="Livin"></category><category term="SCM"></category><category term="SSL"></category></entry><entry><title>内圈梗集锦(人工智能简史)书评</title><link href="https://blog.zoomquiet.io/180220-book-ai-historic.html" rel="alternate"></link><published>2018-02-20T16:42:24+08:00</published><updated>2018-02-20T16:42:24+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2018-02-20:/180220-book-ai-historic.html</id><summary type="html">
 &lt;p&gt;版权归作者所有,任何形式转载请联系作者. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;作者&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Zoom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Quiet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;来自豆瓣&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;

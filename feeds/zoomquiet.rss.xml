@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Fri, 01 Feb 2019 10:42:00 +0800</lastBuildDate><item><title>如何配置 rIME 支持 GitChat 规范?</title><link>https://blog.zoomquiet.io/rime4gitchat.html</link><description>
+<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Wed, 13 Feb 2019 22:42:00 +0800</lastBuildDate><item><title>如何自在定义 macOS 截屏文件名?</title><link>https://blog.zoomquiet.io/how2rename-mac-screen-shot.html</link><description>
+&lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;默认系统截屏工具输出图片是:&lt;ul&gt;
+&lt;li&gt;到桌面&lt;/li&gt;
+&lt;li&gt;文件名: &lt;code&gt;屏幕快照 2019-02-13 17.17.32.png&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="goal"&gt;goal&lt;a class="headerlink" href="#goal" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;当年在 Linux 中,是可以自由定义输出的, 俺期望是:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;screenshot_190213-17.17.32.jpg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;现在怎么作到?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;记要尝试过程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="_1"&gt;格式&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;defaults&lt;/span&gt; &lt;span class="n"&gt;write&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apple&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;screencapture&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;jpg&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;killall&lt;/span&gt; &lt;span class="n"&gt;SystemUIServer&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;以上即可&lt;/p&gt;
+&lt;h3 id="_2"&gt;命名&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;defaults&lt;/span&gt; &lt;span class="n"&gt;write&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apple&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;screencapture&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="n"&gt;screenshot&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;killall&lt;/span&gt; &lt;span class="n"&gt;SystemUIServer&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;以上只能变成:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;screenshot&lt;/span&gt; &lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;02&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt; &lt;span class="mf"&gt;17 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 13 Feb 2019 22:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2019-02-13:/how2rename-mac-screen-shot.html</guid><category>MAC</category><category>Livin</category><category>SCM</category></item><item><title>如何配置 rIME 支持 GitChat 规范?</title><link>https://blog.zoomquiet.io/rime4gitchat.html</link><description>
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;新年了, 发现有 &lt;code&gt;长徦式学习症&lt;/code&gt; , 很多不敢肥家被逼婚的程序猿, 宁可呆在公司一边值班一边刷课&lt;/li&gt;

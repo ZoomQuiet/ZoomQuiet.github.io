@@ -85,6 +85,44 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">如何自在定义 macOS&nbsp;截屏文件名?</a></h2>
+                <div class="summary">
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<ul>
+<li>默认系统截屏工具输出图片是:<ul>
+<li>到桌面</li>
+<li>文件名: <code>屏幕快照 2019-02-13 17.17.32.png</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<ul>
+<li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
+<li><code>screenshot_190213-17.17.32.jpg</code></li>
+</ul>
+</li>
+<li>现在怎么作到?</li>
+</ul>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>记要尝试过程</p>
+</blockquote>
+<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">type</span> <span class="n">jpg</span>
+<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
+</pre></div>
+<p>以上即可</p>
+<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">name</span> <span class="n">screenshot</span>
+<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
+</pre></div>
+<p>以上只能变成:</p>
+<div class="highlight"><pre><span class="n">screenshot</span> <span class="mi">2019</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">13</span> <span class="mf">17 …</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/rime4gitchat.html">如何配置 rIME 支持 GitChat&nbsp;规范?</a></h2>
                 <div class="summary">
 <h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
@@ -156,37 +194,6 @@
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/180220-book-ai-historic.html">内圈梗集锦(人工智能简史)书评</a></h2>
-                <div class="summary">
-<p>版权归作者所有,任何形式转载请联系作者. </p>
-<div class="highlight"><pre><span class="err">作者</span><span class="o">:</span><span class="n">Zoom</span><span class="p">.</span><span class="n">Quiet</span><span class="p">(</span><span class="err">来自豆瓣</span><span class="p">)</span>
-<span class="err">来源</span><span class="o">:</span><span class="n">https</span><span class="o">:</span><span class="c1">//book.douban.com/review/9167418/</span>
-</pre></div>
-<p>是也乎,(￣▽￣)</p>
-<p>现在技术类图书有一种不好的倾向:</p>
-<div class="highlight"><pre><span class="err">书名有简史的</span>
-<span class="err">总是比通史要难写</span>
-<span class="err">但是有趣也有用的多</span>
-<span class="err">关键特别有种</span> <span class="p">;</span><span class="o">-</span><span class="p">)</span>
-</pre></div>
-<p>以往从信息简史开始到人类/未来等诸简史, 其实都有点以史预言将来的意思,</p>
-<p><span class="caps">AI</span> 简史, 反而专注陈述过去,</p>
-<p>全书少了一个关键内容:</p>
-<div class="highlight"><pre><span class="n">AI</span><span class="err">历史进展中</span>
-<span class="err">各种路线的时间线</span>
-<span class="err">和关键人物</span><span class="o">/</span><span class="err">作品</span><span class="o">/</span><span class="err">理论</span>
-<span class="err">的关系图谱</span>
-</pre></div>
-<p>另外,和其它技术图书类似(是的,类似流畅的 Python 之类技术人员自己写的图书);
-书中各种小扣儿比正文有趣的多,
-只是, 作者是海外华人, 用的都是中文中精彩的梗, 目测难以翻译为英文挣些更大的名望.</p>
-<p>作者, 明显是业内人士, 从参考文献列表就可以看出,
-俺看过,这么多技术类图书, 也就暗时间 …</p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/180220-book-ai-historic.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         <ul class="pagination">
                 <li class="prev disabled"><a href="#">&laquo;</a></li>
@@ -226,6 +233,8 @@
                         href="https://blog.zoomquiet.io/author/zoomquiet17.html">17</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/author/zoomquiet18.html">18</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/author/zoomquiet19.html">19</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/author/zoomquiet2.html">&raquo;</a></li>
         </ul>

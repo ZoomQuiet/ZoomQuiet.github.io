@@ -86,6 +86,44 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">如何自在定义 macOS&nbsp;截屏文件名?</a></h2>
+                <div class="summary">
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<ul>
+<li>默认系统截屏工具输出图片是:<ul>
+<li>到桌面</li>
+<li>文件名: <code>屏幕快照 2019-02-13 17.17.32.png</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<ul>
+<li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
+<li><code>screenshot_190213-17.17.32.jpg</code></li>
+</ul>
+</li>
+<li>现在怎么作到?</li>
+</ul>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>记要尝试过程</p>
+</blockquote>
+<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">type</span> <span class="n">jpg</span>
+<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
+</pre></div>
+<p>以上即可</p>
+<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">name</span> <span class="n">screenshot</span>
+<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
+</pre></div>
+<p>以上只能变成:</p>
+<div class="highlight"><pre><span class="n">screenshot</span> <span class="mi">2019</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">13</span> <span class="mf">17 …</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/dsl-atop-openresty.html">用 <span class="caps">DSL</span>&nbsp;们构筑商用系统</a></h2>
                 <div class="summary">
 <h1 id="building-business-systems-with-dsls-for-nginx-openresty">Building Business Systems with DSLs for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty<a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link">¶</a></h1>
@@ -126,38 +164,6 @@
 <h2 id="_3">原来<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>参考:<a href="https://github.com/cartr/homebrew-qt4">cartr/homebrew-qt4: Homebrew tap …</a></p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/pyqt4macos.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/leo5theme-key-words.html">Leo 5.4 theme&nbsp;custom</a></h2>
-                <div class="summary">
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p><a href="http://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme custom</a></p>
-<p>Leo 是灵活的完全 Pythonic 的可定制 <code>文学化编辑环境</code> …</p>
-<p>所以,其定制的进展是无限的…</p>
-<h2 id="_2">现象<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<ul>
-<li>在完成了基本的 theme 定制后发现</li>
-<li>默认语法元素的颜色,不太理想</li>
-<li>特别是: <a href="http://leoeditor.com/cheatsheet.html#id13">&lt;<sections>&gt;</sections></a><ul>
-<li>可以将下层节点放置在任何想放置的地方的引入点声明</li>
-<li>但是,这里 <code>&lt;&lt;...&gt;&gt;</code> 两端符号的颜色是默认兰色</li>
-<li>在暗色背景中看不清楚</li>
-</ul>
-</li>
-<li>可能一时没能找到配置处</li>
-</ul>
-<h2 id="_3">解决<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<ul>
-<li>通过社区列表咨询<ul>
-<li>2天后收到各种建议</li>
-</ul>
-</li>
-<li>才知道是俺使用 Leo 的配置文件过老<ul>
-<li>导致新版本的全局 theme 定义节点</li>
-<li><code>lThemes: copy to last top-level setting in myLeoSettings.leo--&gt;Common to all themes--&gt;Colors for …</code></li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/leo5theme-key-words.html">more ...</a>
                 </div>
             </article>
             <hr/>

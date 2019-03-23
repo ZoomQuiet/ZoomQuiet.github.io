@@ -85,6 +85,40 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/jump-into-ssl.html">如何持证 (<span class="caps">SSL</span>)&nbsp;开车</a></h2>
+                <div class="summary">
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国</a></p>
+<p>被成功安利…</p>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<p>因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 <code>*-pages</code> 服务快速发布:</p>
+<ul>
+<li>github/gitlab 为核心</li>
+<li>免费 <span class="caps">SSL</span> 认证为基础</li>
+<li>最好能一次配置长期可用</li>
+</ul>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<p>整体上, 无论在哪个 <code>*-pages</code> 平台, 要折腾的事儿相似, 就3步:</p>
+<ul>
+<li>追加配置含 <code>SSL</code> 解析能力的 <span class="caps">DNS</span> 服务主机 <code>A</code> 地址<ul>
+<li>并解决引发的有关 <code>CANEM</code> 冲突问题</li>
+</ul>
+</li>
+<li>在 <code>*-pages</code> 平台配置 <code>Enforce HTTPS</code> 有关嗯哼</li>
+<li>优雅的等待一切生效 ;-)<ul>
+<li>并解决可能的资源冲突问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
+<p>原先的:</p>
+<blockquote>
+<p>༄  dig blog …</p></blockquote>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssl.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/180220-book-ai-historic.html">内圈梗集锦(人工智能简史)书评</a></h2>
                 <div class="summary">
 <p>版权归作者所有,任何形式转载请联系作者. </p>
@@ -131,31 +165,6 @@
 <li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-1/">Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty, Part 1</a></li>
 <li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-2/">Domain-Specific Languages for …</a></li></ul></li></ul></li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/dsl-atop-openresty.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/pyqt4macos.html">PyQt4 之消失在&nbsp;Sierra</a></h2>
-                <div class="summary">
-<h3 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p>最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,
-用 PyQt 是必然选择哪.</p>
-<p>只是项目是老坑, 所以,没用 Qt5 技术桟, 还是 Qt4</p>
-<h2 id="_2">嗯哼<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<ul>
-<li>这天要折腾 <span class="caps">QR</span> 码识别了</li>
-<li>运行 <code>brew install zbar</code></li>
-<li>然后,各种问题就爆发了,特别是:<ul>
-<li><code>libjpeg.8.dylib</code> 加载不到</li>
-<li>PyQt4 镜像丢失</li>
-<li>…</li>
-</ul>
-</li>
-<li>重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt 可以安装了…</li>
-</ul>
-<h2 id="_3">原来<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>参考:<a href="https://github.com/cartr/homebrew-qt4">cartr/homebrew-qt4: Homebrew tap …</a></p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/pyqt4macos.html">more ...</a>
                 </div>
             </article>
             <hr/>

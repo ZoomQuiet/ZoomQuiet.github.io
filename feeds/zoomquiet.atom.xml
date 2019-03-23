@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- Zoom.Quiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2019-02-13T22:42:00+08:00</updated><entry><title>如何自在定义 macOS 截屏文件名?</title><link href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html" rel="alternate"></link><published>2019-02-13T22:42:00+08:00</published><updated>2019-02-13T22:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-02-13:/how2rename-mac-screen-shot.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- Zoom.Quiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2019-03-23T00:00:00+08:00</updated><entry><title>ScrapBook彻查成果</title><link href="https://blog.zoomquiet.io/131023-why0base-indexing-python.html" rel="alternate"></link><published>2019-03-23T00:00:00+08:00</published><updated>2019-03-23T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-03-23:/131023-why0base-indexing-python.html</id><summary type="html">
+&lt;p&gt;&lt;a href="https://plus.google.com/115212051037621986145/posts/YTUxbXYZyfi"&gt;I was asked on Twitter why Python uses 0-based indexing,…&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;老爹当年也很是积累使用 G+ 的,
+公开回答了很多价值问题… 能看一眼少一眼了…&lt;/p&gt;
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Google+ 帐号将于 2019 年 4 月 2 日关停。下载 Google+ 内容可能需要一些时间，因此请在 2019 年 3 月 31 日之前开始下载。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="_2"&gt;发现&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Guido van Rossum&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;公开&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2013年10月23日&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I was asked on Twitter why Python uses 0-based indexing …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;&lt;a href="https://plus.google.com/115212051037621986145/posts/YTUxbXYZyfi"&gt;I was asked on Twitter why Python uses 0-based indexing,…&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;老爹当年也很是积累使用 G+ 的,
+公开回答了很多价值问题… 能看一眼少一眼了…&lt;/p&gt;
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Google+ 帐号将于 2019 年 4 月 2 日关停。下载 Google+ 内容可能需要一些时间，因此请在 2019 年 3 月 31 日之前开始下载。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="_2"&gt;发现&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Guido van Rossum&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;公开&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2013年10月23日&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I was asked on Twitter why Python uses 0-based indexing, with a link to a new (fascinating) post on the subject (http://exple.tive.org/blarg/2013/10/22/citation-needed/). I recall thinking about it a lot; &lt;span class="caps"&gt;ABC&lt;/span&gt;, one of Python’s predecessors, used 1-based indexing, while C, the other big influence, used 0-based. My first few programming languages (Algol, Fortran, Pascal) used 1-based or variable-based. I think that one of the issues that helped me decide was slice notation.&lt;/p&gt;
+&lt;p&gt;Let’s first look at use cases. Probably the most common use cases for slicing are “get the first n items” and “get the next n items starting at i” (the first is a special case of that for i == the first index). It would be nice if both of these could be expressed as without awkward +1 or -1 compensations.&lt;/p&gt;
+&lt;p&gt;Using 0-based indexing, half-open intervals, and suitable defaults (as Python ended up having), they are beautiful: a[:n] and a[i:i+n]; the former is long for a[0:n].&lt;/p&gt;
+&lt;p&gt;Using 1-based indexing, if you want a[:n] to mean the first n elements, you either have to use closed intervals or you can use a slice notation that uses start and length as the slice parameters. Using half-open intervals just isn’t very elegant when combined with 1-based indexing. Using closed intervals, you’d have to write a[i:i+n-1] for the n items starting at i. So perhaps using the slice length would be more elegant with 1-based indexing? Then you could write a[i:n]. And this is in fact what &lt;span class="caps"&gt;ABC&lt;/span&gt; did — it used a different notation so you could write a@i|n.(See http://homepages.cwi.nl/~steven/abc/qr.html#&lt;span class="caps"&gt;EXPRESSIONS&lt;/span&gt;.)&lt;/p&gt;
+&lt;p&gt;But how does the index:length convention work out for other use cases? &lt;span class="caps"&gt;TBH&lt;/span&gt; this is where my memory gets fuzzy, but I think I was swayed by the elegance of half-open intervals. Especially the invariant that when two slices are adjacent, the first slice’s end index is the second slice’s start index is just too beautiful to ignore. For example, suppose you split a string into three parts at indices i and j — the parts would be a[:i], a[i:j], and a[j:].&lt;/p&gt;
+&lt;p&gt;So that’s why Python uses 0-based indexing.&lt;/p&gt;
+&lt;h2 id="_3"&gt;是也乎&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;简单说, 就是为了切片时的语义合理性…&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="guido"></category><category term="python"></category><category term="gplus"></category></entry><entry><title>如何自在定义 macOS 截屏文件名?</title><link href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html" rel="alternate"></link><published>2019-02-13T22:42:00+08:00</published><updated>2019-02-13T22:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-02-13:/how2rename-mac-screen-shot.html</id><summary type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;默认系统截屏工具输出图片是:&lt;ul&gt;

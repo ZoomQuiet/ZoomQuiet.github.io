@@ -134,7 +134,12 @@
 书中各种小扣儿比正文有趣的多,
 只是, 作者是海外华人, 用的都是中文中精彩的梗, 目测难以翻译为英文挣些更大的名望.&lt;/p&gt;
 &lt;p&gt;作者, 明显是业内人士, 从参考文献列表就可以看出,
-俺看过,这么多技术类图书, 也就暗时间 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 20 Feb 2018 16:42:24 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2018-02-20:/180220-book-ai-historic.html</guid><category>DAMA</category><category>Book</category><category>Chaos</category></item><item><title>用 DSL 们构筑商用系统</title><link>https://blog.zoomquiet.io/dsl-atop-openresty.html</link><description>
+俺看过,这么多技术类图书, 也就暗时间 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 20 Feb 2018 16:42:24 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2018-02-20:/180220-book-ai-historic.html</guid><category>DAMA</category><category>Book</category><category>Chaos</category></item><item><title>关联 PRESSone</title><link>https://blog.zoomquiet.io/bind-press-one.html</link><description>
+&lt;p&gt;https://press.one/p/v?s=daa9a127693ab0fde9141b894ff9f0dc452c33fc166f0e97252420b83a33088e6c67f5d44f63860c218859c099557d42908cbb8059ebfe92765636dbaaf654710&amp;amp;h=90f1dab4c8b24b6502c03cdf067a279d8a672ae229cc405e171f57c0d45613f7&amp;amp;a=6263e76c1e5ac3196975ad5fa05f458f49633f5c&amp;amp;f=P1&amp;amp;v=3&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;190331 ZoomQuiet init.&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sun, 10 Sep 2017 08:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-09-10:/bind-press-one.html</guid><category>pre</category><category>blockchain</category></item><item><title>用 DSL 们构筑商用系统</title><link>https://blog.zoomquiet.io/dsl-atop-openresty.html</link><description>
 &lt;h1 id="building-business-systems-with-dsls-for-nginx-openresty"&gt;Building Business Systems with DSLs for &lt;span class="caps"&gt;NGINX&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; OpenResty&lt;a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~ 来自春哥的分享&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;

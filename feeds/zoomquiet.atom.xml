@@ -889,7 +889,17 @@
 &lt;p&gt;对于准备或是从事 &lt;span class="caps"&gt;AI&lt;/span&gt; 开发工作的程序猿来说,
 最大的功能就是知道自己袓师爷们的关系,
 以及知道想深入下去, 应该补什么书了. &lt;/p&gt;
-&lt;p&gt;~ &lt;a href="https://book.douban.com/review/9167418/"&gt;内圈梗集锦(人工智能简史)书评&lt;/a&gt;&lt;/p&gt;</content><category term="DAMA"></category><category term="Book"></category><category term="Chaos"></category></entry><entry><title>用 DSL 们构筑商用系统</title><link href="https://blog.zoomquiet.io/dsl-atop-openresty.html" rel="alternate"></link><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-08-27:/dsl-atop-openresty.html</id><summary type="html">
+&lt;p&gt;~ &lt;a href="https://book.douban.com/review/9167418/"&gt;内圈梗集锦(人工智能简史)书评&lt;/a&gt;&lt;/p&gt;</content><category term="DAMA"></category><category term="Book"></category><category term="Chaos"></category></entry><entry><title>关联 PRESSone</title><link href="https://blog.zoomquiet.io/bind-press-one.html" rel="alternate"></link><published>2017-09-10T08:42:00+08:00</published><updated>2017-09-10T08:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-09-10:/bind-press-one.html</id><summary type="html">
+&lt;p&gt;https://press.one/p/v?s=daa9a127693ab0fde9141b894ff9f0dc452c33fc166f0e97252420b83a33088e6c67f5d44f63860c218859c099557d42908cbb8059ebfe92765636dbaaf654710&amp;amp;h=90f1dab4c8b24b6502c03cdf067a279d8a672ae229cc405e171f57c0d45613f7&amp;amp;a=6263e76c1e5ac3196975ad5fa05f458f49633f5c&amp;amp;f=P1&amp;amp;v=3&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;190331 ZoomQuiet init.&lt;/li&gt;
+&lt;/ul&gt;</summary><content type="html">
+&lt;p&gt;https://press.one/p/v?s=daa9a127693ab0fde9141b894ff9f0dc452c33fc166f0e97252420b83a33088e6c67f5d44f63860c218859c099557d42908cbb8059ebfe92765636dbaaf654710&amp;amp;h=90f1dab4c8b24b6502c03cdf067a279d8a672ae229cc405e171f57c0d45613f7&amp;amp;a=6263e76c1e5ac3196975ad5fa05f458f49633f5c&amp;amp;f=P1&amp;amp;v=3&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;190331 ZoomQuiet init.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="pre"></category><category term="blockchain"></category></entry><entry><title>用 DSL 们构筑商用系统</title><link href="https://blog.zoomquiet.io/dsl-atop-openresty.html" rel="alternate"></link><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-08-27:/dsl-atop-openresty.html</id><summary type="html">
 &lt;h1 id="building-business-systems-with-dsls-for-nginx-openresty"&gt;Building Business Systems with DSLs for &lt;span class="caps"&gt;NGINX&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; OpenResty&lt;a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~ 来自春哥的分享&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;

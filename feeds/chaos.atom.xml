@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- Chaos</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/chaos.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2013-12-19T10:42:00+08:00</updated><entry><title>How to from Jekyll jump into Pelican</title><link href="https://blog.zoomquiet.io/jekyll-to-pelican.html" rel="alternate"></link><published>2013-12-19T10:42:00+08:00</published><updated>2013-12-19T10:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-19:/jekyll-to-pelican.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- Chaos</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/chaos.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2017-09-10T08:42:00+08:00</updated><entry><title>关联 PRESSone</title><link href="https://blog.zoomquiet.io/bind-press-one.html" rel="alternate"></link><published>2017-09-10T08:42:00+08:00</published><updated>2017-09-10T08:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-09-10:/bind-press-one.html</id><summary type="html">
+&lt;p&gt;https://press.one/p/v?s=daa9a127693ab0fde9141b894ff9f0dc452c33fc166f0e97252420b83a33088e6c67f5d44f63860c218859c099557d42908cbb8059ebfe92765636dbaaf654710&amp;amp;h=90f1dab4c8b24b6502c03cdf067a279d8a672ae229cc405e171f57c0d45613f7&amp;amp;a=6263e76c1e5ac3196975ad5fa05f458f49633f5c&amp;amp;f=P1&amp;amp;v=3&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;190331 ZoomQuiet init.&lt;/li&gt;
+&lt;/ul&gt;</summary><content type="html">
+&lt;p&gt;https://press.one/p/v?s=daa9a127693ab0fde9141b894ff9f0dc452c33fc166f0e97252420b83a33088e6c67f5d44f63860c218859c099557d42908cbb8059ebfe92765636dbaaf654710&amp;amp;h=90f1dab4c8b24b6502c03cdf067a279d8a672ae229cc405e171f57c0d45613f7&amp;amp;a=6263e76c1e5ac3196975ad5fa05f458f49633f5c&amp;amp;f=P1&amp;amp;v=3&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;190331 ZoomQuiet init.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="pre"></category><category term="blockchain"></category></entry><entry><title>How to from Jekyll jump into Pelican</title><link href="https://blog.zoomquiet.io/jekyll-to-pelican.html" rel="alternate"></link><published>2013-12-19T10:42:00+08:00</published><updated>2013-12-19T10:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-19:/jekyll-to-pelican.html</id><summary type="html">
 &lt;h1 id="jekyll-pelican"&gt;如何从 Jekyll 转进入 Pelican&lt;a class="headerlink" href="#jekyll-pelican" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;简述静态网站从 Jekyll 环境中迁移为 纯 Python 
 &lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;…&lt;/p&gt;

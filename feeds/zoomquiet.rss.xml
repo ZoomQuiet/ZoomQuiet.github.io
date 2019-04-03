@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Sat, 23 Mar 2019 00:00:00 +0800</lastBuildDate><item><title>ScrapBook彻查成果</title><link>https://blog.zoomquiet.io/131023-why0base-indexing-python.html</link><description>
+<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Wed, 03 Apr 2019 12:12:00 +0800</lastBuildDate><item><title>修复 subl3 包安装</title><link>https://blog.zoomquiet.io/fix-subl-package-installation.html</link><description>
+&lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;突然: &lt;code&gt;cmd+shift+P&lt;/code&gt; 选择 &lt;code&gt;Package Control: install package&lt;/code&gt; 时,一直:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There are no packages available for installation&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="goal"&gt;goal&lt;a class="headerlink" href="#goal" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;当然就是解决呗:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;各种官方都有吼&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://packagecontrol.io/docs/troubleshooting"&gt;Troubleshooting - Package Control&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/wbond/package_control/issues/959#issuecomment-168447848"&gt;There are no packages available for installation - Package Control of Sublime Text 3 · Issue #959 · wbond/package_control&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;打开 debug 观察:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Package&lt;/span&gt; &lt;span class="n"&gt;Control&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Skipping&lt;/span&gt; &lt;span class="n"&gt;automatic …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 03 Apr 2019 12:12:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2019-04-03:/fix-subl-package-installation.html</guid><category>MAC</category><category>Livin</category><category>SCM</category><category>subl</category></item><item><title>ScrapBook彻查成果</title><link>https://blog.zoomquiet.io/131023-why0base-indexing-python.html</link><description>
 &lt;p&gt;&lt;a href="https://plus.google.com/115212051037621986145/posts/YTUxbXYZyfi"&gt;I was asked on Twitter why Python uses 0-based indexing,…&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;老爹当年也很是积累使用 G+ 的,
 公开回答了很多价值问题… 能看一眼少一眼了…&lt;/p&gt;

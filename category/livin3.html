@@ -86,6 +86,30 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">Mavericks 中用&nbsp;sshfs</a></h2>
+                <div class="summary">
+<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>自从 2011-12-16 入手 <span class="caps">MBP</span> 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便</p>
+<ul>
+<li>依赖少, 双方有 ssh 就好</li>
+<li>配置少, ssh 服务的启动没有 smb 服务那么多的配置</li>
+<li>自动断, 不会象 smb 死占一个虚假的挂接点</li>
+</ul>
+<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<p>每次 brew 出点小问题,就导致 sshfs 或是不痛快;</p>
+<p>目测已经折腾过至少4次了</p>
+<ul>
+<li>送修理两次</li>
+<li>从 10.6 升级 到 10.9 一次</li>
+<li>brew 在硬盘权限修订后,完全崩溃,重新安装 又一次</li>
+</ul>
+<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
+<p>毕竟 sshfs 依赖 <span class="caps">FUSE</span> 这种 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/rst2s5-upgraded.html">rst2s5&nbsp;小折腾</a></h2>
                 <div class="summary">
 <h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
@@ -121,49 +145,6 @@
 <span class="mf">3.5</span><span class="n">G</span>    <span class="n">ZqSKM</span>
  <span class="mf">9.5</span><span class="n">M</span>    <span class="n">scraotools_ZqDevRel</span><span class="p">.</span><span class="n">pkl …</span></pre></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/livin-scrapbook.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">如何基于<span class="caps">CB3</span>构建家庭服务器</a></h2>
-                <div class="summary">
-<p><a href="http://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest 的体验</a>
-之后,总是要一步步完成心目中的 家服务器</p>
-<h1 id="issue">Issue<a class="headerlink" href="#issue" title="Permanent link">¶</a></h1>
-<p>基于<span class="caps">CB3</span>使用 lununtu-server-<span class="caps">VGA</span> 操作系统</p>
-<ul>
-<li>环境:</li>
-<li>.bashrc</li>
-<li>
-<p>.inputrc</p>
-</li>
-<li>
-<p>预装: </p>
-</li>
-<li>sshd</li>
-<li>apt-fast<ul>
-<li><a href="http://www.mattparnell.com/linux/apt-fast/">Index of /linux/apt-fast</a></li>
-</ul>
-</li>
-<li>vim</li>
-<li>mc</li>
-<li>
-<p>…</p>
-</li>
-<li>
-<p>不要: </p>
-</li>
-<li>php</li>
-<li>mysql</li>
-<li>apache</li>
-</ul>
-<h1 id="todo"><span class="caps">TODO</span><a class="headerlink" href="#todo" title="Permanent link">¶</a></h1>
-<p>为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有:</p>
-<ol>
-<li>通过 <span class="caps">USB</span> 挂接 FreeBSD 格式化的 <span class="caps">UFS</span> 分区</li>
-<li>通过板载 <span class="caps">SATA</span> 接口,加装 2.5吋 1T 新硬盘</li>
-<li>安装 Samba 系统 …</li></ol>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">more ...</a>
                 </div>
             </article>
             <hr/>

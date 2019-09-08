@@ -1,5 +1,390 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2019-04-03T12:12:00+08:00</updated><entry><title>修复 subl3 包安装</title><link href="https://blog.zoomquiet.io/fix-subl-package-installation.html" rel="alternate"></link><published>2019-04-03T12:12:00+08:00</published><updated>2019-04-03T12:12:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-04-03:/fix-subl-package-installation.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2019-08-23T00:00:00+08:00</updated><entry><title>Leo 第N次科普</title><link href="https://blog.zoomquiet.io/leo-101-againnn.html" rel="alternate"></link><published>2019-08-23T00:00:00+08:00</published><updated>2019-08-23T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-08-23:/leo-101-againnn.html</id><summary type="html">
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://wewe.t9t.io/chat/%E3%80%90%E9%9B%86%E6%99%BA%E3%80%91%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8E%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E7%BE%A4"&gt;[集智]注意力与知识管理群&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;中大家经常就一些工具产生各种讨论, 俺一向的标签是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Pythonic&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.leoeditor.com/"&gt;Leo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其它还好, 有广泛群众基础, 这个 Leo 就经常引发嗯哼&lt;/p&gt;
+&lt;h2 id="_2"&gt;引子:&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pimgeek-知识管理工具研究者: 插一个技术提问…  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;@大妈🙊Zoom.Quiet LeoEditor 的节点支持类似 {{ var }} 这样的模板语法吗?&lt;ul&gt;
+&lt;li&gt;我知道 &amp;lt;&amp;lt; section &amp;gt;&amp;gt; 这样的用法,还有 valuespace + jinja 的方式, 不知还有没有其它实现方式?[疑问] ‘&lt;/li&gt;
+&lt;li&gt;&amp;lt;&amp;lt; section &amp;gt;&amp;gt; 这种用法是 LeoEditor 内置的实现方式&lt;/li&gt;
+&lt;li&gt;{{ var }} 这种用法是 LeoEditor 插件的实现方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;我就是希望定义一些可填充的内容,把这些内容从代码主体中抽取出来,这样我编辑起来方便.  ‘&lt;ul&gt;
+&lt;li&gt;有些内容,比如网页里的作者信息等,一次编辑后反复引用. 修改时也方便. &lt;/li&gt;
+&lt;li&gt;专业的 Web 开发者应该是把这些代码拆成多个文件来管理 …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://wewe.t9t.io/chat/%E3%80%90%E9%9B%86%E6%99%BA%E3%80%91%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8E%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E7%BE%A4"&gt;[集智]注意力与知识管理群&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;中大家经常就一些工具产生各种讨论, 俺一向的标签是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Pythonic&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.leoeditor.com/"&gt;Leo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其它还好, 有广泛群众基础, 这个 Leo 就经常引发嗯哼&lt;/p&gt;
+&lt;h2 id="_2"&gt;引子:&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pimgeek-知识管理工具研究者: 插一个技术提问…  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;@大妈🙊Zoom.Quiet LeoEditor 的节点支持类似 {{ var }} 这样的模板语法吗?&lt;ul&gt;
+&lt;li&gt;我知道 &amp;lt;&amp;lt; section &amp;gt;&amp;gt; 这样的用法,还有 valuespace + jinja 的方式, 不知还有没有其它实现方式?[疑问] ‘&lt;/li&gt;
+&lt;li&gt;&amp;lt;&amp;lt; section &amp;gt;&amp;gt; 这种用法是 LeoEditor 内置的实现方式&lt;/li&gt;
+&lt;li&gt;{{ var }} 这种用法是 LeoEditor 插件的实现方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;我就是希望定义一些可填充的内容,把这些内容从代码主体中抽取出来,这样我编辑起来方便.  ‘&lt;ul&gt;
+&lt;li&gt;有些内容,比如网页里的作者信息等,一次编辑后反复引用. 修改时也方便. &lt;/li&gt;
+&lt;li&gt;专业的 Web 开发者应该是把这些代码拆成多个文件来管理. 我现在尝试用一个 LeoEditor 的大纲文件来管理. ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;lt;&amp;lt; section &amp;gt;&amp;gt; 的用法也是类似的,只不过它必须是模板节点的子节点.  ‘&lt;ul&gt;
+&lt;li&gt;这样不必对每个节点都执行特殊操作,最省心. ‘&lt;/li&gt;
+&lt;li&gt;如果需要复用比如 html-header 中的信息,我可以利用 clone 节点的方式. ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;tomz-没有褒贬: 发现leo把tangle命令去掉了. 只能命令行输入tangle. 没有尝试成功怎么用尖括号引用父节点. 找不到文档了.  ‘
+noweb和org这种没有outline结构的软件就能任意引用任何节点.  ‘
+tomz-没有褒贬: 对啊 原来用tangle命令就能引用父节点 等于是全局变量 ‘
+tangle才是真正的noweb方式 现在只能子节点有了局限 ‘&lt;/p&gt;
+&lt;p&gt;pimgeek-知识管理工具研究者: @tomz-没有褒贬 我昨天已经实现自己的想法了,虽然没有 tangle 没有全局变量,可能会稍微麻烦一些. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;我现在是这样,如果有需要被反复引用的代码段 S,我会先放在一个专门收集这类代码的大纲节点下. &lt;/li&gt;
+&lt;li&gt;后面但凡有代码 X 需要用到时,我就在 X 下方创建一个 S 的 clone 子节点,然后在 X  中使用 &amp;lt;&amp;lt; S &amp;gt;&amp;gt; 引用之. 😄 ‘&lt;/li&gt;
+&lt;li&gt;如果我发现 S 代码段,暂时对 X 没有帮助了, 我也不用把这个 clone 节点删除, 只要把那个 &amp;lt;&amp;lt; S &amp;gt;&amp;gt; 从代码 X 中移除掉就可以了 😎 ‘&lt;/li&gt;
+&lt;li&gt;所以 Leo Editor 的 clone 节点是个好东西啊 [耶] ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;大妈🙊Zoom.Quiet: 才发现?
+俺宣传了有14年了…没人相信, 这是最好的重构姿势… ‘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;pimgeek-知识管理工具研究者: 不是我不相信,而是以往的开发需求没被明晰化,更早以前则不知道 Leo Editor 😂 ‘&lt;ul&gt;
+&lt;li&gt;2016 年关于 Leo Editor 的讨论 ‘&lt;/li&gt;
+&lt;li&gt;理论上可以把个人的所有开发代码都这样管理起来:&lt;ul&gt;
+&lt;li&gt;网上发布用 Git, 本地管理用 Leo, &lt;/li&gt;
+&lt;li&gt;互不干扰&lt;/li&gt;
+&lt;li&gt;(Leo 大纲可以自动生成带有特殊注释的代码文件, 文件发生变化时也能同步回 Leo 里 )互不干扰.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;𝙰𝚣𝚎𝚛𝚒𝚕: 这是大妈的上古神器系列的… ‘&lt;/p&gt;
+&lt;p&gt;大妈🙊Zoom.Quiet: 是也乎 ╮(╯▽╰)╭&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;@pimgeek-知识管理工具研究者  —&amp;gt; 那都是老黄历了&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;现在&lt;/span&gt; &lt;span class="n"&gt;Leo&lt;/span&gt; &lt;span class="err"&gt;有了更好的算子&lt;/span&gt;
+    &lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="err"&gt;可以不污染输入又确保双向感知了&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pimgeek-知识管理工具研究者: 我集中问一下: &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;有什么比 @file 更好的方式, 可以双向感知?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;有什么比 &amp;lt;&amp;lt; section &amp;gt;&amp;gt; 更好的方式, 可以实现代码段引用? ‘&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="quo"&gt;‘&lt;/span&gt; 大妈🙊Zoom.Quiet: 代码引用 —&amp;gt; 这是高德纳原创发明~比宏直觉又简洁~含自注释~
+多用~没毛病 ‘&lt;/p&gt;
+&lt;p&gt;pimgeek-知识管理工具研究者: @file 节点我去看文档, 但是问题 2 我真没找到, 可能我搜索方式不对, 昨天至少花了 3 个小时找替代, 就是没找到. ‘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;大妈🙊Zoom.Quiet: &lt;a href="http://www.leoeditor.com/directives.html"&gt;Directives Reference — Leo 6.0 documentation&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;之前是用 @nosent 替代 @file 的&lt;ul&gt;
+&lt;li&gt;后来找到自动 diff 并双向合并技术后&lt;/li&gt;
+&lt;li&gt;就有了 @auto @clean&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一次性将 混入/出 时依赖的标记文本从目标文本中清除了 ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;所以, 作为 Leo 老用户, 从来不看官方文档,&lt;ul&gt;
+&lt;li&gt;导致一直用老经验使用效率有问题的流程…&lt;/li&gt;
+&lt;li&gt;那么, 推而广之, 可能其它工具也都有类似问题存在//// ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="quo"&gt;‘&lt;/span&gt; 大妈🙊Zoom.Quiet: ‘ pimgeek-知识管理工具研究者: 大多数文档中的例子和提问/设问相对较少,  如果能多一些例子和提问/设问就好多了. ‘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;看 &lt;span class="caps"&gt;FAQ&lt;/span&gt; ….&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;官方文档很多都是从代码自动生成&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+&lt;span class="err"&gt;难免呆板&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="err"&gt;所以&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;FAQ&lt;/span&gt; &lt;span class="err"&gt;中有灵活自然的问答&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="err"&gt;甚至于&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;都是开源项目哪&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+&lt;span class="err"&gt;你哪儿不舒服&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;问哪&lt;/span&gt;&lt;span class="p"&gt;....&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pimgeek-知识管理工具研究者: LeoEditor 似乎没有规定源码的组织方式,如果要批量导入,可能还是先在自己头脑中预先想好一种结构,而不是依赖它的”内置结构” … ‘&lt;/p&gt;
+&lt;p&gt;@&lt;span class="caps"&gt;SML&lt;/span&gt; 似乎不行,他的大纲树 和 硬盘的路径树 是两个东西&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="_3"&gt;断言:&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SML&lt;/span&gt;: 嗯嗯 所以不太适合开发flask这种组织好的工程项目’,更适合学习,归类,阅读代码,或者开发小型项目 ‘&lt;/p&gt;
+&lt;p&gt;额,大家可能误会我意思了 ‘
+我并不是批判leoeditor ‘
+他确实不适合,类似laravel,flask这种成熟的工程项目开发 ‘
+django项目的文件超过数百个了 ‘
+连批量导入都不支持… ‘&lt;/p&gt;
+&lt;p&gt;我明白你说的,就是用大纲的形式串起来,当做模板语言的使用 ‘
+这个我清楚,leo的思想是想以类,或者组件为单位 ‘
+这不就是 前端的经常用的组建化开发 或者模板语法么… ‘&lt;/p&gt;
+&lt;p&gt;@&lt;span class="caps"&gt;SML&lt;/span&gt; 这个….作为 ide 使用啊 ‘
+你可以尝试一下,用它来开发django,或flask 基本是不可能的 ‘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;大妈🙊Zoom.Quiet: 该批就批~俺又不是 Leo 厂商代理~&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;问题是不说问题 —&amp;gt; 只给大家你的方案… 没法儿聊啊~ ‘&lt;ul&gt;
+&lt;li&gt;就算是ide 也和批量导入文件无关啊 —&amp;gt; 你想干什么?真正的? ‘&lt;/li&gt;
+&lt;li&gt;关键为什么大家习惯性讨论问题的某个方案 —&amp;gt; 而不讨论问题本身呢?&lt;/li&gt;
+&lt;li&gt;批量导入工程是为什么啊? ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;俺用 Leo 14年了~&lt;ul&gt;
+&lt;li&gt;从服务端 web server / DevOps 管理/数据分析~到 chrome 插件开发… golang 单体服务 —&amp;gt; Qt 桌面应用… bottle dango flask ….&lt;/li&gt;
+&lt;li&gt;基本上凡涉及文件越过三个的都用 leo 管理了… &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Leo 没有自动重构&lt;ul&gt;
+&lt;li&gt;没有自动跳类定义… &lt;/li&gt;
+&lt;li&gt;没有您依赖的一切 &lt;span class="caps"&gt;IDE&lt;/span&gt; 功能~&lt;/li&gt;
+&lt;li&gt;但并不影响开发任何想开发的软件~&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;因为… &lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;IDE&lt;/span&gt; 从 TurboC之后俺再没用过任何一种… &lt;/li&gt;
+&lt;li&gt;VSCode 也关闭或不用任何 &lt;span class="caps"&gt;IDE&lt;/span&gt; 特有功能…  &lt;/li&gt;
+&lt;li&gt;所以… 没理解你说的不合适在哪个功能上? ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;俺通过 Leo 管理的文件过千了… ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SML&lt;/span&gt;: 编辑哪个就导入哪个…好吧 你解答了我的疑惑 ‘&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pimgeek-知识管理工具研究者: ‘我:如果想把手头现有的,已经用传统项目结构组织好的代码,转换为 Leo Editor 的”树状网结构”,那可能是一项浩大的工程… 
+与放弃 pyCharm 转投 &lt;span class="caps"&gt;VS&lt;/span&gt;.Code 那种变化相比,肯定是不一样,要麻烦的多. ‘
+‘ &lt;span class="caps"&gt;SML&lt;/span&gt;: 这个我清楚,leo的思想是想以类,或者组件为单位 ‘
+‘ tomz-没有褒贬: 不是类和组件为单位 单位可以是一个函数其中的几行 ‘
+如果不是说代码内部的组织 那就是说对文件之上层次的组织了 ‘
+将几行作为单位 等于是为这几行做了一个注释 同时就将这几行折叠起来了 ‘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;大妈🙊Zoom.Quiet: 也不是~&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Leo 可抽象管理的 note 从几行到几个文件夹… 都可以~ ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="quo"&gt;‘&lt;/span&gt; &lt;span class="caps"&gt;SML&lt;/span&gt;: 嗯嗯 就是想以 snippet 为单位吧 ‘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;大妈🙊Zoom.Quiet: 更加不是~~~~ ‘&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你写过小说就懂了 ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@tomz-没有褒贬: 文学编程就是让代码更整齐更帅 😂 ‘
+换个词 叫一目了然 ‘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;是也乎,(￣▽￣)&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Yes&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;Not&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;文学化编辑器, 正好不怎么关心最终输出的代码是否整齐/帅&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;但是, 一目了然, 的确是真的…&lt;/li&gt;
+&lt;li&gt;只是, 只针对作者本人…&lt;/li&gt;
+&lt;li&gt;为什么这么说 ‘&lt;ul&gt;
+&lt;li&gt;@pimgeek-知识管理工具研究者 发现并研究以及尝试整合的,也从无一个主流工具/软件,&lt;/li&gt;
+&lt;li&gt;为什么?原因相似…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可惜, 世人从来不关心自己被浪费掉的时间和精力…&lt;ul&gt;
+&lt;li&gt;一脑门子 &lt;span class="caps"&gt;WYSIWYG&lt;/span&gt; 要求,&lt;/li&gt;
+&lt;li&gt;全然无视了在计算机发展过程中, 最宝贵的从来不是视觉要求,&lt;/li&gt;
+&lt;li&gt;而是思想要求 ‘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Django 或是 Flask 工程, 之所以, 会有多个目录和很多文件;&lt;ul&gt;
+&lt;li&gt;是框架本身引导和要求的?为什么?&lt;/li&gt;
+&lt;li&gt;因为框架是领域工程经验集成, 要求我们必须按照人家的工程经验走… &lt;/li&gt;
+&lt;li&gt;凡是上点儿规模的工程, 一个共同经验就是:&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;目录即系统架构&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;目录结构以及命名以及文件分布约定本身,&lt;/li&gt;
+&lt;li&gt;就决定了系统依赖/功能/数据/调运/… 内部架构;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;但是, 正如小说撰写, 虽然最终是由/字/词/句/段落/章节构成了小说,&lt;ul&gt;
+&lt;li&gt;可小说真正想传达的意象, 叙述结构, &lt;/li&gt;
+&lt;li&gt;却正好超脱这些最终产物的, &lt;/li&gt;
+&lt;li&gt;而是萦绕在作者头脑内心深处的另外结构;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;当初为了和 C 初始人们提倡的结构化编辑叫劲儿,&lt;ul&gt;
+&lt;li&gt;高老爷创造的文学化编程, &lt;/li&gt;
+&lt;li&gt;就是抓住了这一更加 Bigger 的思想, &lt;ul&gt;
+&lt;li&gt;完成了专用 &lt;span class="caps"&gt;DSL&lt;/span&gt; -&amp;gt; &lt;span class="caps"&gt;WEB&lt;/span&gt; 以及对应方言 &lt;span class="caps"&gt;CWEB&lt;/span&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可以在 变量/语句/函式/类/文件/目录 之上,&lt;/li&gt;
+&lt;li&gt;描述工程师对系统真正的理解和结构;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;但是, 为什么现在 “所有人” 用的各种 &lt;span class="caps"&gt;IDE&lt;/span&gt; 都没有这种支持?&lt;ul&gt;
+&lt;li&gt;原因非常简单, 因为 &lt;span class="caps"&gt;IDE&lt;/span&gt; 所包含的工程思想, 是最平庸简单的,&lt;/li&gt;
+&lt;li&gt;是能为最大多数快速理解并使用的,&lt;/li&gt;
+&lt;li&gt;甚至于连商务人员都能理解和宣传的;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可惜, 编程是门手艺活,&lt;ul&gt;
+&lt;li&gt;每个手艺人都有自己的个性和习惯,&lt;/li&gt;
+&lt;li&gt;真正注意到自己习惯和个性的手艺人, 一定是从工具开始自行构造的;&lt;/li&gt;
+&lt;li&gt;这也是为什么 Plan9 小组, 大家使用的 &lt;span class="caps"&gt;ACM&lt;/span&gt; 是针对三键鼠标优化的,&lt;/li&gt;
+&lt;li&gt;所有功能集成在中键点击菜单中, &lt;/li&gt;
+&lt;li&gt;根本不兼容任何 &lt;span class="caps"&gt;IDE&lt;/span&gt; 的主要功能;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;即, 编程, 这么私人的事儿,&lt;ul&gt;
+&lt;li&gt;如果工具不能充分匹配或是定制匹配,&lt;/li&gt;
+&lt;li&gt;那么, 就只能被迫将自己训化为现有流行工具包含的工程思想/编程习惯/思维…&lt;/li&gt;
+&lt;li&gt;当然, 多数人将之视为理所当然, 完全无视了这过程中,&lt;/li&gt;
+&lt;li&gt;自己被主动无形中格式化掉的个性和思想;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;简单说, 商业社会中, 主流产品一定不是最优的,&lt;ul&gt;
+&lt;li&gt;毕竟主流产品一定得是利润最好的…&lt;/li&gt;
+&lt;li&gt;所以, 美军手中武器一定是最便宜的那种…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;软件行业更加是:&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;XP&lt;/span&gt; 统治&lt;span class="caps"&gt;PC&lt;/span&gt; 多年,&lt;ul&gt;
+&lt;li&gt;为什么最后还是给放弃了?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;JAVA&lt;/span&gt; 这么多人吐糟, 连创始人都退出维护团队了,&lt;ul&gt;
+&lt;li&gt;为什么, 照样是商用软件C位选择?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;但是, &lt;span class="caps"&gt;NASA&lt;/span&gt; 照样用古老的&lt;span class="caps"&gt;LISP&lt;/span&gt; ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="quo"&gt;‘&lt;/span&gt; tomz-没有褒贬: leo本身的代码就是例子 leo是吃自己的狗食的 ‘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="_4"&gt;文学化:&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="quo"&gt;‘&lt;/span&gt; 𝙰𝚣𝚎𝚛𝚒𝚕: 印象中 大妈貌似还认识 Leo 编辑器的开发者老爷子吧 ‘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;大妈🙊Zoom.Quiet: http://0.zoomquiet.top/pychina/PyCon2013China/PyConChina2013-&lt;span class="caps"&gt;EKR&lt;/span&gt;-final-v2.mp4&lt;/p&gt;
+&lt;p&gt;&amp;lt;— 是也乎 ╮(╯▽╰)╭&lt;/p&gt;
+&lt;p&gt;作者本人介绍 Leo 
+可参考理解… ‘&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@tomz-没有褒贬 leo所做的工作只是把一个文件的一些行折叠为一个代码块 所以我觉得可以用emacs的folding程序代替
+先写文档后写代码我没有尝试过 ‘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;是也乎 ╮(╯▽╰)╭&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;正好理解反了~ ‘&lt;/p&gt;
+&lt;p&gt;俺也没尝试过… 文学化编辑… 洽洽和文档无关~ ‘
+也都关联不大
+ —&amp;gt; 文学化编辑和以往结构化编辑是根本性不同的思想 —&amp;gt; 最大阻碍是思维惯性… ‘&lt;/p&gt;
+&lt;h2 id="_5"&gt;分析&lt;a class="headerlink" href="#_5" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;一定要找一个生活化的案例, 可能就是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;刚刚来到中国的西方探险家, 一定无法理解为如何用筷子叉起食物?&lt;/li&gt;
+&lt;li&gt;被 &lt;span class="caps"&gt;IDE&lt;/span&gt; 训化的绝大多数程序猿, &lt;ul&gt;
+&lt;li&gt;早已忘记了写代码时自己是怎么思考的&lt;/li&gt;
+&lt;li&gt;而是替之以 &lt;span class="caps"&gt;IDE&lt;/span&gt; 要求我们如何去写的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;这样其实, 并没什么不好&lt;ul&gt;
+&lt;li&gt;毕竟, 公司不关心, 代码是怎么生产出来的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;这就好比, 被卖猪仔到美国的华工&lt;ul&gt;
+&lt;li&gt;如果想融入当地&lt;ul&gt;
+&lt;li&gt;要作的事儿, 可能就是丢指筷子,剪指头发&lt;/li&gt;
+&lt;li&gt;永远不再吃米饭/炒菜, 在一切细节上伪装成周围的人&lt;/li&gt;
+&lt;li&gt;直到最后从思想上也同化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;才可能被美国人视作长的实在丑的人&lt;ul&gt;
+&lt;li&gt;而不是吃死老鼠的黄种鸡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;其实, 类似 Leo 这样设计思想和 &lt;span class="caps"&gt;IDE&lt;/span&gt; 完全不同的编辑环境非常多:&lt;ul&gt;
+&lt;li&gt;神之编辑器 ~ Emacs&lt;/li&gt;
+&lt;li&gt;编辑器之神 ~ Vim&lt;/li&gt;
+&lt;li&gt;行编辑器 ~ le&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;那么多尝试吧, 找到自己最喜欢的那种…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_6"&gt;回顾&lt;a class="headerlink" href="#_6" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实, 俺当年也用了将近一年, 才慢慢明白过来的:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其实, 和其它全新技能一样,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先熟悉工具内置功能&lt;/li&gt;
+&lt;li&gt;然后, 结合具体任务&lt;/li&gt;
+&lt;li&gt;完成基本行为的肌肉记忆后&lt;/li&gt;
+&lt;li&gt;才可能进一步完成以往用 &lt;span class="caps"&gt;IDE&lt;/span&gt; 才能完成任务的文学化再流程…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;很多时候, 和 &lt;span class="caps"&gt;IDE&lt;/span&gt; 的感觉有点儿象:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手工绘画和打印槐打印一张图片的差别&lt;/li&gt;
+&lt;li&gt;Leo 是响应自然的思考和尝试过程&lt;ul&gt;
+&lt;li&gt;将最终代码/文档的形成从目标形式中抽离了&lt;/li&gt;
+&lt;li&gt;以提纲为主要结构&lt;/li&gt;
+&lt;li&gt;每次时应对 node 中非常小的几行内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;不象 &lt;span class="caps"&gt;IDE&lt;/span&gt; 无时不刻在整体分析/提醒你应该作什么&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;以往也用自己的方式尝试解释过:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://s5.zoomquiet.top/060730-abtLeo/index.html"&gt;啄木鸟/&lt;span class="caps"&gt;CPUG&lt;/span&gt; 会课06年度第九次 (built by S5)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://s5.zoomquiet.top/131101-leo-china/index.html"&gt;Leo ~ 文学式编程体验&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://s5.zoomquiet.top/131113-MyTools/index.html"&gt;我的工具箱&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;相关录音:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://org.up.zoomquiet.top/ztapes/wav4zoomq/060730-cpug_abt-leo.ogg"&gt;060730-cpug_abt-leo.ogg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://org.up.zoomquiet.top/ztapes/wav4zoomq/100716-Leo-LiterateProgramming/"&gt;100716-Leo-LiterateProgramming/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://org.up.zoomquiet.top/ztapes/wav4zoomq/100930-snda-mytools/"&gt;100930-snda-mytools/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;</content><category term="python"></category><category term="howto"></category><category term="leo"></category><category term="doc"></category></entry><entry><title>修复 subl3 包安装</title><link href="https://blog.zoomquiet.io/fix-subl-package-installation.html" rel="alternate"></link><published>2019-04-03T12:12:00+08:00</published><updated>2019-04-03T12:12:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-04-03:/fix-subl-package-installation.html</id><summary type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;突然: &lt;code&gt;cmd+shift+P&lt;/code&gt; 选择 &lt;code&gt;Package Control: install package&lt;/code&gt; 时,一直:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -152,7 +537,7 @@
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Google+ 帐号将于 2019 年 4 月 2 日关停。下载 Google+ 内容可能需要一些时间，因此请在 2019 年 3 月 31 日之前开始下载。&lt;/p&gt;
+&lt;p&gt;Google+ 帐号将于 2019 年 4 月 2 日关停. 下载 Google+ 内容可能需要一些时间,因此请在 2019 年 3 月 31 日之前开始下载. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
@@ -174,7 +559,7 @@
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Google+ 帐号将于 2019 年 4 月 2 日关停。下载 Google+ 内容可能需要一些时间，因此请在 2019 年 3 月 31 日之前开始下载。&lt;/p&gt;
+&lt;p&gt;Google+ 帐号将于 2019 年 4 月 2 日关停. 下载 Google+ 内容可能需要一些时间,因此请在 2019 年 3 月 31 日之前开始下载. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
@@ -3895,40 +4280,40 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;li&gt;140505 快速简述完成&lt;/li&gt;
 &lt;li&gt;140110 起意,总结&lt;/li&gt;
 &lt;/ul&gt;</content><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>再见了 Python</title><link href="https://blog.zoomquiet.io/saying-ggodby-python-zh.html" rel="alternate"></link><published>2015-01-10T00:00:00+08:00</published><updated>2015-01-10T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2015-01-10:/saying-ggodby-python-zh.html</id><summary type="html">&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This post is long overdue; this isn’t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
+&lt;p&gt;This post is long overdue; this isn&amp;#8217;t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
 &lt;p&gt;While …&lt;/p&gt;</summary><content type="html">&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This post is long overdue; this isn’t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
-&lt;p&gt;While I had moved on from Python years ago, I felt a certain attachment to it well past then, not quite admitting to myself that I wasn’t coming back. When my proposal for PyCon 2013 was rejected I was frustrated (it was going to be a fun talk!) but for some reason that made me fully realized that I wasn’t part of the Python community&amp;nbsp;anymore.&lt;/p&gt;
-&lt;p&gt;Python was the first — and I sometimes wonder if the only — programming community I was part of. Coming to Python was a conscious choice. In college I was interested in Scheme and Smalltalk. High-minded languages with interesting ideas, but hard to find practical uses. Scheme was always too underserved by its libraries and sparse academic community. In contrast Smalltalk was productive — it was built by and for people who loved to build things. (More credit here should probably go to Dan Ingalls than Alan Kay — I can sense in Dan Ingalls’s work a real passion for making things, and a pure but unproductive language would not have satisfied him.) But Smalltalk was and is a world of its own. It was culturally and technically pre-internet, pre-open-source, pre-online-community. And despite all the great things about the Smalltalk environment and language it couldn’t fulfill these then-new potentials, even as it tried to adapt. (I wrote a couple posts about this, intended as a sort of sympathetic explanation of why I couldn’t stick with Smalltalk: Where Smalltalk Went Wrong and a&amp;nbsp;followup.)&lt;/p&gt;
+&lt;p&gt;This post is long overdue; this isn&amp;#8217;t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
+&lt;p&gt;While I had moved on from Python years ago, I felt a certain attachment to it well past then, not quite admitting to myself that I wasn&amp;#8217;t coming back. When my proposal for PyCon 2013 was rejected I was frustrated (it was going to be a fun talk!) but for some reason that made me fully realized that I wasn&amp;#8217;t part of the Python community&amp;nbsp;anymore.&lt;/p&gt;
+&lt;p&gt;Python was the first — and I sometimes wonder if the only — programming community I was part of. Coming to Python was a conscious choice. In college I was interested in Scheme and Smalltalk. High-minded languages with interesting ideas, but hard to find practical uses. Scheme was always too underserved by its libraries and sparse academic community. In contrast Smalltalk was productive — it was built by and for people who loved to build things. (More credit here should probably go to Dan Ingalls than Alan Kay — I can sense in Dan Ingalls&amp;#8217;s work a real passion for making things, and a pure but unproductive language would not have satisfied him.) But Smalltalk was and is a world of its own. It was culturally and technically pre-internet, pre-open-source, pre-online-community. And despite all the great things about the Smalltalk environment and language it couldn&amp;#8217;t fulfill these then-new potentials, even as it tried to adapt. (I wrote a couple posts about this, intended as a sort of sympathetic explanation of why I couldn&amp;#8217;t stick with Smalltalk: Where Smalltalk Went Wrong and a&amp;nbsp;followup.)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Daniel_Henry_Holmes_Ingalls,_Jr."&gt;Dan&amp;nbsp;Ingalls&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Alan_Kay"&gt;Alan&amp;nbsp;Kay&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.ianbicking.org/where-smalltalk-went-wrong.html"&gt;Where Smalltalk Went&amp;nbsp;Wrong&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.ianbicking.org/where-smalltalk-went-wrong-2.html"&gt;a&amp;nbsp;followup&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;At the end of my college career (1999ish) I consciously looked for a new home. I flirted with Perl, C, but knew they weren’t for me. Somewhere along the way I came upon Python, and it was good enough that I didn’t look for anything better. I can’t say I fell in love with Python like I had with Scheme and Smalltalk — Scheme was like an opening up of the world after going far beyond what anyone should ask of &lt;span class="caps"&gt;GW&lt;/span&gt;-&lt;span class="caps"&gt;BASIC&lt;/span&gt;, and Squeak/Smalltalk was a deep mysterious world, like coming upon the ruins of an ancient and advanced civilization. Python in comparison was practical — but I wasn’t in the mood at that time to discover, I wanted to&amp;nbsp;build.&lt;/p&gt;
+&lt;p&gt;At the end of my college career (1999ish) I consciously looked for a new home. I flirted with Perl, C, but knew they weren&amp;#8217;t for me. Somewhere along the way I came upon Python, and it was good enough that I didn&amp;#8217;t look for anything better. I can&amp;#8217;t say I fell in love with Python like I had with Scheme and Smalltalk — Scheme was like an opening up of the world after going far beyond what anyone should ask of &lt;span class="caps"&gt;GW&lt;/span&gt;-&lt;span class="caps"&gt;BASIC&lt;/span&gt;, and Squeak/Smalltalk was a deep mysterious world, like coming upon the ruins of an ancient and advanced civilization. Python in comparison was practical — but I wasn&amp;#8217;t in the mood at that time to discover, I wanted to&amp;nbsp;build.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/GW-BASIC"&gt;&lt;span class="caps"&gt;GW&lt;/span&gt; - &lt;span class="caps"&gt;BASIC&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And I built a lot of things in Python. I was doing workaday web programming and my enthusiasm went more towards building tools to build stuff than in the building itself. I did build some cool products in those days, not just libraries, but for some reason it’s only the smaller units that I was able to push out. And I found a community in&amp;nbsp;Python.&lt;/p&gt;
+&lt;p&gt;And I built a lot of things in Python. I was doing workaday web programming and my enthusiasm went more towards building tools to build stuff than in the building itself. I did build some cool products in those days, not just libraries, but for some reason it&amp;#8217;s only the smaller units that I was able to push out. And I found a community in&amp;nbsp;Python.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.ianbicking.org/projects.html"&gt;built a lot of things in&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And I built. Back in the days I contributed to Webware, what felt like a completely different generation of web development in Python than today. I wrote SQLObject, my first foray into a oh-shit-people-are-using-this-I’m-not-sure-how-I-feel-about-that library. But SQLObject explored a lot of metaprogramming concepts that were quite novel in the Python world at that time. At the same time maintaining it felt like a terrible burden. It took me far too long to resolve that, and only once interest had died down (in no small part due to my lack of attention) did I hand it over to Oleg who has been a far more steady hand. This would be a pattern I would unfortunately repeat. But if SQLObject helped the next generation be better that’s good enough for&amp;nbsp;me.&lt;/p&gt;
+&lt;p&gt;And I built. Back in the days I contributed to Webware, what felt like a completely different generation of web development in Python than today. I wrote SQLObject, my first foray into a oh-shit-people-are-using-this-I&amp;#8217;m-not-sure-how-I-feel-about-that library. But SQLObject explored a lot of metaprogramming concepts that were quite novel in the Python world at that time. At the same time maintaining it felt like a terrible burden. It took me far too long to resolve that, and only once interest had died down (in no small part due to my lack of attention) did I hand it over to Oleg who has been a far more steady hand. This would be a pattern I would unfortunately repeat. But if SQLObject helped the next generation be better that&amp;#8217;s good enough for&amp;nbsp;me.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.webwareforpython.org/"&gt;Webware&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://sqlobject.org/"&gt;SQLObject&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://phdru.name/"&gt;Oleg&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.sqlalchemy.org/"&gt;next&amp;nbsp;generation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Later came &lt;span class="caps"&gt;WSGI&lt;/span&gt; which excited me with its subtly functional basis. I built a whole web framework toolkit (or a framework for building web frameworks?) in Paste. Few people really understood what I was trying to do with Paste — at times including me. Some people like Ben Bangert were able to see the principles underneath the code, and get them out into the world in the kind of usable state that I intended to enable. (And along the way I sometimes felt like I was doing the same for &lt;span class="caps"&gt;PJE&lt;/span&gt;.) Python web frameworks were a mess back then; ultimately reaching for the crown using a monolithic approach was a more successful technique than trying to build bridges as I attempted with Paste. I’m still not sure what lesson to take from that. Not a general lesson, but more understanding the landscape. And understanding what you can bring to a problem, and who you can bring with. I feel like I’m only now really understanding the importance of vision combined with a diverse group of skills and perspectives, and I have even more to learn about how to actually assemble and coordinate the right group of people in the right environment to&amp;nbsp;succeed.&lt;/p&gt;
+&lt;p&gt;Later came &lt;span class="caps"&gt;WSGI&lt;/span&gt; which excited me with its subtly functional basis. I built a whole web framework toolkit (or a framework for building web frameworks?) in Paste. Few people really understood what I was trying to do with Paste — at times including me. Some people like Ben Bangert were able to see the principles underneath the code, and get them out into the world in the kind of usable state that I intended to enable. (And along the way I sometimes felt like I was doing the same for &lt;span class="caps"&gt;PJE&lt;/span&gt;.) Python web frameworks were a mess back then; ultimately reaching for the crown using a monolithic approach was a more successful technique than trying to build bridges as I attempted with Paste. I&amp;#8217;m still not sure what lesson to take from that. Not a general lesson, but more understanding the landscape. And understanding what you can bring to a problem, and who you can bring with. I feel like I&amp;#8217;m only now really understanding the importance of vision combined with a diverse group of skills and perspectives, and I have even more to learn about how to actually assemble and coordinate the right group of people in the right environment to&amp;nbsp;succeed.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://wsgi.readthedocs.org/"&gt;&lt;span class="caps"&gt;WSGI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://pythonpaste.org/"&gt;Paste&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://groovie.org/"&gt;Ben&amp;nbsp;Bangert&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.djangoproject.com/"&gt;reaching for the&amp;nbsp;crown&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Somewhere around here I feel like I reached my 10,000 hours of Python coding. I wrote WebOb, taking the lessons of Paste and a better intuition for library design. I still think it’s the best mapping of &lt;span class="caps"&gt;HTTP&lt;/span&gt; to Python. Other libraries include more aspects of web development in their scope, or have better documentation, and more users, but when viewed with a particular lens I’m still very proud of WebOb. And it’s been an important building block in a lot of people’s explorations into building a web framework. Other libraries from this period are lxml.html, smaller things like WebTest, ScriptTest, MiniMock, Tempita, perhaps the over-ambition (or just mis-ambition) of Deliverance. That period felt like a clearing out of my system, unloading a bunch of&amp;nbsp;ideas.&lt;/p&gt;
+&lt;p&gt;Somewhere around here I feel like I reached my 10,000 hours of Python coding. I wrote WebOb, taking the lessons of Paste and a better intuition for library design. I still think it&amp;#8217;s the best mapping of &lt;span class="caps"&gt;HTTP&lt;/span&gt; to Python. Other libraries include more aspects of web development in their scope, or have better documentation, and more users, but when viewed with a particular lens I&amp;#8217;m still very proud of WebOb. And it&amp;#8217;s been an important building block in a lot of people&amp;#8217;s explorations into building a web framework. Other libraries from this period are lxml.html, smaller things like WebTest, ScriptTest, MiniMock, Tempita, perhaps the over-ambition (or just mis-ambition) of Deliverance. That period felt like a clearing out of my system, unloading a bunch of&amp;nbsp;ideas.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://webob.org/"&gt;WebOb&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://docs.webob.org/en/latest/do-it-yourself.html"&gt;building a web&amp;nbsp;framework&lt;/a&gt;&lt;/li&gt;
@@ -3939,40 +4324,40 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;li&gt;&lt;a href="http://pythonpaste.org/tempita/"&gt;Tempita&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.coactivate.org/projects/deliverance/introduction"&gt;Deliverance&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;But for whatever reason my most successful tools were virtualenv and pip. These were never my greatest passions, or even close. They were about: (a) fixing personal annoyances in deployment (virtualenv), and (b) getting people to stop fucking whining about Setuptools and easy_install (pip). I’m not sure whether I blame the uneasy success of these tools on broad appeal, or that they are in a sense user-visible tools and not libraries, or that I didn’t like doing them because no one liked doing them and so there was a vacuum waiting to be&amp;nbsp;filled.&lt;/p&gt;
+&lt;p&gt;But for whatever reason my most successful tools were virtualenv and pip. These were never my greatest passions, or even close. They were about: (a) fixing personal annoyances in deployment (virtualenv), and (b) getting people to stop fucking whining about Setuptools and easy_install (pip). I&amp;#8217;m not sure whether I blame the uneasy success of these tools on broad appeal, or that they are in a sense user-visible tools and not libraries, or that I didn&amp;#8217;t like doing them because no one liked doing them and so there was a vacuum waiting to be&amp;nbsp;filled.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.virtualenv.org/"&gt;virtualenv&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.pip-installer.org/"&gt;pip&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And then my last project, Silver Lining. It was early on in the devops revolution, an attempt to think about what a generic container for web applications might look like. It was in a sense going deeper down the hole of virtualenv and pip, but with an aim to build a full product and not just a set of eclectic tools. No one cared. And I only cared a little — I cared because it was completing some ideas I’d long had about deployment, because for a certain kind of web application development it felt nimble and reliable, because it removed or automated tasks I didn’t like to do. But I didn’t care, no more than I cared about virtualenv or pip. I’d gone down a path that was about code and technical design, but if I stepped back it was&amp;nbsp;unexciting.&lt;/p&gt;
+&lt;p&gt;And then my last project, Silver Lining. It was early on in the devops revolution, an attempt to think about what a generic container for web applications might look like. It was in a sense going deeper down the hole of virtualenv and pip, but with an aim to build a full product and not just a set of eclectic tools. No one cared. And I only cared a little — I cared because it was completing some ideas I&amp;#8217;d long had about deployment, because for a certain kind of web application development it felt nimble and reliable, because it removed or automated tasks I didn&amp;#8217;t like to do. But I didn&amp;#8217;t care, no more than I cared about virtualenv or pip. I&amp;#8217;d gone down a path that was about code and technical design, but if I stepped back it was&amp;nbsp;unexciting.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bitbucket.org/ianb/silverlining/src"&gt;Silver&amp;nbsp;Lining&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And when I did step back there wasn’t anything in Python that excited me. Python was doing great, my interest had nothing to jumping on or off bandwagons. Python is doing great — better than ever (minor bumps with versions aside). But I think in my mind I’d always imagined I could build up just the right toolset, and using that toolset create the product I actually wanted to create — what exactly that product was, I don’t know, but with the right tools I imagined I could move fast enough and confidently enough to find&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;And when I did step back there wasn&amp;#8217;t anything in Python that excited me. Python was doing great, my interest had nothing to jumping on or off bandwagons. Python is doing great — better than ever (minor bumps with versions aside). But I think in my mind I&amp;#8217;d always imagined I could build up just the right toolset, and using that toolset create the product I actually wanted to create — what exactly that product was, I don&amp;#8217;t know, but with the right tools I imagined I could move fast enough and confidently enough to find&amp;nbsp;it.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://plus.google.com/+IanBicking/posts/iEVXdcfXkz7"&gt;minor bumps with versions&amp;nbsp;aside&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Sometimes when I’m feeling particularly excited about an idea, like really excited, I have to take a break. I need to calm down. Try to wrap my head around the ideas, because I know if I push forward directly that I’ll just muddle things up and feel disappointed. No, I don’t know that is true: maybe I don’t want to have to confront, in that moment, that the idea is not as cool as I think it is, or as possible as I think it is. But often I do step back into the problem, with ideas that are more mature for having thought more deeply about them. In a sense I think creating tools and libraries was a similar process: I felt too excited about creating something great, because I worried I’d muddle everything up, or afraid I just couldn’t pull it off, and so I stepped away and would work on&amp;nbsp;tools.&lt;/p&gt;
-&lt;p&gt;I always directed my attention to the web, even if I got bogged down in the server. Somehow I skipped native GUIs, even as a user. But pure data processing without consideration for what you do with the data felt unexciting. And ops — that’s just the worst. I was, and am, a true believer in Free Software; and I was, and am, a true believer in the web. That is, I don’t see either as simply a means to an ends. But not for the same reasons, and I can believe in a web that isn’t open source, and open source that isn’t for the web. And yet writing it down I realize I don’t care about open source that isn’t for the&amp;nbsp;web.&lt;/p&gt;
-&lt;p&gt;When I stepped back Python no longer seemed relevant to the web, at least not the part of the web that interested me. The tools I had built were no longer relevant either, they were not the tools with which I could realize my ambitions. The database-backed website, or the dynamic-&lt;span class="caps"&gt;HTTP&lt;/span&gt;-based web application, templates and deployments, anything you’d call “&lt;span class="caps"&gt;REST&lt;/span&gt;” — none of it seemed like the future, and whatever this vague thing was that I’d been looking for, I wasn’t going to find it&amp;nbsp;there.&lt;/p&gt;
-&lt;p&gt;This wasn’t an actual revelation, I’m constructing it in retrospect. If you’d asked me I would have agreed with this notion even years earlier, and it’s not like I came up with some unique idea, if anything I would call it self-evident, don’t we all know this is where the world is going? And so I started to look towards Javascript and the browser and the &lt;span class="caps"&gt;DOM&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Sometimes when I&amp;#8217;m feeling particularly excited about an idea, like really excited, I have to take a break. I need to calm down. Try to wrap my head around the ideas, because I know if I push forward directly that I&amp;#8217;ll just muddle things up and feel disappointed. No, I don&amp;#8217;t know that is true: maybe I don&amp;#8217;t want to have to confront, in that moment, that the idea is not as cool as I think it is, or as possible as I think it is. But often I do step back into the problem, with ideas that are more mature for having thought more deeply about them. In a sense I think creating tools and libraries was a similar process: I felt too excited about creating something great, because I worried I&amp;#8217;d muddle everything up, or afraid I just couldn&amp;#8217;t pull it off, and so I stepped away and would work on&amp;nbsp;tools.&lt;/p&gt;
+&lt;p&gt;I always directed my attention to the web, even if I got bogged down in the server. Somehow I skipped native GUIs, even as a user. But pure data processing without consideration for what you do with the data felt unexciting. And ops — that&amp;#8217;s just the worst. I was, and am, a true believer in Free Software; and I was, and am, a true believer in the web. That is, I don&amp;#8217;t see either as simply a means to an ends. But not for the same reasons, and I can believe in a web that isn&amp;#8217;t open source, and open source that isn&amp;#8217;t for the web. And yet writing it down I realize I don&amp;#8217;t care about open source that isn&amp;#8217;t for the&amp;nbsp;web.&lt;/p&gt;
+&lt;p&gt;When I stepped back Python no longer seemed relevant to the web, at least not the part of the web that interested me. The tools I had built were no longer relevant either, they were not the tools with which I could realize my ambitions. The database-backed website, or the dynamic-&lt;span class="caps"&gt;HTTP&lt;/span&gt;-based web application, templates and deployments, anything you&amp;#8217;d call &amp;#8220;&lt;span class="caps"&gt;REST&lt;/span&gt;&amp;#8221; — none of it seemed like the future, and whatever this vague thing was that I&amp;#8217;d been looking for, I wasn&amp;#8217;t going to find it&amp;nbsp;there.&lt;/p&gt;
+&lt;p&gt;This wasn&amp;#8217;t an actual revelation, I&amp;#8217;m constructing it in retrospect. If you&amp;#8217;d asked me I would have agreed with this notion even years earlier, and it&amp;#8217;s not like I came up with some unique idea, if anything I would call it self-evident, don&amp;#8217;t we all know this is where the world is going? And so I started to look towards Javascript and the browser and the &lt;span class="caps"&gt;DOM&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Somewhat before this I also joined Mozilla. But it would be backwards to say that Mozilla induced this change in perspective, that it tempted me away from Python. In fact I would have had a much easier time of it if I had just stuck with doing Python backend stuff at&amp;nbsp;Mozilla.&lt;/p&gt;
-&lt;p&gt;The last few years of transition have been a struggle. With Python and the server I knew what I was doing. I was good at it, I felt competent. I could construct an opinion with confidence about all kinds of design questions. I was respected and my opinion would be listened to. I’d put in my 10,000 hours, I had achieved&amp;nbsp;mastery.&lt;/p&gt;
-&lt;p&gt;Moving to Javascript none of this was true, and most of it still isn’t true. It might be easier to pull off this change if I was doing web development, surrounded with people making similar transitions, a little fish in the little pond of whatever group I was working with. But Mozilla is not that kind of environment. Which is okay — if I had felt confident it would only be because there was no one to correct&amp;nbsp;me.&lt;/p&gt;
-&lt;p&gt;It’s oddly common to see people talk about how a programmer can pick up something new in the matter of a few days or months. To find programmers that consider all that knowledge transferable (for instance). I don’t know what to make of it — my less forgiving self thinks these people have never known what real mastery is. I don’t think it takes another 10,000 hours to get mastery in a new language and environment… but it definitely takes some thousands of hours, some years of hard work. I only now feel like I’m getting&amp;nbsp;close.&lt;/p&gt;
+&lt;p&gt;The last few years of transition have been a struggle. With Python and the server I knew what I was doing. I was good at it, I felt competent. I could construct an opinion with confidence about all kinds of design questions. I was respected and my opinion would be listened to. I&amp;#8217;d put in my 10,000 hours, I had achieved&amp;nbsp;mastery.&lt;/p&gt;
+&lt;p&gt;Moving to Javascript none of this was true, and most of it still isn&amp;#8217;t true. It might be easier to pull off this change if I was doing web development, surrounded with people making similar transitions, a little fish in the little pond of whatever group I was working with. But Mozilla is not that kind of environment. Which is okay — if I had felt confident it would only be because there was no one to correct&amp;nbsp;me.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s oddly common to see people talk about how a programmer can pick up something new in the matter of a few days or months. To find programmers that consider all that knowledge transferable (for instance). I don&amp;#8217;t know what to make of it — my less forgiving self thinks these people have never known what real mastery is. I don&amp;#8217;t think it takes another 10,000 hours to get mastery in a new language and environment&amp;#8230;  but it definitely takes some thousands of hours, some years of hard work. I only now feel like I&amp;#8217;m getting&amp;nbsp;close.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=7204515"&gt;for&amp;nbsp;instance&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Maybe it’s my perspective on what mastery is. Deciding to do something and then doing it is good. It is not mastery. You have to pick the right problem to solve. You have to pick the right way to solve it. You need to know when to revise that plan, and understand the constraints that inform that revision. You need both large scale and small scale intuitions. And you need to be good enough at all the details of programming in that environment that you don’t get overwhelmed with the “easy” stuff, so you have mental energy to spare on the big stuff. The jump from Python to Javascript isn’t that big, the languages have a very similar shape. And the browser was already the environment focused on. And yet redeveloping my intuition for this new environment has taken&amp;nbsp;time.&lt;/p&gt;
-&lt;p&gt;Sadly I’m not going to get back where I was, because Javascript is not Python. If there’s a Javascript community I haven’t found it, or it’s at least not a single entity. There is no community that created Javascript like the Python community created Python. Python comes from the internet in a way Javascript does not; Javascript was built for the internet, but Python was built on the internet. And I do miss the Python community, you’re good&amp;nbsp;people.&lt;/p&gt;
-&lt;p&gt;But also whatever language partisanship I had is gone, and won’t come back in the guise of a new favorite language. This shouldn’t be confused with a disinterest in language. I still get as annoyed as ever by “use the right tool for the job” — the bland truism meant to shut down critical discussion and engagement with the tasks and choices in software engineering, replacing it with a weak passionless technical&amp;nbsp;fatalism.&lt;/p&gt;
-&lt;p&gt;I suppose it is the platform that I am drawn to now before language. And the browser seems like the most interesting platform, not because it’s novel (though it is, it’s a runtime like few others), but because of how concrete it is, and of course how relevant it is to… anything. And the browser is no longer just the servant of a server, I prefer now to think of the browser as an independent agent, connecting to services instead of servers. Obviously that doesn’t describe a great number of running web sites, but it’s the model I see for the future, and a better perspective for understanding future&amp;nbsp;architectures.&lt;/p&gt;
-&lt;p&gt;Still this only addresses which direction I’m looking towards, I still have to walk the path. I don’t want to get caught up in the weeds again, building tools for something I never manage to make. Right now I think I’m on to something in the area of collaboration, first with TogetherJS and now I’m thinking bigger with a new experiment. But while I feel like I’ve reached some competence in executing on these projects, programming is only one piece of bringing forward a larger vision. I still have a lot of learning to do, skills for which I haven’t put in the necessary time. How to recruit support, how to manage the project, how to negotiate between feasibility and user value, how to negotiate compromises in strategy and design. And collaboration itself is a whole domain of expertise. I’ve learned a lot, I can do things, but I am definitely not yet experienced enough to choose to do the right thing in these areas. And at this moment I’m worried I won’t have the room to learn these things, it feels like time is running out just when I’m pulling stuff&amp;nbsp;together.&lt;/p&gt;
+&lt;p&gt;Maybe it&amp;#8217;s my perspective on what mastery is. Deciding to do something and then doing it is good. It is not mastery. You have to pick the right problem to solve. You have to pick the right way to solve it. You need to know when to revise that plan, and understand the constraints that inform that revision. You need both large scale and small scale intuitions. And you need to be good enough at all the details of programming in that environment that you don&amp;#8217;t get overwhelmed with the &amp;#8220;easy&amp;#8221; stuff, so you have mental energy to spare on the big stuff. The jump from Python to Javascript isn&amp;#8217;t that big, the languages have a very similar shape. And the browser was already the environment focused on. And yet redeveloping my intuition for this new environment has taken&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;Sadly I&amp;#8217;m not going to get back where I was, because Javascript is not Python. If there&amp;#8217;s a Javascript community I haven&amp;#8217;t found it, or it&amp;#8217;s at least not a single entity. There is no community that created Javascript like the Python community created Python. Python comes from the internet in a way Javascript does not; Javascript was built for the internet, but Python was built on the internet. And I do miss the Python community, you&amp;#8217;re good&amp;nbsp;people.&lt;/p&gt;
+&lt;p&gt;But also whatever language partisanship I had is gone, and won&amp;#8217;t come back in the guise of a new favorite language. This shouldn&amp;#8217;t be confused with a disinterest in language. I still get as annoyed as ever by &amp;#8220;use the right tool for the job&amp;#8221; — the bland truism meant to shut down critical discussion and engagement with the tasks and choices in software engineering, replacing it with a weak passionless technical&amp;nbsp;fatalism.&lt;/p&gt;
+&lt;p&gt;I suppose it is the platform that I am drawn to now before language. And the browser seems like the most interesting platform, not because it&amp;#8217;s novel (though it is, it&amp;#8217;s a runtime like few others), but because of how concrete it is, and of course how relevant it is to&amp;#8230;  anything. And the browser is no longer just the servant of a server, I prefer now to think of the browser as an independent agent, connecting to services instead of servers. Obviously that doesn&amp;#8217;t describe a great number of running web sites, but it&amp;#8217;s the model I see for the future, and a better perspective for understanding future&amp;nbsp;architectures.&lt;/p&gt;
+&lt;p&gt;Still this only addresses which direction I&amp;#8217;m looking towards, I still have to walk the path. I don&amp;#8217;t want to get caught up in the weeds again, building tools for something I never manage to make. Right now I think I&amp;#8217;m on to something in the area of collaboration, first with TogetherJS and now I&amp;#8217;m thinking bigger with a new experiment. But while I feel like I&amp;#8217;ve reached some competence in executing on these projects, programming is only one piece of bringing forward a larger vision. I still have a lot of learning to do, skills for which I haven&amp;#8217;t put in the necessary time. How to recruit support, how to manage the project, how to negotiate between feasibility and user value, how to negotiate compromises in strategy and design. And collaboration itself is a whole domain of expertise. I&amp;#8217;ve learned a lot, I can do things, but I am definitely not yet experienced enough to choose to do the right thing in these areas. And at this moment I&amp;#8217;m worried I won&amp;#8217;t have the room to learn these things, it feels like time is running out just when I&amp;#8217;m pulling stuff&amp;nbsp;together.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://togetherjs.com/"&gt;TogetherJS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://github.com/mozilla/hotdish"&gt;new&amp;nbsp;experiment&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Anyway, that’s where I am now. No longer a language partisan, unclear of what community I am even participating in, I am less sure how to identify and self-identify myself. How do I describe myself now? Even as I find my technical footing I am still adrift. And so it’s hard to say goodbye. So instead I’ll say, Pythonistas: until we meet again. Maybe I’ll meet some of you over&amp;nbsp;here.&lt;/p&gt;
+&lt;p&gt;Anyway, that&amp;#8217;s where I am now. No longer a language partisan, unclear of what community I am even participating in, I am less sure how to identify and self-identify myself. How do I describe myself now? Even as I find my technical footing I am still adrift. And so it&amp;#8217;s hard to say goodbye. So instead I&amp;#8217;ll say, Pythonistas: until we meet again. Maybe I&amp;#8217;ll meet some of you over&amp;nbsp;here.&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;161201 是也乎,(￣▽￣)&lt;ul&gt;
@@ -4460,7 +4845,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;160322 @&lt;span class="caps"&gt;TANG&lt;/span&gt; ZhiXiong 提醒:&lt;ul&gt;
-&lt;li&gt;其实放在 GitHub，然后分享一个 Jupyter&amp;nbsp;链接是最好的&lt;/li&gt;
+&lt;li&gt;其实放在 GitHub,然后分享一个 Jupyter&amp;nbsp;链接是最好的&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;是也乎&lt;/code&gt; 这的确是 2015-7 之后更好的解决方案了&amp;nbsp;;-)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -5377,20 +5762,20 @@ In particular, I suggest demonstrating the following change, and seeing if it he
 &lt;ul&gt;
 &lt;li&gt;1406?? &lt;/li&gt;
 &lt;li&gt;140728 偶遇抄转&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Brett"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>为毛俺不担心所谓Python用户流失</title><link href="https://blog.zoomquiet.io/why-i-dont-worry-about-pythons-popularity.html" rel="alternate"></link><published>2014-07-11T00:00:00+08:00</published><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:/why-i-dont-worry-about-pythons-popularity.html</id><summary type="html">&lt;h2 id="why-i-dont-worry-about-python-losing-users"&gt;Why I don’t worry about Python losing users&lt;a class="headerlink" href="#why-i-dont-worry-about-python-losing-users" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I just had a need to read two files that were line-delimited lists of domains, consolidate the data, and then output the domains sorted and all lowercased to a new file. It took me 10 lines of Python code and worked …&lt;/p&gt;</summary><content type="html">&lt;h2 id="why-i-dont-worry-about-python-losing-users"&gt;Why I don’t worry about Python losing users&lt;a class="headerlink" href="#why-i-dont-worry-about-python-losing-users" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="Brett"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>为毛俺不担心所谓Python用户流失</title><link href="https://blog.zoomquiet.io/why-i-dont-worry-about-pythons-popularity.html" rel="alternate"></link><published>2014-07-11T00:00:00+08:00</published><updated>2014-07-11T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-07-11:/why-i-dont-worry-about-pythons-popularity.html</id><summary type="html">&lt;h2 id="why-i-dont-worry-about-python-losing-users"&gt;Why I don&amp;#8217;t worry about Python losing users&lt;a class="headerlink" href="#why-i-dont-worry-about-python-losing-users" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I just had a need to read two files that were line-delimited lists of domains, consolidate the data, and then output the domains sorted and all lowercased to a new file. It took me 10 lines of Python code and worked …&lt;/p&gt;</summary><content type="html">&lt;h2 id="why-i-dont-worry-about-python-losing-users"&gt;Why I don&amp;#8217;t worry about Python losing users&lt;a class="headerlink" href="#why-i-dont-worry-about-python-losing-users" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I just had a need to read two files that were line-delimited lists of domains, consolidate the data, and then output the domains sorted and all lowercased to a new file. It took me 10 lines of Python code and worked perfectly on the first&amp;nbsp;try.&lt;/p&gt;
 &lt;p&gt;Out of curiosity and to make sure I keep learning Go (my team at work uses it whenever possible), I decided to re-implement the same functionality. That took 
 &lt;a href="https://gist.github.com/brettcannon/a2a37cc5aadbc91c02ad"&gt;56 lines in Go&lt;/a&gt;
 . When I went back and refactored the Python code to match the abstractions I used in the Go code it grew to 
 &lt;a href="https://gist.github.com/brettcannon/82c4fe68bac30f4ed653"&gt;17 lines&lt;/a&gt;&amp;nbsp;.&lt;/p&gt;
-&lt;p&gt;And this sort of thing is exactly why I do not worry about Python’s popularity (at least in terms of users). While languages like Go compete with Python on a performance:productivity comparison, when you compare Python to almost any other language based purely on productivity it trounces the competition. And this shouldn’t shock anyone when you think about the history of Python. The language was initially created to script 
+&lt;p&gt;And this sort of thing is exactly why I do not worry about Python&amp;#8217;s popularity (at least in terms of users). While languages like Go compete with Python on a performance:productivity comparison, when you compare Python to almost any other language based purely on productivity it trounces the competition. And this shouldn&amp;#8217;t shock anyone when you think about the history of Python. The language was initially created to script 
 &lt;a href="http://en.wikipedia.org/wiki/Amoeba_(operating_system)"&gt;a distributed operating system&lt;/a&gt;
-. This is why in the ‘90s and early 2000s the comparison was always Python vs. Perl and then Python vs. Ruby. Only in the 2000s and later did Python get compared to Java or very recently to Go or&amp;nbsp;JavaScript.&lt;/p&gt;
+. This is why in the &amp;#8216;90s and early 2000s the comparison was always Python vs. Perl and then Python vs. Ruby. Only in the 2000s and later did Python get compared to Java or very recently to Go or&amp;nbsp;JavaScript.&lt;/p&gt;
 &lt;p&gt;And this productivity view of Python also ties into education. With 
 &lt;a href="http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext"&gt;Python now the most popular intro teaching language at the top &lt;span class="caps"&gt;U.S.&lt;/span&gt; universities&lt;/a&gt;
-, many people are learning how to program using Python. But exposure early on to a language does not guarantee future usage by someone; I for one did not use Scheme after my intro course. But because Python is such a productive language, the language becomes a staple in one’s toolkit of programming. If people learn Python first, then when they need to write a quick script like I did today they will most likely reach for Python than Java or Go or some other language they may be using for their&amp;nbsp;work.&lt;/p&gt;
-&lt;p&gt;All of this is why I don’t worry about Python’s demise due to lack of users. People might switch to Go at work because the performance:productivity ratio is very good for their project or team. Or maybe people got frustrated with the Python 2/3 transition and didn’t want to base their project at work on Python anymore. It really doesn’t matter in terms of the number of users of Python because I’m willing to bet those people still reach for Python when they need a one-off script to solve a problem. And I bet these people still recommend Python when they are asked what people’s first programming language should be. In other words I don’t worry about our great-for-teaching, highly productive scripting language ever lacking users; Python will always be&amp;nbsp;useful.&lt;/p&gt;
+, many people are learning how to program using Python. But exposure early on to a language does not guarantee future usage by someone; I for one did not use Scheme after my intro course. But because Python is such a productive language, the language becomes a staple in one&amp;#8217;s toolkit of programming. If people learn Python first, then when they need to write a quick script like I did today they will most likely reach for Python than Java or Go or some other language they may be using for their&amp;nbsp;work.&lt;/p&gt;
+&lt;p&gt;All of this is why I don&amp;#8217;t worry about Python&amp;#8217;s demise due to lack of users. People might switch to Go at work because the performance:productivity ratio is very good for their project or team. Or maybe people got frustrated with the Python 2/3 transition and didn&amp;#8217;t want to base their project at work on Python anymore. It really doesn&amp;#8217;t matter in terms of the number of users of Python because I&amp;#8217;m willing to bet those people still reach for Python when they need a one-off script to solve a problem. And I bet these people still recommend Python when they are asked what people&amp;#8217;s first programming language should be. In other words I don&amp;#8217;t worry about our great-for-teaching, highly productive scripting language ever lacking users; Python will always be&amp;nbsp;useful.&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;161203 是也乎,(￣▽￣)&lt;ul&gt;
@@ -5946,7 +6331,7 @@ IndexError: Unknown key &lt;span class="err"&gt;&amp;lt;&lt;/span&gt;__getstate_
 &lt;span class="mf"&gt;3.7&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;    &lt;span class="n"&gt;ZqSKM&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="scrapbook"></category><category term="python"></category><category term="howto"></category><category term="mavericks"></category></entry><entry><title>pydata笔记:环境配置</title><link href="https://blog.zoomquiet.io/pydata-0-mavericks.html" rel="alternate"></link><published>2014-06-03T00:00:00+08:00</published><updated>2014-06-03T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-06-03:/pydata-0-mavericks.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="s27157694.jpg（JPEG 图像，300x300 像素）" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="s27157694.jpg(JPEG 图像,300x300 像素)" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;是本好书…&lt;/p&gt;
 &lt;p&gt;为什么知道这书呢? 因为翻译 &lt;a href="http://weekly.pychina.org/"&gt;|蠎周刊 |汇集全球蠎事儿 !-)&lt;/a&gt;&lt;/p&gt;
@@ -5960,7 +6345,7 @@ IndexError: Unknown key &lt;span class="err"&gt;&amp;lt;&lt;/span&gt;__getstate_
 &lt;p&gt;正如,Python 所有领域的自学,有一个稳定,随时有反馈的环境是最重要的…&lt;/p&gt;
 &lt;p&gt;但是 …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="s27157694.jpg（JPEG 图像，300x300 像素）" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="s27157694.jpg(JPEG 图像,300x300 像素)" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;是本好书…&lt;/p&gt;
 &lt;p&gt;为什么知道这书呢? 因为翻译 &lt;a href="http://weekly.pychina.org/"&gt;|蠎周刊 |汇集全球蠎事儿 !-)&lt;/a&gt;&lt;/p&gt;
@@ -6065,7 +6450,7 @@ export PATH
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140603 完成环境探索,总结&lt;/li&gt;
-&lt;li&gt;140527 &lt;a href="http://www.amazon.cn/gp/product/B00KD7Q7U2/ref=oh_d__o00_details_o00__i00?ie=UTF8&amp;amp;psc=1"&gt;《利用Python进行数据分析》 Wes McKinney, 唐学韬 (Kindle电子书)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;140527 &lt;a href="http://www.amazon.cn/gp/product/B00KD7Q7U2/ref=oh_d__o00_details_o00__i00?ie=UTF8&amp;amp;psc=1"&gt;“利用Python进行数据分析” Wes McKinney, 唐学韬 (Kindle电子书)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="pandas"></category><category term="ipython"></category><category term="pydata"></category><category term="mavericks"></category></entry><entry><title>rst2s5 小折腾</title><link href="https://blog.zoomquiet.io/rst2s5-upgraded.html" rel="alternate"></link><published>2014-05-07T00:00:00+08:00</published><updated>2014-05-07T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-05-07:/rst2s5-upgraded.html</id><summary type="html">
 &lt;h1 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging&lt;/a&gt;&lt;/p&gt;
@@ -6770,7 +7155,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;li&gt;140127 单立文章追踪&lt;/li&gt;
 &lt;/ul&gt;</content><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>如何自在的折腾QPy</title><link href="https://blog.zoomquiet.io/init-my-qpy-env.html" rel="alternate"></link><published>2014-01-26T12:42:00+08:00</published><updated>2014-01-26T12:42:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-26:/init-my-qpy-env.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python（中文版） (豆瓣)&lt;/a&gt; 时,发现竟然有 
+&lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python(中文版) (豆瓣)&lt;/a&gt; 时,发现竟然有 
 &lt;a href="http://code.google.com/p/android-scripting/"&gt;&lt;span class="caps"&gt;SL4A&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这种神器! Google 果断是业界良心哪,
 可惜: 从&lt;a href="http://code.google.com/p/android-scripting/downloads/list"&gt;Downloads&lt;/a&gt;
@@ -6780,7 +7165,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;li&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.hipipal.qpyplus"&gt;QPython - Python for Android - Google Play 上的 Andr​​oid 应用&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.hipipal.qpy3"&gt;QPython 3 - Python3 on Android - Google …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python（中文版） (豆瓣)&lt;/a&gt; 时,发现竟然有 
+&lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python(中文版) (豆瓣)&lt;/a&gt; 时,发现竟然有 
 &lt;a href="http://code.google.com/p/android-scripting/"&gt;&lt;span class="caps"&gt;SL4A&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这种神器! Google 果断是业界良心哪,
 可惜: 从&lt;a href="http://code.google.com/p/android-scripting/downloads/list"&gt;Downloads&lt;/a&gt;
@@ -6864,7 +7249,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://gailly.net/android/android-tips.html"&gt;Android tips&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.linuxplanet.com/linuxplanet/reviews/7301/1"&gt;10 Android Apps for Linux Server Admins - ConnectBot, QuickSSHd, SwiFTP, AndFTP, Wyse PocketCloud - Reviews - LinuxPlanet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://my.oschina.net/winHerson/blog/84716"&gt;SSHDroid（&lt;span class="caps"&gt;SSH&lt;/span&gt; Server for Android）通过&lt;span class="caps"&gt;PC&lt;/span&gt;或命令连接android - bugeasy - 开源中国社区&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://my.oschina.net/winHerson/blog/84716"&gt;SSHDroid(&lt;span class="caps"&gt;SSH&lt;/span&gt; Server for Android)通过&lt;span class="caps"&gt;PC&lt;/span&gt;或命令连接android - bugeasy - 开源中国社区&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;经过快速的尝试,
 明确 &lt;code&gt;SSHDroid&lt;/code&gt; 最简洁可用, 那就上:&lt;/p&gt;
@@ -6970,7 +7355,7 @@ ImportError: No module named site
 &lt;p&gt;然后!? 肿么,让 shell 环境每次都能自动加载上这堆配置?&lt;/p&gt;
 &lt;p&gt;综合,搜索来的相关说明:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.cnblogs.com/shyang--TechBlogs/archive/2011/10/27/2226664.html"&gt;【转】linux虚拟内核文件系统介绍 - shy.ang - 博客园&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.cnblogs.com/shyang--TechBlogs/archive/2011/10/27/2226664.html"&gt;[转]linux虚拟内核文件系统介绍 - shy.ang - 博客园&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.xdracco.net/mount-android-system-partition-with-readwrite-access/"&gt;Mount Android System Partition With Read/Rrite Access&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://gailly.net/android/android-tips.html"&gt;Android tips&lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
@@ -7070,7 +7455,7 @@ without android titlebar (fullscreen) “”“&lt;/p&gt;
 - 每次都要全部清除,或是人工清除?
 - 不用这么 Naive ,参考:&lt;a href="http://floss.qiniudn.com/data/20130327153058/index.html"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Warning: the &lt;span class="caps"&gt;RSA&lt;/span&gt; host key for differs from the key for the &lt;span class="caps"&gt;IP&lt;/span&gt; address - zhangp专栏&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;一行解决:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sed -i -e ’36d’ ~/.ssh/known_hosts
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sed -i -e &lt;span class="s1"&gt;'36d'&lt;/span&gt; ~/.ssh/known_hosts
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h4 id="fabric"&gt;&lt;a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation"&gt;Fabric&lt;/a&gt;&lt;a class="headerlink" href="#fabric" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;非 &lt;code&gt;C/S&lt;/code&gt; 结构的脚本化自动部署工具!&lt;/p&gt;
@@ -7175,9 +7560,9 @@ See the error message above.
 &lt;h3 id="restful-onering"&gt;RESTful “OneRing”&lt;a class="headerlink" href="#restful-onering" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;不知道大家记得 &lt;a href="http://code.google.com/p/onering-desktop/wiki/OneRing"&gt;OneRing&lt;/a&gt; 卟?!&lt;/p&gt;
 &lt;p&gt;豆瓣首席架构师/布道官/&lt;span class="caps"&gt;CTO&lt;/span&gt; 洪教授 亲手玩的项目:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;跨平台的桌面应用开发库，
-使用HTML5+CSS3制作用户界面，
-用Javascript编写交互逻辑，
+&lt;div class="highlight"&gt;&lt;pre&gt;跨平台的桌面应用开发库,
+使用HTML5+CSS3制作用户界面,
+用Javascript编写交互逻辑,
 同时提供用写web后端的技术编写后台逻辑!
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;但素,现在有了 QPython 完全可以0成本山寨一个移动版的 MyRing 了哪:&lt;/p&gt;
@@ -7631,7 +8016,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="140107-guido-twitter.png（PNG 图像，558x580 像素）" src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/140107-guido-twitter.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="140107-guido-twitter.png(PNG 图像,558x580 像素)" src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/140107-guido-twitter.png"&gt;&lt;/p&gt;
 &lt;p&gt;以上,有关蠎衫的故事,就是这些,再过12年,又能发生什么?!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="design-by zoomquiet " src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/favicon/140101-design-by.png"&gt;&lt;/p&gt;</content><category term="Guido"></category><category term="Pythonner"></category><category term="PyConChina"></category></entry><entry><title>from Lion jump into Mavericks</title><link href="https://blog.zoomquiet.io/jump-into-mavericks.html" rel="alternate"></link><published>2013-12-30T00:00:00+08:00</published><updated>2013-12-30T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-30:/jump-into-mavericks.html</id><summary type="html">
 &lt;h1 id="_1"&gt;为毛&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
@@ -8724,7 +9109,7 @@ The latest release is always updated to the Python Package Index. The source cod
 
 
 &lt;h2 id="finding-the-number-of-files-recursively-in-a-directory"&gt;Finding the number of files recursively in a directory:&lt;a class="headerlink" href="#finding-the-number-of-files-recursively-in-a-directory" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;That was easy! Wasn’t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&amp;nbsp;Python.&lt;/p&gt;
+&lt;p&gt;That was easy! Wasn&amp;#8217;t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&amp;nbsp;Python.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
 &lt;span class="n"&gt;file_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="n"&gt;dir_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
@@ -8784,7 +9169,7 @@ d = path(&lt;span class="caps"&gt;DIRECTORY&lt;/span&gt;)&lt;/p&gt;
             i.remove()
 In the above script I did not implement any logging and error handling. That is left as an exercise for the&amp;nbsp;reader.&lt;/p&gt;
 &lt;h2 id="deleting-files-based-on-their-extension"&gt;Deleting files based on their extension&lt;a class="headerlink" href="#deleting-files-based-on-their-extension" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Just suppose you want to remove all the ‘.pyc’ files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in&amp;nbsp;path.py.&lt;/p&gt;
+&lt;p&gt;Just suppose you want to remove all the &amp;#8216;.pyc&amp;#8217; files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in&amp;nbsp;path.py.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
 &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DIRECTORY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walkfiles&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*.pyc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -8835,7 +9220,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 
 &lt;p&gt;So we have also learned how to remove files based on their last modified time. If you want to delete files based on last access time just change i.mtime to i.atime and you will be good to&amp;nbsp;go.&lt;/p&gt;
 &lt;h2 id="goodbye"&gt;Goodbye&lt;a class="headerlink" href="#goodbye" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;So that was it. I hope you liked the post. In the end I would like to make a public apology that my English is not good so you may find some grammar mistakes. You are requested to email them to me so that I can improve my English. If you liked this post then don’t forget to follow me on twitter and facebook. A retweet won’t hurt either! If you want to send me a pm then use this&amp;nbsp;email.&lt;/p&gt;
+&lt;p&gt;So that was it. I hope you liked the post. In the end I would like to make a public apology that my English is not good so you may find some grammar mistakes. You are requested to email them to me so that I can improve my English. If you liked this post then don&amp;#8217;t forget to follow me on twitter and facebook. A retweet won&amp;#8217;t hurt either! If you want to send me a pm then use this&amp;nbsp;email.&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;140125 翻译 Weekly issue:99.5&amp;nbsp;时发现,转抄学习&lt;/li&gt;
@@ -8882,14 +9267,14 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 ~ Guido van Rossum (inventor of&amp;nbsp;Python)&lt;/p&gt;
 &lt;h1 id="letter-to-a-young-programmer"&gt;&lt;a href="http://neopythonic.blogspot.ca/2013/10/letter-to-young-programmer.html"&gt;Letter to a young programmer&lt;/a&gt;&lt;a class="headerlink" href="#letter-to-a-young-programmer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Dear (insert name&amp;nbsp;here),&lt;/p&gt;
-&lt;p&gt;I heard you enjoy a certain programming language named Python. Programming is a wonderful activity. I am a little jealous that you have access to computers at your age; when I grew up I didn’t even know what a computer was! I was an electronics hobbyist though, and my big dream was to build my own electronic calculator from discrete components. I never did do that, but I did build several digital clocks, and it was amazing to build something that complex and see it work. I hope you dream big too — programmers can make computers (and robots!) do amazing things, and this is a great time to become a programmer. Just imagine how much faster computers will be in five or ten years, and what you will be able to do with your skills&amp;nbsp;then!&lt;/p&gt;
+&lt;p&gt;I heard you enjoy a certain programming language named Python. Programming is a wonderful activity. I am a little jealous that you have access to computers at your age; when I grew up I didn&amp;#8217;t even know what a computer was! I was an electronics hobbyist though, and my big dream was to build my own electronic calculator from discrete components. I never did do that, but I did build several digital clocks, and it was amazing to build something that complex and see it work. I hope you dream big too — programmers can make computers (and robots!) do amazing things, and this is a great time to become a programmer. Just imagine how much faster computers will be in five or ten years, and what you will be able to do with your skills&amp;nbsp;then!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;—&lt;/span&gt;&lt;span class="n"&gt;Guido&lt;/span&gt; &lt;span class="n"&gt;van&lt;/span&gt; &lt;span class="n"&gt;Rossum&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inventor&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;THURSDAY&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;OCTOBER&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2013&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;从
-&lt;a href="http://us4.campaign-archive1.com/?u=9735795484d2e4c204da82a29&amp;amp;id=c8c36205c4"&gt;Pycoder’s Weekly (Issue #89): Mavericks&lt;/a&gt;
+&lt;a href="http://us4.campaign-archive1.com/?u=9735795484d2e4c204da82a29&amp;amp;id=c8c36205c4"&gt;Pycoder&amp;#8217;s Weekly (Issue #89): Mavericks&lt;/a&gt;
 知道的 Guido&amp;nbsp;好萌信,`&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
@@ -8913,7 +9298,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;span class="err"&gt;这是个令程序员伟大的时代&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;span class="err"&gt;现在就设想&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="err"&gt;到&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="err"&gt;年后&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;能运用你的功能操作更快的计算机作到什么&lt;/span&gt;&lt;span class="o"&gt;?!&lt;/span&gt;
 
-&lt;span class="err"&gt;哗…&lt;/span&gt;
+&lt;span class="err"&gt;哗&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -9016,46 +9401,46 @@ Is it possible with path.py? Yes it is! So here is a script which does this&amp;
 &lt;p&gt;&lt;img alt="EKR" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*yKVZtcJyfh-FHNEtXrqjPw.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://leoeditor.com/"&gt;Leo&lt;/a&gt; is OpenSource,written by Python,can run in M$/Linux/&lt;span class="caps"&gt;MAC&lt;/span&gt;/etc. ,Leo is Literate Environment Outline-oriented ;-)
 &lt;span class="caps"&gt;EKR&lt;/span&gt; is her&amp;nbsp;father.&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;BUT&lt;/span&gt;, what is “Literate” ,is hard to explained,
-i try and try and try to show/share to Chinese People, &lt;span class="caps"&gt;BUT&lt;/span&gt;…
+&lt;p&gt;&lt;span class="caps"&gt;BUT&lt;/span&gt;, what is &amp;#8220;Literate&amp;#8221; ,is hard to explained,
+i try and try and try to show/share to Chinese People, &lt;span class="caps"&gt;BUT&lt;/span&gt;&amp;#8230; 
 next week,there is another …&lt;/p&gt;</summary><content type="html">&lt;h1 id="leo"&gt;Leo 作者向中国开发者的自述&lt;a class="headerlink" href="#leo" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="EKR" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*yKVZtcJyfh-FHNEtXrqjPw.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://leoeditor.com/"&gt;Leo&lt;/a&gt; is OpenSource,written by Python,can run in M$/Linux/&lt;span class="caps"&gt;MAC&lt;/span&gt;/etc. ,Leo is Literate Environment Outline-oriented ;-)
 &lt;span class="caps"&gt;EKR&lt;/span&gt; is her&amp;nbsp;father.&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;BUT&lt;/span&gt;, what is “Literate” ,is hard to explained,
-i try and try and try to show/share to Chinese People, &lt;span class="caps"&gt;BUT&lt;/span&gt;…
-next week,there is another chance for try again, and ask &lt;span class="caps"&gt;EKR&lt;/span&gt; say some abt. self…
+&lt;p&gt;&lt;span class="caps"&gt;BUT&lt;/span&gt;, what is &amp;#8220;Literate&amp;#8221; ,is hard to explained,
+i try and try and try to show/share to Chinese People, &lt;span class="caps"&gt;BUT&lt;/span&gt;&amp;#8230; 
+next week,there is another chance for try again, and ask &lt;span class="caps"&gt;EKR&lt;/span&gt; say some abt. self&amp;#8230; 
 So! &lt;span class="caps"&gt;EKR&lt;/span&gt; writed down his colorful&amp;nbsp;life!&lt;/p&gt;
-&lt;p&gt;​I’ve been interested in computers from the time I was about 10 years&amp;nbsp;old.&lt;/p&gt;
-&lt;p&gt;I studied mathematics at Michigan State University and computer science at the University of Wisconsin, Madison. There I meant my friend and mentor, &lt;span class="caps"&gt;D.R.&lt;/span&gt;(Bob) Fitzwater. Bob encouraged me to focus more on design, less on the “bits”. He died several years ago—he would have enjoyed what has happened&amp;nbsp;since.&lt;/p&gt;
-&lt;p&gt;When I first learned to program, my programs were “brittle”: changing one part would break another. For several years I wanted to know how to solve this&amp;nbsp;problem.&lt;/p&gt;
-&lt;p&gt;My first programming job was at &lt;span class="caps"&gt;IBM&lt;/span&gt; in Kingston New York. This was about 1974. I didn’t like corporate culture. The problem was my own immaturity, not the people at &lt;span class="caps"&gt;IBM&lt;/span&gt;. Still, I’m happy I&amp;nbsp;left.&lt;/p&gt;
-&lt;p&gt;While at &lt;span class="caps"&gt;IBM&lt;/span&gt; I studied the ideas of people like Edsjer Dijkstra and especially the great David L. Parnas. Parnas was writing before languages had classes. In fact, his ideas are the reason that Leo’s classes have remained unchanged in concept even though they have been rewritten many&amp;nbsp;times.&lt;/p&gt;
-&lt;p&gt;I left &lt;span class="caps"&gt;IBM&lt;/span&gt; after less than a year. For a while I owned a computer store in Madison Wisconsin, where I have lived ever since. The store didn’t turn out too&amp;nbsp;well…&lt;/p&gt;
+&lt;p&gt;​I&amp;#8217;ve been interested in computers from the time I was about 10 years&amp;nbsp;old.&lt;/p&gt;
+&lt;p&gt;I studied mathematics at Michigan State University and computer science at the University of Wisconsin, Madison. There I meant my friend and mentor, &lt;span class="caps"&gt;D.R.&lt;/span&gt;(Bob) Fitzwater. Bob encouraged me to focus more on design, less on the &amp;#8220;bits&amp;#8221;. He died several years ago—he would have enjoyed what has happened&amp;nbsp;since.&lt;/p&gt;
+&lt;p&gt;When I first learned to program, my programs were &amp;#8220;brittle&amp;#8221;: changing one part would break another. For several years I wanted to know how to solve this&amp;nbsp;problem.&lt;/p&gt;
+&lt;p&gt;My first programming job was at &lt;span class="caps"&gt;IBM&lt;/span&gt; in Kingston New York. This was about 1974. I didn&amp;#8217;t like corporate culture. The problem was my own immaturity, not the people at &lt;span class="caps"&gt;IBM&lt;/span&gt;. Still, I&amp;#8217;m happy I&amp;nbsp;left.&lt;/p&gt;
+&lt;p&gt;While at &lt;span class="caps"&gt;IBM&lt;/span&gt; I studied the ideas of people like Edsjer Dijkstra and especially the great David L. Parnas. Parnas was writing before languages had classes. In fact, his ideas are the reason that Leo&amp;#8217;s classes have remained unchanged in concept even though they have been rewritten many&amp;nbsp;times.&lt;/p&gt;
+&lt;p&gt;I left &lt;span class="caps"&gt;IBM&lt;/span&gt; after less than a year. For a while I owned a computer store in Madison Wisconsin, where I have lived ever since. The store didn&amp;#8217;t turn out too&amp;nbsp;well&amp;#8230; &lt;/p&gt;
 &lt;p&gt;I married Rebecca in 1980, and we have been a happy team ever since. Leo would not have been born without her. Rebecca and I have two children, James and Linda. James is 30, Linda&amp;nbsp;23.&lt;/p&gt;
 &lt;p&gt;About this time I started a computer business selling Sherlock, a tracing tool for C programs:&amp;nbsp;https://sourceforge.net/projects/leo/files/Miscellaneous/Sherlock/ &lt;/p&gt;
 &lt;p&gt;I received a patent for it, but the business went nowhere. Sherlock is not needed for tracing Python programs: the pattern used in Leo suffices.
-The ideas behind Sherlock really ought to be part of Python’s logging framework. Levels of logging are feeble compared to individually named and targeted&amp;nbsp;logs.&lt;/p&gt;
+The ideas behind Sherlock really ought to be part of Python&amp;#8217;s logging framework. Levels of logging are feeble compared to individually named and targeted&amp;nbsp;logs.&lt;/p&gt;
 &lt;p&gt;I worked (from home) for about a year for a company called Tuple in Ballard, Washington. I wrote (in C) a very fast optimizing C compiler, assembler, linker and unix-like file system for them. See the &lt;span class="caps"&gt;CC2&lt;/span&gt; stuff at: 
 https://sourceforge.net/projects/leo/files/Miscellaneous/&lt;span class="caps"&gt;CC2&lt;/span&gt;%20and%20Psyco/&lt;/p&gt;
 &lt;p&gt;This was before the days of unit tests! At that time, having the compiler compile itself was pretty much how testing was&amp;nbsp;done!&lt;/p&gt;
-&lt;p&gt;I’ve been a fan of Donald Knuth ever since graduate school. I studied his books about&amp;nbsp;TeX:&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve been a fan of Donald Knuth ever since graduate school. I studied his books about&amp;nbsp;TeX:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;TeXbook&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Reading&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Massachusetts&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1984&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;483&lt;/span&gt;&lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
 &lt;span class="n"&gt;ISBN&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13447&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 
 &lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TeX&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;Program&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Reading&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Massachusetts&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1986&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;xviii&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;600&lt;/span&gt;&lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;ISBN&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13437&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
 
-&lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;written&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Pascal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;organized&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;Knuth&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;WEB&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;studied&lt;/span&gt; &lt;span class="n"&gt;WEB&lt;/span&gt; &lt;span class="n"&gt;intensely&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Volume&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;written&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Pascal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;organized&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;Knuth&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;WEB&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="n"&gt;studied&lt;/span&gt; &lt;span class="n"&gt;WEB&lt;/span&gt; &lt;span class="n"&gt;intensely&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Despite understanding bits and pieces of the 600-page code in volume B, I really didn’t understand the code. I asked myself, why is this so hard to understand? After perhaps 6 months of wondering, the basis of Leo came to me: webs are outlines in disguise. Actually, &lt;em&gt;all&lt;/em&gt; programs are outlines in&amp;nbsp;disguise.&lt;/p&gt;
-&lt;p&gt;You can read about the rest of Leo’s history here:&amp;nbsp;http://leoeditor.com/appendices.html#history-of-leo&lt;/p&gt;
+&lt;p&gt;Despite understanding bits and pieces of the 600-page code in volume B, I really didn&amp;#8217;t understand the code. I asked myself, why is this so hard to understand? After perhaps 6 months of wondering, the basis of Leo came to me: webs are outlines in disguise. Actually, &lt;em&gt;all&lt;/em&gt; programs are outlines in&amp;nbsp;disguise.&lt;/p&gt;
+&lt;p&gt;You can read about the rest of Leo&amp;#8217;s history here:&amp;nbsp;http://leoeditor.com/appendices.html#history-of-leo&lt;/p&gt;
 &lt;p&gt;I learned about Python in 2001. I was working on the Python version of Leo on September&amp;nbsp;11.&lt;/p&gt;
-&lt;p&gt;Two years ago I got interested in Guido’s keynote about static type checking. I contacted him and started this project:&amp;nbsp;https://groups.google.com/forum/#!forum/python-static-type-checking&lt;/p&gt;
-&lt;p&gt;I spent lots of time learning how to traverse parse trees quickly. That’s not nothing, but it’s only the beginning of the task. Perhaps next year I’ll be able to do for type analysis what I did for traversing parse trees&amp;nbsp;;-)&lt;/p&gt;
+&lt;p&gt;Two years ago I got interested in Guido&amp;#8217;s keynote about static type checking. I contacted him and started this project:&amp;nbsp;https://groups.google.com/forum/#!forum/python-static-type-checking&lt;/p&gt;
+&lt;p&gt;I spent lots of time learning how to traverse parse trees quickly. That&amp;#8217;s not nothing, but it&amp;#8217;s only the beginning of the task. Perhaps next year I&amp;#8217;ll be able to do for type analysis what I did for traversing parse trees&amp;nbsp;;-)&lt;/p&gt;
 &lt;p&gt;​
-And that’s about it. I’ve ever only been interested in programming. I love seeing how other people use Leo, but such excursions are not for me. I remain interested in programming because it has never been easy for&amp;nbsp;me.&lt;/p&gt;
+And that&amp;#8217;s about it. I&amp;#8217;ve ever only been interested in programming. I love seeing how other people use Leo, but such excursions are not for me. I remain interested in programming because it has never been easy for&amp;nbsp;me.&lt;/p&gt;
 &lt;p&gt;I am a mediocre wei chi player, despite many lessons from Yang Yi-Lun 杨以伦, pro 7 dan: 
 https://en.wikipedia.org/wiki/Yilun_Yang 
 I do know enough to appreciate famous&amp;nbsp;games. &lt;/p&gt;
@@ -9072,21 +9457,21 @@ I enjoy painting. About 20 years ago I received a black belt in&amp;nbsp;karate.
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;10岁开始,俺就对计算机上了心.&lt;/p&gt;
-&lt;p&gt;俺是密歇根州立大学数学系的,也是威斯康星大学麦迪逊学院计算机系的.在那儿,遇到了俺的导师(Bob) Fitzwater教授,他建议俺多关注设计,而不仅仅是”字节”.
+&lt;p&gt;俺是密歇根州立大学数学系的,也是威斯康星大学麦迪逊学院计算机系的.在那儿,遇到了俺的导师(Bob) Fitzwater教授,他建议俺多关注设计,而不仅仅是&amp;#8221;字节&amp;#8221;.
 几年前,Bob&amp;nbsp;已仙去,不过,他要是知道俺在折腾什么一定会很高兴.&lt;/p&gt;
-&lt;p&gt;开始编程时,俺的程序特色是”脆”:某处囧了,另外的也会杯具.&amp;nbsp;那些年俺一直在想法解决这种事儿!&lt;/p&gt;
+&lt;p&gt;开始编程时,俺的程序特色是&amp;#8221;脆&amp;#8221;:某处囧了,另外的也会杯具.&amp;nbsp;那些年俺一直在想法解决这种事儿!&lt;/p&gt;
 &lt;p&gt;俺第一份程序猿工作是在1974年进入 &lt;span class="caps"&gt;IBM&lt;/span&gt; (Kingston New York). 俺并不喜欢企业文化,当然问题在俺不在 &lt;span class="caps"&gt;IBM&lt;/span&gt;,&amp;nbsp;总之很高兴俺及时离开了.&lt;/p&gt;
 &lt;p&gt;有&lt;span class="caps"&gt;IBM&lt;/span&gt; 俺接触到象 Edsjer Dijkstra 或是 伟大的 David L. Parnas 们的想法.Parnas写的书面语言类, 诱发了 Leo&amp;nbsp;的类概念无论怎么重写都不会改变!&lt;/p&gt;
-&lt;p&gt;离开 &lt;span class="caps"&gt;IBM&lt;/span&gt;&amp;nbsp;快一年时.有一阵子,俺在威斯康星的麦迪逊那儿有个电脑店.事儿并不忙…&lt;/p&gt;
+&lt;p&gt;离开 &lt;span class="caps"&gt;IBM&lt;/span&gt;&amp;nbsp;快一年时.有一阵子,俺在威斯康星的麦迪逊那儿有个电脑店.事儿并不忙&amp;#8230; &lt;/p&gt;
 &lt;p&gt;1980年,俺同 Rebecca 结婚了,从此有了俺自个儿的快乐团队.如果没有她, Leo 也诞生不出来. Rebecca 和俺有两个娃儿,James 和 Linda. 现在 James 30, Linda&amp;nbsp;23.&lt;/p&gt;
 &lt;p&gt;大约这时期,俺开始销售 Sherlock, 针对C程序的追踪工具.: https://sourceforge.net/projects/leo/files/Miscellaneous/Sherlock/
 俺拥有相关专科,但是没什么业务.Sherlock 没必要对 Python 程序进行追踪: Leo 足够用了!
 Sherlock背后的想法的确出自Python&amp;nbsp;的日志框架.分级的日志绝对比苍白的命名式日志要好用的多.&lt;/p&gt;
-&lt;p&gt;俺为华盛顿一家名为”Tuple in Ballard”的公司&lt;span class="caps"&gt;SOHO&lt;/span&gt; 了一年, 写(用C)了些很快的编译器,汇编器,链接器,以及 Unix样的文件系统.参考 &lt;span class="caps"&gt;CC2&lt;/span&gt;: https://sourceforge.net/projects/leo/files/Miscellaneous/&lt;span class="caps"&gt;CC2&lt;/span&gt;%20and%20Psyco/&amp;nbsp;这儿是几天前的集成测试结果!当时,编译过编译器自身比跑通测试重要的多.&lt;/p&gt;
+&lt;p&gt;俺为华盛顿一家名为&amp;#8221;Tuple in Ballard&amp;#8221;的公司&lt;span class="caps"&gt;SOHO&lt;/span&gt; 了一年, 写(用C)了些很快的编译器,汇编器,链接器,以及 Unix样的文件系统.参考 &lt;span class="caps"&gt;CC2&lt;/span&gt;: https://sourceforge.net/projects/leo/files/Miscellaneous/&lt;span class="caps"&gt;CC2&lt;/span&gt;%20and%20Psyco/&amp;nbsp;这儿是几天前的集成测试结果!当时,编译过编译器自身比跑通测试重要的多.&lt;/p&gt;
 &lt;p&gt;毕业以来,俺一直是高纳德的粉丝. 学习过他有关TeX&amp;nbsp;的书.包括:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;卷&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="n"&gt;TeXbook&lt;/span&gt;&lt;span class="err"&gt;（阅读，马萨诸塞州：&lt;/span&gt;&lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="err"&gt;出版社，&lt;/span&gt;&lt;span class="mi"&gt;1984&lt;/span&gt;&lt;span class="err"&gt;），&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;483&lt;/span&gt;&lt;span class="err"&gt;页。&lt;/span&gt; &lt;span class="n"&gt;ISBN0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13447&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;卷&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;TeXbook&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;阅读&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;马萨诸塞州&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="err"&gt;出版社&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1984&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;483&lt;/span&gt;&lt;span class="err"&gt;页&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;  &lt;span class="n"&gt;ISBN0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13447&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 
-&lt;span class="err"&gt;卷&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TEX&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;程序（阅读，马萨诸塞州：&lt;/span&gt;&lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="err"&gt;出版社，&lt;/span&gt;&lt;span class="mi"&gt;1986&lt;/span&gt;&lt;span class="err"&gt;），&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;600&lt;/span&gt;&lt;span class="err"&gt;页。&lt;/span&gt; &lt;span class="n"&gt;ISBN0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13437&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="err"&gt;卷&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TEX&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;程序&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;阅读&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;马萨诸塞州&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Addison&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Wesley&lt;/span&gt;&lt;span class="err"&gt;出版社&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1986&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;600&lt;/span&gt;&lt;span class="err"&gt;页&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;  &lt;span class="n"&gt;ISBN0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;201&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13437&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

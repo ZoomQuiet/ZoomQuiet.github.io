@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="init-my-qpy-env"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/init-my-qpy-env.html"/>
-            <meta property="og:description" content="背景¶ QPython 知道有两年了,是看 Head First Python（中文版） (豆瓣) 时,发现竟然有 SL4A 这种神器! Google 果断是业界良心哪, 可惜: 从Downloads 可以看出 ,已经停止有一年多了,目测是 Guido 叔离开后, Python 的地位在 Google 一落千丈就没有人折腾了. 好在旧浪两位同事, River和CF 掿起了 SL4A 的旗帜, 变成了一系列准衶器: QPython - Python for Android - Google Play 上的 Andr​​oid 应用 QPython 3 - Python3 on Android - Google …"/>
+            <meta property="og:description" content="背景¶ QPython 知道有两年了,是看 Head First Python(中文版) (豆瓣) 时,发现竟然有 SL4A 这种神器! Google 果断是业界良心哪, 可惜: 从Downloads 可以看出 ,已经停止有一年多了,目测是 Guido 叔离开后, Python 的地位在 Google 一落千丈就没有人折腾了. 好在旧浪两位同事, River和CF 掿起了 SL4A 的旗帜, 变成了一系列准衶器: QPython - Python for Android - Google Play 上的 Andr​​oid 应用 QPython 3 - Python3 on Android - Google …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -174,7 +174,7 @@
 
                 
 <h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>QPython 知道有两年了,是看 <a href="http://book.douban.com/subject/10561367/">Head First Python（中文版） (豆瓣)</a> 时,发现竟然有 
+<p>QPython 知道有两年了,是看 <a href="http://book.douban.com/subject/10561367/">Head First Python(中文版) (豆瓣)</a> 时,发现竟然有 
 <a href="http://code.google.com/p/android-scripting/"><span class="caps">SL4A</span></a></p>
 <p>这种神器! Google 果断是业界良心哪,
 可惜: 从<a href="http://code.google.com/p/android-scripting/downloads/list">Downloads</a>
@@ -258,7 +258,7 @@
 <ul>
 <li><a href="http://gailly.net/android/android-tips.html">Android tips</a></li>
 <li><a href="http://www.linuxplanet.com/linuxplanet/reviews/7301/1">10 Android Apps for Linux Server Admins - ConnectBot, QuickSSHd, SwiFTP, AndFTP, Wyse PocketCloud - Reviews - LinuxPlanet</a></li>
-<li><a href="http://my.oschina.net/winHerson/blog/84716">SSHDroid（<span class="caps">SSH</span> Server for Android）通过<span class="caps">PC</span>或命令连接android - bugeasy - 开源中国社区</a></li>
+<li><a href="http://my.oschina.net/winHerson/blog/84716">SSHDroid(<span class="caps">SSH</span> Server for Android)通过<span class="caps">PC</span>或命令连接android - bugeasy - 开源中国社区</a></li>
 </ul>
 <p>经过快速的尝试,
 明确 <code>SSHDroid</code> 最简洁可用, 那就上:</p>
@@ -364,7 +364,7 @@ ImportError: No module named site
 <p>然后!? 肿么,让 shell 环境每次都能自动加载上这堆配置?</p>
 <p>综合,搜索来的相关说明:</p>
 <ul>
-<li><a href="http://www.cnblogs.com/shyang--TechBlogs/archive/2011/10/27/2226664.html">【转】linux虚拟内核文件系统介绍 - shy.ang - 博客园</a></li>
+<li><a href="http://www.cnblogs.com/shyang--TechBlogs/archive/2011/10/27/2226664.html">[转]linux虚拟内核文件系统介绍 - shy.ang - 博客园</a></li>
 <li><a href="http://www.xdracco.net/mount-android-system-partition-with-readwrite-access/">Mount Android System Partition With Read/Rrite Access</a></li>
 <li><a href="http://gailly.net/android/android-tips.html">Android tips</a> </li>
 </ul>
@@ -464,7 +464,7 @@ without android titlebar (fullscreen) “”“</p>
 - 每次都要全部清除,或是人工清除?
 - 不用这么 Naive ,参考:<a href="http://floss.qiniudn.com/data/20130327153058/index.html"><span class="caps">SSH</span> Warning: the <span class="caps">RSA</span> host key for differs from the key for the <span class="caps">IP</span> address - zhangp专栏</a></p>
 <p>一行解决:</p>
-<div class="highlight"><pre><span class="nv">$ </span>sed -i -e ’36d’ ~/.ssh/known_hosts
+<div class="highlight"><pre><span class="nv">$ </span>sed -i -e <span class="s1">'36d'</span> ~/.ssh/known_hosts
 </pre></div>
 <h4 id="fabric"><a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation">Fabric</a><a class="headerlink" href="#fabric" title="Permanent link">¶</a></h4>
 <p>非 <code>C/S</code> 结构的脚本化自动部署工具!</p>
@@ -569,9 +569,9 @@ See the error message above.
 <h3 id="restful-onering">RESTful “OneRing”<a class="headerlink" href="#restful-onering" title="Permanent link">¶</a></h3>
 <p>不知道大家记得 <a href="http://code.google.com/p/onering-desktop/wiki/OneRing">OneRing</a> 卟?!</p>
 <p>豆瓣首席架构师/布道官/<span class="caps">CTO</span> 洪教授 亲手玩的项目:</p>
-<div class="highlight"><pre>跨平台的桌面应用开发库，
-使用HTML5+CSS3制作用户界面，
-用Javascript编写交互逻辑，
+<div class="highlight"><pre>跨平台的桌面应用开发库,
+使用HTML5+CSS3制作用户界面,
+用Javascript编写交互逻辑,
 同时提供用写web后端的技术编写后台逻辑!
 </pre></div>
 <p>但素,现在有了 QPython 完全可以0成本山寨一个移动版的 MyRing 了哪:</p>

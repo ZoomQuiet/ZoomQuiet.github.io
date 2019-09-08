@@ -86,6 +86,25 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/dsl-atop-openresty.html">用 <span class="caps">DSL</span>&nbsp;们构筑商用系统</a></h2>
+                <div class="summary">
+<h1 id="building-business-systems-with-dsls-for-nginx-openresty">Building Business Systems with DSLs for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty<a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link">¶</a></h1>
+<p>~ 来自春哥的分享</p>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ul>
+<li>5年前也听录了一次 春哥的分享:<a href="http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.html">由Lua 粘合的Nginx生态环境</a></li>
+<li>然后, 神奇的引发了各种后来的然后</li>
+<li>去年, 在 <span class="caps">NGINX</span> 大会上, 春哥才真正讲出了10年前设计 OpenResty 前身时内心的宏大构想</li>
+<li>所以, 值得认真 review 一下:<ul>
+<li>视频:<a href="https://www.youtube.com/watch?v=w2RAZLptE-U">Building Business Systems with Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty | Cloudflare - YouTube</a></li>
+<li>文稿:<ul>
+<li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-1/">Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty, Part 1</a></li>
+<li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-2/">Domain-Specific Languages for …</a></li></ul></li></ul></li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/dsl-atop-openresty.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/pyqt4macos.html">PyQt4 之消失在&nbsp;Sierra</a></h2>
                 <div class="summary">
 <h3 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
@@ -139,38 +158,6 @@
 <li>导致新版本的全局 theme 定义节点</li>
 <li><code>lThemes: copy to last top-level setting in myLeoSettings.leo--&gt;Common to all themes--&gt;Colors for …</code></li></ul></li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/leo5theme-key-words.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
-                <div class="summary">
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>C样:</p>
-<div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
-<p>偏门:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
-</pre></div>
-<p>蠎样:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">v</span> <span class="n">in</span> <span class="n">my_list</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">v</span>
-</pre></div>
-<p>模式:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">name</span> <span class="n">in</span> <span class="n">iterable</span><span class="o">:</span>
-    <span class="n">statements</span>
-</pre></div>
-<ul>
-<li>可 …</li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
                 </div>
             </article>
             <hr/>

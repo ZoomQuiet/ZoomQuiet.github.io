@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Wed, 03 Apr 2019 12:12:00 +0800</lastBuildDate><item><title>修复 subl3 包安装</title><link>https://blog.zoomquiet.io/fix-subl-package-installation.html</link><description>
+<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0800</lastBuildDate><item><title>Leo 第N次科普</title><link>https://blog.zoomquiet.io/leo-101-againnn.html</link><description>
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://wewe.t9t.io/chat/%E3%80%90%E9%9B%86%E6%99%BA%E3%80%91%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8E%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E7%BE%A4"&gt;[集智]注意力与知识管理群&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;中大家经常就一些工具产生各种讨论, 俺一向的标签是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Pythonic&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.leoeditor.com/"&gt;Leo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其它还好, 有广泛群众基础, 这个 Leo 就经常引发嗯哼&lt;/p&gt;
+&lt;h2 id="_2"&gt;引子:&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pimgeek-知识管理工具研究者: 插一个技术提问…  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;@大妈🙊Zoom.Quiet LeoEditor 的节点支持类似 {{ var }} 这样的模板语法吗?&lt;ul&gt;
+&lt;li&gt;我知道 &amp;lt;&amp;lt; section &amp;gt;&amp;gt; 这样的用法,还有 valuespace + jinja 的方式, 不知还有没有其它实现方式?[疑问] ‘&lt;/li&gt;
+&lt;li&gt;&amp;lt;&amp;lt; section &amp;gt;&amp;gt; 这种用法是 LeoEditor 内置的实现方式&lt;/li&gt;
+&lt;li&gt;{{ var }} 这种用法是 LeoEditor 插件的实现方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;我就是希望定义一些可填充的内容,把这些内容从代码主体中抽取出来,这样我编辑起来方便.  ‘&lt;ul&gt;
+&lt;li&gt;有些内容,比如网页里的作者信息等,一次编辑后反复引用. 修改时也方便. &lt;/li&gt;
+&lt;li&gt;专业的 Web 开发者应该是把这些代码拆成多个文件来管理 …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Fri, 23 Aug 2019 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2019-08-23:/leo-101-againnn.html</guid><category>python</category><category>howto</category><category>leo</category><category>doc</category></item><item><title>修复 subl3 包安装</title><link>https://blog.zoomquiet.io/fix-subl-package-installation.html</link><description>
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;突然: &lt;code&gt;cmd+shift+P&lt;/code&gt; 选择 &lt;code&gt;Package Control: install package&lt;/code&gt; 时,一直:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -27,7 +50,7 @@
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Google+ 帐号将于 2019 年 4 月 2 日关停。下载 Google+ 内容可能需要一些时间，因此请在 2019 年 3 月 31 日之前开始下载。&lt;/p&gt;
+&lt;p&gt;Google+ 帐号将于 2019 年 4 月 2 日关停. 下载 Google+ 内容可能需要一些时间,因此请在 2019 年 3 月 31 日之前开始下载. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
@@ -348,7 +371,7 @@
 &lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Caveats&lt;/span&gt;
 &lt;span class="n"&gt;If&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="n"&gt;npm&lt;/span&gt; &lt;span class="n"&gt;itself&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;NOT&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;npm&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;span class="n"&gt;The …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 09 Apr 2015 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-04-09:/jump-into-ssd.html</guid><category>MAC</category><category>Leo</category><category>Pyenv</category><category>ZQ</category></item><item><title>再见了 Python</title><link>https://blog.zoomquiet.io/saying-ggodby-python-zh.html</link><description>&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This post is long overdue; this isn’t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
+&lt;p&gt;This post is long overdue; this isn&amp;#8217;t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
 &lt;p&gt;While …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sat, 10 Jan 2015 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-01-10:/saying-ggodby-python-zh.html</guid><category>Weekly</category><category>Zh</category></item><item><title>KnewOne-talk 之 大妈 篇</title><link>https://blog.zoomquiet.io/knewone-talk-zoomq-choise.html</link><description>
 &lt;p&gt;~ KnewOne talk question list&lt;/p&gt;
 &lt;h2 id="_1"&gt;分享你的生活方式&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -522,7 +545,7 @@ Nick Coghlan
 &lt;li&gt;140803 偶遇抄转&lt;/li&gt;
 &lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sun, 03 Aug 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-08-03:/140718-fsf-emailselfdefense-mac.html</guid><category>fsf</category><category>Pythoneer</category><category>Zh</category></item><item><title>How to argue for Python’s use</title><link>https://blog.zoomquiet.io/140718_Brett_Cannon-How2argue4Python-use.html</link><description>
 &lt;p&gt;&lt;a href="http://nothingbutsnark.svbtle.com/how-to-argue-for-pythons-use"&gt;How to argue for Python’s use&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Recently I wrote a blog post about how I don’t worry about Python losing users. Within minutes I had people asking about Python’s usage, which the post was not about and is a very different thing to worry about. See, it …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Fri, 18 Jul 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-07-18:/140718_Brett_Cannon-How2argue4Python-use.html</guid><category>Brett</category><category>Pythoneer</category><category>Zh</category></item><item><title>为毛俺不担心所谓Python用户流失</title><link>https://blog.zoomquiet.io/why-i-dont-worry-about-pythons-popularity.html</link><description>&lt;h2 id="why-i-dont-worry-about-python-losing-users"&gt;Why I don’t worry about Python losing users&lt;a class="headerlink" href="#why-i-dont-worry-about-python-losing-users" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Recently I wrote a blog post about how I don’t worry about Python losing users. Within minutes I had people asking about Python’s usage, which the post was not about and is a very different thing to worry about. See, it …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Fri, 18 Jul 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-07-18:/140718_Brett_Cannon-How2argue4Python-use.html</guid><category>Brett</category><category>Pythoneer</category><category>Zh</category></item><item><title>为毛俺不担心所谓Python用户流失</title><link>https://blog.zoomquiet.io/why-i-dont-worry-about-pythons-popularity.html</link><description>&lt;h2 id="why-i-dont-worry-about-python-losing-users"&gt;Why I don&amp;#8217;t worry about Python losing users&lt;a class="headerlink" href="#why-i-dont-worry-about-python-losing-users" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I just had a need to read two files that were line-delimited lists of domains, consolidate the data, and then output the domains sorted and all lowercased to a new file. It took me 10 lines of Python code and worked …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Fri, 11 Jul 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-07-11:/why-i-dont-worry-about-pythons-popularity.html</guid><category>BRETT</category><category>Leo</category><category>PyConChina</category><category>Zh</category></item><item><title>ScrapBook彻查成果</title><link>https://blog.zoomquiet.io/zq-chk4scrapbook.html</link><description>
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill"&gt;我的学习&amp;amp;工具&lt;/a&gt;&lt;/p&gt;
@@ -541,7 +564,7 @@ Nick Coghlan
 &lt;h3 id="_2"&gt;可是!&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;参考 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Fri, 11 Jul 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-07-11:/zq-chk4scrapbook.html</guid><category>scrapbook</category><category>python</category><category>howto</category><category>mavericks</category></item><item><title>pydata笔记:环境配置</title><link>https://blog.zoomquiet.io/pydata-0-mavericks.html</link><description>
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="s27157694.jpg（JPEG 图像，300x300 像素）" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="s27157694.jpg(JPEG 图像,300x300 像素)" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;是本好书…&lt;/p&gt;
 &lt;p&gt;为什么知道这书呢? 因为翻译 &lt;a href="http://weekly.pychina.org/"&gt;|蠎周刊 |汇集全球蠎事儿 !-)&lt;/a&gt;&lt;/p&gt;
@@ -616,7 +639,7 @@ Nick Coghlan
 &lt;li&gt;通过板载 &lt;span class="caps"&gt;SATA&lt;/span&gt; 接口,加装 2.5吋 1T 新硬盘&lt;/li&gt;
 &lt;li&gt;安装 Samba 系统 …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Mon, 27 Jan 2014 23:48:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-01-27:/cb3-howto-make-hmsrv.html</guid><category>MAC</category><category>CT</category><category>Cubier</category><category>CubieBoard</category><category>Howto</category></item><item><title>如何自在的折腾QPy</title><link>https://blog.zoomquiet.io/init-my-qpy-env.html</link><description>
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python（中文版） (豆瓣)&lt;/a&gt; 时,发现竟然有 
+&lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python(中文版) (豆瓣)&lt;/a&gt; 时,发现竟然有 
 &lt;a href="http://code.google.com/p/android-scripting/"&gt;&lt;span class="caps"&gt;SL4A&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这种神器! Google 果断是业界良心哪,
 可惜: 从&lt;a href="http://code.google.com/p/android-scripting/downloads/list"&gt;Downloads&lt;/a&gt;
@@ -765,8 +788,8 @@ Nick Coghlan
 &lt;p&gt;&lt;img alt="EKR" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*yKVZtcJyfh-FHNEtXrqjPw.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://leoeditor.com/"&gt;Leo&lt;/a&gt; is OpenSource,written by Python,can run in M$/Linux/&lt;span class="caps"&gt;MAC&lt;/span&gt;/etc. ,Leo is Literate Environment Outline-oriented ;-)
 &lt;span class="caps"&gt;EKR&lt;/span&gt; is her&amp;nbsp;father.&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;BUT&lt;/span&gt;, what is “Literate” ,is hard to explained,
-i try and try and try to show/share to Chinese People, &lt;span class="caps"&gt;BUT&lt;/span&gt;…
+&lt;p&gt;&lt;span class="caps"&gt;BUT&lt;/span&gt;, what is &amp;#8220;Literate&amp;#8221; ,is hard to explained,
+i try and try and try to show/share to Chinese People, &lt;span class="caps"&gt;BUT&lt;/span&gt;&amp;#8230; 
 next week,there is another …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 06 Nov 2013 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2013-11-06:/ekr-selfintro-for-chinese.html</guid><category>EKR</category><category>Leo</category><category>PyConChina</category><category>Zh</category></item><item><title>Collections and Embedded Documents in MongoDB</title><link>https://blog.zoomquiet.io/mongo-collections-embdded-think.html</link><description>&lt;h1 id="mongodb"&gt;MongoDB 中的集合或嵌入式文档&lt;a class="headerlink" href="#mongodb" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="mongo" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*cwCnTFQEbcUSy1KvoiIqXg.png"&gt;&lt;/p&gt;
 &lt;p&gt;[via]&amp;nbsp;http://fosterelli.co/collections-and-embedded-documents-in-mongodb.html&lt;/p&gt;

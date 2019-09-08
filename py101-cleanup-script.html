@@ -154,7 +154,7 @@ The latest release is always updated to the Python Package Index. The source cod
 
 
 <h2 id="finding-the-number-of-files-recursively-in-a-directory">Finding the number of files recursively in a directory:<a class="headerlink" href="#finding-the-number-of-files-recursively-in-a-directory" title="Permanent link">&para;</a></h2>
-<p>That was easy! Wasn’t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&nbsp;Python.</p>
+<p>That was easy! Wasn&#8217;t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&nbsp;Python.</p>
 <div class="highlight"><pre><span class="n">from</span> <span class="n">path</span> <span class="n">import</span> <span class="n">path</span>
 <span class="n">file_count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">dir_count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -214,7 +214,7 @@ d = path(<span class="caps">DIRECTORY</span>)</p>
             i.remove()
 In the above script I did not implement any logging and error handling. That is left as an exercise for the&nbsp;reader.</p>
 <h2 id="deleting-files-based-on-their-extension">Deleting files based on their extension<a class="headerlink" href="#deleting-files-based-on-their-extension" title="Permanent link">&para;</a></h2>
-<p>Just suppose you want to remove all the ‘.pyc’ files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in&nbsp;path.py.</p>
+<p>Just suppose you want to remove all the &#8216;.pyc&#8217; files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in&nbsp;path.py.</p>
 <div class="highlight"><pre><span class="n">from</span> <span class="n">path</span> <span class="n">import</span> <span class="n">path</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
 <span class="n">files</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">walkfiles</span><span class="p">(</span><span class="s">&quot;*.pyc&quot;</span><span class="p">)</span>
@@ -265,7 +265,7 @@ Is it possible with path.py? Yes it is! So here is a script which does this&nbsp
 
 <p>So we have also learned how to remove files based on their last modified time. If you want to delete files based on last access time just change i.mtime to i.atime and you will be good to&nbsp;go.</p>
 <h2 id="goodbye">Goodbye<a class="headerlink" href="#goodbye" title="Permanent link">&para;</a></h2>
-<p>So that was it. I hope you liked the post. In the end I would like to make a public apology that my English is not good so you may find some grammar mistakes. You are requested to email them to me so that I can improve my English. If you liked this post then don’t forget to follow me on twitter and facebook. A retweet won’t hurt either! If you want to send me a pm then use this&nbsp;email.</p>
+<p>So that was it. I hope you liked the post. In the end I would like to make a public apology that my English is not good so you may find some grammar mistakes. You are requested to email them to me so that I can improve my English. If you liked this post then don&#8217;t forget to follow me on twitter and facebook. A retweet won&#8217;t hurt either! If you want to send me a pm then use this&nbsp;email.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>140125 翻译 Weekly issue:99.5&nbsp;时发现,转抄学习</li>

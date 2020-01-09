@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0800</lastBuildDate><item><title>Leo 第N次科普</title><link>https://blog.zoomquiet.io/leo-101-againnn.html</link><description>
+<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0800</lastBuildDate><item><title>如何将 ipynb 发布到 blog 中?</title><link>https://blog.zoomquiet.io/200108-ex-map-enum.html</link><description>
+&lt;p&gt;因为各种原因吧…&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;很早在 &lt;span class="caps"&gt;ECUG&lt;/span&gt; 就接触了 Erlang&lt;ul&gt;
+&lt;li&gt;但是, 怪异的语法,以及狭小的应用领域,一直没真正使用起来&lt;/li&gt;
+&lt;li&gt;现在, 发现 Elixir 很好的解决了 &lt;span class="caps"&gt;OTP&lt;/span&gt; 生态的通用应用问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;所以, 开始折腾…&lt;/li&gt;
+&lt;li&gt;结果, 撞见各种值得嗯哼的事儿…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="env"&gt;env.&lt;a class="headerlink" href="#env" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;༄ screenfetch&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;                 &lt;span class="s-Atom"&gt;-/+:.&lt;/span&gt;          &lt;span class="s-Atom"&gt;zoomq@&lt;/span&gt;&lt;span class="nv"&gt;ZQ160626rMBP&lt;/span&gt;
+                &lt;span class="s-Atom"&gt;:++++.&lt;/span&gt;          &lt;span class="nv"&gt;OS&lt;/span&gt;&lt;span class="s-Atom"&gt;:&lt;/span&gt; &lt;span class="m"&gt;64&lt;/span&gt;&lt;span class="s-Atom"&gt;bit&lt;/span&gt; &lt;span class="nv"&gt;Mac&lt;/span&gt; &lt;span class="nv"&gt;OS&lt;/span&gt; &lt;span class="nv"&gt;X&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="m"&gt;12&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="m"&gt;6&lt;/span&gt; &lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="nv"&gt;G2136&lt;/span&gt;
+               &lt;span class="s-Atom"&gt;/+++/.&lt;/span&gt;           &lt;span class="nv"&gt;Kernel&lt;/span&gt;&lt;span class="s-Atom"&gt;:&lt;/span&gt; &lt;span class="s-Atom"&gt;x86_64&lt;/span&gt; &lt;span class="nv"&gt;Darwin&lt;/span&gt; &lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;
+       &lt;span class="p"&gt;.:-&lt;/span&gt;&lt;span class="s-Atom"&gt;::-&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s-Atom"&gt;+/:-&lt;/span&gt;&lt;span class="err"&gt;``&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s-Atom"&gt;::-&lt;/span&gt;       &lt;span class="nv"&gt;Uptime&lt;/span&gt;&lt;span class="s-Atom"&gt;:&lt;/span&gt; &lt;span class="m"&gt;30&lt;/span&gt;&lt;span class="s-Atom"&gt;d&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt;&lt;span class="s-Atom"&gt;h&lt;/span&gt; &lt;span class="m"&gt;38&lt;/span&gt;&lt;span class="s-Atom"&gt;m&lt;/span&gt;
+    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s-Atom"&gt;:/++++++/::::/++++++/:&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;    &lt;span class="nv"&gt;Packages&lt;/span&gt;&lt;span class="s-Atom"&gt;:&lt;/span&gt; &lt;span class="m"&gt;241&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s-Atom"&gt;:///////////////////////:&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;   &lt;span class="nv"&gt;Shell …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 08 Jan 2020 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2020-01-08:/200108-ex-map-enum.html</guid><category>Elixir</category><category>FAQ</category><category>sayeahooo</category></item><item><title>Leo 第N次科普</title><link>https://blog.zoomquiet.io/leo-101-againnn.html</link><description>
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://wewe.t9t.io/chat/%E3%80%90%E9%9B%86%E6%99%BA%E3%80%91%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8E%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E7%BE%A4"&gt;[集智]注意力与知识管理群&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;中大家经常就一些工具产生各种讨论, 俺一向的标签是:&lt;/p&gt;

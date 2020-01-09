@@ -85,6 +85,40 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/jump-into-ssl.html">如何持证 (<span class="caps">SSL</span>)&nbsp;开车</a></h2>
+                <div class="summary">
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国</a></p>
+<p>被成功安利…</p>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<p>因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 <code>*-pages</code> 服务快速发布:</p>
+<ul>
+<li>github/gitlab 为核心</li>
+<li>免费 <span class="caps">SSL</span> 认证为基础</li>
+<li>最好能一次配置长期可用</li>
+</ul>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<p>整体上, 无论在哪个 <code>*-pages</code> 平台, 要折腾的事儿相似, 就3步:</p>
+<ul>
+<li>追加配置含 <code>SSL</code> 解析能力的 <span class="caps">DNS</span> 服务主机 <code>A</code> 地址<ul>
+<li>并解决引发的有关 <code>CANEM</code> 冲突问题</li>
+</ul>
+</li>
+<li>在 <code>*-pages</code> 平台配置 <code>Enforce HTTPS</code> 有关嗯哼</li>
+<li>优雅的等待一切生效 ;-)<ul>
+<li>并解决可能的资源冲突问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
+<p>原先的:</p>
+<blockquote>
+<p>༄  dig blog …</p></blockquote>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssl.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/180220-book-ai-historic.html">内圈梗集锦(人工智能简史)书评</a></h2>
                 <div class="summary">
 <p>版权归作者所有,任何形式转载请联系作者. </p>
@@ -124,25 +158,6 @@
 <li>190331 ZoomQuiet init.</li>
 </ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/bind-press-one.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/dsl-atop-openresty.html">用 <span class="caps">DSL</span>&nbsp;们构筑商用系统</a></h2>
-                <div class="summary">
-<h1 id="building-business-systems-with-dsls-for-nginx-openresty">Building Business Systems with DSLs for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty<a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link">¶</a></h1>
-<p>~ 来自春哥的分享</p>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<ul>
-<li>5年前也听录了一次 春哥的分享:<a href="http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.html">由Lua 粘合的Nginx生态环境</a></li>
-<li>然后, 神奇的引发了各种后来的然后</li>
-<li>去年, 在 <span class="caps">NGINX</span> 大会上, 春哥才真正讲出了10年前设计 OpenResty 前身时内心的宏大构想</li>
-<li>所以, 值得认真 review 一下:<ul>
-<li>视频:<a href="https://www.youtube.com/watch?v=w2RAZLptE-U">Building Business Systems with Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty | Cloudflare - YouTube</a></li>
-<li>文稿:<ul>
-<li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-1/">Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty, Part 1</a></li>
-<li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-2/">Domain-Specific Languages for …</a></li></ul></li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/dsl-atop-openresty.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -238,6 +253,14 @@
                         <i class="icon-folder-open icon-large"></i>Chaos
                     </a>
                     <a href="https://blog.zoomquiet.io/feeds/chaos.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/elixir.html">
+                        <i class="icon-folder-open icon-large"></i>Elixir
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/elixir.atom.xml">
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>

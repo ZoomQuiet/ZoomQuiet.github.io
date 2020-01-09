@@ -90,7 +90,7 @@
             <header class="page-header">
                 <h1>
                     <a href="https://blog.zoomquiet.io/200108-ex-map-enum.html">
-                        如何将 ipynb 发布到 blog&nbsp;中?
+                        Elixir 中列出 Map&nbsp;中值键对的折腾&#8230;
                     </a>
                 </h1>
             </header>
@@ -173,14 +173,124 @@
 <li>Elixir 1.9.1 (compiled with Erlang/<span class="caps">OTP</span> 20)</li>
 </ul>
 <h2 id="problem">problem<a class="headerlink" href="#problem" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>使用 Plug 快速开发 Slack 插件…</p>
+</blockquote>
+<p>首先得完成基于 Plug 的 <span class="caps">API</span> 服务,
+这其中最关键的是从 <span class="caps">GET</span>/<span class="caps">POST</span> 协议请求中获得 Slack 转发过来的用户指令;</p>
+<p>官方文档中 demo 形似:</p>
+<div class="highlight"><pre><span class="n">defmodule</span> <span class="n">Example</span><span class="p">.</span><span class="n">Plug</span><span class="p">.</span><span class="n">VerifyRequest</span> <span class="k">do</span>
+  <span class="n">defmodule</span> <span class="n">IncompleteRequestError</span> <span class="k">do</span>
+    <span class="err">@</span><span class="n">moduledoc</span> <span class="s">"""</span>
+    <span class="n">Error</span> <span class="n">raised</span> <span class="n">when</span> <span class="n">a</span> <span class="n">required</span> <span class="n">field</span> <span class="n">is</span> <span class="n">missing</span><span class="p">.</span>
+    <span class="s">"""</span>
+
+    <span class="n">defexception</span> <span class="n">message</span><span class="o">:</span> <span class="s">""</span>
+  <span class="n">end</span>
+
+  <span class="n">def</span> <span class="n">init</span><span class="p">(</span><span class="n">options</span><span class="p">),</span> <span class="k">do</span><span class="o">:</span> <span class="n">options</span>
+
+  <span class="n">def</span> <span class="n">call</span><span class="p">(</span><span class="o">%</span><span class="n">Plug</span><span class="p">.</span><span class="n">Conn</span><span class="p">{</span><span class="n">request_path</span><span class="o">:</span> <span class="n">path</span><span class="p">}</span> <span class="o">=</span> <span class="n">conn</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="n">path</span> <span class="n">in</span> <span class="n">opts</span><span class="p">[</span><span class="o">:</span><span class="n">paths</span><span class="p">],</span> <span class="k">do</span><span class="o">:</span> <span class="n">verify_request</span><span class="o">!</span><span class="p">(</span><span class="n">conn</span><span class="p">.</span><span class="n">params</span><span class="p">,</span> <span class="n">opts</span><span class="p">[</span><span class="o">:</span><span class="n">fields</span><span class="p">])</span>
+    <span class="n">conn</span>
+  <span class="n">end</span>
+
+  <span class="n">defp</span> <span class="n">verify_request</span><span class="o">!</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">fields</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">verified</span> <span class="o">=</span>
+      <span class="n">params</span>
+      <span class="o">|&gt;</span> <span class="n">Map</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span>
+      <span class="o">|&gt;</span> <span class="n">contains_fields</span><span class="o">?</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span>
+
+    <span class="n">unless</span> <span class="n">verified</span><span class="p">,</span> <span class="k">do</span><span class="o">:</span> <span class="n">raise</span><span class="p">(</span><span class="n">IncompleteRequestError</span><span class="p">)</span>
+  <span class="n">end</span>
+
+  <span class="n">defp</span> <span class="n">contains_fields</span><span class="o">?</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">fields</span><span class="p">),</span> <span class="k">do</span><span class="o">:</span> <span class="n">Enum</span><span class="p">.</span><span class="n">all</span><span class="o">?</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="o">&amp;</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">1</span> <span class="n">in</span> <span class="n">keys</span><span class="p">))</span>
+<span class="n">end</span>
+</pre></div>
+<p>对应检验请求可以是:</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">curl</span> <span class="n">localhost</span><span class="o">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">upload</span><span class="o">?</span><span class="n">content</span><span class="o">=</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">mimetype</span><span class="o">=</span><span class="n">bar</span>
+</pre></div>
+<p>问题是:</p>
+<div class="highlight"><pre><span class="p">...</span>
+<span class="o">|&gt;</span> <span class="n">contains_fields</span><span class="o">?</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span>
+</pre></div>
+<ul>
+<li>提供的函式只是对所有 <span class="caps">URI</span> 参数键进行检验, 如果缺少了则报错,</li>
+<li>可是, 正确请求时, 如何获得所有参数值?</li>
+</ul>
+<p>先使用输出语句来探查 params 是什么数据类型:</p>
+<div class="highlight"><pre><span class="n">IO</span><span class="p">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+<p>请求触发后终端输出:</p>
+<div class="highlight"><pre><span class="c">%{"cnt" =&gt; "foo", "mmt" =&gt; "bar"}</span>
+</pre></div>
+<p>是标准 Map 对象.</p>
 <h2 id="try">try<a class="headerlink" href="#try" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>Enum.all?() 是个重要的入口</p>
+</blockquote>
+<p>追查文档, 知道 Enum 有丰富的序列型数据处置支持:</p>
+<blockquote>
+<p>Enum.each 可以针对每个键进行附加处置</p>
+</blockquote>
+<p>所以:</p>
+<p>defp echo_vars(keys, fields) do 
+    Enum.each(fields, fn(s) -&gt; <span class="caps">IO</span>.puts(s) end)
+    <span class="caps">LOG</span>.info(“chk. as #{keys} ;-)”) end</p>
+<p>但是, 各种出错, 因为这时, 传入的 keys 是只有请求 Map 中的键;</p>
+<p>那么:</p>
+<div class="highlight"><pre><span class="n">Enum</span><span class="p">.</span><span class="n">each</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">fn</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IO</span><span class="p">.</span><span class="n">puts</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">k</span><span class="p">))</span> <span class="n">end</span><span class="p">)</span>
+</pre></div>
+<ul>
+<li>跳出 verified = params … 的处理流水线;</li>
+<li>直接追加列印处理?</li>
+<li>也不行…<ul>
+<li>光是看形式就有问题</li>
+<li>先对 Map 进行 Enum.each </li>
+<li>然后对每一个键, 再进行 Map.get</li>
+<li>这简直是对相同的数据进行反复操作</li>
+</ul>
+</li>
+</ul>
 <h2 id="hummm">Hummm?!<a class="headerlink" href="#hummm" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>万万没想到…</p>
+</blockquote>
+<p>无意中在 <a href="https://mlog.club/article/1923002">如何在Elixir中将映射键从字符串转换为原子 | 码农俱乐部 - Golang中国 - Go语言中文社区</a></p>
+<p>看到:</p>
+<div class="highlight"><pre><span class="n">iex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">string_key_map</span> <span class="o">=</span> <span class="o">%</span><span class="p">{</span><span class="s">"foo"</span> <span class="o">=&gt;</span> <span class="s">"bar"</span><span class="p">,</span> <span class="s">"hello"</span> <span class="o">=&gt;</span> <span class="s">"world"</span><span class="p">}</span>
+</pre></div>
+<p>%{“foo” =&gt; “bar”, “hello” =&gt; “world”}</p>
+<div class="highlight"><pre>iex<span class="p">(</span><span class="m">2</span><span class="p">)</span><span class="o">&gt;</span> <span class="kr">for</span> <span class="p">{</span>key<span class="p">,</span> val<span class="p">}</span> <span class="o">&lt;-</span> string_key_map<span class="p">,</span> into<span class="o">:</span> <span class="o">%{}, do: {String.to_atom(key), val}</span>
+<span class="o">%</span><span class="p">{</span>foo<span class="o">:</span> <span class="s">"bar"</span><span class="p">,</span> hello<span class="o">:</span> <span class="s">"world"</span><span class="p">}</span>
+</pre></div>
+<p>虽说这是 Comprehensions 概念的通常使用,
+但是, 发现, for 这个操作, 和 Python 中的完全一致哪, 于是:</p>
+<div class="highlight"><pre>  defp echo_vars<span class="p">(</span>params<span class="p">)</span> do
+    <span class="kr">for</span> <span class="p">{</span>key<span class="p">,</span> val<span class="p">}</span> <span class="o">&lt;-</span> params do
+      <span class="c1">#IO.inspect(key)</span>
+      <span class="c1">#IO.inspect(val)</span>
+      LOG.info<span class="p">(</span><span class="s">"each -&gt; #{key}=&gt;#{val} ;-)"</span><span class="p">)</span>
+    end
+  end
+</pre></div>
+<p>简直和 Python 中解包行为完全一致…</p>
+<p>可是: <a href="https://learnxinyminutes.com/docs/zh-cn/elixir-cn/">Learn elixir in Y Minutes</a>
+一句也没提及, for 这么 <span class="caps">NB</span> 的操作符哪…</p>
 <h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://mlog.club/article/1923002">如何在Elixir中将映射键从字符串转换为原子</a></li>
+<li><a href="https://hexdocs.pm/plug/Plug.Router.html">Plug.Router — Plug v1.8.3</a><ul>
+<li><a href="http://elixirschool.com/zh-hans/lessons/specifics/plug/">Plug · Elixir School</a></li>
+</ul>
+</li>
+<li><a href="https://mlog.club/article/1923002">如何在Elixir中将映射键从字符串转换为原子</a><ul>
+<li><a href="https://szpzs.oschina.io/2017/02/11/elixir-getting-started-comprehensions/">Elixir入门教程－速构 | Time is all</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h2>
 <ul>
+<li>200109 .5h 配置模板,重新发布</li>
 <li>200108 .5h 输出</li>
 <li>200107 2.5h 折腾</li>
 </ul>
@@ -238,11 +348,28 @@
         ,<code><a href="http://github.com/ZoomQuiet">github</a>
             </code>
         or
-        <code><a href="http://bitbucket.org/ZoomQuiet">bitbucket</a>
+        <code><a href="http://gitlab.com/zoomquiet">gitlab</a>
             </code>.
         Tip me via 
-        <code><a href="https://www.gittip.com/ZoomQuiet/">gittip</a>
+
+<!--
+<style>.bmc-button img{width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 28px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}
+</style>
+<link href="https://fonts.lug.ustc.edu.cn/css?family=Cookie" rel="stylesheet">
+<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/zoomquiet"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+-->        
+
+<style>.bmc-button img{width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 28px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}
+</style>
+<link href="https://fonts.lug.ustc.edu.cn/css?family=Cookie" rel="stylesheet">
+<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/zoomquiet"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+
+
+<!--
+    <code><a href="https://www.gittip.com/ZoomQuiet/">gittip</a>
             </code>.
+-->        
+||
         <a href="http://blog.zoomquiet.io/feeds/all.atom.xml">(feed)</a>
     </sub>
 

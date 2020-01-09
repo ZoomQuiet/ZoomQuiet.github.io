@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- Zoom.Quiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2020-01-08T00:00:00+08:00</updated><entry><title>如何将 ipynb 发布到 blog 中?</title><link href="https://blog.zoomquiet.io/200108-ex-map-enum.html" rel="alternate"></link><published>2020-01-08T00:00:00+08:00</published><updated>2020-01-08T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2020-01-08:/200108-ex-map-enum.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- Zoom.Quiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2020-01-08T00:00:00+08:00</updated><entry><title>Elixir 中列出 Map 中值键对的折腾…</title><link href="https://blog.zoomquiet.io/200108-ex-map-enum.html" rel="alternate"></link><published>2020-01-08T00:00:00+08:00</published><updated>2020-01-08T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2020-01-08:/200108-ex-map-enum.html</id><summary type="html">
 &lt;p&gt;因为各种原因吧…&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;很早在 &lt;span class="caps"&gt;ECUG&lt;/span&gt; 就接触了 Erlang&lt;ul&gt;
@@ -52,14 +52,124 @@
 &lt;li&gt;Elixir 1.9.1 (compiled with Erlang/&lt;span class="caps"&gt;OTP&lt;/span&gt; 20)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="problem"&gt;problem&lt;a class="headerlink" href="#problem" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 Plug 快速开发 Slack 插件…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先得完成基于 Plug 的 &lt;span class="caps"&gt;API&lt;/span&gt; 服务,
+这其中最关键的是从 &lt;span class="caps"&gt;GET&lt;/span&gt;/&lt;span class="caps"&gt;POST&lt;/span&gt; 协议请求中获得 Slack 转发过来的用户指令;&lt;/p&gt;
+&lt;p&gt;官方文档中 demo 形似:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;defmodule&lt;/span&gt; &lt;span class="n"&gt;Example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Plug&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VerifyRequest&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;defmodule&lt;/span&gt; &lt;span class="n"&gt;IncompleteRequestError&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;moduledoc&lt;/span&gt; &lt;span class="s"&gt;"""&lt;/span&gt;
+    &lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;raised&lt;/span&gt; &lt;span class="n"&gt;when&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;required&lt;/span&gt; &lt;span class="n"&gt;field&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;missing&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+    &lt;span class="s"&gt;"""&lt;/span&gt;
+
+    &lt;span class="n"&gt;defexception&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;""&lt;/span&gt;
+  &lt;span class="n"&gt;end&lt;/span&gt;
+
+  &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;options&lt;/span&gt;
+
+  &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;Plug&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Conn&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;request_path&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;opts&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;opts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;verify_request&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;opts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="n"&gt;conn&lt;/span&gt;
+  &lt;span class="n"&gt;end&lt;/span&gt;
+
+  &lt;span class="n"&gt;defp&lt;/span&gt; &lt;span class="n"&gt;verify_request&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;verified&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+      &lt;span class="n"&gt;params&lt;/span&gt;
+      &lt;span class="o"&gt;|&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+      &lt;span class="o"&gt;|&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;contains_fields&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;unless&lt;/span&gt; &lt;span class="n"&gt;verified&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;raise&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IncompleteRequestError&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;end&lt;/span&gt;
+
+  &lt;span class="n"&gt;defp&lt;/span&gt; &lt;span class="n"&gt;contains_fields&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Enum&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;对应检验请求可以是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;curl&lt;/span&gt; &lt;span class="n"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;8080&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;upload&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;mimetype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;bar&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;问题是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="o"&gt;|&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;contains_fields&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;提供的函式只是对所有 &lt;span class="caps"&gt;URI&lt;/span&gt; 参数键进行检验, 如果缺少了则报错,&lt;/li&gt;
+&lt;li&gt;可是, 正确请求时, 如何获得所有参数值?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;先使用输出语句来探查 params 是什么数据类型:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;IO&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inspect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;请求触发后终端输出:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;%{"cnt" =&amp;gt; "foo", "mmt" =&amp;gt; "bar"}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;是标准 Map 对象.&lt;/p&gt;
 &lt;h2 id="try"&gt;try&lt;a class="headerlink" href="#try" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Enum.all?() 是个重要的入口&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;追查文档, 知道 Enum 有丰富的序列型数据处置支持:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Enum.each 可以针对每个键进行附加处置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以:&lt;/p&gt;
+&lt;p&gt;defp echo_vars(keys, fields) do 
+    Enum.each(fields, fn(s) -&amp;gt; &lt;span class="caps"&gt;IO&lt;/span&gt;.puts(s) end)
+    &lt;span class="caps"&gt;LOG&lt;/span&gt;.info(“chk. as #{keys} ;-)”) end&lt;/p&gt;
+&lt;p&gt;但是, 各种出错, 因为这时, 传入的 keys 是只有请求 Map 中的键;&lt;/p&gt;
+&lt;p&gt;那么:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Enum&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;IO&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;puts&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;跳出 verified = params … 的处理流水线;&lt;/li&gt;
+&lt;li&gt;直接追加列印处理?&lt;/li&gt;
+&lt;li&gt;也不行…&lt;ul&gt;
+&lt;li&gt;光是看形式就有问题&lt;/li&gt;
+&lt;li&gt;先对 Map 进行 Enum.each &lt;/li&gt;
+&lt;li&gt;然后对每一个键, 再进行 Map.get&lt;/li&gt;
+&lt;li&gt;这简直是对相同的数据进行反复操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="hummm"&gt;Hummm?!&lt;a class="headerlink" href="#hummm" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;万万没想到…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;无意中在 &lt;a href="https://mlog.club/article/1923002"&gt;如何在Elixir中将映射键从字符串转换为原子 | 码农俱乐部 - Golang中国 - Go语言中文社区&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;看到:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;iex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;string_key_map&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;"foo"&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;"bar"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"hello"&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;"world"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;%{“foo” =&amp;gt; “bar”, “hello” =&amp;gt; “world”}&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;iex&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="kr"&gt;for&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;key&lt;span class="p"&gt;,&lt;/span&gt; val&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; string_key_map&lt;span class="p"&gt;,&lt;/span&gt; into&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;%{}, do: {String.to_atom(key), val}&lt;/span&gt;
+&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;foo&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"bar"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; hello&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"world"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;虽说这是 Comprehensions 概念的通常使用,
+但是, 发现, for 这个操作, 和 Python 中的完全一致哪, 于是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;  defp echo_vars&lt;span class="p"&gt;(&lt;/span&gt;params&lt;span class="p"&gt;)&lt;/span&gt; do
+    &lt;span class="kr"&gt;for&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;key&lt;span class="p"&gt;,&lt;/span&gt; val&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; params do
+      &lt;span class="c1"&gt;#IO.inspect(key)&lt;/span&gt;
+      &lt;span class="c1"&gt;#IO.inspect(val)&lt;/span&gt;
+      LOG.info&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"each -&amp;gt; #{key}=&amp;gt;#{val} ;-)"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    end
+  end
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;简直和 Python 中解包行为完全一致…&lt;/p&gt;
+&lt;p&gt;可是: &lt;a href="https://learnxinyminutes.com/docs/zh-cn/elixir-cn/"&gt;Learn elixir in Y Minutes&lt;/a&gt;
+一句也没提及, for 这么 &lt;span class="caps"&gt;NB&lt;/span&gt; 的操作符哪…&lt;/p&gt;
 &lt;h2 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://mlog.club/article/1923002"&gt;如何在Elixir中将映射键从字符串转换为原子&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hexdocs.pm/plug/Plug.Router.html"&gt;Plug.Router — Plug v1.8.3&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://elixirschool.com/zh-hans/lessons/specifics/plug/"&gt;Plug · Elixir School&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mlog.club/article/1923002"&gt;如何在Elixir中将映射键从字符串转换为原子&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://szpzs.oschina.io/2017/02/11/elixir-getting-started-comprehensions/"&gt;Elixir入门教程－速构 | Time is all&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;200109 .5h 配置模板,重新发布&lt;/li&gt;
 &lt;li&gt;200108 .5h 输出&lt;/li&gt;
 &lt;li&gt;200107 2.5h 折腾&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Elixir"></category><category term="FAQ"></category><category term="sayeahooo"></category></entry><entry><title>Leo 第N次科普</title><link href="https://blog.zoomquiet.io/leo-101-againnn.html" rel="alternate"></link><published>2019-08-23T00:00:00+08:00</published><updated>2019-08-23T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-08-23:/leo-101-againnn.html</id><summary type="html">

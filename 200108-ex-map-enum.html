@@ -234,9 +234,11 @@
 <p>Enum.each 可以针对每个键进行附加处置</p>
 </blockquote>
 <p>所以:</p>
-<p>defp echo_vars(keys, fields) do 
-    Enum.each(fields, fn(s) -&gt; <span class="caps">IO</span>.puts(s) end)
-    <span class="caps">LOG</span>.info(“chk. as #{keys} ;-)”) end</p>
+<div class="highlight"><pre><span class="n">defp</span> <span class="n">echo_vars</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">fields</span><span class="p">)</span> <span class="k">do</span> 
+    <span class="n">Enum</span><span class="p">.</span><span class="n">each</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">fn</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IO</span><span class="p">.</span><span class="n">puts</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">end</span><span class="p">)</span>
+    <span class="n">LOG</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s">"chk. as #{keys} ;-)"</span><span class="p">)</span>
+<span class="n">end</span>
+</pre></div>
 <p>但是, 各种出错, 因为这时, 传入的 keys 是只有请求 Map 中的键;</p>
 <p>那么:</p>
 <div class="highlight"><pre><span class="n">Enum</span><span class="p">.</span><span class="n">each</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">fn</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IO</span><span class="p">.</span><span class="n">puts</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">k</span><span class="p">))</span> <span class="n">end</span><span class="p">)</span>

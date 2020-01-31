@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0800</lastBuildDate><item><title>Elixir 中列出 Map 中值键对的折腾…</title><link>https://blog.zoomquiet.io/200108-ex-map-enum.html</link><description>
+<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Fri, 31 Jan 2020 16:42:24 +0800</lastBuildDate><item><title>内圈梗集锦(人工智能简史)书评</title><link>https://blog.zoomquiet.io/200131-what-is-community.html</link><description>
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://shimo.im/docs/KWxwgtpwGQxYv6Gw"&gt;鼠年话开源-系列主题网聊&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第6夜是俺发起的议题&lt;/li&gt;
+&lt;li&gt;没想到是个错误的议题, 几句聊明白后&lt;/li&gt;
+&lt;li&gt;引发出更加有意思的讨论…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_2"&gt;触发&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中追本溯源的灵魂一问, 导入一本奇书中的论述&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span class="quo"&gt;‘&lt;/span&gt; 姜宁: https://github.com/open-organization-ambassadors/open-org-workbook/blob/master/open_org_workbook_1_1_5.pdf   222 页有一篇文章 community和open source community的论述,大家可以参考一下. ‘&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span class="quo"&gt;‘&lt;/span&gt; 姜宁: 里面提到一个概念,就是Open Communities 也不是绝对的Open . ‘&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span class="quo"&gt;‘&lt;/span&gt; 姜宁: open communities are a broader implementation of open source communities. ‘&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="_3"&gt;快译&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;尝试将要点翻译一下…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;什么是社区? …以往…现在互联网社区越来越重要…&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;社区”是指关系;它是成员与其共享的价值和活动系统之间的连接媒介. 换句话说 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Fri, 31 Jan 2020 16:42:24 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2020-01-31:/200131-what-is-community.html</guid><category>DAMA</category><category>Book</category><category>FLOSS</category></item><item><title>Elixir 中列出 Map 中值键对的折腾…</title><link>https://blog.zoomquiet.io/200108-ex-map-enum.html</link><description>
 &lt;p&gt;因为各种原因吧…&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;很早在 &lt;span class="caps"&gt;ECUG&lt;/span&gt; 就接触了 Erlang&lt;ul&gt;

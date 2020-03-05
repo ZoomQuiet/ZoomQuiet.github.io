@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title> — Articles de Zoom.Quiet/ 是也乎(￣▽￣)
+    <title> — Articles de ZoomQuiet/ 是也乎(￣▽￣)
 / ZoomQuiet.io    </title>
 
     <!-- Using the latest rendering mode for IE -->
@@ -67,8 +67,9 @@
                     <li><a href="https://py.101.camp/">课程</a></li>
                     <li><a href="https://t.zsxq.com/iaIEQ3N">星球</a></li>
                     <li><a href="http://weekly.pychina.org/">蟒周刊</a></li>
-                    <li><a href="https://du.101.camp/duw/">怼周刊</a></li>
-                    <li><a href="/pages/about.html">关于</a></li>
+                    <li><a href="https://du.101.camp/duw/">怼周报</a></li>
+                    <li><a href="/pages/ZoomQuiet.html">关于</a></li>
+                    <li><a href="https://zoomquiet.io/collection.html">收集</a></li>
               
 
               
@@ -87,84 +88,68 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="https://blog.zoomquiet.io/rst2s5-upgraded.html">rst2s5&nbsp;小折腾</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">Mavericks 中用&nbsp;sshfs</a></h2>
                 <div class="summary">
 <h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html">rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging</a></p>
-<p>所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:</p>
-<p><a href="http://s5.zoomquiet.io/">s5.zoomquiet.io</a></p>
+<p>自从 2011-12-16 入手 <span class="caps">MBP</span> 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便</p>
+<ul>
+<li>依赖少, 双方有 ssh 就好</li>
+<li>配置少, ssh 服务的启动没有 smb 服务那么多的配置</li>
+<li>自动断, 不会象 smb 死占一个虚假的挂接点</li>
+</ul>
 <h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
-<p>忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见</p>
+<p>每次 brew 出点小问题,就导致 sshfs 或是不痛快;</p>
+<p>目测已经折腾过至少4次了</p>
+<ul>
+<li>送修理两次</li>
+<li>从 10.6 升级 到 10.9 一次</li>
+<li>brew 在硬盘权限修订后,完全崩溃,重新安装 又一次</li>
+</ul>
 <h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
-<p>4年前的生成脚本,和最新 pygments 接口不匹配了,,,</p>
-<h1 id="_4">解决<a class="headerlink" href="#_4" title="Permanent link">¶</a></h1>
-<p>参考:</p>
-<ul>
-<li><a href="http://pygments.org/docs/rstdirective/">Using Pygments in ReST documents — Pygments</a></li>
-<li><a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/">Using rst for presentations</a></li>
-<li><a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html">rst2s5 with syntax highlighting</a></li>
-<li><a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files">python - Where can I find a …</a></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/rst2s5-upgraded.html">more ...</a>
+<p>毕竟 sshfs 依赖 <span class="caps">FUSE</span> 这种 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/livin-scrapbook.html">ScrapBook&nbsp;生存指南</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/guido-finding-his-way.html">寻路ing Guido van&nbsp;Rossum</a></h2>
                 <div class="summary">
-<p><code>7.7G    ZqFLOSS</code> 复制改进后,为毛多了?!</p>
-<div class="highlight"><pre><span class="n">zoomq</span> <span class="err">@</span> <span class="n">MBP111216ZQ</span> <span class="n">in</span> <span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
-<span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
-<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">devrel</span><span class="p">.</span><span class="n">json</span>
-<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">floss</span><span class="p">.</span><span class="n">json</span>
-<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">skm</span><span class="p">.</span><span class="n">json</span>
-<span class="mf">5.5</span><span class="n">G</span>    <span class="n">ZqDevRel</span>
-<span class="mf">6.4</span><span class="n">G</span>    <span class="n">ZqFLOSS</span>
-<span class="mf">3.5</span><span class="n">G</span>    <span class="n">ZqSKM</span>
- <span class="mf">9.5</span><span class="n">M</span>    <span class="n">scraotools_ZqDevRel</span><span class="p">.</span><span class="n">pkl …</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/livin-scrapbook.html">more ...</a>
+<p><a href="https://medium.com/dropbox-makers/guido-van-rossum-on-finding-his-way-e018e8b5f6b1">Guido van Rossum on finding his way — Dropbox Makers — Medium</a></p>
+<p>~ Python 缔造者,当前 Dropbox 工程师, 近期编程思考</p>
+<p>Guido van Rossum 作为Python 的创造者,
+以及 <code>仁慈的独裁者</code> (又名 <span class="caps">BDFL</span>).
+在此篇采访中,反思了近来的思考,
+以及在 Dropbox 的经历. 本文也召示了接下来老爹准备折腾什么.</p>
+<p>(<code>译注:</code> 大妈无责任式快译, 只是作为私人阅读笔记性质的存在,
+强烈建议大家去原文自行理解一番,并能拨冗回来指点大妈的理解之谬 ;-)</p>
+<h2 id="_1">程序猿前,你是如何成为电子爱好者的?<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>嚓了,这事儿忒久了,久到基本记忆不能了, 只是记得以前对电子很迷就是了.</p>
+<h2 id="_2">那会儿子是怎么聚集小伙伴们的?<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>高中时在课堂上相遇的, 一起折腾物理老师指导下的各种电子设备.</p>
+<p>整个高中只是对未来职业有个模糊的概念,
+认定自个儿在语言/社科上是没什么天份的, 所以,决定进入数学专业 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/guido-finding-his-way.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">如何基于<span class="caps">CB3</span>构建家庭服务器</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/140921-ohlife-death.html">论 OhLife&nbsp;的倒掉</a></h2>
                 <div class="summary">
-<p><a href="http://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest 的体验</a>
-之后,总是要一步步完成心目中的 家服务器</p>
-<h1 id="issue">Issue<a class="headerlink" href="#issue" title="Permanent link">¶</a></h1>
-<p>基于<span class="caps">CB3</span>使用 lununtu-server-<span class="caps">VGA</span> 操作系统</p>
+<p><img alt="ohlife" src="http://a.36krcnd.com/photo/5dfa0868b7808b19b22eb4617a374923.jpg"/></p>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p><a href="http://www.36kr.com/p/2934.html">OhLife:抛弃你的日记本吧!来自Y Combinator的第三个项目 | 36氪</a></p>
+<p>当年 36Kr 就分析 OhLife 面临着几大问题:</p>
 <ul>
-<li>环境:</li>
-<li>.bashrc</li>
-<li>
-<p>.inputrc</p>
-</li>
-<li>
-<p>预装: </p>
-</li>
-<li>sshd</li>
-<li>apt-fast<ul>
-<li><a href="http://www.mattparnell.com/linux/apt-fast/">Index of /linux/apt-fast</a></li>
+<li>由于网站内容涉及隐私,完全保密,因此该网站很难通过正常的网络推广方式吸引来很大的流量. </li>
+<li>简单的功能很容易被复制,除了创业公司可以轻松复制外,如果 Google,腾讯这样的公司复制了这个模式,Ohlife 的竞争力就很不明显了. </li>
+<li>简单的功能也很难实现 freemium,因为没有什么高级功能可以单独列出来吸引客户付费. 
+不过也未必,或许 OhLife 会专注于做好这一件事,并且能把它做得出人意料之外的好,就如 evernote 一样. </li>
 </ul>
-</li>
-<li>vim</li>
-<li>mc</li>
-<li>
-<p>…</p>
-</li>
-<li>
-<p>不要: </p>
-</li>
-<li>php</li>
-<li>mysql</li>
-<li>apache</li>
-</ul>
-<h1 id="todo"><span class="caps">TODO</span><a class="headerlink" href="#todo" title="Permanent link">¶</a></h1>
-<p>为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有:</p>
-<ol>
-<li>通过 <span class="caps">USB</span> 挂接 FreeBSD 格式化的 <span class="caps">UFS</span> 分区</li>
-<li>通过板载 <span class="caps">SATA</span> 接口,加装 2.5吋 1T 新硬盘</li>
-<li>安装 Samba 系统 …</li></ol>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">more ...</a>
+<p>果然…四年后:</p>
+<h3 id="ohlife-is-shutting-down">OhLife is shutting down<a class="headerlink" href="#ohlife-is-shutting-down" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="n">from</span><span class="o">:</span>    <span class="n">OhLife</span> <span class="o">&lt;</span><span class="n">post</span><span class="o">+</span><span class="mi">4</span><span class="n">cc6632387657</span><span class="err">@</span><span class="n">ohlife</span><span class="o">.</span><span class="na">com</span><span class="o">&gt;</span>
+<span class="n">to</span><span class="o">:</span>  <span class="n">Zoom</span><span class="o">.</span><span class="na">Quiet</span><span class="err">@</span><span class="n">gmail</span><span class="o">.</span><span class="na">com …</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/140921-ohlife-death.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -214,6 +199,12 @@
                         href="https://blog.zoomquiet.io/author/zoomquiet20.html">20</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/author/zoomquiet21.html">21</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/author/zoomquiet22.html">22</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/author/zoomquiet23.html">23</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/author/zoomquiet24.html">24</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/author/zoomquiet15.html">&raquo;</a></li>
         </ul>
@@ -322,26 +313,10 @@
             <li class="list-group-item"><h4>
                 <i class="icon-th icon-large"></i>Categories</h4></li>
                 <li class="list-group-item">
-                    <a href="https://blog.zoomquiet.io/category/author.html">
-                        <i class="icon-folder-open icon-large"></i>Author
+                    <a href="https://blog.zoomquiet.io/category/ann.html">
+                        <i class="icon-folder-open icon-large"></i>ANN
                     </a>
-                    <a href="https://blog.zoomquiet.io/feeds/author.atom.xml">
-                        <i class="icon-rss-sign"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://blog.zoomquiet.io/category/chaos.html">
-                        <i class="icon-folder-open icon-large"></i>Chaos
-                    </a>
-                    <a href="https://blog.zoomquiet.io/feeds/chaos.atom.xml">
-                        <i class="icon-rss-sign"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://blog.zoomquiet.io/category/elixir.html">
-                        <i class="icon-folder-open icon-large"></i>Elixir
-                    </a>
-                    <a href="https://blog.zoomquiet.io/feeds/elixir.atom.xml">
+                    <a href="https://blog.zoomquiet.io/feeds/ann.atom.xml">
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
@@ -354,10 +329,18 @@
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="https://blog.zoomquiet.io/category/livin.html">
-                        <i class="icon-folder-open icon-large"></i>Livin
+                    <a href="https://blog.zoomquiet.io/category/murmur.html">
+                        <i class="icon-folder-open icon-large"></i>MurMur
                     </a>
-                    <a href="https://blog.zoomquiet.io/feeds/livin.atom.xml">
+                    <a href="https://blog.zoomquiet.io/feeds/murmur.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/oldtouch.html">
+                        <i class="icon-folder-open icon-large"></i>OldTouch
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/oldtouch.atom.xml">
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>

@@ -89,64 +89,155 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="https://blog.zoomquiet.io/ann-oldtouch-0.html">公告/&nbsp;钩陈</a></h2>
-                <div class="summary"><p><span class="caps">ANN</span>/ what is&nbsp;OldTouch</p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/ann-oldtouch-0.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/200131-what-is-community.html">什么是开放社区初探&#8230;.</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">如何自在定义 macOS&nbsp;截屏文件名?</a></h2>
                 <div class="summary">
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p><a href="https://shimo.im/docs/KWxwgtpwGQxYv6Gw">鼠年话开源-系列主题网聊</a></p>
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
 <ul>
-<li>第6夜是俺发起的议题</li>
-<li>没想到是个错误的议题, 几句聊明白后</li>
-<li>引发出更加有意思的讨论…</li>
-</ul>
-<h2 id="_2">触发<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>其中追本溯源的灵魂一问, 导入一本奇书中的论述</p>
-</blockquote>
-<p><span class="quo">‘</span> 姜宁: https://github.com/open-organization-ambassadors/open-org-workbook/blob/master/open_org_workbook_1_1_5.pdf   222 页有一篇文章 community和open source community的论述,大家可以参考一下. ‘</p>
-<hr>
-<p><span class="quo">‘</span> 姜宁: 里面提到一个概念,就是Open Communities 也不是绝对的Open . ‘</p>
-<hr>
-<p><span class="quo">‘</span> 姜宁: open communities are a broader implementation of open source communities. ‘</p>
-<hr>
-<h2 id="_3">快译<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>尝试将要点翻译一下…</p>
-</blockquote>
-<p>什么是社区? …以往…现在互联网社区越来越重要…</p>
-<p><span class="dquo">“</span>社区”是指关系;它是成员与其共享的价值和活动系统之间的连接媒介. 换句话说 …</p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/200131-what-is-community.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/200108-ex-map-enum.html">Elixir 中列出 Map&nbsp;中值键对的折腾&#8230;</a></h2>
-                <div class="summary">
-<p>因为各种原因吧…</p>
-<ul>
-<li>很早在 <span class="caps">ECUG</span> 就接触了 Erlang<ul>
-<li>但是, 怪异的语法,以及狭小的应用领域,一直没真正使用起来</li>
-<li>现在, 发现 Elixir 很好的解决了 <span class="caps">OTP</span> 生态的通用应用问题</li>
+<li>默认系统截屏工具输出图片是:<ul>
+<li>到桌面</li>
+<li>文件名: <code>屏幕快照 2019-02-13 17.17.32.png</code></li>
 </ul>
 </li>
-<li>所以, 开始折腾…</li>
-<li>结果, 撞见各种值得嗯哼的事儿…</li>
 </ul>
-<h2 id="env">env.<a class="headerlink" href="#env" title="Permanent link">¶</a></h2>
-<p>༄ screenfetch</p>
-<div class="highlight"><pre>                 <span class="s-Atom">-/+:.</span>          <span class="s-Atom">zoomq@</span><span class="nv">ZQ160626rMBP</span>
-                <span class="s-Atom">:++++.</span>          <span class="nv">OS</span><span class="s-Atom">:</span> <span class="m">64</span><span class="s-Atom">bit</span> <span class="nv">Mac</span> <span class="nv">OS</span> <span class="nv">X</span> <span class="m">10</span><span class="p">.</span><span class="m">12</span><span class="p">.</span><span class="m">6</span> <span class="m">16</span><span class="nv">G2136</span>
-               <span class="s-Atom">/+++/.</span>           <span class="nv">Kernel</span><span class="s-Atom">:</span> <span class="s-Atom">x86_64</span> <span class="nv">Darwin</span> <span class="m">16</span><span class="p">.</span><span class="m">7</span><span class="p">.</span><span class="m">0</span>
-       <span class="p">.:-</span><span class="s-Atom">::-</span> <span class="p">.</span><span class="s-Atom">+/:-</span><span class="err">``</span><span class="p">.</span><span class="s-Atom">::-</span>       <span class="nv">Uptime</span><span class="s-Atom">:</span> <span class="m">30</span><span class="s-Atom">d</span> <span class="m">12</span><span class="s-Atom">h</span> <span class="m">38</span><span class="s-Atom">m</span>
-    <span class="p">.</span><span class="s-Atom">:/++++++/::::/++++++/:</span><span class="err">`</span>    <span class="nv">Packages</span><span class="s-Atom">:</span> <span class="m">241</span>
-  <span class="p">.</span><span class="s-Atom">:///////////////////////:</span><span class="err">`</span>   <span class="nv">Shell …</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/200108-ex-map-enum.html">more ...</a>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<ul>
+<li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
+<li><code>screenshot_190213-17.17.32.jpg</code></li>
+</ul>
+</li>
+<li>现在怎么作到?</li>
+</ul>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>记要尝试过程</p>
+</blockquote>
+<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">type</span> <span class="n">jpg</span>
+<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
+</pre></div>
+<p>以上即可</p>
+<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">name</span> <span class="n">screenshot</span>
+<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
+</pre></div>
+<p>以上只能变成:</p>
+<div class="highlight"><pre><span class="n">screenshot</span> <span class="mi">2019</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">13</span> <span class="mf">17 …</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/rime4gitchat.html">如何配置 rIME 支持 GitChat&nbsp;规范?</a></h2>
+                <div class="summary">
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<ul>
+<li>新年了, 发现有 <code>长徦式学习症</code> , 很多不敢肥家被逼婚的程序猿, 宁可呆在公司一边值班一边刷课</li>
+<li>同时, GitChat 也空降新领导, 启动叕一波作者鼓动</li>
+<li>所以, 响应号召, 尝试分享这年几点感触</li>
+<li>只是, 没想到, 对提交文章, 有了细致要求, 任何一点不达标, 直接退稿, 不允许发布</li>
+<li>虽然, 申述说:<ul>
+<li>通过配置输入法, 已经有15年从来不用中文标点了</li>
+<li>不仅在编程时杜绝了因为中文标点引发血案</li>
+<li>同时, 也促使行文更加国际化, 也从来没因为标点而引发误解</li>
+<li>但是, GitChat 方面不认为这是读者可以接受的</li>
+<li>其它作者也劝:”从了吧, 您就…”</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>所以…</p>
+</blockquote>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<ul>
+<li>找到配置, 恢复全角标点输入</li>
+<li>同时兼容以往全部半角标点输入习惯</li>
+<li>进一步, 是否可以用工具来完成自动化修改?</li>
+</ul>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>快速记录应对嗯哼</p>
+</blockquote>
+<h3 id="sed">sed<a class="headerlink" href="#sed" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://gist.github.com/ZoomQuiet/53439dd21c60a935e793">i hate Chinese symbol! so usage …</a></li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/rime4gitchat.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/jump-into-ssl.html">如何持证 (<span class="caps">SSL</span>)&nbsp;开车</a></h2>
+                <div class="summary">
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国</a></p>
+<p>被成功安利…</p>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<p>因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 <code>*-pages</code> 服务快速发布:</p>
+<ul>
+<li>github/gitlab 为核心</li>
+<li>免费 <span class="caps">SSL</span> 认证为基础</li>
+<li>最好能一次配置长期可用</li>
+</ul>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<p>整体上, 无论在哪个 <code>*-pages</code> 平台, 要折腾的事儿相似, 就3步:</p>
+<ul>
+<li>追加配置含 <code>SSL</code> 解析能力的 <span class="caps">DNS</span> 服务主机 <code>A</code> 地址<ul>
+<li>并解决引发的有关 <code>CANEM</code> 冲突问题</li>
+</ul>
+</li>
+<li>在 <code>*-pages</code> 平台配置 <code>Enforce HTTPS</code> 有关嗯哼</li>
+<li>优雅的等待一切生效 ;-)<ul>
+<li>并解决可能的资源冲突问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
+<p>原先的:</p>
+<blockquote>
+<p>༄  dig blog …</p></blockquote>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssl.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/180220-book-ai-historic.html">内圈梗集锦(人工智能简史)书评</a></h2>
+                <div class="summary">
+<p>版权归作者所有,任何形式转载请联系作者. </p>
+<div class="highlight"><pre><span class="err">作者</span><span class="o">:</span><span class="n">Zoom</span><span class="p">.</span><span class="n">Quiet</span><span class="p">(</span><span class="err">来自豆瓣</span><span class="p">)</span>
+<span class="err">来源</span><span class="o">:</span><span class="n">https</span><span class="o">:</span><span class="c1">//book.douban.com/review/9167418/</span>
+</pre></div>
+<p>是也乎,(￣▽￣)</p>
+<p>现在技术类图书有一种不好的倾向:</p>
+<div class="highlight"><pre><span class="err">书名有简史的</span>
+<span class="err">总是比通史要难写</span>
+<span class="err">但是有趣也有用的多</span>
+<span class="err">关键特别有种</span> <span class="p">;</span><span class="o">-</span><span class="p">)</span>
+</pre></div>
+<p>以往从信息简史开始到人类/未来等诸简史, 其实都有点以史预言将来的意思,</p>
+<p><span class="caps">AI</span> 简史, 反而专注陈述过去,</p>
+<p>全书少了一个关键内容:</p>
+<div class="highlight"><pre><span class="n">AI</span><span class="err">历史进展中</span>
+<span class="err">各种路线的时间线</span>
+<span class="err">和关键人物</span><span class="o">/</span><span class="err">作品</span><span class="o">/</span><span class="err">理论</span>
+<span class="err">的关系图谱</span>
+</pre></div>
+<p>另外,和其它技术图书类似(是的,类似流畅的 Python 之类技术人员自己写的图书);
+书中各种小扣儿比正文有趣的多,
+只是, 作者是海外华人, 用的都是中文中精彩的梗, 目测难以翻译为英文挣些更大的名望.</p>
+<p>作者, 明显是业内人士, 从参考文献列表就可以看出,
+俺看过,这么多技术类图书, 也就暗时间 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/180220-book-ai-historic.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/bind-press-one.html">关联&nbsp;PRESSone</a></h2>
+                <div class="summary">
+<p>https://press.one/p/v?s=daa9a127693ab0fde9141b894ff9f0dc452c33fc166f0e97252420b83a33088e6c67f5d44f63860c218859c099557d42908cbb8059ebfe92765636dbaaf654710&amp;h=90f1dab4c8b24b6502c03cdf067a279d8a672ae229cc405e171f57c0d45613f7&amp;a=6263e76c1e5ac3196975ad5fa05f458f49633f5c&amp;f=P1&amp;v=3</p>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h2>
+<ul>
+<li>190331 ZoomQuiet init.</li>
+</ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/bind-press-one.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -182,26 +273,6 @@
                         href="https://blog.zoomquiet.io/index13.html">13</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/index14.html">14</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index15.html">15</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index16.html">16</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index17.html">17</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index18.html">18</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index19.html">19</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index20.html">20</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index21.html">21</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index22.html">22</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index23.html">23</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index24.html">24</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/index5.html">&raquo;</a></li>
         </ul>

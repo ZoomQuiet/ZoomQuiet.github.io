@@ -90,65 +90,6 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="https://blog.zoomquiet.io/jump-into-ssl.html">如何持证 (<span class="caps">SSL</span>)&nbsp;开车</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
-<p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国</a></p>
-<p>被成功安利…</p>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 <code>*-pages</code> 服务快速发布:</p>
-<ul>
-<li>github/gitlab 为核心</li>
-<li>免费 <span class="caps">SSL</span> 认证为基础</li>
-<li>最好能一次配置长期可用</li>
-</ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
-<p>整体上, 无论在哪个 <code>*-pages</code> 平台, 要折腾的事儿相似, 就3步:</p>
-<ul>
-<li>追加配置含 <code>SSL</code> 解析能力的 <span class="caps">DNS</span> 服务主机 <code>A</code> 地址<ul>
-<li>并解决引发的有关 <code>CANEM</code> 冲突问题</li>
-</ul>
-</li>
-<li>在 <code>*-pages</code> 平台配置 <code>Enforce HTTPS</code> 有关嗯哼</li>
-<li>优雅的等待一切生效 ;-)<ul>
-<li>并解决可能的资源冲突问题</li>
-</ul>
-</li>
-</ul>
-<h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
-<p>原先的:</p>
-<blockquote>
-<p>༄  dig blog …</p></blockquote>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssl.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/pyqt4macos.html">PyQt4 之消失在&nbsp;Sierra</a></h2>
-                <div class="summary">
-<h3 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p>最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,
-用 PyQt 是必然选择哪.</p>
-<p>只是项目是老坑, 所以,没用 Qt5 技术桟, 还是 Qt4</p>
-<h2 id="_2">嗯哼<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<ul>
-<li>这天要折腾 <span class="caps">QR</span> 码识别了</li>
-<li>运行 <code>brew install zbar</code></li>
-<li>然后,各种问题就爆发了,特别是:<ul>
-<li><code>libjpeg.8.dylib</code> 加载不到</li>
-<li>PyQt4 镜像丢失</li>
-<li>…</li>
-</ul>
-</li>
-<li>重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt 可以安装了…</li>
-</ul>
-<h2 id="_3">原来<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>参考:<a href="https://github.com/cartr/homebrew-qt4">cartr/homebrew-qt4: Homebrew tap …</a></p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/pyqt4macos.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
                 <h2><a href="https://blog.zoomquiet.io/break-into-rMBP13.html">rMBP&nbsp;坠入纪</a></h2>
                 <div class="summary">
 <h1 id="_1">崩<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
@@ -164,6 +105,94 @@
                 </div>
             </article>
             <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/standing-desk-env.html">站立式办公环境尝试</a></h2>
+                <div class="summary">
+<h1 id="_1">立<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>人之所以为人, 就是因为站立解放了双手, 提升了视野, 刺激了心智, 勃发了野心…</p>
+<p>所以,我们用了几亿年进化, 才站立了起来,
+怎么可以在钢筋洞穴中, 趴回去呢?!</p>
+<h2 id="_2">背景<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<ul>
+<li>嗯哼,终于有机会 <span class="caps">SOHO</span> 很一段时期了</li>
+<li>有舒服的 <span class="caps">IKEA</span> 沙发, 但是, 为了健康着想, Standing Desk 系统是值得尝试的</li>
+<li>另外, 还有个背景条件就是没有专门的书房给俺使用</li>
+<li>只有, 床前 110x300cm 的面积可以利用</li>
+<li>以及, 预算 <span class="caps">5000RMB</span> 是上限!</li>
+</ul>
+<h2 id="_3">调研<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<ul>
+<li>嗯哼, 手上只有一台 2011版的 <span class="caps">MBP</span> 15吋高配作为主力工作用机</li>
+<li>另外, 有 <span class="caps">WACOM</span> Intaus + <span class="caps">HHKB</span> lite2 作为输入设备</li>
+<li>需要:<ul>
+<li>站立式办公桌, 在俺自然站立时 …</li></ul></li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/standing-desk-env.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/jump-into-ssd.html">jump into <span class="caps">SSD</span> with&nbsp;Yoesmite</a></h2>
+                <div class="summary">
+<h1 id="_1">为毛<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>不解释, 人家都免费给你升级了哪!</p>
+<h1 id="_2">新梗<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<p>~ 嗯哼,各种关键记要,不进行解释了…</p>
+<h2 id="npm">npm<a class="headerlink" href="#npm" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">npm</span>
+<span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="o">:</span><span class="c1">//homebrew.bintray.com/bottles/node-0.12.2_1.yosemite.bottle.tar.gz</span>
+<span class="cp">######################################################################## 100.0%</span>
+<span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">node</span><span class="o">-</span><span class="mf">0.12.2</span><span class="n">_1</span><span class="p">.</span><span class="n">yosemite</span><span class="p">.</span><span class="n">bottle</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+<span class="o">==&gt;</span> <span class="n">Caveats</span>
+<span class="n">If</span> <span class="n">you</span> <span class="n">update</span> <span class="n">npm</span> <span class="n">itself</span><span class="p">,</span> <span class="k">do</span> <span class="n">NOT</span> <span class="n">use</span> <span class="n">the</span> <span class="n">npm</span> <span class="n">update</span> <span class="n">command</span><span class="p">.</span>
+<span class="n">The …</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssd.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/knewone-talk-zoomq-choise.html">KnewOne-talk 之 大妈&nbsp;篇</a></h2>
+                <div class="summary">
+<p>~ KnewOne talk question list</p>
+<h2 id="_1">分享你的生活方式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>整体上,俺是一头程序猿,所以,,,</p>
+<h3 id="1">1 自我介绍和介绍自己的工作/擅长的领域,允许给自己打广告~<a class="headerlink" href="#1" title="Permanent link">¶</a></h3>
+<p><img alt="Zoom.Quiet PyChina.org | 蠎中国社区" src="http://pychina.org/volunteer/zoomquiet.html"/></p>
+<ul>
+<li>Python中文社区创始人(之一) / 管理员, 热心于 Python 等等社区的公益事业, 大家熟知的社区”<a href="http://wiki.woodpecker.org.cn/moin/ZoomQuietAbt">大妈</a>“;</li>
+<li><span class="caps">O.B.</span>P (<a href="https://code.google.com/p/openbookproject/">Open Book Proj.~中文蟒样开放图书计划</a>) 及 蟒营(<a href="https://code.google.com/p/kcpycamp/wiki/PythoniCamp">PythoniCamp</a>) 工程设计者 /主持人; </li>
+<li>参与并主持各种线上 / 线下活动; 主持编撰了 &lt;&lt;可爱的Python&gt;&gt; 等图书</li>
+<li>坚持用 Pythonic 感化国人进入 <span class="caps">FLOSS</span>世界进行学习 / 分享 / 创造…</li>
+<li>擅长:<ul>
+<li>Pythonic入门宣传;实效敏捷配置管理;技术社区文化促生;</li>
+<li><span class="caps">PKM</span> ~ <span class="caps">GTD …</span></li></ul></li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/knewone-talk-zoomq-choise.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">Mavericks 中用&nbsp;sshfs</a></h2>
+                <div class="summary">
+<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>自从 2011-12-16 入手 <span class="caps">MBP</span> 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便</p>
+<ul>
+<li>依赖少, 双方有 ssh 就好</li>
+<li>配置少, ssh 服务的启动没有 smb 服务那么多的配置</li>
+<li>自动断, 不会象 smb 死占一个虚假的挂接点</li>
+</ul>
+<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<p>每次 brew 出点小问题,就导致 sshfs 或是不痛快;</p>
+<p>目测已经折腾过至少4次了</p>
+<ul>
+<li>送修理两次</li>
+<li>从 10.6 升级 到 10.9 一次</li>
+<li>brew 在硬盘权限修订后,完全崩溃,重新安装 又一次</li>
+</ul>
+<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
+<p>毕竟 sshfs 依赖 <span class="caps">FUSE</span> 这种 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
         <ul class="pagination">
                 <li class="prev"><a href="https://blog.zoomquiet.io/tag/mac.html">&laquo;</a>
@@ -174,10 +203,6 @@
                         href="https://blog.zoomquiet.io/tag/mac2.html">2</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/tag/mac3.html">3</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/tag/mac4.html">4</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/tag/mac5.html">5</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/tag/mac3.html">&raquo;</a></li>
         </ul>

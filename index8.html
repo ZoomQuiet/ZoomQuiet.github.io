@@ -89,75 +89,82 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="https://blog.zoomquiet.io/pyqt4macos.html">PyQt4 之消失在&nbsp;Sierra</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/141209-leo-literate-programming.html">熟练使用文学编程(literate&nbsp;programming)是怎样一番体验?</a></h2>
                 <div class="summary">
-<h3 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p>最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,
-用 PyQt 是必然选择哪.</p>
-<p>只是项目是老坑, 所以,没用 Qt5 技术桟, 还是 Qt4</p>
-<h2 id="_2">嗯哼<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<ul>
-<li>这天要折腾 <span class="caps">QR</span> 码识别了</li>
-<li>运行 <code>brew install zbar</code></li>
-<li>然后,各种问题就爆发了,特别是:<ul>
-<li><code>libjpeg.8.dylib</code> 加载不到</li>
-<li>PyQt4 镜像丢失</li>
-<li>…</li>
-</ul>
-</li>
-<li>重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt 可以安装了…</li>
-</ul>
-<h2 id="_3">原来<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>参考:<a href="https://github.com/cartr/homebrew-qt4">cartr/homebrew-qt4: Homebrew tap …</a></p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/pyqt4macos.html">more ...</a>
+<p><img alt="Literate_Programming_book_cover" src="http://upload.wikimedia.org/wikipedia/en/thumb/6/62/Literate_Programming_book_cover.jpg/220px-Literate_Programming_book_cover.jpg"/></p>
+<p><a href="http://www.zhihu.com/question/26978956">熟练使用文学编程(literate programming)是怎样一番体验? - 知乎</a></p>
+<p>然后有人戳了俺…</p>
+<!--more-->
+<h2 id="_1">有关文学化编程<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>参考:<a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">LeoEnvironment</a></p>
+<p>以及相关链接,</p>
+<p>有关使用 Leo 进行文学化编程, 参考:
+- 幻灯: <a href="http://s5.zoomquiet.io/060730-abtLeo">啄木鸟/<span class="caps">CPUG</span> 会课06年度第九次 (built by S5)</a> ; <a href="http://s5.zoomquiet.io/131101-leo-china">131101-leo-china</a>
+- 录音: <a href="http://zoomq.qiniudn.com/CPyUG/060731-bpyug-leo/cpug_2006_07_30_01.ogg">cpug_2006_07_30_01.ogg</a>
+    + <a href="http://zoomq.qiniudn.com/CPyUG/100716-Leo-LiterateProgramming">Index of /CPyUG/100716-Leo-LiterateProgramming {gen. by gen4idx.py v13.4.18}</a>
+- 录像: Leo 创始人 令德华的演讲 
+    - <a href="http://v.youku.com/v_show/id_XNjQ1OTM3MDk2.html">PyConChina2013-Leo-final-v2</a></p>
+<p>俺知道 文学化编程是在 2005 年,开始使用 Leo 尝试进行 文学化编程则是到了 2006 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/141209-leo-literate-programming.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/leo5theme-key-words.html">Leo 5.4 theme&nbsp;custom</a></h2>
-                <div class="summary">
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p><a href="http://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme custom</a></p>
-<p>Leo 是灵活的完全 Pythonic 的可定制 <code>文学化编辑环境</code> …</p>
-<p>所以,其定制的进展是无限的…</p>
-<h2 id="_2">现象<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<ul>
-<li>在完成了基本的 theme 定制后发现</li>
-<li>默认语法元素的颜色,不太理想</li>
-<li>特别是: <a href="http://leoeditor.com/cheatsheet.html#id13">&lt;<sections>&gt;</sections></a><ul>
-<li>可以将下层节点放置在任何想放置的地方的引入点声明</li>
-<li>但是,这里 <code>&lt;&lt;...&gt;&gt;</code> 两端符号的颜色是默认兰色</li>
-<li>在暗色背景中看不清楚</li>
-</ul>
-</li>
-<li>可能一时没能找到配置处</li>
-</ul>
-<h2 id="_3">解决<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<ul>
-<li>通过社区列表咨询<ul>
-<li>2天后收到各种建议</li>
-</ul>
-</li>
-<li>才知道是俺使用 Leo 的配置文件过老<ul>
-<li>导致新版本的全局 theme 定义节点</li>
-<li><code>lThemes: copy to last top-level setting in myLeoSettings.leo--&gt;Common to all themes--&gt;Colors for …</code></li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/leo5theme-key-words.html">more ...</a>
+                <h2><a href="https://blog.zoomquiet.io/141127-ipynb-into-blog.html">如何将 ipynb 发布到 blog&nbsp;中?</a></h2>
+                <div class="summary"><p>原文: <a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html">prooffreader plus: How to quickly turn an IPython notebook into a blog&nbsp;post</a></p>
+<p>IPython notebooks are great for many things, but they&#8217;re a little awkward to embed in blog post platforms like Blogger, Wordpress, etc. When the nbconvert feature was a standalone command-line tool, there was a blog …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/141127-ipynb-into-blog.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/break-into-rMBP13.html">rMBP&nbsp;坠入纪</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html">十大早该知道的Python技巧</a></h2>
+                <div class="summary"><p>原文: <a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html">prooffreader plus: Top 10 Python idioms I wish I&#8217;d learned&nbsp;earlier</a></p>
+<p><code>Top 10 Python idioms I wish I'd learned earlier</code></p>
+<p>I&#8217;ve been programming all my life, but never been a programmer. Most of my work was done in Visual Basic because it&#8217;s what I was most …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/141122-shotter-death.html">论 Shooter&nbsp;的关闭</a></h2>
                 <div class="summary">
-<h1 id="_1">崩<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>160625, 一个平常的早晨, 俺的世界崩溃了一大坨…
-5年前老婆大人开恩准购的: 高配版, 8G, 512G+256G <span class="caps">SSD</span> 的<span class="caps">MBP</span> 15吋 无法开机!</p>
-<h1 id="_2">溃<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
-<p>立即去当地 <span class="caps">APPLE</span> 维修中心,从机械硬盘启动,使用内置硬盘工具检验 <span class="caps">SSD</span> 不通过,
-现场重新格式化安装, 但是中心没有 10.11 的安装镜像,只能先安装上 10.7.3 的.
-回来,一边回忆,一边想整理这5年, 都如何配置出吻合自个儿口味的 <span class="caps">MAC</span> 环境的!?</p>
-<p>但是, 下午, 相同情景, 再次灰屏,无法启动!
-知道没那么简单了….果然,再次去, 发现是长期使用 60W 的电源来驱动 80W …</p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/break-into-rMBP13.html">more ...</a>
+<p><img alt="529.jpg (175×260)" src="http://m.ms10010.com/image/pic/201205/thumb/529.jpg"/></p>
+<div class="highlight"><pre><span class="n">And</span> <span class="n">in</span> <span class="n">the</span> <span class="kr">naked</span> <span class="n">light</span> <span class="n">I</span> <span class="n">saw</span> <span class="n">ten</span> <span class="n">thousand</span> <span class="n">people</span><span class="p">,</span> <span class="n">maybe</span> <span class="n">more</span><span class="p">.</span> 
+<span class="n">People</span> <span class="n">talking</span> <span class="n">without</span> <span class="n">speaking</span><span class="p">,</span> <span class="n">people</span> <span class="n">hearing</span> <span class="n">without</span> <span class="n">listening</span><span class="p">.</span> 
+<span class="n">People</span> <span class="n">writing</span> <span class="n">songs</span> <span class="n">that</span> <span class="n">voices</span> <span class="n">never</span> <span class="n">shared</span><span class="p">,</span> <span class="n">no</span> <span class="n">one</span> <span class="n">dared</span> <span class="n">disturb</span> <span class="n">the</span> <span class="n">sound</span> <span class="n">of</span> <span class="n">silence</span><span class="p">.</span>
+ <span class="err">　　　　　　　　　　　　　　　</span>
+<span class="o">---</span> <span class="n">The</span> <span class="n">sound</span> <span class="n">of</span> <span class="n">silence</span> <span class="err">　美利坚合众国</span><span class="p">,</span><span class="mi">2015</span><span class="err">年</span><span class="p">,</span><span class="err">纽约</span><span class="p">.</span>
+</pre></div>
+<!--more-->
+<p><img alt="53809965gw1emk7au8650j20xr0w3tat" src="http://ww4.sinaimg.cn/large/53809965gw1emk7au8650j20xr0w3tat.jpg"/></p>
+<h2 id="_1">慢慢的,它们就没有了,就像从未存在过<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>(原文: http://www.douban …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/141122-shotter-death.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">Mavericks 中用&nbsp;sshfs</a></h2>
+                <div class="summary">
+<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>自从 2011-12-16 入手 <span class="caps">MBP</span> 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便</p>
+<ul>
+<li>依赖少, 双方有 ssh 就好</li>
+<li>配置少, ssh 服务的启动没有 smb 服务那么多的配置</li>
+<li>自动断, 不会象 smb 死占一个虚假的挂接点</li>
+</ul>
+<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<p>每次 brew 出点小问题,就导致 sshfs 或是不痛快;</p>
+<p>目测已经折腾过至少4次了</p>
+<ul>
+<li>送修理两次</li>
+<li>从 10.6 升级 到 10.9 一次</li>
+<li>brew 在硬盘权限修订后,完全崩溃,重新安装 又一次</li>
+</ul>
+<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
+<p>毕竟 sshfs 依赖 <span class="caps">FUSE</span> 这种 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -193,26 +200,6 @@
                         href="https://blog.zoomquiet.io/index13.html">13</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/index14.html">14</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index15.html">15</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index16.html">16</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index17.html">17</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index18.html">18</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index19.html">19</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index20.html">20</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index21.html">21</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index22.html">22</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index23.html">23</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index24.html">24</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/index9.html">&raquo;</a></li>
         </ul>

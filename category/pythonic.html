@@ -173,6 +173,63 @@
                 </div>
             </article>
             <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">如何自在定义 macOS&nbsp;截屏文件名?</a></h2>
+                <div class="summary">
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<ul>
+<li>默认系统截屏工具输出图片是:<ul>
+<li>到桌面</li>
+<li>文件名: <code>屏幕快照 2019-02-13 17.17.32.png</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<ul>
+<li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
+<li><code>screenshot_190213-17.17.32.jpg</code></li>
+</ul>
+</li>
+<li>现在怎么作到?</li>
+</ul>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>记要尝试过程</p>
+</blockquote>
+<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">type</span> <span class="n">jpg</span>
+<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
+</pre></div>
+<p>以上即可</p>
+<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">name</span> <span class="n">screenshot</span>
+<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
+</pre></div>
+<p>以上只能变成:</p>
+<div class="highlight"><pre><span class="n">screenshot</span> <span class="mi">2019</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">13</span> <span class="mf">17 …</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/dsl-atop-openresty.html">用 <span class="caps">DSL</span>&nbsp;们构筑商用系统</a></h2>
+                <div class="summary">
+<h1 id="building-business-systems-with-dsls-for-nginx-openresty">Building Business Systems with DSLs for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty<a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link">¶</a></h1>
+<p>~ 来自春哥的分享</p>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ul>
+<li>5年前也听录了一次 春哥的分享:<a href="http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.html">由Lua 粘合的Nginx生态环境</a></li>
+<li>然后, 神奇的引发了各种后来的然后</li>
+<li>去年, 在 <span class="caps">NGINX</span> 大会上, 春哥才真正讲出了10年前设计 OpenResty 前身时内心的宏大构想</li>
+<li>所以, 值得认真 review 一下:<ul>
+<li>视频:<a href="https://www.youtube.com/watch?v=w2RAZLptE-U">Building Business Systems with Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty | Cloudflare - YouTube</a></li>
+<li>文稿:<ul>
+<li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-1/">Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty, Part 1</a></li>
+<li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-2/">Domain-Specific Languages for …</a></li></ul></li></ul></li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/dsl-atop-openresty.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
         <ul class="pagination">
                 <li class="prev disabled"><a href="#">&laquo;</a></li>
@@ -186,12 +243,6 @@
                         href="https://blog.zoomquiet.io/category/pythonic4.html">4</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/category/pythonic5.html">5</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/category/pythonic6.html">6</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/category/pythonic7.html">7</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/category/pythonic8.html">8</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/category/pythonic2.html">&raquo;</a></li>
         </ul>

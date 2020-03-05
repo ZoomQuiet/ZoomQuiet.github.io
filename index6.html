@@ -89,112 +89,135 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">如何自在定义 macOS&nbsp;截屏文件名?</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
                 <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
-<ul>
-<li>默认系统截屏工具输出图片是:<ul>
-<li>到桌面</li>
-<li>文件名: <code>屏幕快照 2019-02-13 17.17.32.png</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<ul>
-<li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
-<li><code>screenshot_190213-17.17.32.jpg</code></li>
-</ul>
-</li>
-<li>现在怎么作到?</li>
-</ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>记要尝试过程</p>
-</blockquote>
-<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">type</span> <span class="n">jpg</span>
-<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
+<p>来自 @nedbat 的分享:</p>
+<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
+<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>C样:</p>
+<div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">print</span> <span class="n">v</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
-<p>以上即可</p>
-<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">name</span> <span class="n">screenshot</span>
-<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
+<p>偏门:</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">print</span> <span class="n">v</span>
 </pre></div>
-<p>以上只能变成:</p>
-<div class="highlight"><pre><span class="n">screenshot</span> <span class="mi">2019</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">13</span> <span class="mf">17 …</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">more ...</a>
+<p>蠎样:</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">v</span> <span class="n">in</span> <span class="n">my_list</span><span class="o">:</span>
+    <span class="n">print</span> <span class="n">v</span>
+</pre></div>
+<p>模式:</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">name</span> <span class="n">in</span> <span class="n">iterable</span><span class="o">:</span>
+    <span class="n">statements</span>
+</pre></div>
+<ul>
+<li>可 …</li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/rime4gitchat.html">如何配置 rIME 支持 GitChat&nbsp;规范?</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/standing-desk-env.html">站立式办公环境尝试</a></h2>
                 <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<h1 id="_1">立<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>人之所以为人, 就是因为站立解放了双手, 提升了视野, 刺激了心智, 勃发了野心…</p>
+<p>所以,我们用了几亿年进化, 才站立了起来,
+怎么可以在钢筋洞穴中, 趴回去呢?!</p>
+<h2 id="_2">背景<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <ul>
-<li>新年了, 发现有 <code>长徦式学习症</code> , 很多不敢肥家被逼婚的程序猿, 宁可呆在公司一边值班一边刷课</li>
-<li>同时, GitChat 也空降新领导, 启动叕一波作者鼓动</li>
-<li>所以, 响应号召, 尝试分享这年几点感触</li>
-<li>只是, 没想到, 对提交文章, 有了细致要求, 任何一点不达标, 直接退稿, 不允许发布</li>
-<li>虽然, 申述说:<ul>
-<li>通过配置输入法, 已经有15年从来不用中文标点了</li>
-<li>不仅在编程时杜绝了因为中文标点引发血案</li>
-<li>同时, 也促使行文更加国际化, 也从来没因为标点而引发误解</li>
-<li>但是, GitChat 方面不认为这是读者可以接受的</li>
-<li>其它作者也劝:”从了吧, 您就…”</li>
+<li>嗯哼,终于有机会 <span class="caps">SOHO</span> 很一段时期了</li>
+<li>有舒服的 <span class="caps">IKEA</span> 沙发, 但是, 为了健康着想, Standing Desk 系统是值得尝试的</li>
+<li>另外, 还有个背景条件就是没有专门的书房给俺使用</li>
+<li>只有, 床前 110x300cm 的面积可以利用</li>
+<li>以及, 预算 <span class="caps">5000RMB</span> 是上限!</li>
 </ul>
-</li>
-</ul>
-<blockquote>
-<p>所以…</p>
-</blockquote>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<h2 id="_3">调研<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <ul>
-<li>找到配置, 恢复全角标点输入</li>
-<li>同时兼容以往全部半角标点输入习惯</li>
-<li>进一步, 是否可以用工具来完成自动化修改?</li>
-</ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>快速记录应对嗯哼</p>
-</blockquote>
-<h3 id="sed">sed<a class="headerlink" href="#sed" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://gist.github.com/ZoomQuiet/53439dd21c60a935e793">i hate Chinese symbol! so usage …</a></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/rime4gitchat.html">more ...</a>
+<li>嗯哼, 手上只有一台 2011版的 <span class="caps">MBP</span> 15吋高配作为主力工作用机</li>
+<li>另外, 有 <span class="caps">WACOM</span> Intaus + <span class="caps">HHKB</span> lite2 作为输入设备</li>
+<li>需要:<ul>
+<li>站立式办公桌, 在俺自然站立时 …</li></ul></li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/standing-desk-env.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/jump-into-ssl.html">如何持证 (<span class="caps">SSL</span>)&nbsp;开车</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/how2collaborate-with-leo.html">如何在 Leo&nbsp;中协作?!</a></h2>
                 <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
-<p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国</a></p>
-<p>被成功安利…</p>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 <code>*-pages</code> 服务快速发布:</p>
+<h1 id="leo">Leo?<a class="headerlink" href="#leo" title="Permanent link">¶</a></h1>
+<p>~ 嗯哼</p>
+<p>研究什么是 Leo ? 非要一句话说清查的话,只能是:</p>
 <ul>
-<li>github/gitlab 为核心</li>
-<li>免费 <span class="caps">SSL</span> 认证为基础</li>
-<li>最好能一次配置长期可用</li>
-</ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
-<p>整体上, 无论在哪个 <code>*-pages</code> 平台, 要折腾的事儿相似, 就3步:</p>
-<ul>
-<li>追加配置含 <code>SSL</code> 解析能力的 <span class="caps">DNS</span> 服务主机 <code>A</code> 地址<ul>
-<li>并解决引发的有关 <code>CANEM</code> 冲突问题</li>
+<li><code>纯 Python 构建的文学化编辑环境</code><ul>
+<li>好吧, 那什么是 <code>文学化编辑</code> ?</li>
+<li>这事儿, 俺就没办法说清楚了….</li>
+<li>根据俺一向的宣称: <code>教不会别人的,一定也是自己并不真正理解的</code></li>
 </ul>
 </li>
-<li>在 <code>*-pages</code> 平台配置 <code>Enforce HTTPS</code> 有关嗯哼</li>
-<li>优雅的等待一切生效 ;-)<ul>
-<li>并解决可能的资源冲突问题</li>
+<li>这点,俺认!<ul>
+<li>参考: <a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">LeoEnvironment - Woodpecker Wiki for <span class="caps">CPUG</span></a></li>
+<li>以及 <a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill#Leo">ZqStudy/MyLearningSkill - Woodpecker Wiki for <span class="caps">CPUG</span></a></li>
+</ul>
+</li>
+<li>就知道, 俺从 05 年上了船…就一直反复的四处宣传 Leo 的舒爽…<ul>
+<li>可惜,一直就没有找到一个真正 <code>直指人心</code> 的 文学化编辑/程 的描述姿势</li>
 </ul>
 </li>
 </ul>
-<h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
-<p>原先的:</p>
-<blockquote>
-<p>༄  dig blog …</p></blockquote>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssl.html">more ...</a>
+<p>好吧,再次尝试一下:</p>
+<h2 id="literate-programming">Literate Programming …</h2>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2collaborate-with-leo.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme&nbsp;custom</a></h2>
+                <div class="summary">
+<h1 id="en"><span class="caps">EN</span><a class="headerlink" href="#en" title="Permanent link">¶</a></h1>
+<p>thanks guys in <code>leo-editor@googlegroups.com</code> :</p>
+<ul>
+<li>Terry Brown</li>
+<li>john lunzer</li>
+</ul>
+<p>make me know how to custom Leo theme step by step:</p>
+<ul>
+<li>old versions <code>myLeoSettings.leo</code> appended buttons :<ul>
+<li>at <code>leo/myLeoSettings.leo#Startup--&gt;Local buttons</code></li>
+<li>need copy from  <code>leoSettings.leo</code> </li>
+</ul>
+</li>
+<li>so my custome flow as:<ul>
+<li>try edit some node</li>
+<li>click …</li></ul></li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/leo5theme.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/linux-linus-not-only-be-fun.html">Linux&nbsp;后的思想</a></h2>
+                <div class="summary">
+<p>来自 <span class="caps">TED2016</span> 的分享:</p>
+<p><a href="https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux">Linus Torvalds: The mind behind Linux | <span class="caps">TED</span> Talk | <span class="caps">TED</span>.com</a></p>
+<p>戳中泪点的:</p>
+<ul>
+<li>所有项目,只是因为我需要</li>
+<li>最困难的不是完成大项目,而是令人们在一起工作,即使相互不接受</li>
+<li>Linux 并不是选择了开源,只是那时刚好有开源吻合 Linux 项目</li>
+<li>….</li>
+</ul>
+<p>是的,为什么 Linux 发展的如此快,而更加早的 <span class="caps">GNU</span> 项目反而越来越没有存在感了!?</p>
+<ul>
+<li><span class="caps">RMS</span> 太聪明,总是戳到关键点</li>
+<li>Linus 明智的多,只作自己能控制的,其它的给更加聪明的人折腾吧</li>
+<li>嗯哼,这就是失控控制法</li>
+<li>不控制的控制才是最好的控制</li>
+<li>…</li>
+</ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/linux-linus-not-only-be-fun.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -230,26 +253,6 @@
                         href="https://blog.zoomquiet.io/index13.html">13</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/index14.html">14</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index15.html">15</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index16.html">16</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index17.html">17</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index18.html">18</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index19.html">19</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index20.html">20</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index21.html">21</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index22.html">22</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index23.html">23</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/index24.html">24</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/index7.html">&raquo;</a></li>
         </ul>

@@ -90,95 +90,73 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="https://blog.zoomquiet.io/leo5theme-key-words.html">Leo 5.4 theme&nbsp;custom</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/linux-linus-not-only-be-fun.html">Linux&nbsp;后的思想</a></h2>
                 <div class="summary">
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p><a href="http://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme custom</a></p>
-<p>Leo 是灵活的完全 Pythonic 的可定制 <code>文学化编辑环境</code> …</p>
-<p>所以,其定制的进展是无限的…</p>
-<h2 id="_2">现象<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>来自 <span class="caps">TED2016</span> 的分享:</p>
+<p><a href="https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux">Linus Torvalds: The mind behind Linux | <span class="caps">TED</span> Talk | <span class="caps">TED</span>.com</a></p>
+<p>戳中泪点的:</p>
 <ul>
-<li>在完成了基本的 theme 定制后发现</li>
-<li>默认语法元素的颜色,不太理想</li>
-<li>特别是: <a href="http://leoeditor.com/cheatsheet.html#id13">&lt;<sections>&gt;</sections></a><ul>
-<li>可以将下层节点放置在任何想放置的地方的引入点声明</li>
-<li>但是,这里 <code>&lt;&lt;...&gt;&gt;</code> 两端符号的颜色是默认兰色</li>
-<li>在暗色背景中看不清楚</li>
+<li>所有项目,只是因为我需要</li>
+<li>最困难的不是完成大项目,而是令人们在一起工作,即使相互不接受</li>
+<li>Linux 并不是选择了开源,只是那时刚好有开源吻合 Linux 项目</li>
+<li>….</li>
 </ul>
-</li>
-<li>可能一时没能找到配置处</li>
-</ul>
-<h2 id="_3">解决<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>是的,为什么 Linux 发展的如此快,而更加早的 <span class="caps">GNU</span> 项目反而越来越没有存在感了!?</p>
 <ul>
-<li>通过社区列表咨询<ul>
-<li>2天后收到各种建议</li>
+<li><span class="caps">RMS</span> 太聪明,总是戳到关键点</li>
+<li>Linus 明智的多,只作自己能控制的,其它的给更加聪明的人折腾吧</li>
+<li>嗯哼,这就是失控控制法</li>
+<li>不控制的控制才是最好的控制</li>
+<li>…</li>
 </ul>
-</li>
-<li>才知道是俺使用 Leo 的配置文件过老<ul>
-<li>导致新版本的全局 theme 定义节点</li>
-<li><code>lThemes: copy to last top-level setting in myLeoSettings.leo--&gt;Common to all themes--&gt;Colors for …</code></li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/leo5theme-key-words.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/linux-linus-not-only-be-fun.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
-                <div class="summary">
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>C样:</p>
-<div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
-<p>偏门:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
-</pre></div>
-<p>蠎样:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">v</span> <span class="n">in</span> <span class="n">my_list</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">v</span>
-</pre></div>
-<p>模式:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">name</span> <span class="n">in</span> <span class="n">iterable</span><span class="o">:</span>
-    <span class="n">statements</span>
-</pre></div>
-<ul>
-<li>可 …</li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
+                <h2><a href="https://blog.zoomquiet.io/saying-ggodby-python-zh.html">再见了&nbsp;Python</a></h2>
+                <div class="summary"><p>原文: <a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html">Saying Goodbye&nbsp;To Python</a></p>
+<p>This post is long overdue; this isn&#8217;t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&nbsp;goodbye.</p>
+<p>While …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/saying-ggodby-python-zh.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/how2collaborate-with-leo.html">如何在 Leo&nbsp;中协作?!</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/141127-ipynb-into-blog.html">如何将 ipynb 发布到 blog&nbsp;中?</a></h2>
+                <div class="summary"><p>原文: <a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html">prooffreader plus: How to quickly turn an IPython notebook into a blog&nbsp;post</a></p>
+<p>IPython notebooks are great for many things, but they&#8217;re a little awkward to embed in blog post platforms like Blogger, Wordpress, etc. When the nbconvert feature was a standalone command-line tool, there was a blog …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/141127-ipynb-into-blog.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html">十大早该知道的Python技巧</a></h2>
+                <div class="summary"><p>原文: <a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html">prooffreader plus: Top 10 Python idioms I wish I&#8217;d learned&nbsp;earlier</a></p>
+<p><code>Top 10 Python idioms I wish I'd learned earlier</code></p>
+<p>I&#8217;ve been programming all my life, but never been a programmer. Most of my work was done in Visual Basic because it&#8217;s what I was most …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/guido-finding-his-way.html">寻路ing Guido van&nbsp;Rossum</a></h2>
                 <div class="summary">
-<h1 id="leo">Leo?<a class="headerlink" href="#leo" title="Permanent link">¶</a></h1>
-<p>~ 嗯哼</p>
-<p>研究什么是 Leo ? 非要一句话说清查的话,只能是:</p>
-<ul>
-<li><code>纯 Python 构建的文学化编辑环境</code><ul>
-<li>好吧, 那什么是 <code>文学化编辑</code> ?</li>
-<li>这事儿, 俺就没办法说清楚了….</li>
-<li>根据俺一向的宣称: <code>教不会别人的,一定也是自己并不真正理解的</code></li>
-</ul>
-</li>
-<li>这点,俺认!<ul>
-<li>参考: <a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">LeoEnvironment - Woodpecker Wiki for <span class="caps">CPUG</span></a></li>
-<li>以及 <a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill#Leo">ZqStudy/MyLearningSkill - Woodpecker Wiki for <span class="caps">CPUG</span></a></li>
-</ul>
-</li>
-<li>就知道, 俺从 05 年上了船…就一直反复的四处宣传 Leo 的舒爽…<ul>
-<li>可惜,一直就没有找到一个真正 <code>直指人心</code> 的 文学化编辑/程 的描述姿势</li>
-</ul>
-</li>
-</ul>
-<p>好吧,再次尝试一下:</p>
-<h2 id="literate-programming">Literate Programming …</h2>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2collaborate-with-leo.html">more ...</a>
+<p><a href="https://medium.com/dropbox-makers/guido-van-rossum-on-finding-his-way-e018e8b5f6b1">Guido van Rossum on finding his way — Dropbox Makers — Medium</a></p>
+<p>~ Python 缔造者,当前 Dropbox 工程师, 近期编程思考</p>
+<p>Guido van Rossum 作为Python 的创造者,
+以及 <code>仁慈的独裁者</code> (又名 <span class="caps">BDFL</span>).
+在此篇采访中,反思了近来的思考,
+以及在 Dropbox 的经历. 本文也召示了接下来老爹准备折腾什么.</p>
+<p>(<code>译注:</code> 大妈无责任式快译, 只是作为私人阅读笔记性质的存在,
+强烈建议大家去原文自行理解一番,并能拨冗回来指点大妈的理解之谬 ;-)</p>
+<h2 id="_1">程序猿前,你是如何成为电子爱好者的?<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>嚓了,这事儿忒久了,久到基本记忆不能了, 只是记得以前对电子很迷就是了.</p>
+<h2 id="_2">那会儿子是怎么聚集小伙伴们的?<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>高中时在课堂上相遇的, 一起折腾物理老师指导下的各种电子设备.</p>
+<p>整个高中只是对未来职业有个模糊的概念,
+认定自个儿在语言/社科上是没什么天份的, 所以,决定进入数学专业 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/guido-finding-his-way.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -196,12 +174,6 @@
                         href="https://blog.zoomquiet.io/category/pythonic4.html">4</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/category/pythonic5.html">5</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/category/pythonic6.html">6</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/category/pythonic7.html">7</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/category/pythonic8.html">8</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/category/pythonic4.html">&raquo;</a></li>
         </ul>

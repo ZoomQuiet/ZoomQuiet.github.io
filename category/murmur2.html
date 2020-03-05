@@ -90,50 +90,6 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="https://blog.zoomquiet.io/standing-desk-env.html">站立式办公环境尝试</a></h2>
-                <div class="summary">
-<h1 id="_1">立<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>人之所以为人, 就是因为站立解放了双手, 提升了视野, 刺激了心智, 勃发了野心…</p>
-<p>所以,我们用了几亿年进化, 才站立了起来,
-怎么可以在钢筋洞穴中, 趴回去呢?!</p>
-<h2 id="_2">背景<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<ul>
-<li>嗯哼,终于有机会 <span class="caps">SOHO</span> 很一段时期了</li>
-<li>有舒服的 <span class="caps">IKEA</span> 沙发, 但是, 为了健康着想, Standing Desk 系统是值得尝试的</li>
-<li>另外, 还有个背景条件就是没有专门的书房给俺使用</li>
-<li>只有, 床前 110x300cm 的面积可以利用</li>
-<li>以及, 预算 <span class="caps">5000RMB</span> 是上限!</li>
-</ul>
-<h2 id="_3">调研<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<ul>
-<li>嗯哼, 手上只有一台 2011版的 <span class="caps">MBP</span> 15吋高配作为主力工作用机</li>
-<li>另外, 有 <span class="caps">WACOM</span> Intaus + <span class="caps">HHKB</span> lite2 作为输入设备</li>
-<li>需要:<ul>
-<li>站立式办公桌, 在俺自然站立时 …</li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/standing-desk-env.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/jump-into-ssd.html">jump into <span class="caps">SSD</span> with&nbsp;Yoesmite</a></h2>
-                <div class="summary">
-<h1 id="_1">为毛<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>不解释, 人家都免费给你升级了哪!</p>
-<h1 id="_2">新梗<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
-<p>~ 嗯哼,各种关键记要,不进行解释了…</p>
-<h2 id="npm">npm<a class="headerlink" href="#npm" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">npm</span>
-<span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="o">:</span><span class="c1">//homebrew.bintray.com/bottles/node-0.12.2_1.yosemite.bottle.tar.gz</span>
-<span class="cp">######################################################################## 100.0%</span>
-<span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">node</span><span class="o">-</span><span class="mf">0.12.2</span><span class="n">_1</span><span class="p">.</span><span class="n">yosemite</span><span class="p">.</span><span class="n">bottle</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
-<span class="o">==&gt;</span> <span class="n">Caveats</span>
-<span class="n">If</span> <span class="n">you</span> <span class="n">update</span> <span class="n">npm</span> <span class="n">itself</span><span class="p">,</span> <span class="k">do</span> <span class="n">NOT</span> <span class="n">use</span> <span class="n">the</span> <span class="n">npm</span> <span class="n">update</span> <span class="n">command</span><span class="p">.</span>
-<span class="n">The …</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssd.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
                 <h2><a href="https://blog.zoomquiet.io/knewone-talk-zoomq-choise.html">KnewOne-talk 之 大妈&nbsp;篇</a></h2>
                 <div class="summary">
 <p>~ KnewOne talk question list</p>
@@ -153,6 +109,112 @@
                 </div>
             </article>
             <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">Mavericks 中用&nbsp;sshfs</a></h2>
+                <div class="summary">
+<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>自从 2011-12-16 入手 <span class="caps">MBP</span> 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便</p>
+<ul>
+<li>依赖少, 双方有 ssh 就好</li>
+<li>配置少, ssh 服务的启动没有 smb 服务那么多的配置</li>
+<li>自动断, 不会象 smb 死占一个虚假的挂接点</li>
+</ul>
+<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<p>每次 brew 出点小问题,就导致 sshfs 或是不痛快;</p>
+<p>目测已经折腾过至少4次了</p>
+<ul>
+<li>送修理两次</li>
+<li>从 10.6 升级 到 10.9 一次</li>
+<li>brew 在硬盘权限修订后,完全崩溃,重新安装 又一次</li>
+</ul>
+<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
+<p>毕竟 sshfs 依赖 <span class="caps">FUSE</span> 这种 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/rst2s5-upgraded.html">rst2s5&nbsp;小折腾</a></h2>
+                <div class="summary">
+<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p><a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html">rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging</a></p>
+<p>所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:</p>
+<p><a href="http://s5.zoomquiet.io/">s5.zoomquiet.io</a></p>
+<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<p>忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见</p>
+<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
+<p>4年前的生成脚本,和最新 pygments 接口不匹配了,,,</p>
+<h1 id="_4">解决<a class="headerlink" href="#_4" title="Permanent link">¶</a></h1>
+<p>参考:</p>
+<ul>
+<li><a href="http://pygments.org/docs/rstdirective/">Using Pygments in ReST documents — Pygments</a></li>
+<li><a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/">Using rst for presentations</a></li>
+<li><a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html">rst2s5 with syntax highlighting</a></li>
+<li><a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files">python - Where can I find a …</a></li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/rst2s5-upgraded.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/livin-scrapbook.html">ScrapBook&nbsp;生存指南</a></h2>
+                <div class="summary">
+<p><code>7.7G    ZqFLOSS</code> 复制改进后,为毛多了?!</p>
+<div class="highlight"><pre><span class="n">zoomq</span> <span class="err">@</span> <span class="n">MBP111216ZQ</span> <span class="n">in</span> <span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
+<span class="err">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
+<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">devrel</span><span class="p">.</span><span class="n">json</span>
+<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">floss</span><span class="p">.</span><span class="n">json</span>
+<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">skm</span><span class="p">.</span><span class="n">json</span>
+<span class="mf">5.5</span><span class="n">G</span>    <span class="n">ZqDevRel</span>
+<span class="mf">6.4</span><span class="n">G</span>    <span class="n">ZqFLOSS</span>
+<span class="mf">3.5</span><span class="n">G</span>    <span class="n">ZqSKM</span>
+ <span class="mf">9.5</span><span class="n">M</span>    <span class="n">scraotools_ZqDevRel</span><span class="p">.</span><span class="n">pkl …</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/livin-scrapbook.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">如何基于<span class="caps">CB3</span>构建家庭服务器</a></h2>
+                <div class="summary">
+<p><a href="http://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest 的体验</a>
+之后,总是要一步步完成心目中的 家服务器</p>
+<h1 id="issue">Issue<a class="headerlink" href="#issue" title="Permanent link">¶</a></h1>
+<p>基于<span class="caps">CB3</span>使用 lununtu-server-<span class="caps">VGA</span> 操作系统</p>
+<ul>
+<li>环境:</li>
+<li>.bashrc</li>
+<li>
+<p>.inputrc</p>
+</li>
+<li>
+<p>预装: </p>
+</li>
+<li>sshd</li>
+<li>apt-fast<ul>
+<li><a href="http://www.mattparnell.com/linux/apt-fast/">Index of /linux/apt-fast</a></li>
+</ul>
+</li>
+<li>vim</li>
+<li>mc</li>
+<li>
+<p>…</p>
+</li>
+<li>
+<p>不要: </p>
+</li>
+<li>php</li>
+<li>mysql</li>
+<li>apache</li>
+</ul>
+<h1 id="todo"><span class="caps">TODO</span><a class="headerlink" href="#todo" title="Permanent link">¶</a></h1>
+<p>为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有:</p>
+<ol>
+<li>通过 <span class="caps">USB</span> 挂接 FreeBSD 格式化的 <span class="caps">UFS</span> 分区</li>
+<li>通过板载 <span class="caps">SATA</span> 接口,加装 2.5吋 1T 新硬盘</li>
+<li>安装 Samba 系统 …</li></ol>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
         <ul class="pagination">
                 <li class="prev"><a href="https://blog.zoomquiet.io/category/murmur.html">&laquo;</a>
@@ -163,10 +225,6 @@
                         href="https://blog.zoomquiet.io/category/murmur2.html">2</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/category/murmur3.html">3</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/category/murmur4.html">4</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/category/murmur5.html">5</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/category/murmur3.html">&raquo;</a></li>
         </ul>

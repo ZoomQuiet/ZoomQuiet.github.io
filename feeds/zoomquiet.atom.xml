@@ -1,5 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- ZoomQuiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2020-03-05T15:45:00+08:00</updated><entry><title>公告/ 呢喃:收集 私人片段</title><link href="https://blog.zoomquiet.io/ann-murmur-0.html" rel="alternate"></link><published>2020-03-02T10:42:00+08:00</published><updated>2020-03-05T15:35:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-02:/ann-murmur-0.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;ANN&lt;/span&gt;/ what is&amp;nbsp;MurMur&lt;/p&gt;</summary><content type="html">&lt;p&gt;终于还是得在公众号嗯哼,&amp;nbsp;其它渠道都主动和谐了;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- ZoomQuiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2020-03-08T15:42:00+08:00</updated><entry><title>钩陈/ 什么是程序媛?</title><link href="https://blog.zoomquiet.io/oldtouch-codeing-lady-380s.html" rel="alternate"></link><published>2020-03-04T14:42:00+08:00</published><updated>2020-03-08T15:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-04:/oldtouch-codeing-lady-380s.html</id><summary type="html">&lt;p&gt;OldTouch/ zoomquiet personal define Code Lady by self&amp;nbsp;story&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;009&lt;/strong&gt;篇原创&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;普通程序老猿一则回忆痕迹&amp;#8230;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;蟒营™Python入门班 第6期,&amp;nbsp;已经上线开始报名了;&lt;/p&gt;
+&lt;p&gt;这个月最大的节日是 &lt;code&gt;三八.女神节&lt;/code&gt;;&lt;/p&gt;
+&lt;p&gt;所以,&amp;nbsp;很早就在琢磨如何优惠;&lt;/p&gt;
+&lt;p&gt;不过,&amp;nbsp;先得明确一个问题&amp;#8230;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="_2"&gt;问题&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么要给女生特别优惠?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其实, 答案很明显,&amp;nbsp;从俺的社区称号都可以推理出了;&lt;/p&gt;
+&lt;p&gt;为什么, 俺是 &lt;code&gt;大妈&lt;/code&gt; 而不是 &lt;code&gt;大爷&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;民间也是, &lt;code&gt;大爷&lt;/code&gt; 总是和骂人联系在一起,
+而 &lt;code&gt;大妈&lt;/code&gt; 总是有点儿亲近+耍赖的意思.&lt;/p&gt;
+&lt;p&gt;当然是因为:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在家, 永远是 &lt;code&gt;大妈&lt;/code&gt; 在干活&lt;/li&gt;
+&lt;li&gt;大爷们总是背着手休息&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可是,&amp;nbsp;这又是为什么呢?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="_3"&gt;分析&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;其实, 人类一开始, 都是 &lt;strong&gt;&amp;#8220;大妈&amp;#8221;&lt;/strong&gt; 掌管家族的,&amp;nbsp;大象至今也是如此;&lt;/p&gt;
+&lt;p&gt;因为, 那时主要靠采集, 生存关键因素是食物经验, 而没有文字时,
+活的长的那个性别拥有更多经验, 由 &lt;span class="caps"&gt;TA&lt;/span&gt;&amp;nbsp;来指挥部落生存机率高;&lt;/p&gt;
+&lt;p&gt;而从生理上, 因为女性拥有必须能承担两人以上同时消耗的生理结构,
+所以, 生命力更强, 从而一般也活的更长, 进而导致 &lt;strong&gt;&amp;#8220;大妈&amp;#8221;&lt;/strong&gt;&amp;nbsp;们统治家族部落;&lt;/p&gt;
+&lt;p&gt;直到人类发明了武器, 从采集变成狩猎为主要营养来源时, 男性才逐渐发挥暴发力强, 以及性格上更加激进等等优势, 接替 &lt;strong&gt;&amp;#8220;大妈&amp;#8221;&lt;/strong&gt;&amp;nbsp;们统治家族部落;&lt;/p&gt;
+&lt;p&gt;再后来, 男性通过文字以及国家制度的发明, 设计了男尊女卑的社会文化,
+才从生理优势之外,&amp;nbsp;在社会结构中注入了额外优势;&lt;/p&gt;
+&lt;p&gt;导致女性一直在人类各种社会中处于从属状态;&lt;/p&gt;
+&lt;p&gt;凡是男性不愿意干的事儿,&amp;nbsp;都是女性去干;&lt;/p&gt;
+&lt;p&gt;编程就是这种工作:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;早年, 编程中的编,&amp;nbsp;是编织的编&lt;/li&gt;
+&lt;li&gt;因为, 那时还没有磁盘发明,&amp;nbsp;连磁带都没有&lt;/li&gt;
+&lt;li&gt;录音机用的还是钢丝&amp;#8230;&lt;/li&gt;
+&lt;li&gt;而程序是通过在卡片纸上打孔, 象毛衣编织机那种结构,&amp;nbsp;再由电路转换为内存程序执行的;&lt;/li&gt;
+&lt;li&gt;但是, 在 &lt;span class="caps"&gt;NASA&lt;/span&gt; 火箭系统中, 极端的温度变化,&amp;nbsp;导致无论什么纸带都无法正常工作;&lt;/li&gt;
+&lt;li&gt;所以,&amp;nbsp;只好在细线缆上通过磁环的穿过与否来记录只读程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原理很简单:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="1" src="http://ydlj.zoomquiet.top/ipic/2020-03-04-ScreenShot%202020-03-04%2022.45.42.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="0" src="http://ydlj.zoomquiet.top/ipic/2020-03-04-ScreenShot%202020-03-04%2022.45.49.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;线选开关存储器(Core rope memory), 
+也有人叫它&amp;#8221;绳索存储器&amp;#8221;.&amp;nbsp;实际上是一个有很多磁环构成的阵列:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一根导线如果穿过了磁环则导线上的电流就会发生改变,&lt;/li&gt;
+&lt;li&gt;系统检测到这种改变后就把数据解释为1,否则就为0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;只能由女性编(织工)程人员,&amp;nbsp;按照程序的二进制字符序列编织为一组组磁环和线缆形成的程序卡;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="成品大致这样..." src="http://ydlj.zoomquiet.top/ipic/2020-03-04-ScreenShot%202020-03-04%2022.43.27.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;这事儿,&amp;nbsp;男性干不了&amp;#8230;&lt;/p&gt;
+&lt;p&gt;后来, 技术进步了,但是, 依然没有男性愿意去作, 
+因为, 坐在打字机前输入程序, 太象秘书小姐了,&amp;nbsp;太娘了&amp;#8230;&lt;/p&gt;
+&lt;p&gt;所以, 那个时代的程序员,&amp;nbsp;全部是程序媛.&lt;/p&gt;
+&lt;p&gt;然后? 当然, 慢慢的, 这个行业飞速发展, 编程变成一个高大上的工作,
+然后, 男性果断又重新运用文化武器, 说女性逻辑/数学/空间想象力不足,&amp;nbsp;又重新掌握了程序员这一果然发展越来越好的职业,&lt;/p&gt;
+&lt;p&gt;于是就又变成了程序猿.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="_4"&gt;嗯哼&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;而实际上,&amp;nbsp;女性天生适合编程的&amp;#8230;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不说编程发明人就是 Ada 女神了, 也不说 &lt;span class="caps"&gt;NASA&lt;/span&gt; 早期神级程序媛, 登月系统主程以及架构师 
+M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://ydlj.zoomquiet.top/ipic/2020-03-04-ScreenShot%202020-03-04%2023.06.42.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;就回顾一下俺以往遇见过的程序媛吧:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2000,&amp;nbsp;在上海:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;那时, 刚刚毕业, 又在广告公司里蹉跎了一年, 总算通过同学介绍, 凭自学的 &lt;span class="caps"&gt;PHP&lt;/span&gt; 进入上海一家软件公司;
+遇到程序媛C ,好象是复旦数学系毕业, 自学 C++;
+负责核心业务系统的开发,&amp;nbsp;而俺不过是前端小程序猿&amp;#8230;&lt;/p&gt;
+&lt;p&gt;自己用盗版 UltraEdit 编写 &lt;span class="caps"&gt;HTML&lt;/span&gt;/&lt;span class="caps"&gt;JS&lt;/span&gt;/&lt;span class="caps"&gt;CSS&lt;/span&gt;/&lt;span class="caps"&gt;PHP&lt;/span&gt;/&amp;#8230; 各种脚本,&amp;nbsp;只能跑在服务端;&lt;/p&gt;
+&lt;p&gt;而人家用正版 Visual Studio 高端复杂的 &lt;span class="caps"&gt;IDE&lt;/span&gt;, 编写 C++&amp;nbsp;桌面产品;&lt;/p&gt;
+&lt;p&gt;那简直是仰望星空&amp;#8230;&lt;/p&gt;
+&lt;p&gt;当时, 还不以为然, 因为已经皈依了 &lt;span class="caps"&gt;GNU&lt;/span&gt; ~&amp;nbsp;自由软件原教旨主义;&lt;/p&gt;
+&lt;p&gt;但是, 后来有机会联合完成一个上海交通厅的项目, 涉及一个随机出奖的功能, 
+人家, 就用一晩上自学 &lt;span class="caps"&gt;PHP&lt;/span&gt; 并设计完成了通过在一个图片所有像素中大致均匀分布中奖点的方法;&amp;nbsp;完成了指定任意数量的随机中奖.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Orz&amp;#8230;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2004,&amp;nbsp;北漂:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因为自学 Python ,又在网络中参与了啄木鸟社区的创建, 从而获得进入 &lt;span class="caps"&gt;SINA&lt;/span&gt;&amp;nbsp;工作的机会;&lt;/p&gt;
+&lt;p&gt;进入刚刚重组的邮件技术部, 沉迷于 FreeBSD&amp;nbsp;的全新世界;&lt;/p&gt;
+&lt;p&gt;作的是过程改进, 结果发现, 当时整个儿 &lt;span class="caps"&gt;SINA&lt;/span&gt; 免费邮箱业务是基于定制的 &lt;span class="caps"&gt;POSTFIX&lt;/span&gt;,
+将2万行代码, 硬生生扩展到7万行包含业务逻辑的,&amp;nbsp;是位程序媛;&lt;/p&gt;
+&lt;p&gt;开会从来不说话, 无论什么功能,&amp;nbsp;基本上3天就能交付&amp;#8230;&lt;/p&gt;
+&lt;p&gt;继续仰望星空&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Orz&amp;#8230;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2008,&amp;nbsp;珠海:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;又因为 &lt;span class="caps"&gt;SINA&lt;/span&gt; 的经历, 当时还不是集团公司的金山,&amp;nbsp;想对研发中心进行过程改进;&lt;/p&gt;
+&lt;p&gt;于是幸运的抓住机会南下;&lt;/p&gt;
+&lt;p&gt;因为不涉及具体业务系统开发, 所以, 在实习生大批进来后,&amp;nbsp;分配俺一个任务:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;教会愿意学的实习生用&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这就是现在蟒营™开源网络课程框架的发源,&lt;/p&gt;
+&lt;p&gt;但是, 印象深的不是俺班上的学员,
+而是一位 程序媛L, 她没选择 Python , 而是坚定的去了 C++ 实习组;
+毕业 Party 时, 才知道,&amp;nbsp;原来人家的志愿就是病毒分析;&lt;/p&gt;
+&lt;p&gt;然后, 又几年过去, 她已经是病毒分析中心主任了, 现在又是两娃的妈妈;
+却坚实的掌握全球几乎所有&lt;span class="caps"&gt;PC&lt;/span&gt; 病毒特征,&amp;nbsp;以及病毒制造工作室的代码特性痕迹;&lt;/p&gt;
+&lt;p&gt;而俺已经反复被创业变成 Indie Hacker&amp;nbsp;来通过网课来生存了&amp;#8230;&lt;/p&gt;
+&lt;p&gt;只能继续仰望星空&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Orz&amp;#8230;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以及, 又后来, 在技术大会, 程序媛专场作主持时,&amp;nbsp;见到全国各种领域中的程序媛,&lt;/p&gt;
+&lt;p&gt;简直仰望星空到颈断&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Orz&amp;#8230;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="_5"&gt;所以&lt;a class="headerlink" href="#_5" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;有点不理解, 很多报名时担心自己学不会的女生,&amp;nbsp;她们的担心哪里来的&amp;#8230;&lt;/p&gt;
+&lt;p&gt;所以, 这个月 蟒营™Python入门班 第6期,&amp;nbsp;决定:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;女生报名, 一律优惠 380&amp;nbsp;元整&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="2020-02-28-101camp6py-reg-qrcode.jpg (JPEG Image, 448 × 364 pixels)" src="http://ydlj.zoomquiet.top/ipic/2020-02-28-101camp6py-reg-qrcode.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;以此来支持 Python&amp;nbsp;界对程序媛的渴望;-)&lt;/p&gt;
+&lt;p&gt;特别是文科生也应该学编程,&amp;nbsp;理由很多,&lt;/p&gt;
+&lt;p&gt;简要列一下,大家自个儿选个顺眼的,刻到脑子里:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;让大脑二次发育&lt;/li&gt;
+&lt;li&gt;文科生会编程是件很&amp;#8217;酷&amp;#8217;的事情&lt;/li&gt;
+&lt;li&gt;知名记者曰过:&amp;#8221;我觉得写一次 Python 程序之后,文科生就不会胡写中文了.&amp;nbsp;&amp;#8220;&lt;/li&gt;
+&lt;li&gt;李笑来的&amp;#8221;把时间当做朋友&amp;#8221;中曰过:&lt;ul&gt;
+&lt;li&gt;多年以来,受影响最深的,并不是当时所学的 &lt;span class="caps"&gt;BASIC&lt;/span&gt; ,或者是后来所学的 &lt;span class="caps"&gt;PASCAL&lt;/span&gt; ,抑或再后来学的 C,C++&amp;nbsp;什么的;&lt;/li&gt;
+&lt;li&gt;受影响最深的是一种思考方式──在跑程序之前,要反复浏览代码,在脑子里进行预演;而不是写完程序直接跑,出错了再说.&amp;nbsp;这是节省时间提高效率的重要方式. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以,对于没有任何编程自信的好人们:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;学习&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="err"&gt;的&lt;/span&gt;
+    &lt;span class="err"&gt;目标本身&lt;/span&gt;
+        &lt;span class="err"&gt;从来不是&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;
+    &lt;span class="err"&gt;而是只有通过编程思维&lt;/span&gt;
+        &lt;span class="err"&gt;才能理解&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;接触到的&lt;/span&gt;
+    &lt;span class="err"&gt;真实世界的&lt;/span&gt; &lt;span class="n"&gt;Cyber&lt;/span&gt; &lt;span class="err"&gt;维度&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;h2 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;豆列:&lt;a href="https://www.douban.com/doulist/119293075/"&gt;蟒营™101.camp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;文中链接感谢&lt;a href="https://linux.cn/static/tools/a.html"&gt;&amp;#8220;文章助手&amp;#8221;的助手&lt;/a&gt; 的支持,
+(来自 &lt;a href="(https://linux.cn/article-11850-1.html)"&gt;&lt;span class="caps"&gt;LINUX&lt;/span&gt;中国&lt;/a&gt;&amp;nbsp;的小应用)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;点击, 将自动跳入小应用,&amp;nbsp;并复制链接到剪贴板&lt;/li&gt;
+&lt;li&gt;然后, 打开浏览器, 复制到地址栏,&amp;nbsp;就能访问了&lt;/li&gt;
+&lt;li&gt;好处,&amp;nbsp;避开了微信内置特殊浏览器的有关屏蔽策略&lt;/li&gt;
+&lt;li&gt;问题, 操作复杂了, 要打开手机上的浏览器,&amp;nbsp;如果在桌面微信则无法使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class="caps"&gt;JD&lt;/span&gt; 下单链接 -&amp;gt; 点击后再打开浏览器复制到地址栏访问 -&amp;gt;&amp;nbsp;俺能获得少许佣金:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://union-click.jd.com/jdc?e=&amp;amp;p=AyIGZRtSEAQbAVASWRMyFgNSE10VABcGVx1rUV1KWQorAlBHU0VeBUVNR0ZbSkdETlcNVQtHRVNSUVNLXANBRA1XB14DS10cQQVYD21XHgNRHFMTAhACVBldJURMcyIYHG9qd083Xj0dX1l5PXpbHGIeC2UaaxUDEwRXGFgXABU3ZRtcJUN8B1QaXBECGgRlGmsVBhsFVxlcHAcbDl0eaxICGzc%2BRQVJYlZfAV5rJTIRN2UrWyUBIkU7TFtCV0AGVUxcFQJAAlUYDkUDEgVQSV9AURNSABoLQQQiBVQaXxw%3D"&gt;Head First Python(中文版) (美)巴里&amp;nbsp;中国电力出版社&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://union-click.jd.com/jdc?e=&amp;amp;p=AyIGZRprFQIQBVUcWREyVlgNRQQlW1dCFFlQCxxKQgFHREkdSVJKSQVJHFRXFk9FUlpGQUpLCVBaTFhbXQtWVmpSWRtbFwASAFcfa2hhbEdVTzhQYRdxE1MGSGplQAVDOmUOHjdUK1sUAxEFVhhZFwUiN1Uca0NsEgZUGloUBxEFUCtaJQIWDlcYWBAEEg5dEl0lBRIOZXAFS15yQw1PHiUyIgRlK2sVMhE3F3VcRwVGBFEbUkIEGwBQGFwRUkZVVB8IQQAbBVwaCEYCRzdXGloRCw%3D%3D"&gt;奇特的一生:柳比歇夫坚持56年的&amp;#8221;时间统计法&amp;#8221;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://union-click.jd.com/jdc?e=&amp;amp;p=AyIGZRtTHAATD1wdWhEyFQJcHlMcBhcAVR9rUV1KWQorAlBHU0VeBUVTQg1cAAQJS14MRg1EDUtGfFcUQ0VjVld1FFktVlxWRltZAVFsSlJZHF4cBxoOUR5cFQYFUBZFBxlQU0VCTBhLXh5VFFlrQmlCYAheBFFnG3ENHlkTYVtgDE9aQw4eN1QrWxQDEQVWGFkXBSI3VRxrVGwSBlYTUhUBEDdUK1sRCxAFVxxTHQUVAlArXBULImwLRQd1RkpTECtrJQEiN2UbaxYyUGlTHwwcBxADBUxdEAYXD1RLCxUCRVNVEwgRUkIEXE9cHDIQBlQfUg%3D%3D"&gt;建筑的永恒之道,[美]&amp;nbsp;C·亚历山大,中国水利水电出版社&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3942&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;好文笔,感叹号年度配额: &lt;strong&gt;1/3&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ZoomQuiet/&lt;strong&gt;&lt;a href="https://mp.weixin.qq.com/s/N5TuRRbF485D4Q90XdDA7g"&gt;大妈&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;就是四处 &lt;code&gt;是也乎,(￣▽￣)&lt;/code&gt; 的那个&lt;a href="https://mp.weixin.qq.com/s/N5TuRRbF485D4Q90XdDA7g"&gt;大妈&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;私自嗯哼&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ZoomQuiet&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ZoomQuiet42&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;公开课程&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;蟒营&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Mainium&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;全国大会&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;PyChina&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;PyChinaOrg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;本地社区&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
+    &lt;span class="n"&gt;GDG&lt;/span&gt;&lt;span class="err"&gt;珠海&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;GDG&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ZhuHai&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;TFUG&lt;/span&gt;&lt;span class="err"&gt;珠海&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ZH_TFUG&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;历史吐糟&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Chaos42&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;订阅号&lt;/span&gt; &lt;span class="n"&gt;PythoniCamp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;</content><category term="OldTouch"></category><category term="lady"></category><category term="history"></category></entry><entry><title>公告/ 呢喃:收集 私人片段</title><link href="https://blog.zoomquiet.io/ann-murmur-0.html" rel="alternate"></link><published>2020-03-02T10:42:00+08:00</published><updated>2020-03-05T15:35:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-02:/ann-murmur-0.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;ANN&lt;/span&gt;/ what is&amp;nbsp;MurMur&lt;/p&gt;</summary><content type="html">&lt;p&gt;终于还是得在公众号嗯哼,&amp;nbsp;其它渠道都主动和谐了;&lt;/p&gt;
 &lt;p&gt;那么先厘定的当然是栏目了;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;事不过三&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;

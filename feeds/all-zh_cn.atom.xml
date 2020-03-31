@@ -43,11 +43,11 @@
 &lt;blockquote&gt;
 &lt;p&gt;追查了一下国内可用公共 &lt;span class="caps"&gt;DNS&lt;/span&gt; 服务,&amp;nbsp;在路由器上配置&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img alt="" src="http://ydlj.zoomquiet.top/ipic/2020-03-31-cnPUBDNS.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="cnPUBDNS" src="http://ydlj.zoomquiet.top/ipic/2020-03-31-cnPUBDNS.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;对比, 无法配置 &lt;span class="caps"&gt;AP&lt;/span&gt;&amp;nbsp;的有线宽带:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://ydlj.zoomquiet.top/ipic/2020-03-31-cnNOMDNS.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="cnNOMDNS" src="http://ydlj.zoomquiet.top/ipic/2020-03-31-cnNOMDNS.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;以及一直可以访问, 但是很慢的 mifi&amp;nbsp;:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://ydlj.zoomquiet.top/ipic/2020-03-31-mifi.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="mifi" src="http://ydlj.zoomquiet.top/ipic/2020-03-31-mifi.jpg"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="_4"&gt;所以&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;但行好事&lt;/span&gt;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2020-03-31T12:42:00+08:00</updated><entry><title>拙见/ DNS之殇</title><link href="https://blog.zoomquiet.io/imho-murmur-dns-sad-story.html" rel="alternate"></link><published>2020-03-31T10:42:00+08:00</published><updated>2020-03-31T12:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-31:/imho-murmur-dns-sad-story.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;DNS&lt;/span&gt; in china is one kinds of sadding&amp;nbsp;song&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;011&lt;/strong&gt;篇原创&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2020-05-22T21:42:00+08:00</updated><entry><title>拙见/ DNS之殇</title><link href="https://blog.zoomquiet.io/imho-murmur-dns-sad-story.html" rel="alternate"></link><published>2020-03-31T10:42:00+08:00</published><updated>2020-03-31T12:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-31:/imho-murmur-dns-sad-story.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;DNS&lt;/span&gt; in china is one kinds of sadding&amp;nbsp;song&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;011&lt;/strong&gt;篇原创&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;普通程序老猿一则感叹&amp;#8230;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4465,7 +4465,265 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 &lt;ul&gt;
 &lt;li&gt;170809 blogging&lt;/li&gt;
 &lt;li&gt;170808 inti.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="mac"></category><category term="pyqt"></category><category term="howto"></category><category term="sierra"></category></entry><entry><title>Leo 5.4 theme custom</title><link href="https://blog.zoomquiet.io/leo5theme-key-words.html" rel="alternate"></link><published>2016-11-17T00:00:00+08:00</published><updated>2016-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-11-17:/leo5theme-key-words.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="mac"></category><category term="pyqt"></category><category term="howto"></category><category term="sierra"></category></entry><entry><title>钩陈/ 巴别塔</title><link href="https://blog.zoomquiet.io/oldtouch-S06E05g56-babel-tower.html" rel="alternate"></link><published>2017-03-06T23:42:00+08:00</published><updated>2020-05-22T21:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2017-03-06:/oldtouch-S06E05g56-babel-tower.html</id><summary type="html">&lt;p&gt;OldTouch/ zoomquiet with friends enjoy GreatChinese 4 &lt;span class="caps"&gt;WP&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;h1 id="s06e05g56"&gt;S06E05g56: 巴别塔&lt;a class="headerlink" href="#s06e05g56" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;这塔&lt;/span&gt; &lt;span class="err"&gt;立在大地中央&lt;/span&gt;
+&lt;span class="err"&gt;无论在哪&lt;/span&gt; &lt;span class="err"&gt;都能看到&lt;/span&gt;
+&lt;span class="err"&gt;在地面烧砖&lt;/span&gt; &lt;span class="err"&gt;工人层层接力搬运&lt;/span&gt;  
+&lt;span class="err"&gt;要三年又三个月&lt;/span&gt; &lt;span class="err"&gt;才能送上塔顶&lt;/span&gt; 
+&lt;span class="err"&gt;这塔&lt;/span&gt; &lt;span class="err"&gt;不断向上建造&lt;/span&gt; 
+&lt;span class="err"&gt;住在塔中的工人&lt;/span&gt; &lt;span class="err"&gt;已在空中建成村落&lt;/span&gt; &lt;span class="err"&gt;世代生活&lt;/span&gt; &lt;span class="err"&gt;不再回到地面&lt;/span&gt;
+
+&lt;span class="err"&gt;塔快要完工&lt;/span&gt; &lt;span class="err"&gt;矿工的队伍启程&lt;/span&gt; &lt;span class="err"&gt;易卜拉欣&lt;/span&gt; &lt;span class="err"&gt;也在其中&lt;/span&gt;
+&lt;span class="err"&gt;他们要登上塔顶&lt;/span&gt; &lt;span class="err"&gt;掘进天堂&lt;/span&gt; &lt;span class="err"&gt;让人们重回乐园&lt;/span&gt;
+&lt;span class="err"&gt;第一天&lt;/span&gt; &lt;span class="err"&gt;他们拉着车&lt;/span&gt; &lt;span class="err"&gt;唱着歌&lt;/span&gt; &lt;span class="err"&gt;沿坡道盘旋攀登&lt;/span&gt; 
+&lt;span class="err"&gt;第三天&lt;/span&gt; &lt;span class="err"&gt;他们腿酸&lt;/span&gt; &lt;span class="err"&gt;沉默&lt;/span&gt; &lt;span class="err"&gt;向下望&lt;/span&gt; &lt;span class="err"&gt;宫殿如瓦砾&lt;/span&gt; &lt;span class="err"&gt;商队似蚁群&lt;/span&gt;   
+&lt;span class="err"&gt;第七天&lt;/span&gt; &lt;span class="err"&gt;他们被星辰环绕&lt;/span&gt; &lt;span class="err"&gt;易卜拉欣发觉&lt;/span&gt; &lt;span class="err"&gt;黑夜&lt;/span&gt; &lt;span class="err"&gt;是大地将自己的影&lt;/span&gt; &lt;span class="err"&gt;投到天空&lt;/span&gt;
+&lt;span class="err"&gt;一月又一月&lt;/span&gt; &lt;span class="err"&gt;经过一个个城镇&lt;/span&gt; &lt;span class="err"&gt;居民耕种&lt;/span&gt; &lt;span class="err"&gt;孩童打闹&lt;/span&gt;
+&lt;span class="err"&gt;过了三年又三个月&lt;/span&gt; &lt;span class="err"&gt;他们终于登上塔顶&lt;/span&gt;
+&lt;span class="err"&gt;脚下云雾缭绕&lt;/span&gt; &lt;span class="err"&gt;依稀透出大地和海洋的颜色&lt;/span&gt;
+&lt;span class="err"&gt;头上大片岩石&lt;/span&gt; &lt;span class="err"&gt;雪白坚硬&lt;/span&gt; &lt;span class="err"&gt;无边无际&lt;/span&gt;
+
+&lt;span class="err"&gt;矿工们烤热岩石&lt;/span&gt; &lt;span class="err"&gt;再泼冷水&lt;/span&gt; &lt;span class="err"&gt;如此反复&lt;/span&gt; &lt;span class="err"&gt;直至石块开裂&lt;/span&gt;
+&lt;span class="err"&gt;撬下碎片&lt;/span&gt; &lt;span class="err"&gt;挖出通道&lt;/span&gt; &lt;span class="err"&gt;嵌入闸门&lt;/span&gt;
+&lt;span class="err"&gt;他们定居在天堂地底&lt;/span&gt; &lt;span class="err"&gt;每天劳作&lt;/span&gt; &lt;span class="err"&gt;慢慢向上挖掘&lt;/span&gt;
+
+&lt;span class="err"&gt;那天&lt;/span&gt; &lt;span class="err"&gt;突然岩石迸裂&lt;/span&gt; &lt;span class="err"&gt;大水倾泻而出&lt;/span&gt;
+&lt;span class="err"&gt;闸门闭合&lt;/span&gt; &lt;span class="err"&gt;易卜拉欣被困在门后&lt;/span&gt;
+&lt;span class="err"&gt;他大声呼救&lt;/span&gt; &lt;span class="err"&gt;但水声浩荡&lt;/span&gt; &lt;span class="err"&gt;无人应答&lt;/span&gt;
+&lt;span class="err"&gt;水卷走他&lt;/span&gt; &lt;span class="err"&gt;如同河中一片落叶&lt;/span&gt;
+&lt;span class="err"&gt;原以为即将死去&lt;/span&gt;
+&lt;span class="err"&gt;却有一股水流&lt;/span&gt; &lt;span class="err"&gt;将他托上岩石&lt;/span&gt;
+&lt;span class="err"&gt;易卜拉欣&lt;/span&gt; &lt;span class="err"&gt;喘息着昏了过去&lt;/span&gt;
+
+&lt;span class="err"&gt;不知多久&lt;/span&gt; &lt;span class="err"&gt;他渐渐苏醒&lt;/span&gt; &lt;span class="err"&gt;寻着光&lt;/span&gt; &lt;span class="err"&gt;蹒跚前行&lt;/span&gt; 
+&lt;span class="err"&gt;走出洞口&lt;/span&gt; &lt;span class="err"&gt;满眼岩石与黄沙&lt;/span&gt;
+&lt;span class="err"&gt;极目望去&lt;/span&gt; &lt;span class="err"&gt;远方是塔&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="图片来自网络" src="http://upload-images.jianshu.io/upload_images/3361403-2afadf3f7654982f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文根据 Ted Chiang&amp;nbsp;作品《巴比伦塔》改编&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="_1"&gt;废稿&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;~&amp;nbsp;收集本次小组和合过程中放弃的稿件&amp;#8230;&lt;/p&gt;
+&lt;h2 id="c0"&gt;C0,创&lt;a class="headerlink" href="#c0" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;上帝初创天地有&lt;/span&gt;
+&lt;span class="err"&gt;曰要有光即有光&lt;/span&gt;
+&lt;span class="err"&gt;即有光遂判昼夜&lt;/span&gt;
+&lt;span class="err"&gt;分水上下即云海&lt;/span&gt;
+&lt;span class="err"&gt;聚水出地布草木&lt;/span&gt;
+&lt;span class="err"&gt;虫鸟鱼跃走兽生&lt;/span&gt;
+&lt;span class="err"&gt;七日功成自小憩&lt;/span&gt;
+&lt;span class="err"&gt;肖己捏土造亚当&lt;/span&gt;
+&lt;span class="err"&gt;河出伊甸溉丰饶&lt;/span&gt;
+&lt;span class="err"&gt;唯嘱勿食善恶果&lt;/span&gt;
+&lt;span class="err"&gt;依哀万物皆有伴&lt;/span&gt;
+&lt;span class="err"&gt;上取肋骨塑夏娃&lt;/span&gt;
+&lt;span class="err"&gt;男女初裸不为耻&lt;/span&gt;
+&lt;span class="err"&gt;狡蛇巧辩诱善恶&lt;/span&gt;
+&lt;span class="err"&gt;夏娃动心尝禁果&lt;/span&gt;
+&lt;span class="err"&gt;丈夫盲从共启心&lt;/span&gt;
+&lt;span class="err"&gt;即编草叶为衣裳&lt;/span&gt;
+&lt;span class="err"&gt;上帝巡园知破禁&lt;/span&gt;
+&lt;span class="err"&gt;咒蛇食土用肚行&lt;/span&gt;
+&lt;span class="err"&gt;憎女从夫怀胎苦&lt;/span&gt;
+&lt;span class="err"&gt;令男终生劳苦作&lt;/span&gt;
+&lt;span class="err"&gt;逐出伊甸绝永生&lt;/span&gt;
+&lt;span class="err"&gt;自此人族代相传&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="c0_1"&gt;C0:得趣&lt;a class="headerlink" href="#c0_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;天地玄黄&lt;/span&gt; &lt;span class="err"&gt;宇宙洪荒&lt;/span&gt;
+&lt;span class="err"&gt;我之为吾&lt;/span&gt; &lt;span class="err"&gt;以何立命&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
+&lt;span class="err"&gt;李纳斯曰&lt;/span&gt; &lt;span class="err"&gt;一切为&lt;/span&gt;&lt;span class="n"&gt;fun&lt;/span&gt;
+
+&lt;span class="err"&gt;自古追求&lt;/span&gt; &lt;span class="err"&gt;言功立德&lt;/span&gt;
+&lt;span class="err"&gt;现今社会&lt;/span&gt; &lt;span class="err"&gt;分工精细&lt;/span&gt;
+&lt;span class="err"&gt;我辈常人&lt;/span&gt; &lt;span class="err"&gt;难立全功&lt;/span&gt; 
+&lt;span class="err"&gt;人生苦短&lt;/span&gt; &lt;span class="err"&gt;得趣为上&lt;/span&gt;
+
+&lt;span class="err"&gt;志趣难明&lt;/span&gt; &lt;span class="err"&gt;转为作品&lt;/span&gt;
+&lt;span class="err"&gt;传播行世&lt;/span&gt; &lt;span class="err"&gt;内含三昧&lt;/span&gt;
+&lt;span class="err"&gt;以何感应&lt;/span&gt; &lt;span class="err"&gt;同级累趣&lt;/span&gt;
+&lt;span class="err"&gt;是以得趣&lt;/span&gt; &lt;span class="err"&gt;难于含趣&lt;/span&gt;
+&lt;span class="err"&gt;趣之为趣&lt;/span&gt; &lt;span class="err"&gt;在得趣乎&lt;/span&gt;
+&lt;span class="err"&gt;若无人得&lt;/span&gt; &lt;span class="err"&gt;哪来趣味&lt;/span&gt;
+&lt;span class="err"&gt;然无趣蕴&lt;/span&gt; &lt;span class="err"&gt;也无可得&lt;/span&gt;
+&lt;span class="err"&gt;是以得趣&lt;/span&gt; &lt;span class="err"&gt;在走取之&lt;/span&gt;
+&lt;span class="err"&gt;无论置取&lt;/span&gt; &lt;span class="err"&gt;皆须先行&lt;/span&gt;
+&lt;span class="err"&gt;亲历磨炼&lt;/span&gt; &lt;span class="err"&gt;取有趣昧&lt;/span&gt;
+&lt;span class="err"&gt;再遇含趣&lt;/span&gt; &lt;span class="err"&gt;内才感应&lt;/span&gt;
+
+&lt;span class="err"&gt;人生苦短&lt;/span&gt; &lt;span class="err"&gt;得趣以趣&lt;/span&gt;
+&lt;span class="err"&gt;趣学趣练&lt;/span&gt; &lt;span class="err"&gt;为召更趣&lt;/span&gt;
+&lt;span class="err"&gt;写趣记趣&lt;/span&gt; &lt;span class="err"&gt;以诱新趣&lt;/span&gt;
+&lt;span class="err"&gt;报国成家&lt;/span&gt; &lt;span class="err"&gt;趣之旁利&lt;/span&gt;
+&lt;span class="err"&gt;揭谛揭谛&lt;/span&gt; &lt;span class="err"&gt;般若自苦&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;注: 李纳斯 ~ Linus, 开源操作系统 Linux 创始人, 操作系统是电脑得以使用的基础性软件, 开源则是通过源代码开放,使一个软件可以由任何一位有兴趣的用户进行主动改进,源代码则是软件本身由程序员编写的可编译执行的文本,编译则是&amp;#8230;&amp;nbsp;好吧,这个解释链太长足繁不可道也.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="c0_2"&gt;C0~莫邪&lt;a class="headerlink" href="#c0_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;吴王破越&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;国势鼎盛&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;收集天下利刃彰显武功&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;但是哪柄最利&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="err"&gt;无以服众&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;有好事者推荐&lt;/span&gt; &lt;span class="err"&gt;干将&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;能铸绝世好剑&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;即令干将&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;若是铸不出&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;杀尽越国男丁&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+&lt;span class="err"&gt;无奈的干将夫妻&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;二人一起上山&lt;/span&gt;
+&lt;span class="err"&gt;用一个月搭好剑炉&lt;/span&gt;
+&lt;span class="err"&gt;用两个月采尽山上大木&lt;/span&gt;
+&lt;span class="err"&gt;用三个月精心闷烧成炭&lt;/span&gt;
+&lt;span class="err"&gt;用四个月提炼各色原料&lt;/span&gt;
+&lt;span class="err"&gt;用五个月尝试炼剑新法&lt;/span&gt;
+&lt;span class="err"&gt;吴王等不了&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;追责&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="err"&gt;百日后&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;再无剑出&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;即屠越之男丁&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+&lt;span class="err"&gt;无奈的干将夫妻&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;二人一起上前&lt;/span&gt;
+&lt;span class="err"&gt;点燃剑炉&lt;/span&gt;
+&lt;span class="err"&gt;投入精料&lt;/span&gt;
+&lt;span class="err"&gt;大火梵天&lt;/span&gt;
+&lt;span class="err"&gt;整整三月&lt;/span&gt;
+&lt;span class="err"&gt;但是&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;无论干将怎么尝试&lt;/span&gt;
+&lt;span class="err"&gt;铁英不化&lt;/span&gt;
+&lt;span class="err"&gt;妻子问怎么办&lt;/span&gt;
+&lt;span class="err"&gt;干将只得回答&lt;/span&gt;
+&lt;span class="err"&gt;先师曾遇相同情况&lt;/span&gt;
+&lt;span class="err"&gt;投入童男童女才成&lt;/span&gt;
+&lt;span class="err"&gt;妻子想想说这么办&lt;/span&gt;
+&lt;span class="err"&gt;剪下头发指甲投入&lt;/span&gt;
+&lt;span class="err"&gt;铁英果然销融一些&lt;/span&gt;
+&lt;span class="err"&gt;再投干将头发指甲&lt;/span&gt;
+&lt;span class="err"&gt;却无效果&lt;/span&gt;
+
+&lt;span class="err"&gt;无奈的干将夫妻&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;二人一起上前&lt;/span&gt;
+&lt;span class="err"&gt;在最后那天&lt;/span&gt;
+&lt;span class="err"&gt;干将的妻子跳入剑炉&lt;/span&gt;
+&lt;span class="err"&gt;果然炼成一炉精铁&lt;/span&gt;
+&lt;span class="err"&gt;稍稍煅打&lt;/span&gt; &lt;span class="err"&gt;即成宝剑&lt;/span&gt;
+&lt;span class="err"&gt;呈给吴王&lt;/span&gt;
+&lt;span class="err"&gt;却将抽出剑中剑&lt;/span&gt;
+&lt;span class="err"&gt;破尽待卫枪林&lt;/span&gt;
+&lt;span class="err"&gt;刺杀吴王功成&lt;/span&gt;
+
+&lt;span class="err"&gt;干将大笑着自吻&lt;/span&gt;
+&lt;span class="err"&gt;剑上纂刻着莫邪&lt;/span&gt;
+&lt;span class="err"&gt;这是他妻子的名&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;h1 id="s06e05g56_1"&gt;S06E05g56: 沉默&lt;a class="headerlink" href="#s06e05g56_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;v3.0229.1010&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="_2"&gt;罪&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;那时&lt;/span&gt; &lt;span class="err"&gt;我还是孩童&lt;/span&gt;
+&lt;span class="err"&gt;和兄弟姐妹生活在一起&lt;/span&gt;
+&lt;span class="err"&gt;那次&lt;/span&gt; &lt;span class="err"&gt;游戏&lt;/span&gt;
+&lt;span class="err"&gt;只因一瞬间的气恼&lt;/span&gt;
+&lt;span class="err"&gt;推了哥哥一下&lt;/span&gt;
+&lt;span class="err"&gt;滑落树屋&lt;/span&gt; 
+&lt;span class="err"&gt;我变成王位第一继承人&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_3"&gt;罚&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;那时&lt;/span&gt; &lt;span class="err"&gt;我还是常人&lt;/span&gt;
+&lt;span class="err"&gt;但是&lt;/span&gt; &lt;span class="err"&gt;每个夜&lt;/span&gt; &lt;span class="err"&gt;都不敢入眠&lt;/span&gt;
+&lt;span class="err"&gt;不敢&lt;/span&gt; &lt;span class="err"&gt;向父王坦白&lt;/span&gt;
+&lt;span class="err"&gt;即使&lt;/span&gt; &lt;span class="err"&gt;在他弥留之时&lt;/span&gt;
+&lt;span class="err"&gt;即使&lt;/span&gt; &lt;span class="err"&gt;我变成了王&lt;/span&gt;
+&lt;span class="err"&gt;沉默中&lt;/span&gt; &lt;span class="err"&gt;遮蔽愁容的毛发慢慢长出&lt;/span&gt;
+&lt;span class="err"&gt;逃离&lt;/span&gt; &lt;span class="err"&gt;躲在森林中&lt;/span&gt;
+&lt;span class="err"&gt;只有&lt;/span&gt; &lt;span class="err"&gt;那株玫瑰&lt;/span&gt; &lt;span class="err"&gt;能安宁我的悔&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_4"&gt;赎&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;那时&lt;/span&gt; &lt;span class="err"&gt;我差点杀了他&lt;/span&gt; &lt;span class="err"&gt;为那株玫瑰&lt;/span&gt;
+&lt;span class="err"&gt;却是&lt;/span&gt; &lt;span class="err"&gt;换来了她&lt;/span&gt;
+&lt;span class="err"&gt;比玫瑰更安宁的她&lt;/span&gt;
+&lt;span class="err"&gt;竟是&lt;/span&gt; &lt;span class="err"&gt;她的原谅&lt;/span&gt; &lt;span class="err"&gt;解除我的罪&lt;/span&gt;
+&lt;span class="err"&gt;感谢&lt;/span&gt; &lt;span class="err"&gt;我的牧者&lt;/span&gt; &lt;span class="err"&gt;终引她到来&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_5"&gt;巴别塔&lt;a class="headerlink" href="#_5" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;~&amp;nbsp;v3.0229.2020&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;这塔&lt;/span&gt; &lt;span class="err"&gt;矗立在示拿的中心&lt;/span&gt;
+&lt;span class="err"&gt;无论&lt;/span&gt; &lt;span class="err"&gt;距离多远都看的到&lt;/span&gt;
+&lt;span class="err"&gt;不过&lt;/span&gt; &lt;span class="err"&gt;太远就只能隐约感到&lt;/span&gt; &lt;span class="err"&gt;象一丝闪光的发丝&lt;/span&gt;
+&lt;span class="err"&gt;其实&lt;/span&gt; &lt;span class="err"&gt;绕塔走一圈得三天三夜&lt;/span&gt;
+&lt;span class="err"&gt;一块砖放上拖车&lt;/span&gt;
+&lt;span class="err"&gt;要经过三年又三个月才会被砌入塔顶&lt;/span&gt;
+
+&lt;span class="err"&gt;跟随&lt;/span&gt; &lt;span class="err"&gt;最那一车砖的&lt;/span&gt;
+&lt;span class="err"&gt;是从以拦召来的矿工&lt;/span&gt;
+&lt;span class="err"&gt;将去挖开天堂的地窖&lt;/span&gt;
+
+&lt;span class="err"&gt;第一天&lt;/span&gt;  &lt;span class="err"&gt;矿工们唱着歌&lt;/span&gt;  &lt;span class="err"&gt;拉着车&lt;/span&gt;
+&lt;span class="err"&gt;沿着坡道盘旋攀登&lt;/span&gt;
+&lt;span class="err"&gt;易卜拉欣唱的最欢快&lt;/span&gt;
+&lt;span class="err"&gt;因为他是最年轻的一位矿工&lt;/span&gt;
+
+&lt;span class="err"&gt;第二天&lt;/span&gt;  &lt;span class="err"&gt;矿工们的腿开始酸疼&lt;/span&gt;
+&lt;span class="err"&gt;从塔上向下望去&lt;/span&gt;  
+&lt;span class="err"&gt;宫殿如同瓦砾&lt;/span&gt;  &lt;span class="err"&gt;商队如同蚁群&lt;/span&gt;
+
+&lt;span class="err"&gt;第三天&lt;/span&gt;  &lt;span class="err"&gt;矿工们继续往上攀登&lt;/span&gt;
+&lt;span class="err"&gt;当黄昏的阴影笼罩了城市&lt;/span&gt;
+&lt;span class="err"&gt;高塔上仍然能看见火红的太阳&lt;/span&gt;
+
+&lt;span class="err"&gt;一天又一天&lt;/span&gt;  &lt;span class="err"&gt;矿工们爬得越来越高&lt;/span&gt;
+&lt;span class="err"&gt;无论朝上看还是朝下看&lt;/span&gt;
+&lt;span class="err"&gt;塔身都是一般模样&lt;/span&gt;
+
+&lt;span class="err"&gt;一周又一周&lt;/span&gt;  &lt;span class="err"&gt;他们接近了星辰的高度&lt;/span&gt;
+&lt;span class="err"&gt;星辰高低错落&lt;/span&gt;  &lt;span class="err"&gt;环绕着他们&lt;/span&gt;
+
+&lt;span class="err"&gt;过了不知有多久&lt;/span&gt;  &lt;span class="err"&gt;他们终于登上了塔顶&lt;/span&gt;
+&lt;span class="err"&gt;脚下是层层的云雾&lt;/span&gt;  &lt;span class="err"&gt;间或透出大地和海洋的颜色&lt;/span&gt;
+&lt;span class="err"&gt;头顶是雪白光滑&lt;/span&gt;  &lt;span class="err"&gt;一望无际的岩石&lt;/span&gt;
+
+&lt;span class="err"&gt;远久以前的大洪水&lt;/span&gt;
+&lt;span class="err"&gt;来自上方的水&lt;/span&gt; &lt;span class="err"&gt;就是从天堂的地窖泻下&lt;/span&gt;
+
+&lt;span class="err"&gt;矿工们要凿开地窖&lt;/span&gt; &lt;span class="err"&gt;钻过天水&lt;/span&gt; 
+&lt;span class="err"&gt;偷偷回到乐园&lt;/span&gt;
+
+&lt;span class="err"&gt;矿工们用火烤热岩石&lt;/span&gt; &lt;span class="err"&gt;再泼水&lt;/span&gt;
+&lt;span class="err"&gt;反复再三&lt;/span&gt; &lt;span class="err"&gt;岩石开始迸裂&lt;/span&gt;
+&lt;span class="err"&gt;再将岩石撬下&lt;/span&gt;  &lt;span class="err"&gt;挖出通道&lt;/span&gt;  &lt;span class="err"&gt;装上滑门&lt;/span&gt;
+&lt;span class="err"&gt;如果凿穿&lt;/span&gt;  &lt;span class="err"&gt;滑门可将水堵上&lt;/span&gt; &lt;span class="err"&gt;防止冲毁这塔&lt;/span&gt;
+
+&lt;span class="err"&gt;一年又一年&lt;/span&gt; &lt;span class="err"&gt;易卜拉欣正在添柴&lt;/span&gt;
+&lt;span class="err"&gt;忽然&lt;/span&gt;  &lt;span class="err"&gt;大水倾泻而下&lt;/span&gt;
+&lt;span class="err"&gt;滑门被奋力关闭&lt;/span&gt;  
+&lt;span class="err"&gt;将易卜拉欣隔在天堂底部&lt;/span&gt;
+
+&lt;span class="err"&gt;易卜拉欣&lt;/span&gt; &lt;span class="err"&gt;大声呼救&lt;/span&gt;  &lt;span class="err"&gt;水声浩荡&lt;/span&gt;  &lt;span class="err"&gt;无人听见&lt;/span&gt;
+&lt;span class="err"&gt;水卷走他&lt;/span&gt;  &lt;span class="err"&gt;就像卷走落在河里的一片树叶&lt;/span&gt;
+&lt;span class="err"&gt;不知多久&lt;/span&gt; &lt;span class="err"&gt;撞上了一块岩石&lt;/span&gt;
+
+&lt;span class="err"&gt;易卜拉欣&lt;/span&gt;  &lt;span class="err"&gt;用尽气力攀爬&lt;/span&gt;
+&lt;span class="err"&gt;一股湍流涌来&lt;/span&gt;  &lt;span class="err"&gt;将他冲上了岸&lt;/span&gt;
+&lt;span class="err"&gt;易卜拉欣&lt;/span&gt; &lt;span class="err"&gt;幸福的昏了过去&lt;/span&gt;
+
+&lt;span class="err"&gt;不知过了多久&lt;/span&gt;  &lt;span class="err"&gt;易卜拉欣&lt;/span&gt; &lt;span class="err"&gt;渐渐苏醒&lt;/span&gt;
+&lt;span class="err"&gt;朝着光爬去&lt;/span&gt;
+
+&lt;span class="err"&gt;爬出岩洞&lt;/span&gt;  &lt;span class="err"&gt;眼前是无尽的岩石与黄沙&lt;/span&gt;
+&lt;span class="err"&gt;回头远望&lt;/span&gt;  
+&lt;span class="err"&gt;隐约感到&lt;/span&gt; &lt;span class="err"&gt;有一丝闪光的发丝垂在天空&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;本文根据 Ted Chiang&amp;nbsp;作品《巴比伦塔》改编&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="OldTouch"></category><category term="GC4WP"></category><category term="Wirting"></category></entry><entry><title>Leo 5.4 theme custom</title><link href="https://blog.zoomquiet.io/leo5theme-key-words.html" rel="alternate"></link><published>2016-11-17T00:00:00+08:00</published><updated>2016-11-17T00:00:00+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-11-17:/leo5theme-key-words.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/leo5theme.html"&gt;Leo 5.2 theme custom&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Leo 是灵活的完全 Pythonic 的可定制 &lt;code&gt;文学化编辑环境&lt;/code&gt; …&lt;/p&gt;

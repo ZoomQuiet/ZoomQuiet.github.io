@@ -87,135 +87,178 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="https://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
-                <div class="summary">
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>C样:</p>
-<div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
-<p>偏门:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
-</pre></div>
-<p>蠎样:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">v</span> <span class="n">in</span> <span class="n">my_list</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">v</span>
-</pre></div>
-<p>模式:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">name</span> <span class="n">in</span> <span class="n">iterable</span><span class="o">:</span>
-    <span class="n">statements</span>
-</pre></div>
+                <h2><a href="https://blog.zoomquiet.io/170328-S09E05gDAMA-ask-freedom.html">自由问自疏</a></h2>
+                <div class="summary"><h1 id="_1">自由问自疏<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>~&nbsp;尝试记录和合过程中偏见的激荡</p>
+<p><strong><span class="caps">S09E05</span></strong> 作业要求改编共宣为 800&nbsp;字以内的文章</p>
+<p>当时全体就感受到一万点<code>无助</code>:</p>
 <ul>
-<li>可 …</li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
+<li>再次时隔多年接触到两个多甲子前的雄文</li>
+<li>虽然意境感受的到,&nbsp;但是,具体内容越读越模糊</li>
+<li>其中嵌入的概念迭代是越品越多</li>
+<li>想整体改编是不可能的</li>
+<li>所以,&nbsp;只能抓住自己最有感觉的一个点来尝试展开</li>
+<li>只求将我们的偏见能和合出足够通畅的文字就已是成功</li>
+</ul>
+<p>共宣1万多字,四章:</p>
+<ul>
+<li>第一章: 说来由, 论述了阶级斗争和资产/无产阶级&nbsp;的对立形成</li>
+<li>第二章: 说共党,&nbsp;描述共产党要作什么</li>
+<li>第三章: 说文献,&nbsp;再回顾历史挖掘共产主义的各种来由</li>
+<li>第四章: 说计划,&nbsp;定义口号和命运方向</li>
+</ul>
+<p>第二章 最后一句承前启后, 非常有感觉,&nbsp;所以,决心怼:</p>
+<blockquote>
+<p>代替那存在着阶级和阶级对立的资产阶级旧社会的，将是这样一个联合体，在那里，每个人的自由发展是一切人的自由发展的条件</p>
+</blockquote>
+<p>中英对照这个核心句&#8230;程序化理解是:</p>
+<div class="highlight"><pre>support <span class="o">&lt;-</span> make <span class="o">&lt;-+</span>
+  <span class="o">|</span>               <span class="o">|</span>
+  <span class="o">|</span>       pFD <span class="o">-&gt;</span> Dev. <span class="o">-&gt;</span> person <span class="o">-+</span>
+  <span class="o">|</span>        <span class="o">|</span>              <span class="o">^</span>      <span class="o">|</span>
+  <span class="o">|</span>        V …</pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/170328-S09E05gDAMA-ask-freedom.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/standing-desk-env.html">站立式办公环境尝试</a></h2>
-                <div class="summary">
-<h1 id="_1">立<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>人之所以为人, 就是因为站立解放了双手, 提升了视野, 刺激了心智, 勃发了野心…</p>
-<p>所以,我们用了几亿年进化, 才站立了起来,
-怎么可以在钢筋洞穴中, 趴回去呢?!</p>
-<h2 id="_2">背景<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<ul>
-<li>嗯哼,终于有机会 <span class="caps">SOHO</span> 很一段时期了</li>
-<li>有舒服的 <span class="caps">IKEA</span> 沙发, 但是, 为了健康着想, Standing Desk 系统是值得尝试的</li>
-<li>另外, 还有个背景条件就是没有专门的书房给俺使用</li>
-<li>只有, 床前 110x300cm 的面积可以利用</li>
-<li>以及, 预算 <span class="caps">5000RMB</span> 是上限!</li>
-</ul>
-<h2 id="_3">调研<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<ul>
-<li>嗯哼, 手上只有一台 2011版的 <span class="caps">MBP</span> 15吋高配作为主力工作用机</li>
-<li>另外, 有 <span class="caps">WACOM</span> Intaus + <span class="caps">HHKB</span> lite2 作为输入设备</li>
-<li>需要:<ul>
-<li>站立式办公桌, 在俺自然站立时 …</li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/standing-desk-env.html">more ...</a>
+                <h2><a href="https://blog.zoomquiet.io/170327-S09E05gDAMA.html">S09E05gDAMA/&nbsp;自由问</a></h2>
+                <div class="summary"><h1 id="s09e05gdama">S09E05gDAMA:自由问<a class="headerlink" href="#s09e05gdama" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>此乃《好中文的样子》课程小组作业
+成员:
+天津 一坪海岸线
+上海 安心竹和申小七
+香港 宋偲瑄
+珠海&nbsp;大妈</p>
+</blockquote>
+<p>… 向 Neruda 致敬
+<a href="http://www.gnu.org/"><img alt="GNU 自由软件" src="http://upload-images.jianshu.io/upload_images/27562-6d2064a29b2f5d3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a></p>
+<p>语音版: <a href="https://www.lizhi.fm/2193128/2592864852843807238">【自由问 和合共读 v7】在线收听 - 荔枝<span class="caps">FM</span></a></p>
+<h2 id="0">0.<a class="headerlink" href="#0" title="Permanent link">&para;</a></h2>
+<p>那般联合体中&nbsp;自由是什么? </p>
+<p>好叫你知道:</p>
+<div class="highlight"><pre><span class="err">劳动和学习</span> <span class="err">以及生活的自由</span>  
+<span class="err">劳动作为第一需求</span>  
+<span class="err">劳动创造人生价值</span>    
+<span class="err">学习成为第一娱乐</span>  
+<span class="err">创造性劳动的乐趣</span> <span class="err">最纯粹</span> <span class="err">无法替代</span>   
+<span class="err">更好的生活</span> <span class="err">只为更好的劳动</span>   
+<span class="err">和家人一起坦然分享</span> <span class="err">劳动成果</span> 
+<span class="err">不再为生存</span> <span class="err">忍受工作</span>
+</pre></div>
+
+
+<h2 id="1">1.<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>那般联合体中&nbsp;劳动者要的自由是什么?</p>
+<p>好叫你知道:</p>
+<div class="highlight"><pre><span class="err">自由安排</span> <span class="err">工作时间</span>
+<span class="err">自由选择</span> <span class="err">工作内容 …</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/170327-S09E05gDAMA.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/how2collaborate-with-leo.html">如何在 Leo&nbsp;中协作?!</a></h2>
-                <div class="summary">
-<h1 id="leo">Leo?<a class="headerlink" href="#leo" title="Permanent link">¶</a></h1>
-<p>~ 嗯哼</p>
-<p>研究什么是 Leo ? 非要一句话说清查的话,只能是:</p>
-<ul>
-<li><code>纯 Python 构建的文学化编辑环境</code><ul>
-<li>好吧, 那什么是 <code>文学化编辑</code> ?</li>
-<li>这事儿, 俺就没办法说清楚了….</li>
-<li>根据俺一向的宣称: <code>教不会别人的,一定也是自己并不真正理解的</code></li>
-</ul>
-</li>
-<li>这点,俺认!<ul>
-<li>参考: <a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">LeoEnvironment - Woodpecker Wiki for <span class="caps">CPUG</span></a></li>
-<li>以及 <a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill#Leo">ZqStudy/MyLearningSkill - Woodpecker Wiki for <span class="caps">CPUG</span></a></li>
-</ul>
-</li>
-<li>就知道, 俺从 05 年上了船…就一直反复的四处宣传 Leo 的舒爽…<ul>
-<li>可惜,一直就没有找到一个真正 <code>直指人心</code> 的 文学化编辑/程 的描述姿势</li>
-</ul>
-</li>
-</ul>
-<p>好吧,再次尝试一下:</p>
-<h2 id="literate-programming">Literate Programming …</h2>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2collaborate-with-leo.html">more ...</a>
+                <h2><a href="https://blog.zoomquiet.io/170314-S07E15g193-examples.html">S07E15g193/ 和合技&nbsp;私例</a></h2>
+                <div class="summary"><h1 id="s07e15g193">S07E15g193: 和合技 私例<a class="headerlink" href="#s07e15g193" title="Permanent link">&para;</a></h1>
+<p>~ 参考: <a href="http://www.jianshu.com/p/aaf4096bde08">GC4g56:&nbsp;和合技~强释</a></p>
+<p>再次体验和合,试例一则:</p>
+<p>初稿:</p>
+<blockquote>
+<p>那时 大马金刀 一起踞坐 在半山
+瞥着下面 错落的居民楼 操场 工人俱乐部&nbsp;红旗</p>
+</blockquote>
+<p>再稿: 发现 <code>瞥</code> 读不出来&nbsp;&#8212;&gt;</p>
+<blockquote>
+<p>那时 大马金刀 一起踞坐 在半山腰
+静静看着下面
+错落的居民楼 学校 操场 工人俱乐部 红旗&nbsp;…</p>
+</blockquote>
+<p>三稿: <code>看着</code> 太平&nbsp;&#8212;&gt;</p>
+<blockquote>
+<p>那时 一起大马金刀的坐在半山
+静静巡视下面
+错落的居民楼 学校 操场 工人俱乐部 红旗&nbsp;…</p>
+</blockquote>
+<p>稿4: 发现景象中有重复的&nbsp;&#8212;&gt;</p>
+<blockquote>
+<p>吃完 一起静静坐在半山
+巡视下方 错落的居民楼 …</p></blockquote>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/170314-S07E15g193-examples.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme&nbsp;custom</a></h2>
-                <div class="summary">
-<h1 id="en"><span class="caps">EN</span><a class="headerlink" href="#en" title="Permanent link">¶</a></h1>
-<p>thanks guys in <code>leo-editor@googlegroups.com</code> :</p>
+                <h2><a href="https://blog.zoomquiet.io/170314-S07E15g193-re-hummm.html">S07E15g193/&nbsp;嗯哼重来</a></h2>
+                <div class="summary"><h1 id="s07e15g193">S07E15g193: 嗯哼重来<a class="headerlink" href="#s07e15g193" title="Permanent link">&para;</a></h1>
+<p>佩哥哥一声令下, 原先好容易磨合成功的小组,&nbsp;不得不破出门户,另行嗯哼&#8230;</p>
+<p>原本以为只是普通的 <code>重复基建</code> 没想到</p>
+<p><strong><span class="caps">TL</span>;<span class="caps">DR</span></strong>&nbsp;&#8230;</p>
+<h2 id="_1">知情咒批发组<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>才4天就已形成内部的很多新咒:</p>
 <ul>
-<li>Terry Brown</li>
-<li>john lunzer</li>
+<li>和合仪式</li>
+<li>通读怂怼</li>
+<li>C-C模式</li>
+<li>大装修模式</li>
+<li>第一作者</li>
+<li>&#8230;</li>
 </ul>
-<p>make me know how to custom Leo theme step by step:</p>
+<p>可能因为组里女生多, 对各种细节敏感, 发觉有一丝不嗯哼, 就立即挖掘,
+直至明白并折叠为新咒, 以及面向半年前的自己,&nbsp;整理为小教程&#8230;</p>
+<p>计有:</p>
 <ul>
-<li>old versions <code>myLeoSettings.leo</code> appended buttons :<ul>
-<li>at <code>leo/myLeoSettings.leo#Startup--&gt;Local buttons</code></li>
-<li>need copy from  <code>leoSettings.leo</code> </li>
+<li>github&nbsp;注册说明</li>
+<li>全手机 github&nbsp;使用手册</li>
+<li>如何 github-issue&nbsp;图片发布</li>
+<li>commit-comment和合模式解决的核心需求</li>
+<li>大装修模式［B-C <span class="caps">MODEL</span>］规约</li>
+<li>&#8230;</li>
 </ul>
-</li>
-<li>so my custome flow as:<ul>
-<li>try edit some node</li>
-<li>click …</li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/leo5theme.html">more ...</a>
+<p>简直将 github&nbsp;各种表面功能挖了个底儿掉..</p>
+<p>也生生前后挤出俺这8天 16 个小时的精力投入到越来越有趣也越深入的
+<a href="http://www.jianshu.com/p/f3fc6f0ca682">怂怼</a><a href="http://www.jianshu.com/p/aaf4096bde08">和合</a>中来&#8230;</p>
+<h2 id="_2">和合技<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>这次对具体的 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/170314-S07E15g193-re-hummm.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/linux-linus-not-only-be-fun.html">Linux&nbsp;后的思想</a></h2>
-                <div class="summary">
-<p>来自 <span class="caps">TED2016</span> 的分享:</p>
-<p><a href="https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux">Linus Torvalds: The mind behind Linux | <span class="caps">TED</span> Talk | <span class="caps">TED</span>.com</a></p>
-<p>戳中泪点的:</p>
-<ul>
-<li>所有项目,只是因为我需要</li>
-<li>最困难的不是完成大项目,而是令人们在一起工作,即使相互不接受</li>
-<li>Linux 并不是选择了开源,只是那时刚好有开源吻合 Linux 项目</li>
-<li>….</li>
-</ul>
-<p>是的,为什么 Linux 发展的如此快,而更加早的 <span class="caps">GNU</span> 项目反而越来越没有存在感了!?</p>
-<ul>
-<li><span class="caps">RMS</span> 太聪明,总是戳到关键点</li>
-<li>Linus 明智的多,只作自己能控制的,其它的给更加聪明的人折腾吧</li>
-<li>嗯哼,这就是失控控制法</li>
-<li>不控制的控制才是最好的控制</li>
-<li>…</li>
-</ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/linux-linus-not-only-be-fun.html">more ...</a>
+                <h2><a href="https://blog.zoomquiet.io/170314-GC4-follow-ur-heart-debuguself.html">怂怼录</a></h2>
+                <div class="summary"><hr>
+
+<h1 id="_1">怂怼录<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>~来自 <span class="caps">GC4</span> 课程中的互动, 记录各种情景中的私人体会, 具体哪些场景的触发? 您猜~</p>
+<h2 id="_2">怂怼解<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span class="err">从心出发</span> <span class="err">对心发声</span>
+<span class="err">直觉通读</span> <span class="err">入耳走心</span>
+<span class="err">任意不畅</span> <span class="err">和合点矣</span>
+<span class="err">先找怼点</span> <span class="err">再修其诚</span>
+<span class="err">文气图画</span> <span class="err">如经似诵</span>
+<span class="err">字平易读</span> <span class="err">其义弗微</span>
+<span class="err">好中文哉</span> <span class="err">永存内心</span>
+<span class="err">怂怼而出</span> <span class="err">是也乎哉</span>
+</pre></div>
+<h2 id="_3">和合技<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span class="err">百年和合好事磨</span> <span class="err">几经和合定和合</span>
+<span class="err">从此和合传天下</span> <span class="err">也含和合技连脉</span>
+</pre></div>
+<h3 id="_4">和合技层<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">合而不同</span> <span class="err">和而同气</span>
+<span class="err">合再进阶</span> <span class="err">和复顺气</span>
+<span class="err">和合嵌套</span> <span class="err">永无止境</span>
+</pre></div>
+<h3 id="_5">和合嗯哼<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">一周不断探和合</span> <span class="err">七天末绝扣字眼</span>
+<span class="err">但使文章雅洁平</span> <span class="err">中文好样不使空</span>
+</pre></div>
+<h3 id="_6">和合之焉<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span class="err">大道三千</span> <span class="err">早融生活</span>
+<span class="err">中外一样</span> <span class="err">入心入脑</span>
+<span class="err">唯难提取</span> <span class="err">须依场景</span>
+<span class="err">万般困顿</span> <span class="err">本心何如 …</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/170314-GC4-follow-ur-heart-debuguself.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -263,6 +306,16 @@
                         href="https://blog.zoomquiet.io/author/zoomquiet19.html">19</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/author/zoomquiet20.html">20</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/author/zoomquiet21.html">21</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/author/zoomquiet22.html">22</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/author/zoomquiet23.html">23</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/author/zoomquiet24.html">24</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/author/zoomquiet25.html">25</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/author/zoomquiet11.html">&raquo;</a></li>
         </ul>

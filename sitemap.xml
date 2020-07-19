@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/index.html</loc>
-<lastmod>2020-07-04T14:59:16-00:00</lastmod>
+<lastmod>2020-07-19T11:57:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2020-07-04T14:59:16-00:00</lastmod>
+<lastmod>2020-07-19T11:57:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2020-07-04T14:59:16-00:00</lastmod>
+<lastmod>2020-07-19T11:57:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2020-07-04T14:59:16-00:00</lastmod>
+<lastmod>2020-07-19T11:57:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -207,6 +207,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.zoomquiet.io/171109-GC4-feeling.html</loc>
+<lastmod>2017-11-09T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.zoomquiet.io/bind-press-one.html</loc>
 <lastmod>2017-09-10T08:42:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -228,8 +235,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.zoomquiet.io/170314-GC4-follow-ur-heart-debuguself.html</loc>
+<lastmod>2017-03-14T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/170314-S07E17g193.html</loc>
+<lastmod>2017-03-14T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.zoomquiet.io/oldtouch-S06E05g56-babel-tower.html</loc>
 <lastmod>2020-05-22T21:42:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/170121-sorry-tooth.html</loc>
+<lastmod>2017-01-21T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/170112-3knows.html</loc>
+<lastmod>2017-01-12T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1047,6 +1082,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.zoomquiet.io/tag/poem.html</loc>
+<lastmod>2017-01-12T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.zoomquiet.io/tag/blockchain.html</loc>
 <lastmod>2017-09-10T08:42:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -1103,8 +1145,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.zoomquiet.io/tag/fsf.html</loc>
-<lastmod>2014-08-03T00:00:00+08:06</lastmod>
+<loc>https://blog.zoomquiet.io/tag/cubieboard.html</loc>
+<lastmod>2014-01-27T23:48:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1201,6 +1243,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.zoomquiet.io/tag/write.html</loc>
+<lastmod>2017-11-09T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.zoomquiet.io/tag/book.html</loc>
 <lastmod>2020-03-05T15:39:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -1217,6 +1266,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.zoomquiet.io/tag/pandas.html</loc>
 <lastmod>2014-06-03T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/tag/gc4.html</loc>
+<lastmod>2017-11-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1257,8 +1313,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.zoomquiet.io/tag/cubieboard.html</loc>
-<lastmod>2014-01-27T23:48:00+08:06</lastmod>
+<loc>https://blog.zoomquiet.io/tag/fsf.html</loc>
+<lastmod>2014-08-03T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

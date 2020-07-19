@@ -250,7 +250,7 @@
 &lt;/ul&gt;
 &lt;p&gt;进一步的:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;在初3, 对一次语文作业进行了深度折腾 …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 09 Nov 2017 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-11-09:/171109-GC4-feeling.html</guid><category>IMHO</category><category>write</category><category>GC4</category></item><item><title>关联 PRESSone</title><link>https://blog.zoomquiet.io/bind-press-one.html</link><description>
+&lt;li&gt;在初3, 对一次语文作业进行了深度折腾 …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Thu, 09 Nov 2017 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-11-09:/171109-GC4-feeling.html</guid><category>IMHO</category><category>write</category><category>GC4</category></item><item><title>关联 PRESSone</title><link>https://blog.zoomquiet.io/bind-press-one.html</link><description>
 &lt;p&gt;https://press.one/p/v?s=daa9a127693ab0fde9141b894ff9f0dc452c33fc166f0e97252420b83a33088e6c67f5d44f63860c218859c099557d42908cbb8059ebfe92765636dbaaf654710&amp;amp;h=90f1dab4c8b24b6502c03cdf067a279d8a672ae229cc405e171f57c0d45613f7&amp;amp;a=6263e76c1e5ac3196975ad5fa05f458f49633f5c&amp;amp;f=P1&amp;amp;v=3&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -285,7 +285,58 @@
 &lt;li&gt;重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt 可以安装了…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_3"&gt;原来&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;参考:&lt;a href="https://github.com/cartr/homebrew-qt4"&gt;cartr/homebrew-qt4: Homebrew tap …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 08 Aug 2017 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-08-08:/pyqt4macos.html</guid><category>mac</category><category>pyqt</category><category>howto</category><category>sierra</category></item><item><title>怂怼录</title><link>https://blog.zoomquiet.io/170314-GC4-follow-ur-heart-debuguself.html</link><description>&lt;hr&gt;
+&lt;p&gt;参考:&lt;a href="https://github.com/cartr/homebrew-qt4"&gt;cartr/homebrew-qt4: Homebrew tap …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 08 Aug 2017 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-08-08:/pyqt4macos.html</guid><category>mac</category><category>pyqt</category><category>howto</category><category>sierra</category></item><item><title>“[大妈吐糟]小密圈 之功能残念集”</title><link>https://blog.zoomquiet.io/170403-chaos-xiaomi.html</link><description>&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id="_1"&gt;[大妈吐糟]小密圈 之功能残念集&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="_2"&gt;唯有忍受的小密圈&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;第一时间下载/注册/安装了&amp;#8230;然后, 没明白能干什么..
+终于阴差阳错的也发布了付费自学圈, 大家进来了,才发现: &lt;span class="caps"&gt;WTF&lt;/span&gt;!&lt;/p&gt;
+&lt;h1 id="bug-imho"&gt;Bug# #&lt;span class="caps"&gt;IMHO&lt;/span&gt;&lt;a class="headerlink" href="#bug-imho" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="_3"&gt;先夸奖&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;和微信的关联太平滑了,简直以为是同一家公司作的&lt;ul&gt;
+&lt;li&gt;用微信支付/认证,&amp;nbsp;完成小密圈的进入&lt;/li&gt;
+&lt;li&gt;没有任何问题,而且异常的吻合目标人群的分布&lt;/li&gt;
+&lt;li&gt;至少,俺的所有成员,&amp;nbsp;都是从微信群转入的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;支付作的非常简洁,&amp;nbsp;提供了所有必要的功能,而没有其它乱来的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="wtf"&gt;&lt;span class="caps"&gt;WTF&lt;/span&gt;!&lt;a class="headerlink" href="#wtf" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;~&amp;nbsp;一堆堆的 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;app 和 网页功能竟然不是一一对应的?!&lt;ul&gt;
+&lt;li&gt;app-&amp;gt;动态|消息&lt;/li&gt;
+&lt;li&gt;是所有小圈的综合入口 类似各种 &lt;span class="caps"&gt;CSM&lt;/span&gt; 平台的:&amp;nbsp;dashboard&lt;/li&gt;
+&lt;li&gt;非常好,非常有用,非常必要&lt;/li&gt;
+&lt;li&gt;居然 网页版&amp;nbsp;没有这功能!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;要知道 …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Mon, 03 Apr 2017 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-04-03:/170403-chaos-xiaomi.html</guid><category>IMHO</category><category>DAMA</category><category>diss</category></item><item><title>“S02E01: 周生剧本大纲”</title><link>https://blog.zoomquiet.io/GC4-S02E01-script.html</link><description>&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id="s02e01"&gt;&lt;span class="caps"&gt;S02E01&lt;/span&gt;: 周生剧本大纲&lt;a class="headerlink" href="#s02e01" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;演员设定: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;周生生: 姜文&amp;nbsp;(红高梁时期的)&lt;/li&gt;
+&lt;li&gt;秀娘:&amp;nbsp;娜塔莎.波特曼&lt;/li&gt;
+&lt;li&gt;郑和:&amp;nbsp;吴秀波&lt;/li&gt;
+&lt;li&gt;郑爽:&amp;nbsp;文章&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_1"&gt;双闯西洋&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;(宣德五年三月十三日)
+[泉州城西郊, 强生豆腐店,后门]
+秀娘,从后看只是个普通的大明及笄少女,只是生有奇怪的褐色头发;但是,正面一看就知道不是中原人,高鼻绿瞳;&amp;nbsp;在温州地区,总是有行商失败的大食人后代流落善堂,想来这个面色焦急的少女也是相似的身世.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;生哥! 生哥!&amp;#8221;
+&amp;#8220;阿秀,你怎么来了?&amp;#8221;
+&amp;#8220;生哥! 阿爷已为我报名织绣营了,年末就要和三宝大人出洋了!&amp;#8221;&amp;nbsp;…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;送走阿秀,周生生下了决心,转身和东家辞行,
+然后径直去东门,揭了西洋舰队官榜,
+作为厨师入了辎重营;
+又以加温来加速发豆芽的独门技术,
+配合腌金桔可防/治败血症的功劳,进入郑和的视野,
+成为第七次西洋舰队第42&amp;nbsp;粮船的辎重队队副.&lt;/p&gt;
+&lt;p&gt;(宣德五年十一月十一)
+[珠江口, 虎门港 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Sat, 01 Apr 2017 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-04-01:/GC4-S02E01-script.html</guid><category>IMHO</category><category>DAMA</category><category>GC4</category><category>write</category></item><item><title>怂怼录</title><link>https://blog.zoomquiet.io/170314-GC4-follow-ur-heart-debuguself.html</link><description>&lt;hr&gt;
 
 &lt;h1 id="_1"&gt;怂怼录&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~来自 &lt;span class="caps"&gt;GC4&lt;/span&gt; 课程中的互动, 记录各种情景中的私人体会, 具体哪些场景的触发? 您猜~&lt;/p&gt;
@@ -359,7 +410,39 @@
 从侧后方撞倒了两个女同学,
 而女同学们很团结,
 于是很多女同学围上来理论,
-我很快爬起来,但是,已经被高大的女同学们围住了, 我顿时很焦虑,下意识乱挥双手 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sat, 21 Jan 2017 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-01-21:/170121-sorry-tooth.html</guid><category>IMHO</category><category>write</category></item><item><title>简曰三观</title><link>https://blog.zoomquiet.io/170112-3knows.html</link><description>&lt;h1 id="-"&gt;简曰三观 ;-)&lt;a class="headerlink" href="#-" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+我很快爬起来,但是,已经被高大的女同学们围住了, 我顿时很焦虑,下意识乱挥双手 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sat, 21 Jan 2017 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-01-21:/170121-sorry-tooth.html</guid><category>IMHO</category><category>write</category></item><item><title>“7年”</title><link>https://blog.zoomquiet.io/170116-7years.html</link><description>&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;嗯哼的越来越少&lt;/span&gt;
+&lt;span class="err"&gt;哼唧呢越来越多&lt;/span&gt;
+&lt;span class="err"&gt;牛妞哈越来越闹&lt;/span&gt;
+&lt;span class="err"&gt;家里啊越来越臭&lt;/span&gt;
+&lt;span class="err"&gt;外债喔越来越多&lt;/span&gt;
+&lt;span class="err"&gt;生活呀越来越忙&lt;/span&gt;
+&lt;span class="err"&gt;体重哗越来越多&lt;/span&gt;
+&lt;span class="err"&gt;好在&lt;/span&gt;
+&lt;span class="err"&gt;感情哟越来越牢&lt;/span&gt;
+&lt;span class="err"&gt;主要系俺脸皮厚&lt;/span&gt;
+&lt;span class="err"&gt;更加重要的是哈&lt;/span&gt;
+&lt;span class="err"&gt;俺恋爱实在太少&lt;/span&gt;
+
+&lt;span class="err"&gt;所以啊！&lt;/span&gt;
+
+&lt;span class="err"&gt;怒力&lt;/span&gt;
+&lt;span class="err"&gt;多多&lt;/span&gt;
+&lt;span class="err"&gt;恋爱&lt;/span&gt;
+&lt;span class="err"&gt;反复&lt;/span&gt;
+&lt;span class="err"&gt;坚定&lt;/span&gt;
+&lt;span class="err"&gt;持久&lt;/span&gt;
+&lt;span class="err"&gt;就是&lt;/span&gt;
+&lt;span class="err"&gt;和你&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;臭麻麻猪！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(๑⁼̴̀д⁼̴́๑)干嘛!!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="_1"&gt;是也乎&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;你猜~何年偶得?&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Mon, 16 Jan 2017 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2017-01-16:/170116-7years.html</guid><category>IMHO</category><category>DAMA</category><category>poem</category></item><item><title>简曰三观</title><link>https://blog.zoomquiet.io/170112-3knows.html</link><description>&lt;h1 id="-"&gt;简曰三观 ;-)&lt;a class="headerlink" href="#-" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;三观者&lt;/span&gt; &lt;span class="err"&gt;相依存&lt;/span&gt; &lt;span class="err"&gt;弗独生&lt;/span&gt;
 &lt;span class="err"&gt;世界观&lt;/span&gt; &lt;span class="err"&gt;乃始发&lt;/span&gt; &lt;span class="err"&gt;由世界&lt;/span&gt;
 &lt;span class="err"&gt;推价值&lt;/span&gt; &lt;span class="err"&gt;据价值&lt;/span&gt; &lt;span class="err"&gt;选人生&lt;/span&gt;
@@ -518,7 +601,75 @@
 &lt;li&gt;嗯哼,这就是失控控制法&lt;/li&gt;
 &lt;li&gt;不控制的控制才是最好的控制&lt;/li&gt;
 &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sun, 10 Apr 2016 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2016-04-10:/linux-linus-not-only-be-fun.html</guid><category>geek</category><category>linux</category><category>floss</category></item><item><title>jump into SSD with Yoesmite</title><link>https://blog.zoomquiet.io/jump-into-ssd.html</link><description>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sun, 10 Apr 2016 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2016-04-10:/linux-linus-not-only-be-fun.html</guid><category>geek</category><category>linux</category><category>floss</category></item><item><title>“[大妈吐糟]Tower 之功能残念集”</title><link>https://blog.zoomquiet.io/150604-chaos-tower.html</link><description>&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[大妈吐糟]Tower&amp;nbsp;之功能残念集&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;在遥远的过去, Tower&amp;nbsp;刚刚发布时,就注册试用过&amp;#8230;无感&lt;/li&gt;
+&lt;li&gt;在某个社区掺合折腾时,被指定使用&amp;nbsp;Tower&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="_2"&gt;过程&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;于是各种坑&lt;/li&gt;
+&lt;li&gt;于是找到了 &lt;code&gt;@mycolorway.com&lt;/code&gt; 内部关系,抓住接口人批量反馈&lt;/li&gt;
+&lt;li&gt;然后,没有了然后&lt;/li&gt;
+&lt;li&gt;今天见到推送硬广: &lt;a href="http://mp.weixin.qq.com/s?__biz=MjM5NDY2NDM4Mw==&amp;amp;mid=234095089&amp;amp;idx=1&amp;amp;sn=158f84a3d329647ce6a470aa7ccf7abe&amp;amp;key=c468684b929d2be2db431d557f2a04cff3bbf4c4c6e4745da3e8bb4cdb32a1babf3ef1a2f9908ad3c63e48c930f7e35e&amp;amp;ascene=0&amp;amp;uin=MTg1NDU4NTY4MQ%3D%3D&amp;amp;devicetype=iMac+MacBookPro8%2C2+OSX+OSX+10.10.3+build(14D136)&amp;amp;version=11020012&amp;amp;pass_ticket=bLSHZyAYyQPXsSPxVnBLhpNx61u393uer5yckacn0%2ByWRINStKhBC0qoXpOSFlMp"&gt;「天涯若比邻」如何用 Tower&amp;nbsp;远程协作开发产品&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;以及专辑: &lt;a href="http://www.jianshu.com/collection/0f5b8cd75ccf"&gt;Tower - 专题 -&amp;nbsp;简书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;实在无法保持沉默&amp;#8230; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;俺的环境:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MAC&lt;/span&gt; O X&amp;nbsp;10.10.2&lt;/li&gt;
+&lt;li&gt;FireFox&amp;nbsp;36.0.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="s"&gt;糟点s&lt;a class="headerlink" href="#s" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="150331"&gt;150331&lt;a class="headerlink" href="#150331" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;~有两点无法忍的问题:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;既然文档的起草可以选择 富文本和 markdown 格式 …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Thu, 04 Jun 2015 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-06-04:/150604-chaos-tower.html</guid><category>IMHO</category><category>DAMA</category><category>disscuss</category></item><item><title>“FW/Code 2048 用户使用协议”</title><link>https://blog.zoomquiet.io/150604-code2048.html</link><description>&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id="fw-code-2048"&gt;&lt;span class="caps"&gt;FW&lt;/span&gt;: Code 2048 用户使用协议&lt;a class="headerlink" href="#fw-code-2048" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;来自 &lt;a href="https://code2048.com/topic/3/code-2048-%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%8D%8F%E8%AE%AE?from=timeline&amp;amp;isappinstalled=0"&gt;Code 2048 用户使用协议 | Code&amp;nbsp;2048&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一般用户协议（所谓&lt;span class="caps"&gt;TOS&lt;/span&gt;）是一份专业到看不懂的法律文件，但那没意义。这里没有复杂到看不懂的东西，只是一些简单的规则。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这是扩展自《神秘的程序员们》系列漫画的讨论区。主要话题包括程序员漫画相关讨论、所有技术相关话题及互联网、创业、项目管理、设计、产品、职业和职场、科幻、游戏话题。&lt;/li&gt;
+&lt;li&gt;在这些话题之外的内容，可能会不受欢迎，或被移出主要讨论区甚至直接删除，并且有可能导致相关帐号被封。&lt;/li&gt;
+&lt;li&gt;保持礼貌，禁止人身攻击/种族/地域/宗教/职业歧视之类令人不快的内容。&lt;/li&gt;
+&lt;li&gt;禁止发布违法内容。违法的定义：目前本站位于美国加州，请遵守美国互联网相关法律法规。包括但不限于“&lt;span class="caps"&gt;COPPA&lt;/span&gt;“、“&lt;span class="caps"&gt;DMCA&lt;/span&gt;”等。服务器所在国家的变化会导致“违法 …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Thu, 04 Jun 2015 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-06-04:/150604-code2048.html</guid><category>IMHO</category><category>DAMA</category><category>disscuss</category></item><item><title>“14小时反省分析”</title><link>https://blog.zoomquiet.io/150514-14hourstory.html</link><description>&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id="14"&gt;14小时反省分析&lt;a class="headerlink" href="#14" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;~&amp;nbsp;记录一次失败的神烦&lt;/p&gt;
+&lt;h2 id="_1"&gt;事发现场&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;大妈整理了我的草案然后发布到zhgdg的wiki,接着填坑时间到&amp;nbsp;:) &lt;/p&gt;
+&lt;p&gt;大妈说这个坑是: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;规章文案中都有的元素 &lt;/li&gt;
+&lt;li&gt;GitHub上Fork数超过的100的项目的&lt;span class="caps"&gt;README&lt;/span&gt;中可以找到的 &lt;/li&gt;
+&lt;li&gt;要给大家共同完善的流程 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_2"&gt;折腾过程&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Google规章文案要素 &lt;/li&gt;
+&lt;li&gt;浏览了zhgdg在Gitcafe上的&lt;span class="caps"&gt;README&lt;/span&gt;文档 &lt;/li&gt;
+&lt;li&gt;浏览了十几个Fork超过一千的Github开源项目的&lt;span class="caps"&gt;README&lt;/span&gt;文档 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_3"&gt;思想斗争&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;显然看到了每个项目都有明显的Overview,于是自觉添加 &lt;/li&gt;
+&lt;li&gt;看到每个项目的&lt;span class="caps"&gt;README&lt;/span&gt;结尾都有license,添加? &lt;/li&gt;
+&lt;li&gt;想到这是一份类似教程的文档,那么必须图文并茂? &lt;/li&gt;
+&lt;li&gt;既然是教程,那么就要有一些&lt;span class="caps"&gt;FAQ&lt;/span&gt;的解答? &lt;/li&gt;
+&lt;li&gt;想到让大家可以来修订,Github地址已放出,专用邮件列表地址也已放出,大家有什么反馈的应该都能找到道,放弃.  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上↑是痛苦的思想斗争,无比纠结 &lt;/p&gt;
+&lt;h2 id="_4"&gt;大妈解救&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;于是大妈看不下去了 &lt;span class="caps"&gt;XD&lt;/span&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;痲婷你要逐一剖析你的思维盲点,每一点都要引发思考 &lt;/li&gt;
+&lt;li&gt;痲婷你书看的太少了,从来不为他人着想 &lt;/li&gt;
+&lt;li&gt;痲婷你女票谈的太少的,要多谈 …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Thu, 14 May 2015 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-05-14:/150514-14hourstory.html</guid><category>IMHO</category><category>DAMA</category><category>disscuss</category></item><item><title>jump into SSD with Yoesmite</title><link>https://blog.zoomquiet.io/jump-into-ssd.html</link><description>
 &lt;h1 id="_1"&gt;为毛&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;不解释, 人家都免费给你升级了哪!&lt;/p&gt;
 &lt;h1 id="_2"&gt;新梗&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
@@ -530,7 +681,36 @@
 &lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Pouring&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.12.2&lt;/span&gt;&lt;span class="n"&gt;_1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;yosemite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bottle&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt;
 &lt;span class="o"&gt;==&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Caveats&lt;/span&gt;
 &lt;span class="n"&gt;If&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="n"&gt;npm&lt;/span&gt; &lt;span class="n"&gt;itself&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;NOT&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;npm&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;The …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 09 Apr 2015 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-04-09:/jump-into-ssd.html</guid><category>MAC</category><category>Leo</category><category>Pyenv</category><category>ZQ</category></item><item><title>再见了 Python</title><link>https://blog.zoomquiet.io/saying-ggodby-python-zh.html</link><description>&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
+&lt;span class="n"&gt;The …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 09 Apr 2015 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-04-09:/jump-into-ssd.html</guid><category>MAC</category><category>Leo</category><category>Pyenv</category><category>ZQ</category></item><item><title>“[大妈吐糟] 虾米音乐的系列猜想”</title><link>https://blog.zoomquiet.io/150205-chaos-xiami.html</link><description>&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[大妈吐糟]&amp;nbsp;虾米音乐的系列猜想&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;原发: &lt;a href="http://segmentfault.com/blog/zoomquiet/1190000002538467"&gt;[大妈吐糟] 虾米音乐的系列猜想 -&amp;nbsp;SegmentFault&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="吐糟,忍受不能的吐糟..." src="http://img1.gtimg.com/digi/pics/hv1/227/104/1364/88720847.jpg"&gt;&lt;/p&gt;
+&lt;h1 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;习惯泛听的&lt;code&gt;专辑顺序强迫症重症患者&lt;/code&gt;!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;喜欢复合类型的音乐,追踪创作型音乐人/团队&lt;/li&gt;
+&lt;li&gt;只听专辑,而且一定要按顺序来听&lt;/li&gt;
+&lt;li&gt;习惯根据当前心态快速形成有针对性的播放列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;音乐历史:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从有条件配置录音机开始&lt;/li&gt;
+&lt;li&gt;上百盒带,几百&lt;span class="caps"&gt;CD&lt;/span&gt;,&lt;span class="caps"&gt;MP3CD&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;硬盘常备 30G+ &lt;span class="caps"&gt;APC&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;以往移动音乐习惯:&lt;ul&gt;
+&lt;li&gt;iOS 用 podcast&amp;nbsp;下载有关频道的音乐&lt;/li&gt;
+&lt;li&gt;Android 用自行上传的音乐,以 &lt;code&gt;类别/音乐人/专辑&lt;/code&gt; 为目录形式组织&lt;/li&gt;
+&lt;li&gt;用内置播放器以目录为线索播放&lt;/li&gt;
+&lt;li&gt;管理/播放 流程继续电脑中 &lt;a href="http://cmus.github.io/"&gt;cmus&lt;/a&gt;&amp;nbsp;的习惯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;为制作 &lt;a href="http://momoko.in/family/family-timeline.html"&gt;大小丸子🐒:&amp;#8221;情人节快乐;-)&amp;#8221;&lt;/a&gt; 才知道 xiami &lt;ul&gt;
+&lt;li&gt;变成移动音乐主力陪伴平台&lt;/li&gt;
+&lt;li&gt;下载过 …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Thu, 05 Feb 2015 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-02-05:/150205-chaos-xiami.html</guid><category>IMHO</category><category>DAMA</category><category>disscuss</category></item><item><title>再见了 Python</title><link>https://blog.zoomquiet.io/saying-ggodby-python-zh.html</link><description>&lt;p&gt;原文: &lt;a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html"&gt;Saying Goodbye&amp;nbsp;To Python&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This post is long overdue; this isn&amp;#8217;t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&amp;nbsp;goodbye.&lt;/p&gt;
 &lt;p&gt;While …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Sat, 10 Jan 2015 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2015-01-10:/saying-ggodby-python-zh.html</guid><category>Weekly</category><category>Zh</category></item><item><title>KnewOne-talk 之 大妈 篇</title><link>https://blog.zoomquiet.io/knewone-talk-zoomq-choise.html</link><description>
 &lt;p&gt;~ KnewOne talk question list&lt;/p&gt;
@@ -545,7 +725,59 @@
 &lt;li&gt;坚持用 Pythonic 感化国人进入 &lt;span class="caps"&gt;FLOSS&lt;/span&gt;世界进行学习 / 分享 / 创造…&lt;/li&gt;
 &lt;li&gt;擅长:&lt;ul&gt;
 &lt;li&gt;Pythonic入门宣传;实效敏捷配置管理;技术社区文化促生;&lt;/li&gt;
-&lt;li&gt;&lt;span class="caps"&gt;PKM&lt;/span&gt; ~ &lt;span class="caps"&gt;GTD …&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 23 Dec 2014 23:23:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-12-23:/knewone-talk-zoomq-choise.html</guid><category>MAC</category><category>Livin</category><category>Zoomq</category></item><item><title>流行之恶</title><link>https://blog.zoomquiet.io/141212-pop-is-evil.html</link><description>
+&lt;li&gt;&lt;span class="caps"&gt;PKM&lt;/span&gt; ~ &lt;span class="caps"&gt;GTD …&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 23 Dec 2014 23:23:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-12-23:/knewone-talk-zoomq-choise.html</guid><category>MAC</category><category>Livin</category><category>Zoomq</category></item><item><title>论如何艺术的骂人</title><link>https://blog.zoomquiet.io/141212-art-for-diss.html</link><description>&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id="_1"&gt;论如何艺术的骂人&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="141212-ask-binghe.lisp.jpg（JPEG 图像，1024x650 像素）" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-ask-binghe.lisp.jpg?imageView2/2/w/512"&gt;&lt;/p&gt;
+&lt;p&gt;人称伞哥的传奇人物: &lt;a href="http://www.ituring.com.cn/article/553"&gt;田春&lt;/a&gt;&amp;nbsp;怎么应对的呢?&amp;#8230;&lt;/p&gt;
+&lt;p&gt;来源: &lt;a href="http://weibo.com/1929185323/BAfMov9Vt?type=comment#_rnd1418287455937"&gt;田春冰河 &amp;#8216;s&amp;nbsp;Weibo_Weibo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;揭晓答案前, 俺忍不住,&amp;nbsp;得推荐一下古今中外有关骂人相关的经验了:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ccview.net/htm/xiandai/wen/liangshiqiu009.htm"&gt;梁实秋《骂人的艺术》-&amp;nbsp;现代散文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.zhixuan.com/toutiao/article/5431"&gt;如何优雅的对待他人的批评 - MacTalk By&amp;nbsp;池建强&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://phiphicake.blogspot.hk/2012/01/paul-graham.html"&gt;Paul Graham的如何嘴炮 金字塔&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;解读: &lt;a href="http://www.zreading.cn/archives/4137.html"&gt;反驳别人的七个层次 |&amp;nbsp;左岸读书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;原文: &lt;a href="http://www.paulgraham.com/disagree.html"&gt;How to&amp;nbsp;Disagree&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;再来看 伞哥&amp;nbsp;的回复:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="141212-answer-binghe.lisp.jpg（JPEG 图像，1024x713 像素）" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-answer-binghe.lisp.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;对比学术化的 &amp;#8220;反驳的层级&amp;#8221;&amp;nbsp;分析图谱&lt;/p&gt;
+&lt;p&gt;&lt;img alt="hierarchy_of_disagreement.jpg（JPEG 图像，640x554 像素）" src="http://zoomq.qiniudn.com/ZQCollection/snap/hierarchy_of_disagreement.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;可以清晰的感受到:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用对方的观点来不动声色的转移了论点,&amp;nbsp;无视了对方的指责&lt;/li&gt;
+&lt;li&gt;并用温润的态度指出:&lt;ul&gt;
+&lt;li&gt;哥现在意大利吖&lt;/li&gt;
+&lt;li&gt;都有能力拯救外国&lt;span class="caps"&gt;MM&lt;/span&gt;了&lt;/li&gt;
+&lt;li&gt;E文翻译这点不算事儿,实在是没时间哪&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;已经是极其自然而又低姿态的站在各种高度,&amp;nbsp;完美的反驳了对方无法理解的智商&lt;/li&gt;
+&lt;li&gt;达到了 paul氏金字塔的 6 …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Fri, 12 Dec 2014 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-12-12:/141212-art-for-diss.html</guid><category>IMHO</category><category>DAMA</category><category>discuss</category></item><item><title>流行之恶</title><link>https://blog.zoomquiet.io/141212-evil4pop.html</link><description>&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id="_1"&gt;流行之恶&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="popular_science_logo.png" src="http://zoomq.qiniudn.com/ZQCollection/logo/popular_science_logo.png?watermark/2/text/Wm9vbS5RdWlldA==/fill/V2hpdGU=/fontsize/320/dissolve/85|imageView2/2/w/320"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;你觉得有生命力流行的东西就是好的么&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;俗话说祸害遗千年&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; 
+    &lt;span class="err"&gt;从汉语来看&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;楚辞也很棒&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;可是也式微了&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="err"&gt;你怎么想&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_2"&gt;背景&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;俺被推荐加入了一个有海量学霸的微信群, 每天被越量新知轰炸,&amp;nbsp;而且经常有非常尖锐的问题戳过来,&lt;/p&gt;
+&lt;p&gt;为了保持心意通达, 决定尽可能公开竭力回答则个,&amp;nbsp;以能忘记&amp;#8230;&lt;/p&gt;
+&lt;p&gt;那种心塞的感觉!&lt;/p&gt;
+&lt;h2 id="_3"&gt;厘定&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;作为一头工科狗, 对问题一向抱有最深的恶意, 
+必须厘凊 问题边界/背景/意图,&amp;nbsp;否则,就感觉无从回答的样纸.&lt;/p&gt;
+&lt;p&gt;目测:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;生命力&lt;/code&gt;-&lt;code&gt;流行&lt;/code&gt;-&lt;code&gt;好&lt;/code&gt; 是设问关键词&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;生命力&lt;/code&gt; ~ 徦借生物学中的专有名词, 应该代表一种文化现象能够随着时代的发展,不断契合当下风气,嵌入持续发生的社会事件中,为人们不断的运用,&amp;nbsp;从而形成生物不断传承的观感&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;流行&lt;/code&gt; ~&amp;nbsp;是标准的社会学名词了,简单的说就是在主流媒体中,突然海量出现,又快速消失的一种人类社会类型化信息涌动的现场&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;好&lt;/code&gt; ~ 介个忒泛了,没法儿理性界定,从发问者的教育背景设想,只能先假定为当前的 &lt;code&gt;普世价值观&lt;/code&gt; 所谓正向的取向 …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Fri, 12 Dec 2014 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-12-12:/141212-evil4pop.html</guid><category>IMHO</category><category>DAMA</category><category>disscuss</category></item><item><title>流行之恶</title><link>https://blog.zoomquiet.io/141212-pop-is-evil.html</link><description>
 &lt;p&gt;&lt;img alt="popular_science_logo.png" src="http://zoomq.qiniudn.com/ZQCollection/logo/popular_science_logo.png?watermark/2/text/Wm9vbS5RdWlldA==/fill/V2hpdGU=/fontsize/320/dissolve/85|imageView2/2/w/320"/&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="err"&gt;你觉得有生命力流行的东西就是好的么&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -612,7 +844,33 @@
     + &lt;a href="http://zoomq.qiniudn.com/CPyUG/100716-Leo-LiterateProgramming"&gt;Index of /CPyUG/100716-Leo-LiterateProgramming {gen. by gen4idx.py v13.4.18}&lt;/a&gt;
 - 录像: Leo 创始人 令德华的演讲 
     - &lt;a href="http://v.youku.com/v_show/id_XNjQ1OTM3MDk2.html"&gt;PyConChina2013-Leo-final-v2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;俺知道 文学化编程是在 2005 年,开始使用 Leo 尝试进行 文学化编程则是到了 2006 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 09 Dec 2014 21:21:21 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-12-09:/141209-leo-literate-programming.html</guid><category>DAMA</category><category>Pythoneer</category><category>Leo</category></item><item><title>如何将 ipynb 发布到 blog 中?</title><link>https://blog.zoomquiet.io/141127-ipynb-into-blog.html</link><description>&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html"&gt;prooffreader plus: How to quickly turn an IPython notebook into a blog&amp;nbsp;post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;俺知道 文学化编程是在 2005 年,开始使用 Leo 尝试进行 文学化编程则是到了 2006 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Tue, 09 Dec 2014 21:21:21 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-12-09:/141209-leo-literate-programming.html</guid><category>DAMA</category><category>Pythoneer</category><category>Leo</category></item><item><title>re/熟练使用文学编程（literate programming）是怎样一番体验?</title><link>https://blog.zoomquiet.io/141209-feeling-leo.html</link><description>&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id="re-literate-programming"&gt;re: 熟练使用文学编程（literate programming）是怎样一番体验?&lt;a class="headerlink" href="#re-literate-programming" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Literate_Programming_book_cover" src="http://upload.wikimedia.org/wikipedia/en/thumb/6/62/Literate_Programming_book_cover.jpg/220px-Literate_Programming_book_cover.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.zhihu.com/question/26978956"&gt;熟练使用文学编程（literate programming）是怎样一番体验? -&amp;nbsp;知乎&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后有人戳了俺&amp;#8230;&lt;/p&gt;
+&lt;h2 id="_1"&gt;有关文学化编程&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment"&gt;LeoEnvironment&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以及相关链接,&lt;/p&gt;
+&lt;p&gt;有关使用 Leo 进行文学化编程,&amp;nbsp;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;幻灯: &lt;a href="http://s5.zoomquiet.io/060730-abtLeo"&gt;啄木鸟/&lt;span class="caps"&gt;CPUG&lt;/span&gt; 会课06年度第九次 (built by S5)&lt;/a&gt; ; &lt;a href="http://s5.zoomquiet.io/131101-leo-china"&gt;131101-leo-china&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;录音: &lt;a href="http://zoomq.qiniudn.com/CPyUG/060731-bpyug-leo/cpug_2006_07_30_01.ogg"&gt;cpug_2006_07_30_01.ogg&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://zoomq.qiniudn.com/CPyUG/100716-Leo-LiterateProgramming"&gt;Index of /CPyUG/100716-Leo-LiterateProgramming {gen. by gen4idx.py&amp;nbsp;v13.4.18}&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;录像: Leo 创始人&amp;nbsp;令德华的演讲&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://v.youku.com/v_show/id_XNjQ1OTM3MDk2.html"&gt;PyConChina2013-Leo-final-v2&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;俺知道 文学化编程是在 2005 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ZoomQuiet</dc:creator><pubDate>Tue, 09 Dec 2014 19:42:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-12-09:/141209-feeling-leo.html</guid><category>IMHO</category><category>Leo</category><category>DAMA</category></item><item><title>如何将 ipynb 发布到 blog 中?</title><link>https://blog.zoomquiet.io/141127-ipynb-into-blog.html</link><description>&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html"&gt;prooffreader plus: How to quickly turn an IPython notebook into a blog&amp;nbsp;post&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;IPython notebooks are great for many things, but they&amp;#8217;re a little awkward to embed in blog post platforms like Blogger, Wordpress, etc. When the nbconvert feature was a standalone command-line tool, there was a blog …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 27 Nov 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-11-27:/141127-ipynb-into-blog.html</guid><category>Pythonic</category><category>FW</category><category>ipynb</category><category>tutorial</category></item><item><title>十大早该知道的Python技巧</title><link>https://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html</link><description>&lt;p&gt;原文: &lt;a href="http://prooffreaderplus.blogspot.ca/2014/11/top-10-python-idioms-i-wished-id.html"&gt;prooffreader plus: Top 10 Python idioms I wish I&amp;#8217;d learned&amp;nbsp;earlier&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Top 10 Python idioms I wish I'd learned earlier&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;ve been programming all my life, but never been a programmer. Most of my work was done in Visual Basic because it&amp;#8217;s what I was most …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Wed, 26 Nov 2014 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2014-11-26:/top10-Py-idioms-wish-learned-earlier.html</guid><category>Pythonic</category><category>FW</category><category>idioms</category><category>tutorial</category></item><item><title>论 Shooter 的关闭</title><link>https://blog.zoomquiet.io/141122-shotter-death.html</link><description>

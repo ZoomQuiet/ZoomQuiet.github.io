@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/index.html</loc>
-<lastmod>2020-07-19T12:13:52-00:00</lastmod>
+<lastmod>2020-07-19T12:26:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2020-07-19T12:13:52-00:00</lastmod>
+<lastmod>2020-07-19T12:26:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2020-07-19T12:13:52-00:00</lastmod>
+<lastmod>2020-07-19T12:26:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2020-07-19T12:13:52-00:00</lastmod>
+<lastmod>2020-07-19T12:26:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -200,8 +200,29 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.zoomquiet.io/180501-L10E01-ryb-wars.html</loc>
+<lastmod>2018-05-01T20:42:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.zoomquiet.io/180220-book-ai-historic.html</loc>
 <lastmod>2018-02-20T16:42:24+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/171222-L03E01-passisnow.html</loc>
+<lastmod>2017-12-22T20:42:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/171201-GC4L01E01-now-from-past.html</loc>
+<lastmod>2017-12-01T20:42:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -230,6 +251,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.zoomquiet.io/pyqt4macos.html</loc>
 <lastmod>2017-08-08T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/170613-GC4S19E51-as-wirter.html</loc>
+<lastmod>2017-06-13T20:42:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/170418-S12E01-23cc.html</loc>
+<lastmod>2017-04-18T20:42:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -265,6 +300,27 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.zoomquiet.io/oldtouch-S06E05g56-babel-tower.html</loc>
 <lastmod>2020-05-22T21:42:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/170223-S05E01-a-e-s.html</loc>
+<lastmod>2017-02-23T20:42:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/170214-S04E15-poem23.html</loc>
+<lastmod>2017-02-14T20:42:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/170123-2002-magic-star.html</loc>
+<lastmod>2017-01-23T20:42:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -342,6 +398,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.zoomquiet.io/linux-linus-not-only-be-fun.html</loc>
 <lastmod>2016-04-10T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/150615-99-dream-world.html</loc>
+<lastmod>2015-06-15T19:42:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -921,8 +984,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.zoomquiet.io/tag/agentzh.html</loc>
-<lastmod>2017-08-27T00:00:00+08:06</lastmod>
+<loc>https://blog.zoomquiet.io/tag/sifi.html</loc>
+<lastmod>2018-05-01T20:42:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1091,6 +1154,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.zoomquiet.io/tag/pydata.html</loc>
 <lastmod>2014-06-03T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/tag/agentzh.html</loc>
+<lastmod>2017-08-27T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1335,7 +1405,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/write.html</loc>
-<lastmod>2017-11-09T19:42:00+08:06</lastmod>
+<lastmod>2018-05-01T20:42:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1363,7 +1433,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/gc4.html</loc>
-<lastmod>2017-11-09T19:42:00+08:06</lastmod>
+<lastmod>2018-05-01T20:42:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

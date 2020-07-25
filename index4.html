@@ -87,6 +87,31 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/200108-ex-map-enum.html">Elixir 中列出 Map&nbsp;中值键对的折腾&#8230;</a></h2>
+                <div class="summary">
+<p>因为各种原因吧…</p>
+<ul>
+<li>很早在 <span class="caps">ECUG</span> 就接触了 Erlang<ul>
+<li>但是, 怪异的语法,以及狭小的应用领域,一直没真正使用起来</li>
+<li>现在, 发现 Elixir 很好的解决了 <span class="caps">OTP</span> 生态的通用应用问题</li>
+</ul>
+</li>
+<li>所以, 开始折腾…</li>
+<li>结果, 撞见各种值得嗯哼的事儿…</li>
+</ul>
+<h2 id="env">env.<a class="headerlink" href="#env" title="Permanent link">¶</a></h2>
+<p>༄ screenfetch</p>
+<div class="highlight"><pre>                 <span class="s-Atom">-/+:.</span>          <span class="s-Atom">zoomq@</span><span class="nv">ZQ160626rMBP</span>
+                <span class="s-Atom">:++++.</span>          <span class="nv">OS</span><span class="s-Atom">:</span> <span class="m">64</span><span class="s-Atom">bit</span> <span class="nv">Mac</span> <span class="nv">OS</span> <span class="nv">X</span> <span class="m">10</span><span class="p">.</span><span class="m">12</span><span class="p">.</span><span class="m">6</span> <span class="m">16</span><span class="nv">G2136</span>
+               <span class="s-Atom">/+++/.</span>           <span class="nv">Kernel</span><span class="s-Atom">:</span> <span class="s-Atom">x86_64</span> <span class="nv">Darwin</span> <span class="m">16</span><span class="p">.</span><span class="m">7</span><span class="p">.</span><span class="m">0</span>
+       <span class="p">.:-</span><span class="s-Atom">::-</span> <span class="p">.</span><span class="s-Atom">+/:-</span><span class="err">``</span><span class="p">.</span><span class="s-Atom">::-</span>       <span class="nv">Uptime</span><span class="s-Atom">:</span> <span class="m">30</span><span class="s-Atom">d</span> <span class="m">12</span><span class="s-Atom">h</span> <span class="m">38</span><span class="s-Atom">m</span>
+    <span class="p">.</span><span class="s-Atom">:/++++++/::::/++++++/:</span><span class="err">`</span>    <span class="nv">Packages</span><span class="s-Atom">:</span> <span class="m">241</span>
+  <span class="p">.</span><span class="s-Atom">:///////////////////////:</span><span class="err">`</span>   <span class="nv">Shell …</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/200108-ex-map-enum.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/leo-101-againnn.html">Leo&nbsp;第N次科普</a></h2>
                 <div class="summary">
 <h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
@@ -201,44 +226,6 @@
 </blockquote>
 <p>I was asked on Twitter why Python uses 0-based indexing …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/131023-why0base-indexing-python.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">如何自在定义 macOS&nbsp;截屏文件名?</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
-<ul>
-<li>默认系统截屏工具输出图片是:<ul>
-<li>到桌面</li>
-<li>文件名: <code>屏幕快照 2019-02-13 17.17.32.png</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<ul>
-<li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
-<li><code>screenshot_190213-17.17.32.jpg</code></li>
-</ul>
-</li>
-<li>现在怎么作到?</li>
-</ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>记要尝试过程</p>
-</blockquote>
-<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">type</span> <span class="n">jpg</span>
-<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
-</pre></div>
-<p>以上即可</p>
-<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">screencapture</span> <span class="n">name</span> <span class="n">screenshot</span>
-<span class="err">$</span> <span class="n">killall</span> <span class="n">SystemUIServer</span>
-</pre></div>
-<p>以上只能变成:</p>
-<div class="highlight"><pre><span class="n">screenshot</span> <span class="mi">2019</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">13</span> <span class="mf">17 …</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">more ...</a>
                 </div>
             </article>
             <hr/>

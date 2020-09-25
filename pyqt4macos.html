@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="pyqt4macos"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/pyqt4macos.html"/>
-            <meta property="og:description" content="背景¶ 最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中, 用 PyQt 是必然选择哪. 只是项目是老坑, 所以,没用 Qt5 技术桟, 还是 Qt4 嗯哼¶ 这天要折腾 QR 码识别了 运行 brew install zbar 然后,各种问题就爆发了,特别是: libjpeg.8.dylib 加载不到 PyQt4 镜像丢失 … 重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt 可以安装了… 原来¶ 参考:cartr/homebrew-qt4: Homebrew tap …"/>
+            <meta property="og:description" content="背景 嗯哼 原来 更新 背景¶ 最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中, 用 PyQt 是必然选择哪. 只是项目是老坑, 所以,没用 Qt5 技术桟, 还是 Qt4 嗯哼¶ 这天要折腾 QR 码识别了 运行 brew install zbar 然后,各种问题就爆发了,特别是: libjpeg.8.dylib 加载不到 PyQt4 镜像丢失 … 重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt 可以安装了… 原来¶ 参考 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -130,8 +130,8 @@
 		<a href="https://blog.zoomquiet.io/tag/sierra.html">sierra</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#_1">背景</a></li>
 <li><a href="#_2">嗯哼</a></li>
@@ -139,44 +139,45 @@
 <li><a href="#_4">更新</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<h3 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<h3 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,
-用 PyQt 是必然选择哪.</p>
-<p>只是项目是老坑, 所以,没用 Qt5 技术桟, 还是 Qt4</p>
-<h2 id="_2">嗯哼<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+用 PyQt&nbsp;是必然选择哪.</p>
+<p>只是项目是老坑, 所以,没用 Qt5 技术桟, 还是&nbsp;Qt4</p>
+<h2 id="_2">嗯哼<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>这天要折腾 <span class="caps">QR</span> 码识别了</li>
+<li>这天要折腾 <span class="caps">QR</span>&nbsp;码识别了</li>
 <li>运行 <code>brew install zbar</code></li>
 <li>然后,各种问题就爆发了,特别是:<ul>
 <li><code>libjpeg.8.dylib</code> 加载不到</li>
-<li>PyQt4 镜像丢失</li>
-<li>…</li>
+<li>PyQt4&nbsp;镜像丢失</li>
+<li>&#8230;</li>
 </ul>
 </li>
-<li>重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt 可以安装了…</li>
+<li>重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt&nbsp;可以安装了&#8230;</li>
 </ul>
-<h2 id="_3">原来<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>参考:<a href="https://github.com/cartr/homebrew-qt4">cartr/homebrew-qt4: Homebrew tap for Qt4 and dependent formulae on Sierra</a></p>
+<h2 id="_3">原来<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>参考:<a href="https://github.com/cartr/homebrew-qt4">cartr/homebrew-qt4: Homebrew tap for Qt4 and dependent formulae on&nbsp;Sierra</a></p>
 <ul>
-<li><a href="https://github.com/spesmilo/electrum/issues/2001">Build on macOS Sierra 10.12 without pyqt4? · Issue #2001 · spesmilo/electrum</a></li>
-<li><a href="https://gist.github.com/robdvr/271e34785c8a43b1e093d2ee8e612aee">How to install <span class="caps">QT4</span>, Poppler, and Cairo on MacOS Sierra 10.12</a></li>
-<li><a href="https://stackoverflow.com/questions/36615952/how-can-i-install-pyqt4-for-python-2-7">osx - How can i install PyQT4 for Python 2.7? - Stack Overflow</a></li>
+<li><a href="https://github.com/spesmilo/electrum/issues/2001">Build on macOS Sierra 10.12 without pyqt4? · Issue #2001 ·&nbsp;spesmilo/electrum</a></li>
+<li><a href="https://gist.github.com/robdvr/271e34785c8a43b1e093d2ee8e612aee">How to install <span class="caps">QT4</span>, Poppler, and Cairo on MacOS Sierra&nbsp;10.12</a></li>
+<li><a href="https://stackoverflow.com/questions/36615952/how-can-i-install-pyqt4-for-python-2-7">osx - How can i install PyQT4 for Python 2.7? - Stack&nbsp;Overflow</a></li>
 </ul>
-<p>要想继续嗯哼 PyQt4:</p>
-<div class="highlight"><pre><span class="n">brew</span> <span class="n">tap</span> <span class="n">cartr</span><span class="o">/</span><span class="n">qt4</span>
+<p>要想继续嗯哼&nbsp;PyQt4:</p>
+<div class="highlight"><pre><span></span><code><span class="n">brew</span> <span class="n">tap</span> <span class="n">cartr</span><span class="o">/</span><span class="n">qt4</span>
 <span class="n">brew</span> <span class="n">tap</span><span class="o">-</span><span class="n">pin</span> <span class="n">cartr</span><span class="o">/</span><span class="n">qt4</span>
-<span class="n">brew</span> <span class="n">install</span> <span class="n">qt</span><span class="err">@</span><span class="mi">4</span>
-<span class="n">brew</span> <span class="n">install</span> <span class="n">cartr</span><span class="o">/</span><span class="n">qt4</span><span class="o">/</span><span class="n">pyqt</span><span class="err">@</span><span class="mi">4</span>
-</pre></div>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">qt</span><span class="mi">@4</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">cartr</span><span class="o">/</span><span class="n">qt4</span><span class="o">/</span><span class="n">pyqt</span><span class="mi">@4</span>
+</code></pre></div>
+
+
 <p>然后继续的:</p>
-<div class="highlight"><pre><span class="o">~/</span><span class="p">.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">uC2710</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="err">༽</span>
+<div class="highlight"><pre><span></span><code><span class="o">~/</span><span class="p">.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">uC2710</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="err">༽</span>
 <span class="err">༄</span>  <span class="n">ll</span> <span class="n">PyQt4</span>
-<span class="n">lrwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">1</span> <span class="n">zoomq</span>  <span class="n">staff</span>  <span class="mi">66</span>  <span class="mi">8</span>  <span class="mi">8</span> <span class="mi">21</span><span class="o">:</span><span class="mi">50</span> <span class="n">PyQt4</span> <span class="o">-&gt;</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">pyqt</span><span class="err">@</span><span class="mi">4</span><span class="o">/</span><span class="mf">4.12</span><span class="n">_1</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">PyQt4</span><span class="o">/</span>
-</pre></div>
-<p>是的, 要在 pyenv 中使用 brew 安装的 pyqt 得:</p>
+<span class="n">lrwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">1</span> <span class="n">zoomq</span>  <span class="n">staff</span>  <span class="mi">66</span>  <span class="mi">8</span>  <span class="mi">8</span> <span class="mi">21</span><span class="o">:</span><span class="mi">50</span> <span class="n">PyQt4</span> <span class="o">-&gt;</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">pyqt</span><span class="mi">@4</span><span class="o">/</span><span class="mf">4.12</span><span class="n">_1</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">PyQt4</span><span class="o">/</span>
+</code></pre></div>
+
+
+<p>是的, 要在 pyenv 中使用 brew 安装的 pyqt&nbsp;得:</p>
 <ul>
 <li>在对应版本环境的 site-packages 中使用 <code>ln -s</code> 关联到系统环境的库</li>
 <li>就 Qt 而言要链接两个东西:<ul>
@@ -186,22 +187,22 @@
 </li>
 </ul>
 <p><span class="caps">PS</span>:</p>
-<p>同理: OpenCV 也一样:</p>
+<p>同理: OpenCV&nbsp;也一样:</p>
 <ul>
-<li>通过 brew 一致安全稳定的自动化编译安装到系统环境中</li>
-<li>然后, 手工通过链接形式加载到对应 pyenv 版本环境中</li>
+<li>通过 brew&nbsp;一致安全稳定的自动化编译安装到系统环境中</li>
+<li>然后, 手工通过链接形式加载到对应 pyenv&nbsp;版本环境中</li>
 </ul>
 <p>所以, macOS 本质是 <span class="caps">UNIX</span> 系统,
 用 linux 的环境配置思路是好的,
-但是,又为了易用, macOS 也进行了各种妥协, 好在程序猿界总是能第一时间给出对应的嗯哼</p>
-<p>只是不通过 google 简直了,不知道何时才能从弥散回来的文章中知道嗯哼…</p>
+但是,又为了易用, macOS 也进行了各种妥协,&nbsp;好在程序猿界总是能第一时间给出对应的嗯哼</p>
+<p>只是不通过 google&nbsp;简直了,不知道何时才能从弥散回来的文章中知道嗯哼&#8230;</p>
 <blockquote>
-<p>请上苍保祐能翻墙的人民吧…</p>
+<p>请上苍保祐能翻墙的人民吧&#8230;</p>
 </blockquote>
-<h2 id="_4">更新<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h2 id="_4">更新<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>170809 blogging</li>
-<li>170808 inti.</li>
+<li>170809&nbsp;blogging</li>
+<li>170808&nbsp;inti.</li>
 </ul>
 
             </div>
@@ -227,28 +228,61 @@
 
 <hr/>
 
-<h3>蟒营®编程思维提高班 Python版/<b>第11期</b> 正在报名</h3>
-<h4>精品小班/ 每期<42人</h4>
+<h3>蟒营®编程思维提高班 Python版/<b>第13期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
 
 <blockquote><p>
     
 <ul>
     <li>
-    开始报名: <b>2020.8.30</b> </li>
+    开始报名: <b>2020.9.28</b> </li>
     <li>
-    报名截止: <b>2020.9.21</b> </li>
+    报名截止: <b>2020.10.19</b> </li>
     <li>
-    正式开课: <b>2020.9.27</b> </li>
+    正式开课: <b>2020.10.25</b> </li>
     <li>
-    课程结束: <b>2020.11.8</b> </li>
+    课程结束: <b>2020.12.13</b> </li>
 
     <li>
     介绍文章:  
     <ul>
         <li>
-        <a href="https://mp.weixin.qq.com/s/vwcrt8q9UtNiyGcgdoDmcA">
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">蟒营®/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-zoomquiet-fake-learnning/">蟒营®/ 伪编程学习?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-zoomquiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-zoomquiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-zoomquiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+        <a href="https://blog.101.camp/dm/200824-ZoomQuiet-Shanti-Bhavan-4u/">
             拙见/ 唤醒自己的天命之女
         </a>
+        </li>
+        <li>
+        <a href="https://blog.101.camp/dm/200828-ZoomQuiet-understand-understand/">
+            拙见/ 理解理解
+        </a>
+        </li>
+        <li>
+        <a href="https://blog.101.camp/dm/200829-ZoomQuiet-learn-learn/">
+            拙见/ 学习学习
+        </a>
+        </li>
+        <li>
+...
         </li>
     </ul>
     </li>
@@ -281,9 +315,8 @@
 
 <b>扫描</b>报名:
 
-<img alt="101camp12py" 
-    src="http://ydlj.zoomquiet.top/ipic/2020-08-26-200816-reg-zip.jpg"/>
-
+<img alt="101camp13py" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-09-25-reg-zip.jpg"/>
 
 </p></blockquote>
 

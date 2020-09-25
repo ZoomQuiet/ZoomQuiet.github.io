@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="131023-why0base-indexing-python"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/131023-why0base-indexing-python.html"/>
-            <meta property="og:description" content="I was asked on Twitter why Python uses 0-based indexing,… 老爹当年也很是积累使用 G+ 的, 公开回答了很多价值问题… 能看一眼少一眼了… 背景¶ Google+ 帐号将于 2019 年 4 月 2 日关停. 下载 Google+ 内容可能需要一些时间,因此请在 2019 年 3 月 31 日之前开始下载. 发现¶ Guido van Rossum 公开 2013年10月23日 I was asked on Twitter why Python uses 0-based indexing …"/>
+            <meta property="og:description" content="背景 发现 是也乎 I was asked on Twitter why Python uses 0-based indexing,… 老爹当年也很是积累使用 G+ 的, 公开回答了很多价值问题… 能看一眼少一眼了… 背景¶ Google+ 帐号将于 2019 年 4 月 2 日关停. 下载 Google+ 内容可能需要一些时间,因此请在 2019 年 3 月 31 日之前开始下载. 发现¶ Guido van Rossum 公开 2013年10月23日 I was asked on Twitter why Python …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -128,31 +128,28 @@
 		<a href="https://blog.zoomquiet.io/tag/gplus.html">gplus</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#_1">背景</a></li>
 <li><a href="#_2">发现</a></li>
 <li><a href="#_3">是也乎</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<p><a href="https://plus.google.com/115212051037621986145/posts/YTUxbXYZyfi">I was asked on Twitter why Python uses 0-based indexing,…</a></p>
+<p><a href="https://plus.google.com/115212051037621986145/posts/YTUxbXYZyfi">I was asked on Twitter why Python uses 0-based&nbsp;indexing,&#8230;</a></p>
 <p>老爹当年也很是积累使用 G+ 的,
-公开回答了很多价值问题… 能看一眼少一眼了…</p>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+公开回答了很多价值问题&#8230;&nbsp;能看一眼少一眼了&#8230;</p>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <blockquote>
 <blockquote>
 <blockquote>
-<p>Google+ 帐号将于 2019 年 4 月 2 日关停. 下载 Google+ 内容可能需要一些时间,因此请在 2019 年 3 月 31 日之前开始下载. </p>
+<p>Google+ 帐号将于 2019 年 4 月 2 日关停. 下载 Google+ 内容可能需要一些时间,因此请在 2019 年 3 月 31&nbsp;日之前开始下载. </p>
 </blockquote>
 </blockquote>
 </blockquote>
-<h2 id="_2">发现<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h2 id="_2">发现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>Guido van Rossum</p>
+<p>Guido van&nbsp;Rossum</p>
 <blockquote>
 <p>公开</p>
 <blockquote>
@@ -160,15 +157,15 @@
 </blockquote>
 </blockquote>
 </blockquote>
-<p>I was asked on Twitter why Python uses 0-based indexing, with a link to a new (fascinating) post on the subject (http://exple.tive.org/blarg/2013/10/22/citation-needed/). I recall thinking about it a lot; <span class="caps">ABC</span>, one of Python’s predecessors, used 1-based indexing, while C, the other big influence, used 0-based. My first few programming languages (Algol, Fortran, Pascal) used 1-based or variable-based. I think that one of the issues that helped me decide was slice notation.</p>
-<p>Let’s first look at use cases. Probably the most common use cases for slicing are “get the first n items” and “get the next n items starting at i” (the first is a special case of that for i == the first index). It would be nice if both of these could be expressed as without awkward +1 or -1 compensations.</p>
-<p>Using 0-based indexing, half-open intervals, and suitable defaults (as Python ended up having), they are beautiful: a[:n] and a[i:i+n]; the former is long for a[0:n].</p>
-<p>Using 1-based indexing, if you want a[:n] to mean the first n elements, you either have to use closed intervals or you can use a slice notation that uses start and length as the slice parameters. Using half-open intervals just isn’t very elegant when combined with 1-based indexing. Using closed intervals, you’d have to write a[i:i+n-1] for the n items starting at i. So perhaps using the slice length would be more elegant with 1-based indexing? Then you could write a[i:n]. And this is in fact what <span class="caps">ABC</span> did — it used a different notation so you could write a@i|n.(See http://homepages.cwi.nl/~steven/abc/qr.html#<span class="caps">EXPRESSIONS</span>.)</p>
-<p>But how does the index:length convention work out for other use cases? <span class="caps">TBH</span> this is where my memory gets fuzzy, but I think I was swayed by the elegance of half-open intervals. Especially the invariant that when two slices are adjacent, the first slice’s end index is the second slice’s start index is just too beautiful to ignore. For example, suppose you split a string into three parts at indices i and j — the parts would be a[:i], a[i:j], and a[j:].</p>
-<p>So that’s why Python uses 0-based indexing.</p>
-<h2 id="_3">是也乎<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>I was asked on Twitter why Python uses 0-based indexing, with a link to a new (fascinating) post on the subject (http://exple.tive.org/blarg/2013/10/22/citation-needed/). I recall thinking about it a lot; <span class="caps">ABC</span>, one of Python&#8217;s predecessors, used 1-based indexing, while C, the other big influence, used 0-based. My first few programming languages (Algol, Fortran, Pascal) used 1-based or variable-based. I think that one of the issues that helped me decide was slice&nbsp;notation.</p>
+<p>Let&#8217;s first look at use cases. Probably the most common use cases for slicing are &#8220;get the first n items&#8221; and &#8220;get the next n items starting at i&#8221; (the first is a special case of that for i == the first index). It would be nice if both of these could be expressed as without awkward +1 or -1&nbsp;compensations.</p>
+<p>Using 0-based indexing, half-open intervals, and suitable defaults (as Python ended up having), they are beautiful: a[:n] and a[i:i+n]; the former is long for&nbsp;a[0:n].</p>
+<p>Using 1-based indexing, if you want a[:n] to mean the first n elements, you either have to use closed intervals or you can use a slice notation that uses start and length as the slice parameters. Using half-open intervals just isn&#8217;t very elegant when combined with 1-based indexing. Using closed intervals, you&#8217;d have to write a[i:i+n-1] for the n items starting at i. So perhaps using the slice length would be more elegant with 1-based indexing? Then you could write a[i:n]. And this is in fact what <span class="caps">ABC</span> did &#8212; it used a different notation so you could write a@i|n.(See http://homepages.cwi.nl/~steven/abc/qr.html#<span class="caps">EXPRESSIONS</span>.)</p>
+<p>But how does the index:length convention work out for other use cases? <span class="caps">TBH</span> this is where my memory gets fuzzy, but I think I was swayed by the elegance of half-open intervals. Especially the invariant that when two slices are adjacent, the first slice&#8217;s end index is the second slice&#8217;s start index is just too beautiful to ignore. For example, suppose you split a string into three parts at indices i and j &#8212; the parts would be a[:i], a[i:j], and&nbsp;a[j:].</p>
+<p>So that&#8217;s why Python uses 0-based&nbsp;indexing.</p>
+<h2 id="_3">是也乎<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>简单说, 就是为了切片时的语义合理性…</p>
+<p>简单说,&nbsp;就是为了切片时的语义合理性&#8230;</p>
 </blockquote>
 
             </div>
@@ -194,28 +191,61 @@
 
 <hr/>
 
-<h3>蟒营®编程思维提高班 Python版/<b>第11期</b> 正在报名</h3>
-<h4>精品小班/ 每期<42人</h4>
+<h3>蟒营®编程思维提高班 Python版/<b>第13期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
 
 <blockquote><p>
     
 <ul>
     <li>
-    开始报名: <b>2020.8.30</b> </li>
+    开始报名: <b>2020.9.28</b> </li>
     <li>
-    报名截止: <b>2020.9.21</b> </li>
+    报名截止: <b>2020.10.19</b> </li>
     <li>
-    正式开课: <b>2020.9.27</b> </li>
+    正式开课: <b>2020.10.25</b> </li>
     <li>
-    课程结束: <b>2020.11.8</b> </li>
+    课程结束: <b>2020.12.13</b> </li>
 
     <li>
     介绍文章:  
     <ul>
         <li>
-        <a href="https://mp.weixin.qq.com/s/vwcrt8q9UtNiyGcgdoDmcA">
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">蟒营®/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-zoomquiet-fake-learnning/">蟒营®/ 伪编程学习?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-zoomquiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-zoomquiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-zoomquiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+        <a href="https://blog.101.camp/dm/200824-ZoomQuiet-Shanti-Bhavan-4u/">
             拙见/ 唤醒自己的天命之女
         </a>
+        </li>
+        <li>
+        <a href="https://blog.101.camp/dm/200828-ZoomQuiet-understand-understand/">
+            拙见/ 理解理解
+        </a>
+        </li>
+        <li>
+        <a href="https://blog.101.camp/dm/200829-ZoomQuiet-learn-learn/">
+            拙见/ 学习学习
+        </a>
+        </li>
+        <li>
+...
         </li>
     </ul>
     </li>
@@ -248,9 +278,8 @@
 
 <b>扫描</b>报名:
 
-<img alt="101camp12py" 
-    src="http://ydlj.zoomquiet.top/ipic/2020-08-26-200816-reg-zip.jpg"/>
-
+<img alt="101camp13py" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-09-25-reg-zip.jpg"/>
 
 </p></blockquote>
 

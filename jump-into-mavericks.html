@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="jump-into-mavericks"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/jump-into-mavericks.html"/>
-            <meta property="og:description" content="为毛¶ 得承认是被 老池的文章忽悠到了, 而且, 10.9 免费了, 进一步的通过OS 提高了电池/内存的使用效率, 最关键的,在 无责任报道~ECUG2013Con 中提及过的, 有好基友,已经折腾过,明确从 10.7 直升没有问题! 于是一个月黑风高的晚上… 回顾¶ 宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾! 唯三的折腾: Python 环境 Qt 环境 sshfs 严正推荐: Mavericksでbrew upgradeしたらハマった話 等等日文的相关纪要非常实在,直觉,顺序合理,值得,多参考. Python + Qt for Leo¶ 大家知道俺是 文学化编程 的拥趸, 所以 …"/>
+            <meta property="og:description" content="为毛 回顾 Python + Qt for Leo Python Pyenv+VirtualEnv Qt for Leo 伟光大的 sshfs Changelog 为毛¶ 得承认是被 老池的文章忽悠到了, 而且, 10.9 免费了, 进一步的通过OS 提高了电池/内存的使用效率, 最关键的,在 无责任报道~ECUG2013Con 中提及过的, 有好基友,已经折腾过,明确从 10.7 直升没有问题! 于是一个月黑风高的晚上… 回顾¶ 宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾! 唯三的折腾: Python 环境 Qt 环境 sshfs 严正推荐: Mavericksでbrew …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -130,8 +130,8 @@
 		<a href="https://blog.zoomquiet.io/tag/zq.html">ZQ</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#_1">为毛</a></li>
 <li><a href="#_2">回顾</a><ul>
@@ -140,111 +140,112 @@
 <li><a href="#pyenvvirtualenv">Pyenv+VirtualEnv</a></li>
 </ul>
 </li>
-<li><a href="#qt-for-leo">Qt for Leo</a></li>
+<li><a href="#qt-for-leo">Qt for&nbsp;Leo</a></li>
 </ul>
 </li>
-<li><a href="#sshfs">伟光大的 sshfs</a></li>
+<li><a href="#sshfs">伟光大的&nbsp;sshfs</a></li>
 </ul>
 </li>
 <li><a href="#changelog">Changelog</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<h1 id="_1">为毛<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<h1 id="_1">为毛<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>得承认是被 老池的文章忽悠到了, 
-而且, 10.9 免费了, 进一步的通过<span class="caps">OS</span> 提高了电池/内存的使用效率,
+而且, 10.9 免费了, 进一步的通过OS 提高了电池/内存的使用效率,
 最关键的,在 <a href="http://techparty.org/events/2013/12/29/et-ecugcon-sz/">无责任报道~ECUG2013Con</a> 中提及过的,
-有好基友,已经折腾过,明确从 10.7 直升没有问题!</p>
-<p>于是一个月黑风高的晚上…</p>
-<h1 id="_2">回顾<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
-<p>宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾!</p>
+有好基友,已经折腾过,明确从 10.7&nbsp;直升没有问题!</p>
+<p>于是一个月黑风高的晚上&#8230;</p>
+<h1 id="_2">回顾<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p>宏观上没有想象的复杂,因为真心作到了零配置!&nbsp;几乎所有非第三方的配置,都继承了下来不用折腾!</p>
 <p>唯三的折腾:</p>
 <ol>
-<li>Python 环境</li>
-<li>Qt 环境</li>
+<li>Python&nbsp;环境</li>
+<li>Qt&nbsp;环境</li>
 <li>sshfs</li>
 </ol>
 <p>严正推荐:</p>
-<p><a href="file:///Users/zoomq/mnt/%E5%BF%AB%E7%9B%98/zScrapBook/ZqFLOSS/data/20131230190257/index.html">Mavericksでbrew upgradeしたらハマった話</a></p>
+<p><a href="file:///Users/zoomq/mnt/%E5%BF%AB%E7%9B%98/zScrapBook/ZqFLOSS/data/20131230190257/index.html">Mavericksでbrew&nbsp;upgradeしたらハマった話</a></p>
 <p>等等日文的相关纪要非常实在,直觉,顺序合理,值得,多参考.</p>
-<h2 id="python-qt-for-leo">Python + Qt for Leo<a class="headerlink" href="#python-qt-for-leo" title="Permanent link">¶</a></h2>
+<h2 id="python-qt-for-leo">Python + Qt for Leo<a class="headerlink" href="#python-qt-for-leo" title="Permanent link">&para;</a></h2>
 <p>大家知道俺是 <a href="http://wiki.woodpecker.org.cn/moin/LiterateProgramming">文学化编程</a>
 的拥趸,
-所以,一直使用 <a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">Leo</a> 作为主要编程环境的,</p>
+所以,一直使用 <a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">Leo</a>&nbsp;作为主要编程环境的,</p>
 <p>10.9 以后 Python 不内置安装了,
-Qt 当然从来也没有内置过. 所以,</p>
-<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">¶</a></h3>
+Qt 当然从来也没有内置过.&nbsp;所以,</p>
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
 <p>当然,系统的用 <code>brew install python</code> 了,</p>
 <p>而其它各种项目开发时,就要综合使用</p>
-<h4 id="pyenvvirtualenv">Pyenv+VirtualEnv<a class="headerlink" href="#pyenvvirtualenv" title="Permanent link">¶</a></h4>
-<p>Pyenv 是这样一种神器:</p>
+<h4 id="pyenvvirtualenv">Pyenv+VirtualEnv<a class="headerlink" href="#pyenvvirtualenv" title="Permanent link">&para;</a></h4>
+<p>Pyenv&nbsp;是这样一种神器:</p>
 <p>完全的面向shell
-  通过环境变量的自动配置 形成复合Python版本共存</p>
+  通过环境变量的自动配置&nbsp;形成复合Python版本共存</p>
 <p>VirtualEnv 有 Pyenv 的插件
-所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:</p>
-<div class="highlight"><pre><span class="nv">$ </span>pyenv versions
-* system <span class="o">(</span><span class="nb">set </span>by /Users/zoomq/.pyenv/version<span class="o">)</span>
-  2.7.3
-  2.7.5
-  2.7.6
+所以,可以利用已安装好的环境,快速复制出项目专用的,&nbsp;结果,引发了滥用,特别舒服的那种:</p>
+<div class="highlight"><pre><span></span><code>$ pyenv versions
+* system <span class="o">(</span><span class="nb">set</span> by /Users/zoomq/.pyenv/version<span class="o">)</span>
+  <span class="m">2</span>.7.3
+  <span class="m">2</span>.7.5
+  <span class="m">2</span>.7.6
   273SAE
   275lbTC
   275pelican
   276SphinxOBP
   276chaos
   276uliweb
-  3.2
-  3.3.2
+  <span class="m">3</span>.2
+  <span class="m">3</span>.3.2
   32IPy
   ipynotebook
   pypy-2.2.1
   pypy221chaos
-</pre></div>
+</code></pre></div>
+
+
 <p>主要遇到的问题是:</p>
-<div class="highlight"><pre><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">python3</span>
-<span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">http</span><span class="o">:</span><span class="c1">//python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2</span>
-<span class="cp">######################################################################## 100.0%</span>
-<span class="o">==&gt;</span> <span class="p">.</span><span class="o">/</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">ipv6</span> <span class="o">--</span><span class="n">datarootdir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span><span class="o">/</span><span class="n">share</span> <span class="o">--</span><span class="n">datadir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">lo</span>
+<div class="highlight"><pre><span></span><code><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">python3</span>
+<span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">ftp</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">Python</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mf">3.</span><span class="n">tar</span><span class="o">.</span><span class="n">bz2</span>
+<span class="c1">######################################################################## 100.0%</span>
+<span class="o">==&gt;</span> <span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">3</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">ipv6</span> <span class="o">--</span><span class="n">datarootdir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">share</span> <span class="o">--</span><span class="n">datadir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">lo</span>
 <span class="o">==&gt;</span> <span class="n">make</span>
-<span class="o">==&gt;</span> <span class="n">make</span> <span class="n">install</span> <span class="n">PYTHONAPPSDIR</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span>
-<span class="o">==&gt;</span> <span class="n">make</span> <span class="n">frameworkinstallextras</span> <span class="n">PYTHONAPPSDIR</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3.3</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">python3</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="o">:</span>
-<span class="nl">ValueError:</span> <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span> <span class="n">not</span> <span class="n">in</span> <span class="n">list</span>
-</pre></div>
+<span class="o">==&gt;</span> <span class="n">make</span> <span class="n">install</span> <span class="n">PYTHONAPPSDIR</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">3</span>
+<span class="o">==&gt;</span> <span class="n">make</span> <span class="n">frameworkinstallextras</span> <span class="n">PYTHONAPPSDIR</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">python3</span>
+<span class="n">Error</span> <span class="ow">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="p">:</span>
+<span class="n">ValueError</span><span class="p">:</span> <span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="ow">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="p">:</span>
+<span class="n">ValueError</span><span class="p">:</span> <span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="ow">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="p">:</span>
+<span class="n">ValueError</span><span class="p">:</span> <span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="ow">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="p">:</span>
+<span class="n">ValueError</span><span class="p">:</span> <span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="ow">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="p">:</span>
+<span class="n">ValueError</span><span class="p">:</span> <span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="ow">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="p">:</span>
+<span class="n">ValueError</span><span class="p">:</span> <span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="ow">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="p">:</span>
+<span class="n">ValueError</span><span class="p">:</span> <span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="ow">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="p">:</span>
+<span class="n">ValueError</span><span class="p">:</span> <span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="ow">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="p">:</span>
+<span class="n">ValueError</span><span class="p">:</span> <span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list</span>
+<span class="n">Error</span> <span class="ow">in</span> <span class="n">sitecustomize</span><span class="p">;</span> <span class="n">set</span> <span class="n">PYTHONVERBOSE</span> <span class="k">for</span> <span class="n">traceback</span><span class="p">:</span>
+<span class="n">ValueError</span><span class="p">:</span> <span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list</span>
+</code></pre></div>
+
+
 <p>指定具体版本,尝试,直到可以顺利安装出可用的就好.</p>
-<p>严正表扬一下 ‘Yamashita, Yuu`</p>
+<p>严正表扬一下 &#8216;Yamashita,&nbsp;Yuu`</p>
 <ul>
-<li><a href="https://github.com/yyuu/pyenv/issues/95#issuecomment-31392999">How to config pyenv’s pip ? · Issue #95 · yyuu/pyenv</a></li>
+<li><a href="https://github.com/yyuu/pyenv/issues/95#issuecomment-31392999">How to config pyenv&#8217;s pip ? · Issue #95 ·&nbsp;yyuu/pyenv</a></li>
 <li>绝对认真的回答了俺的提问,虽然不了了之,但是,一个常用工具的作者,可以如此关注一个不是问题的问题,实在太勤勉了,必须学习!</li>
 </ul>
-<h3 id="qt-for-leo">Qt for Leo<a class="headerlink" href="#qt-for-leo" title="Permanent link">¶</a></h3>
+<h3 id="qt-for-leo">Qt for Leo<a class="headerlink" href="#qt-for-leo" title="Permanent link">&para;</a></h3>
 <p>参考:</p>
 <ul>
-<li><a href="http://support.apple.com/kb/HT5293">About X11 and <span class="caps">OS</span> X</a></li>
+<li><a href="http://support.apple.com/kb/HT5293">About X11 and <span class="caps">OS</span>&nbsp;X</a></li>
 <li><a href="http://xquartz.macosforge.org/landing/">XQuartz</a></li>
 </ul>
 <p>以及:</p>
-<div class="highlight"><pre><span class="nv">$ </span>brew install <span class="nv">pyqt</span>
+<div class="highlight"><pre><span></span><code>$ brew install <span class="nv">pyqt</span>
 <span class="o">==</span>&gt; Downloading http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.10.3/PyQt-mac-gpl-4.10.3.tar.gz
 Already downloaded: /Library/Caches/Homebrew/pyqt-4.10.3.tar.gz
 <span class="o">==</span>&gt; Patching
@@ -256,58 +257,64 @@ Use the QMAKESPEC environment variable to specify the correct platform.
 Determining the layout of your Qt installation...
 
 READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
-</pre></div>
-<p>多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,</p>
-<p>然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:</p>
-<div class="highlight"><pre><span class="c"># ~/.bashrc for running Leo</span>
-<span class="nb">alias </span><span class="nv">leolanch</span><span class="o">=</span><span class="s2">"python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"</span>
-</pre></div>
-<h2 id="sshfs">伟光大的 sshfs<a class="headerlink" href="#sshfs" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="n">fuse4x</span>
-<span class="n">Linking</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="p">...</span> <span class="n">Warning</span><span class="o">:</span> <span class="n">Could</span> <span class="n">not</span> <span class="n">link</span> <span class="n">fuse4x</span><span class="p">.</span> <span class="n">Unlinking</span><span class="p">...</span>
+</code></pre></div>
 
-<span class="nl">Error:</span> <span class="n">Could</span> <span class="n">not</span> <span class="n">symlink</span> <span class="n">file</span><span class="o">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span><span class="o">/</span><span class="n">fuse</span><span class="p">.</span><span class="n">pc</span>
-<span class="n">Target</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span><span class="o">/</span><span class="n">fuse</span><span class="p">.</span><span class="n">pc</span> <span class="n">already</span> <span class="n">exists</span><span class="p">.</span> <span class="n">You</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">it</span><span class="p">.</span>
-<span class="n">To</span> <span class="n">force</span> <span class="n">the</span> <span class="n">link</span> <span class="n">and</span> <span class="n">overwrite</span> <span class="n">all</span> <span class="n">other</span> <span class="n">conflicting</span> <span class="n">files</span><span class="p">,</span> <span class="k">do</span><span class="o">:</span>
+
+<p>多多 Google 吧,很标准的环境驱动, Qt&nbsp;官方提供了的,</p>
+<p>然后, Leo 只是一堆 Py 脚本下载下来,&nbsp;修订一下别名指向就好:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># ~/.bashrc for running Leo</span>
+<span class="nb">alias</span> <span class="nv">leolanch</span><span class="o">=</span><span class="s2">&quot;python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;&quot;</span>
+</code></pre></div>
+
+
+<h2 id="sshfs">伟光大的 sshfs<a class="headerlink" href="#sshfs" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="o">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="n">fuse4x</span>
+<span class="n">Linking</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">2.</span><span class="o">..</span> <span class="n">Warning</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">link</span> <span class="n">fuse4x</span><span class="o">.</span> <span class="n">Unlinking</span><span class="o">...</span>
+
+<span class="n">Error</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">symlink</span> <span class="n">file</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9</span><span class="o">.</span><span class="mi">2</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span><span class="o">/</span><span class="n">fuse</span><span class="o">.</span><span class="n">pc</span>
+<span class="n">Target</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span><span class="o">/</span><span class="n">fuse</span><span class="o">.</span><span class="n">pc</span> <span class="n">already</span> <span class="n">exists</span><span class="o">.</span> <span class="n">You</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">it</span><span class="o">.</span>
+<span class="n">To</span> <span class="n">force</span> <span class="n">the</span> <span class="n">link</span> <span class="ow">and</span> <span class="n">overwrite</span> <span class="n">all</span> <span class="n">other</span> <span class="n">conflicting</span> <span class="n">files</span><span class="p">,</span> <span class="n">do</span><span class="p">:</span>
   <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">formula_name</span>
 
-<span class="n">To</span> <span class="n">list</span> <span class="n">all</span> <span class="n">files</span> <span class="n">that</span> <span class="n">would</span> <span class="n">be</span> <span class="n">deleted</span><span class="o">:</span>
+<span class="n">To</span> <span class="n">list</span> <span class="n">all</span> <span class="n">files</span> <span class="n">that</span> <span class="n">would</span> <span class="n">be</span> <span class="n">deleted</span><span class="p">:</span>
   <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="o">--</span><span class="n">dry</span><span class="o">-</span><span class="n">run</span> <span class="n">formula_name</span>
 
-<span class="n">zoomq</span> <span class="err">@</span> <span class="n">MBP111216ZQ</span> <span class="n">in</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span>
-<span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">fuse4x</span>
-<span class="n">Linking</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9.2</span><span class="p">...</span> <span class="mi">7</span> <span class="n">symlinks</span> <span class="n">created</span>
+<span class="n">zoomq</span> <span class="err">@</span> <span class="n">MBP111216ZQ</span> <span class="ow">in</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span>
+<span class="o">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">fuse4x</span>
+<span class="n">Linking</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">fuse4x</span><span class="o">/</span><span class="mf">0.9</span><span class="o">.</span><span class="mf">2.</span><span class="o">..</span> <span class="mi">7</span> <span class="n">symlinks</span> <span class="n">created</span>
 
 
-<span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">osxfuse</span>
-<span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="o">:</span><span class="c1">//downloads.sf.net/project/machomebrew/Bottles/osxfuse-2.6.2.mavericks.bottle.tar.gz</span>
-<span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">osxfuse</span><span class="o">-</span><span class="mf">2.6.2</span><span class="p">.</span><span class="n">mavericks</span><span class="p">.</span><span class="n">bottle</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+<span class="o">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">osxfuse</span>
+<span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">downloads</span><span class="o">.</span><span class="n">sf</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">machomebrew</span><span class="o">/</span><span class="n">Bottles</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">-</span><span class="mf">2.6</span><span class="o">.</span><span class="mf">2.</span><span class="n">mavericks</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">osxfuse</span><span class="o">-</span><span class="mf">2.6</span><span class="o">.</span><span class="mf">2.</span><span class="n">mavericks</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 <span class="o">==&gt;</span> <span class="n">Caveats</span>
 <span class="n">If</span> <span class="n">upgrading</span> <span class="n">from</span> <span class="n">a</span> <span class="n">previous</span> <span class="n">version</span> <span class="n">of</span> <span class="n">osxfuse</span><span class="p">,</span> <span class="n">the</span> <span class="n">previous</span> <span class="n">kernel</span> <span class="n">extension</span>
-<span class="n">will</span> <span class="n">need</span> <span class="n">to</span> <span class="n">be</span> <span class="n">unloaded</span> <span class="n">before</span> <span class="n">installing</span> <span class="n">the</span> <span class="n">new</span> <span class="n">version</span><span class="p">.</span> <span class="n">First</span><span class="p">,</span> <span class="n">check</span> <span class="n">that</span>
-<span class="n">no</span> <span class="n">FUSE</span><span class="o">-</span><span class="n">based</span> <span class="n">file</span> <span class="n">systems</span> <span class="n">are</span> <span class="n">running</span><span class="o">:</span>
+<span class="n">will</span> <span class="n">need</span> <span class="n">to</span> <span class="n">be</span> <span class="n">unloaded</span> <span class="n">before</span> <span class="n">installing</span> <span class="n">the</span> <span class="n">new</span> <span class="n">version</span><span class="o">.</span> <span class="n">First</span><span class="p">,</span> <span class="n">check</span> <span class="n">that</span>
+<span class="n">no</span> <span class="n">FUSE</span><span class="o">-</span><span class="n">based</span> <span class="n">file</span> <span class="n">systems</span> <span class="n">are</span> <span class="n">running</span><span class="p">:</span>
 
   <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">osxfusefs</span>
 
-<span class="n">Unmount</span> <span class="n">all</span> <span class="n">FUSE</span> <span class="n">file</span> <span class="n">systems</span> <span class="n">and</span> <span class="n">then</span> <span class="n">unload</span> <span class="n">the</span> <span class="n">kernel</span> <span class="n">extension</span><span class="o">:</span>
+<span class="n">Unmount</span> <span class="n">all</span> <span class="n">FUSE</span> <span class="n">file</span> <span class="n">systems</span> <span class="ow">and</span> <span class="n">then</span> <span class="n">unload</span> <span class="n">the</span> <span class="n">kernel</span> <span class="n">extension</span><span class="p">:</span>
 
-  <span class="n">sudo</span> <span class="n">kextunload</span> <span class="o">-</span><span class="n">b</span> <span class="n">com</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">osxfuse</span><span class="p">.</span><span class="n">filesystems</span><span class="p">.</span><span class="n">osxfusefs</span>
+  <span class="n">sudo</span> <span class="n">kextunload</span> <span class="o">-</span><span class="n">b</span> <span class="n">com</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">osxfuse</span><span class="o">.</span><span class="n">filesystems</span><span class="o">.</span><span class="n">osxfusefs</span>
 
-<span class="n">The</span> <span class="n">new</span> <span class="n">osxfuse</span> <span class="n">file</span> <span class="n">system</span> <span class="n">bundle</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">be</span> <span class="n">installed</span> <span class="n">by</span> <span class="n">the</span> <span class="n">root</span> <span class="n">user</span><span class="o">:</span>
+<span class="n">The</span> <span class="n">new</span> <span class="n">osxfuse</span> <span class="n">file</span> <span class="n">system</span> <span class="n">bundle</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">be</span> <span class="n">installed</span> <span class="n">by</span> <span class="n">the</span> <span class="n">root</span> <span class="n">user</span><span class="p">:</span>
 
-  <span class="n">sudo</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cp</span> <span class="o">-</span><span class="n">RfX</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="mf">2.6.2</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="p">.</span><span class="n">fs</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span>
-  <span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">s</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="p">.</span><span class="n">fs</span><span class="o">/</span><span class="n">Support</span><span class="o">/</span><span class="n">load_osxfusefs</span>
+  <span class="n">sudo</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cp</span> <span class="o">-</span><span class="n">RfX</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">2</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="o">.</span><span class="n">fs</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span>
+  <span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">s</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="o">.</span><span class="n">fs</span><span class="o">/</span><span class="n">Support</span><span class="o">/</span><span class="n">load_osxfusefs</span>
 <span class="o">==&gt;</span> <span class="n">Summary</span>
-<span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="mf">2.6.2</span><span class="o">:</span> <span class="mi">84</span> <span class="n">files</span><span class="p">,</span> <span class="mf">5.0</span><span class="n">M</span>
-</pre></div>
+<span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">2</span><span class="p">:</span> <span class="mi">84</span> <span class="n">files</span><span class="p">,</span> <span class="mf">5.0</span><span class="n">M</span>
+</code></pre></div>
+
+
 <p>具体哪个管用,俺也没整明白,
 反正,怎么折腾,
-都是可以正当加载上 <code>Plan</code> 的内核库, 然后就可以对家庭服务器的所有硬盘,远程加载为本地目录了..</p>
-<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h1>
+都是可以正当加载上 <code>Plan</code> 的内核库,&nbsp;然后就可以对家庭服务器的所有硬盘,远程加载为本地目录了..</p>
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
 <ul>
-<li>140616 再次精简,算是发布</li>
-<li>140505 快速简述完成</li>
-<li>140110 起意,总结</li>
+<li>140616&nbsp;再次精简,算是发布</li>
+<li>140505&nbsp;快速简述完成</li>
+<li>140110&nbsp;起意,总结</li>
 </ul>
 
             </div>
@@ -333,28 +340,61 @@ READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
 
 <hr/>
 
-<h3>蟒营®编程思维提高班 Python版/<b>第11期</b> 正在报名</h3>
-<h4>精品小班/ 每期<42人</h4>
+<h3>蟒营®编程思维提高班 Python版/<b>第13期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
 
 <blockquote><p>
     
 <ul>
     <li>
-    开始报名: <b>2020.8.30</b> </li>
+    开始报名: <b>2020.9.28</b> </li>
     <li>
-    报名截止: <b>2020.9.21</b> </li>
+    报名截止: <b>2020.10.19</b> </li>
     <li>
-    正式开课: <b>2020.9.27</b> </li>
+    正式开课: <b>2020.10.25</b> </li>
     <li>
-    课程结束: <b>2020.11.8</b> </li>
+    课程结束: <b>2020.12.13</b> </li>
 
     <li>
     介绍文章:  
     <ul>
         <li>
-        <a href="https://mp.weixin.qq.com/s/vwcrt8q9UtNiyGcgdoDmcA">
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">蟒营®/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-zoomquiet-fake-learnning/">蟒营®/ 伪编程学习?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-zoomquiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-zoomquiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-zoomquiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+        <a href="https://blog.101.camp/dm/200824-ZoomQuiet-Shanti-Bhavan-4u/">
             拙见/ 唤醒自己的天命之女
         </a>
+        </li>
+        <li>
+        <a href="https://blog.101.camp/dm/200828-ZoomQuiet-understand-understand/">
+            拙见/ 理解理解
+        </a>
+        </li>
+        <li>
+        <a href="https://blog.101.camp/dm/200829-ZoomQuiet-learn-learn/">
+            拙见/ 学习学习
+        </a>
+        </li>
+        <li>
+...
         </li>
     </ul>
     </li>
@@ -387,9 +427,8 @@ READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
 
 <b>扫描</b>报名:
 
-<img alt="101camp12py" 
-    src="http://ydlj.zoomquiet.top/ipic/2020-08-26-200816-reg-zip.jpg"/>
-
+<img alt="101camp13py" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-09-25-reg-zip.jpg"/>
 
 </p></blockquote>
 

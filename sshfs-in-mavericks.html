@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="sshfs-in-mavericks"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/sshfs-in-mavericks.html"/>
-            <meta property="og:description" content="背景¶ 自从 2011-12-16 入手 MBP 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便 依赖少, 双方有 ssh 就好 配置少, ssh 服务的启动没有 smb 服务那么多的配置 自动断, 不会象 smb 死占一个虚假的挂接点 问题¶ 每次 brew 出点小问题,就导致 sshfs 或是不痛快; 目测已经折腾过至少4次了 送修理两次 从 10.6 升级 到 10.9 一次 brew 在硬盘权限修订后,完全崩溃,重新安装 又一次 分析¶ 毕竟 sshfs 依赖 FUSE 这种 …"/>
+            <meta property="og:description" content="背景 问题 分析 解决 背景¶ 自从 2011-12-16 入手 MBP 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便 依赖少, 双方有 ssh 就好 配置少, ssh 服务的启动没有 smb 服务那么多的配置 自动断, 不会象 smb 死占一个虚假的挂接点 问题¶ 每次 brew 出点小问题,就导致 sshfs 或是不痛快; 目测已经折腾过至少4次了 送修理两次 从 10.6 升级 到 10.9 一次 brew 在硬盘权限修订后,完全崩溃,重新安装 又一次 分析¶ 毕竟 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -126,8 +126,8 @@
 		<a href="https://blog.zoomquiet.io/tag/sshfs.html">sshfs</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#_1">背景</a></li>
 <li><a href="#_2">问题</a></li>
@@ -135,56 +135,57 @@
 <li><a href="#_4">解决</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>自从 2011-12-16 入手 <span class="caps">MBP</span> 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便</p>
+<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>自从 2011-12-16 入手 <span class="caps">MBP</span> 以来,就发现只有 sshfs&nbsp;来连接各种系统的硬盘最方便</p>
 <ul>
-<li>依赖少, 双方有 ssh 就好</li>
-<li>配置少, ssh 服务的启动没有 smb 服务那么多的配置</li>
-<li>自动断, 不会象 smb 死占一个虚假的挂接点</li>
+<li>依赖少, 双方有 ssh&nbsp;就好</li>
+<li>配置少, ssh 服务的启动没有 smb&nbsp;服务那么多的配置</li>
+<li>自动断, 不会象 smb&nbsp;死占一个虚假的挂接点</li>
 </ul>
-<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
-<p>每次 brew 出点小问题,就导致 sshfs 或是不痛快;</p>
+<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p>每次 brew 出点小问题,就导致 sshfs&nbsp;或是不痛快;</p>
 <p>目测已经折腾过至少4次了</p>
 <ul>
 <li>送修理两次</li>
-<li>从 10.6 升级 到 10.9 一次</li>
-<li>brew 在硬盘权限修订后,完全崩溃,重新安装 又一次</li>
+<li>从 10.6 升级 到 10.9&nbsp;一次</li>
+<li>brew 在硬盘权限修订后,完全崩溃,重新安装&nbsp;又一次</li>
 </ul>
-<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
-<p>毕竟 sshfs 依赖 <span class="caps">FUSE</span> 这种 plan9 发展来的神物, 是第三方的东西…</p>
+<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<p>毕竟 sshfs 依赖 <span class="caps">FUSE</span> 这种 plan9 发展来的神物,&nbsp;是第三方的东西&#8230;</p>
 <p>而且历史上:</p>
 <ul>
 <li>fuse4x</li>
 <li>macfuse</li>
 <li>osxfuse</li>
-<li>…</li>
+<li>&#8230;</li>
 </ul>
-<p>出现过很多靠谱不靠谱的…</p>
-<h1 id="_4">解决<a class="headerlink" href="#_4" title="Permanent link">¶</a></h1>
-<p>认真根据 homebrew 上最新 issue 的指引</p>
+<p>出现过很多靠谱不靠谱的&#8230;</p>
+<h1 id="_4">解决<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<p>认真根据 homebrew 上最新 issue&nbsp;的指引</p>
 <ul>
 <li>先停了以往各种版本的 <code>FUSE</code></li>
 <li>正常的安装</li>
 </ul>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>$ brew install sshfs
+</code></pre></div>
+
+
 <p>由脚本自动安装所有依赖包.</p>
 <p>并根据安装提示进行必要的系统配置</p>
-<div class="highlight"><pre><span class="n">sudo</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cp</span> <span class="o">-</span><span class="n">RfX</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="p">.</span><span class="n">fs</span> \
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cp</span> <span class="o">-</span><span class="n">RfX</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">osxfuse</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="o">.</span><span class="n">fs</span> \
     <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span>
-<span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">s</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="p">.</span><span class="n">fs</span><span class="o">/</span><span class="n">Support</span><span class="o">/</span><span class="n">load_osxfusefs</span>
-</pre></div>
+<span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">s</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Filesystems</span><span class="o">/</span><span class="n">osxfusefs</span><span class="o">.</span><span class="n">fs</span><span class="o">/</span><span class="n">Support</span><span class="o">/</span><span class="n">load_osxfusefs</span>
+</code></pre></div>
+
+
 <p>首次,进行挂接时,会有驱动非官方的警告,知道就好,
-其它一切正常的了 ;-)</p>
+其它一切正常的了&nbsp;;-)</p>
 <p>参考:</p>
 <ul>
-<li><a href="http://www.jesusherman.com/blog/general/montar-sshfs-en-os-x-mavericks/">Montar <span class="caps">SSHFS</span> en <span class="caps">OS</span> X Mavericks</a></li>
-<li><a href="http://michael.terretta.com/fix-to-remove-or-uninstall-macfuse-on-mountain-lion-when-you-get-the-error-macfuse-uninstaller-can-not-find-the-archive-dot-bom-for-macfuse-core-package-dot">Fix to remove or uninstall MacFuse on Mountain Lion when you get the error “MacFUSE Uninstaller: Can not find the Archive.bom for MacFUSE Core package.” - Crude Technologies</a></li>
-<li><a href="https://discussions.apple.com/message/18355704#18355704">how to remove macfuse and ntfs 3g on osx lion? | Apple Support Communities</a></li>
-<li>… etc.</li>
+<li><a href="http://www.jesusherman.com/blog/general/montar-sshfs-en-os-x-mavericks/">Montar <span class="caps">SSHFS</span> en <span class="caps">OS</span> X&nbsp;Mavericks</a></li>
+<li><a href="http://michael.terretta.com/fix-to-remove-or-uninstall-macfuse-on-mountain-lion-when-you-get-the-error-macfuse-uninstaller-can-not-find-the-archive-dot-bom-for-macfuse-core-package-dot">Fix to remove or uninstall MacFuse on Mountain Lion when you get the error &#8220;MacFUSE Uninstaller: Can not find the Archive.bom for MacFUSE Core package.&#8221; - Crude&nbsp;Technologies</a></li>
+<li><a href="https://discussions.apple.com/message/18355704#18355704">how to remove macfuse and ntfs 3g on osx lion? | Apple Support&nbsp;Communities</a></li>
+<li>&#8230;&nbsp;etc.</li>
 </ul>
 
             </div>
@@ -210,28 +211,61 @@
 
 <hr/>
 
-<h3>蟒营®编程思维提高班 Python版/<b>第11期</b> 正在报名</h3>
-<h4>精品小班/ 每期<42人</h4>
+<h3>蟒营®编程思维提高班 Python版/<b>第13期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
 
 <blockquote><p>
     
 <ul>
     <li>
-    开始报名: <b>2020.8.30</b> </li>
+    开始报名: <b>2020.9.28</b> </li>
     <li>
-    报名截止: <b>2020.9.21</b> </li>
+    报名截止: <b>2020.10.19</b> </li>
     <li>
-    正式开课: <b>2020.9.27</b> </li>
+    正式开课: <b>2020.10.25</b> </li>
     <li>
-    课程结束: <b>2020.11.8</b> </li>
+    课程结束: <b>2020.12.13</b> </li>
 
     <li>
     介绍文章:  
     <ul>
         <li>
-        <a href="https://mp.weixin.qq.com/s/vwcrt8q9UtNiyGcgdoDmcA">
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">蟒营®/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-zoomquiet-fake-learnning/">蟒营®/ 伪编程学习?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-zoomquiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-zoomquiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-zoomquiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+        <a href="https://blog.101.camp/dm/200824-ZoomQuiet-Shanti-Bhavan-4u/">
             拙见/ 唤醒自己的天命之女
         </a>
+        </li>
+        <li>
+        <a href="https://blog.101.camp/dm/200828-ZoomQuiet-understand-understand/">
+            拙见/ 理解理解
+        </a>
+        </li>
+        <li>
+        <a href="https://blog.101.camp/dm/200829-ZoomQuiet-learn-learn/">
+            拙见/ 学习学习
+        </a>
+        </li>
+        <li>
+...
         </li>
     </ul>
     </li>
@@ -264,9 +298,8 @@
 
 <b>扫描</b>报名:
 
-<img alt="101camp12py" 
-    src="http://ydlj.zoomquiet.top/ipic/2020-08-26-200816-reg-zip.jpg"/>
-
+<img alt="101camp13py" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-09-25-reg-zip.jpg"/>
 
 </p></blockquote>
 

@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="nedbat-loop-iter"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/nedbat-loop-iter.html"/>
-            <meta property="og:description" content="来自 @nedbat 的分享: Ned Batchelder: Loop Like A Native 迭代基础¶ C样: i = 0 while i &lt; len(my_list): v = my_list[i] print v i += 1 偏门: for i in range(len(my_list)): v = my_list[i] print v 蠎样: for v in my_list: print v 模式: for name in iterable: statements 可 …"/>
+            <meta property="og:description" content="迭代基础 list ⇒ elements Strings ⇒ characters Dicts ⇒ keys Files ⇒ lines 标准库中有趣的迭代 其它的迭代形式 基本设问 Q: 如何获得索引号? enumerate() 制造好用的值对 迭代 vs 索引 Q: 如何对两个列表循环? zip() 生成弱对关系循环 dict() 是接收一对流的 最赞 自制迭代 生成自有迭代 生成器 Evens generator 对迭代提炼 Q: 如何从两层循环中退出? A: 合并循环 Better: 单元迭代 底层迭代 迭代基层操作 构造自制对象可迭代 iter 生成器 (￣▽￣) 是也乎 来自 @nedbat 的分享: Ned Batchelder: Loop …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -130,27 +130,27 @@
 		<a href="https://blog.zoomquiet.io/tag/coder.html">coder</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#_1">迭代基础</a><ul>
-<li><a href="#list-elements">list ⇒ elements</a></li>
-<li><a href="#strings-characters">Strings ⇒ characters</a></li>
-<li><a href="#dicts-keys">Dicts ⇒ keys</a></li>
-<li><a href="#files-lines">Files ⇒ lines</a></li>
+<li><a href="#list-elements">list ⇒&nbsp;elements</a></li>
+<li><a href="#strings-characters">Strings ⇒&nbsp;characters</a></li>
+<li><a href="#dicts-keys">Dicts ⇒&nbsp;keys</a></li>
+<li><a href="#files-lines">Files ⇒&nbsp;lines</a></li>
 <li><a href="#_2">标准库中有趣的迭代</a></li>
 <li><a href="#_3">其它的迭代形式</a></li>
 </ul>
 </li>
 <li><a href="#_4">基本设问</a><ul>
 <li><a href="#q">Q: 如何获得索引号?</a><ul>
-<li><a href="#enumerate">enumerate() 制造好用的值对</a></li>
-<li><a href="#vs">迭代 vs 索引</a></li>
+<li><a href="#enumerate">enumerate()&nbsp;制造好用的值对</a></li>
+<li><a href="#vs">迭代 vs&nbsp;索引</a></li>
 </ul>
 </li>
 <li><a href="#q_1">Q: 如何对两个列表循环?</a><ul>
-<li><a href="#zip">zip() 生成弱对关系循环</a></li>
-<li><a href="#dict">dict() 是接收一对流的</a></li>
+<li><a href="#zip">zip()&nbsp;生成弱对关系循环</a></li>
+<li><a href="#dict">dict()&nbsp;是接收一对流的</a></li>
 <li><a href="#_5">最赞</a></li>
 </ul>
 </li>
@@ -159,13 +159,13 @@
 <li><a href="#_6">自制迭代</a><ul>
 <li><a href="#_7">生成自有迭代</a></li>
 <li><a href="#_8">生成器</a><ul>
-<li><a href="#evens-generator">Evens generator</a></li>
+<li><a href="#evens-generator">Evens&nbsp;generator</a></li>
 <li><a href="#_9">对迭代提炼</a></li>
 </ul>
 </li>
 <li><a href="#q_2">Q: 如何从两层循环中退出?</a><ul>
-<li><a href="#a">A: 合并循环</a></li>
-<li><a href="#better">Better: 单元迭代</a></li>
+<li><a href="#a">A:&nbsp;合并循环</a></li>
+<li><a href="#better">Better:&nbsp;单元迭代</a></li>
 </ul>
 </li>
 </ul>
@@ -173,7 +173,7 @@
 <li><a href="#_10">底层迭代</a><ul>
 <li><a href="#_11">迭代基层操作</a></li>
 <li><a href="#_12">构造自制对象可迭代</a><ul>
-<li><a href="#iter">iter 生成器</a></li>
+<li><a href="#iter">iter&nbsp;生成器</a></li>
 </ul>
 </li>
 </ul>
@@ -182,67 +182,78 @@
 <li><a href="#_14">是也乎</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>来自 @nedbat&nbsp;的分享:</p>
+<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A&nbsp;Native</a></p>
+<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>C样:</p>
-<div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+</code></pre></div>
+
+
 <p>偏门:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">v</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+</code></pre></div>
+
+
 <p>蠎样:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">v</span> <span class="n">in</span> <span class="n">my_list</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">v</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">for v in my_list:</span>
+<span class="err">    print v</span>
+</code></pre></div>
+
+
 <p>模式:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">name</span> <span class="n">in</span> <span class="n">iterable</span><span class="o">:</span>
-    <span class="n">statements</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">for name in iterable:</span>
+<span class="err">    statements</span>
+</code></pre></div>
+
+
 <ul>
 <li>可 <code>iterable</code> 的对象可以生成值流</li>
 <li>对迭代对象的每次操作</li>
 <li>由对象决定是什么值</li>
-<li>Python 中太多对象可以直接迭代的…</li>
+<li>Python&nbsp;中太多对象可以直接迭代的&#8230;</li>
 </ul>
-<h3 id="list-elements">list ⇒ elements<a class="headerlink" href="#list-elements" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">e</span> <span class="n">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span><span class="o">:</span>
+<h3 id="list-elements">list ⇒ elements<a class="headerlink" href="#list-elements" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">e</span> <span class="k">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]:</span>
     <span class="n">print</span> <span class="n">e</span>
 
 <span class="mi">1</span>
 <span class="mi">2</span>
 <span class="mi">3</span>
 <span class="mi">4</span>
-</pre></div>
-<h3 id="strings-characters">Strings ⇒ characters<a class="headerlink" href="#strings-characters" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">c</span> <span class="n">in</span> <span class="s">"Hello"</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">c</span>
+</code></pre></div>
+
+
+<h3 id="strings-characters">Strings ⇒ characters<a class="headerlink" href="#strings-characters" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="k">c</span> <span class="k">in</span> <span class="ss">&quot;Hello&quot;</span><span class="p">:</span>
+    <span class="n">print</span> <span class="k">c</span>
 
 <span class="n">H</span>
 <span class="n">e</span>
 <span class="n">l</span>
 <span class="n">l</span>
 <span class="n">o</span>
-</pre></div>
-<h3 id="dicts-keys">Dicts ⇒ keys<a class="headerlink" href="#dicts-keys" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">d</span> <span class="o">=</span> <span class="p">{</span> <span class="sc">'a'</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="sc">'b'</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="sc">'c'</span><span class="o">:</span> <span class="mi">3</span> <span class="p">}</span>
+</code></pre></div>
 
-<span class="k">for</span> <span class="n">k</span> <span class="n">in</span> <span class="n">d</span><span class="o">:</span>
+
+<h3 id="dicts-keys">Dicts ⇒ keys<a class="headerlink" href="#dicts-keys" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="err">{</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span> <span class="err">}</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="k">in</span> <span class="n">d</span><span class="p">:</span>
     <span class="n">print</span> <span class="n">k</span>
 
 <span class="n">a</span>
-<span class="n">c</span>
+<span class="k">c</span>
 <span class="n">b</span>
-</pre></div>
+</code></pre></div>
+
+
 <ul>
 <li>当然顺序是没有的</li>
 <li>以及:<ul>
@@ -252,306 +263,358 @@
 </ul>
 </li>
 </ul>
-<h3 id="files-lines">Files ⇒ lines<a class="headerlink" href="#files-lines" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="s">"gettysburg.txt"</span><span class="p">)</span> <span class="n">as</span> <span class="n">f</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="n">in</span> <span class="n">f</span><span class="o">:</span>
+<h3 id="files-lines">Files ⇒ lines<a class="headerlink" href="#files-lines" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="k">open</span><span class="p">(</span><span class="ss">&quot;gettysburg.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="k">in</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">print</span> <span class="n">repr</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 
-<span class="err">'</span><span class="n">Four</span><span class="o">-</span><span class="n">score</span> <span class="n">and</span> <span class="n">seven</span> <span class="n">years</span> <span class="n">ago</span><span class="p">,</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-<span class="err">'</span><span class="n">our</span> <span class="n">fathers</span> <span class="n">brought</span> <span class="n">forth</span> <span class="n">on</span> <span class="n">this</span> <span class="n">continent</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-<span class="err">'</span><span class="n">a</span> <span class="n">new</span> <span class="n">nation</span><span class="p">,</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-<span class="err">'</span><span class="n">conceived</span> <span class="n">in</span> <span class="n">liberty</span><span class="p">,</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-<span class="err">'</span><span class="n">and</span> <span class="n">dedicated</span> <span class="n">to</span> <span class="n">the</span> <span class="n">proposition</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-<span class="err">'</span><span class="n">that</span> <span class="n">all</span> <span class="n">men</span> <span class="n">are</span> <span class="n">created</span> <span class="n">equal</span><span class="p">.</span><span class="err">\</span><span class="n">n</span><span class="err">'</span>
-</pre></div>
-<h3 id="_2">标准库中有趣的迭代<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<span class="s1">&#39;Four-score and seven years ago,\n&#39;</span>
+<span class="s1">&#39;our fathers brought forth on this continent\n&#39;</span>
+<span class="s1">&#39;a new nation,\n&#39;</span>
+<span class="s1">&#39;conceived in liberty,\n&#39;</span>
+<span class="s1">&#39;and dedicated to the proposition\n&#39;</span>
+<span class="s1">&#39;that all men are created equal.\n&#39;</span>
+</code></pre></div>
+
+
+<h3 id="_2">标准库中有趣的迭代<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>正则表达式:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">match</span> <span class="n">in</span> <span class="n">re</span><span class="p">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span> <span class="n">once</span> <span class="k">for</span> <span class="n">each</span> <span class="n">regex</span> <span class="n">match</span><span class="p">...</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">for match in re.finditer(pattern, string):</span>
+<span class="err">    # once for each regex match...</span>
+</code></pre></div>
+
+
 <p>文件系统:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="n">in</span> <span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="err">'</span><span class="o">/</span><span class="n">some</span><span class="o">/</span><span class="n">dir</span><span class="err">'</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span> <span class="n">once</span> <span class="k">for</span> <span class="n">each</span> <span class="n">sub</span><span class="o">-</span><span class="n">directory</span><span class="p">...</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">for root, dirs, files in os.walk(&#39;/some/dir&#39;):</span>
+<span class="err">    # once for each sub-directory...</span>
+</code></pre></div>
+
+
 <p>迭代工具:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">num</span> <span class="n">in</span> <span class="n">itertools</span><span class="p">.</span><span class="n">count</span><span class="p">()</span><span class="o">:</span>
-    <span class="err">#</span> <span class="n">once</span> <span class="k">for</span> <span class="n">each</span> <span class="n">integer</span><span class="p">...</span> <span class="n">Infinite</span><span class="o">!</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">():</span>
+    <span class="c1"># once for each integer... Infinite!</span>
 
-<span class="n">from</span> <span class="n">itertools</span> <span class="n">import</span> <span class="n">chain</span><span class="p">,</span> <span class="n">repeat</span><span class="p">,</span> <span class="n">cycle</span>
-<span class="n">seq</span> <span class="o">=</span> <span class="n">chain</span><span class="p">(</span><span class="n">repeat</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">cycle</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)))</span>
-<span class="k">for</span> <span class="n">num</span> <span class="n">in</span> <span class="n">seq</span><span class="o">:</span>
-    <span class="err">#</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">...</span>
-</pre></div>
-<h3 id="_3">其它的迭代形式<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">new_list</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span><span class="p">,</span> <span class="n">repeat</span><span class="p">,</span> <span class="n">cycle</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">chain</span><span class="p">(</span><span class="n">repeat</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">cycle</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)))</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
+    <span class="c1"># 17, 17, 17, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, ...</span>
+</code></pre></div>
 
-<span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="n">in</span> <span class="n">iterable</span><span class="p">]</span>
 
-<span class="n">total</span> <span class="o">=</span> <span class="n">sum</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+<h3 id="_3">其它的迭代形式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">new_list</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
 
-<span class="n">smallest</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
-<span class="n">largest</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">iterable</span><span class="p">]</span>
 
-<span class="n">combined</span> <span class="o">=</span> <span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
-</pre></div>
-<h2 id="_4">基本设问<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
-<h3 id="q">Q: 如何获得索引号?<a class="headerlink" href="#q" title="Permanent link">¶</a></h3>
+<span class="n">total</span> <span class="o">=</span> <span class="k">sum</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+
+<span class="n">smallest</span> <span class="o">=</span> <span class="k">min</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+<span class="n">largest</span> <span class="o">=</span> <span class="k">max</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+
+<span class="n">combined</span> <span class="o">=</span> <span class="ss">&quot;&quot;</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="_4">基本设问<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="q">Q: 如何获得索引号?<a class="headerlink" href="#q" title="Permanent link">&para;</a></h3>
 <p>别:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+</code></pre></div>
+
+
 <p>赞:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="n">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
-</pre></div>
-<h4 id="enumerate">enumerate() 制造好用的值对<a class="headerlink" href="#enumerate" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Eiffel Tower"</span><span class="p">,</span> <span class="s">"Empire State"</span><span class="p">,</span> <span class="s">"Sears Tower"</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
+</code></pre></div>
+
+
+<h4 id="enumerate">enumerate() 制造好用的值对<a class="headerlink" href="#enumerate" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Eiffel Tower&quot;</span><span class="p">,</span> <span class="s2">&quot;Empire State&quot;</span><span class="p">,</span> <span class="s2">&quot;Sears Tower&quot;</span><span class="p">]</span>
 <span class="n">list</span><span class="p">(</span><span class="n">enumerate</span><span class="p">(</span><span class="n">names</span><span class="p">))</span>
 
-<span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="err">'</span><span class="n">Eiffel</span> <span class="n">Tower</span><span class="err">'</span><span class="p">),</span> 
- <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="err">'</span><span class="n">Empire</span> <span class="n">State</span><span class="err">'</span><span class="p">),</span> 
- <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="err">'</span><span class="n">Sears</span> <span class="n">Tower</span><span class="err">'</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Eiffel Tower&#39;</span><span class="p">),</span> 
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Empire State&#39;</span><span class="p">),</span> 
+ <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Sears Tower&#39;</span><span class="p">)]</span>
 
-<span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">name</span> <span class="n">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">names</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">num</span><span class="p">,</span> <span class="n">name</span>
+<span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">num</span><span class="p">,</span> <span class="n">name</span>
 
 <span class="mi">0</span> <span class="n">Eiffel</span> <span class="n">Tower</span>
 <span class="mi">1</span> <span class="n">Empire</span> <span class="n">State</span>
 <span class="mi">2</span> <span class="n">Sears</span> <span class="n">Tower</span>
-</pre></div>
-<h4 id="vs">迭代 vs 索引<a class="headerlink" href="#vs" title="Permanent link">¶</a></h4>
+</code></pre></div>
+
+
+<h4 id="vs">迭代 vs 索引<a class="headerlink" href="#vs" title="Permanent link">&para;</a></h4>
 <p>受限:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>    <span class="err">#</span> <span class="n">indexing</span><span class="o">!</span>
-    <span class="n">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">indexing</span><span class="err">!</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+</code></pre></div>
+
+
 <p>更强:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="n">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
 
-<span class="k">for</span> <span class="n">linenum</span><span class="p">,</span> <span class="n">line</span> <span class="n">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span><span class="p">...</span>
-</pre></div>
+<span class="k">for</span> <span class="n">linenum</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="c1">#...</span>
+</code></pre></div>
+
+
 <p>C样坏形:</p>
-<div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">v</span> <span class="n">in</span> <span class="n">iterable</span><span class="o">:</span>
-    <span class="n">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
-<h3 id="q_1">Q: 如何对两个列表循环?<a class="headerlink" href="#q_1" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Eiffel Tower"</span><span class="p">,</span> <span class="s">"Empire State"</span><span class="p">,</span> <span class="s">"Sears Tower"</span><span class="p">]</span>
-<span class="n">heights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">324</span><span class="p">,</span> <span class="mi">381</span><span class="p">,</span> <span class="mi">442</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="err">i = 0</span>
+<span class="err">for v in iterable:</span>
+<span class="err">    print i, v</span>
+<span class="err">    i += 1</span>
+</code></pre></div>
 
-<span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">names</span><span class="p">))</span><span class="o">:</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">height</span> <span class="o">=</span> <span class="n">heights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print</span> <span class="s">"%s: %s meters"</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
 
-<span class="n">Eiffel</span> <span class="n">Tower</span><span class="o">:</span> <span class="mi">324</span> <span class="n">meters</span>
-<span class="n">Empire</span> <span class="n">State</span><span class="o">:</span> <span class="mi">381</span> <span class="n">meters</span>
-<span class="n">Sears</span> <span class="n">Tower</span><span class="o">:</span> <span class="mi">442</span> <span class="n">meters</span>
-</pre></div>
-<h4 id="zip">zip() 生成弱对关系循环<a class="headerlink" href="#zip" title="Permanent link">¶</a></h4>
+<h3 id="q_1">Q: 如何对两个列表循环?<a class="headerlink" href="#q_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;Eiffel Tower&quot;, &quot;Empire State&quot;, &quot;Sears Tower&quot;</span><span class="o">]</span><span class="w"></span>
+<span class="n">heights</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">324, 381, 442</span><span class="o">]</span><span class="w"></span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="k">names</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;%s: %s meters&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">Eiffel</span><span class="w"> </span><span class="nl">Tower</span><span class="p">:</span><span class="w"> </span><span class="mi">324</span><span class="w"> </span><span class="n">meters</span><span class="w"></span>
+<span class="n">Empire</span><span class="w"> </span><span class="k">State</span><span class="err">:</span><span class="w"> </span><span class="mi">381</span><span class="w"> </span><span class="n">meters</span><span class="w"></span>
+<span class="n">Sears</span><span class="w"> </span><span class="nl">Tower</span><span class="p">:</span><span class="w"> </span><span class="mi">442</span><span class="w"> </span><span class="n">meters</span><span class="w"></span>
+</code></pre></div>
+
+
+<h4 id="zip">zip() 生成弱对关系循环<a class="headerlink" href="#zip" title="Permanent link">&para;</a></h4>
 <p>将一对循环,变成一个流循环:</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">height</span> <span class="n">in</span> <span class="n">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">heights</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="s">"%s: %s meters"</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">height</span> <span class="k">in</span> <span class="n">zip</span><span class="p">(</span><span class="k">names</span><span class="p">,</span> <span class="n">heights</span><span class="p">):</span>
+    <span class="n">print</span> <span class="ss">&quot;%s: %s meters&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
 
-<span class="n">Eiffel</span> <span class="n">Tower</span><span class="o">:</span> <span class="mi">324</span> <span class="n">meters</span>
-<span class="n">Empire</span> <span class="n">State</span><span class="o">:</span> <span class="mi">381</span> <span class="n">meters</span>
-<span class="n">Sears</span> <span class="n">Tower</span><span class="o">:</span> <span class="mi">442</span> <span class="n">meters</span>
-</pre></div>
-<h4 id="dict">dict() 是接收一对流的<a class="headerlink" href="#dict" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Eiffel Tower"</span><span class="p">,</span> <span class="s">"Empire State"</span><span class="p">,</span> <span class="s">"Sears Tower"</span><span class="p">]</span>
+<span class="n">Eiffel</span> <span class="n">Tower</span><span class="p">:</span> <span class="mi">324</span> <span class="n">meters</span>
+<span class="n">Empire</span> <span class="k">State</span><span class="p">:</span> <span class="mi">381</span> <span class="n">meters</span>
+<span class="n">Sears</span> <span class="n">Tower</span><span class="p">:</span> <span class="mi">442</span> <span class="n">meters</span>
+</code></pre></div>
+
+
+<h4 id="dict">dict() 是接收一对流的<a class="headerlink" href="#dict" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">names</span> <span class="o">=</span> <span class="p">[</span><span class="ss">&quot;Eiffel Tower&quot;</span><span class="p">,</span> <span class="ss">&quot;Empire State&quot;</span><span class="p">,</span> <span class="ss">&quot;Sears Tower&quot;</span><span class="p">]</span>
 <span class="n">heights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">324</span><span class="p">,</span> <span class="mi">381</span><span class="p">,</span> <span class="mi">442</span><span class="p">]</span>
 
-<span class="n">dict</span><span class="p">(</span><span class="n">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">heights</span><span class="p">))</span>
+<span class="n">dict</span><span class="p">(</span><span class="n">zip</span><span class="p">(</span><span class="k">names</span><span class="p">,</span> <span class="n">heights</span><span class="p">))</span>
 
-<span class="p">{</span><span class="err">'</span><span class="n">Empire</span> <span class="n">State</span><span class="err">'</span><span class="o">:</span> <span class="mi">381</span><span class="p">,</span> 
- <span class="err">'</span><span class="n">Sears</span> <span class="n">Tower</span><span class="err">'</span><span class="o">:</span> <span class="mi">442</span><span class="p">,</span> 
- <span class="err">'</span><span class="n">Eiffel</span> <span class="n">Tower</span><span class="err">'</span><span class="o">:</span> <span class="mi">324</span><span class="p">}</span>
-</pre></div>
-<h4 id="_5">最赞<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">tall_buildings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s">"Empire State"</span><span class="o">:</span> <span class="mi">381</span><span class="p">,</span> <span class="s">"Sears Tower"</span><span class="o">:</span> <span class="mi">442</span><span class="p">,</span>
-  <span class="s">"Burj Khalifa"</span><span class="o">:</span> <span class="mi">828</span><span class="p">,</span> <span class="s">"Taipei 101"</span><span class="o">:</span> <span class="mi">509</span><span class="p">,</span>
-  <span class="p">}</span>
+<span class="err">{</span><span class="s1">&#39;Empire State&#39;</span><span class="p">:</span> <span class="mi">381</span><span class="p">,</span> 
+ <span class="s1">&#39;Sears Tower&#39;</span><span class="p">:</span> <span class="mi">442</span><span class="p">,</span> 
+ <span class="s1">&#39;Eiffel Tower&#39;</span><span class="p">:</span> <span class="mi">324</span><span class="err">}</span>
+</code></pre></div>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="n">max</span><span class="p">(</span><span class="n">tall_buildings</span><span class="p">.</span><span class="n">values</span><span class="p">())</span>
+
+<h4 id="_5">最赞<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">tall_buildings</span> <span class="o">=</span> <span class="err">{</span>
+  <span class="ss">&quot;Empire State&quot;</span><span class="p">:</span> <span class="mi">381</span><span class="p">,</span> <span class="ss">&quot;Sears Tower&quot;</span><span class="p">:</span> <span class="mi">442</span><span class="p">,</span>
+  <span class="ss">&quot;Burj Khalifa&quot;</span><span class="p">:</span> <span class="mi">828</span><span class="p">,</span> <span class="ss">&quot;Taipei 101&quot;</span><span class="p">:</span> <span class="mi">509</span><span class="p">,</span>
+  <span class="err">}</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="k">max</span><span class="p">(</span><span class="n">tall_buildings</span><span class="p">.</span><span class="k">values</span><span class="p">())</span>
 <span class="mi">828</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="n">max</span><span class="p">(</span><span class="n">tall_buildings</span><span class="p">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">lambda</span> <span class="n">b</span><span class="o">:</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="p">(</span><span class="err">'</span><span class="n">Burj</span> <span class="n">Khalifa</span><span class="err">'</span><span class="p">,</span> <span class="mi">828</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="k">max</span><span class="p">(</span><span class="n">tall_buildings</span><span class="p">.</span><span class="n">items</span><span class="p">(),</span> <span class="k">key</span><span class="o">=</span><span class="n">lambda</span> <span class="n">b</span><span class="p">:</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="p">(</span><span class="s1">&#39;Burj Khalifa&#39;</span><span class="p">,</span> <span class="mi">828</span><span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="n">max</span><span class="p">(</span><span class="n">tall_buildings</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">tall_buildings</span><span class="p">.</span><span class="n">get</span><span class="p">)</span>
-<span class="err">'</span><span class="n">Burj</span> <span class="n">Khalifa</span><span class="err">'</span>
-</pre></div>
-<h2 id="_6">自制迭代<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
-<h3 id="_7">生成自有迭代<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">72</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">n</span> <span class="n">in</span> <span class="n">nums</span><span class="o">:</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">:</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="k">max</span><span class="p">(</span><span class="n">tall_buildings</span><span class="p">,</span> <span class="k">key</span><span class="o">=</span><span class="n">tall_buildings</span><span class="p">.</span><span class="k">get</span><span class="p">)</span>
+<span class="s1">&#39;Burj Khalifa&#39;</span>
+</code></pre></div>
+
+
+<h2 id="_6">自制迭代<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">生成自有迭代<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">72</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="n">nums</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">do_something</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
-<span class="n">def</span> <span class="n">evens</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span><span class="o">:</span>
+<span class="n">def</span> <span class="n">evens</span><span class="p">(</span><span class="n">stream</span><span class="p">):</span>
     <span class="n">them</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">n</span> <span class="n">in</span> <span class="n">stream</span><span class="o">:</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">:</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="n">stream</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">them</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">them</span>
 
-<span class="k">for</span> <span class="n">n</span> <span class="n">in</span> <span class="n">evens</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">:</span>
+<span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="n">evens</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
     <span class="n">do_something</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-</pre></div>
-<h3 id="_8">生成器<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
-<p>函式返回一个值 —&gt; 生成器生成一个流</p>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">hello_world</span><span class="p">()</span><span class="o">:</span>
-    <span class="n">yield</span> <span class="s">"Hello"</span>
-    <span class="n">yield</span> <span class="s">"world"</span>
+</code></pre></div>
 
-<span class="k">for</span> <span class="n">x</span> <span class="n">in</span> <span class="n">hello_world</span><span class="p">()</span><span class="o">:</span>
+
+<h3 id="_8">生成器<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>函式返回一个值 &#8212;&gt;&nbsp;生成器生成一个流</p>
+<div class="highlight"><pre><span></span><code><span class="n">def</span> <span class="n">hello_world</span><span class="p">():</span>
+    <span class="n">yield</span> <span class="ss">&quot;Hello&quot;</span>
+    <span class="n">yield</span> <span class="ss">&quot;world&quot;</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">hello_world</span><span class="p">():</span>
     <span class="n">print</span> <span class="n">x</span>
 
 <span class="n">Hello</span>
 <span class="n">world</span>
-</pre></div>
-<h4 id="evens-generator">Evens generator<a class="headerlink" href="#evens-generator" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">evens</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">n</span> <span class="n">in</span> <span class="n">stream</span><span class="o">:</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">:</span>
+</code></pre></div>
+
+
+<h4 id="evens-generator">Evens generator<a class="headerlink" href="#evens-generator" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">def</span> <span class="n">evens</span><span class="p">(</span><span class="n">stream</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="n">stream</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">yield</span> <span class="n">n</span>
 
-<span class="k">for</span> <span class="n">n</span> <span class="n">in</span> <span class="n">evens</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">:</span>
+<span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="n">evens</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
     <span class="n">do_something</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-</pre></div>
-<h4 id="_9">对迭代提炼<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
-<p>~ Abstracting your iteration</p>
-<div class="highlight"><pre><span class="n">f</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="s">"my_config.ini"</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">line</span> <span class="n">in</span> <span class="n">f</span><span class="o">:</span>
+</code></pre></div>
+
+
+<h4 id="_9">对迭代提炼<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>~ Abstracting your&nbsp;iteration</p>
+<div class="highlight"><pre><span></span><code><span class="n">f</span> <span class="o">=</span> <span class="k">open</span><span class="p">(</span><span class="ss">&quot;my_config.ini&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="k">in</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="sc">'#'</span><span class="p">)</span><span class="o">:</span>
-        <span class="err">#</span> <span class="n">A</span> <span class="n">comment</span> <span class="n">line</span><span class="p">,</span> <span class="n">skip</span> <span class="n">it</span><span class="p">.</span>
+    <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">):</span>
+        <span class="o">#</span> <span class="n">A</span> <span class="k">comment</span> <span class="n">line</span><span class="p">,</span> <span class="n">skip</span> <span class="n">it</span><span class="p">.</span>
         <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">not</span> <span class="n">line</span><span class="o">:</span>
-        <span class="err">#</span> <span class="n">A</span> <span class="n">blank</span> <span class="n">line</span><span class="p">,</span> <span class="n">skip</span> <span class="n">it</span><span class="p">.</span>
+    <span class="k">if</span> <span class="k">not</span> <span class="n">line</span><span class="p">:</span>
+        <span class="o">#</span> <span class="n">A</span> <span class="n">blank</span> <span class="n">line</span><span class="p">,</span> <span class="n">skip</span> <span class="n">it</span><span class="p">.</span>
         <span class="k">continue</span>
 
-    <span class="err">#</span> <span class="n">An</span> <span class="n">interesting</span> <span class="n">line</span><span class="p">.</span>
+    <span class="o">#</span> <span class="n">An</span> <span class="n">interesting</span> <span class="n">line</span><span class="p">.</span>
     <span class="n">do_something</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
+
+
 <p>自制生成器:</p>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">interesting_lines</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="n">in</span> <span class="n">f</span><span class="o">:</span>
+<div class="highlight"><pre><span></span><code><span class="n">def</span> <span class="n">interesting_lines</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="k">in</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="sc">'#'</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">):</span>
             <span class="k">continue</span>
-        <span class="k">if</span> <span class="n">not</span> <span class="n">line</span><span class="o">:</span>
+        <span class="k">if</span> <span class="k">not</span> <span class="n">line</span><span class="p">:</span>
             <span class="k">continue</span>
         <span class="n">yield</span> <span class="n">line</span>
 
-<span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="s">"my_config.ini"</span><span class="p">)</span> <span class="n">as</span> <span class="n">f</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="n">in</span> <span class="n">interesting_lines</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">:</span>
+<span class="k">with</span> <span class="k">open</span><span class="p">(</span><span class="ss">&quot;my_config.ini&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="k">in</span> <span class="n">interesting_lines</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
         <span class="n">do_something</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 
-<span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="s">"my_other.dat"</span><span class="p">)</span> <span class="n">as</span> <span class="n">f2</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="n">in</span> <span class="n">interesting_lines</span><span class="p">(</span><span class="n">f2</span><span class="p">)</span><span class="o">:</span>
+<span class="k">with</span> <span class="k">open</span><span class="p">(</span><span class="ss">&quot;my_other.dat&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f2</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="k">in</span> <span class="n">interesting_lines</span><span class="p">(</span><span class="n">f2</span><span class="p">):</span>
         <span class="n">do_something_else</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-</pre></div>
-<h3 id="q_2">Q: 如何从两层循环中退出?<a class="headerlink" href="#q_2" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">row</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">col</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">width</span><span class="p">)</span><span class="o">:</span>
+</code></pre></div>
 
-        <span class="n">value</span> <span class="o">=</span> <span class="n">spreadsheet</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+
+<h3 id="q_2">Q: 如何从两层循环中退出?<a class="headerlink" href="#q_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="k">row</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+
+        <span class="n">value</span> <span class="o">=</span> <span class="n">spreadsheet</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="k">row</span><span class="p">)</span>
         <span class="n">do_something</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">this_is_my_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">:</span>
-            <span class="k">break</span>   <span class="err">#</span> <span class="err">←</span> <span class="o">???</span>
-</pre></div>
-<h4 id="a">A: 合并循环<a class="headerlink" href="#a" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">range_2d</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span><span class="o">:</span>
-    <span class="s">"""Produce a stream of two-D coordinates."""</span>
-    <span class="k">for</span> <span class="n">y</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">for</span> <span class="n">x</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">width</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">if</span> <span class="n">this_is_my_value</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+            <span class="n">break</span>   <span class="o">#</span> <span class="err">←</span> <span class="o">???</span>
+</code></pre></div>
+
+
+<h4 id="a">A: 合并循环<a class="headerlink" href="#a" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">def</span> <span class="n">range_2d</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="ss">&quot;&quot;&quot;Produce a stream of two-D coordinates.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
             <span class="n">yield</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
 
-<span class="k">for</span> <span class="n">col</span><span class="p">,</span> <span class="n">row</span> <span class="n">in</span> <span class="n">range_2d</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">value</span> <span class="o">=</span> <span class="n">spreadsheet</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">col</span><span class="p">,</span> <span class="k">row</span> <span class="k">in</span> <span class="n">range_2d</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">spreadsheet</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="k">row</span><span class="p">)</span>
     <span class="n">do_something</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">this_is_my_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">break</span>
-</pre></div>
-<h4 id="better">Better: 单元迭代<a class="headerlink" href="#better" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">cell</span> <span class="n">in</span> <span class="n">spreadsheet</span><span class="p">.</span><span class="n">cells</span><span class="p">()</span><span class="o">:</span>
+    <span class="k">if</span> <span class="n">this_is_my_value</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="n">break</span>
+</code></pre></div>
+
+
+<h4 id="better">Better: 单元迭代<a class="headerlink" href="#better" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">cell</span> <span class="k">in</span> <span class="n">spreadsheet</span><span class="p">.</span><span class="n">cells</span><span class="p">():</span>
     <span class="n">value</span> <span class="o">=</span> <span class="n">cell</span><span class="p">.</span><span class="n">get_value</span><span class="p">()</span>
     <span class="n">do_something</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">this_is_my_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">break</span>
-</pre></div>
-<h2 id="_10">底层迭代<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
+    <span class="k">if</span> <span class="n">this_is_my_value</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="n">break</span>
+</code></pre></div>
+
+
+<h2 id="_10">底层迭代<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ul>
-<li>可迭代: 能生成迭代 Iterable: produces an iterator</li>
+<li>可迭代: 能生成迭代 Iterable: produces an&nbsp;iterator</li>
 <li>
-<p>迭代器: 生成一个值流 Iterator: produces a stream of values</p>
+<p>迭代器: 生成一个值流 Iterator: produces a stream of&nbsp;values</p>
 <p>iterator = iter(iterable)  # iterable.<strong>iter</strong>()
 value = next(iterator)     # iterator.next() or .<strong>next</strong>()
-value = next(iterator) …</p>
+value = next(iterator)&nbsp;&#8230;</p>
 </li>
 </ul>
 <p>迭代器仅有一个操作: <code>next()</code></p>
-<h3 id="_11">迭代基层操作<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<h3 id="_11">迭代基层操作<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>有时很有用:</p>
-<div class="highlight"><pre><span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="s">"blah.dat"</span><span class="p">)</span> <span class="n">as</span> <span class="n">f</span><span class="o">:</span>
-    <span class="err">#</span> <span class="n">Read</span> <span class="n">the</span> <span class="n">first</span> <span class="n">line</span>
-    <span class="n">header_line</span> <span class="o">=</span> <span class="n">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="k">open</span><span class="p">(</span><span class="ss">&quot;blah.dat&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="o">#</span> <span class="k">Read</span> <span class="n">the</span> <span class="k">first</span> <span class="n">line</span>
+    <span class="n">header_line</span> <span class="o">=</span> <span class="k">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 
-    <span class="err">#</span> <span class="n">Read</span> <span class="n">the</span> <span class="n">rest</span>
-    <span class="k">for</span> <span class="n">data_line</span> <span class="n">in</span> <span class="n">f</span><span class="o">:</span>
-        <span class="err">#</span> <span class="p">...</span>
-</pre></div>
-<h3 id="_12">构造自制对象可迭代<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">ToDoList</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">tasks</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="o">#</span> <span class="k">Read</span> <span class="n">the</span> <span class="n">rest</span>
+    <span class="k">for</span> <span class="n">data_line</span> <span class="k">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="o">#</span> <span class="p">...</span>
+</code></pre></div>
 
-    <span class="n">def</span> <span class="n">__iter__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="n">iter</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">tasks</span><span class="p">)</span>
 
-<span class="n">todo</span> <span class="o">=</span> <span class="n">ToDoList</span><span class="p">()</span>
-<span class="p">...</span>
-<span class="k">for</span> <span class="n">task</span> <span class="n">in</span> <span class="n">todo</span><span class="o">:</span>
-    <span class="err">#</span> <span class="p">...</span>
-</pre></div>
+<h3 id="_12">构造自制对象可迭代<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">ToDoList</span>(<span class="n">object</span>):
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>):
+        <span class="nb">self</span>.<span class="n">tasks</span> = []
+
+    <span class="n">def</span> <span class="n">__iter__</span>(<span class="nb">self</span>):
+        <span class="k">return</span> <span class="n">iter</span>(<span class="nb">self</span>.<span class="n">tasks</span>)
+
+<span class="nb">todo</span> = <span class="n">ToDoList</span>()
+...
+<span class="k">for</span> <span class="n">task</span> <span class="nb">in</span> <span class="n">todo:</span>
+    <span class="c1"># ...</span>
+</code></pre></div>
+
+
 <ul>
 <li>仅仅需要定义 <code>__iter__()</code></li>
 </ul>
-<h4 id="iter"><strong>iter</strong> 生成器<a class="headerlink" href="#iter" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">ToDoList</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">tasks</span> <span class="o">=</span> <span class="p">[]</span>
+<h4 id="iter"><strong>iter</strong> 生成器<a class="headerlink" href="#iter" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">ToDoList</span>(<span class="n">object</span>):
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>):
+        <span class="nb">self</span>.<span class="n">tasks</span> = []
 
-    <span class="n">def</span> <span class="n">__iter__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">for</span> <span class="n">task</span> <span class="n">in</span> <span class="n">self</span><span class="p">.</span><span class="n">tasks</span><span class="o">:</span>
-            <span class="k">if</span> <span class="n">not</span> <span class="n">task</span><span class="p">.</span><span class="n">done</span><span class="o">:</span>
-                <span class="n">yield</span> <span class="n">task</span>
+    <span class="n">def</span> <span class="n">__iter__</span>(<span class="nb">self</span>):
+        <span class="k">for</span> <span class="n">task</span> <span class="nb">in</span> <span class="nb">self</span>.<span class="n">tasks:</span>
+            <span class="k">if</span> <span class="nb">not</span> <span class="n">task</span>.<span class="n">done:</span>
+                <span class="nb">yield</span> <span class="n">task</span>
 
-    <span class="n">def</span> <span class="n">all</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="n">iter</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">tasks</span><span class="p">)</span>
+    <span class="n">def</span> <span class="nb">all</span>(<span class="nb">self</span>):
+        <span class="k">return</span> <span class="n">iter</span>(<span class="nb">self</span>.<span class="n">tasks</span>)
 
-    <span class="n">def</span> <span class="n">done</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="n">in</span> <span class="n">self</span><span class="p">.</span><span class="n">tasks</span> <span class="k">if</span> <span class="n">t</span><span class="p">.</span><span class="n">done</span><span class="p">)</span>
-</pre></div>
-<h2 id="_13">(￣▽￣)<a class="headerlink" href="#_13" title="Permanent link">¶</a></h2>
+    <span class="n">def</span> <span class="nb">done</span>(<span class="nb">self</span>):
+        <span class="k">return</span> (<span class="nb">t</span> <span class="k">for</span> <span class="nb">t</span> <span class="nb">in</span> <span class="nb">self</span>.<span class="n">tasks</span> <span class="k">if</span> <span class="nb">t</span>.<span class="nb">done</span>)
+</code></pre></div>
+
+
+<h2 id="_13">(￣▽￣)<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
 <ul>
 <li>迭代无处不在</li>
-<li>Python 内置了干净强大的模型支持迭代</li>
+<li>Python&nbsp;内置了干净强大的模型支持迭代</li>
 <li>抽象和定制你的迭代吧!</li>
 </ul>
-<h2 id="_14">是也乎<a class="headerlink" href="#_14" title="Permanent link">¶</a></h2>
+<h2 id="_14">是也乎<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
 <ul>
-<li>160613 空先发</li>
-<li>160531 动念</li>
+<li>160613&nbsp;空先发</li>
+<li>160531&nbsp;动念</li>
 </ul>
 
             </div>
@@ -577,28 +640,61 @@ value = next(iterator) …</p>
 
 <hr/>
 
-<h3>蟒营®编程思维提高班 Python版/<b>第11期</b> 正在报名</h3>
-<h4>精品小班/ 每期<42人</h4>
+<h3>蟒营®编程思维提高班 Python版/<b>第13期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
 
 <blockquote><p>
     
 <ul>
     <li>
-    开始报名: <b>2020.8.30</b> </li>
+    开始报名: <b>2020.9.28</b> </li>
     <li>
-    报名截止: <b>2020.9.21</b> </li>
+    报名截止: <b>2020.10.19</b> </li>
     <li>
-    正式开课: <b>2020.9.27</b> </li>
+    正式开课: <b>2020.10.25</b> </li>
     <li>
-    课程结束: <b>2020.11.8</b> </li>
+    课程结束: <b>2020.12.13</b> </li>
 
     <li>
     介绍文章:  
     <ul>
         <li>
-        <a href="https://mp.weixin.qq.com/s/vwcrt8q9UtNiyGcgdoDmcA">
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">蟒营®/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-zoomquiet-fake-learnning/">蟒营®/ 伪编程学习?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-zoomquiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-zoomquiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-zoomquiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+        <a href="https://blog.101.camp/dm/200824-ZoomQuiet-Shanti-Bhavan-4u/">
             拙见/ 唤醒自己的天命之女
         </a>
+        </li>
+        <li>
+        <a href="https://blog.101.camp/dm/200828-ZoomQuiet-understand-understand/">
+            拙见/ 理解理解
+        </a>
+        </li>
+        <li>
+        <a href="https://blog.101.camp/dm/200829-ZoomQuiet-learn-learn/">
+            拙见/ 学习学习
+        </a>
+        </li>
+        <li>
+...
         </li>
     </ul>
     </li>
@@ -631,9 +727,8 @@ value = next(iterator) …</p>
 
 <b>扫描</b>报名:
 
-<img alt="101camp12py" 
-    src="http://ydlj.zoomquiet.top/ipic/2020-08-26-200816-reg-zip.jpg"/>
-
+<img alt="101camp13py" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-09-25-reg-zip.jpg"/>
 
 </p></blockquote>
 

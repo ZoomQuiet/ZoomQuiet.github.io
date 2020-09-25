@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="how2rename-mac-screen-shot"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html"/>
-            <meta property="og:description" content="BG goal logging 格式 命名 ScreenCapture.strings Automator bash refer Sayeahooo BG¶ 默认系统截屏工具输出图片是: 到桌面 文件名: 屏幕快照 2019-02-13 17.17.32.png goal¶ 当年在 Linux 中,是可以自由定义输出的, 俺期望是: screenshot_190213-17.17.32.jpg 现在怎么作到? logging¶ 记要尝试过程 格式¶ $ defaults write com.apple.screencapture type jpg $ killall SystemUIServer 以上即可 命名¶ $ defaults write com.apple …"/>
+            <meta property="og:description" content="BG¶ 默认系统截屏工具输出图片是: 到桌面 文件名: 屏幕快照 2019-02-13 17.17.32.png goal¶ 当年在 Linux 中,是可以自由定义输出的, 俺期望是: screenshot_190213-17.17.32.jpg 现在怎么作到? logging¶ 记要尝试过程 格式¶ $ defaults write com.apple.screencapture type jpg $ killall SystemUIServer 以上即可 命名¶ $ defaults write com.apple.screencapture name screenshot $ killall SystemUIServer 以上只能变成: screenshot 2019-02-13 17.17.32 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -128,8 +128,8 @@
 		<a href="https://blog.zoomquiet.io/tag/scm.html">SCM</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-
-                <div class="toc">
+    <nav class="toc">
+    <div class="toc">
 <ul>
 <li><a href="#bg"><span class="caps">BG</span></a></li>
 <li><a href="#goal">goal</a></li>
@@ -145,7 +145,10 @@
 <li><a href="#sayeahooo">Sayeahooo</a></li>
 </ul>
 </div>
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
+    </nav>
+
+                
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
 <ul>
 <li>默认系统截屏工具输出图片是:<ul>
 <li>到桌面</li>
@@ -153,7 +156,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
 <ul>
 <li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
 <li><code>screenshot_190213-17.17.32.jpg</code></li>
@@ -161,94 +164,84 @@
 </li>
 <li>现在怎么作到?</li>
 </ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>记要尝试过程</p>
 </blockquote>
-<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code>$ defaults write com.apple.screencapture <span class="nb">type</span> jpg
 $ killall SystemUIServer
 </code></pre></div>
-
-
 <p>以上即可</p>
-<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code>$ defaults write com.apple.screencapture name screenshot
 $ killall SystemUIServer
 </code></pre></div>
-
-
 <p>以上只能变成:</p>
 <div class="highlight"><pre><span></span><code><span class="err">screenshot 2019-02-13 17.17.32.jpg</span>
 </code></pre></div>
-
-
-<h3 id="screencapturestrings">ScreenCapture.strings<a class="headerlink" href="#screencapturestrings" title="Permanent link">&para;</a></h3>
+<h3 id="screencapturestrings">ScreenCapture.strings<a class="headerlink" href="#screencapturestrings" title="Permanent link">¶</a></h3>
 <p>以往可以进行的</p>
 <div class="highlight"><pre><span></span><code><span class="err">sudo su</span>
 <span class="err">cd /System/Library/CoreServices/SystemUIServer.app/Contents/Resources/Spanish.lpro </span>
 <span class="err">plutil -convert xml1 ScreenCapture.strings</span>
 <span class="err">vim ScreenCapture.strings</span>
 </code></pre></div>
-
-
-<p>在 macOS Sierra 10.12.6&nbsp;中失败:</p>
+<p>在 macOS Sierra 10.12.6 中失败:</p>
 <ul>
-<li>无论是否是 root&nbsp;身份</li>
+<li>无论是否是 root 身份</li>
 <li>都说系统没有权限</li>
 </ul>
-<h3 id="automator">Automator<a class="headerlink" href="#automator" title="Permanent link">&para;</a></h3>
+<h3 id="automator">Automator<a class="headerlink" href="#automator" title="Permanent link">¶</a></h3>
 <p>另外一种思路是用内置自动脚本来刷指定目录中指定文件名的文件名:</p>
 <ul>
-<li>但是, 尝试后发现,&nbsp;这种可视化编程限制太多</li>
-<li>而且调整困难,&nbsp;根本无法有效完成设想</li>
+<li>但是, 尝试后发现, 这种可视化编程限制太多</li>
+<li>而且调整困难, 根本无法有效完成设想</li>
 </ul>
-<h3 id="bash">bash<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h3>
+<h3 id="bash">bash<a class="headerlink" href="#bash" title="Permanent link">¶</a></h3>
 <p>经检测:</p>
-<div class="highlight"><pre><span></span><code><span class="err">screencapture -io ~/Desktop/screenshot_`date &#39;+%y%m%d-%H.%M.%S&#39;`.jpg</span>
+<div class="highlight"><pre><span></span><code><span class="err">screencapture -io ~/Desktop/screenshot_`date '+%y%m%d-%H.%M.%S'`.jpg</span>
 </code></pre></div>
-
-
 <p>可以满足所有构想,可是:</p>
 <ul>
 <li>先要打开终端</li>
-<li>运行, 无论是配置为别名, 还是部署为指定 .sh&nbsp;脚本</li>
+<li>运行, 无论是配置为别名, 还是部署为指定 .sh 脚本</li>
 <li>然后才能进行截屏</li>
-<li>相比原先随时 <code>cmd+shift+4</code> 进入截屏, 还是多了一层,&nbsp;不方便</li>
+<li>相比原先随时 <code>cmd+shift+4</code> 进入截屏, 还是多了一层, 不方便</li>
 </ul>
-<p>问题变成如何可以用原有快捷键调用 bash&nbsp;指令?</p>
+<p>问题变成如何可以用原有快捷键调用 bash 指令?</p>
 <ul>
-<li>alfred&nbsp;复杂</li>
+<li>alfred 复杂</li>
 <li>HotKey 只能绑定 .app 使用自定快捷键<ul>
 <li>那么问题进一步变成: <code>如何快速将一个 shell 脚本变成标准 mac app?</code></li>
-<li>果然有很多方式,&nbsp;脚本,编译,应用&#8230;</li>
-<li>试用 Platypus 一下子就形成了无界面后台运行的&nbsp;app</li>
+<li>果然有很多方式, 脚本,编译,应用…</li>
+<li>试用 Platypus 一下子就形成了无界面后台运行的 app</li>
 </ul>
 </li>
-<li>配合 HotKay 达成目标效果&nbsp;;-)</li>
+<li>配合 HotKay 达成目标效果 ;-)</li>
 </ul>
-<p><img alt="screenshot_190213" src="https://ipic.zoomquiet.top/2019-02-13-screenshot_190213-23.03.43.jpg"></p>
-<h2 id="refer">refer<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
+<p><img alt="screenshot_190213" src="https://ipic.zoomquiet.top/2019-02-13-screenshot_190213-23.03.43.jpg"/></p>
+<h2 id="refer">refer<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="http://snowleopardtips.net/tips/everything-you-need-to-know-about-screen-captures.html"><span class="caps">TIP</span>: Change default screen shot filenames, format and location | Snow Leopard Tips</a><ul>
-<li><a href="https://www.tekrevue.com/tip/how-to-customize-screenshot-options-in-mac-os-x/">The Complete Guide to Mac <span class="caps">OS</span> X Screenshots -&nbsp;TekRevue</a></li>
-<li><a href="https://apple.stackexchange.com/questions/27729/changing-the-default-screenshot-filename">uti - Changing the default screenshot filename - Ask&nbsp;Different</a></li>
-<li>&#8230;</li>
+<li><a href="https://www.tekrevue.com/tip/how-to-customize-screenshot-options-in-mac-os-x/">The Complete Guide to Mac <span class="caps">OS</span> X Screenshots - TekRevue</a></li>
+<li><a href="https://apple.stackexchange.com/questions/27729/changing-the-default-screenshot-filename">uti - Changing the default screenshot filename - Ask Different</a></li>
+<li>…</li>
 </ul>
 </li>
 <li><a href="https://apple.stackexchange.com/questions/200125/how-to-create-an-osx-application-to-wrap-a-call-to-a-shell-script">macos - How to create an <span class="caps">OSX</span> Application to wrap a call to a shell script? - Ask Different</a><ul>
-<li><a href="https://apple.stackexchange.com/questions/103621/run-applescript-from-bash-script">macos - Run AppleScript from bash script - Ask&nbsp;Different</a></li>
-<li><a href="https://stackoverflow.com/questions/30792569/converting-a-shell-script-into-a-app-file">macos - Converting a Shell Script Into a *.app File - Stack&nbsp;Overflow</a></li>
-<li><a href="https://christopher.su/2012/creating-mac-applications-shell-scripts/">Creating Mac Applications from Shell Scripts - Christopher&nbsp;Su</a></li>
-<li><a href="https://sveinbjorn.org/platypus">Platypus - Create Mac apps from command line scripts&nbsp;|</a></li>
+<li><a href="https://apple.stackexchange.com/questions/103621/run-applescript-from-bash-script">macos - Run AppleScript from bash script - Ask Different</a></li>
+<li><a href="https://stackoverflow.com/questions/30792569/converting-a-shell-script-into-a-app-file">macos - Converting a Shell Script Into a *.app File - Stack Overflow</a></li>
+<li><a href="https://christopher.su/2012/creating-mac-applications-shell-scripts/">Creating Mac Applications from Shell Scripts - Christopher Su</a></li>
+<li><a href="https://sveinbjorn.org/platypus">Platypus - Create Mac apps from command line scripts |</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="sayeahooo">Sayeahooo<a class="headerlink" href="#sayeahooo" title="Permanent link">&para;</a></h2>
+<h2 id="sayeahooo">Sayeahooo<a class="headerlink" href="#sayeahooo" title="Permanent link">¶</a></h2>
 <ul>
-<li>1.5h&nbsp;资料搜索理解</li>
-<li>2h&nbsp;嗯哼</li>
-<li>.5h&nbsp;截屏,文档嗯哼&#8230;</li>
+<li>1.5h 资料搜索理解</li>
+<li>2h 嗯哼</li>
+<li>.5h 截屏,文档嗯哼…</li>
 </ul>
 
             </div>

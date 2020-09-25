@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="fix-subl-package-installation"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/fix-subl-package-installation.html"/>
-            <meta property="og:description" content="BG goal logging Sayeahooo BG¶ 突然: cmd+shift+P 选择 Package Control: install package 时,一直: There are no packages available for installation goal¶ 当然就是解决呗: 各种官方都有吼 Troubleshooting - Package Control There are no packages available for installation - Package Control of Sublime Text 3 · Issue #959 · wbond/package_control … logging¶ 打开 debug 观察 …"/>
+            <meta property="og:description" content="BG¶ 突然: cmd+shift+P 选择 Package Control: install package 时,一直: There are no packages available for installation goal¶ 当然就是解决呗: 各种官方都有吼 Troubleshooting - Package Control There are no packages available for installation - Package Control of Sublime Text 3 · Issue #959 · wbond/package_control … logging¶ 打开 debug 观察: Package Control: Skipping automatic …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
@@ -130,8 +130,8 @@
 		<a href="https://blog.zoomquiet.io/tag/subl.html">subl</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-
-                <div class="toc">
+    <nav class="toc">
+    <div class="toc">
 <ul>
 <li><a href="#bg"><span class="caps">BG</span></a></li>
 <li><a href="#goal">goal</a></li>
@@ -139,25 +139,28 @@
 <li><a href="#sayeahooo">Sayeahooo</a></li>
 </ul>
 </div>
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
+    </nav>
+
+                
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
 <p>突然: <code>cmd+shift+P</code> 选择 <code>Package Control: install package</code> 时,一直:</p>
 <blockquote>
 <blockquote>
 <blockquote>
-<p>There are no packages available for&nbsp;installation</p>
+<p>There are no packages available for installation</p>
 </blockquote>
 </blockquote>
 </blockquote>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
 <p>当然就是解决呗:</p>
 <ul>
 <li>各种官方都有吼</li>
-<li><a href="https://packagecontrol.io/docs/troubleshooting">Troubleshooting - Package&nbsp;Control</a></li>
-<li><a href="https://github.com/wbond/package_control/issues/959#issuecomment-168447848">There are no packages available for installation - Package Control of Sublime Text 3 · Issue #959 ·&nbsp;wbond/package_control</a></li>
-<li>&#8230;</li>
+<li><a href="https://packagecontrol.io/docs/troubleshooting">Troubleshooting - Package Control</a></li>
+<li><a href="https://github.com/wbond/package_control/issues/959#issuecomment-168447848">There are no packages available for installation - Package Control of Sublime Text 3 · Issue #959 · wbond/package_control</a></li>
+<li>…</li>
 </ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
-<p>打开 debug&nbsp;观察:</p>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<p>打开 debug 观察:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Package</span> <span class="n">Control</span><span class="p">:</span> <span class="n">Skipping</span> <span class="n">automatic</span> <span class="n">upgrade</span><span class="p">,</span> <span class="n">last</span> <span class="n">run</span> <span class="n">at</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">03</span> <span class="mi">11</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">00</span><span class="p">,</span> <span class="n">next</span> <span class="n">run</span> <span class="n">at</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">03</span> <span class="mi">12</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">00</span> <span class="ow">or</span> <span class="n">after</span>
 <span class="n">Detected</span> <span class="n">ASCII</span> <span class="n">vs</span> <span class="n">Undefined</span> <span class="n">with</span> <span class="mi">100</span><span class="o">%</span> <span class="n">confidence</span>
 <span class="n">Package</span> <span class="n">Control</span><span class="p">:</span> <span class="n">Fetching</span> <span class="n">list</span> <span class="n">of</span> <span class="n">available</span> <span class="n">packages</span> <span class="ow">and</span> <span class="n">dependencies</span>
@@ -179,27 +182,23 @@
   <span class="n">Connecting</span> <span class="n">to</span> <span class="n">packagecontrol</span><span class="o">.</span><span class="n">io</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">443</span>
 <span class="n">Package</span> <span class="n">Control</span><span class="p">:</span> <span class="n">Error</span> <span class="n">downloading</span> <span class="n">channel</span><span class="o">.</span> <span class="n">URL</span> <span class="n">error</span> <span class="p">[</span><span class="n">Errno</span> <span class="mi">65</span><span class="p">]</span> <span class="n">No</span> <span class="n">route</span> <span class="n">to</span> <span class="n">host</span> <span class="n">downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">packagecontrol</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">channel_v3</span><span class="o">.</span><span class="n">json</span><span class="o">.</span>
 </code></pre></div>
-
-
 <p>果断就是 <code>https://packagecontrol.io/channel_v3.json</code> 资源无法访问;</p>
 <p>尝试配置 host 无果;
 也升级 <code>Package Control</code> 本身;</p>
-<p>看来是和谐了?&nbsp;那么:</p>
+<p>看来是和谐了? 那么:</p>
 <ul>
-<li>翻越,&nbsp;下载</li>
-<li>发布为&nbsp;http://101.zoomquiet.top/res/subl/channel_v3.json</li>
+<li>翻越, 下载</li>
+<li>发布为 http://101.zoomquiet.top/res/subl/channel_v3.json</li>
 <li>配置到 <code>Package Control.sublime-settings</code><ul>
-<li>Preferences &gt; Package Settings &gt; Package Control &gt; Settings -&nbsp;User</li>
+<li>Preferences &gt; Package Settings &gt; Package Control &gt; Settings - User</li>
 </ul>
 </li>
 </ul>
 <p>追加为:</p>
-<div class="highlight"><pre><span></span><code><span class="err">&quot;channels&quot;: [</span>
-<span class="err">    &quot;http://101.zoomquiet.top/res/subl/channel_v3.json&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="err">"channels": [</span>
+<span class="err">    "http://101.zoomquiet.top/res/subl/channel_v3.json"</span>
 <span class="err">],</span>
 </code></pre></div>
-
-
 <p>再来就好了:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Package</span> <span class="n">Control</span><span class="p">:</span> <span class="n">Fetching</span> <span class="n">list</span> <span class="n">of</span> <span class="n">available</span> <span class="n">packages</span> <span class="ow">and</span> <span class="n">dependencies</span>
   <span class="n">Platform</span><span class="p">:</span> <span class="n">osx</span><span class="o">-</span><span class="n">x64</span>
@@ -231,10 +230,10 @@
   <span class="n">Connection</span><span class="p">:</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
   <span class="n">Vary</span><span class="p">:</span> <span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span>
   <span class="n">X</span><span class="o">-</span><span class="n">Source</span><span class="p">:</span> <span class="n">C</span><span class="o">/</span><span class="mi">200</span>
-  <span class="n">Content</span><span class="o">-</span><span class="n">Disposition</span><span class="p">:</span> <span class="n">inline</span><span class="p">;</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;channel_v3.json&quot;</span><span class="p">;</span> <span class="n">filename</span><span class="o">*=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="s1">&#39; &#39;</span><span class="n">channel_v3</span><span class="o">.</span><span class="n">json</span>
+  <span class="n">Content</span><span class="o">-</span><span class="n">Disposition</span><span class="p">:</span> <span class="n">inline</span><span class="p">;</span> <span class="n">filename</span><span class="o">=</span><span class="s2">"channel_v3.json"</span><span class="p">;</span> <span class="n">filename</span><span class="o">*=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="s1">' '</span><span class="n">channel_v3</span><span class="o">.</span><span class="n">json</span>
   <span class="n">X</span><span class="o">-</span><span class="n">Reqid</span><span class="p">:</span> <span class="n">JCYAAB2A</span><span class="o">-</span><span class="n">KCu3JEV</span>
   <span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span> <span class="nb">max</span><span class="o">-</span><span class="n">age</span><span class="o">=</span><span class="mi">2592000</span>
-  <span class="n">ETag</span><span class="p">:</span> <span class="n">W</span><span class="o">/</span><span class="s2">&quot;FupX-eSMnVrkAsAr7E6aNcS8eye6&quot;</span>
+  <span class="n">ETag</span><span class="p">:</span> <span class="n">W</span><span class="o">/</span><span class="s2">"FupX-eSMnVrkAsAr7E6aNcS8eye6"</span>
   <span class="n">X</span><span class="o">-</span><span class="n">Log</span><span class="p">:</span> <span class="n">redis</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="mi">404</span><span class="p">;</span><span class="n">rdb</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">no</span> <span class="n">such</span> <span class="n">key</span><span class="p">;</span><span class="n">DBD</span><span class="o">/</span><span class="mi">404</span><span class="p">;</span><span class="n">v4</span><span class="o">.</span><span class="n">get</span><span class="o">/</span><span class="n">Document</span> <span class="ow">not</span> <span class="n">found</span><span class="p">;</span><span class="n">rs5_shard</span><span class="o">.</span><span class="n">sel</span><span class="p">:</span><span class="mi">2</span><span class="p">;</span><span class="n">rwro</span><span class="o">.</span><span class="n">get</span><span class="p">:</span><span class="mi">3</span><span class="p">;</span><span class="n">RS</span><span class="o">.</span><span class="n">dbs</span><span class="p">:</span><span class="mi">3</span><span class="p">;</span><span class="n">RS</span><span class="p">:</span><span class="mi">3</span><span class="p">;</span><span class="n">redis</span><span class="o">.</span><span class="n">s</span><span class="p">;</span><span class="mi">2</span><span class="n">s</span><span class="o">.</span><span class="n">gh</span><span class="p">;</span><span class="n">PFDS</span><span class="p">;</span><span class="n">IO</span><span class="p">:</span><span class="mi">5</span>
   <span class="n">X</span><span class="o">-</span><span class="n">Slice</span><span class="o">-</span><span class="n">ETag</span><span class="p">:</span> <span class="n">FupX</span><span class="o">-</span><span class="n">eSMnVrkAsAr7E6aNcS8eye6</span>
   <span class="n">X</span><span class="o">-</span><span class="n">Slice</span><span class="o">-</span><span class="n">Complete</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span> <span class="mi">3461591</span>
@@ -258,17 +257,15 @@
 <span class="n">Package</span> <span class="n">Control</span><span class="p">:</span> <span class="n">Urllib</span> <span class="n">HTTP</span> <span class="n">Debug</span> <span class="n">General</span>
   <span class="n">Closing</span> <span class="n">connection</span> <span class="n">to</span> <span class="mf">101.</span><span class="n">zoomquiet</span><span class="o">.</span><span class="n">top</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">80</span> <span class="n">after</span> <span class="mi">1</span> <span class="n">request</span>
 </code></pre></div>
-
-
-<h2 id="sayeahooo">Sayeahooo<a class="headerlink" href="#sayeahooo" title="Permanent link">&para;</a></h2>
+<h2 id="sayeahooo">Sayeahooo<a class="headerlink" href="#sayeahooo" title="Permanent link">¶</a></h2>
 <blockquote>
-<p>所以,&nbsp;有一个可以随时发布自己资源的外网空间是好的&#8230;</p>
+<p>所以, 有一个可以随时发布自己资源的外网空间是好的…</p>
 </blockquote>
 <ul>
-<li>1.5h&nbsp;资料搜索理解</li>
-<li>2d&nbsp;冷静</li>
-<li>.5h&nbsp;实施</li>
-<li>.5h&nbsp;文档嗯哼&#8230;</li>
+<li>1.5h 资料搜索理解</li>
+<li>2d 冷静</li>
+<li>.5h 实施</li>
+<li>.5h 文档嗯哼…</li>
 </ul>
 
             </div>

@@ -89,31 +89,24 @@
         <div class="col-lg-9">
             <article>
                 <h2><a href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">Mavericks 中用&nbsp;sshfs</a></h2>
-                <div class="summary"><div class="toc">
+                <div class="summary">
+<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>自从 2011-12-16 入手 <span class="caps">MBP</span> 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便</p>
 <ul>
-<li><a href="#_1">背景</a></li>
-<li><a href="#_2">问题</a></li>
-<li><a href="#_3">分析</a></li>
-<li><a href="#_4">解决</a></li>
+<li>依赖少, 双方有 ssh 就好</li>
+<li>配置少, ssh 服务的启动没有 smb 服务那么多的配置</li>
+<li>自动断, 不会象 smb 死占一个虚假的挂接点</li>
 </ul>
-</div>
-<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>自从 2011-12-16 入手 <span class="caps">MBP</span> 以来,就发现只有 sshfs&nbsp;来连接各种系统的硬盘最方便</p>
-<ul>
-<li>依赖少, 双方有 ssh&nbsp;就好</li>
-<li>配置少, ssh 服务的启动没有 smb&nbsp;服务那么多的配置</li>
-<li>自动断, 不会象 smb&nbsp;死占一个虚假的挂接点</li>
-</ul>
-<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
-<p>每次 brew 出点小问题,就导致 sshfs&nbsp;或是不痛快;</p>
+<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<p>每次 brew 出点小问题,就导致 sshfs 或是不痛快;</p>
 <p>目测已经折腾过至少4次了</p>
 <ul>
 <li>送修理两次</li>
-<li>从 10.6 升级 到 10.9&nbsp;一次</li>
-<li>brew 在硬盘权限修订后,完全崩溃,重新安装&nbsp;又一次</li>
+<li>从 10.6 升级 到 10.9 一次</li>
+<li>brew 在硬盘权限修订后,完全崩溃,重新安装 又一次</li>
 </ul>
-<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
-<p>毕竟 …</p>
+<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
+<p>毕竟 sshfs 依赖 <span class="caps">FUSE</span> 这种 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">more ...</a>
                 </div>
             </article>

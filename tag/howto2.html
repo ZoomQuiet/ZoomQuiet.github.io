@@ -89,46 +89,11 @@
         <div class="col-lg-9">
             <article>
                 <h2><a href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">如何基于CB3构建家庭服务器</a></h2>
-                <div class="summary"><div class="toc">
-<ul>
-<li><a href="#issue">Issue</a></li>
-<li><a href="#todo"><span class="caps">TODO</span></a><ul>
-<li><a href="#_1">分析</a></li>
-</ul>
-</li>
-<li><a href="#_2">过程</a><ul>
-<li><a href="#cb"><span class="caps">CB</span>&nbsp;初始化</a></li>
-<li><a href="#_3">系统整顿</a><ul>
-<li><a href="#utf8"><span class="caps">UTF8</span></a></li>
-</ul>
-</li>
-<li><a href="#_4">数据迁移</a><ul>
-<li><a href="#_5">相关片段</a></li>
-<li><a href="#_6">外置硬盘盒</a></li>
-<li><a href="#sshfs">伟光大的&nbsp;sshfs</a></li>
-<li><a href="#exfat">exFAT</a></li>
-<li><a href="#_7">系统硬盘</a><ul>
-<li><a href="#fatab">fatab</a></li>
-<li><a href="#_8">你不能在当前挂载着的分区上扩容的</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_9">家庭影院</a><ul>
-<li><a href="#mldonkey">MLDonkey</a></li>
-<li><a href="#samba">samba</a></li>
-<li><a href="#minidlna">MiniDLNA</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#changelog">Changelog</a></li>
-</ul>
-</div>
+                <div class="summary">
 <p><a href="http://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest 的体验</a>
-之后,总是要一步步完成心目中的&nbsp;家服务器</p>
-<h1 id="issue">Issue<a class="headerlink" href="#issue" title="Permanent link">&para;</a></h1>
-<p>基于CB3使用 lununtu-server-<span class="caps">VGA</span>&nbsp;操作系统</p>
+之后,总是要一步步完成心目中的 家服务器</p>
+<h1 id="issue">Issue<a class="headerlink" href="#issue" title="Permanent link">¶</a></h1>
+<p>基于CB3使用 lununtu-server-<span class="caps">VGA</span> 操作系统</p>
 <ul>
 <li>环境:</li>
 <li>.bashrc</li>
@@ -140,13 +105,13 @@
 </li>
 <li>sshd</li>
 <li>apt-fast<ul>
-<li><a href="http://www.mattparnell.com/linux/apt-fast/">Index of&nbsp;/linux/apt-fast</a></li>
+<li><a href="http://www.mattparnell.com/linux/apt-fast/">Index of /linux/apt-fast</a></li>
 </ul>
 </li>
 <li>vim</li>
 <li>mc</li>
 <li>
-<p>&#8230;</p>
+<p>…</p>
 </li>
 <li>
 <p>不要: </p>
@@ -155,110 +120,55 @@
 <li>mysql</li>
 <li>apache</li>
 </ul>
-<h1 id="todo"><span class="caps">TODO</span><a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
-<p>为了完全替代俺家原先的家庭服务器 …</p>
+<h1 id="todo"><span class="caps">TODO</span><a class="headerlink" href="#todo" title="Permanent link">¶</a></h1>
+<p>为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有:</p>
+<ol>
+<li>通过 <span class="caps">USB</span> 挂接 FreeBSD 格式化的 <span class="caps">UFS</span> 分区</li>
+<li>通过板载 <span class="caps">SATA</span> 接口,加装 2.5吋 1T 新硬盘</li>
+<li>安装 Samba 系统,提供空间给其它 M …</li></ol>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/init-my-qpy-env.html">如何自在的折腾QPy</a></h2>
-                <div class="summary"><div class="toc">
-<ul>
-<li><a href="#_1">背景</a></li>
-<li><a href="#_2">目标</a></li>
-<li><a href="#_3">环境准入</a><ul>
-<li><a href="#_4">硬件</a></li>
-</ul>
-</li>
-<li><a href="#_5">探索</a><ul>
-<li><a href="#_6">上传</a><ul>
-<li><a href="#ssh"><span class="caps">SSH</span></a></li>
-<li><a href="#busybox">BusyBox</a></li>
-</ul>
-</li>
-<li><a href="#_7">运行</a><ul>
-<li><a href="#beta">BETA乱入</a></li>
-<li><a href="#qpython">QPython头声明</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#qpywebapp">qpy:webapp:</a></li>
-<li><a href="#qpyfullscreen">qpy:fullscreen</a></li>
-<li><a href="#qpylocalhost8080">qpy://localhost:8080</a><ul>
-<li><a href="#_8">自动</a><ul>
-<li><a href="#fabric">Fabric</a></li>
-<li><a href="#_9">日志</a></li>
-</ul>
-</li>
-<li><a href="#_10">结论</a><ul>
-<li><a href="#todo"><span class="caps">TODO</span></a></li>
-<li><a href="#pip">pip</a></li>
-<li><a href="#restful-onering">RESTful&nbsp;&#8220;OneRing&#8221;</a></li>
-</ul>
-</li>
-<li><a href="#_11">专题体例:</a></li>
-<li><a href="#_12">时间帐单:</a></li>
-<li><a href="#changelog">Changelog</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+                <div class="summary">
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>QPython 知道有两年了,是看 <a href="http://book.douban.com/subject/10561367/">Head First Python(中文版) (豆瓣)</a> 时,发现竟然有 
 <a href="http://code.google.com/p/android-scripting/"><span class="caps">SL4A</span></a></p>
 <p>这种神器! Google 果断是业界良心哪,
 可惜: 从<a href="http://code.google.com/p/android-scripting/downloads/list">Downloads</a>
-可以看出 ,已经停止有一年多了,目测是 …</p>
+可以看出 ,已经停止有一年多了,目测是 Guido 叔离开后, Python 的地位在 Google 一落千丈就没有人折腾了.</p>
+<p>好在旧浪两位同事, River和CF 掿起了 <span class="caps">SL4A</span> 的旗帜, 变成了一系列准衶器:</p>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=com.hipipal.qpyplus">QPython - Python for Android - Google Play 上的 Andr​​oid 应用</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.hipipal.qpy3">QPython 3 - Python3 on Android - Google Play …</a></li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/init-my-qpy-env.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/jekyll-to-pelican.html">How to from Jekyll jump into&nbsp;Pelican</a></h2>
-                <div class="summary"><div class="toc">
-<ul>
-<li><a href="#jekyll-pelican">如何从 Jekyll 转进入 Pelican</a><ul>
-<li><a href="#_1">为毛</a></li>
-</ul>
-</li>
-<li><a href="#_2">整体</a><ul>
-<li><a href="#_3">已知条件</a></li>
-<li><a href="#pelican">Pelican行为</a></li>
-<li><a href="#_4">所以?方案!</a></li>
-<li><a href="#_5">宏观流程</a></li>
-</ul>
-</li>
-<li><a href="#_6">细节</a><ul>
-<li><a href="#_7">过程</a><ul>
-<li><a href="#theme">theme</a></li>
-<li><a href="#meta">meta</a></li>
-<li><a href="#fab">fab</a></li>
-</ul>
-</li>
-<li><a href="#_8">坑</a><ul>
-<li><a href="#disqus"><span class="caps">DISQUS</span></a></li>
-<li><a href="#pages">pages</a></li>
-<li><a href="#category_feed_atom">CATEGORY_FEED_ATOM</a></li>
-<li><a href="#author">author</a></li>
-<li><a href="#toc"><span class="caps">TOC</span></a></li>
-</ul>
-</li>
-<li><a href="#_9">参考:</a></li>
-<li><a href="#changelog">Changelog</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h1 id="jekyll-pelican">如何从 Jekyll 转进入 Pelican<a class="headerlink" href="#jekyll-pelican" title="Permanent link">&para;</a></h1>
+                <div class="summary">
+<h1 id="jekyll-pelican">如何从 Jekyll 转进入 Pelican<a class="headerlink" href="#jekyll-pelican" title="Permanent link">¶</a></h1>
 <p>简述静态网站从 Jekyll 环境中迁移为 纯 Python 
-<a href="http://getpelican.com/">Pelican</a>&#8230;</p>
-<p><img alt=";" src="https://0.gravatar.com/avatar/0cb9d9d7e6b152d24d2b78c6464502a6?d=https%3A%2F%2Fidenticons.github.com%2Fc0b8694f59232c6681a92c4c9fec3e18.png&amp;r=x&amp;s=440"></p>
-<h2 id="_1">为毛<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<a href="http://getpelican.com/">Pelican</a>…</p>
+<p><img alt=";" src="https://0.gravatar.com/avatar/0cb9d9d7e6b152d24d2b78c6464502a6?d=https%3A%2F%2Fidenticons.github.com%2Fc0b8694f59232c6681a92c4c9fec3e18.png&amp;r=x&amp;s=440"/></p>
+<h2 id="_1">为毛<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>社区在发展, 原先的 蠎周刊,为方便,使用了 gitcafe 内置的 Jekyll 服务,
-所以,其实在使用 Ruby&nbsp;自动编译和发布.</p>
-<p>总是感觉不够纯粹 Pythonic …</p>
+所以,其实在使用 Ruby 自动编译和发布.</p>
+<p>总是感觉不够纯粹 Pythonic …</p>
+<p>故而, 下决心完成迁移</p>
+<h1 id="_2">整体<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<p>忽然发现,俺感觉很直觉的事儿,也写了文档, 但是,其它人真正首次上手全然一头雾水…</p>
+<p>所以
+<a href="http://xiaolai.github.io/alpha/on-learning/">学习学习再学习 - xiaolai</a> 提出的,俺实在无法同意更多..</p>
+<p><img alt="Impossible_staircase" src="http://upload.wikimedia.org/wikipedia/commons/3/34/Impossible_staircase.svg"/></p>
+<p>这是最难的知识结构——它往往看起来跟线性结构没什么区别，但，最终令人迷惑，甚至懊恼。 用最直白的话来描述，就是：</p>
+<div class="highlight"><pre><span></span><code><span class="err">初级的知识需要对高级知识深入了解才能真正深入了解</span>
+</code></pre></div>
+<p>——你看看这句话多拗口就多少有点概念了。</p>
+<p>所以,还是按照 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jekyll-to-pelican.html">more ...</a>
                 </div>
             </article>

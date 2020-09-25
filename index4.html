@@ -88,72 +88,55 @@
         <div class="col-lg-9">
             <article>
                 <h2><a href="https://blog.zoomquiet.io/200108-ex-map-enum.html">Elixir 中列出 Map&nbsp;中值键对的折腾&#8230;</a></h2>
-                <div class="summary"><div class="toc">
-<ul>
-<li><a href="#env">env.</a></li>
-<li><a href="#problem">problem</a></li>
-<li><a href="#try">try</a></li>
-<li><a href="#hummm">Hummm?!</a></li>
-<li><a href="#refer">refer.</a></li>
-<li><a href="#changelog">Changelog</a></li>
-</ul>
-</div>
-<p>因为各种原因吧&#8230;</p>
+                <div class="summary">
+<p>因为各种原因吧…</p>
 <ul>
 <li>很早在 <span class="caps">ECUG</span> 就接触了 Erlang<ul>
-<li>但是,&nbsp;怪异的语法,以及狭小的应用领域,一直没真正使用起来</li>
-<li>现在, 发现 Elixir 很好的解决了 <span class="caps">OTP</span>&nbsp;生态的通用应用问题</li>
+<li>但是, 怪异的语法,以及狭小的应用领域,一直没真正使用起来</li>
+<li>现在, 发现 Elixir 很好的解决了 <span class="caps">OTP</span> 生态的通用应用问题</li>
 </ul>
 </li>
-<li>所以,&nbsp;开始折腾&#8230;</li>
-<li>结果,&nbsp;撞见各种值得嗯哼的事儿&#8230;</li>
+<li>所以, 开始折腾…</li>
+<li>结果, 撞见各种值得嗯哼的事儿…</li>
 </ul>
-<h2 id="env">env.<a class="headerlink" href="#env" title="Permanent link">&para;</a></h2>
-<p>༄&nbsp;screenfetch</p>
+<h2 id="env">env.<a class="headerlink" href="#env" title="Permanent link">¶</a></h2>
+<p>༄ screenfetch</p>
 <div class="highlight"><pre><span></span><code>                 <span class="s s-Atom">-/+:.</span>          <span class="s s-Atom">zoomq@</span><span class="nv">ZQ160626rMBP</span>
                 <span class="s s-Atom">:++++.</span>          <span class="nv">OS</span><span class="s s-Atom">:</span> <span class="mi">64</span><span class="s s-Atom">bit</span> <span class="nv">Mac</span> <span class="nv">OS</span> <span class="nv">X</span> <span class="mf">10.12.6</span> <span class="mi">16</span><span class="nv">G2136</span>
                <span class="s s-Atom">/+++/.</span>           <span class="nv">Kernel</span><span class="s s-Atom">:</span> <span class="s s-Atom">x86_64</span> <span class="nv">Darwin</span> <span class="mf">16.7.0</span>
-       <span class="p">.:-</span><span class="s s-Atom">::-</span> <span class="p">.</span><span class="s s-Atom">+/:-</span><span class="err">``</span><span class="p">.</span><span class="s s-Atom">::-</span>       <span class="nv">Uptime</span><span class="s s-Atom">:</span> <span class="mi">30</span><span class="s s-Atom">d</span> <span class="mi">12 …</span></code></pre></div>
+       <span class="p">.:-</span><span class="s s-Atom">::-</span> <span class="p">.</span><span class="s s-Atom">+/:-</span><span class="err">``</span><span class="p">.</span><span class="s s-Atom">::-</span>       <span class="nv">Uptime</span><span class="s s-Atom">:</span> <span class="mi">30</span><span class="s s-Atom">d</span> <span class="mi">12</span><span class="s s-Atom">h</span> <span class="mi">38</span><span class="s s-Atom">m</span>
+    <span class="p">.</span><span class="s s-Atom">:/++++++/::::/++++++/:</span><span class="err">`</span>    <span class="nv">Packages</span><span class="s s-Atom">:</span> <span class="mi">241</span>
+  <span class="p">.</span><span class="s s-Atom">:///////////////////////:</span><span class="err">`</span>   <span class="nv">Shell …</span></code></pre></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/200108-ex-map-enum.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/leo-101-againnn.html">Leo&nbsp;第N次科普</a></h2>
-                <div class="summary"><div class="toc">
-<ul>
-<li><a href="#_1">背景</a></li>
-<li><a href="#_2">引子:</a></li>
-<li><a href="#_3">断言:</a><ul>
-<li><a href="#_4">文学化:</a></li>
-</ul>
-</li>
-<li><a href="#_5">分析</a></li>
-<li><a href="#_6">回顾</a></li>
-<li><a href="#refer">refer.</a></li>
-</ul>
-</div>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+                <div class="summary">
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://wewe.t9t.io/chat/%E3%80%90%E9%9B%86%E6%99%BA%E3%80%91%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8E%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E7%BE%A4">[集智]注意力与知识管理群</a></p>
-<p>中大家经常就一些工具产生各种讨论,&nbsp;俺一向的标签是:</p>
+<p>中大家经常就一些工具产生各种讨论, 俺一向的标签是:</p>
 <ul>
 <li>Python</li>
 <li>Pythonic</li>
 <li><a href="http://www.leoeditor.com/">Leo</a></li>
 </ul>
-<p>其它还好, 有广泛群众基础, 这个 Leo&nbsp;就经常引发嗯哼</p>
-<h2 id="_2">引子:<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>其它还好, 有广泛群众基础, 这个 Leo 就经常引发嗯哼</p>
+<h2 id="_2">引子:<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <blockquote>
-<p>pimgeek-知识管理工具研究者:&nbsp;插一个技术提问&#8230;  </p>
+<p>pimgeek-知识管理工具研究者: 插一个技术提问…  </p>
 </blockquote>
 <ul>
 <li>@大妈🙊Zoom.Quiet LeoEditor 的节点支持类似 {{ var }} 这样的模板语法吗?<ul>
-<li>我知道 &lt;&lt; section &gt;&gt; 这样的用法,还有 valuespace + jinja 的方式, 不知还有没有其它实现方式?[疑问]&nbsp;&#8216;</li>
-<li>&lt;&lt; section &gt;&gt; 这种用法是 LeoEditor&nbsp;内置的实现方式</li>
-<li>{{ var }} 这种用法是 LeoEditor&nbsp;插件的实现方式</li>
+<li>我知道 &lt;&lt; section &gt;&gt; 这样的用法,还有 valuespace + jinja 的方式, 不知还有没有其它实现方式?[疑问] ‘</li>
+<li>&lt;&lt; section &gt;&gt; 这种用法是 LeoEditor 内置的实现方式</li>
+<li>{{ var }} 这种用法是 LeoEditor 插件的实现方式</li>
 </ul>
 </li>
-<li>我就是希望定义一些可填充的内容,把这些内容从代码主体中抽取出来,这样我编辑起来方便 …</li></ul>
+<li>我就是希望定义一些可填充的内容,把这些内容从代码主体中抽取出来,这样我编辑起来方便.  ‘<ul>
+<li>有些内容,比如网页里的作者信息等,一次编辑后反复引用. 修改时也方便. </li>
+<li>专业的 Web 开发者应该是把这些代码拆成多个文件来管理 …</li></ul></li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/leo-101-againnn.html">more ...</a>
                 </div>
             </article>
@@ -192,60 +175,48 @@
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/fix-subl-package-installation.html">修复 subl3&nbsp;包安装</a></h2>
-                <div class="summary"><div class="toc">
-<ul>
-<li><a href="#bg"><span class="caps">BG</span></a></li>
-<li><a href="#goal">goal</a></li>
-<li><a href="#logging">logging</a></li>
-<li><a href="#sayeahooo">Sayeahooo</a></li>
-</ul>
-</div>
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
+                <div class="summary">
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
 <p>突然: <code>cmd+shift+P</code> 选择 <code>Package Control: install package</code> 时,一直:</p>
 <blockquote>
 <blockquote>
 <blockquote>
-<p>There are no packages available for&nbsp;installation</p>
+<p>There are no packages available for installation</p>
 </blockquote>
 </blockquote>
 </blockquote>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
 <p>当然就是解决呗:</p>
 <ul>
 <li>各种官方都有吼</li>
-<li><a href="https://packagecontrol.io/docs/troubleshooting">Troubleshooting - Package&nbsp;Control</a></li>
-<li><a href="https://github.com/wbond/package_control/issues/959#issuecomment-168447848">There are no packages available for installation - Package Control of Sublime Text 3 · Issue #959 ·&nbsp;wbond/package_control</a></li>
-<li>&#8230;</li>
+<li><a href="https://packagecontrol.io/docs/troubleshooting">Troubleshooting - Package Control</a></li>
+<li><a href="https://github.com/wbond/package_control/issues/959#issuecomment-168447848">There are no packages available for installation - Package Control of Sublime Text 3 · Issue #959 · wbond/package_control</a></li>
+<li>…</li>
 </ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
-<p>打开 debug&nbsp;观察 …</p>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<p>打开 debug 观察:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Package</span> <span class="n">Control</span><span class="p">:</span> <span class="n">Skipping</span> <span class="n">automatic …</span></code></pre></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/fix-subl-package-installation.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/131023-why0base-indexing-python.html">Python&nbsp;列表为毛从0开始索引?</a></h2>
-                <div class="summary"><div class="toc">
-<ul>
-<li><a href="#_1">背景</a></li>
-<li><a href="#_2">发现</a></li>
-<li><a href="#_3">是也乎</a></li>
-</ul>
-</div>
-<p><a href="https://plus.google.com/115212051037621986145/posts/YTUxbXYZyfi">I was asked on Twitter why Python uses 0-based&nbsp;indexing,&#8230;</a></p>
+                <div class="summary">
+<p><a href="https://plus.google.com/115212051037621986145/posts/YTUxbXYZyfi">I was asked on Twitter why Python uses 0-based indexing,…</a></p>
 <p>老爹当年也很是积累使用 G+ 的,
-公开回答了很多价值问题&#8230;&nbsp;能看一眼少一眼了&#8230;</p>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+公开回答了很多价值问题… 能看一眼少一眼了…</p>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <blockquote>
 <blockquote>
 <blockquote>
-<p>Google+ 帐号将于 2019 年 4 月 2 日关停. 下载 Google+ 内容可能需要一些时间,因此请在 2019 年 3 月 31&nbsp;日之前开始下载. </p>
+<p>Google+ 帐号将于 2019 年 4 月 2 日关停. 下载 Google+ 内容可能需要一些时间,因此请在 2019 年 3 月 31 日之前开始下载. </p>
 </blockquote>
 </blockquote>
 </blockquote>
-<h2 id="_2">发现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">发现<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <blockquote>
-<p>Guido van&nbsp;Rossum</p>
+<p>Guido van Rossum</p>
 <blockquote>
 <p>公开</p>
 <blockquote>
@@ -253,7 +224,7 @@
 </blockquote>
 </blockquote>
 </blockquote>
-<p>I was asked on Twitter why Python …</p>
+<p>I was asked on Twitter why Python uses 0-based indexing …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/131023-why0base-indexing-python.html">more ...</a>
                 </div>
             </article>

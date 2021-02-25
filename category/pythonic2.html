@@ -19,12 +19,15 @@
             <meta property="og:url" content="https://blog.zoomquiet.io"/>
             <meta property="og:description" content=""/>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap 
+
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
     <link href="https://blog.zoomquiet.io/theme/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://blog.zoomquiet.io/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="https://blog.zoomquiet.io/theme/css/pygments/github.css" rel="stylesheet">
     <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/style.css" type="text/css"/>
+
+    -->
 
     <!-- add emojify into Pelican 
     <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/emojify.min.css" type="text/css" />
@@ -33,8 +36,9 @@
 -->
 
 
-    <!-- JavaScript plugins (requires jQuery) -->
+    <!-- JavaScript plugins (requires jQuery) 
     <script src="//code.jquery.com/jquery.min.js"></script>
+    -->
 
         <link href="https://blog.zoomquiet.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title=" ATOM Feed"/>
@@ -47,90 +51,64 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
+            <!--
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!--
+
 <a href="https://blog.zoomquiet.io" class="navbar-brand"></a>
             -->
-<a href="https://blog.zoomquiet.io" class="navbar-brand">
+<table border="0" width="98%">
+    <tr>
+<td>
+    <a href="https://blog.zoomquiet.io" class="navbar-brand">
     <img src="https://blog.zoomquiet.io/theme/logo.png"/>
     
     <span class="violet-site">.io </span>
+
+</td>
+        
+<td>
+            <ul style="list-style: none;" class="nav navbar-nav">
+                    <li style="display: inline;"><a href="http://zoomquiet.io">大妈</a></li>
+                    <li style="display: inline;"><a href="https://py.101.camp/">课程</a></li>
+                    <li style="display: inline;"><a href="https://t.zsxq.com/iaIEQ3N">星球</a></li>
+                    <li style="display: inline;"><a href="/pages/friendly-links.html">友链</a></li>
+                    <li style="display: inline;"><a href="/pages/affiliate.html">好物</a></li>
+                    <li style="display: inline;"><a href="/pages/zoomquiet.html">关于</a></li>
+              
+
+              
+            </ul>
+    
+</td>
+<td align="right" width="10%">
+                <ul style="list-style: none;">
+                <li style="display: inline;"><a href="https://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
+
+                <li style="display: inline;"><a href="https://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+
+</td>
+    </tr>
+</table>
 </a>            
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                    <li><a href="http://zoomquiet.io">大妈</a></li>
-                    <li><a href="https://py.101.camp/">课程</a></li>
-                    <li><a href="https://t.zsxq.com/iaIEQ3N">星球</a></li>
-                    <li><a href="/pages/friendly-links.html">友链</a></li>
-                    <li><a href="/pages/affiliate.html">好物</a></li>
-                    <li><a href="/pages/zoomquiet.html">关于</a></li>
-              
-
-              
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="https://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
-
-                <li><a href="https://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
-            </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
 </nav>
+
+<hr/>
+
 <!-- /.navbar -->
 <div class="container">
     <div class="row">
         <div class="col-lg-9">
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/dsl-atop-openresty.html">用 <span class="caps">DSL</span>&nbsp;们构筑商用系统</a></h2>
-                <div class="summary">
-<h1 id="building-business-systems-with-dsls-for-nginx-openresty">Building Business Systems with DSLs for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty<a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link">¶</a></h1>
-<p>~ 来自春哥的分享</p>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<ul>
-<li>5年前也听录了一次 春哥的分享:<a href="http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.html">由Lua 粘合的Nginx生态环境</a></li>
-<li>然后, 神奇的引发了各种后来的然后</li>
-<li>去年, 在 <span class="caps">NGINX</span> 大会上, 春哥才真正讲出了10年前设计 OpenResty 前身时内心的宏大构想</li>
-<li>所以, 值得认真 review 一下:<ul>
-<li>视频:<a href="https://www.youtube.com/watch?v=w2RAZLptE-U">Building Business Systems with Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty | Cloudflare - YouTube</a></li>
-<li>文稿:<ul>
-<li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-1/">Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty, Part 1</a></li>
-<li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-2/">Domain-Specific Languages for …</a></li></ul></li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/dsl-atop-openresty.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/pyqt4macos.html">PyQt4 之消失在&nbsp;Sierra</a></h2>
-                <div class="summary">
-<h3 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p>最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,
-用 PyQt 是必然选择哪.</p>
-<p>只是项目是老坑, 所以,没用 Qt5 技术桟, 还是 Qt4</p>
-<h2 id="_2">嗯哼<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<ul>
-<li>这天要折腾 <span class="caps">QR</span> 码识别了</li>
-<li>运行 <code>brew install zbar</code></li>
-<li>然后,各种问题就爆发了,特别是:<ul>
-<li><code>libjpeg.8.dylib</code> 加载不到</li>
-<li>PyQt4 镜像丢失</li>
-<li>…</li>
-</ul>
-</li>
-<li>重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt 可以安装了…</li>
-</ul>
-<h2 id="_3">原来<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>参考:<a href="https://github.com/cartr/homebrew-qt4">cartr/homebrew-qt4: Homebrew tap …</a></p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/pyqt4macos.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/leo5theme-key-words.html">Leo 5.4 theme&nbsp;custom</a></h2>
                 <div class="summary">
@@ -224,21 +202,83 @@
                 </div>
             </article>
             <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme&nbsp;custom</a></h2>
+                <div class="summary">
+<h1 id="en"><span class="caps">EN</span><a class="headerlink" href="#en" title="Permanent link">¶</a></h1>
+<p>thanks guys in <code>leo-editor@googlegroups.com</code> :</p>
+<ul>
+<li>Terry Brown</li>
+<li>john lunzer</li>
+</ul>
+<p>make me know how to custom Leo theme step by step:</p>
+<ul>
+<li>old versions <code>myLeoSettings.leo</code> appended buttons :<ul>
+<li>at <code>leo/myLeoSettings.leo#Startup--&gt;Local buttons</code></li>
+<li>need copy from  <code>leoSettings.leo</code> </li>
+</ul>
+</li>
+<li>so my custome flow as:<ul>
+<li>try edit some node</li>
+<li>click …</li></ul></li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/leo5theme.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/linux-linus-not-only-be-fun.html">Linux&nbsp;后的思想</a></h2>
+                <div class="summary">
+<p>来自 <span class="caps">TED2016</span> 的分享:</p>
+<p><a href="https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux">Linus Torvalds: The mind behind Linux | <span class="caps">TED</span> Talk | <span class="caps">TED</span>.com</a></p>
+<p>戳中泪点的:</p>
+<ul>
+<li>所有项目,只是因为我需要</li>
+<li>最困难的不是完成大项目,而是令人们在一起工作,即使相互不接受</li>
+<li>Linux 并不是选择了开源,只是那时刚好有开源吻合 Linux 项目</li>
+<li>….</li>
+</ul>
+<p>是的,为什么 Linux 发展的如此快,而更加早的 <span class="caps">GNU</span> 项目反而越来越没有存在感了!?</p>
+<ul>
+<li><span class="caps">RMS</span> 太聪明,总是戳到关键点</li>
+<li>Linus 明智的多,只作自己能控制的,其它的给更加聪明的人折腾吧</li>
+<li>嗯哼,这就是失控控制法</li>
+<li>不控制的控制才是最好的控制</li>
+<li>…</li>
+</ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/linux-linus-not-only-be-fun.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/saying-ggodby-python-zh.html">再见了&nbsp;Python</a></h2>
+                <div class="summary"><p>原文: <a href="http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html">Saying Goodbye To&nbsp;Python</a></p>
+<p>This post is long overdue; this isn&#8217;t a declaration of intent (any intent was long ago made real), just my reflection about my own path. I left the Python world a long time ago but I never took a chance to say&nbsp;goodbye.</p>
+<p>While …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/saying-ggodby-python-zh.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://blog.zoomquiet.io/141127-ipynb-into-blog.html">如何将 ipynb 发布到 blog&nbsp;中?</a></h2>
+                <div class="summary"><p>原文: <a href="http://prooffreaderplus.blogspot.ca/2014/11/how-to-quickly-turn-ipython-notebook.html">prooffreader plus: How to quickly turn an IPython notebook into a blog&nbsp;post</a></p>
+<p>IPython notebooks are great for many things, but they&#8217;re a little awkward to embed in blog post platforms like Blogger, Wordpress, etc. When the nbconvert feature was a standalone command-line tool, there was a blog …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/141127-ipynb-into-blog.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-        <ul class="pagination">
-                <li class="prev"><a href="https://blog.zoomquiet.io/category/pythonic.html">&laquo;</a>
+        <ul style="list-style: none;" class="pagination">
+                <li style="display: inline;" class="prev"><a href="https://blog.zoomquiet.io/category/pythonic.html">&laquo;</a>
                 </li>
-                <li class=""><a
+                <li style="display: inline;" class=""><a
                         href="https://blog.zoomquiet.io/category/pythonic.html">1</a></li>
-                <li class="active"><a
+                <li style="display: inline;" class="active"><a
                         href="https://blog.zoomquiet.io/category/pythonic2.html">2</a></li>
-                <li class=""><a
+                <li style="display: inline;" class=""><a
                         href="https://blog.zoomquiet.io/category/pythonic3.html">3</a></li>
-                <li class=""><a
+                <li style="display: inline;" class=""><a
                         href="https://blog.zoomquiet.io/category/pythonic4.html">4</a></li>
-                <li class=""><a
-                        href="https://blog.zoomquiet.io/category/pythonic5.html">5</a></li>
-                <li class="next"><a
+                <li style="display: inline;" class="next"><a
                         href="https://blog.zoomquiet.io/category/pythonic3.html">&raquo;</a></li>
         </ul>
 
@@ -344,11 +384,16 @@
 -->
 
     <section>
-        <ul class="list-group list-group-flush">
+
+<table border="0" width="98%">
+    <tr >
+<td colspan="2">
+        <ul style="list-style: none;" class="list-group list-group-flush">
 
             <li class="list-group-item"><h4>
                 <i class="icon-th icon-large"></i>Categories</h4></li>
-                <li class="list-group-item">
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
                     <a href="https://blog.zoomquiet.io/category/ann.html">
                         <i class="icon-folder-open icon-large"></i>ANN
                     </a>
@@ -356,7 +401,8 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li class="list-group-item">
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
                     <a href="https://blog.zoomquiet.io/category/imho.html">
                         <i class="icon-folder-open icon-large"></i>IMHO
                     </a>
@@ -364,7 +410,8 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li class="list-group-item">
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
                     <a href="https://blog.zoomquiet.io/category/murmur.html">
                         <i class="icon-folder-open icon-large"></i>MurMur
                     </a>
@@ -372,7 +419,8 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li class="list-group-item">
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
                     <a href="https://blog.zoomquiet.io/category/oldtouch.html">
                         <i class="icon-folder-open icon-large"></i>OldTouch
                     </a>
@@ -380,7 +428,8 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li class="list-group-item">
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
                     <a href="https://blog.zoomquiet.io/category/pythonic.html">
                         <i class="icon-folder-open icon-large"></i>Pythonic
                     </a>
@@ -388,7 +437,13 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
+        </ul>
+</td>
+    </tr>
 
+    <tr>
+<td width="42%" valign="top">
+            <ul style="list-style: none;" class="list-group list-group-flush">
                 <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
 <!--
                     <li class="list-group-item"><a href="https://ZoomQuiet.io">
@@ -482,14 +537,11 @@
                             class="icon-旧曰-sign icon-large"></i>旧曰
                     </a></li>
 
- 
-
         </ul>
-    </section>
-
-
+</td>
+<td valign="top">
 <section>
-<ul class="list-group-zip">
+<ul style="list-style: none;" class="list-group-zip">
     <li class="list-group-item">
         <h4><i class="icon-tint icon-large"></i>Powerded By</h4></li>
 
@@ -565,17 +617,134 @@
 
 </ul>
 </section>
+</td>
+    </tr>
+</table>
+
+
+<!--
+
+        <ul style="list-style: none;" class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4>
+                <i class="icon-th icon-large"></i>Categories</h4></li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/ann.html">
+                        <i class="icon-folder-open icon-large"></i>ANN
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/ann.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/imho.html">
+                        <i class="icon-folder-open icon-large"></i>IMHO
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/imho.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/murmur.html">
+                        <i class="icon-folder-open icon-large"></i>MurMur
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/murmur.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/oldtouch.html">
+                        <i class="icon-folder-open icon-large"></i>OldTouch
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/oldtouch.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/pythonic.html">
+                        <i class="icon-folder-open icon-large"></i>Pythonic
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/pythonic.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://ZoomQuiet.io"><i
+                            class="icon-Root-sign icon-large"></i>Root
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://weekly.pychina.org/"><i
+                            class="icon-蟒周刊-sign icon-large"></i>蟒周刊
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://du.101.camp/duw/"><i
+                            class="icon-怼周报-sign icon-large"></i>怼周报
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://segmentfault.com/u/zoomquiet"><i
+                            class="icon-思否-sign icon-large"></i>思否
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://www.zhihu.com/people/zoomquiet"><i
+                            class="icon-知乎-sign icon-large"></i>知乎
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://juejin.im/user/5aa4848951882577b45ea1fe"><i
+                            class="icon-掘金-sign icon-large"></i>掘金
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://aijishu.com/u/zoomquiet"><i
+                            class="icon-极术-sign icon-large"></i>极术
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://my.oschina.net/zoomquiet"><i
+                            class="icon-开源中国-sign icon-large"></i>开源中国
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://gitlab.com/ZoomQuiet"><i
+                            class="icon-gitlab-sign icon-large"></i>gitlab
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://weibo.com/zoomquiet"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://wiki.zoomquiet.io"><i
+                            class="icon-维基-sign icon-large"></i>维基
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧曰-sign icon-large"></i>旧曰
+                    </a></li>
+
+ 
+
+        </ul>
+    </section>
+
+-->
+
 
 </aside>        </div>
     
     </div>
 </div>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Include all compiled plugins (below), or include individual files as needed 
 <script src="https://blog.zoomquiet.io/theme/js/bootstrap.min.js"></script>
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+-->
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) 
 <script src="https://blog.zoomquiet.io/theme/js/respond.min.js"></script>
+
+-->
 
 
 

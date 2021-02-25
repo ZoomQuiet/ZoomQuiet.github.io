@@ -19,12 +19,15 @@
             <meta property="og:url" content="https://blog.zoomquiet.io/leo-101-againnn.html"/>
             <meta property="og:description" content="背景¶ [集智]注意力与知识管理群 中大家经常就一些工具产生各种讨论, 俺一向的标签是: Python Pythonic Leo 其它还好, 有广泛群众基础, 这个 Leo 就经常引发嗯哼 引子:¶ pimgeek-知识管理工具研究者: 插一个技术提问… @大妈🙊Zoom.Quiet LeoEditor 的节点支持类似 {{ var }} 这样的模板语法吗? 我知道 &lt;&lt; section &gt;&gt; 这样的用法,还有 valuespace + jinja 的方式, 不知还有没有其它实现方式?[疑问] ‘ &lt;&lt; section &gt;&gt; 这种用法是 LeoEditor 内置的实现方式 {{ var }} 这种用法是 LeoEditor 插件的实现方式 我就是希望定义一些可填充的内容,把这些内容从代码主体中抽取出来,这样我编辑起来方便. ‘ 有些内容,比如网页里的作者信息等,一次编辑后反复引用. 修改时也方便. 专业的 Web 开发者应该是把这些代码拆成多个文件来管理 …"/>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap 
+
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
     <link href="https://blog.zoomquiet.io/theme/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://blog.zoomquiet.io/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="https://blog.zoomquiet.io/theme/css/pygments/github.css" rel="stylesheet">
     <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/style.css" type="text/css"/>
+
+    -->
 
     <!-- add emojify into Pelican 
     <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/emojify.min.css" type="text/css" />
@@ -33,8 +36,9 @@
 -->
 
 
-    <!-- JavaScript plugins (requires jQuery) -->
+    <!-- JavaScript plugins (requires jQuery) 
     <script src="//code.jquery.com/jquery.min.js"></script>
+    -->
 
         <link href="https://blog.zoomquiet.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title=" ATOM Feed"/>
@@ -47,42 +51,60 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
+            <!--
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!--
+
 <a href="https://blog.zoomquiet.io" class="navbar-brand"></a>
             -->
-<a href="https://blog.zoomquiet.io" class="navbar-brand">
+<table border="0" width="98%">
+    <tr>
+<td>
+    <a href="https://blog.zoomquiet.io" class="navbar-brand">
     <img src="https://blog.zoomquiet.io/theme/logo.png"/>
     
     <span class="violet-site">.io </span>
+
+</td>
+        
+<td>
+            <ul style="list-style: none;" class="nav navbar-nav">
+                    <li style="display: inline;"><a href="http://zoomquiet.io">大妈</a></li>
+                    <li style="display: inline;"><a href="https://py.101.camp/">课程</a></li>
+                    <li style="display: inline;"><a href="https://t.zsxq.com/iaIEQ3N">星球</a></li>
+                    <li style="display: inline;"><a href="/pages/friendly-links.html">友链</a></li>
+                    <li style="display: inline;"><a href="/pages/affiliate.html">好物</a></li>
+                    <li style="display: inline;"><a href="/pages/zoomquiet.html">关于</a></li>
+              
+
+              
+            </ul>
+    
+</td>
+<td align="right" width="10%">
+                <ul style="list-style: none;">
+                <li style="display: inline;"><a href="https://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
+
+                <li style="display: inline;"><a href="https://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+
+</td>
+    </tr>
+</table>
 </a>            
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                    <li><a href="http://zoomquiet.io">大妈</a></li>
-                    <li><a href="https://py.101.camp/">课程</a></li>
-                    <li><a href="https://t.zsxq.com/iaIEQ3N">星球</a></li>
-                    <li><a href="/pages/friendly-links.html">友链</a></li>
-                    <li><a href="/pages/affiliate.html">好物</a></li>
-                    <li><a href="/pages/zoomquiet.html">关于</a></li>
-              
-
-              
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="https://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
-
-                <li><a href="https://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
-            </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
 </nav>
+
+<hr/>
+
 <!-- /.navbar -->
 <div class="container">
     <div class="row">
@@ -534,8 +556,9 @@ django项目的文件超过数百个了 ‘
 <hr/>
 
 <h4>自怼圈</h4>
-<img alt="DU21.1" 
-    src="http://ydlj.zoomquiet.top/ipic/2021-01-03-DU21-1-zip.jpg"/>
+<img alt="DU21.3" 
+    src="http://ydlj.zoomquiet.top/ipic/2021-02-25-DU2103reg.jpg"/>
+
 <br/>
 <a href="https://du.101.camp/about/">关于 ~ DebugUself with DAMA ;-)</a>
 
@@ -799,11 +822,16 @@ django项目的文件超过数百个了 ‘
 -->
 
     <section>
-        <ul class="list-group list-group-flush">
+
+<table border="0" width="98%">
+    <tr >
+<td colspan="2">
+        <ul style="list-style: none;" class="list-group list-group-flush">
 
             <li class="list-group-item"><h4>
                 <i class="icon-th icon-large"></i>Categories</h4></li>
-                <li class="list-group-item">
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
                     <a href="https://blog.zoomquiet.io/category/ann.html">
                         <i class="icon-folder-open icon-large"></i>ANN
                     </a>
@@ -811,7 +839,8 @@ django项目的文件超过数百个了 ‘
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li class="list-group-item">
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
                     <a href="https://blog.zoomquiet.io/category/imho.html">
                         <i class="icon-folder-open icon-large"></i>IMHO
                     </a>
@@ -819,7 +848,8 @@ django项目的文件超过数百个了 ‘
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li class="list-group-item">
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
                     <a href="https://blog.zoomquiet.io/category/murmur.html">
                         <i class="icon-folder-open icon-large"></i>MurMur
                     </a>
@@ -827,7 +857,8 @@ django项目的文件超过数百个了 ‘
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li class="list-group-item">
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
                     <a href="https://blog.zoomquiet.io/category/oldtouch.html">
                         <i class="icon-folder-open icon-large"></i>OldTouch
                     </a>
@@ -835,7 +866,8 @@ django项目的文件超过数百个了 ‘
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li class="list-group-item">
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
                     <a href="https://blog.zoomquiet.io/category/pythonic.html">
                         <i class="icon-folder-open icon-large"></i>Pythonic
                     </a>
@@ -843,7 +875,13 @@ django项目的文件超过数百个了 ‘
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
+        </ul>
+</td>
+    </tr>
 
+    <tr>
+<td width="42%" valign="top">
+            <ul style="list-style: none;" class="list-group list-group-flush">
                 <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
 <!--
                     <li class="list-group-item"><a href="https://ZoomQuiet.io">
@@ -937,14 +975,11 @@ django项目的文件超过数百个了 ‘
                             class="icon-旧曰-sign icon-large"></i>旧曰
                     </a></li>
 
- 
-
         </ul>
-    </section>
-
-
+</td>
+<td valign="top">
 <section>
-<ul class="list-group-zip">
+<ul style="list-style: none;" class="list-group-zip">
     <li class="list-group-item">
         <h4><i class="icon-tint icon-large"></i>Powerded By</h4></li>
 
@@ -1020,17 +1055,134 @@ django项目的文件超过数百个了 ‘
 
 </ul>
 </section>
+</td>
+    </tr>
+</table>
+
+
+<!--
+
+        <ul style="list-style: none;" class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4>
+                <i class="icon-th icon-large"></i>Categories</h4></li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/ann.html">
+                        <i class="icon-folder-open icon-large"></i>ANN
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/ann.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/imho.html">
+                        <i class="icon-folder-open icon-large"></i>IMHO
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/imho.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/murmur.html">
+                        <i class="icon-folder-open icon-large"></i>MurMur
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/murmur.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/oldtouch.html">
+                        <i class="icon-folder-open icon-large"></i>OldTouch
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/oldtouch.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/pythonic.html">
+                        <i class="icon-folder-open icon-large"></i>Pythonic
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/pythonic.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://ZoomQuiet.io"><i
+                            class="icon-Root-sign icon-large"></i>Root
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://weekly.pychina.org/"><i
+                            class="icon-蟒周刊-sign icon-large"></i>蟒周刊
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://du.101.camp/duw/"><i
+                            class="icon-怼周报-sign icon-large"></i>怼周报
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://segmentfault.com/u/zoomquiet"><i
+                            class="icon-思否-sign icon-large"></i>思否
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://www.zhihu.com/people/zoomquiet"><i
+                            class="icon-知乎-sign icon-large"></i>知乎
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://juejin.im/user/5aa4848951882577b45ea1fe"><i
+                            class="icon-掘金-sign icon-large"></i>掘金
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://aijishu.com/u/zoomquiet"><i
+                            class="icon-极术-sign icon-large"></i>极术
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://my.oschina.net/zoomquiet"><i
+                            class="icon-开源中国-sign icon-large"></i>开源中国
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://gitlab.com/ZoomQuiet"><i
+                            class="icon-gitlab-sign icon-large"></i>gitlab
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://weibo.com/zoomquiet"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://wiki.zoomquiet.io"><i
+                            class="icon-维基-sign icon-large"></i>维基
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧曰-sign icon-large"></i>旧曰
+                    </a></li>
+
+ 
+
+        </ul>
+    </section>
+
+-->
+
 
 </aside>        </div>
     
     </div>
 </div>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Include all compiled plugins (below), or include individual files as needed 
 <script src="https://blog.zoomquiet.io/theme/js/bootstrap.min.js"></script>
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+-->
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) 
 <script src="https://blog.zoomquiet.io/theme/js/respond.min.js"></script>
+
+-->
 
 
 

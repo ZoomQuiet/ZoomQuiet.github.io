@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2020-07-25T10:43:30+08:00</updated><entry><title>VNC回归轻松</title><link href="https://blog.zoomquiet.io/200704-easy-vnc.html" rel="alternate"></link><published>2020-07-04T19:42:00+08:00</published><updated>2020-07-25T10:43:30+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-07-04:/200704-easy-vnc.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;SCM&lt;/span&gt;/&amp;nbsp;跨平台桌面控制最纯粹和轻松的协议桟还是原生的好&amp;#8230;&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2021-07-25T20:50:48+08:00</updated><entry><title>VNC回归轻松</title><link href="https://blog.zoomquiet.io/200704-easy-vnc.html" rel="alternate"></link><published>2020-07-04T19:42:00+08:00</published><updated>2020-07-25T10:43:30+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-07-04:/200704-easy-vnc.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;SCM&lt;/span&gt;/&amp;nbsp;跨平台桌面控制最纯粹和轻松的协议桟还是原生的好&amp;#8230;&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;.&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;很早就有这种需求:&lt;/p&gt;
 &lt;p&gt;比如当年参与开发浏览器时,
@@ -115,7 +115,60 @@ LISTEN      &lt;span class="m"&gt;0&lt;/span&gt;      &lt;span class="m"&gt;5&lt
 &lt;li&gt;200725 zoomquiet pub&lt;/li&gt;
 &lt;li&gt;200704 zoomquiet 解决&lt;/li&gt;
 &lt;li&gt;200626 zoomquiet init.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Pythonic"></category><category term="DAMA"></category><category term="SCM"></category><category term="VNC"></category><category term="Linux"></category><category term="macOS"></category></entry><entry><title>拙见/ DNS之殇</title><link href="https://blog.zoomquiet.io/imho-murmur-dns-sad-story.html" rel="alternate"></link><published>2020-03-31T10:42:00+08:00</published><updated>2020-03-31T12:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-31:/imho-murmur-dns-sad-story.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;DNS&lt;/span&gt; in china is one kinds of sadding&amp;nbsp;song&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;011&lt;/strong&gt;篇原创&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="DAMA"></category><category term="SCM"></category><category term="VNC"></category><category term="Linux"></category><category term="macOS"></category></entry><entry><title>呢喃/ 20.3</title><link href="https://blog.zoomquiet.io/200401-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2020-04-01T20:42:00+08:00</published><updated>2021-07-25T20:50:48+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-04-01:/200401-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2020.4&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-20204"&gt;呢喃 at 2020.4&lt;a class="headerlink" href="#at-20204" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不为什么,&amp;nbsp;就这么开始了日历卡连载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="200401" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2004.001.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200402" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2004.002.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3971&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不查不知道, 今天是&amp;#8221;国际儿童图书日&amp;#8221;;
+可小时候真没什么值得看的, 就记住了童话大王单人构筑出来的故事体系;
+工作后有机会补课, 才发现国外有儿童图书门类以及对应艺术家群体;
+不过, 怎么看都无法对抗日本漫画构造的万画世界.&amp;nbsp;儿童其实并不特殊和俺们一样.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200403" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2004.003.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3972&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;COVID&lt;/span&gt;-19 不可逆转的改变了整个人类社会结构;
+而当年马歇尔计划则是以一国之力改变了人类社会整体结构;
+差别在于, 一个只用了不到半年, 另外则用了整整20年;
+正如很多SiFi中描述的,
+人类不过是盖亚皮屑里的微虫,&amp;nbsp;拼力折腾能叮痒地球,后果Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200404" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2004.004.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3973&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;清明时节雨纷纷&lt;/span&gt;
+&lt;span class="err"&gt;路上行人谷断魂&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这两句从未如此应景; 
+为表达全国各族人民
+对抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼,&amp;nbsp;今天决定举行全国哀悼活动; &lt;/p&gt;
+&lt;p&gt;最应该哀悼的, 是人类用了5千年才形成的全球化,
+却瞬间断裂成孤岛式关系,&amp;nbsp;那么&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200405" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2004.005.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3974&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;鸟山明, 以一己之力改变&amp;#8221;孙悟空&amp;#8221;这一概念内涵的大师.
+不过, 俺更加喜欢阿拉蕾, 企鹅岛上的故事虽然无厘头, 但是, 比永远无尽升级打怪的 七龙珠 要来的放松和有趣;
+就这个有趣, 为鸟山明每年带来超过50亿日元的收入, 这在中国是无法想象的.&amp;nbsp;为什么?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200406" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2004.006.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3975&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Asimov 并非最喜爱的 SiFi 作家, 却是最敬佩的.
+坚持每天写作一定数量文字, 半个世纪从未间断, 这真的是神级自律.
+仅仅基于私人想象, 就为人类拓展出很多无法回避的前沿.
+机器人学三定律/心理史学/&amp;#8230;
+是 &lt;span class="caps"&gt;AI&lt;/span&gt;&amp;nbsp;伦理学奠基人.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;大哉问不休&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category></entry><entry><title>拙见/ DNS之殇</title><link href="https://blog.zoomquiet.io/imho-murmur-dns-sad-story.html" rel="alternate"></link><published>2020-03-31T10:42:00+08:00</published><updated>2020-03-31T12:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-31:/imho-murmur-dns-sad-story.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;DNS&lt;/span&gt; in china is one kinds of sadding&amp;nbsp;song&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;011&lt;/strong&gt;篇原创&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;普通程序老猿一则感叹&amp;#8230;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -232,215 +285,7 @@ LISTEN      &lt;span class="m"&gt;0&lt;/span&gt;      &lt;span class="m"&gt;5&lt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;hr&gt;</content><category term="MurMur"></category><category term="IMHO"></category><category term="DNS"></category><category term="logging"></category></entry><entry><title>呢喃/ 别了和队平</title><link href="https://blog.zoomquiet.io/ann-murmur-farewell-peace-corps.html" rel="alternate"></link><published>2020-03-11T19:42:00+08:00</published><updated>2020-03-11T23:55:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-11:/ann-murmur-farewell-peace-corps.html</id><summary type="html">&lt;p&gt;MurMur/ Farewell Peace Corps in China, We Won’t See You&amp;nbsp;Off&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;010&lt;/strong&gt;篇原创&lt;/p&gt;
-&lt;h1 id="_1"&gt;呢喃/ 别了和队平&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;普通程序老猿一则感叹&amp;#8230;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id="_2"&gt;背景&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://mp.weixin.qq.com/s/-Nq2bisaZy_T5fBDD-yMsw"&gt;呢喃/&amp;nbsp;为什么想日历卡片连载?&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;分析过原因&amp;#8230;本质上只是开始逼自己每天至少 140&amp;nbsp;字的文字输出.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="_3"&gt;现象&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;昨天,&amp;nbsp;被触发了一个关键词&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;不知道是图片中的文字,&amp;nbsp;还是纯文本中的文字;&lt;/p&gt;
-&lt;p&gt;总之自动删除了;&lt;/p&gt;
-&lt;p&gt;然后, 看到 余晟&amp;nbsp;分享的消息:&lt;/p&gt;
-&lt;p&gt;如果你看过&amp;#8221;江城&amp;#8221;,&amp;#8221;寻路中国&amp;#8221;,&amp;#8221;再见,老北京&amp;#8221;,&amp;#8221;奇石&amp;#8221;,&amp;#8221;东北游记&amp;#8221;,&amp;#8221;长乐路&amp;#8221;中的任何一本,而且喜欢这类书,你大概应该知道他们的作者都属于同一组织:和队平(the Peace Corps). 
-和队平成立的背景是一本1958年出版的书&amp;#8221;丑陋的美国人(the Ugly Americans)&amp;#8221;,作者指出,相比苏联,美国在发展中国家&amp;#8221;接地气&amp;#8221;的工作做得不够.&amp;nbsp;所以和平队有三个目的:在&amp;#8221;感兴趣的国家&amp;#8221;提供帮助,帮助世界了解美国,帮助美国了解世界. &lt;/p&gt;
-&lt;p&gt;1996年,开始接收&amp;#8221;和队平&amp;#8221;,将他们派往涪陵,自贡等地区支援教育. 之前提到那些书的作者,比如何伟,梅英东,史明智,都是和队平员,他们在支教同时,也完成了中文的学习,之后更写出了不少优秀的作品. 
-因为各种原因,今年是&amp;#8221;和队平&amp;#8221;在中国的最后一年,许多人着实为之可惜.&amp;nbsp;如果你希望了解背后的原因,或者单纯对此事感兴趣,都可以阅读何伟在&amp;#8221;纽约客&amp;#8221;杂志上的文章. &lt;/p&gt;
-&lt;p&gt;https://www.newyorker.com/magazine/2020/03/16/the-peace-corps-breaks-ties-with-china&lt;/p&gt;
-&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;纽约客&amp;#8221;是一份很有格调的杂志,此文词汇量不大,凝练而克制,值得一读&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="_4"&gt;快译&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&amp;#8230;该队于1993年首次来到该国&amp;#8230;总计派出一千三百多名志愿者到该国,&amp;nbsp;该机构现已活跃在六十个国家,一直被视为远离政治争端单纯的志愿者组织.&lt;/p&gt;
-&lt;p&gt;1月17日正式被通知离开该国;
-无论来国和该国,&amp;nbsp;都发文庆祝.&lt;/p&gt;
-&lt;p&gt;&amp;#8230;该队自 1961 年由 Kennedy&amp;nbsp;总统创立&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&amp;#8230;小平同志对该队表示过欢迎&amp;#8230;向学生展示过从来国收到的选票&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&amp;#8230;如今,包括亚当在内的27位前该国志愿者在国务院工作&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&amp;#8230;一直被担心教学是情报工作的掩护&amp;#8230;&lt;/p&gt;
-&lt;p&gt;..该队表达了美国的信心:如果您将有积极性的年轻人送到偏远地区,让他们独自一人,好事就会发生&amp;#8230;&lt;/p&gt;
-&lt;p&gt;985工程&amp;#8230;反映了来国人难以掌握的战略:教育和限制可以同时进行的想法..&lt;/p&gt;
-&lt;p&gt;..在随后的时期中,该国的总体增长非常强劲,以至于和队平的人数可以用微观历史来代表. &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;China&amp;nbsp;8(每支队伍都有正式编号)抵达的那一年,该国加入了世界贸易组织. &lt;/li&gt;
-&lt;li&gt;China 12&amp;nbsp;到达日,三峡大坝已经建成. &lt;/li&gt;
-&lt;li&gt;China 14&amp;nbsp;那年是北京奥运会. &lt;/li&gt;
-&lt;li&gt;&amp;#8230;从 China 1 到 China 16 ,&lt;span class="caps"&gt;G.D.P.&lt;/span&gt;&amp;nbsp;增加了十倍以上.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;.. 2014年,开始允许申请人指定他们想在哪个国家或地区工作,该国因此成为了梦眛以求的任务.  ..Mei Haloski..她说:&amp;#8221;我一直被指示,技能最强的人应该去该国.&amp;nbsp;&amp;#8220;&lt;/p&gt;
-&lt;p&gt;&amp;#8230;该国的战略从未改变:教育和限制并行进行,就像同一条高速公路的相反车道一样.&amp;nbsp;&amp;#8230;当今的公民通常更加宽容和了解,但是长防火墙城也比以往任何时候都更加复杂..&lt;/p&gt;
-&lt;p&gt;&amp;#8230;旧的信心也消失了.&amp;nbsp;这似乎是来国更大趋势的一部分:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;每个外国人的接触都是一种威胁,每次交换都是零和&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&amp;#8230;二十二岁的 Gabriel Exposito 进行了电话交谈,他是最后一批收到该国和平军团邀请的人之一.&lt;br&gt;
-他在哈瓦那长大,他的学校记忆之一就是一群来国人的来访.&amp;nbsp;校方指示孩子们避开外国人,外国人捐赠的善款被共CD官员拒之门外..&lt;/p&gt;
-&lt;p&gt;&amp;#8230;他对关闭计划的推文感到震惊,&amp;#8230;向有关工作人员抱怨:&amp;#8221;我同意你的观点,共CD是一个敌对的实体.&amp;nbsp;但是,我们正在破坏他们在树立的来国人形象啊&amp;#8230;&amp;#8221;&lt;/p&gt;
-&lt;p&gt;&amp;#8230;他要求将其调任至前共产主义国家&amp;#8230;最后选择了摩尔多瓦&amp;#8230;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="_5"&gt;嗯哼&lt;a class="headerlink" href="#_5" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这杂志其实也在外面, 所以, 尝试全文复制过来, 摘要翻译在上,&amp;nbsp;另外有个小结尾测试收费功能.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;原文还配有语音和各种漫画,推荐去查阅.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://www.newyorker.com/magazine/2020/03/16/the-peace-corps-breaks-ties-with-china"&gt;The Peace Corps Breaks Ties with China / The New&amp;nbsp;Yorker&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The Peace Corps Breaks Ties with&amp;nbsp;China&lt;/p&gt;
-&lt;p&gt;The agency has always been viewed as removed from political spats. But the timing of the U.S.&amp;#8217;s decision seems&amp;nbsp;suspicious.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;By Peter&amp;nbsp;Hessler&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;March 9,&amp;nbsp;2020&lt;/p&gt;
-&lt;p&gt;照片&lt;/p&gt;
-&lt;p&gt;Group of people in front of a portrait of&amp;nbsp;Mao. &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The author, lower left, with other China 3 volunteers in front of the Forbidden City, in Beijing, in 1996.Photograph courtesy the&amp;nbsp;author&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;On the morning of January 17th, shortly before I was scheduled to meet with a hundred and forty Peace Corps volunteers in Chengdu, the capital of Sichuan Province, there was an unexpected announcement that the China program was ending. The Peace Corps had first come to the country in 1993, and as a volunteer from the early years I had been asked to speak at an in-service training that the organization was holding in a hotel near where I live. But by the time I arrived nobody was in the mood for nostalgia. The American volunteers, most of whom were in their twenties, looked stunned; some were red-eyed from crying. At the back of the room, more than a dozen Chinese staff members stood with stoic expressions. They had given up some benefits of the Chinese system in order to work for the American agency. From the ceiling, somebody had hung a red propaganda-style banner, which proved that Americans could make their slogans every bit as tone-deaf as the ones in the People&amp;#8217;s Republic. The banner said &amp;#8220;Welcome to &lt;span class="caps"&gt;IST&lt;/span&gt; 2020: Be the Tree You Wish to See in the&amp;nbsp;World.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;An American staff member greeted me with a pained look. She said something to the effect that the tree she wished to have seen was a tactful announcement, but Senators Marco Rubio and Rick Scott, of Florida, had declared the closure of the China program on Twitter. &amp;#8220;Rubio and Rick Scott wanted to take credit for it,&amp;#8221; she said&amp;nbsp;angrily.&lt;/p&gt;
-&lt;p&gt;The Peace Corps has sent more than thirteen hundred volunteers to China, and the agency, which is now active in sixty countries, has always been viewed as removed from political spats. The &lt;span class="caps"&gt;U.S.&lt;/span&gt; had never ended a Peace Corps program because of a diplomatic conflict, but the timing of the decision about China seemed suspicious. The coronavirus had yet to come to widespread attention, and the Senators, who had previously expressed doubts about a Chinese trade deal, tweeted the day after President Trump signed a Phase 1 economic agreement with&amp;nbsp;China.&lt;/p&gt;
-&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;For too long, Beijing has fooled organizations such as the World Bank and the World Trade Organization,&amp;#8221; Rubio wrote. Scott chimed in: &amp;#8220;I&amp;#8217;m glad the Peace Corps has finally come to its senses and sees Communist China for what it is: the second largest economy in the world and an adversary of the United&amp;nbsp;States.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;Chinese hard-liners also celebrated. In Guanchazhe, a conservative publication, a columnist named Pan Gongyu published a commentary, &amp;#8220;Farewell, Peace Corps in China, We Won&amp;#8217;t See You Off.&amp;#8221; The title echoed &amp;#8220;Farewell, Leighton Stuart!,&amp;#8221; a famous essay that Mao Zedong wrote in August, 1949. That month, the &lt;span class="caps"&gt;U.S.&lt;/span&gt; State Department had issued a white paper that, in more than a thousand tortured pages, tried to explain how America had &amp;#8220;lost&amp;#8221; China to Mao&amp;#8217;s revolutionaries: &amp;#8220;This is a frank record of an extremely complicated and most unhappy period in the life of a great country to which the United States has long been attached by ties of closest&amp;nbsp;friendship.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;In his essay, Mao derided American democracy as &amp;#8220;another name for the dictatorship of the bourgeoisie,&amp;#8221; and he celebrated the departure of John Leighton Stuart, the last &lt;span class="caps"&gt;U.S.&lt;/span&gt; Ambassador to China under the Kuomintang government. For years, the isolationist essay was part of the school curriculum, and many Chinese people recognize the ending: &amp;#8220;Leighton Stuart has departed and the White Paper has arrived, very good, very good. Both events are worth&amp;nbsp;celebrating.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;In Guanchazhe, Pan described the Peace Corps&amp;#8217;s &amp;#8220;ideological and cultural export&amp;#8221; as another chapter in American failure: &amp;#8220;After twenty-seven years in China, the &lt;span class="caps"&gt;U.S.&lt;/span&gt; diplomatic offices intended to &amp;#8216;raise wolves,&amp;#8217; but ended up with a litter of huskies.&amp;#8221; He concluded, &amp;#8220;The Peace Corps has departed and the U.S.-China Trade Agreement is here, very good, very good. Both events are worth&amp;nbsp;celebrating.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;In the fall of 1996, the Peace Corps sent me to teach English to college students in Fuling, a remote city on the Yangtze River. I was twenty-seven years old, and I was joined by another volunteer, Adam Meier, who was twenty-two. Not long after we arrived, a student named Richard submitted an essay to my writing class titled &amp;#8220;Why Americans Are So Casual.&amp;#8221; Richard was skinny, shy, and bespectacled. He had grown up in Fuling, and most of his classmates came from the Sichuanese countryside. At the time, China&amp;#8217;s population was more than seventy per cent rural, and only eight per cent of students went to college. Adam and I were the first Americans to live in Fuling since the Revolution. In his essay, Richard wrote, in&amp;nbsp;English:&lt;/p&gt;
-&lt;p&gt;Our foreign language teachers—Peter and Adam—came to teach us this term. It provides a good opportunity of understanding the American way of life. In my opinion, they are more casual than Chinese people. Why do I think so? I&amp;#8217;ll give you some facts to explain&amp;nbsp;this.&lt;/p&gt;
-&lt;p&gt;We were part of a Peace Corps cohort known as China 3. The agency&amp;#8217;s groups have always been numbered, perhaps because it implies a sense of mission. The Peace Corps was founded by President John F. Kennedy, in 1961—the year of Saturn 1 and Sputnik 9. In the same way that the Apollo rockets went up in sequence, each Peace Corps cohort was intended to travel to a distant land, build on the work of its predecessors, then return home. And, just like the rockets, the Peace Corps was a Cold War endeavor. It was inspired by &amp;#8220;The Ugly American,&amp;#8221; a 1958 novel that warned readers that the Soviets were doing a better job of grassroots work in the developing world. The Peace Corps had three goals: to provide useful assistance to &amp;#8220;interested countries,&amp;#8221; to improve understanding of the United States, and to help Americans understand the rest of the&amp;nbsp;world.&lt;/p&gt;
-&lt;p&gt;By the time I joined, relatively few volunteers were aware of these Cold War roots. Time had moved on, or maybe it had stopped—this was the era of &amp;#8220;The End of History and the Last Man,&amp;#8221; the 1992 book by Francis Fukuyama, who declared the triumph of Western liberal democracy. In 1996, the Peace Corps was sending volunteers to Russia, Poland, Bulgaria, and other former Soviet-bloc states that had supposedly transitioned to democracy. China was the only Communist country that accepted&amp;nbsp;volunteers.&lt;/p&gt;
-&lt;p&gt;Deng Xiaoping had welcomed the Peace Corps as part of his Reform and Opening strategy, but some Chinese officials weren&amp;#8217;t convinced that Americans should be working in remote places like Fuling. They referred to the program by a euphemism—Meizhong Youhao Zhiyuanzhe, or &amp;#8220;U.S.-China Friendship Volunteers&amp;#8221;—because the Chinese translation of &amp;#8220;Peace Corps&amp;#8221; had been tainted by years of Maoist propaganda. The first three cohorts were small, which made it easier for the government to track us. The curiosity of locals was even more intense. Richard&amp;#8217;s essay&amp;nbsp;continued:&lt;/p&gt;
-&lt;p&gt;A child wakes her parents up to look at the unused space under her bed.
-&amp;#8220;Can you come look under my bed? It seems like a complete waste of storage space.&amp;#8221;
-Cartoon by &lt;span class="caps"&gt;P. C.&lt;/span&gt; Vey
-For example, when Mr. Hessler is having class, he can scratch himself casually without paying attention to what others may say. He dresses up casually, usually with his belt dropping and dangling. But, to tell you the truth, it isn&amp;#8217;t considered a good manner in China, especially in old people&amp;#8217;s&amp;nbsp;eyes.&lt;/p&gt;
-&lt;p&gt;China 3 consisted of fourteen volunteers, and, before joining, none of us had taken a single class in Chinese language, history, politics, or culture. In those days, Peace Corps applicants didn&amp;#8217;t choose their destinations. All the China 3 volunteers were white, and had almost no experience in the developing world; one, from Mississippi, had never been on an airplane before. The majority came from the Midwest or the South—Adam was from Wisconsin, and I was a Missourian. For many of us, the Peace Corps represented an inexpensive way to go&amp;nbsp;abroad.&lt;/p&gt;
-&lt;p&gt;Our students were majoring in English, another project of Reform and Opening. China was expanding compulsory English education, which created new demand for instructors; after graduation, our students would be assigned to teach in middle and high schools. But their concept of the outside world remained abstract. They had no Internet access, and the Communist Party published all their texts, including a cultural-studies book called &amp;#8220;Survey of Britain and America.&amp;#8221; A chapter about American history began, naturally enough, with China: &amp;#8220;The Indians living in America originated from Asia some 25,000 years ago.&amp;#8221; After listing some key details about the European discovery of the New World—&amp;#8221;it also opened up fresh ground for the rising bourgeoisie&amp;#8221;—the text proceeded to the founding of the United States. (&amp;#8220;The Constitution of 1787 established the dictatorship of the American bourgeoisie.&amp;#8221;) A section about contemporary society claimed that nowadays most New Englanders work in factories. (&amp;#8220;They are good at making watches and clocks.&amp;#8221;) There was some useful information about American slang. (&amp;#8220;For example, &amp;#8216;draw one&amp;#8217; or &amp;#8216;shoot one&amp;#8217; means &amp;#8216;pour a cup of coffee.&amp;#8217; &amp;#8220;) Chapter 4 covered &amp;#8220;Social&amp;nbsp;Problems&amp;#8221;:&lt;/p&gt;
-&lt;p&gt;Homosexuality is a rather strange social phenomenon that most people can hardly understand. It widely spreads. One reason for this may be the despair in marriage or love&amp;nbsp;affairs.&lt;/p&gt;
-&lt;p&gt;The chapter concluded by explaining the primary cause of homosexuality and other social&amp;nbsp;problems:&lt;/p&gt;
-&lt;p&gt;The most important reason is the capitalist system of America. In this capitalist society, although science and technology is highly advanced, some people are suffering from spiritual hollowness. Thus they start to look for things curious and&amp;nbsp;exciting.&lt;/p&gt;
-&lt;p&gt;In part to keep the students as far as possible from &amp;#8220;Survey of Britain and America,&amp;#8221; Adam and I used whatever we could find as teaching materials. We brought photographs of family to class, and we made copies of articles from American magazines. When we received our absentee ballots for the 1996 Presidential election, Adam and I each gave a lecture on the &lt;span class="caps"&gt;U.S.&lt;/span&gt; political system to a section of senior students. At the end, we took out the ballots, allowed the students to inspect them, and&amp;nbsp;voted.&lt;/p&gt;
-&lt;p&gt;The students became very quiet when I handed them my ballot. We were in a small, unheated room, packed with more than forty simple wooden desks. One by one, the students examined the piece of paper. By the time I retrieved the ballot and voted for Bill Clinton, the room was so silent, and they were watching with such intensity, that my heart was racing. Not long afterward, a Peace Corps staffer in Chengdu reported that college officials had called and weren&amp;#8217;t happy about what Adam and I had done. But the college left it at that—such communication was often&amp;nbsp;indirect.&lt;/p&gt;
-&lt;p&gt;The people who were farthest away seemed the most likely to perceive a threat. Students were thrilled, whereas our Chinese colleagues were curious but guarded. College administrators were warier, but even they were proud to have foreigners on campus. Opponents of the program tended to be at the Chinese provincial or national&amp;nbsp;level.&lt;/p&gt;
-&lt;p&gt;The American reaction was the opposite. Recently, I talked with William Speidel, a Sinologist who served as the first Peace Corps China director, and he remembered the attitude of State Department officials. &amp;#8220;They were overjoyed,&amp;#8221; he said. &amp;#8220;The idea that Peace Corps had a foothold in quote-unquote Communist China was really&amp;nbsp;something.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;Speidel commissioned a linguist to design a course in Mandarin, and, in remote places, a hardworking volunteer could gain fluency in only two years, the length of a Peace Corps assignment. Many volunteers had studied pedagogy as undergrads, and often they returned to teach in &lt;span class="caps"&gt;U.S.&lt;/span&gt; classrooms. But there were others whose life paths were radically transformed. They became diplomats, civil servants, businesspeople, or scholars specializing in China. Today, twenty-seven former China volunteers, including Adam, work in the State Department, and there are others at organizations like &lt;span class="caps"&gt;U.S.A.I.D.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Journalists and writers were also common. Michael Meyer, a China 2 volunteer from Minnesota, went on to write three books about the country. In my cohort, three of us became China correspondents and authors. All told, former volunteers have published at least eleven nonfiction books about&amp;nbsp;China.&lt;/p&gt;
-&lt;p&gt;I sometimes wondered how the situation looked to Communist intelligence analysts. In 1999, I moved to Beijing while preparing to publish my first book, about my experience in Fuling, and there was a period when I sensed that I was being watched with particular attention. There were strange encounters in my neighborhood, and a couple of former students back in the Fuling region reported being intimidated by security agents who showed up because of their connection with me. In Beijing, at a couple of government-sponsored events, Foreign Ministry officials sought me out with pointed questions: Why did you study English literature if you planned to go to China? Why did you teach in such an undeveloped&amp;nbsp;place?&lt;/p&gt;
-&lt;p&gt;They clearly worried that teaching had been a cover for intelligence work, and they seemed baffled by the Peace Corps. The organization didn&amp;#8217;t attract many people from élite backgrounds, and it paid volunteers about a hundred and twenty dollars a month. Speidel&amp;#8217;s Chinese staff had been assigned to him by the government, so there was no question that some lines of information ran straight to security, along with the likely phone taps. But nobody from Peace Corps headquarters ever told me what I should or should not teach, and staff visited Fuling only twice in two years. At its best, the Peace Corps was an expression of American confidence: if you sent motivated young people to remote places and left them alone, good things were likely to&amp;nbsp;happen.&lt;/p&gt;
-&lt;p&gt;Recently, I reminisced about the era with somebody from Fuling who is well connected in the Communist Party. He confided that the Fuling volunteers were supposed to be sent to Wanxian, another Yangtze city, whose name was eventually changed to Wanzhou. But officials were concerned that the city was too close to the construction site of the Three Gorges Dam, where Americans might learn sensitive information. So they pushed us a hundred and thirty miles upstream. Of course, I ended up writing about the dam anyway. And, after the Peace Corps finally got into Wanzhou, the organization posted a China 7 volunteer named Jake Hooker there. Despite having no Chinese background, Hooker learned the language to a remarkable level, and he proved that it didn&amp;#8217;t matter who got sent downriver. In 2008, as a reporter for the Times, Hooker won a Pulitzer Prize for exposing how rural Chinese factories were exporting toxic ingredients for use in pharmaceutical&amp;nbsp;products.&lt;/p&gt;
-&lt;p&gt;In 1998, during my last year as a volunteer, I didn&amp;#8217;t notice two national developments that later proved to be significant. One was the system of Internet restrictions that became known in English as the Great Firewall. The other was a speech delivered by President Jiang Zemin, at Peking University, on May 4, 1998. Jiang&amp;#8217;s words were hardly dynamic (&amp;#8220;the future of the motherland is infinitely glorious&amp;#8221;), but, more than twenty years later, if you say &amp;#8220;Project 985,&amp;#8221; many educated Chinese people recognize the reference to the year and the month of Jiang&amp;#8217;s speech. The President called for the development of world-class universities, and this endeavor joined Project 211—the Chinese fetish for mission-oriented numerology exceeds even that of the Peace Corps. These programs involved university expansion and improvement, and they reflected a strategy that was hard for Americans to grasp: the idea that education and restriction could proceed in&amp;nbsp;tandem.&lt;/p&gt;
-&lt;p&gt;During the period that followed, the country&amp;#8217;s over-all growth was so intense that Peace Corps cohorts could be represented by micro-histories. The year that China 8 arrived, the country joined the World Trade Organization. By China 12, the Three Gorges Dam had been completed. China 14 was the Beijing Olympics. Between China 1 and China 16, the &lt;span class="caps"&gt;G.D.P.&lt;/span&gt; increased more than tenfold. When I taught in Fuling, the college had about two thousand students; by China 10, there were twenty thousand, on a brand-new&amp;nbsp;campus.&lt;/p&gt;
-&lt;p&gt;In the classroom, even smaller histories showed how the system worked at the lowest level. One of my students, a poor boy who grew up on a farm, where his family planted potatoes, corn, and tobacco, took the English name Mo. Mo&amp;#8217;s father had a third-grade education and his mother never attended school, but a village schoolteacher inspired Mo, who became the only boy from his class to test into college. In Fuling, he joined the Communist Party, and every summer he returned home to haul sixty-pound sacks of tobacco to market. When some of Mo&amp;#8217;s classmates started giving themselves English surnames, he asked Adam and me for advice, which was how he became Mo Money. (Another China 3 micro-history was the series of prominent deaths that occurred in the span of six months and that, at least in my mind, are forever connected: Tupac Shakur, Deng Xiaoping, and Biggie&amp;nbsp;Smalls.)&lt;/p&gt;
-&lt;p&gt;After graduation, Mo Money accepted a teaching job in his rural home town. Among the students was his younger brother. It was the community version of education by the bootstraps: somebody escapes the village to attend college, then returns and pulls up the others. For three years, Mo taught his brother and more than forty classmates, and his brother tested into the Fuling college, too. He entered as China 8 arrived. Of the four children in Mo Money&amp;#8217;s family, three graduated from college, and all are now middle&amp;nbsp;class.&lt;/p&gt;
-&lt;p&gt;When this happens at scale across a population of more than a billion, the effects are staggering. Mo currently teaches in a school in Chongqing, and recently I asked him what percentage of his graduating students from last year made it to university. &amp;#8220;Every one of them,&amp;#8221; he said. In terms of national statistics, the college-entrance figure—seven per cent for Mo&amp;#8217;s year—is now forty-eight per&amp;nbsp;cent.&lt;/p&gt;
-&lt;p&gt;The Peace Corps China groups started to expand with China 4, which was also the first cohort to include an African-American volunteer. There were significantly more women than men that year, and that became the general pattern. In 2014, the Peace Corps started allowing applicants to specify which country or region they wanted to work in, and China became a coveted assignment. Yung-Mei Haloski, a China 4 volunteer who later worked in recruitment and placement for the Peace Corps, told me that China was seen as a top priority. &amp;#8220;I was always directed that the people who had the most skills should go to China,&amp;#8221; she&amp;nbsp;said.&lt;/p&gt;
-&lt;p&gt;By China 17, the Peace Corps was sending between seventy and eighty volunteers per year, and the program had expanded into undeveloped parts of Gansu and Guizhou provinces. But some volunteers went to Sichuanese cities that had become much more connected and sophisticated. Chengdu acquired the nickname Gaydu, because of a relative tolerance for gay culture that would have been unimaginable during the days of &amp;#8220;Survey of Britain and America.&amp;#8221; (&amp;#8220;It widely spreads.&amp;#8221;) With China 21, the Peace Corps sent a same-sex married couple for the first&amp;nbsp;time.&lt;/p&gt;
-&lt;p&gt;A woman sits in an armchair and reads a book.
-Cartoon by Will McPhail
-In August, 2018, Jody Olsen, the Peace Corps director appointed by President Trump, came to China to celebrate the program&amp;#8217;s twenty-fifth anniversary. The Peace Corps hoped to move into even more remote places, and Olsen and Stephen Claborne, the head of the China program, met with officials in Beijing. The Chinese politely rejected the request. &amp;#8220;The message was that they were happy with it the way it was,&amp;#8221; Claborne told me&amp;nbsp;recently.&lt;/p&gt;
-&lt;p&gt;The Chinese strategy never changed: education and restriction continued in parallel, like opposite lanes of the same highway. Today&amp;#8217;s citizens are often more tolerant and aware, but the Great Firewall is also more sophisticated than ever. Many topics of civic interest, ranging from the Hong Kong protests to concentration camps that sequester Muslim Uighurs in Xinjiang, are highly censored. Even as the government became more comfortable with the Peace Corps, it restricted other organizations, and a 2017 law made it increasingly difficult for foreign &lt;span class="caps"&gt;N.G.O.&lt;/span&gt;s to operate. If you connect all the micro-histories—each individual improvement in material and educational circumstance—they still don&amp;#8217;t add up to political change. Mo Money remains a member of the Communist&amp;nbsp;Party.&lt;/p&gt;
-&lt;p&gt;In 2018, during a visit to Fuling, I happened to run into my first-year student Richard. Like Mo, Richard has prospered as a high-school teacher. During our conversation, he quickly brought up the lecture about absentee ballots. &amp;#8220;That made a deep impression,&amp;#8221; he said. &amp;#8220;I&amp;#8217;ve always thought about&amp;nbsp;that.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;Recently, a couple of other former students also mentioned the incident in positive terms, which surprised me. I had thought of it as a clumsy attempt by two young teachers to deal with a frustrating political environment. Even now, I can&amp;#8217;t tell exactly what lessons the students took away. I occasionally send survey questions to the people I taught, and in 2017 I asked if China should become a multiparty democracy. Out of thirty respondents, twenty-two said no. &amp;#8220;China is going well this way,&amp;#8221; one former student wrote. Others were more cynical. &amp;#8220;We already have one corrupt party, it will be much worse if we have more,&amp;#8221; one man wrote. Another student remarked, &amp;#8220;We have seen America with multi-party, but you have elected the worst president in human&amp;#8217;s&amp;nbsp;history.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;Rick Scott began demanding an end to Peace Corps China in the summer of 2019. &amp;#8220;What the Peace Corps shouldn&amp;#8217;t be doing is propping up our adversaries with &lt;span class="caps"&gt;U.S.&lt;/span&gt; tax dollars,&amp;#8221; the Senator said, in a statement. Such criticism had also been made in 2011, by Mike Coffman, a Republican congressman from Colorado. Scott introduced a bill that would cancel programs &amp;#8220;in hostile countries, like China,&amp;#8221; and place the Peace Corps under the oversight of the State&amp;nbsp;Department.&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;VIDEO&lt;/span&gt; &lt;span class="caps"&gt;FROM&lt;/span&gt; &lt;span class="caps"&gt;THE&lt;/span&gt; &lt;span class="caps"&gt;NEW&lt;/span&gt; &lt;span class="caps"&gt;YORKER&lt;/span&gt;
-A Couple&amp;#8217;s Last Words to Each&amp;nbsp;Other&lt;/p&gt;
-&lt;p&gt;The agency has always functioned independently within the executive branch, in part to prevent programs from being manipulated as direct tools of foreign policy. No other senators signed on to Scott&amp;#8217;s bill, but he continued to attack the Peace Corps and China. His criticism of both seemed to be recent. Before entering politics, Scott reportedly amassed a fortune of more than two hundred million dollars as an entrepreneur in the health-care industry. In two terms as governor of Florida, from 2011 to 2019, Scott welcomed Chinese investors to the state, and he chaired Enterprise Florida, a pro-business consortium that has offices in Hong Kong, Shanghai, and Beijing. A blind trust held by the Governor included stocks with ties to Chinese&amp;nbsp;companies.&lt;/p&gt;
-&lt;p&gt;Once Scott entered the Senate, though, he became a vocal opponent of China. In response to the Senator&amp;#8217;s pressure, Claborne, the head of the China program, received an unusual request from Peace Corps headquarters. Scott wanted to analyze Peace Corps China in business terms, examining the return on investment. &amp;#8220;He was looking for things like how many volunteers came back and started businesses and created wealth because of their work in China,&amp;#8221; Claborne told&amp;nbsp;me.&lt;/p&gt;
-&lt;p&gt;Claborne worried that somebody with little understanding of the Peace Corps was being allowed to redefine how it should be valued. He also believed that Scott&amp;#8217;s point that China is now a developed nation was irrelevant. Nothing in the Peace Corps mission statement specifies that partner countries must be poor, and the agency often looks closely at the Human Development Index, which considers a range of factors, including access to education. But the Peace Corps asked Claborne to assemble materials about return on investment, which he assumed were passed on to Scott. The Senator declared himself unsatisfied, and the Peace Corps never responded&amp;nbsp;publicly.&lt;/p&gt;
-&lt;p&gt;The director, Olsen, had a long history with the agency, including time as a volunteer in Tunisia, in the nineteen-sixties. Some members of the Peace Corps community had feared that the Trump Administration would bring in an outsider to dismantle the agency, so Olsen&amp;#8217;s appointment was greeted with relief. But, when the China program was attacked, Olsen stayed&amp;nbsp;silent.&lt;/p&gt;
-&lt;p&gt;The pressure on the Peace Corps was connected to a growing anti-China sentiment. In some ways, it&amp;#8217;s reminiscent of the era of &amp;#8220;Farewell, Leighton Stuart!&amp;#8221;—a frustration that China has not followed a path that Americans would prefer. Many China specialists are concerned that the &lt;span class="caps"&gt;U.S.&lt;/span&gt; is overreacting. James Millward, a Georgetown University historian who is a vocal critic of China&amp;#8217;s treatment of Uighurs, told me that he opposed cutting off the Peace Corps and other forms of engagement. He believes that the Magnitsky Act, which allows the &lt;span class="caps"&gt;U.S.&lt;/span&gt; to sanction human-rights violators, should be applied to Chinese organizations and individuals who are active in the concentration camps. &amp;#8220;It&amp;#8217;s a measure that should be more directly associated with what is going on in Xinjiang, rather than keeping people from teaching English in Chengdu,&amp;#8221; he&amp;nbsp;said.&lt;/p&gt;
-&lt;p&gt;But the issue was settled quickly, behind closed doors. In November, the National Security Council held a meeting about Peace Corps China, chaired by Matthew Pottinger, the deputy national-security adviser. Pottinger is a former journalist in Beijing who subsequently joined the Marines, and he is known for his hawkish views on China. A senior official who served on the &lt;span class="caps"&gt;N.S.C.&lt;/span&gt; during the Obama Administration told me that it&amp;#8217;s unheard of for a deputy-level meeting to be held about a specific volunteer program. Peace Corps China cost $4.2 million in 2018, less than the State Department spent on the International Pacific Halibut Commission. &amp;#8220;If you are deputy national-security adviser, you should have much more important issues on your plate,&amp;#8221; the official said. &amp;#8220;Think about what&amp;#8217;s happening in November. Shouldn&amp;#8217;t he be meeting on&amp;nbsp;Iran?&amp;#8221;&lt;/p&gt;
-&lt;p&gt;The following month, Olsen submitted a letter to the Office of Management and Budget announcing that Peace Corps China would be closed. Olsen&amp;#8217;s letter noted that budgetary funds would be freed up for use in other places, mentioning three possible sites that don&amp;#8217;t currently have volunteers: the Solomon Islands, Vietnam, and Greenland. There has been speculation that these countries were named in order to appeal to various geopolitical interests within the Administration. The Solomon Islands would satisfy those hoping to counter China&amp;#8217;s influence in the Pacific, and a new program in Vietnam would fulfill the old idea of battling Communism. And Greenland because—well, because&amp;nbsp;Greenland.&lt;/p&gt;
-&lt;p&gt;The day that the closure was announced, I had dinner with one of the Peace Corps&amp;#8217;s Chinese staff members. The government no longer assigned people to these positions, and many of the thirty-plus staffers had applied hoping for better relations between China and the United States. They had largely given up the opportunity for social-security benefits in order to work for the American agency, whose status meant that some staff had difficulty applying for mortgages and credit cards. The woman I dined with asked me not to use her name, because the Peace Corps hadn&amp;#8217;t yet negotiated severance&amp;nbsp;packages.&lt;/p&gt;
-&lt;p&gt;The agency had informed staff and volunteers that China would be &amp;#8220;graduating&amp;#8221;—it was now so developed that it no longer needed Peace Corps teachers. But, the woman asked me, &amp;#8220;if that was the case, why were they trying to expand so recently?&amp;#8221; She added, &amp;#8220;It&amp;#8217;s like a divorce by one side,&amp;#8221; noting that the news came less than a week before the lunar New Year holiday. Back in the U.S., the Peace Corps had already invited scores of new volunteers to serve in the next China cohort; now those applicants had to be reassigned. Helen Lowman, a former Peace Corps regional director who organized the graduation of programs in Romania and Bulgaria in the past decade, told me that she had never heard of such an abrupt and chaotic decision to phase out a country. &amp;#8220;I probably talked to the host-country government for three years before we actually closed,&amp;#8221; she&amp;nbsp;said.&lt;/p&gt;
-&lt;p&gt;After dinner with the staff member, I met some volunteers at a hip bar called Commune. Such Communist chic wasn&amp;#8217;t part of the Chengdu landscape when I served, although other things remained recognizable as the Peace Corps experience. A couple of volunteers quietly brought their own beer in bags. For China 25, the monthly stipend was less than three hundred&amp;nbsp;dollars.&lt;/p&gt;
-&lt;p&gt;An African-American woman named Khloe Benton told me that she had been posted to a site in Gansu that had few foreign residents. &amp;#8220;It&amp;#8217;s been hard,&amp;#8221; she said. &amp;#8220;People follow me around, and they say things.&amp;#8221; But she believed that it was important for locals to meet a person of color. The Peace Corps had told volunteers that they would finish out their terms, and they tried to cheer one another&amp;nbsp;up.&lt;/p&gt;
-&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;You know why they lied to us,&amp;#8221; another woman said, referring to the political pressure. &amp;#8220;They didn&amp;#8217;t have a&amp;nbsp;choice.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;Eleven days later, the coronavirus caused the evacuation of all China volunteers. The same thing had happened with sars, in 2003, but the Peace Corps had returned the following year. This time, the program was finished—the last micro-history belonged to China 25. The volunteers had spent a little more than six months in the&amp;nbsp;country.&lt;/p&gt;
-&lt;p&gt;One official in the State Department told me there were rumors that the White House had threatened the Peace Corps with budget cuts if it didn&amp;#8217;t end the China program. When I asked Rick Scott, he said that he didn&amp;#8217;t know how the Administration had made the decision, although he described his meetings with Jody Olsen and other Peace Corps officials. &amp;#8220;I said, &amp;#8216;What I&amp;#8217;ve been told is that the volunteers who are there, they don&amp;#8217;t coördinate anything with the State Department, they don&amp;#8217;t promote American values, they don&amp;#8217;t promote capitalism,&amp;#8217; &amp;#8221; Scott said. I asked if he had received the materials about return on investment, and whether they included such information as the number of volunteers who became&amp;nbsp;diplomats.&lt;/p&gt;
-&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;I asked the Peace Corps about that,&amp;#8221; Scott said. &amp;#8220;They didn&amp;#8217;t know of one person who had ever gone to the State Department from the Peace&amp;nbsp;Corps.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;I said that twenty-seven former China volunteers now work in the State Department, and asked if this knowledge might have changed his mind. &amp;#8220;I&amp;#8217;d have to get more information,&amp;#8221; he said, adding that the Peace Corps hadn&amp;#8217;t been forthcoming. I had no way of checking this, because the Peace Corps and Olsen ignored multiple requests for an&amp;nbsp;interview.&lt;/p&gt;
-&lt;p&gt;It occurred to me that this would have been a good follow-up lesson to our Fuling lectures about American democracy. In the nineties, we had known that the Chinese could cancel the program at any time. It had seemed a small miracle that local colleges were somehow able to communicate to high-level conservatives that Peace Corps teachers were worth the&amp;nbsp;risk.&lt;/p&gt;
-&lt;p&gt;A woman speaks in front of cameras on a romantic reality &lt;span class="caps"&gt;TV&lt;/span&gt; show. 
-&amp;#8220;These days, it&amp;#8217;s nearly impossible to meet a hot sociopath the old-fashioned way.&amp;#8221;
-Cartoon by Emily Bernstein
-Twenty years later, though, the Americans had discussed nothing openly, and Peace Corps administrators must have been either so frightened or so incompetent that they hadn&amp;#8217;t defended themselves. The ideas that inspired &amp;#8220;The Ugly American&amp;#8221;—the importance of grassroots and local knowledge—had been abandoned. During our conversation, Scott acknowledged that he and his staff had not spoken with any current or former China&amp;nbsp;volunteers.&lt;/p&gt;
-&lt;p&gt;The old confidence had also vanished. It seemed part of a larger American trend: every foreign contact was a threat, every exchange was zero-sum. Instead of trusting themselves and their best models, people regressed to the paranoia of those with closed systems. In the Washington Examiner, a conservative magazine, Tom Rogan celebrated the end of Peace Corps China. When Rogan mentioned the Chinese Ministry of State Security, he probably had no idea how much he sounded like a ministry&amp;nbsp;hack:&lt;/p&gt;
-&lt;p&gt;We must thus ask how many of the more than 1,300 previous volunteers in China may have been recruited by the &lt;span class="caps"&gt;MSS&lt;/span&gt; during their time there. The number is likely very small, but unlikely to be zero. How many of those volunteers then returned home to take up employment in the State Department or another &lt;span class="caps"&gt;U.S.&lt;/span&gt; government&amp;nbsp;agency?&lt;/p&gt;
-&lt;p&gt;In January, I visited Fuling with my family, and one afternoon we went to the former campus. It had been abandoned after the expanded college opened, up the Yangtze. Last year, developers started tearing down the old campus in order to construct high-rise&amp;nbsp;apartments.&lt;/p&gt;
-&lt;p&gt;The classroom building was already gone, but my former apartment still stood. The library was also intact, although its doors were chained shut and many windows were broken. In front of the ruined building, a faded red banner proclaimed another tone-deaf&amp;nbsp;slogan:&lt;/p&gt;
-&lt;p&gt;Build Nationwide Civilized City and National Hygienic&amp;nbsp;Area&lt;/p&gt;
-&lt;p&gt;I Am Aware, I Participate, I Support, I Am&amp;nbsp;Satisfied&lt;/p&gt;
-&lt;p&gt;While we were there, a man called out my Chinese name. He introduced himself as a former colleague who was also visiting the campus before it was demolished. Suddenly, I recognized him—in the old days, he sometimes came to my apartment late at night to borrow banned books. In front of the shuttered library, he said, &amp;#8220;I remember reading about the Cultural Revolution.&amp;#8221; I asked if the authorities had warned him about associating with the Americans, and he smiled shyly. &amp;#8220;It wasn&amp;#8217;t that direct,&amp;#8221; he said. &amp;#8220;But we were&amp;nbsp;careful.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;I hadn&amp;#8217;t known him or his colleagues as well as I knew our students. In my first book, I mentioned the surreptitious visits from the man and a few others. I described them as &amp;#8220;shadowy figures who seemed to be groping for something that couldn&amp;#8217;t be found in&amp;nbsp;Fuling.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;Twenty years later, much remained in the shadows. I didn&amp;#8217;t know what the teacher had gained from the banned books, or how my students were changed by our classes. But, as time passed, I was impressed by how much people remembered. &amp;#8220;We were all poor at that time, we were eager to learn,&amp;#8221; a student named Andi wrote recently, mentioning some school supplies that Adam had loaned her class. The accumulation of these small moments added up to something larger, but it wasn&amp;#8217;t a formal accounting. That was a teacher&amp;#8217;s confidence—confidence in his material, but also confidence in his students. They could make their own decisions about how they applied their&amp;nbsp;lessons.&lt;/p&gt;
-&lt;p&gt;One evening, I spoke by telephone with Gabriel Exposito, a twenty-two-year-old who was among the last people to receive invitations to Peace Corps China. Exposito grew up in Havana, where one of his school memories involved a visit by a group of Americans. The children were instructed to avoid the foreigners, who made a donation that was spirited away by Communist officials. Exposito&amp;#8217;s father eventually fled to Florida, where he found work as a nurse. He brought his son over from Cuba at the age of eleven. Exposito graduated cum laude from Florida State University, and when he applied to the Peace Corps he requested&amp;nbsp;China.&lt;/p&gt;
-&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;I know what a Communist education is like,&amp;#8221; Exposito told me. &amp;#8220;I was the student who wasn&amp;#8217;t allowed to ask the hard questions. I saw the foreigners and couldn&amp;#8217;t interact with them. I wanted to be on the other side of&amp;nbsp;that.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;He was shocked to learn by tweet of the China program&amp;#8217;s closure, and as a Floridian he called the offices of Senators Rubio and Scott to complain. He told staffers, &amp;#8220;I agree with you—the Communist Party is a hostile entity. But we are breaking down the image they build of the American&amp;nbsp;people.&amp;#8221;&lt;/p&gt;
-&lt;p&gt;He requested a reassignment to a former Communist state, and the Peace Corps offered Mongolia, the Kyrgyz Republic, and Moldova. Exposito chose Moldova. &amp;#8220;I thought, This is a former Soviet republic that&amp;#8217;s next to Ukraine,&amp;#8221; he said. &amp;#8220;It&amp;#8217;s an area that&amp;#8217;s often forgotten about.&amp;#8221; He had started studying Russian, and he hoped to eventually become either a scholar or a diplomat; I wished him the best of luck. He would have been perfect for China 26.&amp;nbsp;♦&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="_6"&gt;所以&lt;a class="headerlink" href="#_6" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;但行好事&lt;/span&gt;
-&lt;span class="n"&gt;莫问前程&lt;/span&gt;
-&lt;span class="n"&gt;好好学习&lt;/span&gt;
-&lt;span class="n"&gt;天天向上&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;这儿的 &lt;code&gt;好&lt;/code&gt;, 是四声,&amp;nbsp;自己喜欢的事儿.&lt;/p&gt;
-&lt;p&gt;什么是不惑?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;从心所欲不逾距&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;也就是说, 将欲望本身进行 hacking ,&amp;nbsp;从源头清除可能触发和谐的念头.&lt;/p&gt;
-&lt;p&gt;那么,&amp;nbsp;具体怎么作呢?&lt;/p&gt;
-&lt;p&gt;这是另外一个系列的嗯哼了&amp;#8230;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;豆列:&lt;a href="https://www.douban.com/doulist/119293075/"&gt;蟒营™101.camp&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;文中链接感谢&lt;a href="https://linux.cn/static/tools/a.html"&gt;&amp;#8220;文章助手&amp;#8221;的助手&lt;/a&gt; 的支持,
-(来自 &lt;a href="(https://linux.cn/article-11850-1.html)"&gt;LINUX中国&lt;/a&gt;&amp;nbsp;的小应用)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;点击, 将自动跳入小应用,&amp;nbsp;并复制链接到剪贴板&lt;/li&gt;
-&lt;li&gt;然后, 打开浏览器, 复制到地址栏,&amp;nbsp;就能访问了&lt;/li&gt;
-&lt;li&gt;好处,&amp;nbsp;避开了微信内置特殊浏览器的有关屏蔽策略&lt;/li&gt;
-&lt;li&gt;问题, 操作复杂了, 要打开手机上的浏览器,&amp;nbsp;如果在桌面微信则无法使用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class="caps"&gt;JD&lt;/span&gt; 下单链接 -&amp;gt; 点击后再打开浏览器复制到地址栏访问 -&amp;gt;&amp;nbsp;俺能获得少许佣金:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://union-click.jd.com/jdc?e=&amp;amp;p=AyIGZRNdEgMTDlEbXCUHEANXGlgSCxsOUysfSlpMWGVCHlBDUAxLBQNQVk4YCQQAQB1AWQkFHUVBRhkSQw9THUJVEEMFSgxUVxZPI0AOFwVRGVoWBRsOXB1rC2RaQQNlDEFhZ0NcT159dhtGKX5bUw4eN1QrWxQDEQVWGFkXBSI3VRxrVGwXBl0cXiUDIgdRElkdBxIAUxhcFwsiAFUSa35cTFs1XwNBRyI3ZRhrJTISN1YrGXsBQVcFElNCARMPAU5eEVIVD1wfDxMDFQcBTwkQVkJXUytZFAMWDg%3D%3D"&gt;寻路中国&amp;amp;江城(共2册)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://union-click.jd.com/jdc?e=&amp;amp;p=AyIGZRtdHAARD10fXBwyFQBWGVocAxsHURJrUV1KWQorAlBHU0VeBUVNR0ZbSkdETlcNVQtHRVNSUVNLXANBRA1XB14DS10cQQVYD21XHgBSGFkUCxMOVR9SJXxoYQYFM3NQcAcNYlxWB1RAI0sNXXIeC2UaaxUDEwRXGFgXABU3ZRtcJUN8AVweWBUGIgZlG18cABoCVR1cEgoXAmUcWxwyeVkLRztRWkZCZStrFjIiN1UrWCVAfAZdE1gcURdSBR4JFgcUAFdLCBYFQFBUGwkQAhoEBkkOJQATBlES"&gt;东北游记 (美)迈克尔·麦尔(Michael Meyer)&amp;nbsp;著&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://union-click.jd.com/jdc?e=&amp;amp;p=AyIGZRtSEgMWAFMZWxQyEQBXH10QCxYEUB5rUV1KWQorAlBHU0VeBUVNR0ZbSkdETlcNVQtHRVNSUVNLXANBRA1XB14DS10cQQVYD21XHgRSGV8TBxsDVh5eJQoRAyF6KHJwcnsBYTpqUm9nHBgrRmIeC2UaaxUDEwRXGFgXABU3ZRtcJUN8AFAeXh0yEzdVH1IXChcHXBpZFwUUN1IbUiVpTFkJex9NVlc3ZStYJTIiB2UYa1dsQAUCGAlAAhUPXU8LEAMRAgVIXkUHFVBST1gUUhMPUUxrFwMTA1w%3D"&gt;长乐路 译文纪实 傅姨的快速致富计划 纪实文学&amp;nbsp;人物传记&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&amp;#8230;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3949&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;好文笔,感叹号年度配额: &lt;strong&gt;1/3&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;ZoomQuiet/&lt;strong&gt;&lt;a href="https://mp.weixin.qq.com/s/N5TuRRbF485D4Q90XdDA7g"&gt;大妈&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;就是四处 &lt;code&gt;是也乎,(￣▽￣)&lt;/code&gt; 的那个&lt;a href="https://mp.weixin.qq.com/s/N5TuRRbF485D4Q90XdDA7g"&gt;大妈&lt;/a&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;私自嗯哼&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ZoomQuiet&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ZoomQuiet42&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;公开课程&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;蟒营&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Mainium&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;全国大会&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;PyChina&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;PyChinaOrg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;本地社区&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
-    &lt;span class="n"&gt;GDG珠海&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;GDG&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ZhuHai&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;TFUG珠海&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ZH_TFUG&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;历史吐糟&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Chaos42&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt; &lt;span class="n"&gt;PythoniCamp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;hr&gt;</content><category term="MurMur"></category><category term="ann"></category><category term="define"></category><category term="logging"></category></entry><entry><title>钩陈/ 什么是程序媛?</title><link href="https://blog.zoomquiet.io/oldtouch-codeing-lady-380s.html" rel="alternate"></link><published>2020-03-04T14:42:00+08:00</published><updated>2020-03-08T15:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-04:/oldtouch-codeing-lady-380s.html</id><summary type="html">&lt;p&gt;OldTouch/ zoomquiet personal define Code Lady by self&amp;nbsp;story&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;009&lt;/strong&gt;篇原创&lt;/p&gt;
+&lt;hr&gt;</content><category term="MurMur"></category><category term="IMHO"></category><category term="DNS"></category><category term="logging"></category></entry><entry><title>钩陈/ 什么是程序媛?</title><link href="https://blog.zoomquiet.io/oldtouch-codeing-lady-380s.html" rel="alternate"></link><published>2020-03-04T14:42:00+08:00</published><updated>2020-03-08T15:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-04:/oldtouch-codeing-lady-380s.html</id><summary type="html">&lt;p&gt;OldTouch/ zoomquiet personal define Code Lady by self&amp;nbsp;story&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;009&lt;/strong&gt;篇原创&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;普通程序老猿一则回忆痕迹&amp;#8230;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -706,7 +551,260 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="logging"></category></entry><entry><title>钩陈/ 被jianshu认证了</title><link href="https://blog.zoomquiet.io/oldtouch-historic-jianshu-end.html" rel="alternate"></link><published>2020-02-27T10:42:00+08:00</published><updated>2020-03-05T15:43:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-02-27:/oldtouch-historic-jianshu-end.html</id><summary type="html">&lt;p&gt;OldTouch/ zoomquiet blocked by jiansho for &lt;span class="caps"&gt;NULL&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;005&lt;/strong&gt;篇原创&lt;/p&gt;
+&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="logging"></category></entry><entry><title>呢喃/ 20.3</title><link href="https://blog.zoomquiet.io/200301-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2020-03-01T20:42:00+08:00</published><updated>2021-07-25T20:47:17+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-01:/200301-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2020.3&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-20203"&gt;呢喃 at 2020.3&lt;a class="headerlink" href="#at-20203" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不为什么,&amp;nbsp;就这么开始了日历卡连载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="200301" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.002.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200302" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.003.jpeg"&gt;
+选择什么内容放在日历卡上?
+历史上的今天, 是理工直男的自然选择了;
+真正开始制作和选择, 才发现自己真正的兴趣偏爱&amp;#8230;
+真的是只有开始尝试, 才能慢慢发现如何作好的方式.
+争取能坚持发布大妈日历卡, 作到 有用/有趣/有种&amp;nbsp;一种以上?&lt;/p&gt;
+&lt;p&gt;是也乎,(￣▽￣)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200303" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.004.jpeg"&gt;
+图片限制就是 Twitter 的140字, 比纯文本的500字要小很多;非常象命题作文;-)
+这几天都在想, 38节所在月份, 蟒营™Python 入门班应该以什么力度来表示? 最后决定:
+凡是女生, 全部优惠 380 元
+只是,&amp;nbsp;报名表功能所限先付费再退惠&lt;/p&gt;
+&lt;p&gt;是也乎,(￣▽￣)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200304" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.005.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;伊能 静, 当年那盘专辑 &amp;#8220;19岁的最后一天&amp;#8221;, 连续听了半年, 生生听掉了磁粉;
+从那之后, 才接触到了流行音乐, 并进一步探索到 Bach&amp;nbsp;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200305" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.006.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3942&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;很小就因为姓周而自豪 -&amp;gt; 因为总理;
+也同时因为姓周而被 Bullying -&amp;gt; 因为课本中的地主 &amp;#8220;周扒皮&amp;#8221;;
+只是,现在回想, 也正是因为周姓出过这么多名人, 导致不由从小对自己就有自信,
+从而在各种事情上都能作的不差&amp;#8230;
+所以,&amp;nbsp;信心比能力重要.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200306" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.007.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3944&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;周5总是最忙, 因为大家都想着明天开始有两天休息了, 
+所以, 今天就可以多作些事儿,于是特别爱开会, 而且是长会;
+结果, 积累了一周的劳累, 最后一晩还 double 了, 
+导致周六根本起不来, 连带周日也没精神出来玩,&amp;nbsp;这就是经典的报复性工作.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200307" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.008.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3944&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;昨天 王佩 老师的写作班, 布置作业是要采访同学, 并用 &amp;#8220;意象阶梯&amp;#8221; 手法来尝试阐述;
+直觉想去了解的同学, 其实就是自己&amp;#8230;
+因为, 一个人, 最难又最应该了解的其实, 一直是自己;
+可这事自古就没什么好办法;
+通过持续写作来逐渐逼近自己,&amp;nbsp;最靠谱.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200308" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.009.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3946&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;妇女节是一个多世纪前美国女工大罢工而争取到的,
+那么今天 女神/女王节 呢?
+想来是我国长期男女比例失调引发的社会情绪咯?
+但是,&amp;nbsp;俺更信圣贤曰过的:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;因爱生怖&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;只有真正爱入心髓, 才会怕失去.&amp;nbsp;这次疫情主动隔离了一个月,全家人扎实的腻在一起&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200309" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.010.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3947&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;昨天蟒营™课程直播, 往期学员/现在助教, 分享 &lt;span class="caps"&gt;TA&lt;/span&gt; 当时持续崩溃的体验;
+才发现, 原来自己乐于帮助初学者入门, 
+是因体验到那种微小的推动, 却完成一个学习者的形成, 
+这种成就感如同亲手引爆了一个全新宇宙的诞生;&amp;nbsp;编程真是0-&amp;gt;1级别的跃迁啊.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200310" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.011.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3947&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;周末 王佩 老师写作班布置任务是相互采访, 再用古典文体描述最有趣的那位同学;
+俺被投票指定为小组被采访对象; 快速直觉的42分钟对谈中,听到自己说的那些,才发现:
+原来, 从来就没长大过, 依旧是那个乐于站书摊前几小时蹭完最新漫画的中二少年&amp;nbsp;;-)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200311" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.012.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3934&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;, 嗯哼?不觉中就两年了..当初..讨论&amp;#8230;导致&amp;#8230;移民..
+俺也承诺家里领导要一起过活至少250年的;
+所以, 时间到底什么重要? &amp;#8230;普通人, 当然只关注过日子而已&amp;#8230;.
+(￣▽￣)发布时就有预感了&amp;#8230;原版可以去 t.cn/A6zyHiUK&amp;nbsp;看&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200312" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.014.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3950&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;嗯哼? 最近 MurMur 的比较多呵&amp;#8230;今天这卡, 不知道是否触发什么&amp;#8230;
+每一个具体的一天,放宽到人类历史中, 真的什么事儿都可能发生.
+但是, 对于普通人还是眼前的日子最重要;
+也只有历史自觉的人, 才会为后代着想,从而&amp;nbsp;对环境/生态/..担心.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200313" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.015.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3951&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;发现日常节奏非常容易被击破:
+这几天发现BUKA没食欲,而且会从窗台上滑落在地, 这对猫而言太不正常了;
+抱到医院一验, 肌酐指数超过正常十几倍, 基本肾衰竭&amp;#8230;
+对11岁的老喵,也只能当活马试一下,&amp;nbsp;点滴/保温/流食/&amp;#8230;标准流程下来,半天就没了.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200314" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.016.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3952&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可能叕触发什么..但是, 一点儿文字关联不上吧-(
+昨天又意外支出小半天来研究推拉门的锁扣..阳台上的坏了,机智的想到将书房不常用那一侧相同型号的拆下来去替换;结果没想明白怎么折, 劲儿用大了居然从中断裂;&amp;nbsp;去小区门口五金店一问居然没卖的..半天就过去了.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200315" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.017.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3953&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Indie Hacker 最常见困扰之一, 就是家务; 相比职场中各种形式会议对思考的中断, 家务更象宿命, 无法逃避; 不过, 换种形式来管理家务却又可以当成一种身体锻炼及亲子活动; 可能技巧就是~ 0: 提前约定/1: 定期进行/2: 共同执行&amp;nbsp;;-)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200316" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.018.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3954&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;很久前大妈曾经总结: 项目所有失败经验都来自公司, 所有成功体验都来自社区;
+没想到一语成谶, 至今也没突破了&amp;#8230;
+想想, 可能是社区项目没什么功利心, 大家只是单纯一心想将事儿作成;
+另外, 沟通时对事不对人, 在社区中也是自然状态;&amp;nbsp;其它场景中难矣.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200317" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.019.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt; 3955
+上周自怼圈例会触发新运动: &lt;span class="caps"&gt;W2W&lt;/span&gt; ~ 以文唤文;
+Writing to Writing ..&amp;nbsp;有点儿象杂志约稿:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;列出想写选题&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="err"&gt;大家投票&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;发布提案通告结果&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;主笔发布初稿&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;召唤对应唤稿&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;唤稿一则以上&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;才联合发布,&amp;nbsp;好玩;-)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200318" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.020.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3956&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;特选事件-&amp;gt;长达146年的巡回演出, 就是想提醒坚持的力量;
+蟒周刊从12年2月开始, 坚持整整8年了, 已经变成习惯;
+各种社区的发起/运营/管理/推广/&amp;#8230;也已经是习惯;
+只是, 哪种习惯能引发持续作品输出? 现在开始得多想想.&amp;nbsp;日历卡嘛&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200319" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.021.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3957&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;A.C.&lt;/span&gt;Clarke 是俺最敬佩的科幻作家, 有关科技和魔法的关系就是他断言的;
+刚好在刷&amp;#8221;西部世界&amp;#8221;当年电影版记忆中主要是惊悚, 
+&lt;span class="caps"&gt;HBO&lt;/span&gt; 则创造性在原故事框架中, 注入大尺度时间, 以及 &lt;span class="caps"&gt;AI&lt;/span&gt; 生命等因素后,
+成功变成神剧,&amp;nbsp;不得不真诚担心烂尾了..&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200320" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.022.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3958&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;去年大片 Alita:战斗天使 其实是失望的, 和30年前原著相比, 电影无法传达那种细致的人文背景, 好比 风之谷 电影也根本无法展现原著漫画的宏大世界;
+经常向朋友推荐日本科幻漫画, 可惜成年后几乎没成功过, 为什么?
+嗯哼,&amp;nbsp;这个问题很值得探讨呢..&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200321" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.023.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3959&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之前触发的 &lt;span class="caps"&gt;W2W&lt;/span&gt;/以文唤文 运动, 没想到日历卡也能唤发;
+昨天借 &lt;span class="caps"&gt;GUNNM&lt;/span&gt; 作者生日呢喃了一下, 立即有网友说早有存稿,
+并授权发布,多谢哉;-)
+向成人推荐最难在要给出理由; 其实只是没时间没心情真来阅读..
+不过,也证明W2W有效果,&amp;nbsp;一起来唤哈&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200322" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.024.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3960&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从09年接触DUKU到今天, 发现越来越同步老六的各种断言;
+从作品选择倾向是有用/趣/种;
+到现在日历卡事件的选择, 发现和 &lt;span class="caps"&gt;DK&lt;/span&gt;-14 上海现场分享的关注点一致:
+奠基/建设/重生
+历史事件/人物/..太多, 但最触动的还是这三类;&amp;nbsp;对大家呢?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200323" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.025.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3961&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不觉中 Google 变成正式英文动词并从大陆消失, 已整整10年;
+虽然透过各种渠道还在持续影响着我们, 
+但私以为,  Google 对大家最大的改变还是
+-&amp;gt;促使我们对 &lt;span class="caps"&gt;TCP&lt;/span&gt;/&lt;span class="caps"&gt;IP&lt;/span&gt; 协议有了集体的深入研究,&amp;nbsp;发现/展/明/..各种科学嗯嗯姿势Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200324" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.026.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3960&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;BUKA&lt;/span&gt; 熬了四周终于还是离开人间.
+作为纯种折耳兰喵,活了近12年, 也算是喜丧了;
+走的很平静, 没什么上吐下泄的糟心事;
+肾衰竭, 自行断食断水逐渐干枯到寂灭, 难以想象那种越来越无力的晕沉感;
+但又舍不得直接安乐,&amp;nbsp;唉&amp;#8230;愿上苍保祐她下一世更好&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200325" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.027.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3963&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Indie Hacker 最大的困难是什么?
+太容易令自己忙到没空思考; 
+为什么? 因为收入压力, 不得不想多作点儿,
+可作的事儿是否有利收入增长?
+难以判定, 甚至八成没用, 所以害怕去分析;
+下意识找各种能作的事儿, 忙到没空去想;&amp;nbsp;那么,慢慢来..&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200326" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.028.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3964&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;三毛,不是漫画那位(当然作家三毛是和漫画三毛认了亲咯)
+当年可真的风靡全球华人啊;
+俺也无法免俗, 所有作品都刷过, 那篇 导向自由的律令 非常触动,一直推荐;
+其实最有共鸣的还是她周游四海记录真人真事真感受的洒脱;&amp;nbsp;以及非常传奇的家庭生活,太羡慕&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200327" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.029.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3964&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;昨天有关三毛的呢喃诱发W2W:
+什么是精神独立?
+W2W就是以文唤文: 抛弃无脑点赞,用文章唤取文章;
+很多人怕自己写不出, 其实只有开始写才知道如何写成;
+何况: 写作本身就是写作最好的回报;&amp;nbsp;投稿邮箱:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;askdama@googlegroups.com&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="200328" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.030.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3966&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天写作班论及修辞中隐喻技巧, 原以为是高深大巧;
+但回过神儿来才惊觉, 现在网络中不用隐喻基本无法正常发言的吧?
+比如, 这次 &lt;span class="caps"&gt;COVID&lt;/span&gt;-19 爆发, 所有学校老师被网课, 基本都被自动判定非法内容,
+得专门人工配置开绿灯才能恢复教学.&amp;nbsp;地命海心&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200329" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.031.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3867&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;COVID&lt;/span&gt;-19 被爆发, 各社区不得不将以往线下活动迁移到线上;
+但是, 光直播/会议平台的选择就足以令组织者崩溃几次;
+12年在豆瓣公司现场组织两天的黑客松时,用 join.me 共享屏幕+&lt;span class="caps"&gt;QQ&lt;/span&gt; 群语音直播;
+现在统一 zoom Pro. 帐号,&amp;nbsp;爽.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200330" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.032.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3968&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;昨夜首次尝试前后两期学员混合在一起网络直播,
+就象偏远山区学校中一间教室所有年级滚动式上课一般;
+结果发现, 体验不错, 非常象印度&amp;#8221;墙中洞&amp;#8221;教学实验中发现的 &lt;span class="caps"&gt;SOLE&lt;/span&gt; 状态;
+&lt;span class="caps"&gt;AKA&lt;/span&gt; 原则是可以包含课程其它期的呢.
+因为,&amp;nbsp;这是真正意义上的薪火相传&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200331" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.033.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3969&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;程序猿一有钱就想折腾什么? 装备哉.
+键盘是重灾区, 理由很正义: 
+吃饭的家伙, 每天陪伴自己超过10小时, 比老婆都亲的家什, 当然得认真.
+相同的理由还会投射到:人体工程学椅/路由器/显示器/办公桌/游戏手柄/眼镜/..&amp;nbsp;好在都还算是些耐用品&amp;#8230;&lt;/p&gt;</content><category term="MurMur"></category><category term="ann"></category><category term="define"></category><category term="logging"></category></entry><entry><title>钩陈/ 被jianshu认证了</title><link href="https://blog.zoomquiet.io/oldtouch-historic-jianshu-end.html" rel="alternate"></link><published>2020-02-27T10:42:00+08:00</published><updated>2020-03-05T15:43:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-02-27:/oldtouch-historic-jianshu-end.html</id><summary type="html">&lt;p&gt;OldTouch/ zoomquiet blocked by jiansho for &lt;span class="caps"&gt;NULL&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;005&lt;/strong&gt;篇原创&lt;/p&gt;
 &lt;h1 id="jianshu"&gt;钩陈/ 被jianshu认证了&lt;a class="headerlink" href="#jianshu" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;普通老程序猿一则事件回响&amp;#8230;&lt;/p&gt;
@@ -3118,7 +3216,7 @@ django项目的文件超过数百个了 ‘
 &lt;li&gt;2d 冷静&lt;/li&gt;
 &lt;li&gt;.5h 实施&lt;/li&gt;
 &lt;li&gt;.5h 文档嗯哼…&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="MAC"></category><category term="Livin"></category><category term="SCM"></category><category term="subl"></category></entry><entry><title>Python 列表为毛从0开始索引?</title><link href="https://blog.zoomquiet.io/131023-why0base-indexing-python.html" rel="alternate"></link><published>2019-03-23T00:00:00+08:00</published><updated>2020-05-31T16:48:03+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-03-23:/131023-why0base-indexing-python.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="Livin"></category><category term="SCM"></category><category term="subl"></category></entry><entry><title>Python 列表为毛从0开始索引?</title><link href="https://blog.zoomquiet.io/131023-why0base-indexing-python.html" rel="alternate"></link><published>2019-03-23T00:00:00+08:00</published><updated>2020-05-31T16:48:03+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2019-03-23:/131023-why0base-indexing-python.html</id><summary type="html">
 &lt;p&gt;&lt;a href="https://plus.google.com/115212051037621986145/posts/YTUxbXYZyfi"&gt;I was asked on Twitter why Python uses 0-based indexing,…&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;老爹当年也很是积累使用 G+ 的,
 公开回答了很多价值问题… 能看一眼少一眼了…&lt;/p&gt;
@@ -3951,7 +4049,7 @@ $ killall SystemUIServer
 &lt;li&gt;iPic 获得一个稳定 &lt;span class="caps"&gt;HTTPS&lt;/span&gt; 入口&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="MAC"></category><category term="Livin"></category><category term="SCM"></category><category term="SSL"></category></entry><entry><title>L10E01🐙/ 红黄蓝~虐童战纪</title><link href="https://blog.zoomquiet.io/180501-L10E01-ryb-wars.html" rel="alternate"></link><published>2018-05-01T20:42:00+08:00</published><updated>2020-07-19T12:26:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2018-05-01:/180501-L10E01-ryb-wars.html</id><summary type="html">&lt;h1 id="l10e01"&gt;&lt;span class="caps"&gt;L10E01&lt;/span&gt;🐙红黄蓝 ~ 虐童战纪&lt;a class="headerlink" href="#l10e01" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="Livin"></category><category term="SCM"></category><category term="SSL"></category></entry><entry><title>L10E01🐙/ 红黄蓝~虐童战纪</title><link href="https://blog.zoomquiet.io/180501-L10E01-ryb-wars.html" rel="alternate"></link><published>2018-05-01T20:42:00+08:00</published><updated>2020-07-19T12:26:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2018-05-01:/180501-L10E01-ryb-wars.html</id><summary type="html">&lt;h1 id="l10e01"&gt;&lt;span class="caps"&gt;L10E01&lt;/span&gt;🐙红黄蓝 ~ 虐童战纪&lt;a class="headerlink" href="#l10e01" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;背景
 ~ 阐述 记录/问题/事件/&amp;#8230;&amp;nbsp;发生的背景&lt;/p&gt;
@@ -11487,7 +11585,7 @@ Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
 &lt;li&gt;160628 发布&lt;/li&gt;
 &lt;li&gt;160627 随笔&lt;/li&gt;
 &lt;li&gt;160626 开始&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="MAC"></category><category term="rMBP"></category><category term="DAMA"></category></entry><entry><title>最后的协议</title><link href="https://blog.zoomquiet.io/160619-protocol4dying.html" rel="alternate"></link><published>2016-06-19T21:12:21+08:00</published><updated>2020-01-31T16:42:10+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-06-19:/160619-protocol4dying.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="rMBP"></category><category term="DAMA"></category></entry><entry><title>最后的协议</title><link href="https://blog.zoomquiet.io/160619-protocol4dying.html" rel="alternate"></link><published>2016-06-19T21:12:21+08:00</published><updated>2020-01-31T16:42:10+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-06-19:/160619-protocol4dying.html</id><summary type="html">
 &lt;ul&gt;
 &lt;li&gt;来自: &lt;a href="https://www.facebook.com/notes/%E8%91%89%E4%BF%A1%E6%BA%90/%E8%87%A8%E7%B5%82%E5%8D%94%E5%AE%9Aa-protocol-for-dying/10153556546128601"&gt;臨終協定(A Protocol for Dying)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;原文: &lt;a href="http://hintjens.com/blog:115"&gt;A Protocol for Dying - Hintjens.com&lt;/a&gt;&lt;/li&gt;
@@ -12075,7 +12173,7 @@ value = next(iterator) …&lt;/p&gt;
 &lt;li&gt;160601 总结&lt;/li&gt;
 &lt;li&gt;160501 身动&lt;/li&gt;
 &lt;li&gt;160401 动心&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="MAC"></category><category term="SOHO"></category><category term="DAMA"></category></entry><entry><title>如何在 Leo 中协作?!</title><link href="https://blog.zoomquiet.io/how2collaborate-with-leo.html" rel="alternate"></link><published>2016-04-17T00:00:00+08:00</published><updated>2019-09-08T12:14:36+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-17:/how2collaborate-with-leo.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="SOHO"></category><category term="DAMA"></category></entry><entry><title>如何在 Leo 中协作?!</title><link href="https://blog.zoomquiet.io/how2collaborate-with-leo.html" rel="alternate"></link><published>2016-04-17T00:00:00+08:00</published><updated>2019-09-08T12:14:36+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2016-04-17:/how2collaborate-with-leo.html</id><summary type="html">
 &lt;h1 id="leo"&gt;Leo?&lt;a class="headerlink" href="#leo" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~ 嗯哼&lt;/p&gt;
 &lt;p&gt;研究什么是 Leo ? 非要一句话说清查的话,只能是:&lt;/p&gt;
@@ -13862,7 +13960,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
 &lt;li&gt;140505 快速简述完成&lt;/li&gt;
 &lt;li&gt;140110 起意,总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>[大妈吐糟] 虾米音乐的系列猜想</title><link href="https://blog.zoomquiet.io/150205-chaos-xiami.html" rel="alternate"></link><published>2015-02-05T19:42:00+08:00</published><updated>2020-07-19T12:19:35+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2015-02-05:/150205-chaos-xiami.html</id><summary type="html">&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>[大妈吐糟] 虾米音乐的系列猜想</title><link href="https://blog.zoomquiet.io/150205-chaos-xiami.html" rel="alternate"></link><published>2015-02-05T19:42:00+08:00</published><updated>2020-07-19T12:19:35+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2015-02-05:/150205-chaos-xiami.html</id><summary type="html">&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[大妈吐糟]&amp;nbsp;虾米音乐的系列猜想&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -15359,7 +15457,7 @@ is the style guide for Python code. Among other things, it directs that lines no
 &lt;li&gt;&lt;a href="http://michael.terretta.com/fix-to-remove-or-uninstall-macfuse-on-mountain-lion-when-you-get-the-error-macfuse-uninstaller-can-not-find-the-archive-dot-bom-for-macfuse-core-package-dot"&gt;Fix to remove or uninstall MacFuse on Mountain Lion when you get the error “MacFUSE Uninstaller: Can not find the Archive.bom for MacFUSE Core package.” - Crude Technologies&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://discussions.apple.com/message/18355704#18355704"&gt;how to remove macfuse and ntfs 3g on osx lion? | Apple Support Communities&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;… etc.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="MAC"></category><category term="sshfs"></category></entry><entry><title>寻路ing Guido van Rossum</title><link href="https://blog.zoomquiet.io/guido-finding-his-way.html" rel="alternate"></link><published>2014-09-21T13:13:13+08:00</published><updated>2019-09-08T12:14:36+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-21:/guido-finding-his-way.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="sshfs"></category></entry><entry><title>寻路ing Guido van Rossum</title><link href="https://blog.zoomquiet.io/guido-finding-his-way.html" rel="alternate"></link><published>2014-09-21T13:13:13+08:00</published><updated>2019-09-08T12:14:36+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-09-21:/guido-finding-his-way.html</id><summary type="html">
 &lt;p&gt;&lt;a href="https://medium.com/dropbox-makers/guido-van-rossum-on-finding-his-way-e018e8b5f6b1"&gt;Guido van Rossum on finding his way — Dropbox Makers — Medium&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;~ Python 缔造者,当前 Dropbox 工程师, 近期编程思考&lt;/p&gt;
 &lt;p&gt;Guido van Rossum 作为Python 的创造者,
@@ -16606,7 +16704,7 @@ _chaos/scrapbook_reDevRel.rdf
 &lt;p&gt;这样俺在 Leo 中写:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png"/&gt;&lt;/p&gt;
 &lt;p&gt;就可以一键生成为幻灯中的:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/&gt;&lt;/p&gt;</content><category term="MurMur"></category><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="https://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><published>2014-02-26T00:00:00+08:00</published><updated>2014-05-05T10:56:16+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:/livin-scrapbook.html</id><summary type="html">
+&lt;p&gt;&lt;img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/&gt;&lt;/p&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="S5"></category><category term="rst2s5"></category><category term="ZQ"></category></entry><entry><title>ScrapBook 生存指南</title><link href="https://blog.zoomquiet.io/livin-scrapbook.html" rel="alternate"></link><published>2014-02-26T00:00:00+08:00</published><updated>2014-05-05T10:56:16+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-02-26:/livin-scrapbook.html</id><summary type="html">
 &lt;p&gt;&lt;code&gt;7.7G    ZqFLOSS&lt;/code&gt; 复制改进后,为毛多了?!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;zoomq&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;MBP111216ZQ&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;KuaiPan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zScrapBook&lt;/span&gt;
 &lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hs&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
@@ -16705,7 +16803,7 @@ _chaos/scrapbook_reDevRel.rdf
 &lt;ul&gt;
 &lt;li&gt;140405 无解的快速总结&lt;/li&gt;
 &lt;li&gt;140217 开始回顾&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><published>2014-01-27T23:48:00+08:00</published><updated>2014-05-05T11:58:26+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:/cb3-howto-make-hmsrv.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>如何基于CB3构建家庭服务器</title><link href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html" rel="alternate"></link><published>2014-01-27T23:48:00+08:00</published><updated>2014-05-05T11:58:26+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-27:/cb3-howto-make-hmsrv.html</id><summary type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h1 id="issue"&gt;Issue&lt;a class="headerlink" href="#issue" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
@@ -17252,7 +17350,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;ul&gt;
 &lt;li&gt;140505 快速完结&lt;/li&gt;
 &lt;li&gt;140127 单立文章追踪&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>如何自在的折腾QPy</title><link href="https://blog.zoomquiet.io/init-my-qpy-env.html" rel="alternate"></link><published>2014-01-26T12:42:00+08:00</published><updated>2019-09-08T12:14:36+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-26:/init-my-qpy-env.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>如何自在的折腾QPy</title><link href="https://blog.zoomquiet.io/init-my-qpy-env.html" rel="alternate"></link><published>2014-01-26T12:42:00+08:00</published><updated>2019-09-08T12:14:36+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-26:/init-my-qpy-env.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python(中文版) (豆瓣)&lt;/a&gt; 时,发现竟然有 
 &lt;a href="http://code.google.com/p/android-scripting/"&gt;&lt;span class="caps"&gt;SL4A&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
@@ -17779,7 +17877,7 @@ See the error message above.
 &lt;h1 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;140119 开始总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="https://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><published>2014-01-11T00:00:00+08:00</published><updated>2014-01-27T23:56:50+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:/cbi-zq-install.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="RTFD"></category><category term="qiniu"></category><category term="triggered"></category></entry><entry><title>CBInstallfest 的体验</title><link href="https://blog.zoomquiet.io/cbi-zq-install.html" rel="alternate"></link><published>2014-01-11T00:00:00+08:00</published><updated>2014-01-27T23:56:50+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-11:/cbi-zq-install.html</id><summary type="html">
 &lt;h2 id="cbi"&gt;&lt;span class="caps"&gt;CBI&lt;/span&gt;&lt;a class="headerlink" href="#cbi" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://blog.zhgdg.org/2014-01/et-cbi1/"&gt;CBInstall.1 欢乐完成&lt;/a&gt; 记要了现场活动的情况;&lt;/p&gt;
 &lt;p&gt;当然,俺也是学员之一,要交作业的,所以,俺的刷机笔记如下:&lt;/p&gt;
@@ -18068,7 +18166,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;ul&gt;
 &lt;li&gt;140119 终于汇集了所有唠叨!&lt;/li&gt;
 &lt;li&gt;140111 开始总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>PythonisT happy guido ;-)</title><link href="https://blog.zoomquiet.io/140106-pycon2013tee-guido.html" rel="alternate"></link><published>2014-01-07T00:00:00+08:00</published><updated>2019-09-08T12:14:36+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-07:/140106-pycon2013tee-guido.html</id><summary type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="ZQ"></category></entry><entry><title>PythonisT happy guido ;-)</title><link href="https://blog.zoomquiet.io/140106-pycon2013tee-guido.html" rel="alternate"></link><published>2014-01-07T00:00:00+08:00</published><updated>2019-09-08T12:14:36+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-07:/140106-pycon2013tee-guido.html</id><summary type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;起初ZEUUX 作TEE 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;然后,就没有然后了&amp;#8230;&lt;/li&gt;
@@ -18295,7 +18393,7 @@ READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
 &lt;li&gt;140616 再次精简,算是发布&lt;/li&gt;
 &lt;li&gt;140505 快速简述完成&lt;/li&gt;
 &lt;li&gt;140110 起意,总结&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>On object-oriented programming</title><link href="https://blog.zoomquiet.io/131224-yw-on-oop.html" rel="alternate"></link><published>2013-12-24T00:00:00+08:00</published><updated>2020-01-31T16:42:10+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-24:/131224-yw-on-oop.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="Leo"></category><category term="Pyenv"></category><category term="ZQ"></category></entry><entry><title>On object-oriented programming</title><link href="https://blog.zoomquiet.io/131224-yw-on-oop.html" rel="alternate"></link><published>2013-12-24T00:00:00+08:00</published><updated>2020-01-31T16:42:10+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-24:/131224-yw-on-oop.html</id><summary type="html">
 &lt;h1 id="_1"&gt;翻越分享原文&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;via: http://yinwang0.wordpress.com/2013/12/24/on-object-oriented-programming/&lt;/li&gt;

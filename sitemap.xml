@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/index.html</loc>
-<lastmod>2021-07-20T17:16:28-00:00</lastmod>
+<lastmod>2021-07-25T20:52:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2021-07-20T17:16:28-00:00</lastmod>
+<lastmod>2021-07-25T20:52:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2021-07-20T17:16:28-00:00</lastmod>
+<lastmod>2021-07-25T20:52:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2021-07-20T17:16:28-00:00</lastmod>
+<lastmod>2021-07-25T20:52:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -60,15 +60,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.zoomquiet.io/imho-murmur-dns-sad-story.html</loc>
-<lastmod>2020-03-31T12:42:00+08:00</lastmod>
+<loc>https://blog.zoomquiet.io/200401-ZoomQuiet-MurMur-collection.html</loc>
+<lastmod>2021-07-25T20:50:48+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.zoomquiet.io/ann-murmur-farewell-peace-corps.html</loc>
-<lastmod>2020-03-11T23:55:00+08:00</lastmod>
+<loc>https://blog.zoomquiet.io/imho-murmur-dns-sad-story.html</loc>
+<lastmod>2020-03-31T12:42:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -83,6 +83,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.zoomquiet.io/ann-murmur-0.html</loc>
 <lastmod>2020-03-05T15:35:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/200301-ZoomQuiet-MurMur-collection.html</loc>
+<lastmod>2021-07-25T20:47:17+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -922,7 +929,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/category/murmur.html</loc>
-<lastmod>2020-03-31T12:42:00+08:06</lastmod>
+<lastmod>2021-07-25T20:50:48+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -943,7 +950,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/dama.html</loc>
-<lastmod>2020-07-25T10:43:30+08:06</lastmod>
+<lastmod>2021-07-25T20:50:48+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -977,6 +984,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.zoomquiet.io/tag/logging.html</loc>
+<lastmod>2021-07-25T20:50:48+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.zoomquiet.io/tag/imho.html</loc>
 <lastmod>2020-07-19T12:20:02+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -986,27 +1000,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.zoomquiet.io/tag/dns.html</loc>
 <lastmod>2020-03-31T12:42:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.zoomquiet.io/tag/logging.html</loc>
-<lastmod>2020-03-31T12:42:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.zoomquiet.io/tag/ann.html</loc>
-<lastmod>2020-03-11T23:55:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.zoomquiet.io/tag/define.html</loc>
-<lastmod>2020-03-11T23:55:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1028,6 +1021,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.zoomquiet.io/tag/history.html</loc>
 <lastmod>2020-03-08T15:42:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/tag/ann.html</loc>
+<lastmod>2021-07-25T20:47:17+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/tag/define.html</loc>
+<lastmod>2021-07-25T20:47:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1692,7 +1699,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2020-07-25T10:43:30+08:06</lastmod>
+<lastmod>2021-07-25T20:50:48+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

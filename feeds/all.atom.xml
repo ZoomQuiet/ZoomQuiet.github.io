@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2021-07-25T21:06:29+08:00</updated><entry><title>VNC回归轻松</title><link href="https://blog.zoomquiet.io/200704-easy-vnc.html" rel="alternate"></link><published>2020-07-04T19:42:00+08:00</published><updated>2020-07-25T10:43:30+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-07-04:/200704-easy-vnc.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;SCM&lt;/span&gt;/&amp;nbsp;跨平台桌面控制最纯粹和轻松的协议桟还是原生的好&amp;#8230;&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2021-07-25T21:13:47+08:00</updated><entry><title>VNC回归轻松</title><link href="https://blog.zoomquiet.io/200704-easy-vnc.html" rel="alternate"></link><published>2020-07-04T19:42:00+08:00</published><updated>2020-07-25T10:43:30+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-07-04:/200704-easy-vnc.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;SCM&lt;/span&gt;/&amp;nbsp;跨平台桌面控制最纯粹和轻松的协议桟还是原生的好&amp;#8230;&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;.&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;很早就有这种需求:&lt;/p&gt;
 &lt;p&gt;比如当年参与开发浏览器时,
@@ -555,28 +555,28 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="logging"></category></entry><entry><title>呢喃/ 20.3</title><link href="https://blog.zoomquiet.io/200301-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2020-03-01T20:42:00+08:00</published><updated>2021-07-25T20:47:17+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-01:/200301-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2020.3&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-20203"&gt;呢喃 at 2020.3&lt;a class="headerlink" href="#at-20203" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="logging"></category></entry><entry><title>呢喃/ 20.3</title><link href="https://blog.zoomquiet.io/200301-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2020-03-01T20:42:00+08:00</published><updated>2021-07-25T21:13:47+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-01:/200301-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2020.3&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-20203"&gt;呢喃 at 2020.3&lt;a class="headerlink" href="#at-20203" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不为什么,&amp;nbsp;就这么开始了日历卡连载&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img alt="200301" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.002.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200302" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.003.jpeg"&gt;
+&lt;p&gt;&lt;img alt="200301" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.002.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200302" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.003.jpeg"&gt;
 选择什么内容放在日历卡上?
 历史上的今天, 是理工直男的自然选择了;
 真正开始制作和选择, 才发现自己真正的兴趣偏爱&amp;#8230;
 真的是只有开始尝试, 才能慢慢发现如何作好的方式.
 争取能坚持发布大妈日历卡, 作到 有用/有趣/有种&amp;nbsp;一种以上?&lt;/p&gt;
 &lt;p&gt;是也乎,(￣▽￣)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200303" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.004.jpeg"&gt;
+&lt;p&gt;&lt;img alt="200303" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.004.jpeg"&gt;
 图片限制就是 Twitter 的140字, 比纯文本的500字要小很多;非常象命题作文;-)
 这几天都在想, 38节所在月份, 蟒营™Python 入门班应该以什么力度来表示? 最后决定:
 凡是女生, 全部优惠 380 元
 只是,&amp;nbsp;报名表功能所限先付费再退惠&lt;/p&gt;
 &lt;p&gt;是也乎,(￣▽￣)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200304" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.005.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200304" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.005.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;伊能 静, 当年那盘专辑 &amp;#8220;19岁的最后一天&amp;#8221;, 连续听了半年, 生生听掉了磁粉;
 从那之后, 才接触到了流行音乐, 并进一步探索到 Bach&amp;nbsp;&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200305" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.006.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200305" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.006.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3942&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -585,7 +585,7 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 只是,现在回想, 也正是因为周姓出过这么多名人, 导致不由从小对自己就有自信,
 从而在各种事情上都能作的不差&amp;#8230;
 所以,&amp;nbsp;信心比能力重要.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200306" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.007.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200306" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.007.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3944&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -593,7 +593,7 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 所以, 今天就可以多作些事儿,于是特别爱开会, 而且是长会;
 结果, 积累了一周的劳累, 最后一晩还 double 了, 
 导致周六根本起不来, 连带周日也没精神出来玩,&amp;nbsp;这就是经典的报复性工作.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200307" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.008.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200307" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.008.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3944&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -602,7 +602,7 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 因为, 一个人, 最难又最应该了解的其实, 一直是自己;
 可这事自古就没什么好办法;
 通过持续写作来逐渐逼近自己,&amp;nbsp;最靠谱.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200308" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.009.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200308" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.009.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3946&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -615,7 +615,7 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 
 
 &lt;p&gt;只有真正爱入心髓, 才会怕失去.&amp;nbsp;这次疫情主动隔离了一个月,全家人扎实的腻在一起&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200309" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.010.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200309" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.010.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3947&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -623,14 +623,15 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 才发现, 原来自己乐于帮助初学者入门, 
 是因体验到那种微小的推动, 却完成一个学习者的形成, 
 这种成就感如同亲手引爆了一个全新宇宙的诞生;&amp;nbsp;编程真是0-&amp;gt;1级别的跃迁啊.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200310" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.011.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200310" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.011.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3947&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;周末 王佩 老师写作班布置任务是相互采访, 再用古典文体描述最有趣的那位同学;
 俺被投票指定为小组被采访对象; 快速直觉的42分钟对谈中,听到自己说的那些,才发现:
 原来, 从来就没长大过, 依旧是那个乐于站书摊前几小时蹭完最新漫画的中二少年&amp;nbsp;;-)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200311" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.012.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200311" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.012.jpeg"&gt;
+&lt;img alt="200311-" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.013.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3934&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -638,7 +639,7 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 俺也承诺家里领导要一起过活至少250年的;
 所以, 时间到底什么重要? &amp;#8230;普通人, 当然只关注过日子而已&amp;#8230;.
 (￣▽￣)发布时就有预感了&amp;#8230;原版可以去 t.cn/A6zyHiUK&amp;nbsp;看&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200312" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.014.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200312" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.014.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3950&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -646,7 +647,7 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 每一个具体的一天,放宽到人类历史中, 真的什么事儿都可能发生.
 但是, 对于普通人还是眼前的日子最重要;
 也只有历史自觉的人, 才会为后代着想,从而&amp;nbsp;对环境/生态/..担心.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200313" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.015.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200313" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.015.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3951&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -654,18 +655,18 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 这几天发现BUKA没食欲,而且会从窗台上滑落在地, 这对猫而言太不正常了;
 抱到医院一验, 肌酐指数超过正常十几倍, 基本肾衰竭&amp;#8230;
 对11岁的老喵,也只能当活马试一下,&amp;nbsp;点滴/保温/流食/&amp;#8230;标准流程下来,半天就没了.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200314" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.016.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200314" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.016.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3952&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;可能叕触发什么..但是, 一点儿文字关联不上吧-(
 昨天又意外支出小半天来研究推拉门的锁扣..阳台上的坏了,机智的想到将书房不常用那一侧相同型号的拆下来去替换;结果没想明白怎么折, 劲儿用大了居然从中断裂;&amp;nbsp;去小区门口五金店一问居然没卖的..半天就过去了.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200315" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.017.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200315" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.017.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3953&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Indie Hacker 最常见困扰之一, 就是家务; 相比职场中各种形式会议对思考的中断, 家务更象宿命, 无法逃避; 不过, 换种形式来管理家务却又可以当成一种身体锻炼及亲子活动; 可能技巧就是~ 0: 提前约定/1: 定期进行/2: 共同执行&amp;nbsp;;-)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200316" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.018.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200316" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.018.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3954&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -673,7 +674,7 @@ M.Hamilton&amp;nbsp;&amp;#8230;&lt;/p&gt;
 没想到一语成谶, 至今也没突破了&amp;#8230;
 想想, 可能是社区项目没什么功利心, 大家只是单纯一心想将事儿作成;
 另外, 沟通时对事不对人, 在社区中也是自然状态;&amp;nbsp;其它场景中难矣.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200317" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.019.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200317" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.019.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt; 3955
 上周自怼圈例会触发新运动: &lt;span class="caps"&gt;W2W&lt;/span&gt; ~ 以文唤文;
@@ -688,7 +689,7 @@ Writing to Writing ..&amp;nbsp;有点儿象杂志约稿:&lt;/p&gt;
 
 
 &lt;p&gt;才联合发布,&amp;nbsp;好玩;-)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200318" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.020.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200318" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.020.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3956&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -696,7 +697,7 @@ Writing to Writing ..&amp;nbsp;有点儿象杂志约稿:&lt;/p&gt;
 蟒周刊从12年2月开始, 坚持整整8年了, 已经变成习惯;
 各种社区的发起/运营/管理/推广/&amp;#8230;也已经是习惯;
 只是, 哪种习惯能引发持续作品输出? 现在开始得多想想.&amp;nbsp;日历卡嘛&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200319" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.021.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200319" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.021.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3957&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -704,14 +705,14 @@ Writing to Writing ..&amp;nbsp;有点儿象杂志约稿:&lt;/p&gt;
 刚好在刷&amp;#8221;西部世界&amp;#8221;当年电影版记忆中主要是惊悚, 
 &lt;span class="caps"&gt;HBO&lt;/span&gt; 则创造性在原故事框架中, 注入大尺度时间, 以及 &lt;span class="caps"&gt;AI&lt;/span&gt; 生命等因素后,
 成功变成神剧,&amp;nbsp;不得不真诚担心烂尾了..&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200320" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.022.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200320" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.022.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3958&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;去年大片 Alita:战斗天使 其实是失望的, 和30年前原著相比, 电影无法传达那种细致的人文背景, 好比 风之谷 电影也根本无法展现原著漫画的宏大世界;
 经常向朋友推荐日本科幻漫画, 可惜成年后几乎没成功过, 为什么?
 嗯哼,&amp;nbsp;这个问题很值得探讨呢..&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200321" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.023.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200321" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.023.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3959&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -720,7 +721,7 @@ Writing to Writing ..&amp;nbsp;有点儿象杂志约稿:&lt;/p&gt;
 并授权发布,多谢哉;-)
 向成人推荐最难在要给出理由; 其实只是没时间没心情真来阅读..
 不过,也证明W2W有效果,&amp;nbsp;一起来唤哈&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200322" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.024.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200322" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.024.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3960&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -729,7 +730,7 @@ Writing to Writing ..&amp;nbsp;有点儿象杂志约稿:&lt;/p&gt;
 到现在日历卡事件的选择, 发现和 &lt;span class="caps"&gt;DK&lt;/span&gt;-14 上海现场分享的关注点一致:
 奠基/建设/重生
 历史事件/人物/..太多, 但最触动的还是这三类;&amp;nbsp;对大家呢?&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200323" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.025.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200323" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.025.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3961&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -737,7 +738,7 @@ Writing to Writing ..&amp;nbsp;有点儿象杂志约稿:&lt;/p&gt;
 虽然透过各种渠道还在持续影响着我们, 
 但私以为,  Google 对大家最大的改变还是
 -&amp;gt;促使我们对 &lt;span class="caps"&gt;TCP&lt;/span&gt;/&lt;span class="caps"&gt;IP&lt;/span&gt; 协议有了集体的深入研究,&amp;nbsp;发现/展/明/..各种科学嗯嗯姿势Orz&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200324" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.026.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200324" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.026.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3960&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -746,7 +747,7 @@ Writing to Writing ..&amp;nbsp;有点儿象杂志约稿:&lt;/p&gt;
 走的很平静, 没什么上吐下泄的糟心事;
 肾衰竭, 自行断食断水逐渐干枯到寂灭, 难以想象那种越来越无力的晕沉感;
 但又舍不得直接安乐,&amp;nbsp;唉&amp;#8230;愿上苍保祐她下一世更好&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200325" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.027.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200325" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.027.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3963&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -756,7 +757,7 @@ Writing to Writing ..&amp;nbsp;有点儿象杂志约稿:&lt;/p&gt;
 可作的事儿是否有利收入增长?
 难以判定, 甚至八成没用, 所以害怕去分析;
 下意识找各种能作的事儿, 忙到没空去想;&amp;nbsp;那么,慢慢来..&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200326" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.028.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200326" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.028.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3964&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -764,7 +765,7 @@ Writing to Writing ..&amp;nbsp;有点儿象杂志约稿:&lt;/p&gt;
 当年可真的风靡全球华人啊;
 俺也无法免俗, 所有作品都刷过, 那篇 导向自由的律令 非常触动,一直推荐;
 其实最有共鸣的还是她周游四海记录真人真事真感受的洒脱;&amp;nbsp;以及非常传奇的家庭生活,太羡慕&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200327" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.029.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200327" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.029.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3964&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -776,7 +777,7 @@ W2W就是以文唤文: 抛弃无脑点赞,用文章唤取文章;
 &lt;blockquote&gt;
 &lt;p&gt;askdama@googlegroups.com&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img alt="200328" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.030.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200328" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.030.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3966&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -784,7 +785,7 @@ W2W就是以文唤文: 抛弃无脑点赞,用文章唤取文章;
 但回过神儿来才惊觉, 现在网络中不用隐喻基本无法正常发言的吧?
 比如, 这次 &lt;span class="caps"&gt;COVID&lt;/span&gt;-19 爆发, 所有学校老师被网课, 基本都被自动判定非法内容,
 得专门人工配置开绿灯才能恢复教学.&amp;nbsp;地命海心&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200329" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.031.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200329" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.031.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3867&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -792,7 +793,7 @@ W2W就是以文唤文: 抛弃无脑点赞,用文章唤取文章;
 但是, 光直播/会议平台的选择就足以令组织者崩溃几次;
 12年在豆瓣公司现场组织两天的黑客松时,用 join.me 共享屏幕+&lt;span class="caps"&gt;QQ&lt;/span&gt; 群语音直播;
 现在统一 zoom Pro. 帐号,&amp;nbsp;爽.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200330" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.032.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200330" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.032.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3968&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -801,7 +802,7 @@ W2W就是以文唤文: 抛弃无脑点赞,用文章唤取文章;
 结果发现, 体验不错, 非常象印度&amp;#8221;墙中洞&amp;#8221;教学实验中发现的 &lt;span class="caps"&gt;SOLE&lt;/span&gt; 状态;
 &lt;span class="caps"&gt;AKA&lt;/span&gt; 原则是可以包含课程其它期的呢.
 因为,&amp;nbsp;这是真正意义上的薪火相传&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200331" src="http://ydlj.zoomquiet.top/ipic/2021-07-25-zq42-today-card-2003.033.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200331" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2003.033.jpeg"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3969&lt;/p&gt;
 &lt;/blockquote&gt;

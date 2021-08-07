@@ -1,5 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- ZoomQuiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2021-07-25T21:13:47+08:00</updated><entry><title>VNC回归轻松</title><link href="https://blog.zoomquiet.io/200704-easy-vnc.html" rel="alternate"></link><published>2020-07-04T19:42:00+08:00</published><updated>2020-07-25T10:43:30+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-07-04:/200704-easy-vnc.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;SCM&lt;/span&gt;/&amp;nbsp;跨平台桌面控制最纯粹和轻松的协议桟还是原生的好&amp;#8230;&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- ZoomQuiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2021-08-07T16:32:53+08:00</updated><entry><title>钩陈/ 温总的语速…</title><link href="https://blog.zoomquiet.io/oldtouch-apisix-growupupup.html" rel="alternate"></link><published>2021-08-07T15:42:00+08:00</published><updated>2021-08-07T16:32:53+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2021-08-07:/oldtouch-apisix-growupupup.html</id><summary type="html">&lt;p&gt;OldTouch/ personal feeling for growup in &lt;span class="caps"&gt;APISIX&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;h2 id="apachecon21"&gt;APACHECON21亚洲上的温总&lt;a class="headerlink" href="#apachecon21" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;旁听侧想&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://apachecon.com/acasia2021/zh/sessions/1099.html"&gt;按照 Apache Way 运作开源商业化公司，这行得通吗？ - ApacheCon Asia 2021 - Powered by &lt;span class="caps"&gt;ALC&lt;/span&gt;-Beijing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="weng" src="https://ipic.zoomquiet.top/2021-08-07-apachecon-asia-2021-APISIX.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;感叹万千,&amp;nbsp;只说一点:&lt;/p&gt;
+&lt;p&gt;温铭, 是18年创业成立支流公司后,&amp;nbsp;在朋友圈中的戏称;&lt;/p&gt;
+&lt;p&gt;认识温总是08年,
+当时他刚刚入职金山,
+在俺主持的日常技术分享活动上相互认识,
+也一起参与过早期 &lt;span class="caps"&gt;ECUG&lt;/span&gt;/Erlang China User Group(10年后, 升级为 Effective China User Group)活动;
+作为工程师,
+温总那时给人的感觉就是羞涩,
+对技术问题愿意花时间研究,&amp;nbsp;将每个问题彻底解决;&lt;/p&gt;
+&lt;p&gt;在各种场景中, 发言, 也只愿意对技术问题给出想法,
+而且语速很快, 哐哐哐的, 想在被对方打断前, 先将所有关键情况都说明;&amp;nbsp;标准的程序猿气质;&lt;/p&gt;
+&lt;p&gt;后来去了360,
+成立 OpenResty 基金会,
+接收 &lt;code&gt;锤子&lt;/code&gt;发布会捐助,
+主持 OpenResty 国际化,
+甚至于裸辞加入 OpenResty&amp;nbsp;团队;&lt;/p&gt;
+&lt;p&gt;在各自离开金山集团后, 但是, 技术发展方向和节奏完全不同了;
+幸好都在珠海生活, 每年都有各种机会碰面,&amp;nbsp;比如:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;源创汇/珠海站&lt;/li&gt;
+&lt;li&gt;金山春晩&lt;/li&gt;
+&lt;li&gt;开源中国珠海老爸美食团&lt;/li&gt;
+&lt;li&gt;&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为都有了孩子,
+各种群里讨论的慢慢也出现了技术之外话题,
+见面时, 虽然羞涩还有,
+但更加象礼貌式客气了,
+发言时, 还是习惯张大眼睛认真倾听,
+然后, 不再轻易发言, 听说比例接近 2:1,
+语速回到正常人水平, 开始包含一丝倔强,
+愿意为达成共识,&amp;nbsp;多说几轮;&lt;/p&gt;
+&lt;p&gt;又过了几年, 深刻理解应用网关这个领域后;
+毅然再次裸辞, 创立 &lt;span class="caps"&gt;APISIX&lt;/span&gt; 团队,
+直接从开源开始,
+基于 OpenResty 技术, 打造好用的企业级应用网关;
+当时真,什么也没有, 包含工资,
+两位创始人, 完全以有限自信为基础开始,
+幸好社区给力, 最快拿到 1000星, 最快进入 &lt;span class="caps"&gt;APAPCHE&lt;/span&gt; 孵化器,
+最快毕业, 并拿到企业大单;&amp;nbsp;前后不到18个月.&lt;/p&gt;
+&lt;p&gt;再听到公开分享, 已经在 APACHEcon21亚洲大会上了,
+语速, 进一步降低, 达到部委干部级别, 每分钟420字,
+比 &lt;span class="caps"&gt;CCTV&lt;/span&gt; 播音员慢了将近一倍;
+这就给人感觉, 已经是位承担社区未来伟大的负责人,
+任何时刻公开发言, 
+都自觉深思熟虑, 不愿意一时冲动为社区承诺什么不应该的事儿;
+想来在家,
+也习惯这样,&amp;nbsp;只干活不讨论;&lt;/p&gt;
+&lt;p&gt;未来, 温总 应该随着 &lt;span class="caps"&gt;APISIX&lt;/span&gt; 的发展,
+影响越来越多的公司和社区,&amp;nbsp;语速也必然进一步降低,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;惜字如金&lt;/span&gt;
+&lt;span class="err"&gt;沉默以对&lt;/span&gt;
+&lt;span class="err"&gt;负重前行&lt;/span&gt;
+&lt;span class="err"&gt;目思且码&lt;/span&gt;
+&lt;span class="err"&gt;但行好事...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4463&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;好文笔,感叹号年度配额: &lt;strong&gt;2/3&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ZoomQuiet/&lt;strong&gt;&lt;a href="https://mp.weixin.qq.com/s/N5TuRRbF485D4Q90XdDA7g"&gt;大妈&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;就是四处 &lt;code&gt;是也乎,(￣▽￣)&lt;/code&gt; 的那个&lt;a href="https://mp.weixin.qq.com/s/N5TuRRbF485D4Q90XdDA7g"&gt;大妈&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;私自嗯哼&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ZoomQuiet&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ZoomQuiet42&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;公开课程&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;蟒营&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Mainium&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;全国大会&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;PyChina&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;PyChinaOrg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;本地社区&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
+    &lt;span class="n"&gt;GDG珠海&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;GDG&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ZhuHai&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;TFUG珠海&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ZH_TFUG&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;历史吐糟&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Chaos42&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt; &lt;span class="n"&gt;PythoniCamp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;</content><category term="OldTouch"></category><category term="OldTouch"></category><category term="FLOSS"></category><category term="APACHE"></category></entry><entry><title>VNC回归轻松</title><link href="https://blog.zoomquiet.io/200704-easy-vnc.html" rel="alternate"></link><published>2020-07-04T19:42:00+08:00</published><updated>2020-07-25T10:43:30+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-07-04:/200704-easy-vnc.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;SCM&lt;/span&gt;/&amp;nbsp;跨平台桌面控制最纯粹和轻松的协议桟还是原生的好&amp;#8230;&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;.&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;很早就有这种需求:&lt;/p&gt;
 &lt;p&gt;比如当年参与开发浏览器时,
@@ -115,7 +199,7 @@ LISTEN      &lt;span class="m"&gt;0&lt;/span&gt;      &lt;span class="m"&gt;5&lt
 &lt;li&gt;200725 zoomquiet pub&lt;/li&gt;
 &lt;li&gt;200704 zoomquiet 解决&lt;/li&gt;
 &lt;li&gt;200626 zoomquiet init.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Pythonic"></category><category term="DAMA"></category><category term="SCM"></category><category term="VNC"></category><category term="Linux"></category><category term="macOS"></category></entry><entry><title>呢喃s/ 20.4</title><link href="https://blog.zoomquiet.io/200401-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2020-04-01T20:42:00+08:00</published><updated>2021-07-25T21:06:29+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-04-01:/200401-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2020.4&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-20204"&gt;呢喃 at 2020.4&lt;a class="headerlink" href="#at-20204" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="DAMA"></category><category term="SCM"></category><category term="VNC"></category><category term="Linux"></category><category term="macOS"></category></entry><entry><title>呢喃s/ 20.4</title><link href="https://blog.zoomquiet.io/200401-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2020-04-01T20:42:00+08:00</published><updated>2021-07-30T16:56:16+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-04-01:/200401-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2020.4&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-20204"&gt;呢喃 at 2020.4&lt;a class="headerlink" href="#at-20204" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不为什么,&amp;nbsp;就这么开始了日历卡连载&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -124,7 +208,7 @@ LISTEN      &lt;span class="m"&gt;0&lt;/span&gt;      &lt;span class="m"&gt;5&lt
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3971&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;不查不知道, 今天是&amp;#8221;国际儿童图书日&amp;#8221;;
+&lt;p&gt;不查不知道, 今天是&amp;#8217;国际儿童图书日&amp;#8217;;
 可小时候真没什么值得看的, 就记住了童话大王单人构筑出来的故事体系;
 工作后有机会补课, 才发现国外有儿童图书门类以及对应艺术家群体;
 不过, 怎么看都无法对抗日本漫画构造的万画世界.&amp;nbsp;儿童其实并不特殊和俺们一样.&lt;/p&gt;
@@ -155,7 +239,7 @@ LISTEN      &lt;span class="m"&gt;0&lt;/span&gt;      &lt;span class="m"&gt;5&lt
 &lt;blockquote&gt;
 &lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3974&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;鸟山明, 以一己之力改变&amp;#8221;孙悟空&amp;#8221;这一概念内涵的大师.
+&lt;p&gt;鸟山明, 以一己之力改变&amp;#8217;孙悟空&amp;#8217;这一概念内涵的大师.
 不过, 俺更加喜欢阿拉蕾, 企鹅岛上的故事虽然无厘头, 但是, 比永远无尽升级打怪的 七龙珠 要来的放松和有趣;
 就这个有趣, 为鸟山明每年带来超过50亿日元的收入, 这在中国是无法想象的.&amp;nbsp;为什么?&lt;/p&gt;
 &lt;p&gt;&lt;img alt="200406" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2004.006.jpeg"&gt;&lt;/p&gt;

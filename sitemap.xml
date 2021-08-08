@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/index.html</loc>
-<lastmod>2021-08-07T16:34:48-00:00</lastmod>
+<lastmod>2021-08-08T16:14:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2021-08-07T16:34:48-00:00</lastmod>
+<lastmod>2021-08-08T16:14:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2021-08-07T16:34:48-00:00</lastmod>
+<lastmod>2021-08-08T16:14:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2021-08-07T16:34:48-00:00</lastmod>
+<lastmod>2021-08-08T16:14:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -67,8 +67,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.zoomquiet.io/200601-ZoomQuiet-MurMur-collection.html</loc>
+<lastmod>2021-08-08T16:13:17+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/200501-ZoomQuiet-MurMur-collection.html</loc>
+<lastmod>2021-08-08T16:02:08+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.zoomquiet.io/200401-ZoomQuiet-MurMur-collection.html</loc>
-<lastmod>2021-07-30T16:56:16+08:00</lastmod>
+<lastmod>2021-08-08T15:39:46+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -936,7 +950,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/category/murmur.html</loc>
-<lastmod>2021-07-30T16:56:16+08:06</lastmod>
+<lastmod>2021-08-08T16:13:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -978,7 +992,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/dama.html</loc>
-<lastmod>2021-07-30T16:56:16+08:06</lastmod>
+<lastmod>2021-08-08T16:13:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1013,7 +1027,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/logging.html</loc>
-<lastmod>2021-07-30T16:56:16+08:06</lastmod>
+<lastmod>2021-08-08T16:13:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1713,7 +1727,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2021-08-07T16:32:53+08:06</lastmod>
+<lastmod>2021-08-08T16:13:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

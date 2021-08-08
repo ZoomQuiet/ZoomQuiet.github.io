@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2021-08-07T16:32:53+08:00</updated><entry><title>钩陈/ 温总的语速…</title><link href="https://blog.zoomquiet.io/oldtouch-apisix-growupupup.html" rel="alternate"></link><published>2021-08-07T15:42:00+08:00</published><updated>2021-08-07T16:32:53+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2021-08-07:/oldtouch-apisix-growupupup.html</id><summary type="html">&lt;p&gt;OldTouch/ personal feeling for growup in &lt;span class="caps"&gt;APISIX&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;h2 id="apachecon21"&gt;APACHECON21亚洲上的温总&lt;a class="headerlink" href="#apachecon21" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2021-08-08T16:13:17+08:00</updated><entry><title>钩陈/ 温总的语速…</title><link href="https://blog.zoomquiet.io/oldtouch-apisix-growupupup.html" rel="alternate"></link><published>2021-08-07T15:42:00+08:00</published><updated>2021-08-07T16:32:53+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2021-08-07:/oldtouch-apisix-growupupup.html</id><summary type="html">&lt;p&gt;OldTouch/ personal feeling for growup in &lt;span class="caps"&gt;APISIX&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;h2 id="apachecon21"&gt;APACHECON21亚洲上的温总&lt;a class="headerlink" href="#apachecon21" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;旁听侧想&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -199,7 +199,487 @@ LISTEN      &lt;span class="m"&gt;0&lt;/span&gt;      &lt;span class="m"&gt;5&lt
 &lt;li&gt;200725 zoomquiet pub&lt;/li&gt;
 &lt;li&gt;200704 zoomquiet 解决&lt;/li&gt;
 &lt;li&gt;200626 zoomquiet init.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Pythonic"></category><category term="DAMA"></category><category term="SCM"></category><category term="VNC"></category><category term="Linux"></category><category term="macOS"></category></entry><entry><title>呢喃s/ 20.4</title><link href="https://blog.zoomquiet.io/200401-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2020-04-01T20:42:00+08:00</published><updated>2021-07-30T16:56:16+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-04-01:/200401-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2020.4&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-20204"&gt;呢喃 at 2020.4&lt;a class="headerlink" href="#at-20204" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="DAMA"></category><category term="SCM"></category><category term="VNC"></category><category term="Linux"></category><category term="macOS"></category></entry><entry><title>呢喃s/ 20.6</title><link href="https://blog.zoomquiet.io/200601-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2020-06-01T20:42:00+08:00</published><updated>2021-08-08T16:13:17+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-06-01:/200601-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2020.6&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-20206"&gt;呢喃 at 2020.6&lt;a class="headerlink" href="#at-20206" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不为什么,&amp;nbsp;就这么开始了日历卡连载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="200601" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.001.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4031&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Helen 是真神人也.
+完全无法想象从小就丧失视力/听力,
+如何能完成教育,
+并出版那么多图书.
+只能说人潜力是无穷的,
+但只能通过教育激发出来,
+而最强学习动力只能是想学,
+当然,得配合针对性学习路径以及环境;
+蟒营™课程专注激发学习潜力;&amp;nbsp;值得体验.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200602" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.002.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4031&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;细思恐极的是当年黑白猫现在也和谐为&amp;#8221;好猫论&amp;#8221;了.
+其实两个凡是本身就是对当初实践论的反讽;
+而好猫不过是对实践论的通俗化,
+却也难逃污名化.
+树人兄的酱缸论没错,
+无论什么好东西都被大陆这坨大酱污染了.
+好在够深,总有化龙飞升的机会,&amp;nbsp;不象隔壁宇宙日出国.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200603" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.003.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4033&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从江南造船厂使用全套外国图纸和设备来承接定单,
+到 &lt;span class="caps"&gt;IEEE&lt;/span&gt; 这种国际技术标准组织开始有组织的压制中国企业,
+仅仅用了99年;
+而回想核弹之类国之重器,
+我们都能只用别人一半的时间完成追赶;
+集中力量干大事儿,
+咱有丰富的经验;&amp;nbsp;但是具体每个人的小事儿呢?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200604" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.004.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4034&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意, 俺没好意思写&amp;#8221;中国队首次出征决赛圈&amp;#8221;;
+毕竟再爱国的球迷也不可能认同那些比赛叫战斗.
+其实, 自古就有垄断组织高速腐化毫无战斗力的案例,
+比如宋朝为了防止地方割据,
+发明的厢军体制,
+世代为军的命运,
+也就形成身份垄断,进而退化为纯粹农民,&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200605" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.005.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4035&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;说&amp;#8221;液态光&amp;#8221;,
+想起很久前看过的日本动画片,
+科幻体裁,
+说是太平洋中在极端巧合情况中,
+会生成一种完美波浪,
+能永久在海洋中推进而不破散;
+以致游荡时间足够长/上千年,
+波浪变成智慧生命,
+进而和人类发生冲突,
+最终被爱超度.
+就是想不起片名了.&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200606" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.006.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4036&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;19次高考?应该说感动的是那个不放弃的自己而已;
+多数失败不过是迷信坚持下去一定成功,
+问题是从来不上尝试不同姿势,
+那么一直用相同行为却期待不同结果,
+逻辑上不通呢.
+这其实就是经典的编程思维之一,
+普通人虽曾有体验过,
+却在日常中消磨掉了,&amp;nbsp;得补回来.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200607" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.007.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4037&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一会儿上午 10:42 开始蟒营®课程直播,
+将揭晓第7期学员们的原创作品了;
+虽然算上08年蟒营原型班,
+这都不知道第多少次围观学员作品演示了;
+但一想现在自信流畅展示软件系统的学员们,
+都是两个月前只能写条 Hallo World 的人,&amp;nbsp;怎能不激动?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200608" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.008.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200609" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.009.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200610" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.010.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200611" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.011.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200612" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.012.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200613" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.013.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200614" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.014.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200615" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.015.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200616" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.016.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200617" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.017.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200618" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.018.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200619" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.019.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200620" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.020.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200621" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.021.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200622" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.022.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200623" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.023.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200624" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.024.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200625" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.025.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200626" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.026.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200627" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.027.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200628" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.028.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200629" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.029.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200630" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2006.030.jpeg"&gt;&lt;/p&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category></entry><entry><title>呢喃s/ 20.5</title><link href="https://blog.zoomquiet.io/200501-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2020-05-01T20:42:00+08:00</published><updated>2021-08-08T16:02:08+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-05-01:/200501-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2020.5&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-20205"&gt;呢喃 at 2020.5&lt;a class="headerlink" href="#at-20205" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不为什么,&amp;nbsp;就这么开始了日历卡连载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="200501" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.001.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4000&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不查不知道,
+从1886到1995,100多年的努力,
+我们才真正拥有了双休制,
+而欧洲早已突破了每周35小时法定工作时间-&amp;gt;更少了;
+为什么?
+生产率足够高,
+企业又不原意支付更多工资,
+那不如回家折腾副业了.
+问题来了,
+什么副业不受时空限制?&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200502" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.002.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4001&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;大家纷纷表示为了庆祝劳动节,
+必须宅家劳动;
+大妈经常嗯哼曰:
+什么是共产主义社会?
+当人类全体:第一需求是劳动/第一娱乐是学习 之时.
+现在当然无法全员作到,
+不过我们可以主动在小范围内自发先体验一下的;&amp;nbsp;毕竟劳动带来的成就感赛高&amp;lt;-只要是自己想去作的.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200503" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.003.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4002&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;昨夜例怼第159次,
+首次彩蛋:
+一位资深怼友家领导在旁听100多期例怼后,
+终于按捺不住,
+深夜贡献首次即兴脱口秀,
+27分钟小单口,
+=&amp;gt;中国传统文化简史和高考补习班语文课程设计间渊源及交融;
+非常劲爆,堪比&amp;#8221;十三邀&amp;#8221;;
+可见凡事得坚持才有惊喜&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200504" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.004.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4003&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;康熙/赫本/五四运动&amp;#8230;竟然同一天;
+一个独霸中国电视20年,
+一个触发中国百年新文化运动,
+一位是大妈在家领导面前都能理直气壮暗恋的对象&amp;#8230;
+世界太神奇了;
+蟒营™课程也是,
+每期学员都有神奇所在,
+结业后课程环境不关闭,能永久复习,&amp;nbsp;值得加入Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200505" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.005.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4004&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;听说好象各国际考试都为中国区考生专门出题;
+以免考出太多满分无法交代的尴尬情景;
+毕竟, 考试一事在中国被研究了上千年, 真的是地球第一;
+问题在类似编程这种自古考试中没有的知识类别,
+积累的丰富经验就没招儿了.
+必须从头回归学习本身,&amp;nbsp;而不是考试艺术.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200506" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.006.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4005&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;实话:发改委 这一机构真的是非常强力又高效;
+所以, 蟒营™课程本身也在连续运营8期后,
+内部成立 &amp;#8220;蟒营™课程发改委&amp;#8221;
+联合助教和优秀学员,
+特别是有教育专业背景的学员,
+将大妈私人社区经验转化为的蟒营™网络课程框架,
+结合入门班持续优化自身.&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200507" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.007.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4006&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;知道休谟,
+一般是上过哲学史之类课的,
+这位胖子和张三丰类似,
+都是无论如何也绕不过去的大师;
+通过怀疑论的阐发,
+直/间接给西方社会突破宗教的羁绊提供充足的弹药;
+只是哲学家到今天好象连公知都不如了,
+不象当初那是领导科学的科学,&amp;nbsp;现在只算无用之用Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200508" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.008.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4006&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SOROS&lt;/span&gt; 名字就因为是回文才记住的,
+无论正反写都对,
+父母用心了.&amp;nbsp;97年金融风暴证明了两件事儿:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;私人组织已经可以对抗主权国家了&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;中国真的不傻也没那么弱&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;那么问题来了:中国实力到底谁说了算?&amp;nbsp;其实也可普适为:任何一个人如何证明自己?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200509" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.009.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4006&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;摇滚乐在中国大地上第一次响起并不是86年,而是20多年前,
+在林立果的小圈子里;
+神奇的是摇滚精神反而在20年之后,
+随着老崔们的老去而后继无人了,
+为什么?
+字数有限无法展开,
+单说一点:歌词儿和电影一样都得过审,
+而且白名单随着动态变更,&amp;nbsp;乍Rock?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200510" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.010.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4009&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;小时知道母亲节后, 就以为也有父亲节,结果发现中国不过父亲节,
+这就比较迷了&amp;#8230;
+直到自己成为父亲才知道为什么中国不设立父亲节;
+因为,家领导永远是母亲呢.
+每天,母亲高兴, 全家和乐,母亲生气,全家小心.
+可是这又是为什么呢?
+因爱生怖也.&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200511" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.011.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4010&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;实践是检验真理的唯一标准.
+真.无法同意更多;
+Python入门班第6期昨晚按时结业;
+学员团队能通过流畅的全球协同完成作品;
+证明蟒营™初心冇错:
+知道你认为自己不NB,
+但蟒营™认定你其实非常NB,只是习惯了不NB而已,&amp;nbsp;蟒营™愿带你遇见NB的那个你.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200512" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.012.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4011&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;曾几何时,通称倩女没流行前,
+是流行唤护士的,
+比如在面馆中喊:&amp;#8221;护士, 来三碗烂肉面&amp;#8221;;
+为什么呢?
+可能是护士任劳任怨的形象深入人心,以致日常所有场景中都期望有护士的存在吧.
+看过一堆医务背景美剧后,
+才知道护士就象军队中的军士长,
+甚至更牛.&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200513" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.013.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4012&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有些计划必须失败才能收获期待目标的,
+&amp;#8220;星球大战计划&amp;#8221;就是这一经典;
+通过无限扩大冷战科技含量将对手国力浪费在&amp;#8221;黑洞&amp;#8221;级别命题上,
+导致民生问题越来越大,
+直至崩溃.
+这种理解可能是美国自己也失败后的粉饰,
+但是不障碍自省:
+是否减肥也是同类行为?&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200514" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.014.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4013&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;facebook和江青就是这么自然的关联在一起&amp;#8230;
+历史就是这么奇妙.
+当然我们自己更加神奇:
+小学作文中想象21世纪的种种,
+多数来自:小灵通漫游未来/丁丁战猴王&amp;#8230;
+之类幻想作品.
+而现实比幻想还要赛高时,
+我们自己其实都在被时代吊着飞升&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200515" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.015.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4014&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;张三丰是历史真实人物,
+但在俺心中,
+天龙八部中的张三疯才是真实的;
+这就是人类简史中论及的&amp;#8221;故事&amp;#8221;;
+就象三人成虎的出版行业加强版;
+问题是互联网时代,网民接触到的信息理论上是无限,
+可早已被算法严密控制针对性投食了,
+怎么破?&amp;nbsp;主动探索/禁断友圈Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200516" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.016.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4015&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;陈圆圆和文化大革命的关系,比能想象的要近的多.
+谎言总是越说越多,因为必须不断用新的谎言来解释前一批谎言;
+只是谎言多了,
+也就成了气候,
+可以影响整个儿国运&amp;#8230;
+对于普通人,
+不特意说谎就已足够,
+毕竟每天都逃不了被迫说谎,&amp;nbsp;只是自己千万别相信就好.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200517" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.017.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4016&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;纽交所, 居然是200多年前创立的;
+而民航飞行器, 人类民用领域质量要求最高的单一产品,
+竟然是35年前win95时代就完成了全部电脑设计.
+那时,宿舍小伙伴还在计划揍钱攒兼容机,
+准备上南京电脑街拼元件,用250M超大硬盘&amp;#8230;
+这种技术代差&amp;nbsp;Orz.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200518" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.018.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4017&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;翁美玲创造的黄蓉无法替代.
+并不是人有多美,也不是当年剧组逆天&amp;#8230;
+实在是当年电视刚刚进入日常生活,
+周围所有人面目灰暗时,
+突然出现这么一位小东邪,
+好比吃了一辈子稀饭就酱瓜突然发现还有煎饼果子这个可能.&amp;nbsp;所以,就和赫本一起变成无法替代的永恒女神&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200519" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.019.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4018&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一定程度上,
+今天中国在线教育领先世界,
+是58年前教育部决策的遗留效应.
+教师从灵魂工程师蜕变成合同工,
+就是从成体系精简开始的.
+因材施教从而彻底消亡,
+才给了今天网课足够空间和机会;
+学习者通过网络相互帮助,
+毕竟多数学校已无力提供相应职能了&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200520" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.020.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4019&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;若非领导暗示完全忘记今天也是节庆:
+520表白节.
+类似的还有双11光棍节,
+以及其后转变成购物节的一系列山寨节目:双12/618/&amp;#8230;
+还有各种程序猿单方面决定的节日:
+3.14/𝛑节,10.24/程序猿节&amp;#8230;&amp;nbsp;总之国家没宣布的照样是节日,得执行.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200521" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.021.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4020&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当年&amp;#8221;十连跳&amp;#8221;引出太多思考了;
+虽然富士康百万员工按照当地所在地区自杀率来说数据上低不少,
+可架不住追踪报道.
+别的不说,
+好死不如赖活着.
+可生不如死的单调重复性劳动,
+真的可以轻易摧毁普通人精神的,
+无论有多少抖音们来分散注意力.
+怎么破?&amp;nbsp;来编程吧.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200522" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.022.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4021&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;没想到类似永动机的民科事件,去年就有.
+认真想想,
+日常中缺乏基本科学常识却广泛流行的偏方/传言/&amp;#8230;太多了.
+什么是科学?
+最偏激的定义就是可证伪.
+可义务教育体系中好象完全跳过了这一思想,
+只训练要听话,
+万事皆有正确答案.
+如何破?&amp;nbsp;开始自怼吧..&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200523" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.023.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4022&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;看了纪录片 The Imagineering Story,
+才知道 Disney 真正梦想并不是电影,
+而是能令人们快乐的主题乐园;
+甚至于为此专门创造了全新职位-&amp;gt;幻想工程师;
+俺打小也立志作一名能令大家快乐的人,
+现在却只能竭力自身不陷于无趣,&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200524" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.024.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4023&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作日历卡才发现无线电实用化已经100多年了,
+最近围绕5G 技术标准全球在闹腾,
+可究竟怎么从马可尼一步步发展过来的?
+刚好收到图灵新书:&amp;#8221;无线通信简史&amp;#8221;配合业余无线电通信等书,
+得以进行完美入门.
+这其中少不了编程辅助,
+入门班最后一天报名,&amp;nbsp;值得加入.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200525" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.025.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4024&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原来董存瑞是今天牺牲的.
+小时自认如果在现场也可以.
+可真受过伤明白什么是痛疼级别后,
+才对先烈们的决然肃然起敬,
+他们放弃的不仅仅是自己的生命,
+还要承受超乎想象的苦痛,
+只为内心那丝坚信.
+自己能为什么去承担那种级别的痛苦呢?&amp;nbsp;幸好现在不必去承担了?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200526" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.026.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4025&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;论持久战&amp;#8221;发表已经是82年前了.
+当年此文指导我军最终解放全中国,
+其实对普通人也很有意义,&amp;nbsp;人生就是长征,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;慢慢来,&lt;/span&gt;
+&lt;span class="err"&gt;比较快,&lt;/span&gt;
+&lt;span class="err"&gt;不怕慢,&lt;/span&gt;
+&lt;span class="err"&gt;只怕停.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;不要被成名要趁早之类鸡精蒙到了,
+普通人只能一点点积累.
+问题只是方向错怎么积累也没用,&amp;nbsp;怎么破?Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200527" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.027.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4025&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;台湾府设立是在336年前,
+自古史官机构记载了一切行政指令,
+导致实锤太多无论什么姿势也没法说不是中国的.
+而现代台湾又是中国近代史缩微盆景,
+文化大革命中革掉的所有东西都在对岸有份鲜活备份;
+故宫/清华/中山/&amp;#8230;太 coaplay 嘉年华了.&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200528" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.028.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4027&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;包青天居然和 &lt;span class="caps"&gt;BING&lt;/span&gt; 是同一天诞生.
+不过,后者永远没有前者有名气就是了.
+但 &lt;span class="caps"&gt;BING&lt;/span&gt; 居然是合法爱国时,
+唯一可用的国际搜索引擎了.
+当然,其海外版也是和谐版,
+好歹可用.
+以及其它国产搜索,
+俺态度一向:
+内事不决问谷歌,
+外事不定查百度.&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200529" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.029.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4029&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天历史事件包含很多和谐词,
+不知道是否能发布成功.
+主要想感叹一下7年前,
+双汇已经变成世界第一了呢.
+想来中国这种世界第一已经不少了,
+自行车/雨伞/圆珠笔/&amp;#8230;早已有很多商品是世界第一产量,&amp;nbsp;可更多关乎国运的核心高科技产品关键元件还是得抑人鼻息..&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200530" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.030.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4029&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原以为虚构写作能自由,
+后来发现光穿越就有二一年等铁律不得逾越;
+而非虚构写作的限制更加丰富细致以及灵动;
+所以科幻小说才崛起了.
+类似天启大爆炸之类历史事件也变成了稀有IP早被抢占.
+也幸好我国历史足够长,
+史料足够多,&amp;nbsp;有足够非虚构事件承载虚构思想.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200531" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2005.031.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;4030&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;转眼就是五月最后一天了.
+历史上的今天日历卡,
+从2月29号开始,
+也已坚持3个月.
+常有人问:为什么很多事儿你能长期坚持?
+可能就是因为,
+不是坚持,
+只是,
+长期以来习惯作那些事儿而已.
+就象,如何能坚持几十年每天刷牙?&amp;nbsp;而习惯后就变成了生活本身&amp;#8230;&lt;/p&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category></entry><entry><title>呢喃s/ 20.4</title><link href="https://blog.zoomquiet.io/200401-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2020-04-01T20:42:00+08:00</published><updated>2021-08-08T15:39:46+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-04-01:/200401-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2020.4&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-20204"&gt;呢喃 at 2020.4&lt;a class="headerlink" href="#at-20204" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不为什么,&amp;nbsp;就这么开始了日历卡连载&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -256,7 +736,257 @@ LISTEN      &lt;span class="m"&gt;0&lt;/span&gt;      &lt;span class="m"&gt;5&lt
 
 
 &lt;p&gt;&lt;img alt="200407" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2004.007.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="200408" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2004.008.jpeg"&gt;&lt;/p&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category></entry><entry><title>拙见/ DNS之殇</title><link href="https://blog.zoomquiet.io/imho-murmur-dns-sad-story.html" rel="alternate"></link><published>2020-03-31T10:42:00+08:00</published><updated>2020-03-31T12:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-31:/imho-murmur-dns-sad-story.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;DNS&lt;/span&gt; in china is one kinds of sadding&amp;nbsp;song&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;011&lt;/strong&gt;篇原创&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3976&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不查不知道, 成龙大哥都快70了&amp;#8230;
+可成家班一直没能出现足以替代他自己的明星,
+而只能让古稀之身出面接住各种机会,这实在不科学.
+好象香港黄金一代艺人之后, 再无类似群体继承, 这就不好说是特例了.
+只能猜是大环境/机制问题,&amp;nbsp;具体的也轮不到俺来分析.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200408" src="https://ipic.zoomquiet.top/2021-07-25-zq42-today-card-2004.008.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3977&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;历史中每一个今天其实都有或大或小的奇迹在发生;
+比如某个小朋友突然能说话了, 大概率是/麻麻, 没亲历的, 真心难以想象出那种奇迹感:
+一坨小肉团嘦每天按时喂点儿奶,
+242天以内就能自动生成意识,
+并自学掌握汉语,还能喊对人&amp;#8230;
+细思恐极/&lt;span class="caps"&gt;AI&lt;/span&gt;&amp;nbsp;没戏.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200409" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.009.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3978&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;培根提出&amp;#8221;知识就是力量&amp;#8221;不到四百年,
+人类就用简单 &lt;span class="caps"&gt;AI&lt;/span&gt; 算法指挥宇航火箭自动降落到不断起伏的海上浮台;
+而NASA的口号:&amp;#8221;If we can dream it, we can do it.&amp;#8221;焊到机库门上仅7年后,
+就将人送上月球并接还.&amp;nbsp;那俺的梦想呢?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200410" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.010.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3979&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;转眼 Python 成为年度语言已一年了, 当时最热消息: 
+连黑洞照片都是 Py 跑出来的, 还不来学?
+可学编程语言和能编程是两回事儿嗦;
+比如, 这两天迁移旧网站, 怎么折腾都不行,
+今儿发现 pyblosxom 错写成 pyblosoxm&amp;nbsp;益rz.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200411" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.011.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3980&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;孙夫子和王小波原来是同一天去见马克思咯?
+这种巧合应该暗示了什么.
+当年知道小波竟然也是程序猿, 为了写作, 专门给自己开发了专用编辑器;
+立时变身为 王小波门下狗.
+可现在为一把键盘反复折腾轴哪键帽哪&amp;#8230;总感觉是否太没品?&amp;nbsp;必须为人民服务而编程终身哈?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200412" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.012.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt; 3981&amp;nbsp;被和谐&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="200413" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.013.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3982&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;昨晚 101camp5py 结业,
+主要由0基础学员组成的团队,
+经过4周报名预习/1周预备/4周迭代任务的学习后,
+再2周自主开发, 就都基本交付出原创作品;
+证明蟒营™式编程入门班教学思路是对的;
+可现场大家却被6py&amp;nbsp;几位学妺辣么有条理的探索震惊了.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200414" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.014.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3983&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;COVID&lt;/span&gt;-19 致死机制被揭开:
+不是本身, 而是激发原有基础病,
+即所谓&amp;#8221;发物&amp;#8221;,以往只是专门激发某种伤痛, 而新冠则是&amp;#8217;有教无类&amp;#8217;,
+原先有什么都活化起来, 怪不得死亡多是老年人.
+问题是996褔报重压下,&amp;nbsp;成人多数都处于亚健康状态&amp;#8230;这又得乍整?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200415" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.015.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3984&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;汉语很奇妙,
+广交会办了那么多年,
+但国家还得郑重改名,
+因为一字之差代表的却是整个儿中国制造在地球上的地位真的不同了;
+是否有编程自信也类似,
+不敢编程前,总被大片儿误导,
+以为编程非常神奇类似魔法;
+可一但有任何编程经验,&amp;nbsp;就能触及真正的互联网资源了.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200416" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.016.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3985&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;昨晚 6py 课程答疑直播,
+一激动针对一位勇敢的高一学生当前沉默状态进行集体支招,
+录音在:
+https://fm.101.camp/2020/101camp6py-ch3d3-faq.html
+涉及自学习惯,
+提问的智慧,
+等关键误解,&amp;nbsp;值得反复回顾.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200417" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.017.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3985&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当年网页小游戏现在小程序中复活了,
+家领导每天念叨要走满一万步好去偷菜什么的;
+其实,
+这种地图虚拟移动和真实运动结合的游戏早就有了:
+听老妈讲,
+高小时整个武汉流行跑向北京~
+班级记录每天跑操距离,在地图上标出,
+累计看谁先到天安门,
+奖大红花.&amp;nbsp;Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200418" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.018.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3987&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;高铁当初开始连续提速时,是真正惊吓到世界的;
+现在华为5G也扎实的站在世界之巅,
+可问题在如何真正落实?
+今天下午两点到五点,有专门网络分享:
+尤中海,
+中海地产集团数字科技部产品负责人,产研科技小组产品技术负责人;&amp;nbsp;单口分享如何看待5G背景的AIoT.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200419" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.019.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3988&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;昨天中海老师叕一气3小时没停,
+要不是音乐老师出身,
+这种强度一般人一定撑不住,
+分享有关人生/产品/5G/&lt;span class="caps"&gt;AI&lt;/span&gt;/IoT/&amp;#8230;
+录像下载:
+https://pan.baidu.com/s/1u8t4RkSokfaWj5Sjp2hG0Q
+提取码:&amp;nbsp;qamq&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200420" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.020.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3989&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之前怼周会交流时,
+遇到同时蟒营™学员又是大妈写作班同学的新怼员,
+一聊,
+便对王佩老师写作班产生了兴趣,
+立即去询问得到:好中文第四期插班计划
+https://gc.camp/post/the-admission-of-gc-camp&amp;nbsp;佩哥哥,你值得拥有&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200421" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.021.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3989&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;小时候, 总是被大人骂: 眼里没活儿.
+现在各种聊天儿时,才发现,这竟然真的是种特长;
+无论什么交流现场,
+了解到各自擅长后,
+立即条件反射般设想出几种可能方向,
+综合大家的兴趣变成一个或是多种潜在作品,
+从而能长久 hang out&amp;nbsp;在一起结为社区&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200422" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.022.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3991&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;列宁/Ле́нин,
+原名弗拉基米尔·伊里奇·乌里扬诺夫,
+苏维埃社会主义共和国联盟的缔造者;
+记得小学时一讲起来都是&lt;code&gt;马恩列斯毛&lt;/code&gt;并称;
+后来单说毛主席;
+再后来小平提出&amp;#8221;中国特色社会主义&amp;#8221;;
+然后三个代表/一带一路/金山银山&amp;#8230;&amp;nbsp;再也不提列宁们了.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200423" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.023.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3992&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天的卡片不知道是否能发布呢,
+所以呢喃也只能随便点儿:
+昨天开始尝试一种新的工作节奏 -&amp;gt; 一事毕,一事启;
+以往总是怕没活儿干, 所以,四处挖坑, 四处揽活儿,
+总感觉自己一定能多项目并行推进,
+而现实一直在打脸.
+所以, 老实一点儿,&amp;nbsp;一件件来吧.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200424" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.024.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3993&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;昨天是世界图片和版权日,
+大家解释为读书日,
+折腾了很多荐书活动;
+之于我,
+读书就是一种最高效的娱乐形式,
+通过图书可以同任何时空中的人物/事物/情感/&amp;#8230;进行交流,
+惠而不费;
+很早就形成阅读的习惯,
+只是从实体变成电子,&amp;nbsp;在手机/Kindle上..&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200425" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.025.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3994&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天是神奇的&amp;#8221;预防接种宣传日&amp;#8221;,
+但是 &lt;span class="caps"&gt;COVID&lt;/span&gt;-19 的疫苗不知何时能有;
+好在疫情爆发后,
+第一个小长徦如期而至;
+大家都接到正式通知明天上班了吧?
+只是放假又能到哪儿去呢?
+还是宅家提升内力吧-&amp;gt;&amp;nbsp;蟒营™Python入门班第8期马上开始报名了&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200426" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.026.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3995&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;开车时, 常吐糟家领导播放的新新音乐,完全没法儿听哪.
+同时, 俺常放的泰文/越南/印度/&amp;#8230;小语种音乐, 
+也被严正吐糟: 什么玩意儿.
+回思音乐取向才发现,
+之于我就象另类旅行,
+尽可能尝试以往从没听过的来体验新奇文化;&amp;nbsp;可工作时BGM还是当年老歌.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200427" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.027.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3996&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;蟒营™昨晚又尝试混班直播;
+触发很多前所未有的断言;
+有新学员感叹:
+思想拐点制造者 -&amp;gt; 蟒营
+这位学员和大妈又同学在王佩老师写作班中;
+可证编程和写作是同素异构体,
+都是思想的表述,
+只是形式上略有不同,
+运行时稍有偏差而已.
+这就报名第8期吧&amp;nbsp;;-)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200427" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.028.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3997&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果当年琼瑶阿姨没被迫放弃台湾市场,
+转战大陆遇到这么一组神仙,
+可能还珠神话也不可能开始.
+大妈可能也是,
+如果不是连续被创业失败,
+无意中一直坚持的社区也就没机会转为课程;
+现在正式班第8期也已开始报名,
+先报名先享受课程服务;&amp;nbsp;推荐人写大妈就有优惠.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200429" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.029.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3998&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从排华到种族冲突&amp;#8230;其实在美国很难感觉出是在一个国家,更象很多国家的合成,
+这的确是当初立国时的设计-&amp;gt;美利坚合众国;
+所以,理解任何一个国家都没那么简单,
+即便在中国生存了这么久,
+也最多不过了解到中国非常小的几个片段而已;&amp;nbsp;读历史书吧,能更爱国Orz&lt;/p&gt;
+&lt;p&gt;&lt;img alt="200430" src="https://ipic.zoomquiet.top/2021-08-08-zq42-today-card-2004.030.jpeg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呢喃/ &lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3999&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是极著名的断言:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;&amp;quot;你办事,我放心&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;以往在各种场合中都被戏用过,
+这断言其实是对一个人靠谱程度的最高肯定;
+如果在自己岗位上能给其它同事这种体验,
+那是真心将工作做到家了;
+不过, 这还不是工作的最高境界;
+最高应该是将工作做到:&amp;#8221;随时可交接&amp;#8221;&amp;nbsp;Orz&lt;/p&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category></entry><entry><title>拙见/ DNS之殇</title><link href="https://blog.zoomquiet.io/imho-murmur-dns-sad-story.html" rel="alternate"></link><published>2020-03-31T10:42:00+08:00</published><updated>2020-03-31T12:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-31:/imho-murmur-dns-sad-story.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;DNS&lt;/span&gt; in china is one kinds of sadding&amp;nbsp;song&lt;/p&gt;</summary><content type="html">&lt;p&gt;这是大妈在 &lt;strong&gt;ZoomQuiet&lt;/strong&gt; 的第&lt;strong&gt;011&lt;/strong&gt;篇原创&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;普通程序老猿一则感叹&amp;#8230;&lt;/p&gt;
 &lt;/blockquote&gt;

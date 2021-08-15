@@ -130,158 +130,21 @@
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">Mavericks 中用&nbsp;sshfs</a></h2>
+                <h2><a href="https://blog.zoomquiet.io/cipher-who-s-gonna.html">who&#8217;s&nbsp;gonna&#8230;</a></h2>
                 <div class="summary">
-<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>自从 2011-12-16 入手 <span class="caps">MBP</span> 以来,就发现只有 sshfs 来连接各种系统的硬盘最方便</p>
-<ul>
-<li>依赖少, 双方有 ssh 就好</li>
-<li>配置少, ssh 服务的启动没有 smb 服务那么多的配置</li>
-<li>自动断, 不会象 smb 死占一个虚假的挂接点</li>
-</ul>
-<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
-<p>每次 brew 出点小问题,就导致 sshfs 或是不痛快;</p>
-<p>目测已经折腾过至少4次了</p>
-<ul>
-<li>送修理两次</li>
-<li>从 10.6 升级 到 10.9 一次</li>
-<li>brew 在硬盘权限修订后,完全崩溃,重新安装 又一次</li>
-</ul>
-<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
-<p>毕竟 sshfs 依赖 <span class="caps">FUSE</span> 这种 …</p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/sshfs-in-mavericks.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/rst2s5-upgraded.html">rst2s5&nbsp;小折腾</a></h2>
-                <div class="summary">
-<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html">rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging</a></p>
-<p>所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:</p>
-<p><a href="http://s5.zoomquiet.io/">s5.zoomquiet.io</a></p>
-<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
-<p>忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见</p>
-<h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
-<p>4年前的生成脚本,和最新 pygments 接口不匹配了,,,</p>
-<h1 id="_4">解决<a class="headerlink" href="#_4" title="Permanent link">¶</a></h1>
-<p>参考:</p>
-<ul>
-<li><a href="http://pygments.org/docs/rstdirective/">Using Pygments in ReST documents — Pygments</a></li>
-<li><a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/">Using rst for presentations</a></li>
-<li><a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html">rst2s5 with syntax highlighting</a></li>
-<li><a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files">python - Where can I find a …</a></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/rst2s5-upgraded.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/livin-scrapbook.html">ScrapBook&nbsp;生存指南</a></h2>
-                <div class="summary">
-<p><code>7.7G    ZqFLOSS</code> 复制改进后,为毛多了?!</p>
-<div class="highlight"><pre><span></span><code><span class="n">zoomq</span> <span class="err">@</span> <span class="n">MBP111216ZQ</span> <span class="ow">in</span> <span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
-<span class="o">$</span> <span class="n">du</span> <span class="o">-</span><span class="n">hs</span> <span class="o">*</span>
-<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">devrel</span><span class="o">.</span><span class="n">json</span>
-<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">floss</span><span class="o">.</span><span class="n">json</span>
-<span class="mf">4.0</span><span class="n">K</span>    <span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">skm</span><span class="o">.</span><span class="n">json</span>
-<span class="mf">5.5</span><span class="n">G</span>    <span class="n">ZqDevRel</span>
-<span class="mf">6.4</span><span class="n">G</span>    <span class="n">ZqFLOSS</span>
-<span class="mf">3.5</span><span class="n">G</span>    <span class="n">ZqSKM</span>
- <span class="mf">9.5</span><span class="n">M</span>    <span class="n">scraotools_ZqDevRel</span><span class="o">.</span><span class="n">pkl …</span></code></pre></div>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/livin-scrapbook.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">如何基于CB3构建家庭服务器</a></h2>
-                <div class="summary">
-<p><a href="http://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest 的体验</a>
-之后,总是要一步步完成心目中的 家服务器</p>
-<h1 id="issue">Issue<a class="headerlink" href="#issue" title="Permanent link">¶</a></h1>
-<p>基于CB3使用 lununtu-server-<span class="caps">VGA</span> 操作系统</p>
-<ul>
-<li>环境:</li>
-<li>.bashrc</li>
-<li>
-<p>.inputrc</p>
-</li>
-<li>
-<p>预装: </p>
-</li>
-<li>sshd</li>
-<li>apt-fast<ul>
-<li><a href="http://www.mattparnell.com/linux/apt-fast/">Index of /linux/apt-fast</a></li>
-</ul>
-</li>
-<li>vim</li>
-<li>mc</li>
-<li>
-<p>…</p>
-</li>
-<li>
-<p>不要: </p>
-</li>
-<li>php</li>
-<li>mysql</li>
-<li>apache</li>
-</ul>
-<h1 id="todo"><span class="caps">TODO</span><a class="headerlink" href="#todo" title="Permanent link">¶</a></h1>
-<p>为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用, 还要折腾的事儿有:</p>
-<ol>
-<li>通过 <span class="caps">USB</span> 挂接 FreeBSD 格式化的 <span class="caps">UFS</span> 分区</li>
-<li>通过板载 <span class="caps">SATA</span> 接口,加装 2.5吋 1T 新硬盘</li>
-<li>安装 Samba 系统,提供空间给其它 M …</li></ol>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/jump-into-7niu.html">迁出RTFD.org</a></h2>
-                <div class="summary">
-<h1 id="rtfdorg"><span class="caps">RTFD</span>.org<a class="headerlink" href="#rtfdorg" title="Permanent link">¶</a></h1>
-<ul>
-<li>正名 readthedocs.org</li>
-<li>别名儿 <code>RTFD</code>.org</li>
-</ul>
-<p>是一个良心服务, 自动将指定的任何一个仓库中的 Sphinx 工程, 根据提交事件,自动同步,编译,发布.</p>
-<p>完全 0 配置,以及不占用大家的任何网络资源,完全免费!</p>
-<h2 id="_1">原先<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>发现后,高兴的大规模使用中,并配置了 Disqus 等等好物…</p>
-<h2 id="_2">现在<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p><img alt="d005a8bd08c1" src="https://f.cloud.github.com/assets/834231/1538179/849551c2-4cdc-11e3-9759-d005a8bd08c1.jpg"/></p>
-<ul>
-<li><a href="https://github.com/rtfd/readthedocs.org/issues/435">Many builds stuck in “triggered” state · Issue #435 · rtfd/readthedocs.org</a></li>
-<li><a href="https://github.com/rtfd/readthedocs.org/issues/592">how stop a build triggered from long time ago with finish …</a></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-7niu.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest&nbsp;的体验</a></h2>
-                <div class="summary">
-<h2 id="cbi"><span class="caps">CBI</span><a class="headerlink" href="#cbi" title="Permanent link">¶</a></h2>
-<p><a href="http://blog.zhgdg.org/2014-01/et-cbi1/">CBInstall.1 欢乐完成</a> 记要了现场活动的情况;</p>
-<p>当然,俺也是学员之一,要交作业的,所以,俺的刷机笔记如下:</p>
-<h2 id="_1">目标<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>用CB3 替代原先的兼容 <span class="caps">PC</span> 机作家庭服务器!</p>
-<h2 id="_2">环境<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<ul>
-<li><span class="caps">MBP</span> 11年下半年版, 15吋</li>
-<li><span class="caps">MAC</span> <span class="caps">OS</span> X 10.9 Mavericks</li>
-<li><span class="caps">CB3</span>(CubieTruck) 以及套件的配件</li>
-</ul>
-<h2 id="_3">刷机<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>果然如宣传的,是那么简单!</p>
-<ol>
-<li>准备工具 ~ <a href="http://docs.cubieboard.org/tutorials/common/livesuit_installation_guide">LiveSuit</a> </li>
-<li>下载镜像 ~ <a href="http://dl.cubieboard.org/software">NAND镜像</a></li>
-<li>刷机</li>
-</ol>
-<p>尝试了 arch linux 的镜像,发觉进入后包管理命令,完全不熟悉,所以,只好坚持使用 Ubuntu了.</p>
-<h3 id="_4">细节<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="http://docs.cubieboard.org/tutorials/common/livesuit_installation_guide">LiveSuit</a> 真心傻瓜,在MAC 上完全无碍 …</li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/cbi-zq-install.html">more ...</a>
+<h1 id="cipher"><span class="dquo">“</span><span class="caps">CIPHER</span>”<a class="headerlink" href="#cipher" title="Permanent link">¶</a></h1>
+<div class="highlight"><pre><span></span><code><span class="n">who</span><span class="s1">'s gonna tell you when</span>
+<span class="s1">It'</span><span class="n">s</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="n">late</span><span class="w"></span>
+<span class="n">Who</span><span class="s1">'s gonna tell you things</span>
+<span class="s1">Aren'</span><span class="n">t</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">great</span><span class="w"></span>
+<span class="n">You</span><span class="w"> </span><span class="n">can</span><span class="s1">'t go on</span>
+<span class="s1">Thinking nothing is wrong</span>
+<span class="s1">Who'</span><span class="n">s</span><span class="w"> </span><span class="n">gonna</span><span class="w"> </span><span class="n">drive</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">home</span><span class="w"> </span><span class="n">tonight</span><span class="w"></span>
+
+<span class="n">Who</span><span class="s1">'s gonna pick you up</span>
+<span class="s1">When you full</span>
+<span class="s1">Who'</span><span class="n">s</span><span class="w"> </span><span class="n">gonna</span><span class="w"> </span><span class="n">hang …</span></code></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/cipher-who-s-gonna.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -293,10 +156,7 @@
                         href="https://blog.zoomquiet.io/category/murmur.html">1</a></li>
                 <li style="display: inline;" class="active"><a
                         href="https://blog.zoomquiet.io/category/murmur2.html">2</a></li>
-                <li style="display: inline;" class=""><a
-                        href="https://blog.zoomquiet.io/category/murmur3.html">3</a></li>
-                <li style="display: inline;" class="next"><a
-                        href="https://blog.zoomquiet.io/category/murmur3.html">&raquo;</a></li>
+                <li style="display: inline;" class="next disabled"><a href="#">&laquo;</a></li>
         </ul>
 
     <hr/>

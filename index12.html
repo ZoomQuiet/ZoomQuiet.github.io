@@ -109,6 +109,38 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
+                <div class="summary">
+<p>来自 @nedbat 的分享:</p>
+<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
+<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>C样:</p>
+<div class="highlight"><pre><span></span><code><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+</code></pre></div>
+<p>偏门:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+</code></pre></div>
+<p>蠎样:</p>
+<div class="highlight"><pre><span></span><code><span class="err">for v in my_list:</span>
+<span class="err">    print v</span>
+</code></pre></div>
+<p>模式:</p>
+<div class="highlight"><pre><span></span><code><span class="err">for name in iterable:</span>
+<span class="err">    statements</span>
+</code></pre></div>
+<ul>
+<li>可 …</li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/standing-desk-env.html">站立式办公环境尝试</a></h2>
                 <div class="summary">
 <h1 id="_1">立<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
@@ -271,23 +303,6 @@
 <ul>
 <li>既然文档的起草可以选择 富文本和 markdown 格式 …</li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/150604-chaos-tower.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/150604-code2048.html"><span class="caps">FW</span>/Code 2048&nbsp;用户使用协议</a></h2>
-                <div class="summary"><h2 id="toc">[<span class="caps">TOC</span>]<a class="headerlink" href="#toc" title="Permanent link">&para;</a></h2>
-<h1 id="fw-code-2048"><span class="caps">FW</span>: Code 2048 用户使用协议<a class="headerlink" href="#fw-code-2048" title="Permanent link">&para;</a></h1>
-<ul>
-<li>来自 <a href="https://code2048.com/topic/3/code-2048-%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%8D%8F%E8%AE%AE?from=timeline&amp;isappinstalled=0">Code 2048 用户使用协议 | Code&nbsp;2048</a></li>
-</ul>
-<p>一般用户协议（所谓TOS）是一份专业到看不懂的法律文件，但那没意义。这里没有复杂到看不懂的东西，只是一些简单的规则。</p>
-<ul>
-<li>这是扩展自《神秘的程序员们》系列漫画的讨论区。主要话题包括程序员漫画相关讨论、所有技术相关话题及互联网、创业、项目管理、设计、产品、职业和职场、科幻、游戏话题。</li>
-<li>在这些话题之外的内容，可能会不受欢迎，或被移出主要讨论区甚至直接删除，并且有可能导致相关帐号被封。</li>
-<li>保持礼貌，禁止人身攻击/种族/地域/宗教/职业歧视之类令人不快的内容。</li>
-<li>禁止发布违法内容。违法的定义：目前本站位于美国加州，请遵守美国互联网相关法律法规。包括但不限于“<span class="caps">COPPA</span>“、“<span class="caps">DMCA</span>”等。服务器所在国家的变化会导致“违法”定义发生变化 …</li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/150604-code2048.html">more ...</a>
                 </div>
             </article>
             <hr/>

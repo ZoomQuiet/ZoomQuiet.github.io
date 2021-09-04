@@ -109,6 +109,44 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">如何自在定义 macOS&nbsp;截屏文件名?</a></h2>
+                <div class="summary">
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<ul>
+<li>默认系统截屏工具输出图片是:<ul>
+<li>到桌面</li>
+<li>文件名: <code>屏幕快照 2019-02-13 17.17.32.png</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<ul>
+<li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
+<li><code>screenshot_190213-17.17.32.jpg</code></li>
+</ul>
+</li>
+<li>现在怎么作到?</li>
+</ul>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>记要尝试过程</p>
+</blockquote>
+<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>$ defaults write com.apple.screencapture <span class="nb">type</span> jpg
+$ killall SystemUIServer
+</code></pre></div>
+<p>以上即可</p>
+<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>$ defaults write com.apple.screencapture name screenshot
+$ killall SystemUIServer
+</code></pre></div>
+<p>以上只能变成:</p>
+<div class="highlight"><pre><span></span><code><span class="err">screenshot 2019-02-13 17.17.32 …</span></code></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/rime4gitchat.html">如何配置 rIME 支持 GitChat&nbsp;规范?</a></h2>
                 <div class="summary">
 <h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
@@ -303,28 +341,6 @@
 <li>听读: <a href="http://www.ximalaya.com/33671123/album/3607582?page=2">安娜•卡列尼娜_有声小说在线收听-喜马拉雅FM</a><ul>
 <li>168节, 约70+小时 …</li></ul></li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/180104-L06E01Анна-Каренина.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/171231-L04E51greatwall.html"><span class="caps">L04E51</span>🐙/&nbsp;长城简史</a></h2>
-                <div class="summary"><h1 id="l04e51"><span class="caps">L04E51</span>🐙长城简史<a class="headerlink" href="#l04e51" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>字 -&gt; 词 -&gt; 象征 -&gt;&nbsp;新指</p>
-</blockquote>
-<h2 id="_1">长,城<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>长, 久遠也.&nbsp;从兀从匕.兀者,高遠意也</li>
-<li>城, 以盛民也. 从土从成,成亦聲;&#8221;釋名&#8221;城,成也.&nbsp;一成而不可毀也. </li>
-</ul>
-<p>造字时,&nbsp;长和城一直是分别使用的,</p>
-<p>长, 长度之外, 
-移情用用在 <code>长久/长情</code> 之类用长度来比喻非物质的精神事物.</p>
-<p>而,城则一直指代主要承担防务功能的建筑.</p>
-<h2 id="_2">长城<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>长城是中国也是世界上修建时间最长,工程量最大的一项古代防御工程.
-自秦始皇以后,凡是统治着中原地区的朝代,几乎都要修筑长城. 计有汉,晋,北魏,东魏,西魏,北齐,北周,隋,唐,宋,辽,金,元 …</p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/171231-L04E51greatwall.html">more ...</a>
                 </div>
             </article>
             <hr/>

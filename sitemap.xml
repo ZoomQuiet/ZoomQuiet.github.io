@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/index.html</loc>
-<lastmod>2021-09-04T20:52:53-00:00</lastmod>
+<lastmod>2021-11-14T23:54:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2021-09-04T20:52:53-00:00</lastmod>
+<lastmod>2021-11-14T23:54:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2021-09-04T20:52:53-00:00</lastmod>
+<lastmod>2021-11-14T23:54:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2021-09-04T20:52:53-00:00</lastmod>
+<lastmod>2021-11-14T23:54:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -53,8 +53,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.zoomquiet.io/211114M1max-re-inti-MBP.html</loc>
+<lastmod>2021-11-14T23:53:21+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.zoomquiet.io/oldtouch-apisix-growupupup.html</loc>
 <lastmod>2021-08-07T16:32:53+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/201201-ZoomQuiet-MurMur-collection.html</loc>
+<lastmod>2021-09-04T20:53:31+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -985,7 +999,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/category/murmur.html</loc>
-<lastmod>2021-09-04T20:52:30+08:06</lastmod>
+<lastmod>2021-09-04T20:53:31+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -999,7 +1013,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/category/pythonic.html</loc>
-<lastmod>2020-07-25T10:43:30+08:06</lastmod>
+<lastmod>2021-11-14T23:53:21+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/tag/mac.html</loc>
+<lastmod>2021-11-14T23:53:21+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/tag/m1.html</loc>
+<lastmod>2021-11-14T23:53:21+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/tag/scm.html</loc>
+<lastmod>2021-11-14T23:53:21+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.zoomquiet.io/tag/howto.html</loc>
+<lastmod>2021-11-14T23:53:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1027,21 +1069,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/dama.html</loc>
-<lastmod>2021-09-04T20:52:30+08:06</lastmod>
+<lastmod>2021-09-04T20:53:31+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/logging.html</loc>
-<lastmod>2021-09-04T20:52:30+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.zoomquiet.io/tag/scm.html</loc>
-<lastmod>2020-07-25T10:43:30+08:06</lastmod>
+<lastmod>2021-09-04T20:53:31+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1208,13 +1243,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.zoomquiet.io/tag/howto.html</loc>
-<lastmod>2019-09-08T12:44:51+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://blog.zoomquiet.io/tag/leo.html</loc>
 <lastmod>2020-07-19T12:01:27+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -1238,13 +1266,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.zoomquiet.io/tag/gc4.html</loc>
 <lastmod>2020-07-19T12:39:12+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.zoomquiet.io/tag/mac.html</loc>
-<lastmod>2020-01-31T16:42:10+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1762,7 +1783,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2021-09-04T20:52:30+08:06</lastmod>
+<lastmod>2021-11-14T23:53:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

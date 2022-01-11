@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2021-11-14T23:53:21+08:00</updated><entry><title>如何安定进入 M1maxMBP</title><link href="https://blog.zoomquiet.io/211114M1max-re-inti-MBP.html" rel="alternate"></link><published>2021-11-14T22:42:00+08:00</published><updated>2021-11-14T23:53:21+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2021-11-14:/211114M1max-re-inti-MBP.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2021-11-15T09:59:31+08:00</updated><entry><title>如何安定进入 M1maxMBP</title><link href="https://blog.zoomquiet.io/211114M1max-re-inti-MBP.html" rel="alternate"></link><published>2021-11-14T22:42:00+08:00</published><updated>2021-11-15T09:59:31+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2021-11-14:/211114M1max-re-inti-MBP.html</id><summary type="html">
 &lt;h2 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;13年入的 &lt;span class="caps"&gt;MBP&lt;/span&gt; 坑,
 当时 17吋 顶配, 在 &lt;span class="caps"&gt;MACAO&lt;/span&gt; 实体店拿的;
@@ -171,8 +171,9 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="80万文件" src="https://ipic.zoomquiet.top/2021-11-14-ScreenShot2021-11-14%2023.32.28.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="p2p" src="https://ipic.zoomquiet.top/2021-11-15-ScreenShot2021-11-15%2009.55.38.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;嗯嗯嗯…嘦10小时等一晩上就好,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="80万文件" src="https://ipic.zoomquiet.top/2021-11-14-ScreenShot2021-11-14%2023.32.28.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;果然:&lt;/p&gt;
 &lt;p&gt;༄  sudo du -hs *&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;111M    Shared&lt;/span&gt;
@@ -206,7 +207,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="12G" src="https://ipic.zoomquiet.top/2021-11-14-WechatIMG36612.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="12G" src="https://ipic.zoomquiet.top/2021-11-14-ScreenShot2021-11-15%2000.11.27.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;甚至于, 原先在 老 rMBP 每次安装要编译半小时的 ffmpeg 也无缝自动完成升级:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="10核 ffmpeg" src="https://ipic.zoomquiet.top/2021-11-14-ScreenShot2021-11-14%2020.53.00.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;这一下子就有 &lt;code&gt;10核降重任&lt;/code&gt; 感觉了 ;-)&lt;/p&gt;

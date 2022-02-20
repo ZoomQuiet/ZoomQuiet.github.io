@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2021-11-15T09:59:31+08:00</updated><entry><title>如何安定进入 M1maxMBP</title><link href="https://blog.zoomquiet.io/211114M1max-re-inti-MBP.html" rel="alternate"></link><published>2021-11-14T22:42:00+08:00</published><updated>2021-11-15T09:59:31+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2021-11-14:/211114M1max-re-inti-MBP.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-02-20T12:19:23+08:00</updated><entry><title>如何安定进入 M1maxMBP</title><link href="https://blog.zoomquiet.io/211114M1max-re-inti-MBP.html" rel="alternate"></link><published>2021-11-14T22:42:00+08:00</published><updated>2021-11-15T09:59:31+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2021-11-14:/211114M1max-re-inti-MBP.html</id><summary type="html">
 &lt;h2 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;13年入的 &lt;span class="caps"&gt;MBP&lt;/span&gt; 坑,
 当时 17吋 顶配, 在 &lt;span class="caps"&gt;MACAO&lt;/span&gt; 实体店拿的;
@@ -20693,7 +20693,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;ul&gt;
 &lt;li&gt;140505 快速完结&lt;/li&gt;
 &lt;li&gt;140127 单立文章追踪&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>如何自在的折腾QPy</title><link href="https://blog.zoomquiet.io/init-my-qpy-env.html" rel="alternate"></link><published>2014-01-26T12:42:00+08:00</published><updated>2019-09-08T12:14:36+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-26:/init-my-qpy-env.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="Pythonic"></category><category term="MAC"></category><category term="CT"></category><category term="Cubier"></category><category term="CubieBoard"></category><category term="Howto"></category></entry><entry><title>如何自在的折腾QPy</title><link href="https://blog.zoomquiet.io/init-my-qpy-env.html" rel="alternate"></link><published>2014-01-26T12:42:00+08:00</published><updated>2022-02-20T12:19:23+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2014-01-26:/init-my-qpy-env.html</id><summary type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;QPython 知道有两年了,是看 &lt;a href="http://book.douban.com/subject/10561367/"&gt;Head First Python(中文版) (豆瓣)&lt;/a&gt; 时,发现竟然有 
 &lt;a href="http://code.google.com/p/android-scripting/"&gt;&lt;span class="caps"&gt;SL4A&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
@@ -20793,7 +20793,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;/ul&gt;
 &lt;p&gt;经过快速的尝试,
 明确 &lt;code&gt;SSHDroid&lt;/code&gt; 最简洁可用, 那就上:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-sshdroid.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-sshdroid.jpg"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;安装,配置都没有什么可说的&lt;/li&gt;
 &lt;li&gt;只是,非专业版,只能用口令登录,先忍着&lt;/li&gt;
@@ -20838,7 +20838,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;li&gt;所以,程序猿有 &lt;a href="http://www.busybox.net/"&gt;BusyBox&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;一安装,批量将大堆习惯的工具,灌到 &lt;code&gt;system/xbin/&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-busybox-tail.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-busybox-tail.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;这样,才能远程观察, QPython 项目目录中,
 若隐若现的 &lt;code&gt;.run.log&lt;/code&gt; 明显发生什么问题, 快速增补一行:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
@@ -20847,7 +20847,7 @@ partition  3: class =         &lt;span class="caps"&gt;DISK&lt;/span&gt;, name =
 &lt;span class="n"&gt;droid&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;makeToast&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;u&lt;/span&gt;&lt;span class="s1"&gt;'Hello, Username!是也乎 ;-)'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;就能运行成功,跳出最简单的发布公告框了!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-hollo.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-hollo.jpg"/&gt;&lt;/p&gt;
 &lt;h3 id="_7"&gt;运行&lt;a class="headerlink" href="#_7" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;好了,进入下一个阶段: &lt;code&gt;怎么让 QPyhon 如系统命令一样在 ash 环境中调用我们的脚本?&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;目测,要依次解决:&lt;/p&gt;
@@ -20891,7 +20891,7 @@ ImportError: No module named site
 &lt;a href="https://gist.github.com/ZoomQuiet/8642464"&gt;gen_qpy_env.py&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;注意:&lt;/code&gt; 这货一定要加载到 QPython 中,用脚本形式来跑,
 如果也是从后台 shell 环境中跑,是获得不了主要关键参数的!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-gen-profile.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-gen-profile.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;然后!? 肿么,让 shell 环境每次都能自动加载上这堆配置?&lt;/p&gt;
 &lt;p&gt;综合,搜索来的相关说明:&lt;/p&gt;
 &lt;ul&gt;
@@ -20905,18 +20905,18 @@ ImportError: No module named site
 &lt;span class="c1"&gt;# mount -o remount,ro /dev/block/mtdblock3 /system&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;再关闭,重启 &lt;code&gt;SSHDroid&lt;/code&gt; 后,远程登入,测试:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-this-zen.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-this-zen.png"/&gt;&lt;/p&gt;
 &lt;p&gt;然后,远程人工从 shell 调用&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# cd /storage/sdcard0/com.hipipal.qpyplus/projects/chaos/ &lt;/span&gt;
 &lt;span class="c1"&gt;# /data/data/com.hipipal.qpyplus/files/bin/python hollo.py&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;手机无论在什么桌面,都能跳出来俺的 &lt;code&gt;hollo.py&lt;/code&gt; 运行结果:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-console-hollo.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-console-hollo.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;然后,本地,习惯性的,就可以用 &lt;a href="http://tmux.sourceforge.net/"&gt;tmux&lt;/a&gt; 同时 观察/管理本地以及远程的开发/测试/运行情况了:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-tumx.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-tumx.png"/&gt;&lt;/p&gt;
 &lt;h4 id="beta"&gt;BETA乱入&lt;a class="headerlink" href="#beta" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;作者看俺这么努力的折腾从内部机密放送俺最新开发版本,兴奋的安装上:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-new-version.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-new-version.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;然后,再运行…&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call last&lt;span class="o"&gt;)&lt;/span&gt;:
   File &lt;span class="s2"&gt;"/storage/sdcard0/com.hipipal.qpyplus/projects/chaos/hollo.py"&lt;/span&gt;, line &lt;span class="m"&gt;3&lt;/span&gt;, in &amp;lt;module&amp;gt;
@@ -20938,15 +20938,15 @@ socket.error: &lt;span class="o"&gt;[&lt;/span&gt;Errno &lt;span class="m"&gt;11
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;从项目中打开脚本:
-&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-env-proj.jpg"/&gt;&lt;/p&gt;
+&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-proj.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;从 QEditor 中运行
-&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-env-run.jpg"/&gt;&lt;/p&gt;
+&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-run.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在 console 中生成:
-&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-env-gen-again.jpg"/&gt;&lt;/p&gt;
+&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-gen-again.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="qpython"&gt;QPython头声明&lt;a class="headerlink" href="#qpython" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
@@ -20987,7 +20987,7 @@ without android titlebar (fullscreen) “”“&lt;/p&gt;
 &lt;p&gt;没理由在 Android 这儿栽了哪! 果断的: &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;先将本地公匙用口令登录的方式推上手机&lt;/li&gt;
-&lt;li&gt;然后,&lt;a href="http://zoomq.qiniudn.com/CPyUG/QPython/apk/berserker.android.apps.sshdroid-cracked-signed.apk"&gt;sshdroid-cracked.apk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;然后,&lt;a href="http://0.zoomquiet.top/CPyUG/QPython/apk/berserker.android.apps.sshdroid-cracked-signed.apk"&gt;sshdroid-cracked.apk&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;然后,就没有然后了 ;-)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;只是,唯一的问题:
@@ -21121,13 +21121,13 @@ See the error message above.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;因为是要守护在后台长期运行的,所以用 &lt;code&gt;#qpy:console&lt;/code&gt; 标定&lt;/p&gt;
 &lt;p&gt;可惜:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-bottle-error.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-error.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;原来:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-install-wsgi.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-install-wsgi.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;然后:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-bottle-running.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-running.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;没有然后:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-bottle-hello.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-hello.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;哈哈! 一切如愿!&lt;/p&gt;
 &lt;h2 id="_11"&gt;专题体例:&lt;a class="headerlink" href="#_11" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;QPy 的大妈们曰了: 每个专题应该包括 &lt;/p&gt;

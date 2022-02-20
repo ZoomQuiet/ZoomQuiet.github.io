@@ -287,7 +287,7 @@
 </ul>
 <p>经过快速的尝试,
 明确 <code>SSHDroid</code> 最简洁可用, 那就上:</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-sshdroid.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-sshdroid.jpg"/></p>
 <ul>
 <li>安装,配置都没有什么可说的</li>
 <li>只是,非专业版,只能用口令登录,先忍着</li>
@@ -332,7 +332,7 @@
 <li>所以,程序猿有 <a href="http://www.busybox.net/">BusyBox</a></li>
 <li>一安装,批量将大堆习惯的工具,灌到 <code>system/xbin/</code></li>
 </ul>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-busybox-tail.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-busybox-tail.jpg"/></p>
 <p>这样,才能远程观察, QPython 项目目录中,
 若隐若现的 <code>.run.log</code> 明显发生什么问题, 快速增补一行:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*-</span>
@@ -341,7 +341,7 @@
 <span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="sa">u</span><span class="s1">'Hello, Username!是也乎 ;-)'</span><span class="p">)</span>
 </code></pre></div>
 <p>就能运行成功,跳出最简单的发布公告框了!</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-hollo.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-hollo.jpg"/></p>
 <h3 id="_7">运行<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
 <p>好了,进入下一个阶段: <code>怎么让 QPyhon 如系统命令一样在 ash 环境中调用我们的脚本?</code></p>
 <p>目测,要依次解决:</p>
@@ -385,7 +385,7 @@ ImportError: No module named site
 <a href="https://gist.github.com/ZoomQuiet/8642464">gen_qpy_env.py</a></p>
 <p><code>注意:</code> 这货一定要加载到 QPython 中,用脚本形式来跑,
 如果也是从后台 shell 环境中跑,是获得不了主要关键参数的!</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-gen-profile.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-gen-profile.jpg"/></p>
 <p>然后!? 肿么,让 shell 环境每次都能自动加载上这堆配置?</p>
 <p>综合,搜索来的相关说明:</p>
 <ul>
@@ -399,18 +399,18 @@ ImportError: No module named site
 <span class="c1"># mount -o remount,ro /dev/block/mtdblock3 /system</span>
 </code></pre></div>
 <p>再关闭,重启 <code>SSHDroid</code> 后,远程登入,测试:</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-this-zen.png"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-this-zen.png"/></p>
 <p>然后,远程人工从 shell 调用</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># cd /storage/sdcard0/com.hipipal.qpyplus/projects/chaos/ </span>
 <span class="c1"># /data/data/com.hipipal.qpyplus/files/bin/python hollo.py</span>
 </code></pre></div>
 <p>手机无论在什么桌面,都能跳出来俺的 <code>hollo.py</code> 运行结果:</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-console-hollo.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-console-hollo.jpg"/></p>
 <p>然后,本地,习惯性的,就可以用 <a href="http://tmux.sourceforge.net/">tmux</a> 同时 观察/管理本地以及远程的开发/测试/运行情况了:</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-tumx.png"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-tumx.png"/></p>
 <h4 id="beta">BETA乱入<a class="headerlink" href="#beta" title="Permanent link">¶</a></h4>
 <p>作者看俺这么努力的折腾从内部机密放送俺最新开发版本,兴奋的安装上:</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-new-version.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-new-version.jpg"/></p>
 <p>然后,再运行…</p>
 <div class="highlight"><pre><span></span><code>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
   File <span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/projects/chaos/hollo.py"</span>, line <span class="m">3</span>, in &lt;module&gt;
@@ -432,15 +432,15 @@ socket.error: <span class="o">[</span>Errno <span class="m">111</span><span clas
 <ul>
 <li>
 <p>从项目中打开脚本:
-<img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-env-proj.jpg"/></p>
+<img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-proj.jpg"/></p>
 </li>
 <li>
 <p>从 QEditor 中运行
-<img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-env-run.jpg"/></p>
+<img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-run.jpg"/></p>
 </li>
 <li>
 <p>在 console 中生成:
-<img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140127-qpy-env-gen-again.jpg"/></p>
+<img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-gen-again.jpg"/></p>
 </li>
 </ul>
 <h4 id="qpython">QPython头声明<a class="headerlink" href="#qpython" title="Permanent link">¶</a></h4>
@@ -481,7 +481,7 @@ without android titlebar (fullscreen) “”“</p>
 <p>没理由在 Android 这儿栽了哪! 果断的: </p>
 <ul>
 <li>先将本地公匙用口令登录的方式推上手机</li>
-<li>然后,<a href="http://zoomq.qiniudn.com/CPyUG/QPython/apk/berserker.android.apps.sshdroid-cracked-signed.apk">sshdroid-cracked.apk</a></li>
+<li>然后,<a href="http://0.zoomquiet.top/CPyUG/QPython/apk/berserker.android.apps.sshdroid-cracked-signed.apk">sshdroid-cracked.apk</a></li>
 <li>然后,就没有然后了 ;-)</li>
 </ul>
 <p>只是,唯一的问题:
@@ -615,13 +615,13 @@ See the error message above.
 </code></pre></div>
 <p>因为是要守护在后台长期运行的,所以用 <code>#qpy:console</code> 标定</p>
 <p>可惜:</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-bottle-error.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-error.jpg"/></p>
 <p>原来:</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-install-wsgi.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-install-wsgi.jpg"/></p>
 <p>然后:</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-bottle-running.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-running.jpg"/></p>
 <p>没有然后:</p>
-<p><img alt="snap4qpy" src="http://zoomq.qiniudn.com/CPyUG/QPython/snap/140126-qpy-bottle-hello.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-hello.jpg"/></p>
 <p>哈哈! 一切如愿!</p>
 <h2 id="_11">专题体例:<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
 <p>QPy 的大妈们曰了: 每个专题应该包括 </p>

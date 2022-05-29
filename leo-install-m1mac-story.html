@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    M1macOS 下 Leo&nbsp;复活故事
+/ 是也乎(￣▽￣)
+/ ZoomQuiet.io    </title>
+
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:slug" content="leo-install-m1mac-story"/>
+            <meta property="og:url" content="https://blog.zoomquiet.io/leo-install-m1mac-story.html"/>
+            <meta property="og:description" content="Background Troubles Goal Tracing 尝试 PyENV 尝试 miniconda PyQt 混合安装: PS: Summary logging Background¶ 背景 Leo 是文学化编辑环境, 由 EKR/令老爷子 单人为主长期维护的优秀开发/编 …"/>
+
+    <!-- Bootstrap 
+
+        <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
+    <link href="https://blog.zoomquiet.io/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://blog.zoomquiet.io/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="https://blog.zoomquiet.io/theme/css/pygments/github.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/style.css" type="text/css"/>
+
+    -->
+
+    <!-- add emojify into Pelican 
+    <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/emojify.min.css" type="text/css" />
+    <script src="https://blog.zoomquiet.io/theme/js/emojify.js"></script>
+
+-->
+
+
+    <!-- JavaScript plugins (requires jQuery) 
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    -->
+
+        <link href="https://blog.zoomquiet.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title=" ATOM Feed"/>
+
+            <!--
+    { include 'includes/ga.html' }
+            -->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <!--
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+<a href="https://blog.zoomquiet.io" class="navbar-brand"></a>
+            -->
+<table border="0" width="98%">
+    <tr>
+<td>
+    <a href="https://blog.zoomquiet.io" class="navbar-brand">
+    <img src="https://blog.zoomquiet.io/theme/logo.png"/>
+    
+    <span class="violet-site">.io </span>
+
+</td>
+        
+<td>
+            <ul style="list-style: none;" class="nav navbar-nav">
+                    <li style="display: inline;"><a href="http://zoomquiet.io">大妈</a></li>
+                    <li style="display: inline;"><a href="https://py.101.camp/">课程</a></li>
+                    <li style="display: inline;"><a href="https://t.zsxq.com/iaIEQ3N">星球</a></li>
+                    <li style="display: inline;"><a href="/pages/friendly-links.html">友链</a></li>
+                    <li style="display: inline;"><a href="/pages/affiliate.html">好物</a></li>
+                    <li style="display: inline;"><a href="/pages/zoomquiet.html">关于</a></li>
+              
+
+              
+            </ul>
+    
+</td>
+<td align="right" width="10%">
+                <ul style="list-style: none;">
+                <li style="display: inline;"><a href="https://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
+
+                <li style="display: inline;"><a href="https://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+
+</td>
+    </tr>
+</table>
+</a>            
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+
+<hr/>
+
+<!-- /.navbar -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://blog.zoomquiet.io/leo-install-m1mac-story.html">
+                        M1macOS 下 Leo&nbsp;复活故事
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+<!--
+    <span class="label label-default">Date</span>
+-->
+    <span class="published">
+        <i class="icon-calendar"></i>2022-05-28 00:00
+    </span>
+
+<!--
+    <span class="label">By</span>
+    <i class="icon-user"></i>
+    <a href="https://blog.zoomquiet.io/author/zoomquiet.html">Zoom.Quiet</a>
+
+
+-->
+
+    <span class="label label-default">Category</span>
+    <a href="https://blog.zoomquiet.io/category/pythonic.html">Pythonic</a>
+
+
+
+	<span class="label label-default">Tags</span>
+		<a href="https://blog.zoomquiet.io/tag/python.html">python</a>
+	        ,
+		<a href="https://blog.zoomquiet.io/tag/howto.html">howto</a>
+	        ,
+		<a href="https://blog.zoomquiet.io/tag/leo.html">leo</a>
+	        ,
+		<a href="https://blog.zoomquiet.io/tag/install.html">install</a>
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+                <div class="toc">
+<ul>
+<li><a href="#background">Background</a></li>
+<li><a href="#troubles">Troubles</a></li>
+<li><a href="#goal">Goal</a></li>
+<li><a href="#tracing">Tracing</a><ul>
+<li><a href="#pyenv">尝试&nbsp;PyENV</a></li>
+<li><a href="#miniconda">尝试&nbsp;miniconda</a></li>
+<li><a href="#pyqt">PyQt</a></li>
+<li><a href="#_1">混合安装:</a><ul>
+<li><a href="#ps"><span class="caps">PS</span>:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#logging">logging</a></li>
+</ul>
+</div>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>背景</p>
+</blockquote>
+<p>Leo 是文学化编辑环境, 由 <span class="caps">EKR</span>/令老爷子 单人为主长期维护的优秀开发/编撰/思考/&#8230;环境;
+从 05 年上手以来, 一直在各种场景中欢快的使用,
+历经 WindownsNT/Ubuntu/<span class="caps">MAC</span> 到现在的 macOS 12.* ,
+可以说, 依托 Python 的跨平台属性,&nbsp;一直能相对平滑的迁移;</p>
+<p>比如: <a href="https://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme&nbsp;custom</a></p>
+<p>事实上官方文档中: <a href="http://leoeditor.com/installing.html#installing-leo-on-macos-10-7-lion-and-later">Installing Leo — Leo 6.6.2 documentation</a> ~ Installing Leo on MacOs 10.7 (Lion)&nbsp;部分其实就是俺的笔记转化而成的.</p>
+<p>为解决本地开发测试, 并尽可能复用运行时到相似的工程中, 以往选择的管理工具是 <a href="https://github.com/pyenv/pyenv">pyenv/pyenv: Simple Python version&nbsp;management</a></p>
+<p>参考:<a href="https://testdriven.io/blog/python-environments/">Modern Python Environments - dependency and workspace management |&nbsp;TestDriven.io</a></p>
+<p><img alt="Modern Python Environments" src="https://ipic.zoomquiet.top/2022-05-29-PyEnvironments-vs.jpg"></p>
+<p>以往形成的习惯是:</p>
+<ul>
+<li>用 PyENV 安装不同版本 Python 运行时, 毕竟不同工程部署在不同目标主机中, 对 Python&nbsp;版本依赖不同</li>
+<li>基于 PyENV 的自动绑定机制, 在对应目录中通过指令 <code>pyenv local [指定运行时别名]</code> <ul>
+<li>就可以记忆绑定关系, 之后嘦进入相关目录,&nbsp;将自动完成运行时切换</li>
+<li>不必须象其它工具要人工明确运行激活指令</li>
+</ul>
+</li>
+<li>进入对应环境后, 使用 pip&nbsp;进行标准模块依赖管理</li>
+</ul>
+<p>整体上可以达成效果:</p>
+<ul>
+<li>本地和生产环境能部署相同 PyENV&nbsp;环境</li>
+<li>支持不同版本 Python&nbsp;运行时</li>
+<li>支持不同项目有自己的模块依赖树,&nbsp;和其它工程隔离</li>
+<li>支持不同工程, 如果领域接近, 可以绑定其它项目的 PyENV 环境,&nbsp;节省相同模块的反复安装</li>
+<li>&#8230;即: Python 运行时版本/项目目录/工程依赖 三者能相对独立配置/管理<ul>
+<li>而且, 值得强调的是, 对于配置好的环境, cd 进入时,&nbsp;自动完成切换</li>
+<li>同时, 所有定制运行环境, 统一安装在指定目录中, 和工程目录无关, 不必专门进行 git&nbsp;忽略配置</li>
+</ul>
+</li>
+</ul>
+<h2 id="troubles">Troubles<a class="headerlink" href="#troubles" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>问题</p>
+</blockquote>
+<p>不过, 在今年初升级硬件为芯片为 M1max 全新 <span class="caps">MBP</span> 后,&nbsp;就一直有问题:</p>
+<p>参考: <a href="https://blog.zoomquiet.io/211114m1max-re-inti-mbp">如何安定进入 M1maxMBP / 是也乎(￣▽￣) /&nbsp;ZoomQuiet.io</a></p>
+<p>虽然当时幸运的使用官方迁移工具, 将几乎 94.2% 的环境和数据都自动迁移成功;
+由于底层芯片不同, 以往 Python 本地运行时环境虽然能用,
+但是, 无法进一步安装新版本 Python 运行时, 以及升级 Leo&nbsp;到最新版本&#8230;</p>
+<p>具体的:</p>
+<ul>
+<li>原先在 Intel 芯片中安装/配置好的 PyENV 环境可以运行<ul>
+<li>但是, 无法安装新版本 Python&nbsp;环境</li>
+<li>也无法正常使用对应环境中的 pip&nbsp;安装新模块</li>
+</ul>
+</li>
+<li>原先在 Intel 芯片中安装/配置好的 miniconda 环境可以运行<ul>
+<li>但是, <code>conda info</code> 报错</li>
+</ul>
+</li>
+<li>..感觉只有一组很小的 snap 可以使用, 已经不是两个完备可控的 Python&nbsp;运行时管理环境了</li>
+</ul>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>目标</p>
+</blockquote>
+<p>恢复本地 Python&nbsp;环境的控制:</p>
+<ul>
+<li>可以自如安装多种版本 Python&nbsp;运行时</li>
+<li>可以针对不同工程绑定不同模块依赖树, 当然,&nbsp;也可以复用相同的</li>
+<li>可以安装运行最新 Leo 版本<ul>
+<li>当前可用是&nbsp;5.9-b2</li>
+<li>官方已经是 6.6.2&nbsp;了</li>
+</ul>
+</li>
+</ul>
+<h2 id="tracing">Tracing<a class="headerlink" href="#tracing" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>探索</p>
+</blockquote>
+<p>当前环境:</p>
+<p><img alt="screenfetch" src="https://ipic.zoomquiet.top/2022-05-29-220529-screenfetch.jpg"></p>
+<h3 id="pyenv">尝试 PyENV<a class="headerlink" href="#pyenv" title="Permanent link">&para;</a></h3>
+<ul>
+<li>先在 <code>~/.bash_profile</code> 中注释掉所有 PyENV&nbsp;相关的配置,</li>
+<li>将 <code>~/.pyenv</code> 移动为 <code>~/_pyenv</code></li>
+<li>根据官方指引: <a href="https://github.com/pyenv/pyenv">pyenv/pyenv: Simple Python version management</a> 重新安装<ul>
+<li>而且事先根据 <a href="https://github.com/pyenv/pyenv/wiki#suggested-build-environment">Home · pyenv/pyenv Wiki</a>&nbsp;的建议</li>
+<li>重新安装了 Python&nbsp;编译依赖</li>
+</ul>
+</li>
+</ul>
+<p>一切正常, 其实依赖通过 brew 安装的 python@3.9&nbsp;完成自举</p>
+<div class="highlight"><pre><span></span><code>Python 3.9.8 (main, Nov 10 2021, 03:55:42)
+[Clang 13.0.0 (clang-1300.0.29.3)] on darwin
+</code></pre></div>
+
+<p>可惜, 尝试通过 <code>pyenv install</code> 指令来安装其它版本 Python 环境,
+都撞到编译失败, 反复探索, 网上给的招儿都用过,&nbsp;还是无法解决.</p>
+<h3 id="miniconda">尝试 miniconda<a class="headerlink" href="#miniconda" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>怀疑 PyENV 准备的编译脚本都是针对 Intel&nbsp;背景的</p>
+</blockquote>
+<p>所以, 重新将目光投向 Anaconda, 要知道这个项目已经不仅仅可以管理 Python 环境, 而且其它各种运行时环境都可以管理, 包含 rust/haskell/&#8230; 都可以通过 conda 指令一致性部署, 
+而且事先经过不同平台的针对性预编译, 不用在本地折腾, 直接下载,&nbsp;展开就可用;</p>
+<p>而且, 进入 conda 运行时环境后, 可以继续用 conda 指令安装相关模块, 也可以用 pip 来从 PyPI&nbsp;下载安装&#8230;</p>
+<p>唯一不如 PyENV 的就是 conda 环境, 必须手工激活,&nbsp;无法自动绑定;</p>
+<p>之前 miniconda 是手工安装的, 现在已经有全新 arm 版本 brew 环境了,
+参考: <a href="https://sspai.com/post/63935#!">在 M1 芯片 Mac 上使用 Homebrew -&nbsp;少数派</a></p>
+<p>标准安装:</p>
+<div class="highlight"><pre><span></span><code>abrew install miniconda
+</code></pre></div>
+
+<p>因为进行了多 homebrew&nbsp;环境配置:</p>
+<ul>
+<li>ibrew 指向旧系统迁移过来的 Intel 版本&nbsp;homebrew</li>
+<li>abrew 指向全新安装的 <span class="caps">ARM</span> 版本&nbsp;homebrew</li>
+</ul>
+<p>然后, 就可以探查当前支持那些 Python&nbsp;版本了:</p>
+<div class="highlight"><pre><span></span><code>$ conda search <span class="s2">&quot;^Python</span>$<span class="s2">&quot;</span>
+Loading channels: <span class="k">done</span>
+<span class="c1"># Name                       Version           Build  Channel</span>
+python                        <span class="m">3</span>.8.11      hbdb9e5c_5  pkgs/main
+python                        <span class="m">3</span>.8.13      hbdb9e5c_0  pkgs/main
+python                         <span class="m">3</span>.9.6      hc70090a_5  pkgs/main
+python                         <span class="m">3</span>.9.7      hc70090a_1  pkgs/main
+python                        <span class="m">3</span>.9.11      hbdb9e5c_1  pkgs/main
+python                        <span class="m">3</span>.9.11      hbdb9e5c_2  pkgs/main
+python                        <span class="m">3</span>.9.12      hbdb9e5c_0  pkgs/main
+python                        <span class="m">3</span>.10.0      hbdb9e5c_1  pkgs/main
+python                        <span class="m">3</span>.10.0      hbdb9e5c_2  pkgs/main
+python                        <span class="m">3</span>.10.0      hbdb9e5c_3  pkgs/main
+python                        <span class="m">3</span>.10.0      hbdb9e5c_5  pkgs/main
+python                        <span class="m">3</span>.10.3      hbdb9e5c_5  pkgs/main
+python                        <span class="m">3</span>.10.4      hbdb9e5c_0  pkgs/main
+</code></pre></div>
+
+<p>安装一个 Leo&nbsp;专用的环境:</p>
+<div class="highlight"><pre><span></span><code>$ conde create -n leo3811 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8.11
+</code></pre></div>
+
+<p>通过指令进入:</p>
+<div class="highlight"><pre><span></span><code>$ conda activate leo3811
+</code></pre></div>
+
+<p>通过事先安装 <code>pip_search</code> 可以搜索出配置的PyPI 镜像是否包含&nbsp;Leo:</p>
+<p><img alt="pip_search" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-28%2000.07.02.jpg"></p>
+<p>通过 pip 安装&nbsp;Leo:</p>
+<div class="highlight"><pre><span></span><code>$ pip install leo
+</code></pre></div>
+
+<p><img alt="PyQt" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-28%2000.07.22.jpg"></p>
+<p>过程中, 可以观察到很多编译错误, 
+但是, 安装脚本足够聪明, 可以逐一版本降低来尝试最终兼容;
+安装完成后,&nbsp;尝试运行:</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">leo</span>
+<span class="n">leoQt</span><span class="o">.</span><span class="n">py</span><span class="p">:</span> <span class="n">can</span> <span class="ow">not</span> <span class="n">fully</span> <span class="kn">import</span> <span class="nn">PyQt5.</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+
+  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoQt.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">55</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">QtCore</span>
+
+<span class="ne">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">&#39;PyQt5.sip&#39;</span>
+
+
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/bin/leo&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">5</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="kn">from</span> <span class="nn">leo.core.runLeo</span> <span class="kn">import</span> <span class="n">run</span>
+  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/runLeo.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">27</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">leoGlobals</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="n">leoApp</span><span class="o">.</span><span class="n">LeoApp</span><span class="p">()</span>
+  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoApp.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">334</span><span class="p">,</span> <span class="ow">in</span> <span class="fm">__init__</span>
+    <span class="kn">import</span> <span class="nn">leo.core.leoFrame</span> <span class="k">as</span> <span class="nn">leoFrame</span>
+  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoFrame.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">13</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="kn">import</span> <span class="nn">leo.core.leoColorizer</span> <span class="k">as</span> <span class="nn">leoColorizer</span>
+  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoColorizer.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">18</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="kn">from</span> <span class="nn">leo.core.leoQt</span> <span class="kn">import</span> <span class="n">Qsci</span><span class="p">,</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtWidgets</span>
+  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoQt.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">88</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">qt_version</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QT_VERSION_STR</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;QtCore&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</code></pre></div>
+
+<p>没招, 问 Leo 官方 mailling-list:&nbsp;https://groups.google.com/d/msgid/leo-editor</p>
+<p>不久, tbp100.tp@gmail.com&nbsp;建议:</p>
+<blockquote>
+<p>this looks like a problem with Qt or PyQt, not leo per se.&nbsp;possibilities:</p>
+</blockquote>
+<ul>
+<li>try to install PyQt6 on its own (without the rest of&nbsp;leo);</li>
+<li>try to install an earlier version of PyQt6, if you can figure out which ones are&nbsp;available;</li>
+<li>try installing PyQt5 instead of PyQt6 (Leo can use either&nbsp;one); </li>
+<li>install python 3.9 and see whether PyQt6 or PyQt5 will install without&nbsp;errors.</li>
+</ul>
+<h3 id="pyqt">PyQt<a class="headerlink" href="#pyqt" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>想起来 Qt&nbsp;是个神奇的东西&#8230;</p>
+</blockquote>
+<p>之前进行桌面开发时, PyQt 就不能简单安装,&nbsp;对应搜索</p>
+<p>国内用户首先要配置 conda&nbsp;源:</p>
+<div class="highlight"><pre><span></span><code>$ conda config --set show_channel_urls yes
+</code></pre></div>
+
+<p>生成 <code>~/.condarc</code> 文件后对应修改,&nbsp;比如俺当前是:</p>
+<div class="highlight"><pre><span></span><code><span class="n">auto_activate_base</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="n">report_errors</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="n">show_channel_urls</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="n">channels</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">defaults</span><span class="w"></span>
+<span class="n">default_channels</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/pkgs/</span><span class="n">main</span><span class="w"></span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/pkgs/</span><span class="n">r</span><span class="w"></span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/pkgs/</span><span class="n">msys2</span><span class="w"></span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">repo</span><span class="o">.</span><span class="na">anaconda</span><span class="o">.</span><span class="na">com</span><span class="sr">/pkgs/</span><span class="n">main</span><span class="w"></span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">repo</span><span class="o">.</span><span class="na">anaconda</span><span class="o">.</span><span class="na">com</span><span class="sr">/pkgs/</span><span class="n">r</span><span class="w"></span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">repo</span><span class="o">.</span><span class="na">anaconda</span><span class="o">.</span><span class="na">com</span><span class="sr">/pkgs/</span><span class="n">msys2</span><span class="w"></span>
+<span class="n">custom_channels</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/</span><span class="n">cloud</span><span class="w"></span>
+<span class="w">  </span><span class="n">msys2</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/</span><span class="n">cloud</span><span class="w"></span>
+<span class="w">  </span><span class="n">bioconda</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/</span><span class="n">cloud</span><span class="w"></span>
+<span class="w">  </span><span class="n">menpo</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/</span><span class="n">cloud</span><span class="w"></span>
+<span class="w">  </span><span class="n">pytorch</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/</span><span class="n">cloud</span><span class="w"></span>
+<span class="w">  </span><span class="n">simpleitk</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/</span><span class="n">cloud</span><span class="w"></span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">conda</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="n">leo3911</span><span class="w"> </span><span class="n">python</span><span class="o">=</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">11</span><span class="w"></span>
+<span class="n">Collecting</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="p">(</span><span class="n">current_repodata</span><span class="o">.</span><span class="n">json</span><span class="p">):</span><span class="w"> </span><span class="n">done</span><span class="w"></span>
+<span class="n">Solving</span><span class="w"> </span><span class="n">environment</span><span class="p">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">repodata</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">current_repodata</span><span class="o">.</span><span class="n">json</span><span class="p">,</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">retry</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="n">repodata</span><span class="w"> </span><span class="n">source</span><span class="o">.</span><span class="w"></span>
+<span class="n">Collecting</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="p">(</span><span class="n">repodata</span><span class="o">.</span><span class="n">json</span><span class="p">):</span><span class="w"> </span><span class="n">done</span><span class="w"></span>
+<span class="n">Solving</span><span class="w"> </span><span class="n">environment</span><span class="p">:</span><span class="w"> </span><span class="n">done</span><span class="w"></span>
+
+<span class="c1">## Package Plan ##</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">environment</span><span class="w"> </span><span class="n">location</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">leo3911</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">added</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="n">specs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">python</span><span class="o">=</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">11</span><span class="w"></span>
+
+
+<span class="n">The</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">packages</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">downloaded</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">package</span><span class="w">                    </span><span class="o">|</span><span class="w">            </span><span class="n">build</span><span class="w"></span>
+<span class="w">    </span><span class="o">---------------------------|-----------------</span><span class="w"></span>
+<span class="w">    </span><span class="n">python</span><span class="o">-</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">11</span><span class="w">              </span><span class="o">|</span><span class="w">       </span><span class="n">hbdb9e5c_2</span><span class="w">        </span><span class="mf">10.1</span><span class="w"> </span><span class="n">MB</span><span class="w">  </span><span class="n">defaults</span><span class="w"></span>
+<span class="w">    </span><span class="o">------------------------------------------------------------</span><span class="w"></span>
+<span class="w">                                           </span><span class="n">Total</span><span class="p">:</span><span class="w">        </span><span class="mf">10.1</span><span class="w"> </span><span class="n">MB</span><span class="w"></span>
+
+<span class="n">The</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">NEW</span><span class="w"> </span><span class="n">packages</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">INSTALLED</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">ca</span><span class="o">-</span><span class="n">certificates</span><span class="w">    </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">ca</span><span class="o">-</span><span class="n">certificates</span><span class="o">-</span><span class="mf">2022.4</span><span class="o">.</span><span class="mi">26</span><span class="o">-</span><span class="n">hca03da5_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">certifi</span><span class="w">            </span><span class="n">anaconda</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">noarch</span><span class="p">::</span><span class="n">certifi</span><span class="o">-</span><span class="mf">2020.6</span><span class="o">.</span><span class="mi">20</span><span class="o">-</span><span class="n">pyhd3eb1b0_3</span><span class="w"></span>
+<span class="w">  </span><span class="n">libcxx</span><span class="w">             </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">libcxx</span><span class="o">-</span><span class="mf">12.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">hf6beb65_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">libffi</span><span class="w">             </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">libffi</span><span class="o">-</span><span class="mf">3.4</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">hc377ac9_2</span><span class="w"></span>
+<span class="w">  </span><span class="n">ncurses</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">ncurses</span><span class="o">-</span><span class="mf">6.3</span><span class="o">-</span><span class="n">h1a28f6b_2</span><span class="w"></span>
+<span class="w">  </span><span class="n">openssl</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">openssl</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">1</span><span class="n">o</span><span class="o">-</span><span class="n">h1a28f6b_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">pip</span><span class="w">                </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">pip</span><span class="o">-</span><span class="mf">21.2</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">py39hca03da5_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">python</span><span class="w">             </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">python</span><span class="o">-</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="n">hbdb9e5c_2</span><span class="w"></span>
+<span class="w">  </span><span class="n">readline</span><span class="w">           </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">readline</span><span class="o">-</span><span class="mf">8.1</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">h1a28f6b_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">setuptools</span><span class="w">         </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">setuptools</span><span class="o">-</span><span class="mf">61.2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py39hca03da5_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">sqlite</span><span class="w">             </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">sqlite</span><span class="o">-</span><span class="mf">3.38</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="n">h1058600_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">tk</span><span class="w">                 </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">tk</span><span class="o">-</span><span class="mf">8.6</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="n">hb8d0fd4_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">tzdata</span><span class="w">             </span><span class="n">anaconda</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">noarch</span><span class="p">::</span><span class="n">tzdata</span><span class="o">-</span><span class="mi">2022</span><span class="n">a</span><span class="o">-</span><span class="n">hda174b7_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">wheel</span><span class="w">              </span><span class="n">anaconda</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">noarch</span><span class="p">::</span><span class="n">wheel</span><span class="o">-</span><span class="mf">0.37</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">pyhd3eb1b0_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">xz</span><span class="w">                 </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">xz</span><span class="o">-</span><span class="mf">5.2</span><span class="o">.</span><span class="mi">5</span><span class="o">-</span><span class="n">h1a28f6b_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">zlib</span><span class="w">               </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="n">arm64</span><span class="p">::</span><span class="n">zlib</span><span class="o">-</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">12</span><span class="o">-</span><span class="n">h5a0b063_2</span><span class="w"></span>
+
+
+<span class="n">Proceed</span><span class="w"> </span><span class="p">([</span><span class="n">y</span><span class="p">]</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="err">?</span><span class="w"></span>
+
+
+<span class="n">Downloading</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Extracting</span><span class="w"> </span><span class="n">Packages</span><span class="w"></span>
+<span class="n">python</span><span class="o">-</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">11</span><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="mf">10.1</span><span class="w"> </span><span class="n">MB</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="c1">##################################################################################################################################### | 100%</span><span class="w"></span>
+<span class="n">Preparing</span><span class="w"> </span><span class="n">transaction</span><span class="p">:</span><span class="w"> </span><span class="n">done</span><span class="w"></span>
+<span class="n">Verifying</span><span class="w"> </span><span class="n">transaction</span><span class="p">:</span><span class="w"> </span><span class="n">done</span><span class="w"></span>
+<span class="n">Executing</span><span class="w"> </span><span class="n">transaction</span><span class="p">:</span><span class="w"> </span><span class="n">done</span><span class="w"></span>
+<span class="c1">#</span><span class="w"></span>
+<span class="c1"># To activate this environment, use</span><span class="w"></span>
+<span class="c1">#</span><span class="w"></span>
+<span class="c1">#     $ conda activate leo3911</span><span class="w"></span>
+<span class="c1">#</span><span class="w"></span>
+<span class="c1"># To deactivate an active environment, use</span><span class="w"></span>
+<span class="c1">#</span><span class="w"></span>
+<span class="c1">#     $ conda deactivate</span><span class="w"></span>
+</code></pre></div>
+
+<p>检验安装成果:</p>
+<div class="highlight"><pre><span></span><code>$  conda env list
+<span class="c1"># conda environments:</span>
+<span class="c1">#</span>
+base                  *  /opt/homebrew/Caskroom/miniconda/base
+leo3811                  /opt/homebrew/Caskroom/miniconda/base/envs/leo3811
+leo3911                  /opt/homebrew/Caskroom/miniconda/base/envs/leo3911
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">conda</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">PyQt</span><span class="w"></span>
+<span class="n">Collecting</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="p">(</span><span class="n">current_repodata</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">done</span><span class="w"></span>
+<span class="n">Solving</span><span class="w"> </span><span class="nl">environment</span><span class="p">:</span><span class="w"> </span><span class="n">done</span><span class="w"></span>
+
+<span class="err">##</span><span class="w"> </span><span class="n">Package</span><span class="w"> </span><span class="k">Plan</span><span class="w"> </span><span class="err">##</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">environment</span><span class="w"> </span><span class="nl">location</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">leo3811</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">added</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="nl">specs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">pyqt</span><span class="w"></span>
+
+
+<span class="n">The</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="k">NEW</span><span class="w"> </span><span class="n">packages</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="nl">INSTALLED</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">adwaita</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="w"> </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">adwaita</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="o">-</span><span class="mf">40.1.1</span><span class="o">-</span><span class="n">hca03da5_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">atk</span><span class="o">-</span><span class="mf">1.0</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">atk</span><span class="o">-</span><span class="mf">1.0</span><span class="o">-</span><span class="mf">2.36.0</span><span class="o">-</span><span class="n">h7fe96df_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">cairo</span><span class="w">              </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">cairo</span><span class="o">-</span><span class="mf">1.16.0</span><span class="o">-</span><span class="n">h0ab239c_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">dbus</span><span class="w">               </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">dbus</span><span class="o">-</span><span class="mf">1.13.18</span><span class="o">-</span><span class="n">h8280c03_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">epoxy</span><span class="w">              </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">epoxy</span><span class="o">-</span><span class="mf">1.5.4</span><span class="o">-</span><span class="n">h1a28f6b_2</span><span class="w"></span>
+<span class="w">  </span><span class="n">expat</span><span class="w">              </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">expat</span><span class="o">-</span><span class="mf">2.4.4</span><span class="o">-</span><span class="n">hc377ac9_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">fontconfig</span><span class="w">         </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">fontconfig</span><span class="o">-</span><span class="mf">2.13.1</span><span class="o">-</span><span class="n">h1f4a5ec_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">freetype</span><span class="w">           </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">freetype</span><span class="o">-</span><span class="mf">2.11.0</span><span class="o">-</span><span class="n">h1192e45_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">fribidi</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">fribidi</span><span class="o">-</span><span class="mf">1.0.10</span><span class="o">-</span><span class="n">h1a28f6b_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">gdk</span><span class="o">-</span><span class="n">pixbuf</span><span class="w">         </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">gdk</span><span class="o">-</span><span class="n">pixbuf</span><span class="o">-</span><span class="mf">2.42.6</span><span class="o">-</span><span class="n">h74ef11a_4</span><span class="w"></span>
+<span class="w">  </span><span class="n">gettext</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">gettext</span><span class="o">-</span><span class="mf">0.21.0</span><span class="o">-</span><span class="n">h826f4ad_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">giflib</span><span class="w">             </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">giflib</span><span class="o">-</span><span class="mf">5.2.1</span><span class="o">-</span><span class="n">h1a28f6b_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">glib</span><span class="w">               </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">glib</span><span class="o">-</span><span class="mf">2.69.1</span><span class="o">-</span><span class="n">h98b2900_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">gobject</span><span class="o">-</span><span class="n">introspec</span><span class="o">~</span><span class="w"> </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">gobject</span><span class="o">-</span><span class="n">introspection</span><span class="o">-</span><span class="mf">1.68.0</span><span class="o">-</span><span class="n">py38h3459c9f_3</span><span class="w"></span>
+<span class="w">  </span><span class="n">graphite2</span><span class="w">          </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">graphite2</span><span class="o">-</span><span class="mf">1.3.14</span><span class="o">-</span><span class="n">h0e5e14a_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">gtk3</span><span class="w">               </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">gtk3</span><span class="o">-</span><span class="mf">3.24.21</span><span class="o">-</span><span class="n">h321fa23_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">harfbuzz</span><span class="w">           </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">harfbuzz</span><span class="o">-</span><span class="mf">2.8.1</span><span class="o">-</span><span class="n">hffeda63_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">hicolor</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="w"> </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">hicolor</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="o">-</span><span class="mf">0.17</span><span class="o">-</span><span class="n">hca03da5_2</span><span class="w"></span>
+<span class="w">  </span><span class="n">icu</span><span class="w">                </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">icu</span><span class="o">-</span><span class="mf">68.1</span><span class="o">-</span><span class="n">hc377ac9_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">jpeg</span><span class="w">               </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">jpeg</span><span class="o">-</span><span class="mi">9</span><span class="n">e</span><span class="o">-</span><span class="n">h1a28f6b_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">krb5</span><span class="w">               </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">krb5</span><span class="o">-</span><span class="mf">1.19.2</span><span class="o">-</span><span class="n">h3b8d789_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">libedit</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">libedit</span><span class="o">-</span><span class="mf">3.1.20210910</span><span class="o">-</span><span class="n">h1a28f6b_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">libevent</span><span class="w">           </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">libevent</span><span class="o">-</span><span class="mf">2.1.12</span><span class="o">-</span><span class="n">hf27765b_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">libiconv</span><span class="w">           </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">libiconv</span><span class="o">-</span><span class="mf">1.16</span><span class="o">-</span><span class="n">h1a28f6b_2</span><span class="w"></span>
+<span class="w">  </span><span class="n">libpng</span><span class="w">             </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">libpng</span><span class="o">-</span><span class="mf">1.6.37</span><span class="o">-</span><span class="n">hb8d0fd4_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">libpq</span><span class="w">              </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">libpq</span><span class="o">-</span><span class="mf">12.9</span><span class="o">-</span><span class="n">h65cfe13_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">librsvg</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">librsvg</span><span class="o">-</span><span class="mf">2.50.7</span><span class="o">-</span><span class="n">h90a7944_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">libtiff</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">libtiff</span><span class="o">-</span><span class="mf">4.2.0</span><span class="o">-</span><span class="n">h01837e1_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">libwebp</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">libwebp</span><span class="o">-</span><span class="mf">1.2.2</span><span class="o">-</span><span class="n">h68602c7_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">libwebp</span><span class="o">-</span><span class="n">base</span><span class="w">       </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">libwebp</span><span class="o">-</span><span class="n">base</span><span class="o">-</span><span class="mf">1.2.2</span><span class="o">-</span><span class="n">h1a28f6b_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">libxml2</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">libxml2</span><span class="o">-</span><span class="mf">2.9.14</span><span class="o">-</span><span class="n">h8c5e841_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">libxslt</span><span class="w">            </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">libxslt</span><span class="o">-</span><span class="mf">1.1.34</span><span class="o">-</span><span class="n">h9833966_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">-</span><span class="n">openmp</span><span class="w">        </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">llvm</span><span class="o">-</span><span class="n">openmp</span><span class="o">-</span><span class="mf">12.0.0</span><span class="o">-</span><span class="n">haf9daa7_1</span><span class="w"></span>
+<span class="w">  </span><span class="n">lz4</span><span class="o">-</span><span class="n">c</span><span class="w">              </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">lz4</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="mf">1.9.3</span><span class="o">-</span><span class="n">hc377ac9_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">ninja</span><span class="w">              </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">ninja</span><span class="o">-</span><span class="mf">1.10.2</span><span class="o">-</span><span class="n">hca03da5_5</span><span class="w"></span>
+<span class="w">  </span><span class="n">ninja</span><span class="o">-</span><span class="n">base</span><span class="w">         </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">ninja</span><span class="o">-</span><span class="n">base</span><span class="o">-</span><span class="mf">1.10.2</span><span class="o">-</span><span class="n">h525c30c_5</span><span class="w"></span>
+<span class="w">  </span><span class="n">nspr</span><span class="w">               </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">nspr</span><span class="o">-</span><span class="mf">4.33</span><span class="o">-</span><span class="n">hc377ac9_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">nss</span><span class="w">                </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">nss</span><span class="o">-</span><span class="mf">3.74</span><span class="o">-</span><span class="n">h142855e_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">pango</span><span class="w">              </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">pango</span><span class="o">-</span><span class="mf">1.48.7</span><span class="o">-</span><span class="n">h79d33a7_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">pcre</span><span class="w">               </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">pcre</span><span class="o">-</span><span class="mf">8.45</span><span class="o">-</span><span class="n">hc377ac9_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">pixman</span><span class="w">             </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">pixman</span><span class="o">-</span><span class="mf">0.40.0</span><span class="o">-</span><span class="n">h1a28f6b_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">pyqt</span><span class="w">               </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">pyqt</span><span class="o">-</span><span class="mf">5.15.2</span><span class="o">-</span><span class="n">py38he8f2410_0</span><span class="w"></span>
+<span class="w">  </span><span class="n">qt</span><span class="w">                 </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">qt</span><span class="o">-</span><span class="mf">5.15.2</span><span class="o">-</span><span class="n">h4e944ae_2</span><span class="w"></span>
+<span class="w">  </span><span class="n">zstd</span><span class="w">               </span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">osx</span><span class="o">-</span><span class="nl">arm64</span><span class="p">:</span><span class="err">:</span><span class="n">zstd</span><span class="o">-</span><span class="mf">1.5.2</span><span class="o">-</span><span class="n">h8574219_0</span><span class="w"></span>
+
+
+<span class="n">Proceed</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">y</span><span class="o">]/</span><span class="n">n</span><span class="p">)</span><span class="vm">?</span><span class="w"></span>
+</code></pre></div>
+
+<blockquote>
+<p>$ pip install&nbsp;leo</p>
+</blockquote>
+<p><img alt="PyQtWebEngine" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-29%2021.41.02.jpg"></p>
+<p>也有安装失败,&nbsp;持续自动降级现象&#8230;</p>
+<p>最终成功安装了:</p>
+<ul>
+<li>Successfully built lazy-object-proxy wrapt&nbsp;tornado</li>
+<li>Installing collected packages: zipp, wrapt, typing-extensions, traitlets, pytz, pyrsistent, MarkupSafe, lazy-object-proxy, dialite, attrs, webruntime, tornado, tomli, sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, snowballstemmer, pscript, platformdirs, mccabe, jupyter-core, jsonschema, Jinja2, isort, importlib-metadata, imagesize, fastjsonschema, docutils, dill, babel, astroid, alabaster, sphinx, six, pylint, pyflakes, nbformat, future, flexx,&nbsp;leo</li>
+<li>Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 alabaster-0.7.12 astroid-2.11.5 attrs-21.4.0 babel-2.10.1 dialite-0.5.3 dill-0.3.5.1 docutils-0.17.1 fastjsonschema-2.15.3 flexx-0.8.4 future-0.18.2 imagesize-1.3.0 importlib-metadata-4.11.4 isort-5.10.1 jsonschema-4.5.1 jupyter-core-4.10.0 lazy-object-proxy-1.7.1 leo-5.9 mccabe-0.7.0 nbformat-5.4.0 platformdirs-2.5.2 pscript-0.7.7 pyflakes-2.4.0 pylint-2.13.9 pyrsistent-0.18.1 pytz-2022.1 six-1.16.0 snowballstemmer-2.2.0 sphinx-4.5.0 sphinxcontrib-applehelp-1.0.2 sphinxcontrib-devhelp-1.0.2 sphinxcontrib-htmlhelp-2.0.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.3 sphinxcontrib-serializinghtml-1.1.5 tomli-2.0.1 tornado-6.1 traitlets-5.2.1.post0 typing-extensions-4.2.0 webruntime-0.5.8 wrapt-1.14.1&nbsp;zipp-3.8.0</li>
+</ul>
+<p>但是,&nbsp;运行时报出神奇错误:</p>
+<div class="highlight"><pre><span></span><code>$ leo
+Sorry, <span class="s2">&quot;python&quot;</span> cannot be run on this version of macOS. Qt requires macOS <span class="m">11</span>.1.0 or later, you have macOS <span class="m">10</span>.16.0.
+</code></pre></div>
+
+<h3 id="_1">混合安装:<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>果断 M1 环境中当前还是 brew&nbsp;体系最靠谱</p>
+</blockquote>
+<p>参考: <a href="https://www.zhihu.com/question/437075754/answer/1993415429">MacBook Pro m1版本怎么安装python 的pyqt5？ -&nbsp;知乎</a></p>
+<ul>
+<li>先用 <code>abrew install pyqt@5</code> 完成针对 <span class="caps">ARM</span> 环境的 Qt&nbsp;安装</li>
+<li>然后将对应安装好的 lib 手工复制到对应 conda 环境中<ul>
+<li>比如,&nbsp;重新创建专用环境</li>
+<li><code>conda create  -n leo3912 python=3.9.12</code></li>
+</ul>
+</li>
+<li>则, 手工复制的是:<ul>
+<li><code>/opt/homebrew/Cellar/pyqt@5/5.15.6/lib/python3.9/site-packages/</code> 中所有目录</li>
+<li>到 <code>/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/</code></li>
+</ul>
+</li>
+</ul>
+<p>包含:</p>
+<div class="highlight"><pre><span></span><code>PyQt3D-5.15.5.dist-info
+PyQt5
+PyQt5-5.15.6.dist-info
+PyQt5_sip-12.9.0-py3.9.egg-info
+PyQtChart-5.15.5.dist-info
+PyQtDataVisualization-5.15.5.dist-info
+PyQtNetworkAuth-5.15.5.dist-info
+PyQtPurchasing-5.15.5.dist-info
+</code></pre></div>
+
+<p>从官方 <a href="https://github.com/leo-editor/leo-editor/releases/latest">Latest</a> 链接中下载最新原代码包, 部署到 <code>/opt/bin</code></p>
+<p>然后,&nbsp;在对应环境中调用:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">conda</span><span class="p">:</span><span class="w"> </span><span class="n">leo3912</span><span class="p">)</span><span class="w"></span>
+<span class="o">$</span><span class="w"> </span><span class="n">python</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">leo</span><span class="o">/</span><span class="n">launchLeo</span><span class="o">.</span><span class="n">py</span><span class="w"></span>
+
+<span class="n">setting</span><span class="w"> </span><span class="n">leoID</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;USER&#39;</span><span class="p">):</span><span class="w"> </span><span class="s1">&#39;zoomq&#39;</span><span class="w"></span>
+<span class="n">PYLINTHOME</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="s1">&#39;/Users/zoomq/Library/Caches/pylint&#39;</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">obsolescent</span><span class="w"> </span><span class="s1">&#39;/Users/zoomq/.pylint.d&#39;</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">found</span><span class="p">;</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">safely</span><span class="w"> </span><span class="n">remove</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">latter</span><span class="w"></span>
+<span class="n">duplicate</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="ow">not</span><span class="w"> </span><span class="n">conflicting</span><span class="p">)</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">bindings</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">myLeoSettings</span><span class="o">.</span><span class="n">leo</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Alt</span><span class="o">+</span><span class="p">)</span><span class="w"> </span><span class="n">move</span><span class="o">-</span><span class="n">past</span><span class="o">-</span><span class="n">close</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Alt</span><span class="o">+</span><span class="p">)</span><span class="w"> </span><span class="n">move</span><span class="o">-</span><span class="n">past</span><span class="o">-</span><span class="n">close</span><span class="w"></span>
+<span class="n">duplicate</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="ow">not</span><span class="w"> </span><span class="n">conflicting</span><span class="p">)</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">bindings</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">myLeoSettings</span><span class="o">.</span><span class="n">leo</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Alt</span><span class="o">+</span><span class="p">}</span><span class="w"> </span><span class="n">forward</span><span class="o">-</span><span class="n">paragraph</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Alt</span><span class="o">+</span><span class="p">}</span><span class="w"> </span><span class="n">forward</span><span class="o">-</span><span class="n">paragraph</span><span class="o">-</span><span class="n">extend</span><span class="o">-</span><span class="n">selection</span><span class="w"></span>
+<span class="n">duplicate</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="ow">not</span><span class="w"> </span><span class="n">conflicting</span><span class="p">)</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">bindings</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">myLeoSettings</span><span class="o">.</span><span class="n">leo</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Ctrl</span><span class="o">+</span><span class="p">(</span><span class="w"> </span><span class="n">add</span><span class="o">-</span><span class="n">comments</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Ctrl</span><span class="o">+</span><span class="p">(</span><span class="w"> </span><span class="n">add</span><span class="o">-</span><span class="n">comments</span><span class="w"></span>
+<span class="n">duplicate</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="ow">not</span><span class="w"> </span><span class="n">conflicting</span><span class="p">)</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">bindings</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">myLeoSettings</span><span class="o">.</span><span class="n">leo</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Ctrl</span><span class="o">+</span><span class="p">)</span><span class="w"> </span><span class="n">delete</span><span class="o">-</span><span class="n">comments</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Ctrl</span><span class="o">+</span><span class="p">)</span><span class="w"> </span><span class="n">delete</span><span class="o">-</span><span class="n">comments</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Ctrl</span><span class="o">+</span><span class="p">)</span><span class="w"> </span><span class="n">delete</span><span class="o">-</span><span class="n">comments</span><span class="w"></span>
+<span class="n">duplicate</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="ow">not</span><span class="w"> </span><span class="n">conflicting</span><span class="p">)</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">bindings</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">myLeoSettings</span><span class="o">.</span><span class="n">leo</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Ctrl</span><span class="o">+</span><span class="p">{</span><span class="w"> </span><span class="n">promote</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Ctrl</span><span class="o">+</span><span class="p">{</span><span class="w"> </span><span class="n">promote</span><span class="w"></span>
+<span class="n">duplicate</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="ow">not</span><span class="w"> </span><span class="n">conflicting</span><span class="p">)</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">bindings</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">myLeoSettings</span><span class="o">.</span><span class="n">leo</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Ctrl</span><span class="o">+</span><span class="p">}</span><span class="w"> </span><span class="n">demote</span><span class="w"></span>
+<span class="n">all</span><span class="w">    </span><span class="n">Ctrl</span><span class="o">+</span><span class="p">}</span><span class="w"> </span><span class="n">demote</span><span class="w"></span>
+<span class="n">Leo</span><span class="w"> </span><span class="mf">6.6</span><span class="o">.</span><span class="mi">2</span><span class="w"></span>
+<span class="n">Python</span><span class="w"> </span><span class="mf">3.9</span><span class="o">.</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="n">PyQt</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="mf">5.15</span><span class="o">.</span><span class="mi">3</span><span class="w"></span>
+<span class="n">darwin</span><span class="w"></span>
+<span class="n">expand_css_constants</span><span class="w"> </span><span class="n">Unresolved</span><span class="w"> </span><span class="err">@</span><span class="n">constants</span><span class="w"></span>
+<span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_base_decoration&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_children_family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_base_border&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_base_family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@checkbox-font-family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-weight&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@status-font-family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-style&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-size&#39;</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+<span class="n">qt</span><span class="o">.</span><span class="n">qpa</span><span class="o">.</span><span class="n">fonts</span><span class="p">:</span><span class="w"> </span><span class="n">Populating</span><span class="w"> </span><span class="n">font</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="n">aliases</span><span class="w"> </span><span class="n">took</span><span class="w"> </span><span class="mi">163</span><span class="w"> </span><span class="n">ms</span><span class="o">.</span><span class="w"> </span><span class="n">Replace</span><span class="w"> </span><span class="n">uses</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">missing</span><span class="w"> </span><span class="n">font</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="s2">&quot;Monoid Retina&quot;</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">exists</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">cost</span><span class="o">.</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@auto 4py3ch.md&#39;</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@auto 4py4ch.md&#39;</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@auto 4py5ch.md&#39;</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@auto 4py6ch.md&#39;</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@auto 4pyend.md&#39;</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">Sites</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">utility</span><span class="o">/</span><span class="n">announcer</span><span class="o">/</span><span class="n">tasks</span><span class="o">.</span><span class="n">py</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">Sites</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">utility</span><span class="o">/</span><span class="n">pol</span><span class="o">/</span><span class="n">camp</span><span class="o">.</span><span class="n">yaml</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">Sites</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">utility</span><span class="o">/</span><span class="n">pol</span><span class="o">/</span><span class="n">st</span><span class="o">.</span><span class="n">py</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">Sites</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">utility</span><span class="o">/</span><span class="n">pol</span><span class="o">/</span><span class="n">tasks</span><span class="o">.</span><span class="n">py</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">Sites</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">utility</span><span class="o">/</span><span class="nb">pow</span><span class="o">/</span><span class="n">tasks</span><span class="o">.</span><span class="n">py</span><span class="w"></span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">Sites</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">_course</span><span class="o">/</span><span class="mi">101</span><span class="n">camp1py</span><span class="o">/</span><span class="nb">pow</span><span class="o">/</span><span class="n">tasks</span><span class="o">.</span><span class="n">py</span><span class="w"></span>
+<span class="n">expand_css_constants</span><span class="w"> </span><span class="n">Unresolved</span><span class="w"> </span><span class="err">@</span><span class="n">constants</span><span class="w"></span>
+<span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_base_decoration&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_children_family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_base_border&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_base_family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@checkbox-font-family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-weight&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@status-font-family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-style&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-size&#39;</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+<span class="n">expand_css_constants</span><span class="w"> </span><span class="n">Unresolved</span><span class="w"> </span><span class="err">@</span><span class="n">constants</span><span class="w"></span>
+<span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_base_decoration&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_children_family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_base_border&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@bookmarks_base_family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@checkbox-font-family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-weight&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@status-font-family&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-style&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;@dialog-font-size&#39;</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+<span class="n">wrote</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/.</span><span class="n">leo</span><span class="o">/</span><span class="n">leo</span><span class="o">.</span><span class="n">session</span><span class="w"></span>
+<span class="n">wrote</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/.</span><span class="n">leo</span><span class="o">/.</span><span class="n">leoRecentFiles</span><span class="o">.</span><span class="n">txt</span><span class="w"></span>
+</code></pre></div>
+
+<p><img alt="Leo 6.6.2" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-29%2022.10.10-1.jpg"></p>
+<p>可以正常启动后,&nbsp;将指令包装为一个别名:</p>
+<p><code>~/.bash_profile</code> 中追加:</p>
+<div class="highlight"><pre><span></span><code>alias leo6lanch=&quot;python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;&quot;
+</code></pre></div>
+
+<p>日常在终端中就两步调用:</p>
+<div class="highlight"><pre><span></span><code>$ conda activate leo3912
+$ leo6lanch
+</code></pre></div>
+
+<h4 id="ps"><span class="caps">PS</span>:<a class="headerlink" href="#ps" title="Permanent link">&para;</a></h4>
+<p>如果以上安装 leo 后, 直接在 conda 环境中运行,&nbsp;将发现:</p>
+<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w">  </span><span class="n">leo</span><span class="w"></span>
+<span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">last</span><span class="p">):</span><span class="w"></span>
+<span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/bin/leo&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">run</span><span class="p">())</span><span class="w"></span>
+<span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/leo/core/runLeo.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">run</span><span class="w"></span>
+<span class="w">    </span><span class="n">g</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">loadManager</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span><span class="w"> </span><span class="n">pymacs</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/leo/core/leoApp.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">2252</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">load</span><span class="w"></span>
+<span class="w">    </span><span class="n">t1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">()</span><span class="w"></span>
+<span class="n">AttributeError</span><span class="p">:</span><span class="w"> </span><span class="n">module</span><span class="w"> </span><span class="s1">&#39;time&#39;</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">attribute</span><span class="w"> </span><span class="s1">&#39;clock&#39;</span><span class="w"></span>
+</code></pre></div>
+
+<p>经过代码探查发现, <code>time.clock()</code> 已经在 Py3.8 之后废弃,
+也就是说, Leo 最新版本中一定不包含这种函式,
+即, pip 安装过程中为了兼容, 自动降级到某个老版本中了&#8230;&nbsp;经过探查:</p>
+<p>/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/leo/core/leoVersion.py</p>
+<p>果断写着 <code>5.9-b2</code> ,&nbsp;是19年的版本;</p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>小结</p>
+</blockquote>
+<p>看起来复杂, 其实只是探查了各种可能性后, 才知道如何可以合理的在 M1 芯片的 macOS 环境中安装&nbsp;Leo:</p>
+<ul>
+<li>基于 arm 版本 homebrew 安装 <code>PyQt@5</code></li>
+<li>基于 miniconda 的 Py3.9&nbsp;环境安装其它依赖</li>
+<li>基于 官方源代码中的 <code>launchLeo.py</code> 来启动</li>
+</ul>
+<p>具体关键指令:</p>
+<ul>
+<li>abrew install&nbsp;PyQt@5</li>
+<li>abrew install miniconda<ul>
+<li>注意, 正式使用前, 要运行: <code>conda init bash</code></li>
+<li>参考: <a href="https://docs.conda.io/projects/conda/en/latest/dev-guide/deep-dive-activation.html">Deep dive: conda init and activate — conda 4.13.0.post1+0adcd595&nbsp;documentation</a></li>
+</ul>
+</li>
+</ul>
+<p>应该可以在 <code>~/.bash_profile</code> 中找到以下类似配置:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span><span class="w"></span>
+<span class="c1"># !! Contents within this block are managed by &#39;conda init&#39; !!</span><span class="w"></span>
+<span class="n">__conda_setup</span><span class="o">=</span><span class="s2">&quot;$(&#39;/opt/homebrew/Caskroom/miniconda/base/bin/conda&#39; &#39;shell.bash&#39; &#39;hook&#39; 2&gt; /dev/null)&quot;</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="o">$</span><span class="err">?</span><span class="w"> </span><span class="o">-</span><span class="n">eq</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="n">then</span><span class="w"></span>
+<span class="w">    </span><span class="n">eval</span><span class="w"> </span><span class="s2">&quot;$__conda_setup&quot;</span><span class="w"></span>
+<span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh&quot;</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="n">then</span><span class="w"></span>
+<span class="w">        </span><span class="o">.</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="k">export</span><span class="w"> </span><span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/bin:$PATH&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="n">fi</span><span class="w"></span>
+<span class="n">fi</span><span class="w"></span>
+<span class="n">unset</span><span class="w"> </span><span class="n">__conda_setup</span><span class="w"></span>
+<span class="c1"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span><span class="w"></span>
+</code></pre></div>
+
+<ul>
+<li>用 conda info&nbsp;检验当前环境是否正常</li>
+<li>然后, 创建 Leo 专用环境:<ul>
+<li>conda create  -n leo3912&nbsp;python=3.9.12</li>
+<li>注意, 当前 brew 环境中默认安装的是 <code>python@3.9</code> 环境, 所以, 对应 conda 环境也应该是 3.9&nbsp;以上的</li>
+</ul>
+</li>
+<li>手工将 PyQt 包从 brew 环境中复制到 conda 对应环境中, 例如:<ul>
+<li><code>/opt/homebrew/Cellar/pyqt@5/5.15.6/lib/python3.9/site-packages/</code> 中所有目录</li>
+<li>到 <code>/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/</code></li>
+</ul>
+</li>
+<li>手工从 github 中下载部署最新 Leo&nbsp;源代码</li>
+<li>然后, 从 conda 环境中调用 <code>launchLeo.py</code> 即可</li>
+<li>可以正常启动后,&nbsp;将指令包装为一个别名:</li>
+</ul>
+<p><code>~/.bash_profile</code> 中追加:</p>
+<div class="highlight"><pre><span></span><code>alias leo6lanch=&quot;python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;&quot;
+</code></pre></div>
+
+<p>日常在终端中就两步调用:</p>
+<div class="highlight"><pre><span></span><code>$ conda activate leo3912
+$ leo6lanch
+</code></pre></div>
+
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
+<ul>
+<li>220529&nbsp;整理为文章</li>
+<li>220528 miniconda&nbsp;成功</li>
+<li>220527&nbsp;决定重来</li>
+<li>220506 再尝试,&nbsp;未果</li>
+<li>220401 尝试,&nbsp;未果</li>
+<li>211113 触发,&nbsp;存疑</li>
+</ul>
+
+            </div>
+            <!-- /.entry-content -->
+
+
+    <hr />
+    <section class="comments" id="comments">
+        <h3>Comments</h3>
+
+<script src="https://giscus.app/client.js"
+        data-repo="ZoomQuiet/comment"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNzg1ODM2MDQ="
+        data-category="Announcements"
+        data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMzMDQxMDg2"
+        data-mapping="url"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<!--
+<script src="https://utteranc.es/client.js"
+        repo="ZoomQuiet/ZoomQuiet.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+-->
+    <hr />
+
+
+    </section>
+
+
+<hr/>
+
+<h4>自怼圈/年度番新</h4>
+<img alt="DU22.4" 
+    src="https://ipic.zoomquiet.top/2022-03-31-220331DU6y_zip.jpg!/fw/420"/>
+<br/>
+<a href="https://du.101.camp/about/">关于 ~ DebugUself with DAMA ;-)</a>
+
+
+<!--
+<h3>蟒营®编程思维提高班 Python版/<b>第14期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
+
+<blockquote><p>
+    
+<ul>
+    <li>
+    开始报名: <b>2020.10.27</b> </li>
+    <li>
+    报名截止: <b>2020.11.22</b> </li>
+    <li>
+    正式开课: <b>2020.11.29</b> </li>
+    <li>
+    课程结束: <b>2021.01.10</b> </li>
+
+    <li>
+    介绍文章:  
+    <ul>
+        <li>
+<a href="https://blog.101.camp/nc/200811-ZoomQuiet-wtf-coding-mind/">蟒营®/ 为什么编程思维不用学就有?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">拙见/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-ZoomQuiet-fake-learnning/">蟒营®/ 伪编程学习</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-ZoomQuiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-ZoomQuiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-ZoomQuiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200630-ZoomQuiet-10py-wtf-can-coding/">蟒营®/ 到底如何算"会编程"?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200703-ZoomQuiet-10py-wtfc-0/">蟒营®/ 到底改变了什么?</a>
+        </li>
+
+        <li>
+...<a href="https://blog.101.camp/nc/">NC: 嗯哼蟒营 — 蟒营™ 怂怼录</a>
+        </li>
+    </ul>
+    </li>
+
+
+</ul>
+
+<b>扫描</b>报名:
+
+<a href="https://jinshuju.net/f/Mv5nGU">
+<img alt="101camp14py" 
+    src="http://101.zoomquiet.top/res/14py/%E8%9F%92%E8%90%A5%C2%AE%E7%BC%96%E7%A8%8B%E6%80%9D%E7%BB%B4%E6%8F%90%E9%AB%98%E7%8F%AD_14%E6%9C%9F_%E6%8A%A5%E5%90%8D%E8%A1%A8_256.png"/>
+</a>
+</p></blockquote>
+
+
+<h2>蟒营®式 原创课程</h2>
+<p>
+
+<img alt="theory101camp_v3" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-10-04-theory101camp_v3.jpg"/>
+
+</p>
+
+<blockquote>
+<p>
+    官网: <b>
+    <a href="https://py.101.camp/">py.101.camp</a>
+    </b>
+</p>
+</blockquote>
+
+
+
+<br/>
+任何问题可先进入知识星球<b>(免费)</b>咨询:
+<br/>
+<img alt="FAQ" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-02-28-FAQ101camp-qr.jpeg?imageView2/2/w/360"/>
+
+-->
+
+
+<hr/>
+点击注册~> 获得 <b>100$</b> 体验券:
+<a href="https://www.digitalocean.com/?refcode=e7b7cdc66376&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg" alt="DigitalOcean Referral Badge" /></a>
+
+<hr/>
+
+
+<p>订阅 substack 体验古早写作:
+    <br/>
+
+<iframe src="https://zoomquiet.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+
+</p>
+
+
+<hr/>
+<p>关注公众号, 持续获得相关各种嗯哼:
+    <br/>
+<img alt="zoomquiet" 
+    src="https://ipic.zoomquiet.top/2022-03-31-2020-10-21-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg"/>
+</p>
+
+
+<!--
+<blockquote><p>
+    
+<ul>
+    <li>
+<a href="https://mp.weixin.qq.com/s/FqDJWQQcthEuGHAPPEzUKA">
+拙见/ 但得呢喃
+    </a></li>
+
+    <li>
+<a href="https://mp.weixin.qq.com/s/Hvu22TO1HKK2H8rnbPWcig">
+拙见/ 但得呢喃+1
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/w7m2BwIDsntnLl2vCDuP9g">
+拙见/ 但得呢喃+2
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/HXXfikoYfGV4zqf8-oOlgw">
+拙见/ 但得呢喃+3
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/uFdOHc_u9SqHPKhW9qXz7g">
+拙见/ 但得呢喃+4
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/CZUUmuZ2tDZU0gRAyTHz5w">
+拙见/ 如此平庸又如此美好
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/A-javC9noWxEUeTDaJoWiw">
+拙见/ 如何开始弛放?
+    </a></li>
+
+
+</ul>
+</p></blockquote>
+
+
+-->
+
+<h4>追问</h4>
+<blockquote>
+<p>
+    任何问题, 随时邮件提问可也:
+<br/>
+    <i>
+    askdama@googlegroups.com
+    </i>
+</p>
+</blockquote>
+
+        </article>
+    </section>
+
+
+
+    <hr/>
+    <sub>
+        © Copyright 2014 by Zoom.Quiet 
+        <br/>
+        Content licensed under the Creative Commons 
+        <b>attribution-noncommercial-sharealike</b> License.
+        <br/>
+        Contact me via 
+        , <code><a href="mailto:i@zoomquiet.io">mail</a> 
+            </code>
+        ,<code><a href="http://github.com/ZoomQuiet">github</a>
+            </code>
+        or
+        <code><a href="http://gitlab.com/zoomquiet">gitlab</a>
+            </code>.
+        Tip me via 
+
+<!--
+<style>.bmc-button img{width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 28px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}
+</style>
+<link href="https://fonts.lug.ustc.edu.cn/css?family=Cookie" rel="stylesheet">
+<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/zoomquiet"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+-->        
+
+<style>.bmc-button img{width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 28px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}
+</style>
+<link href="https://fonts.lug.ustc.edu.cn/css?family=Cookie" rel="stylesheet">
+<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/zoomquiet"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+
+
+<!--
+    <code><a href="https://www.gittip.com/ZoomQuiet/">gittip</a>
+            </code>.
+-->        
+||
+        <a href="http://blog.zoomquiet.io/feeds/all.atom.xml">(feed)</a>
+    </sub>
+
+
+        </div>
+
+        <div class="col-lg-3 well well-sm" id="sidebar">
+<aside>
+<!--
+<section>
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-asterisk icon-large"></i>Links</h4></li>
+
+    <li class="list-group-item-zip">
+        <a href="https://101.camp/">
+            蟒营™ 课程框架
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="https://py.101.camp/">
+            蟒营™Py入门班
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="https://fm.101.camp/">
+            蟒营™ 电台
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="https://blog.101.camp/">
+            蟒营™ 怂怼录
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="https://du.101.camp/">
+            蟒营™ 自怼圈
+        </a>
+    </li>
+
+
+    <li class="list-group-item-zip">
+        <a href="https://www.bmpi.dev/">
+            构建我的被动收入
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="https://yixuan.li/">
+            Yixuan · 厨娘界元老
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://www.huyuning.com/">
+            阿宁 inner space
+        </a>
+    </li>
+
+</ul>
+</section>
+-->
+
+    <section>
+
+<table border="0" width="98%">
+    <tr >
+<td colspan="2">
+        <ul style="list-style: none;" class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4>
+                <i class="icon-th icon-large"></i>Categories</h4></li>
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
+                    <a href="https://blog.zoomquiet.io/category/ann.html">
+                        <i class="icon-folder-open icon-large"></i>ANN
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/ann.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
+                    <a href="https://blog.zoomquiet.io/category/imho.html">
+                        <i class="icon-folder-open icon-large"></i>IMHO
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/imho.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
+                    <a href="https://blog.zoomquiet.io/category/murmur.html">
+                        <i class="icon-folder-open icon-large"></i>MurMur
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/murmur.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
+                    <a href="https://blog.zoomquiet.io/category/oldtouch.html">
+                        <i class="icon-folder-open icon-large"></i>OldTouch
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/oldtouch.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li style="display: inline;" class="list-group-item">
+                    &emsp;
+                    <a href="https://blog.zoomquiet.io/category/pythonic.html">
+                        <i class="icon-folder-open icon-large"></i>Pythonic
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/pythonic.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+        </ul>
+</td>
+    </tr>
+
+    <tr>
+<td width="42%" valign="top">
+            <ul style="list-style: none;" class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+<!--
+                    <li class="list-group-item"><a href="https://ZoomQuiet.io">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://ZoomQuiet.io"><i
+                            class="icon-Root-sign icon-large"></i>Root
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="http://weekly.pychina.org/">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="http://weekly.pychina.org/"><i
+                            class="icon-蟒周刊-sign icon-large"></i>蟒周刊
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://du.101.camp/duw/">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://du.101.camp/duw/"><i
+                            class="icon-怼周报-sign icon-large"></i>怼周报
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://segmentfault.com/u/zoomquiet">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://segmentfault.com/u/zoomquiet"><i
+                            class="icon-思否-sign icon-large"></i>思否
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://www.zhihu.com/people/zoomquiet">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://www.zhihu.com/people/zoomquiet"><i
+                            class="icon-知乎-sign icon-large"></i>知乎
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://juejin.im/user/5aa4848951882577b45ea1fe">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://juejin.im/user/5aa4848951882577b45ea1fe"><i
+                            class="icon-掘金-sign icon-large"></i>掘金
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://aijishu.com/u/zoomquiet">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://aijishu.com/u/zoomquiet"><i
+                            class="icon-极术-sign icon-large"></i>极术
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://my.oschina.net/zoomquiet">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://my.oschina.net/zoomquiet"><i
+                            class="icon-开源中国-sign icon-large"></i>开源中国
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://gitlab.com/ZoomQuiet">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://gitlab.com/ZoomQuiet"><i
+                            class="icon-gitlab-sign icon-large"></i>gitlab
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="http://weibo.com/zoomquiet">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="http://weibo.com/zoomquiet"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="http://wiki.zoomquiet.io">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="http://wiki.zoomquiet.io"><i
+                            class="icon-维基-sign icon-large"></i>维基
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧曰-sign icon-large"></i>旧曰
+                    </a></li>
+
+        </ul>
+</td>
+<td valign="top">
+<section>
+<ul style="list-style: none;" class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-tint icon-large"></i>Powerded By</h4></li>
+
+
+    <li class="list-group-item-zip">
+    已由
+        <a href="http://qiniu.com/">
+        <img src="https://www.qiniu.com/assets/logo-zh-dbef5f389fb045c60f710d4d4e6225e9015c1684b1a1f7b81e000b952581dcd4.png"
+        width="90">
+<!--
+    <a href="http://www.upyun.com/">
+        <img src="http://docs.upyun.com/img/upyun_logo.png">
+-->        
+        </a>
+    提供CDN及云存储服务
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://docs.getpelican.com">
+            Pelican
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <sup>theme base</sup>
+        <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">
+            pelican-bootstrap3
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.python.org/">
+            Python
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.inkscape.org/">
+            inkscape
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://git-scm.com/">
+            Git
+        </a>
+    </li>
+<!--
+    <li class="list-group-item-zip">
+        <a href="https://gitcafe.com/CPyUG">
+            GitCafe
+        </a>
+    </li>
+
+-->
+
+
+    <li class="list-group-item-zip">
+        <a href='http://www.catb.org/hacker-emblem/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAACXBIWXMAAAsSAAALEgHS3X78AAABj0lEQVR4nOWWMYqDQBSGBa1jEbxFwEKwM6VV8AIWWkis9RI5Q1JpYWGb0jLpBDtrc4BgkQMI+y+yQ3BmdBJiNsv+kOHNZJT3+X6fo2y3W+k/ScFvv9//dhpvUhiGisi+uq6zLHNdd7VaTd7xFYnNor6uQsCO41wulzzPm6aZOavZJQSsaRqAMc6dzRskBFwUxfl8tizroVvDQr3DSSD9+Ore+YMV+irSYpjTRyUErKrqZrNBcLvdbNu+Xq/H43HyfabFhKEfCj0dsDEvEZQQMBHqXJYlAvSw3W43uZ/u/7wvwgitxHKBNGuFieBq0zRRYXRskf0DEzJXet1DIpis8NOf0jHg0+kEM+u6Dif37zCmh8MB0yf8zBRJnYk0UlL6oQiKC5ymqe/7sixXVYXTGJyM2oLWMIyu65Ik8TxvEmYykDjvJ2/zyLqguMBt22IEG+oJDyPGiBgr5N+/KC5wEAQYl8vler1GTyYnLdQWtFEUvTHJV4oLvFgs4jjuY3CSnjzu5M8/ln8Df/IB+OX6Ah776L1W8pWtAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+
+    <li class="list-group-item-zip">
+        <a href="http://zh.wikipedia.org/zh-cn/UTF-8">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAICAgICAgICAgICAgICAwMDAgIDAwQDAwMDAwQFBAQEBAQEBQUGBgcGBgUHBwgIBwcKCgoKCgoKCgoKCgoKCgr/2wBDAQMDAwQDBAcFBQcLCQcJCwwLCwsLDAwKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCAAPAEkDAREAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAABwAEBQYJA//EACsQAAAGAQMDAwQDAQAAAAAAAAECAwQFBgcIEhMRFBUAFhchIiQxGDJCRP/EABwBAQABBQEBAAAAAAAAAAAAAAAGAwQFBwgBAv/EACsRAAIBAwMDAwQDAQEAAAAAAAECAwQREgAFIQYTIgdBURQjMWEyQkNx0f/aAAwDAQACEQMRAD8AHtMqMNM/HtNg43THUlPjXFEgka14mgJdxIuJShxcvMSLqWJU5g4FTOZZ07cyC5CkKYVDH2FOJITuG41w3GSCKdYwLWDLf+gJNxG1gOSSxAA/Q46f6P6M6Uboyi3bcNomq5JO73HilxN1qHijXttVwZPJ4xxJCju7+Ns2XKWRxlkJ9Ft7LDYtwBPUl1A2mxEvzLBVRGvJsaopLJuE13i1QS4VnHiDigkqUojzIcnGY5gJYjcN8Zc1kumLNkEGNkyvz2+CcOAflb2vqVP0h6WwTtSz0XbqxNBD9O1S/fL1IpypVFrGzRPqAJGUkDty4ZhQWaR2OcoqSTZpaMHYixvGLoS7lS0WzT5VIyIQThYl5NOgMoSorKnP2rBYxU0kjnNt+hf2IfKbjvuVpGMY58njsPFSx/zPsp4A1VqOjfShYWekgjq5AYx2qeraSUmWaOBODVqoHclQFmZVF/zpotWJBzBWeyVGE0p3+JqHi/NqQuGqe2cF8mjKOR7dpNU6NXcdqhErLueFM3GiPL9U03BkfDu27FGeOoVwtr2Ue+R4DRqTYKSbfgc/gNaqnp96fR1VPS1uzTUsk+eHdmdh9swL5PBWTIncedI4s2Gcn2+HeJZHlurEqwWxzjyMoWmhtkSxZcu+N5GcHEFDPFLLxI1dixEd9aMYqCbmRcH3lbgoJT/cUdpShLNjqKmeKUVDZOkjJfgfxA+APe/trnv1U2jZNqr6F9mgMNNU0UVQFZmZrytL/LN5LHEKCAxW44+SNMeRdqyH7J4muk2rfIdik6pU/NYVpo93PxvhPxDeLpT/AI+fzyHEop0T+xXkMn0JyZvWsNECnYnyBf4V9ZaelpastdaTLqDQmIfTcjNpuXbFhHv1z8MXi90u3IUJIiRRdpIic5FeMDkLvFpof1mo56szqn7MA4zhYC7yNfj4e7y2nWltKyX3M8bso10tJe0jp8CqjpLacm7cBg2AYRABaaLLXG1tomU9PcRkakac5qr5VvbCvuowuAYKtu1WjWRiEpFNVGw0WCdlIqlKEKms3AQ67wA5Tk9NNYV+mmtg6zqAxhFwlfcQOoXDdePMY4xdWrjW7Rj6xWN0k6qNXh2Dtkr3FKmGuwj9gKn46xiKCmkoIiJCbYlX7NXzVcs0DR4yY8MMv4gfKN7i/H6+NdCdJ+pXSW3dO7ft26QVrT0hlZWp3aJQ0skpyBjq4GJ7chS7C6hpFXxdso9fMGOV3zSR/lfhtu4j4mego9NrTLyzatYizHkzybRFq3oqaJCKjMPNu0gcYKdEtgETAuOPTe6Fge5HwGX44fLIWEdv7t/y/FrDU1T1s6FSJovo60hpIpWyxZmlpxCInZ2qyxK/Tw3ufMrd8iz5RFVyHiSlzaFgr+qXDaEmgg/agLqo32TaqNZNosweIrM39IXbqkVbrqJmKomYOhvVOHpbcad80eO/PyfyLHgoQbg6u909eujN4pjTVNLWmMlW8QkbBo3WRGV46pXUq6qwKsDcasUhm3H77pxarMHwG1/CyiftyhXGrccnXu+8Y9T8JQmW1ZDyLjooXoYepdwjxp7KrdO7o3+kQ5B8fDlb4nxjHIyPP/g1j4PWboOD80ldL4SR/fb6m8c/a7qH6iskuj9mPxPAsbAZvl1s+Z8XzDWjT7DVjitHJtWyLbshOrGtVb8DU0pPFryzVwkgFKOkJyuohZQ6ZkASABIAAYBMUsm2aiqKKJxOwLu5ckfsD9D3B9taQ9Sup9o6or6R9pikipqeljp1WW2QETSWtaSS4CsouzZEg3+TUX2Xq8+kKPJk1Yac4dzjiZUsNOTg8a2mutGM2qdkod6dpE45aoODmGNa9e4If6JgX+vUBy+tdaoC8hjFzXouqrar8MngIaRlJaNYe3cjhwv5lBi2fLcoUjkNyJxrYu0xhKXZ1KACY25ppVyQxjUrDA2qv6r8Mx8/WZFlLQj/ANu5HX7Z/HLkctluJekHTPsUIU205RKP6EBD000ZqzmjGvyFhqwXTU9gD2piy5x9oLCVfG9rrX/dGryaibaHx/GIrLrIxiJAFc3+ChuKHX001kF1D001/9k="/>
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href='http://creativecommons.org/licenses/by-nc-sa/2.5/cn/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAANDQwNDQ0NDg0ODg4PEA8REREZGRkgICAhISEiIiIkJSMnKCcuMC4xMzEzMzM5Ozk7PTtBQkFCQkJDQ0NERERLTEtVVVVbXltmZmZna2dydnF3d3d9gn2AgICGhoaHh4eIiIiPkI+UmZOZmZmqqqqrsaqzuLK6v7q7u7vFxsXGysbIzMjKzsrMzMzd3d3u7u7///+uXr4hAAAA1UlEQVR42q2T2Q6CMBBFR0VUXHCritQFgXGvnf//Oa2ZNEB4UXrTl97enkxmWnAvcioDRKMtJGwJL0V8duEvWWDqGR4TR4iXfUPgbEBWCjaIj1UzYCchFYDQAgJFYoL4PHF/OVTIG7sEMLEKcAdXCtYkpa+znGQH8XL7nvOyed7VGGVgDEqbqaxD+kh6iOc7V2hjfJfxVYNqKxSRr2VGsl2ukNO85/v1hu1hO6Hch0gLCF+0HBd6yLEfe4jTvuMpp62jBS6GDt4hxnBg3rzX9Kc4FTjXG9Q1UZbZlOQyAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+
+</ul>
+</section>
+</td>
+    </tr>
+</table>
+
+
+<!--
+
+        <ul style="list-style: none;" class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4>
+                <i class="icon-th icon-large"></i>Categories</h4></li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/ann.html">
+                        <i class="icon-folder-open icon-large"></i>ANN
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/ann.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/imho.html">
+                        <i class="icon-folder-open icon-large"></i>IMHO
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/imho.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/murmur.html">
+                        <i class="icon-folder-open icon-large"></i>MurMur
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/murmur.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/oldtouch.html">
+                        <i class="icon-folder-open icon-large"></i>OldTouch
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/oldtouch.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/pythonic.html">
+                        <i class="icon-folder-open icon-large"></i>Pythonic
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/pythonic.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://ZoomQuiet.io"><i
+                            class="icon-Root-sign icon-large"></i>Root
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://weekly.pychina.org/"><i
+                            class="icon-蟒周刊-sign icon-large"></i>蟒周刊
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://du.101.camp/duw/"><i
+                            class="icon-怼周报-sign icon-large"></i>怼周报
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://segmentfault.com/u/zoomquiet"><i
+                            class="icon-思否-sign icon-large"></i>思否
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://www.zhihu.com/people/zoomquiet"><i
+                            class="icon-知乎-sign icon-large"></i>知乎
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://juejin.im/user/5aa4848951882577b45ea1fe"><i
+                            class="icon-掘金-sign icon-large"></i>掘金
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://aijishu.com/u/zoomquiet"><i
+                            class="icon-极术-sign icon-large"></i>极术
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://my.oschina.net/zoomquiet"><i
+                            class="icon-开源中国-sign icon-large"></i>开源中国
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://github.com/ZoomQuiet"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="https://gitlab.com/ZoomQuiet"><i
+                            class="icon-gitlab-sign icon-large"></i>gitlab
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://weibo.com/zoomquiet"><i
+                            class="icon-weibo-sign icon-large"></i>weibo
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://wiki.zoomquiet.io"><i
+                            class="icon-维基-sign icon-large"></i>维基
+                    </a></li>
+                    <li class="list-group-item-zip">
+                        <a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧曰-sign icon-large"></i>旧曰
+                    </a></li>
+
+ 
+
+        </ul>
+    </section>
+
+-->
+
+
+</aside>        </div>
+    
+    </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed 
+<script src="https://blog.zoomquiet.io/theme/js/bootstrap.min.js"></script>
+
+-->
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) 
+<script src="https://blog.zoomquiet.io/theme/js/respond.min.js"></script>
+
+-->
+
+
+
+</body>
+</html>

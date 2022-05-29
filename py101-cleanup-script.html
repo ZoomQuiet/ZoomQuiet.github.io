@@ -164,9 +164,8 @@ The latest release is always updated to the Python Package Index. The source cod
 <span class="c1">#Replace DIRECTORY with your required directory</span>
 <span class="n">num_files</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">files</span><span class="p">())</span>
 
-<span class="k">print</span> <span class="n">num_files</span>
+<span class="nb">print</span> <span class="n">num_files</span>
 </code></pre></div>
-
 
 <p>In this script we first of all imported the path module. Then we set the num_file variable to 0. This variable is going to keep count for the number of files in our directory. Then we call the path function with a directory name. Firthermore we iterate over the files present in the root of our directory and increment the num_files variable. Finally we print the value of num_files variable. Here is a litle bit modified version of this script which outputs the number of subdirectories present in the root of our&nbsp;directory.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
@@ -174,9 +173,8 @@ The latest release is always updated to the Python Package Index. The source cod
 <span class="c1">#Replace DIRECTORY with your required directory</span>
 <span class="n">num_dirs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">dirs</span><span class="p">())</span>
 
-<span class="k">print</span> <span class="n">num_dirs</span>
+<span class="nb">print</span> <span class="n">num_dirs</span>
 </code></pre></div>
-
 
 <h2 id="finding-the-number-of-files-recursively-in-a-directory">Finding the number of files recursively in a directory:<a class="headerlink" href="#finding-the-number-of-files-recursively-in-a-directory" title="Permanent link">&para;</a></h2>
 <p>That was easy! Wasn&#8217;t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&nbsp;Python.</p>
@@ -195,7 +193,6 @@ The latest release is always updated to the Python Package Index. The source cod
         <span class="k">pass</span>
     <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
 </code></pre></div>
-
 
 <p>print &#8220;Total number of files == {0}&#8221;.format(file_count)
 print &#8220;Total number of directories == {0}&#8221;.format(dir_count)
@@ -226,7 +223,6 @@ That was again very easy. Now what if we want to pretty print the directory name
 <span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;|&quot;</span><span class="w"></span>
 </code></pre></div>
 
-
 <p>There is nothing fancy here. In this script we are just pretty printing a directory and the files it contains. Now lets&nbsp;continue.</p>
 <h2 id="deleting-a-specific-file-from-a-directory">Deleting a specific file from a directory:<a class="headerlink" href="#deleting-a-specific-file-from-a-directory" title="Permanent link">&para;</a></h2>
 <p>So lets suppose we have a file called this_file_sucks.py. Now how do we delete it. Lets make this seranio more real by saying that we do not know in which directory it is placed. Its simple to solve this problem as well. Just go to the top level directory and execute this&nbsp;script:</p>
@@ -243,27 +239,25 @@ In the above script I did not implement any logging and error handling. That is 
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
 <span class="n">files</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">walkfiles</span><span class="p">(</span><span class="s2">&quot;*.pyc&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-    <span class="nb">file</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
-    <span class="k">print</span> <span class="s2">&quot;Removed {} file&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
-<span class="n">This</span> <span class="n">will</span> <span class="n">also</span> <span class="k">print</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">file</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">deleted</span><span class="o">.</span>
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+    <span class="nb">print</span> <span class="s2">&quot;Removed </span><span class="si">{}</span><span class="s2"> file&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">This</span> <span class="n">will</span> <span class="n">also</span> <span class="nb">print</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">deleted</span><span class="o">.</span>
 </code></pre></div>
-
 
 <h2 id="deleting-files-based-on-their-size">Deleting files based on their size:<a class="headerlink" href="#deleting-files-based-on-their-size" title="Permanent link">&para;</a></h2>
 <p>So another interesting scenario. What if we want to delete those files which exceed 5Mb&nbsp;size?</p>
 <p><code>NOTE:</code> There is a difference between Mb and <span class="caps">MB</span>. I will be covering Mb here. 
 Is it possible with path.py? Yes it is! So here is a script which does this&nbsp;work:</p>
-<div class="highlight"><pre><span></span><code><span class="err">d = path(&#39;./&#39;)</span>
-<span class="err">del_size = 4522420</span>
-<span class="err">for i in d.walk():</span>
-<span class="err">    if i.isfile():</span>
-<span class="err">        if i.size &gt; del_size:</span>
-<span class="err">        #4522420 is approximately equal to 4.1Mb</span>
-<span class="err">        #Change it to your desired size</span>
-<span class="err">            i.remove()</span>
+<div class="highlight"><pre><span></span><code><span class="nv">d</span> <span class="o">=</span> <span class="nv">path</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">./</span><span class="s1">&#39;</span><span class="ss">)</span>
+<span class="nv">del_size</span> <span class="o">=</span> <span class="mi">4522420</span>
+<span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">d</span>.<span class="nv">walk</span><span class="ss">()</span>:
+    <span class="k">if</span> <span class="nv">i</span>.<span class="nv">isfile</span><span class="ss">()</span>:
+        <span class="k">if</span> <span class="nv">i</span>.<span class="nv">size</span> <span class="o">&gt;</span> <span class="nv">del_size</span>:
+        <span class="sc">#4522420</span> <span class="nv">is</span> <span class="nv">approximately</span> <span class="nv">equal</span> <span class="nv">to</span> <span class="mi">4</span>.<span class="mi">1</span><span class="nv">Mb</span>
+        #<span class="nv">Change</span> <span class="nv">it</span> <span class="nv">to</span> <span class="nv">your</span> <span class="nv">desired</span> <span class="nv">size</span>
+            <span class="nv">i</span>.<span class="nv">remove</span><span class="ss">()</span>
 </code></pre></div>
-
 
 <p>So we saw how we can remove files based on their&nbsp;size.</p>
 <h2 id="deleting-files-based-on-their-last-access-time">Deleting files based on their last access time<a class="headerlink" href="#deleting-files-based-on-their-last-access-time" title="Permanent link">&para;</a></h2>
@@ -284,9 +278,8 @@ Is it possible with path.py? Yes it is! So here is a script which does this&nbsp
             <span class="n">i</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
             <span class="n">removed</span> <span class="o">+=</span> <span class="mi">1</span>
 
-<span class="k">print</span> <span class="n">removed</span>
+<span class="nb">print</span> <span class="n">removed</span>
 </code></pre></div>
-
 
 <p>So we have also learned how to remove files based on their last modified time. If you want to delete files based on last access time just change i.mtime to i.atime and you will be good to&nbsp;go.</p>
 <h2 id="goodbye">Goodbye<a class="headerlink" href="#goodbye" title="Permanent link">&para;</a></h2>

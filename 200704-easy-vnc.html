@@ -154,8 +154,8 @@
 		<a href="https://blog.zoomquiet.io/tag/macos.html">macOS</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#bg"><span class="caps">BG</span>.</a></li>
 <li><a href="#problems">problems</a></li>
@@ -165,124 +165,128 @@
 <li><a href="#logging">logging</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<h2 id="bg"><span class="caps">BG</span>.<a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<h2 id="bg"><span class="caps">BG</span>.<a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
 <p>很早就有这种需求:</p>
 <p>比如当年参与开发浏览器时,
 对应工程是 windows only 的,
 而俺的笔记本是 macOS,
-所以, 必须有个方便的远程控制工具,将 <span class="caps">PB</span> 上的桌面变成本地一个窗口, 并能无缝进行切换控制.</p>
-<p>当年用 vnc server 的 windows 版本.</p>
-<p>后来创业时, 要确保客户端同时可以安定运行在 win7 以及 linux 上, 更加需要一个通用的全平台桌面控制工具.</p>
-<p>当时用的是 TeamViewer :</p>
+所以, 必须有个方便的远程控制工具,将 <span class="caps">PB</span> 上的桌面变成本地一个窗口,&nbsp;并能无缝进行切换控制.</p>
+<p>当年用 vnc server 的 windows&nbsp;版本.</p>
+<p>后来创业时, 要确保客户端同时可以安定运行在 win7 以及 linux 上,&nbsp;更加需要一个通用的全平台桌面控制工具.</p>
+<p>当时用的是 TeamViewer&nbsp;:</p>
 <ul>
 <li>商业软件</li>
 <li>非常稳定</li>
 <li>功能良好</li>
 </ul>
 <p>问题是, 对于私人商用非常敏感,
-用的时间长点儿, 就判定为非法商用直接断掉了.</p>
-<h2 id="problems">problems<a class="headerlink" href="#problems" title="Permanent link">¶</a></h2>
-<p>然后, 也尝试过各种其它通用类 <span class="caps">VNC</span> 工具:</p>
+用的时间长点儿,&nbsp;就判定为非法商用直接断掉了.</p>
+<h2 id="problems">problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
+<p>然后, 也尝试过各种其它通用类 <span class="caps">VNC</span>&nbsp;工具:</p>
 <ul>
-<li>X2Go 安装失败</li>
-<li>TigerVNC/UltraVNC/<span class="caps">RDP</span>/… 不兼容</li>
-<li>NoMachine <span class="caps">NX</span> ~ 唉嘛开始还好, 真正一用各种 diss, 而且无法删除</li>
-<li>还有国产的什么太阳花桌面 ~ 根本无用</li>
+<li>X2Go&nbsp;安装失败</li>
+<li>TigerVNC/UltraVNC/<span class="caps">RDP</span>/&#8230;&nbsp;不兼容</li>
+<li>NoMachine <span class="caps">NX</span> ~ 唉嘛开始还好, 真正一用各种 diss,&nbsp;而且无法删除</li>
+<li>还有国产的什么太阳花桌面 ~&nbsp;根本无用</li>
 </ul>
-<p>只能切换到 RealVNC, 也是商用, 但是, 印象不错;</p>
+<p>只能切换到 RealVNC, 也是商用, 但是,&nbsp;印象不错;</p>
 <ul>
-<li>好容易按照官方文档在 mac/ubuntu 间配置好</li>
+<li>好容易按照官方文档在 mac/ubuntu&nbsp;间配置好</li>
 <li>也用了一段时间</li>
 <li>没想到, 一次系统升级后无论怎么折腾<ul>
 <li>远程进入后都是黑屏</li>
-<li>无法进入 <span class="caps">GNOME</span> 桌面.</li>
+<li>无法进入 <span class="caps">GNOME</span>&nbsp;桌面.</li>
 </ul>
 </li>
 </ul>
-<h2 id="asking">asking<a class="headerlink" href="#asking" title="Permanent link">¶</a></h2>
+<h2 id="asking">asking<a class="headerlink" href="#asking" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>搜索才发现, 这是常见问题…</p>
+<p>搜索才发现,&nbsp;这是常见问题&#8230;</p>
 </blockquote>
-<p>尝试了一堆方法都没办法解决, 那个糟心哪…</p>
-<p>想想, 用 RealVNC 其实和 TeamViewer 没什么区别:</p>
+<p>尝试了一堆方法都没办法解决,&nbsp;那个糟心哪&#8230;</p>
+<p>想想, 用 RealVNC 其实和 TeamViewer&nbsp;没什么区别:</p>
 <ul>
-<li>每次连接主机, 都要先去人家官网绕一圈</li>
-<li>注册一台主机, 而且免费有限额,只能5台</li>
+<li>每次连接主机,&nbsp;都要先去人家官网绕一圈</li>
+<li>注册一台主机,&nbsp;而且免费有限额,只能5台</li>
 <li>真正连接自己本地局域网旁边一台机器时</li>
-<li>其实, 无论客户端/服务端 都要连接官网检验是否合法</li>
-<li>而且, 在使用过程中, 俺的所有操作也一定有对应监察数据上报..</li>
+<li>其实, 无论客户端/服务端&nbsp;都要连接官网检验是否合法</li>
+<li>而且, 在使用过程中,&nbsp;俺的所有操作也一定有对应监察数据上报..</li>
 </ul>
-<p>也就是说, 俺用俺自己的主机, 就得向厂商老实汇报思想, 否则断你没商量.</p>
+<p>也就是说, 俺用俺自己的主机, 就得向厂商老实汇报思想,&nbsp;否则断你没商量.</p>
 <p>俺为什么要这么贱?</p>
-<h2 id="fixed">fixed<a class="headerlink" href="#fixed" title="Permanent link">¶</a></h2>
+<h2 id="fixed">fixed<a class="headerlink" href="#fixed" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>回归 <span class="caps">FLOSS</span> 社区内置方案吧…</p>
+<p>回归 <span class="caps">FLOSS</span>&nbsp;社区内置方案吧&#8230;</p>
 </blockquote>
-<p>安装标准 vnc 服务:</p>
+<p>安装标准 vnc&nbsp;服务:</p>
 <div class="highlight"><pre><span></span><code>$ sudo apt install vnc4server xfce4 xfce4-goodies
 </code></pre></div>
+
 <p>配置访问口令:</p>
 <div class="highlight"><pre><span></span><code>$ vncpasswd
 </code></pre></div>
-<p>指定启动桌面 ~/.vnc/xstartup :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<p>指定启动桌面 ~/.vnc/xstartup&nbsp;:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
 startxfce4 <span class="p">&amp;</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
+
 <p>并启用配置:</p>
 <div class="highlight"><pre><span></span><code>$ chmod +x ~/.vnc/xstartup
 </code></pre></div>
+
 <p>启动服务:</p>
 <div class="highlight"><pre><span></span><code>$ vnc4server
 </code></pre></div>
+
 <p>检验状态:</p>
 <div class="highlight"><pre><span></span><code>$ ss -ltn
 ...
 LISTEN      <span class="m">0</span>      <span class="m">5</span>            *:5901                     *:*
 </code></pre></div>
+
 <blockquote>
-<p>注意: 如果有防火墙的话, 要打开 5901 的访问</p>
+<p>注意: 如果有防火墙的话, 要打开 5901&nbsp;的访问</p>
 </blockquote>
-<p>macOS 本地代理端口:</p>
-<div class="highlight"><pre><span></span><code><span class="err">༄  ssh -L 5901:127.0.0.1:5901 -C -N -l &lt;主机用户&gt; &lt;主机IP&gt;</span>
+<p>macOS&nbsp;本地代理端口:</p>
+<div class="highlight"><pre><span></span><code>༄  ssh -L 5901:127.0.0.1:5901 -C -N -l &lt;主机用户&gt; &lt;主机IP&gt;
 </code></pre></div>
-<p>(也就是将 Linux 主机上的 :5901 用 <span class="caps">SSH</span> 工具映射为本地 :5901)</p>
-<p><img alt="连接" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.37.01.jpg"/></p>
+
+<p>(也就是将 Linux 主机上的 :5901 用 <span class="caps">SSH</span> 工具映射为本地&nbsp;:5901)</p>
+<p><img alt="连接" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.37.01.jpg"></p>
 <p>使用本地端口:</p>
-<div class="highlight"><pre><span></span><code><span class="c">vnc://localhost:5901</span>
+<div class="highlight"><pre><span></span><code>vnc://localhost:5901
 </code></pre></div>
+
 <p><strong>Bazinga</strong></p>
-<p><img alt="win7vbox" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.39.36.jpg"/></p>
+<p><img alt="win7vbox" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.39.36.jpg"></p>
 <ul>
-<li>Ubuntu 中安装 vncserver 以及 xfce4 桌面</li>
-<li>Ubuntu 中启动 vncserver</li>
-<li>macOS 中用 <span class="caps">SSH</span> 反向代理对应端口</li>
+<li>Ubuntu 中安装 vncserver 以及 xfce4&nbsp;桌面</li>
+<li>Ubuntu 中启动&nbsp;vncserver</li>
+<li>macOS 中用 <span class="caps">SSH</span>&nbsp;反向代理对应端口</li>
 <li>用 macOS 内置远程桌面工具直连进入 Ubuntu 桌面<ul>
-<li>安装 VirtualBOX </li>
-<li>加载 win7 镜像</li>
-<li>同时自由使用 windiws 环境以及 linux 工具</li>
+<li>安装&nbsp;VirtualBOX </li>
+<li>加载 win7&nbsp;镜像</li>
+<li>同时自由使用 windiws 环境以及 linux&nbsp;工具</li>
 </ul>
 </li>
 </ul>
-<p>而且速度比之前各种 <span class="caps">VNC</span> 工具要快, 充分发挥了本地网络能力.</p>
-<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
+<p>而且速度比之前各种 <span class="caps">VNC</span> 工具要快,&nbsp;充分发挥了本地网络能力.</p>
+<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://linuxconfig.org/vnc-server-on-ubuntu-18-04-bionic-beaver-linux"><span class="caps">VNC</span> server on Ubuntu 18.04 Bionic Beaver Linux - LinuxConfig.org</a></li>
-<li><a href="https://cat.pdx.edu/platforms/mac/remote-access/vnc-to-linux/"><span class="caps">VNC</span> from Mac to Linux – Computer Action Team</a></li>
-<li><a href="https://www.linode.com/docs/applications/remote-desktop/install-vnc-on-ubuntu-18-04/">Install <span class="caps">VNC</span> on Ubuntu 18.04 | Linode</a></li>
-<li><a href="https://www.linode.com/community/questions/18877/how-do-i-set-up-vnc-with-mac-osx">How do I set up <span class="caps">VNC</span> with Mac <span class="caps">OSX</span>? | Linode Questions</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-14-04">How to Install and Configure <span class="caps">VNC</span> on Ubuntu 14.04 | DigitalOcean</a></li>
-<li>…</li>
+<li><a href="https://linuxconfig.org/vnc-server-on-ubuntu-18-04-bionic-beaver-linux"><span class="caps">VNC</span> server on Ubuntu 18.04 Bionic Beaver Linux -&nbsp;LinuxConfig.org</a></li>
+<li><a href="https://cat.pdx.edu/platforms/mac/remote-access/vnc-to-linux/"><span class="caps">VNC</span> from Mac to Linux – Computer Action&nbsp;Team</a></li>
+<li><a href="https://www.linode.com/docs/applications/remote-desktop/install-vnc-on-ubuntu-18-04/">Install <span class="caps">VNC</span> on Ubuntu 18.04 |&nbsp;Linode</a></li>
+<li><a href="https://www.linode.com/community/questions/18877/how-do-i-set-up-vnc-with-mac-osx">How do I set up <span class="caps">VNC</span> with Mac <span class="caps">OSX</span>? | Linode&nbsp;Questions</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-14-04">How to Install and Configure <span class="caps">VNC</span> on Ubuntu 14.04 |&nbsp;DigitalOcean</a></li>
+<li>&#8230;</li>
 </ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
 <ul>
-<li>200725 zoomquiet pub</li>
-<li>200704 zoomquiet 解决</li>
-<li>200626 zoomquiet init.</li>
+<li>200725 zoomquiet&nbsp;pub</li>
+<li>200704 zoomquiet&nbsp;解决</li>
+<li>200626 zoomquiet&nbsp;init.</li>
 </ul>
 
             </div>

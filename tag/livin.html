@@ -111,35 +111,52 @@
         <div class="col-lg-9">
             <article>
                 <h2><a href="https://blog.zoomquiet.io/fix-subl-package-installation.html">修复 subl3&nbsp;包安装</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#bg"><span class="caps">BG</span></a></li>
+<li><a href="#goal">goal</a></li>
+<li><a href="#logging">logging</a></li>
+<li><a href="#sayeahooo">Sayeahooo</a></li>
+</ul>
+</div>
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
 <p>突然: <code>cmd+shift+P</code> 选择 <code>Package Control: install package</code> 时,一直:</p>
 <blockquote>
 <blockquote>
 <blockquote>
-<p>There are no packages available for installation</p>
+<p>There are no packages available for&nbsp;installation</p>
 </blockquote>
 </blockquote>
 </blockquote>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
 <p>当然就是解决呗:</p>
 <ul>
 <li>各种官方都有吼</li>
-<li><a href="https://packagecontrol.io/docs/troubleshooting">Troubleshooting - Package Control</a></li>
-<li><a href="https://github.com/wbond/package_control/issues/959#issuecomment-168447848">There are no packages available for installation - Package Control of Sublime Text 3 · Issue #959 · wbond/package_control</a></li>
-<li>…</li>
-</ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
-<p>打开 debug 观察:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Package</span> <span class="n">Control</span><span class="p">:</span> <span class="n">Skipping</span> <span class="n">automatic …</span></code></pre></div>
+<li><a href="https://packagecontrol.io/docs/troubleshooting">Troubleshooting - Package&nbsp;Control</a></li>
+<li><a href="https://github.com/wbond/package_control/issues/959#issuecomment-168447848">There are no packages available for …</a></li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/fix-subl-package-installation.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">如何自在定义 macOS&nbsp;截屏文件名?</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#bg"><span class="caps">BG</span></a></li>
+<li><a href="#goal">goal</a></li>
+<li><a href="#logging">logging</a><ul>
+<li><a href="#_1">格式</a></li>
+<li><a href="#_2">命名</a></li>
+<li><a href="#screencapturestrings">ScreenCapture.strings</a></li>
+<li><a href="#automator">Automator</a></li>
+<li><a href="#bash">bash</a></li>
+</ul>
+</li>
+<li><a href="#refer">refer</a></li>
+<li><a href="#sayeahooo">Sayeahooo</a></li>
+</ul>
+</div>
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
 <ul>
 <li>默认系统截屏工具输出图片是:<ul>
 <li>到桌面</li>
@@ -147,121 +164,75 @@
 </ul>
 </li>
 </ul>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
 <ul>
-<li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
-<li><code>screenshot_190213-17.17.32.jpg</code></li>
-</ul>
-</li>
-<li>现在怎么作到?</li>
-</ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>记要尝试过程</p>
-</blockquote>
-<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code>$ defaults write com.apple.screencapture <span class="nb">type</span> jpg
-$ killall SystemUIServer
-</code></pre></div>
-<p>以上即可</p>
-<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code>$ defaults write com.apple.screencapture name screenshot
-$ killall SystemUIServer
-</code></pre></div>
-<p>以上只能变成:</p>
-<div class="highlight"><pre><span></span><code><span class="err">screenshot 2019-02-13 17.17.32 …</span></code></pre></div>
+<li>当年在 Linux 中,是可 …</li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/rime4gitchat.html">如何配置 rIME 支持 GitChat&nbsp;规范?</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+                <div class="summary"><div class="toc">
 <ul>
-<li>新年了, 发现有 <code>长徦式学习症</code> , 很多不敢肥家被逼婚的程序猿, 宁可呆在公司一边值班一边刷课</li>
-<li>同时, GitChat 也空降新领导, 启动叕一波作者鼓动</li>
-<li>所以, 响应号召, 尝试分享这年几点感触</li>
-<li>只是, 没想到, 对提交文章, 有了细致要求, 任何一点不达标, 直接退稿, 不允许发布</li>
-<li>虽然, 申述说:<ul>
-<li>通过配置输入法, 已经有15年从来不用中文标点了</li>
-<li>不仅在编程时杜绝了因为中文标点引发血案</li>
-<li>同时, 也促使行文更加国际化, 也从来没因为标点而引发误解</li>
-<li>但是, GitChat 方面不认为这是读者可以接受的</li>
-<li>其它作者也劝:”从了吧, 您就…”</li>
+<li><a href="#bg"><span class="caps">BG</span></a></li>
+<li><a href="#goal">goal</a></li>
+<li><a href="#logging">logging</a><ul>
+<li><a href="#sed">sed</a></li>
+<li><a href="#rime">rIME</a></li>
 </ul>
 </li>
+<li><a href="#gitchat-style">GitChat-style</a></li>
+<li><a href="#refer">refer</a></li>
+<li><a href="#sayeahooo">Sayeahooo</a></li>
 </ul>
-<blockquote>
-<p>所以…</p>
-</blockquote>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+</div>
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
 <ul>
-<li>找到配置, 恢复全角标点输入</li>
-<li>同时兼容以往全部半角标点输入习惯</li>
-<li>进一步, 是否可以用工具来完成自动化修改?</li>
-</ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>快速记录应对嗯哼</p>
-</blockquote>
-<h3 id="sed">sed<a class="headerlink" href="#sed" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://gist.github.com/ZoomQuiet/53439dd21c60a935e793">i hate Chinese symbol! so usage …</a></li></ul>
+<li>新年了, 发现有 <code>长徦式学习症</code> , 很多不敢肥家被逼婚的程序猿,&nbsp;宁可呆在公司一边值班一边刷课</li>
+<li>同时 …</li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/rime4gitchat.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/jump-into-ssl.html">如何持证 (<span class="caps">SSL</span>)&nbsp;开车</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
-<p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国</a></p>
-<p>被成功安利…</p>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 <code>*-pages</code> 服务快速发布:</p>
+                <div class="summary"><div class="toc">
 <ul>
-<li>github/gitlab 为核心</li>
-<li>免费 <span class="caps">SSL</span> 认证为基础</li>
-<li>最好能一次配置长期可用</li>
-</ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
-<p>整体上, 无论在哪个 <code>*-pages</code> 平台, 要折腾的事儿相似, 就3步:</p>
-<ul>
-<li>追加配置含 <code>SSL</code> 解析能力的 <span class="caps">DNS</span> 服务主机 <code>A</code> 地址<ul>
-<li>并解决引发的有关 <code>CANEM</code> 冲突问题</li>
-</ul>
-</li>
-<li>在 <code>*-pages</code> 平台配置 <code>Enforce HTTPS</code> 有关嗯哼</li>
-<li>优雅的等待一切生效 ;-)<ul>
-<li>并解决可能的资源冲突问题</li>
+<li><a href="#bg"><span class="caps">BG</span></a></li>
+<li><a href="#goal">goal</a></li>
+<li><a href="#logging">logging</a><ul>
+<li><a href="#gh-pages">gh-pages</a></li>
+<li><a href="#gl-pages">gl-pages</a><ul>
+<li><a href="#domain">domain</a></li>
+<li><a href="#pages">pages</a></li>
+<li><a href="#waitting">waitting</a></li>
 </ul>
 </li>
 </ul>
-<h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
-<p>原先的:</p>
-<blockquote>
-<p>༄  dig blog …</p></blockquote>
+</li>
+<li><a href="#ipic">iPic</a></li>
+<li><a href="#summary">summary</a></li>
+<li><a href="#refer">refer</a></li>
+<li><a href="#sayeahooo">Sayeahooo</a></li>
+</ul>
+</div>
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
+<p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let&#8217;s Encrypt 2019：带来更多振奋人心的新功能 -&nbsp;开源中国</a></p>
+<p>被成功安利&#8230;</p>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>因各种网站发布的年代, 使 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssl.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/knewone-talk-zoomq-choise.html">KnewOne-talk 之 大妈&nbsp;篇</a></h2>
-                <div class="summary">
-<p>~ KnewOne talk question list</p>
-<h2 id="_1">分享你的生活方式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>整体上,俺是一头程序猿,所以,,,</p>
-<h3 id="1">1 自我介绍和介绍自己的工作/擅长的领域,允许给自己打广告~<a class="headerlink" href="#1" title="Permanent link">¶</a></h3>
-<p><img alt="Zoom.Quiet PyChina.org | 蠎中国社区" src="http://pychina.org/volunteer/zoomquiet.html"/></p>
+                <div class="summary"><div class="toc">
 <ul>
-<li>Python中文社区创始人(之一) / 管理员, 热心于 Python 等等社区的公益事业, 大家熟知的社区”<a href="http://wiki.woodpecker.org.cn/moin/ZoomQuietAbt">大妈</a>“;</li>
-<li><span class="caps">O.B.</span>P (<a href="https://code.google.com/p/openbookproject/">Open Book Proj.~中文蟒样开放图书计划</a>) 及 蟒营(<a href="https://code.google.com/p/kcpycamp/wiki/PythoniCamp">PythoniCamp</a>) 工程设计者 /主持人; </li>
-<li>参与并主持各种线上 / 线下活动; 主持编撰了 &lt;&lt;可爱的Python&gt;&gt; 等图书</li>
-<li>坚持用 Pythonic 感化国人进入 FLOSS世界进行学习 / 分享 / 创造…</li>
-<li>擅长:<ul>
-<li>Pythonic入门宣传;实效敏捷配置管理;技术社区文化促生;</li>
-<li><span class="caps">PKM</span> ~ <span class="caps">GTD</span>/个人效率工具箱 …</li></ul></li></ul>
+<li><a href="#_1">分享你的生活方式</a><ul>
+<li><a href="#1">1&nbsp;自我介绍和介绍自己的工作/擅长的领域,允许给自己打广告~</a></li>
+<li><a href="#2">2 工作时都装备了哪些东西?说说体验 …</a></li></ul></li></ul></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/knewone-talk-zoomq-choise.html">more ...</a>
                 </div>
             </article>
@@ -270,34 +241,33 @@ $ killall SystemUIServer
                 <h2><a href="https://blog.zoomquiet.io/issue-chinese-for-internet.html">探讨 信息化社会中&nbsp;中国传统思想的作用</a></h2>
                 <div class="summary"><p>(<code>是也乎:</code></p>
 <p>这是大学选修课:<code>科学史</code> 的论文,
-算是自个儿思想的黑历史…总算能有足够的心力来直面互联网时代前的5毛思想了… )</p>
-
-<p>~ 不远的将来面对的是技术化,信息化的高科技社会,这种社会本身是反人文,反文化的,中国传统思想是救赎信息化人类社会的唯一凭借!</p>
-<h1 id="_1">二十一世纪必然是信息化社会,面对的是计算机技术为主的数字化生存.<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>70年代中期以后,出现了以微电子技术为核心的新兴技术群,开始了继蒸汽机,电力之后的第三次技术革命. 主要包括信息技术,新能源技术,新材料技术,生物技术,空间技术和海洋技术六大领域的革命. 以微电子技术为基础的信息技术是新技术革命的主导技术和主要标志,其开辟了人类历史上的新时代棗信息时代. </p>
-<p>随着信息的采集,加工,利用的技术越来越成熟,对信息认识的深化;又随着信息高速公路的建设,信息的产业化,已使之越来越成为全社会影响力最大的因素. </p>
-<p>全人类也以达成共识:当信息高速公路将所有图书馆,学校,医院,实验室,电视,电话,公司等等全社会连接起来时,将产生不可估量的社会生产力!</p>
-<p>随着各种新技术的广泛应用,将使人类的生存条件和生活方式发生前所未有的改变:环境污染大大减少;资源能够合理开发利用;人口数量得到控制,素质会有较大提高”绿色食品”和新型医药,使人们更加长寿和健康……</p>
-<p>如此美好的前景 …</p>
+算是自个儿思想的黑历史&#8230;总算能有足够的心力来直面互联网时代前的5毛思想 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/issue-chinese-for-internet.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/cipher-who-s-gonna.html">who&#8217;s&nbsp;gonna&#8230;</a></h2>
-                <div class="summary">
-<h1 id="cipher"><span class="dquo">“</span><span class="caps">CIPHER</span>”<a class="headerlink" href="#cipher" title="Permanent link">¶</a></h1>
-<div class="highlight"><pre><span></span><code><span class="n">who</span><span class="s1">'s gonna tell you when</span>
-<span class="s1">It'</span><span class="n">s</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="n">late</span><span class="w"></span>
-<span class="n">Who</span><span class="s1">'s gonna tell you things</span>
-<span class="s1">Aren'</span><span class="n">t</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">great</span><span class="w"></span>
-<span class="n">You</span><span class="w"> </span><span class="n">can</span><span class="s1">'t go on</span>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#cipher"><span class="dquo">&#8220;</span><span class="caps">CIPHER</span>&#8221;</a><ul>
+<li><a href="#from">from</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="cipher"><span class="dquo">&#8220;</span><span class="caps">CIPHER</span>&#8221;<a class="headerlink" href="#cipher" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><span class="n">who</span><span class="s1">&#39;s gonna tell you when</span>
+<span class="s1">It&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="n">late</span><span class="w"></span>
+<span class="n">Who</span><span class="s1">&#39;s gonna tell you things</span>
+<span class="s1">Aren&#39;</span><span class="n">t</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">great</span><span class="w"></span>
+<span class="n">You</span><span class="w"> </span><span class="n">can</span><span class="s1">&#39;t go on</span>
 <span class="s1">Thinking nothing is wrong</span>
-<span class="s1">Who'</span><span class="n">s</span><span class="w"> </span><span class="n">gonna</span><span class="w"> </span><span class="n">drive</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">home</span><span class="w"> </span><span class="n">tonight</span><span class="w"></span>
+<span class="s1">Who&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">gonna</span><span class="w"> </span><span class="n">drive</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">home</span><span class="w"> </span><span class="n">tonight</span><span class="w"></span>
 
-<span class="n">Who</span><span class="s1">'s gonna pick you up</span>
+<span class="n">Who</span><span class="s1">&#39;s gonna pick you up</span>
 <span class="s1">When you full</span>
-<span class="s1">Who'</span><span class="n">s</span><span class="w"> </span><span class="n">gonna</span><span class="w"> </span><span class="n">hang …</span></code></pre></div>
+<span class="s1">Who&#39;</span><span class="n">s …</span></code></pre></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/cipher-who-s-gonna.html">more ...</a>
                 </div>
             </article>

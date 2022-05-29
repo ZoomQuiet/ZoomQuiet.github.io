@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="top10-Py-idioms-wish-learned-earlier"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/top10-Py-idioms-wish-learned-earlier.html"/>
-            <meta property="og:description" content="原文: prooffreader plus: Top 10 Python idioms I wish I’d learned earlier Top 10 Python idioms I wish I&#39;d learned earlier I’ve been programming all my life, but never been a programmer. Most of my work was done in Visual Basic because it’s what I was most …"/>
+            <meta property="og:description" content="原文: prooffreader plus: Top 10 Python idioms I wish I’d learned earlier Top 10 Python idioms I wish I&#39;d learned earlier I’ve been programming all my life, but never been a programmer. Most of my work was done in Visual Basic because it’s what I was …"/>
 
     <!-- Bootstrap 
 
@@ -164,30 +164,28 @@
 <p>But really, the biggest differences in everyday programming are printing and division, and now I just import from future. Now that almost all the libraries I use heavily are v3-compliant, I&#8217;ll make the switch&nbsp;soon.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mynumber</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="k">print</span> <span class="s2">&quot;Python 2:&quot;</span>
-<span class="k">print</span> <span class="s2">&quot;The number is </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mynumber</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">mynumber</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
-<span class="k">print</span> <span class="n">mynumber</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="nb">print</span> <span class="s2">&quot;Python 2:&quot;</span>
+<span class="nb">print</span> <span class="s2">&quot;The number is </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mynumber</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">mynumber</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+<span class="nb">print</span> <span class="n">mynumber</span> <span class="o">//</span> <span class="mi">2</span>
 
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Python 3:&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;The number is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mynumber</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">mynumber</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">mynumber</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Python 3:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mynumber</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mynumber</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mynumber</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
+<div class="highlight"><pre><span></span><code>Python 2:
+The number is 5
+2 2
 
-<div class="highlight"><pre><span></span><code><span class="n">Python</span> <span class="mi">2</span><span class="p">:</span>
-<span class="n">The</span> <span class="nb">number</span> <span class="k">is</span> <span class="mi">5</span>
-<span class="mi">2</span> <span class="mi">2</span>
-
-<span class="n">Python</span> <span class="mi">3</span><span class="p">:</span>
-<span class="n">The</span> <span class="nb">number</span> <span class="k">is</span> <span class="mi">5</span>
-<span class="mi">2</span><span class="p">.</span><span class="mi">5</span> <span class="mi">2</span>
+Python 3:
+The number is 5
+2.5 2
 </code></pre></div>
-
 
 <p>Oh, and here&#8217;s an easter egg for C&nbsp;programmers:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">braces</span>
@@ -196,37 +194,32 @@
 <span class="ne">SyntaxError</span><span class="p">:</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">chance</span>
 </code></pre></div>
 
-
 <h2 id="2-enumeratelist">2. enumerate(list)<a class="headerlink" href="#2-enumeratelist" title="Permanent link">&para;</a></h2>
 <p>It might seem obvious that you should be able to iterate over a list and its index at the same time, but I used counter variables or slices for an embarrassingly long&nbsp;time.</p>
-<div class="highlight"><pre><span></span><code><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;It&#39;s&quot;</span><span class="p">,</span> <span class="s1">&#39;only&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;model&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">mylist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;It&#39;s&quot;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;only&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="w"></span>
 
-<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">mylist</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">mylist</span><span class="p">):</span><span class="w"></span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
-
-<div class="highlight"><pre><span></span><code><span class="err">0 It&#39;s</span>
-<span class="err">1 only</span>
-<span class="err">2 a</span>
-<span class="err">3 model</span>
+<div class="highlight"><pre><span></span><code><span class="mf">0</span><span class="w"> </span><span class="n">It</span><span class="err">&#39;</span><span class="n">s</span><span class="w"></span>
+<span class="mf">1</span><span class="w"> </span><span class="kr">on</span><span class="n">ly</span><span class="w"></span>
+<span class="mf">2</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="mf">3</span><span class="w"> </span><span class="n">model</span><span class="w"></span>
 </code></pre></div>
-
 
 <h2 id="3-chained-comparison-operators">3. Chained comparison operators<a class="headerlink" href="#3-chained-comparison-operators" title="Permanent link">&para;</a></h2>
 <p>Because I was so used to statically typed languages (where this idiom would be ambiguous), it never occurred to me to put two operators in the same expression. In many languages, 4 &gt; 3 &gt; 2 would return as False, because (4 &gt; 3) would be evaluated as a boolean, and then True &gt; 2 would be evaluated as&nbsp;False.</p>
-<div class="highlight"><pre><span></span><code><span class="n">mynumber</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight"><pre><span></span><code><span class="nv">mynumber</span> <span class="o">=</span> <span class="mi">3</span>
 
-<span class="k">if</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="n">mynumber</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="n">print</span><span class="p">(</span><span class="ss">&quot;Chained comparison operators work! \n&quot;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">if</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="nv">mynumber</span> <span class="o">&gt;</span> <span class="mi">2</span>:
+    <span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Chained comparison operators work! </span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">*</span> <span class="mi">3</span><span class="ss">)</span>
 </code></pre></div>
 
-
-<div class="highlight"><pre><span></span><code><span class="err">Chained comparison operators work! </span>
-<span class="err">Chained comparison operators work! </span>
-<span class="err">Chained comparison operators work!</span>
+<div class="highlight"><pre><span></span><code>Chained comparison operators work! 
+Chained comparison operators work! 
+Chained comparison operators work!
 </code></pre></div>
-
 
 <h2 id="4-collectionscounter">4. collections.Counter<a class="headerlink" href="#4-collectionscounter" title="Permanent link">&para;</a></h2>
 <p>The collections library is, like, the best thing ever. Stackoverflow turned me on to ordered dicts early on, but I kept using a snippet to create dicts to count occurrences of results in my code. One of these days, I&#8217;ll figure out a use for&nbsp;collections.deque.</p>
@@ -238,117 +231,106 @@
     <span class="n">random_number</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
     <span class="n">mycounter</span><span class="p">[</span><span class="n">random_number</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">mycounter</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">mycounter</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </code></pre></div>
 
-
-<div class="highlight"><pre><span></span><code><span class="err">0 10</span>
-<span class="err">1 10</span>
-<span class="err">2 13</span>
-<span class="err">3 6</span>
-<span class="err">4 6</span>
-<span class="err">5 11</span>
-<span class="err">6 10</span>
-<span class="err">7 14</span>
-<span class="err">8 12</span>
-<span class="err">9 8</span>
+<div class="highlight"><pre><span></span><code><span class="mf">0</span><span class="w"> </span><span class="mf">10</span><span class="w"></span>
+<span class="mf">1</span><span class="w"> </span><span class="mf">10</span><span class="w"></span>
+<span class="mf">2</span><span class="w"> </span><span class="mf">13</span><span class="w"></span>
+<span class="mf">3</span><span class="w"> </span><span class="mf">6</span><span class="w"></span>
+<span class="mf">4</span><span class="w"> </span><span class="mf">6</span><span class="w"></span>
+<span class="mf">5</span><span class="w"> </span><span class="mf">11</span><span class="w"></span>
+<span class="mf">6</span><span class="w"> </span><span class="mf">10</span><span class="w"></span>
+<span class="mf">7</span><span class="w"> </span><span class="mf">14</span><span class="w"></span>
+<span class="mf">8</span><span class="w"> </span><span class="mf">12</span><span class="w"></span>
+<span class="mf">9</span><span class="w"> </span><span class="mf">8</span><span class="w"></span>
 </code></pre></div>
-
 
 <h2 id="5-dict-comprehensions">5. Dict comprehensions<a class="headerlink" href="#5-dict-comprehensions" title="Permanent link">&para;</a></h2>
 <p>A rite of passage for a Python programmer is understanding list comprehensions, but eventually I realized dict comprehensions are just as useful &#8212; especially for reversing&nbsp;dicts.</p>
-<div class="highlight"><pre><span></span><code><span class="n">my_phrase</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;expects&quot;</span><span class="p">,</span> <span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;Spanish&quot;</span><span class="p">,</span> <span class="s2">&quot;Inquisition&quot;</span><span class="p">]</span>
-<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">value</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">my_phrase</span><span class="p">)}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>
-<span class="n">reversed_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">value</span><span class="p">:</span> <span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">reversed_dict</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">my_phrase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;No&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;one&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;expects&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;the&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Spanish&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Inquisition&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="n">my_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">my_phrase</span><span class="p">)}</span><span class="w"></span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span><span class="w"></span>
+<span class="n">reversed_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">my_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span><span class="w"></span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reversed_dict</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
-
-<div class="highlight"><pre><span></span><code><span class="err">{&#39;Inquisition&#39;: 5, &#39;No&#39;: 0, &#39;expects&#39;: 2, &#39;one&#39;: 1, &#39;Spanish&#39;: 4, &#39;the&#39;: 3}</span>
-<span class="err">{0: &#39;No&#39;, 1: &#39;one&#39;, 2: &#39;expects&#39;, 3: &#39;the&#39;, 4: &#39;Spanish&#39;, 5: &#39;Inquisition&#39;}</span>
+<div class="highlight"><pre><span></span><code>{&#39;Inquisition&#39;: 5, &#39;No&#39;: 0, &#39;expects&#39;: 2, &#39;one&#39;: 1, &#39;Spanish&#39;: 4, &#39;the&#39;: 3}
+{0: &#39;No&#39;, 1: &#39;one&#39;, 2: &#39;expects&#39;, 3: &#39;the&#39;, 4: &#39;Spanish&#39;, 5: &#39;Inquisition&#39;}
 </code></pre></div>
-
 
 <h2 id="6-executing-shell-commands-with-subprocess">6. Executing shell commands with subprocess<a class="headerlink" href="#6-executing-shell-commands-with-subprocess" title="Permanent link">&para;</a></h2>
 <p>I used to use the os library exclusively to manipulate files; now I can even programmatically call complex command-line tools like ffmpeg for video&nbsp;editing</p>
 <p>(And yes, I use Windows, so do all of my clients. But I have the good grace to be embarrassed about&nbsp;it!)</p>
 <p>Note that the particular subprocess I picked would be much better done with the os library; I just wanted a command everyone would be familiar with. And in general, shell=True is a <span class="caps">VERY</span> bad idea, I put it here so that the command output would appear in the IPython notebook cell. Don&#8217;t try this at home,&nbsp;kids!</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">subprocess</span>
-<span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
  <span class="n">Volume</span> <span class="ow">in</span> <span class="n">drive</span> <span class="n">C</span> <span class="ow">is</span> <span class="n">OS</span>
  <span class="n">Volume</span> <span class="n">Serial</span> <span class="n">Number</span> <span class="ow">is</span> <span class="p">[</span><span class="n">REDACTED</span><span class="p">]</span>
  <span class="n">Directory</span> <span class="n">of</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">David</span>\<span class="n">Documents</span>\<span class="p">[</span><span class="n">REDACTED</span><span class="p">]</span>
 </code></pre></div>
 
-
-<div class="highlight"><pre><span></span><code><span class="err">2014-11-26  06:04 AM    &lt;DIR&gt;          .</span>
-<span class="err">2014-11-26  06:04 AM    &lt;DIR&gt;          ..</span>
-<span class="err">2014-11-23  11:47 AM    &lt;DIR&gt;          .git</span>
-<span class="err">2014-11-26  06:06 AM    &lt;DIR&gt;          .ipynb_checkpoints</span>
-<span class="err">2014-11-23  08:59 AM    &lt;DIR&gt;          CCCma</span>
-<span class="err">2014-09-03  06:58 AM            19,450 colorbrewdict.py</span>
-<span class="err">2014-09-03  06:58 AM            92,175 imagecompare.ipynb</span>
-<span class="err">2014-11-23  08:41 AM    &lt;DIR&gt;          Japan_Earthquakes</span>
-<span class="err">2014-09-03  06:58 AM             1,100 LICENSE</span>
-<span class="err">2014-09-03  06:58 AM             5,263 monty_monte.ipynb</span>
-<span class="err">2014-09-03  06:58 AM            31,082 pocket_tumblr_reddit_api.ipynb</span>
-<span class="err">2014-11-26  06:04 AM             3,211 README.md</span>
-<span class="err">2014-11-26  06:14 AM            19,898 top_10_python_idioms.ipynb</span>
-<span class="err">2014-09-03  06:58 AM             5,813 tree_convert_mega_to_gexf.ipynb</span>
-<span class="err">2014-09-03  06:58 AM             5,453 tree_convert_mega_to_json.ipynb</span>
-<span class="err">2014-09-03  06:58 AM             1,211 tree_convert_newick_to_json.py</span>
-<span class="err">2014-09-03  06:58 AM            55,970 weather_ML.ipynb</span>
-<span class="err">              11 File(s)        240,626 bytes</span>
-<span class="err">               6 Dir(s)  180,880,490,496 bytes free</span>
+<div class="highlight"><pre><span></span><code><span class="mf">2014</span><span class="o">-</span><span class="mf">11</span><span class="o">-</span><span class="mf">26</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">04</span><span class="w"> </span><span class="n">AM</span><span class="w">    </span><span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span><span class="w">          </span><span class="mf">.</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">11</span><span class="o">-</span><span class="mf">26</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">04</span><span class="w"> </span><span class="n">AM</span><span class="w">    </span><span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span><span class="w">          </span><span class="mf">..</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">11</span><span class="o">-</span><span class="mf">23</span><span class="w">  </span><span class="mf">11</span><span class="p">:</span><span class="mf">47</span><span class="w"> </span><span class="n">AM</span><span class="w">    </span><span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span><span class="w">          </span><span class="mf">.</span><span class="n">git</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">11</span><span class="o">-</span><span class="mf">26</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">06</span><span class="w"> </span><span class="n">AM</span><span class="w">    </span><span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span><span class="w">          </span><span class="mf">.</span><span class="n">ipynb_checkpoints</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">11</span><span class="o">-</span><span class="mf">23</span><span class="w">  </span><span class="mf">08</span><span class="p">:</span><span class="mf">59</span><span class="w"> </span><span class="n">AM</span><span class="w">    </span><span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span><span class="w">          </span><span class="n">CCCma</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mf">03</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">58</span><span class="w"> </span><span class="n">AM</span><span class="w">            </span><span class="mf">19</span><span class="p">,</span><span class="mf">450</span><span class="w"> </span><span class="n">colorbrewdict</span><span class="mf">.</span><span class="n">py</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mf">03</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">58</span><span class="w"> </span><span class="n">AM</span><span class="w">            </span><span class="mf">92</span><span class="p">,</span><span class="mf">175</span><span class="w"> </span><span class="n">imagecompare</span><span class="mf">.</span><span class="n">ipynb</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">11</span><span class="o">-</span><span class="mf">23</span><span class="w">  </span><span class="mf">08</span><span class="p">:</span><span class="mf">41</span><span class="w"> </span><span class="n">AM</span><span class="w">    </span><span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span><span class="w">          </span><span class="n">Japan_Earthquakes</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mf">03</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">58</span><span class="w"> </span><span class="n">AM</span><span class="w">             </span><span class="mf">1</span><span class="p">,</span><span class="mf">100</span><span class="w"> </span><span class="n">LICENSE</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mf">03</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">58</span><span class="w"> </span><span class="n">AM</span><span class="w">             </span><span class="mf">5</span><span class="p">,</span><span class="mf">263</span><span class="w"> </span><span class="n">monty_monte</span><span class="mf">.</span><span class="n">ipynb</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mf">03</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">58</span><span class="w"> </span><span class="n">AM</span><span class="w">            </span><span class="mf">31</span><span class="p">,</span><span class="mf">082</span><span class="w"> </span><span class="n">pocket_tumblr_reddit_api</span><span class="mf">.</span><span class="n">ipynb</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">11</span><span class="o">-</span><span class="mf">26</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">04</span><span class="w"> </span><span class="n">AM</span><span class="w">             </span><span class="mf">3</span><span class="p">,</span><span class="mf">211</span><span class="w"> </span><span class="kr">READ</span><span class="n">ME</span><span class="mf">.</span><span class="n">md</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">11</span><span class="o">-</span><span class="mf">26</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">14</span><span class="w"> </span><span class="n">AM</span><span class="w">            </span><span class="mf">19</span><span class="p">,</span><span class="mf">898</span><span class="w"> </span><span class="kr">to</span><span class="n">p_10_python_idioms</span><span class="mf">.</span><span class="n">ipynb</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mf">03</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">58</span><span class="w"> </span><span class="n">AM</span><span class="w">             </span><span class="mf">5</span><span class="p">,</span><span class="mf">813</span><span class="w"> </span><span class="n">tree_convert_mega_to_gexf</span><span class="mf">.</span><span class="n">ipynb</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mf">03</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">58</span><span class="w"> </span><span class="n">AM</span><span class="w">             </span><span class="mf">5</span><span class="p">,</span><span class="mf">453</span><span class="w"> </span><span class="n">tree_convert_mega_to_json</span><span class="mf">.</span><span class="n">ipynb</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mf">03</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">58</span><span class="w"> </span><span class="n">AM</span><span class="w">             </span><span class="mf">1</span><span class="p">,</span><span class="mf">211</span><span class="w"> </span><span class="n">tree_convert_newick_to_json</span><span class="mf">.</span><span class="n">py</span><span class="w"></span>
+<span class="mf">2014</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mf">03</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">58</span><span class="w"> </span><span class="n">AM</span><span class="w">            </span><span class="mf">55</span><span class="p">,</span><span class="mf">970</span><span class="w"> </span><span class="n">weather_ML</span><span class="mf">.</span><span class="n">ipynb</span><span class="w"></span>
+<span class="w">              </span><span class="mf">11</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w">        </span><span class="mf">240</span><span class="p">,</span><span class="mf">626</span><span class="w"> </span><span class="n">bytes</span><span class="w"></span>
+<span class="w">               </span><span class="mf">6</span><span class="w"> </span><span class="n">Dir</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w">  </span><span class="mf">180</span><span class="p">,</span><span class="mf">880</span><span class="p">,</span><span class="mf">490</span><span class="p">,</span><span class="mf">496</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="nb">fre</span><span class="n">e</span><span class="w"></span>
 </code></pre></div>
-
 
 <h2 id="7-dict-get-and-iteritems-methods">7. dict .get() and .iteritems() methods<a class="headerlink" href="#7-dict-get-and-iteritems-methods" title="Permanent link">&para;</a></h2>
 <p>Having a default value when a key does not exist has all kinds of uses, and just like enumerate() for lists, you can iterate over key, value tuples in&nbsp;dicts</p>
-<div class="highlight"><pre><span></span><code><span class="n">my_dict</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Lancelot&#39;</span><span class="p">,</span> <span class="s1">&#39;quest&#39;</span><span class="p">:</span> <span class="s1">&#39;Holy Grail&#39;</span><span class="p">,</span> <span class="s1">&#39;favourite_color&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="err">}</span>
+<div class="highlight"><pre><span></span><code><span class="nv">my_dict</span> <span class="o">=</span> {<span class="s1">&#39;</span><span class="s">name</span><span class="s1">&#39;</span>: <span class="s1">&#39;</span><span class="s">Lancelot</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">quest</span><span class="s1">&#39;</span>: <span class="s1">&#39;</span><span class="s">Holy Grail</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">favourite_color</span><span class="s1">&#39;</span>: <span class="s1">&#39;</span><span class="s">blue</span><span class="s1">&#39;</span>}
 
-<span class="n">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s1">&#39;airspeed velocity of an unladen swallow&#39;</span><span class="p">,</span> <span class="s1">&#39;African or European?\n&#39;</span><span class="p">))</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">my_dict</span>.<span class="nv">get</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">airspeed velocity of an unladen swallow</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">African or European?</span><span class="se">\n</span><span class="s1">&#39;</span><span class="ss">))</span>
 
-<span class="k">for</span> <span class="k">key</span><span class="p">,</span> <span class="n">value</span> <span class="k">in</span> <span class="n">my_dict</span><span class="p">.</span><span class="n">iteritems</span><span class="p">():</span>
-    <span class="n">print</span><span class="p">(</span><span class="k">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="ss">&quot;: &quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="nv">key</span>, <span class="nv">value</span> <span class="nv">in</span> <span class="nv">my_dict</span>.<span class="nv">iteritems</span><span class="ss">()</span>:
+    <span class="nv">print</span><span class="ss">(</span><span class="nv">key</span>, <span class="nv">value</span>, <span class="nv">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">: </span><span class="s2">&quot;</span><span class="ss">)</span>
 </code></pre></div>
 
+<div class="highlight"><pre><span></span><code>African or European?
 
-<div class="highlight"><pre><span></span><code><span class="n">African</span> <span class="k">or</span> <span class="n">European</span><span class="o">?</span>
-
-<span class="n">quest</span><span class="p">:</span> <span class="n">Holy</span> <span class="n">Grail</span>
-<span class="n">name</span><span class="p">:</span> <span class="n">Lancelot</span>
-<span class="n">favourite_color</span><span class="p">:</span> <span class="n">blue</span>
+quest: Holy Grail
+name: Lancelot
+favourite_color: blue
 </code></pre></div>
-
 
 <h2 id="8-tuple-unpacking-for-switching-variables">8. Tuple unpacking for switching variables<a class="headerlink" href="#8-tuple-unpacking-for-switching-variables" title="Permanent link">&para;</a></h2>
 <p>Do you know how many times I had to use a third, temporary dummy variable in <span class="caps">VB</span>? c = a; a = b; b =&nbsp;c?</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Spam&#39;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;Eggs&#39;</span>
+<div class="highlight"><pre><span></span><code>a = &#39;Spam&#39;
+b = &#39;Eggs&#39;
 
-<span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+print(a, b)
 
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+a, b = b, a
 
-<span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+print(a, b)
 </code></pre></div>
 
-
-<div class="highlight"><pre><span></span><code><span class="err">Spam Eggs</span>
-<span class="err">Eggs Spam</span>
+<div class="highlight"><pre><span></span><code>Spam Eggs
+Eggs Spam
 </code></pre></div>
-
 
 <h2 id="9-introspection-tools">9. Introspection tools<a class="headerlink" href="#9-introspection-tools" title="Permanent link">&para;</a></h2>
 <p>I was aware of dir(), but I had assumed help() would do the same thing as IPython&#8217;s ? magic command. It does way more. (This post has been updated after some great advice from reddit&#8217;s /r/python which, indeed, I wish I&#8217;d known about&nbsp;before!)</p>
-<div class="highlight"><pre><span></span><code><span class="n">my_dict</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;That&#39;</span><span class="p">:</span> <span class="s1">&#39;an ex-parrot!&#39;</span><span class="err">}</span>
+<div class="highlight"><pre><span></span><code>my_dict = {&#39;That&#39;: &#39;an ex-parrot!&#39;}
 
-<span class="n">help</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>
+help(my_dict)
 </code></pre></div>
-
 
 <p>Help on dict&nbsp;object:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="n">dict</span><span class="p">(</span><span class="k">object</span><span class="p">)</span><span class="w"></span>
@@ -407,18 +389,16 @@
 <span class="w"> </span><span class="o">|</span><span class="w">      </span><span class="n">T</span><span class="p">.</span><span class="n">__new__</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="k">object</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">subtype</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">T</span><span class="w"></span>
 </code></pre></div>
 
-
 <h2 id="10-pep-8-compliant-string-chaining">10. <span class="caps">PEP</span>-8 compliant string chaining<a class="headerlink" href="#10-pep-8-compliant-string-chaining" title="Permanent link">&para;</a></h2>
 <p><a href="https://www.python.org/dev/peps/pep-0008"><span class="caps">PEP8</span></a>
 is the style guide for Python code. Among other things, it directs that lines not be over 80 characters long and that indenting by consistent over line&nbsp;breaks.</p>
 <p>This can be accomplished with a combination of backslashes \; parentheses () with commas , ; and addition operators +; but every one of these solutions is awkward for multiline strings. There is a multiline string signifier, the triple quote, but it does not allow consistent indenting over line&nbsp;breaks. </p>
 <p>There is a solution: parentheses without commas. I don&#8217;t know why this works, but I&#8217;m glad it&nbsp;does.</p>
-<div class="highlight"><pre><span></span><code><span class="err">my_long_text = (&quot;We are no longer the knights who say Ni! &quot;</span>
-<span class="err">                &quot;We are now the knights who say ekki-ekki-&quot;</span>
-<span class="err">                &quot;ekki-p&#39;tang-zoom-boing-z&#39;nourrwringmm!&quot;)</span>
-<span class="err">print(my_long_text)</span>
+<div class="highlight"><pre><span></span><code>my_long_text = (&quot;We are no longer the knights who say Ni! &quot;
+                &quot;We are now the knights who say ekki-ekki-&quot;
+                &quot;ekki-p&#39;tang-zoom-boing-z&#39;nourrwringmm!&quot;)
+print(my_long_text)
 </code></pre></div>
-
 
 <p>We are no longer the knights who say Ni! We are now the knights who say&nbsp;ekki-ekki-ekki-p&#8217;tang-zoom-boing-z&#8217;nourrwringmm!</p>
 <h2 id="_1">是也乎<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>

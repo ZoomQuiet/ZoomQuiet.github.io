@@ -110,185 +110,188 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">如何自在定义 macOS&nbsp;截屏文件名?</a></h2>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#bg"><span class="caps">BG</span></a></li>
+<li><a href="#goal">goal</a></li>
+<li><a href="#logging">logging</a><ul>
+<li><a href="#_1">格式</a></li>
+<li><a href="#_2">命名</a></li>
+<li><a href="#screencapturestrings">ScreenCapture.strings</a></li>
+<li><a href="#automator">Automator</a></li>
+<li><a href="#bash">bash</a></li>
+</ul>
+</li>
+<li><a href="#refer">refer</a></li>
+<li><a href="#sayeahooo">Sayeahooo</a></li>
+</ul>
+</div>
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
+<ul>
+<li>默认系统截屏工具输出图片是:<ul>
+<li>到桌面</li>
+<li>文件名: <code>屏幕快照 2019-02-13 17.17.32.png</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<ul>
+<li>当年在 Linux 中,是可 …</li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/jump-into-ssl.html">如何持证 (<span class="caps">SSL</span>)&nbsp;开车</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
-<p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国</a></p>
-<p>被成功安利…</p>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 <code>*-pages</code> 服务快速发布:</p>
+                <div class="summary"><div class="toc">
 <ul>
-<li>github/gitlab 为核心</li>
-<li>免费 <span class="caps">SSL</span> 认证为基础</li>
-<li>最好能一次配置长期可用</li>
-</ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
-<p>整体上, 无论在哪个 <code>*-pages</code> 平台, 要折腾的事儿相似, 就3步:</p>
-<ul>
-<li>追加配置含 <code>SSL</code> 解析能力的 <span class="caps">DNS</span> 服务主机 <code>A</code> 地址<ul>
-<li>并解决引发的有关 <code>CANEM</code> 冲突问题</li>
-</ul>
-</li>
-<li>在 <code>*-pages</code> 平台配置 <code>Enforce HTTPS</code> 有关嗯哼</li>
-<li>优雅的等待一切生效 ;-)<ul>
-<li>并解决可能的资源冲突问题</li>
+<li><a href="#bg"><span class="caps">BG</span></a></li>
+<li><a href="#goal">goal</a></li>
+<li><a href="#logging">logging</a><ul>
+<li><a href="#gh-pages">gh-pages</a></li>
+<li><a href="#gl-pages">gl-pages</a><ul>
+<li><a href="#domain">domain</a></li>
+<li><a href="#pages">pages</a></li>
+<li><a href="#waitting">waitting</a></li>
 </ul>
 </li>
 </ul>
-<h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
-<p>原先的:</p>
-<blockquote>
-<p>༄  dig blog …</p></blockquote>
+</li>
+<li><a href="#ipic">iPic</a></li>
+<li><a href="#summary">summary</a></li>
+<li><a href="#refer">refer</a></li>
+<li><a href="#sayeahooo">Sayeahooo</a></li>
+</ul>
+</div>
+<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
+<p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let&#8217;s Encrypt 2019：带来更多振奋人心的新功能 -&nbsp;开源中国</a></p>
+<p>被成功安利&#8230;</p>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>因各种网站发布的年代, 使 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssl.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/dsl-atop-openresty.html">用 <span class="caps">DSL</span>&nbsp;们构筑商用系统</a></h2>
-                <div class="summary">
-<h1 id="building-business-systems-with-dsls-for-nginx-openresty">Building Business Systems with DSLs for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty<a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link">¶</a></h1>
-<p>~ 来自春哥的分享</p>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+                <div class="summary"><div class="toc">
 <ul>
-<li>5年前也听录了一次 春哥的分享:<a href="http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.html">由Lua 粘合的Nginx生态环境</a></li>
-<li>然后, 神奇的引发了各种后来的然后</li>
-<li>去年, 在 <span class="caps">NGINX</span> 大会上, 春哥才真正讲出了10年前设计 OpenResty 前身时内心的宏大构想</li>
-<li>所以, 值得认真 review 一下:<ul>
-<li>视频:<a href="https://www.youtube.com/watch?v=w2RAZLptE-U">Building Business Systems with Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty | Cloudflare - YouTube</a></li>
-<li>文稿:<ul>
-<li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-1/">Domain-Specific Languages for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty, Part 1</a></li>
-<li><a href="https://www.nginx.com/blog/building-business-systems-with-domain-specific-languages-for-nginx-openresty-part-2/">Domain-Specific Languages for …</a></li></ul></li></ul></li></ul>
+<li><a href="#building-business-systems-with-dsls-for-nginx-openresty">Building Business Systems with DSLs for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty</a><ul>
+<li><a href="#_1">背景</a></li>
+<li><a href="#tldr"><span class="caps">TL</span>;<span class="caps">DR</span></a><ul>
+<li><a href="#or"><span class="caps">OR</span>&nbsp;的世界观</a></li>
+<li><a href="#or_1"><span class="caps">OR</span>&nbsp;的应用场景</a></li>
+<li><a href="#sregex">大事儿:&nbsp;sregex</a></li>
+<li><a href="#dsl-lzsql">DSL实验: <span class="caps">LZSQL</span></a></li>
+<li><a href="#dsl"><span class="caps">DSL</span>&nbsp;的爆发</a></li>
+<li><a href="#or_2"><span class="caps">OR</span>&nbsp;的目标</a></li>
+</ul>
+</li>
+<li><a href="#tlog">TLog</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="building-business-systems-with-dsls-for-nginx-openresty">Building Business Systems with DSLs for <span class="caps">NGINX</span> <span class="amp">&amp;</span> OpenResty<a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link">&para;</a></h1>
+<p>~&nbsp;来自 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/dsl-atop-openresty.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/pyqt4macos.html">PyQt4 之消失在&nbsp;Sierra</a></h2>
-                <div class="summary">
-<h3 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p>最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,
-用 PyQt 是必然选择哪.</p>
-<p>只是项目是老坑, 所以,没用 Qt5 技术桟, 还是 Qt4</p>
-<h2 id="_2">嗯哼<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+                <div class="summary"><div class="toc">
 <ul>
-<li>这天要折腾 <span class="caps">QR</span> 码识别了</li>
-<li>运行 <code>brew install zbar</code></li>
-<li>然后,各种问题就爆发了,特别是:<ul>
-<li><code>libjpeg.8.dylib</code> 加载不到</li>
-<li>PyQt4 镜像丢失</li>
-<li>…</li>
+<li><a href="#_1">背景</a></li>
+<li><a href="#_2">嗯哼</a></li>
+<li><a href="#_3">原来</a></li>
+<li><a href="#_4">更新</a></li>
 </ul>
-</li>
-<li>重新安装 pyqt 时才发现只有 5.1 系列的 Qt/PyQt 可以安装了…</li>
-</ul>
-<h2 id="_3">原来<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>参考:<a href="https://github.com/cartr/homebrew-qt4">cartr/homebrew-qt4: Homebrew tap …</a></p>
+</div>
+<h3 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>最近在折腾 Qt , 因为在 mac 中开发运行在 win10 中,
+用 PyQt&nbsp;是必然选择哪.</p>
+<p>只是项目是老坑, 所以,没用 Qt5 技术 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/pyqt4macos.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/leo5theme-key-words.html">Leo 5.4 theme&nbsp;custom</a></h2>
-                <div class="summary">
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p><a href="http://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme custom</a></p>
-<p>Leo 是灵活的完全 Pythonic 的可定制 <code>文学化编辑环境</code> …</p>
-<p>所以,其定制的进展是无限的…</p>
-<h2 id="_2">现象<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+                <div class="summary"><div class="toc">
 <ul>
-<li>在完成了基本的 theme 定制后发现</li>
-<li>默认语法元素的颜色,不太理想</li>
-<li>特别是: <a href="http://leoeditor.com/cheatsheet.html#id13">&lt;<sections>&gt;</sections></a><ul>
-<li>可以将下层节点放置在任何想放置的地方的引入点声明</li>
-<li>但是,这里 <code>&lt;&lt;...&gt;&gt;</code> 两端符号的颜色是默认兰色</li>
-<li>在暗色背景中看不清楚</li>
+<li><a href="#_1">背景</a></li>
+<li><a href="#_2">现象</a></li>
+<li><a href="#_3">解决</a></li>
+<li><a href="#_4">记要</a></li>
+<li><a href="#logging">logging</a></li>
 </ul>
-</li>
-<li>可能一时没能找到配置处</li>
-</ul>
-<h2 id="_3">解决<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+</div>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><a href="http://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme&nbsp;custom</a></p>
+<p>Leo 是灵活的完全 Pythonic 的可定制 <code>文学化编辑环境</code> &#8230;</p>
+<p>所以,其定制的进展是无限的&#8230;</p>
+<h2 id="_2">现象<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>通过社区列表咨询<ul>
-<li>2天后收到各种建议</li>
-</ul>
-</li>
-<li>才知道是俺使用 Leo 的配置文件过老<ul>
-<li>导致新版本的全局 theme 定义节点</li>
-<li><code>lThemes: copy to last top-level setting in myLeoSettings.leo--&gt;Common to all themes--&gt;Colors for …</code></li></ul></li></ul>
+<li>在 …</li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/leo5theme-key-words.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/break-into-rMBP13.html">rMBP&nbsp;坠入纪</a></h2>
-                <div class="summary">
-<h1 id="_1">崩<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>160625, 一个平常的早晨, 俺的世界崩溃了一大坨…
-5年前老婆大人开恩准购的: 高配版, 8G, 512G+256G <span class="caps">SSD</span> 的MBP 15吋 无法开机!</p>
-<h1 id="_2">溃<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
-<p>立即去当地 <span class="caps">APPLE</span> 维修中心,从机械硬盘启动,使用内置硬盘工具检验 <span class="caps">SSD</span> 不通过,
-现场重新格式化安装, 但是中心没有 10.11 的安装镜像,只能先安装上 10.7.3 的.
-回来,一边回忆,一边想整理这5年, 都如何配置出吻合自个儿口味的 <span class="caps">MAC</span> 环境的!?</p>
-<p>但是, 下午, 相同情景, 再次灰屏,无法启动!
-知道没那么简单了….果然,再次去, 发现是长期使用 60W 的电源来驱动 80W 的机器 …</p>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#_1">崩</a></li>
+<li><a href="#_2">溃</a></li>
+<li><a href="#_3">新</a></li>
+<li><a href="#_4">配</a><ul>
+<li><a href="#_5">习惯</a></li>
+<li><a href="#_6">过程</a><ul>
+<li><a href="#_7">数据</a></li>
+<li><a href="#_8">系统</a></li>
+<li><a href="#_9">浏览器</a></li>
+<li><a href="#leo-with-qt">Leo with&nbsp;Qt</a></li>
+<li><a href="#dock">Dock</a></li>
+<li><a href="#app-storebrew">App&nbsp;Store+Brew</a></li>
+<li><a href="#dev">Dev.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_10">总结</a><ul>
+<li><a href="#tm"><span class="caps">TM</span></a></li>
+</ul>
+</li>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+</div>
+<h1 id="_1">崩<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>160625, 一个平常的早晨, 俺的世界崩溃了一大坨&#8230;
+5年前老 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/break-into-rMBP13.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
-                <div class="summary">
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>C样:</p>
-<div class="highlight"><pre><span></span><code><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="k">while</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-</code></pre></div>
-<p>偏门:</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-</code></pre></div>
-<p>蠎样:</p>
-<div class="highlight"><pre><span></span><code><span class="err">for v in my_list:</span>
-<span class="err">    print v</span>
-</code></pre></div>
-<p>模式:</p>
-<div class="highlight"><pre><span></span><code><span class="err">for name in iterable:</span>
-<span class="err">    statements</span>
-</code></pre></div>
+                <div class="summary"><div class="toc">
 <ul>
-<li>可 …</li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/standing-desk-env.html">站立式办公环境尝试</a></h2>
-                <div class="summary">
-<h1 id="_1">立<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>人之所以为人, 就是因为站立解放了双手, 提升了视野, 刺激了心智, 勃发了野心…</p>
-<p>所以,我们用了几亿年进化, 才站立了起来,
-怎么可以在钢筋洞穴中, 趴回去呢?!</p>
-<h2 id="_2">背景<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<ul>
-<li>嗯哼,终于有机会 <span class="caps">SOHO</span> 很一段时期了</li>
-<li>有舒服的 <span class="caps">IKEA</span> 沙发, 但是, 为了健康着想, Standing Desk 系统是值得尝试的</li>
-<li>另外, 还有个背景条件就是没有专门的书房给俺使用</li>
-<li>只有, 床前 110x300cm 的面积可以利用</li>
-<li>以及, 预算 <span class="caps">5000RMB</span> 是上限!</li>
+<li><a href="#_1">迭代基础</a><ul>
+<li><a href="#list-elements">list ⇒&nbsp;elements</a></li>
+<li><a href="#strings-characters">Strings ⇒&nbsp;characters</a></li>
+<li><a href="#dicts-keys">Dicts ⇒&nbsp;keys</a></li>
+<li><a href="#files-lines">Files ⇒&nbsp;lines</a></li>
+<li><a href="#_2">标准库中有趣的迭代</a></li>
+<li><a href="#_3">其它的迭代形式</a></li>
 </ul>
-<h2 id="_3">调研<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<ul>
-<li>嗯哼, 手上只有一台 2011版的 <span class="caps">MBP</span> 15吋高配作为主力工作用机</li>
-<li>另外, 有 <span class="caps">WACOM</span> Intaus + <span class="caps">HHKB</span> lite2 作为输入设备</li>
-<li>需要:<ul>
-<li>站立式办公桌, 在俺自然站立时 …</li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/standing-desk-env.html">more ...</a>
+</li>
+<li><a href="#_4">基本设问</a><ul>
+<li><a href="#q">Q: 如何获得索引号?</a><ul>
+<li><a href="#enumerate">enumerate()&nbsp;制造好用的值对</a></li>
+<li><a href="#vs">迭代 …</a></li></ul></li></ul></li></ul></div>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
                 </div>
             </article>
             <hr/>

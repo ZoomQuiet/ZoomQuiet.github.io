@@ -111,32 +111,21 @@
         <div class="col-lg-9">
             <article>
                 <h2><a href="https://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
-                <div class="summary">
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>C样:</p>
-<div class="highlight"><pre><span></span><code><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="k">while</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-</code></pre></div>
-<p>偏门:</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-</code></pre></div>
-<p>蠎样:</p>
-<div class="highlight"><pre><span></span><code><span class="err">for v in my_list:</span>
-<span class="err">    print v</span>
-</code></pre></div>
-<p>模式:</p>
-<div class="highlight"><pre><span></span><code><span class="err">for name in iterable:</span>
-<span class="err">    statements</span>
-</code></pre></div>
+                <div class="summary"><div class="toc">
 <ul>
-<li>可 …</li></ul>
+<li><a href="#_1">迭代基础</a><ul>
+<li><a href="#list-elements">list ⇒&nbsp;elements</a></li>
+<li><a href="#strings-characters">Strings ⇒&nbsp;characters</a></li>
+<li><a href="#dicts-keys">Dicts ⇒&nbsp;keys</a></li>
+<li><a href="#files-lines">Files ⇒&nbsp;lines</a></li>
+<li><a href="#_2">标准库中有趣的迭代</a></li>
+<li><a href="#_3">其它的迭代形式</a></li>
+</ul>
+</li>
+<li><a href="#_4">基本设问</a><ul>
+<li><a href="#q">Q: 如何获得索引号?</a><ul>
+<li><a href="#enumerate">enumerate()&nbsp;制造好用的值对</a></li>
+<li><a href="#vs">迭代 …</a></li></ul></li></ul></li></ul></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
                 </div>
             </article>

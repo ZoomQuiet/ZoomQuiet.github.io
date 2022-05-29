@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="101028_jacob-ci-is-hard"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/101028_jacob-ci-is-hard.html"/>
-            <meta property="og:description" content="Part 1: Background Changlog Buildbot, the venerable Python continuous integration server, has the reputation of being complex and difficult to set up. After spending a couple of weeks deep in Buildbot land, I’ve come to the conclusion that this reputation, while true, is only partially deserved. That is, Buildbot …"/>
+            <meta property="og:description" content="Buildbot, the venerable Python continuous integration server, has the reputation of being complex and difficult to set up. After spending a couple of weeks deep in Buildbot land, I’ve come to the conclusion that this reputation, while true, is only partially deserved. That is, Buildbot is complex, but only …"/>
 
     <!-- Bootstrap 
 
@@ -150,68 +150,70 @@
 		<a href="https://blog.zoomquiet.io/tag/zh.html">Zh</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-
-                <div class="toc">
+    <nav class="toc">
+    <div class="toc">
 <ul>
-<li><a href="#part-1-background">Part 1:&nbsp;Background</a></li>
+<li><a href="#part-1-background">Part 1: Background</a></li>
 <li><a href="#changlog">Changlog</a></li>
 </ul>
 </div>
+    </nav>
+
+                
 <p><a href="http://buildbot.net/">Buildbot</a>, 
 the venerable Python 
 <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a>
-server, has the reputation of being complex and difficult to set&nbsp;up.</p>
-<p>After spending a couple of weeks deep in Buildbot land, I&#8217;ve come to the conclusion that this reputation, while true, is only partially deserved. That is, Buildbot is complex, but only if you&#8217;re trying to view it as an out-of-the-box <span class="caps">CI</span> solution. Buildbot suddenly starts to make much more sense if you view it as a framework for creating your own <span class="caps">CI</span> solution, not a <span class="caps">CI</span> server in its own&nbsp;right.</p>
-<p>You won&#8217;t find this revelation anywhere in the Buildbot docs, nor in any of the books or online material that cover the tool. There are some good tutorials out there showing how to set up a simple Buildbot instance – Jeff Younker&#8217;s 
+server, has the reputation of being complex and difficult to set up.</p>
+<p>After spending a couple of weeks deep in Buildbot land, I’ve come to the conclusion that this reputation, while true, is only partially deserved. That is, Buildbot is complex, but only if you’re trying to view it as an out-of-the-box <span class="caps">CI</span> solution. Buildbot suddenly starts to make much more sense if you view it as a framework for creating your own <span class="caps">CI</span> solution, not a <span class="caps">CI</span> server in its own right.</p>
+<p>You won’t find this revelation anywhere in the Buildbot docs, nor in any of the books or online material that cover the tool. There are some good tutorials out there showing how to set up a simple Buildbot instance – Jeff Younker’s 
 <a href="http://www.amazon.com/dp/1590599810/?tag=jacobian-20">Foundations of Agile Python Development</a>
-has the best one I&#8217;ve run across – but none of these examples make much sense when setting up a complex buildfarm with complicated&nbsp;requirements.</p>
-<p>So I&#8217;m here to fill that gap. In this series of posts – I think I&#8217;m looking at five parts – I&#8217;ll explain this &#8220;Buildbot is a <span class="caps">CI</span> framework&#8221; view, delve into Buildbot&#8217;s architecture, and then walk through the complicated-but-worth-the-effort <span class="caps">CI</span> sever I&#8217;ve built for&nbsp;Django.</p>
-<p>By way of disclaimer I should mention I&#8217;m anything but a Buildbot expert. I&#8217;m almost certainly Doing Things Entirely Wrong. I may or may not be using public APIs as I&#8217;ve simply trolled through Buildbot&#8217;s source until I found something that did what I wanted. However, what I&#8217;ve got here on the other side makes me pretty damn happy, and I want to show it&nbsp;off.</p>
-<p>Here, then,&nbsp;is</p>
-<h2 id="part-1-background">Part 1: Background<a class="headerlink" href="#part-1-background" title="Permanent link">&para;</a></h2>
-<p>We&#8217;ve been looking for a <span class="caps">CI</span> solution for Django for quite some time. Over the years we&#8217;ve tried a bunch of different tools: Buildbot, 
+has the best one I’ve run across – but none of these examples make much sense when setting up a complex buildfarm with complicated requirements.</p>
+<p>So I’m here to fill that gap. In this series of posts – I think I’m looking at five parts – I’ll explain this “Buildbot is a <span class="caps">CI</span> framework” view, delve into Buildbot’s architecture, and then walk through the complicated-but-worth-the-effort <span class="caps">CI</span> sever I’ve built for Django.</p>
+<p>By way of disclaimer I should mention I’m anything but a Buildbot expert. I’m almost certainly Doing Things Entirely Wrong. I may or may not be using public APIs as I’ve simply trolled through Buildbot’s source until I found something that did what I wanted. However, what I’ve got here on the other side makes me pretty damn happy, and I want to show it off.</p>
+<p>Here, then, is</p>
+<h2 id="part-1-background">Part 1: Background<a class="headerlink" href="#part-1-background" title="Permanent link">¶</a></h2>
+<p>We’ve been looking for a <span class="caps">CI</span> solution for Django for quite some time. Over the years we’ve tried a bunch of different tools: Buildbot, 
 <a href="http://cruisecontrol.sourceforge.net/">CruiseControl</a>
 , 
-<a href="http://hudson-ci.org/">Hudson</a>, and even some home-grown&nbsp;solutions.</p>
-<p>Nothing&#8217;s worked out. That is, nothing&#8217;s been able to provide the &#8220;continuous&#8221; part: builds only continue working as long as there&#8217;s someone dedicated around to babysit the system. This sucks: it&#8217;s meant that at times Django&#8217;s been broken on supported platforms simply because nobody&#8217;s been bothering to run the&nbsp;tests.</p>
-<p>A few weeks ago a few of us started banging on this problem again, determined to get it right this time. Eric set up a new Hudson instance (modeled after the one he&#8217;d been using at work), and I dove headlong into Buildbot again. I&#8217;m not really going to talk much about Hudson here, but I&#8217;ll note that it&#8217;s actually been really instructive working on two different systems in parallel. It&#8217;s forced us to really think through and formalize our <span class="caps">CI</span>&nbsp;needs.</p>
-<p>This led me to my first big <span class="caps">CI</span>&nbsp;revelation: </p>
+<a href="http://hudson-ci.org/">Hudson</a>, and even some home-grown solutions.</p>
+<p>Nothing’s worked out. That is, nothing’s been able to provide the “continuous” part: builds only continue working as long as there’s someone dedicated around to babysit the system. This sucks: it’s meant that at times Django’s been broken on supported platforms simply because nobody’s been bothering to run the tests.</p>
+<p>A few weeks ago a few of us started banging on this problem again, determined to get it right this time. Eric set up a new Hudson instance (modeled after the one he’d been using at work), and I dove headlong into Buildbot again. I’m not really going to talk much about Hudson here, but I’ll note that it’s actually been really instructive working on two different systems in parallel. It’s forced us to really think through and formalize our <span class="caps">CI</span> needs.</p>
+<p>This led me to my first big <span class="caps">CI</span> revelation: </p>
 <div class="highlight"><pre><span></span><code>CI is hard.
 </code></pre></div>
-
-<p>There&#8217;s any number of &#8220;simple&#8221; <span class="caps">CI</span> tools out there&#8230;  and they appear to work for exactly two projects (the project the tool was built to test, and the <span class="caps">CI</span> server itself, natch). The general purpose tools – Hudson, Buildbot, CruiseControl, etc. – are big, complicated, and heavily opinionated. This is a clear sign that we&#8217;re in a space where even the basic tenets of the problem can&#8217;t be agreed upon by all parties. <span class="caps">CI</span> is one of those problems that&#8217;s hard because there really isn&#8217;t a good core set of needs to be abstracted. Nearly every project has very different <span class="caps">CI</span>&nbsp;needs.</p>
-<p>[This is part of what makes Buildbot so complicated: I think it&#8217;s actually trying pretty hard to be completely agnostic and allow any kind of continuous integration system you could think up. If Buildbot was more opinionated it could drop some of the layers of abstraction, but because it&#8217;s trying so hard to be everything to everyone it ends up being crazy complex. I&#8217;ve not decided if this is admirable or crazy. Both,&nbsp;perhaps.]</p>
-<p>So what are Django&#8217;s needs? What make <span class="caps">CI</span> hard for&nbsp;us?</p>
+<p>There’s any number of “simple” <span class="caps">CI</span> tools out there…  and they appear to work for exactly two projects (the project the tool was built to test, and the <span class="caps">CI</span> server itself, natch). The general purpose tools – Hudson, Buildbot, CruiseControl, etc. – are big, complicated, and heavily opinionated. This is a clear sign that we’re in a space where even the basic tenets of the problem can’t be agreed upon by all parties. <span class="caps">CI</span> is one of those problems that’s hard because there really isn’t a good core set of needs to be abstracted. Nearly every project has very different <span class="caps">CI</span> needs.</p>
+<p>[This is part of what makes Buildbot so complicated: I think it’s actually trying pretty hard to be completely agnostic and allow any kind of continuous integration system you could think up. If Buildbot was more opinionated it could drop some of the layers of abstraction, but because it’s trying so hard to be everything to everyone it ends up being crazy complex. I’ve not decided if this is admirable or crazy. Both, perhaps.]</p>
+<p>So what are Django’s needs? What make <span class="caps">CI</span> hard for us?</p>
 <ul>
-<li>Django&#8217;s big. The test suite is around 40,000 lines of code in something like 3,000 individual tests. We work constantly to speed up the test suite, but best case it still takes about 5 minutes to&nbsp;run.</li>
+<li>Django’s big. The test suite is around 40,000 lines of code in something like 3,000 individual tests. We work constantly to speed up the test suite, but best case it still takes about 5 minutes to run.</li>
 </ul>
-<p>This means that our <span class="caps">CI</span> absolutely needs to be distributed – a single test server won&#8217;t cut&nbsp;it.</p>
+<p>This means that our <span class="caps">CI</span> absolutely needs to be distributed – a single test server won’t cut it.</p>
 <ul>
-<li>Our test suite isn&#8217;t just unit tests; in fact, it&#8217;s mostly integration tests. We run most tests against real databases and attempt to simulate as much of the <span class="caps">HTTP</span> request/response cycle as we&nbsp;can.</li>
+<li>Our test suite isn’t just unit tests; in fact, it’s mostly integration tests. We run most tests against real databases and attempt to simulate as much of the <span class="caps">HTTP</span> request/response cycle as we can.</li>
 </ul>
-<p>This means that our build system needs to be heterogeneous: since we test against real databases, we need to have lots of different ones to test against. We can&#8217;t just run a farm of Linux buildslaves running Python 2.6 and SQLite. Since slaves are heterogeneous, the build system needs to be highly targeted. We can&#8217;t treat each build slave identically, but we&#8217;ll need to target certain types of tests to the slaves that support&nbsp;&#8216;em.</p>
+<p>This means that our build system needs to be heterogeneous: since we test against real databases, we need to have lots of different ones to test against. We can’t just run a farm of Linux buildslaves running Python 2.6 and SQLite. Since slaves are heterogeneous, the build system needs to be highly targeted. We can’t treat each build slave identically, but we’ll need to target certain types of tests to the slaves that support ‘em.</p>
 <ul>
-<li>We&#8217;re ambitious in what we support: Django supports four versions of Python (2.4, 2.5, 2.6, and 2.7), three Python implementations (CPython, Jython, and PyPy), four database engines (PostgreSQL, MySQL, SQLite, and Oracle), multiple versions of each database (for example, we support six versions of PostgreSQL: 8.0, 8.1, 8.2, 8.3, 8.4, and 9.0), and a bunch of OSes (Mac <span class="caps">OS</span> X, Windows, and most Linux and <span class="caps">BSD</span>&nbsp;flavors).</li>
+<li>We’re ambitious in what we support: Django supports four versions of Python (2.4, 2.5, 2.6, and 2.7), three Python implementations (CPython, Jython, and PyPy), four database engines (PostgreSQL, MySQL, SQLite, and Oracle), multiple versions of each database (for example, we support six versions of PostgreSQL: 8.0, 8.1, 8.2, 8.3, 8.4, and 9.0), and a bunch of OSes (Mac <span class="caps">OS</span> X, Windows, and most Linux and <span class="caps">BSD</span> flavors).</li>
 </ul>
-<p>We need the capability to run all sorts of crazy combinations. In an ideal world, we&#8217;d actually be able to test against every single unique python/db/os&nbsp;combination.</p>
-<p>This means that our build system needs to be capable of getting really big, potentially spanning dozens or even hundreds of machines. We&#8217;re clearly talking cloud computing here: there&#8217;s no way a bunch of volunteers can afford the money and time to keep a rack of dozens of heterogeneous hardware all running&nbsp;smoothly.</p>
+<p>We need the capability to run all sorts of crazy combinations. In an ideal world, we’d actually be able to test against every single unique python/db/os combination.</p>
+<p>This means that our build system needs to be capable of getting really big, potentially spanning dozens or even hundreds of machines. We’re clearly talking cloud computing here: there’s no way a bunch of volunteers can afford the money and time to keep a rack of dozens of heterogeneous hardware all running smoothly.</p>
 <ul>
-<li>As I mentioned, we&#8217;re all volunteers. Nobody gets paid to babysit the <span class="caps">CI</span> server, which means it needs to be highly autonomous. Builds need to happen without any intervention. Most critically, build servers can&#8217;t disappear, go &#8220;stale&#8221; or break because /tmp gets&nbsp;full.</li>
+<li>As I mentioned, we’re all volunteers. Nobody gets paid to babysit the <span class="caps">CI</span> server, which means it needs to be highly autonomous. Builds need to happen without any intervention. Most critically, build servers can’t disappear, go “stale” or break because /tmp gets full.</li>
 </ul>
-<p>After a bunch of playing with these requirements, I sketched out a dream system that looked something like&nbsp;this:</p>
+<p>After a bunch of playing with these requirements, I sketched out a dream system that looked something like this:</p>
 <ul>
-<li>We&#8217;ve got a bunch of (dormant) <span class="caps">VM</span> images for a cloud computing service or&nbsp;platform.</li>
-<li>Each image &#8220;knows&#8221; which kinds of configs it can build. For example, one image might have Python 2.4 and SQLite, while another might have Python 2.7 and PostgreSQL&nbsp;9.0.</li>
-<li>When new requests are made the build master spins up some VMs, hands them build jobs (based on the types of builds the <span class="caps">VM</span> can&nbsp;support).</li>
-<li>When no more builds are in the queue for a particular <span class="caps">VM</span>, the build master shuts down the image and saves us&nbsp;money.</li>
+<li>We’ve got a bunch of (dormant) <span class="caps">VM</span> images for a cloud computing service or platform.</li>
+<li>Each image “knows” which kinds of configs it can build. For example, one image might have Python 2.4 and SQLite, while another might have Python 2.7 and PostgreSQL 9.0.</li>
+<li>When new requests are made the build master spins up some VMs, hands them build jobs (based on the types of builds the <span class="caps">VM</span> can support).</li>
+<li>When no more builds are in the queue for a particular <span class="caps">VM</span>, the build master shuts down the image and saves us money.</li>
 </ul>
-<p>Every out-of-the-box <span class="caps">CI</span> system I examined failed to give me that workflow. Most failed on the &#8220;heterogeneous&#8221; requirement. That includes Buildbot. I knew, however, that a few projects – PyPy, Chrome, and Python itself – were using Buildbot to some success against similar issues, and I knew that Buildbot had recently gained the ability to deal with cloud computing. Finally, since Buildbot&#8217;s written in Python I was fairly confidant in my own ability to hack it to pieces if&nbsp;necessary.</p>
-<p>Well, a couple of weeks later, I&#8217;m there: I have a Buildbot-based system that&#8217;s doing exactly what I described above. I&#8217;m still not 100% sure this is the solution, but it&#8217;s a solution, and it&#8217;s&nbsp;working.</p>
-<p>The rest of this series will dive into the code. Next time, we&#8217;ll look at an overview of Buildbot&#8217;s architecture and configuration, and I&#8217;ll explain my Buildbot-is-a-framework revelation in more&nbsp;detail.</p>
-<h2 id="changlog">Changlog<a class="headerlink" href="#changlog" title="Permanent link">&para;</a></h2>
+<p>Every out-of-the-box <span class="caps">CI</span> system I examined failed to give me that workflow. Most failed on the “heterogeneous” requirement. That includes Buildbot. I knew, however, that a few projects – PyPy, Chrome, and Python itself – were using Buildbot to some success against similar issues, and I knew that Buildbot had recently gained the ability to deal with cloud computing. Finally, since Buildbot’s written in Python I was fairly confidant in my own ability to hack it to pieces if necessary.</p>
+<p>Well, a couple of weeks later, I’m there: I have a Buildbot-based system that’s doing exactly what I described above. I’m still not 100% sure this is the solution, but it’s a solution, and it’s working.</p>
+<p>The rest of this series will dive into the code. Next time, we’ll look at an overview of Buildbot’s architecture and configuration, and I’ll explain my Buildbot-is-a-framework revelation in more detail.</p>
+<h2 id="changlog">Changlog<a class="headerlink" href="#changlog" title="Permanent link">¶</a></h2>
 <ul>
 <li>1406?? </li>
-<li>140618&nbsp;偶遇抄转</li>
+<li>140618 偶遇抄转</li>
 </ul>
 
             </div>

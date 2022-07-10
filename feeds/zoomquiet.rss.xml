@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Sun, 10 Jul 2022 10:43:41 +0800</lastBuildDate><item><title>How to install Leo under M1 chip macOS 12.*</title><link>https://blog.zoomquiet.io/leo-install-m1mac-summary.html</link><description>
+<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Sun, 10 Jul 2022 10:49:16 +0800</lastBuildDate><item><title>How to install Leo under M1 chip macOS 12.*</title><link>https://blog.zoomquiet.io/leo-install-m1mac-summary.html</link><description>
 &lt;h2 id="background"&gt;Background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;base &lt;a href="http://leoeditor.com/installing.html#installing-leo-on-macos-10-7-lion-and-later"&gt;Installing Leo — Leo 6.6.2 documentation&lt;/a&gt; 
 can not installing Leo on MacOs 12.4 with M1max chip:&lt;/p&gt;

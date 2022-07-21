@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Sun, 10 Jul 2022 10:49:16 +0800</lastBuildDate><item><title>How to install Leo under M1 chip macOS 12.*</title><link>https://blog.zoomquiet.io/leo-install-m1mac-summary.html</link><description>
+<rss version="2.0"><channel><title>- Zoom.Quiet</title><link>https://blog.zoomquiet.io/</link><description></description><lastBuildDate>Thu, 21 Jul 2022 21:42:24 +0800</lastBuildDate><item><title>什么是”闪电演讲”, 以及为什么值得体验.</title><link>https://blog.zoomquiet.io/220721-what-is-lighting-talk.html</link><description>
+&lt;h2 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;马上第7届 COSCon(中国开源年会) 将在线举行,
+因为 2019年在上海 COSCon , 有过”从容”的 &lt;code&gt;闪电演讲&lt;/code&gt;,
+所以本次大会, 被指定为 &lt;code&gt;闪电演讲&lt;/code&gt; 联 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zoom.Quiet</dc:creator><pubDate>Thu, 21 Jul 2022 21:42:24 +0800</pubDate><guid isPermaLink="false">tag:blog.zoomquiet.io,2022-07-21:/220721-what-is-lighting-talk.html</guid><category>IMHO</category><category>DAMA</category><category>FLOSS</category><category>COSCon</category><category>CosCup</category></item><item><title>How to install Leo under M1 chip macOS 12.*</title><link>https://blog.zoomquiet.io/leo-install-m1mac-summary.html</link><description>
 &lt;h2 id="background"&gt;Background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;base &lt;a href="http://leoeditor.com/installing.html#installing-leo-on-macos-10-7-lion-and-later"&gt;Installing Leo — Leo 6.6.2 documentation&lt;/a&gt; 
 can not installing Leo on MacOs 12.4 with M1max chip:&lt;/p&gt;

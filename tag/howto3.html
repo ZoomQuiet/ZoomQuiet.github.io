@@ -20,7 +20,7 @@
             <meta property="og:description" content=""/>
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
+        <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
     <link href="https://blog.zoomquiet.io/theme/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://blog.zoomquiet.io/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="https://blog.zoomquiet.io/theme/css/pygments/github.css" rel="stylesheet">
@@ -67,11 +67,9 @@
                     <li><a href="http://zoomquiet.io">大妈</a></li>
                     <li><a href="https://py.101.camp/">课程</a></li>
                     <li><a href="https://t.zsxq.com/iaIEQ3N">星球</a></li>
-                    <li><a href="http://weekly.pychina.org/">蟒周刊</a></li>
-                    <li><a href="https://du.101.camp/duw/">怼周报</a></li>
                     <li><a href="/pages/friendly-links.html">友链</a></li>
+                    <li><a href="/pages/affiliate.html">好物</a></li>
                     <li><a href="/pages/zoomquiet.html">关于</a></li>
-                    <li><a href="https://zoomquiet.io/collection.html">收集</a></li>
               
 
               
@@ -90,6 +88,38 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">如何基于CB3构建家庭服务器</a></h2>
+                <div class="summary">
+<p><a href="http://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest 的体验</a>
+之后,总是要一步步完成心目中的 家服务器</p>
+<h1 id="issue">Issue<a class="headerlink" href="#issue" title="Permanent link">¶</a></h1>
+<p>基于CB3使用 lununtu-server-<span class="caps">VGA</span> 操作系统</p>
+<ul>
+<li>环境:</li>
+<li>.bashrc</li>
+<li>
+<p>.inputrc</p>
+</li>
+<li>
+<p>预装: </p>
+</li>
+<li>sshd</li>
+<li>apt-fast<ul>
+<li><a href="http://www.mattparnell.com/linux/apt-fast/">Index of /linux/apt-fast</a></li>
+</ul>
+</li>
+<li>vim</li>
+<li>mc</li>
+<li>
+<p>…</p>
+</li>
+<li>
+<p>不要 …</p></li></ul>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/init-my-qpy-env.html">如何自在的折腾QPy</a></h2>
                 <div class="summary">
 <h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
@@ -97,11 +127,7 @@
 <a href="http://code.google.com/p/android-scripting/"><span class="caps">SL4A</span></a></p>
 <p>这种神器! Google 果断是业界良心哪,
 可惜: 从<a href="http://code.google.com/p/android-scripting/downloads/list">Downloads</a>
-可以看出 ,已经停止有一年多了,目测是 Guido 叔离开后, Python 的地位在 Google 一落千丈就没有人折腾了.</p>
-<p>好在旧浪两位同事, River和<span class="caps">CF</span> 掿起了 <span class="caps">SL4A</span> 的旗帜, 变成了一系列准衶器:</p>
-<ul>
-<li><a href="https://play.google.com/store/apps/details?id=com.hipipal.qpyplus">QPython - Python for Android - Google Play 上的 Andr​​oid 应用</a></li>
-<li><a href="https://play.google.com/store/apps/details?id=com.hipipal.qpy3">QPython 3 - Python3 on Android - Google …</a></li></ul>
+可以看出 ,已经停 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/init-my-qpy-env.html">more ...</a>
                 </div>
             </article>
@@ -114,20 +140,7 @@
 <a href="http://getpelican.com/">Pelican</a>…</p>
 <p><img alt=";" src="https://0.gravatar.com/avatar/0cb9d9d7e6b152d24d2b78c6464502a6?d=https%3A%2F%2Fidenticons.github.com%2Fc0b8694f59232c6681a92c4c9fec3e18.png&amp;r=x&amp;s=440"/></p>
 <h2 id="_1">为毛<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>社区在发展, 原先的 蠎周刊,为方便,使用了 gitcafe 内置的 Jekyll 服务,
-所以,其实在使用 Ruby 自动编译和发布.</p>
-<p>总是感觉不够纯粹 Pythonic …</p>
-<p>故而, 下决心完成迁移</p>
-<h1 id="_2">整体<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
-<p>忽然发现,俺感觉很直觉的事儿,也写了文档, 但是,其它人真正首次上手全然一头雾水…</p>
-<p>所以
-<a href="http://xiaolai.github.io/alpha/on-learning/">学习学习再学习 - xiaolai</a> 提出的,俺实在无法同意更多..</p>
-<p><img alt="Impossible_staircase" src="http://upload.wikimedia.org/wikipedia/commons/3/34/Impossible_staircase.svg"/></p>
-<p>这是最难的知识结构——它往往看起来跟线性结构没什么区别，但，最终令人迷惑，甚至懊恼。 用最直白的话来描述，就是：</p>
-<div class="highlight"><pre><span class="err">初级的知识需要对高级知识深入了解才能真正深入了解</span>
-</pre></div>
-<p>——你看看这句话多拗口就多少有点概念了。</p>
-<p>所以,还是按照 …</p>
+<p>社区在发展, 原先的 蠎周刊,为方便,使用了 gitcafe 内置的 Jekyll 服 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jekyll-to-pelican.html">more ...</a>
                 </div>
             </article>
@@ -301,6 +314,20 @@
                             class="icon-Root-sign icon-large"></i>Root
                     </a></li>
 <!--
+                    <li class="list-group-item"><a href="http://weekly.pychina.org/">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="http://weekly.pychina.org/"><i
+                            class="icon-蟒周刊-sign icon-large"></i>蟒周刊
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://du.101.camp/duw/">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://du.101.camp/duw/"><i
+                            class="icon-怼周报-sign icon-large"></i>怼周报
+                    </a></li>
+<!--
                     <li class="list-group-item"><a href="https://segmentfault.com/u/zoomquiet">
 -->
                     <li class="list-group-item-zip">
@@ -313,13 +340,6 @@
                     <li class="list-group-item-zip">
                         <a href="https://www.zhihu.com/people/zoomquiet"><i
                             class="icon-知乎-sign icon-large"></i>知乎
-                    </a></li>
-<!--
-                    <li class="list-group-item"><a href="https://juejin.im/user/5aa4848951882577b45ea1fe">
--->
-                    <li class="list-group-item-zip">
-                        <a href="https://juejin.im/user/5aa4848951882577b45ea1fe"><i
-                            class="icon-掘金-sign icon-large"></i>掘金
                     </a></li>
 <!--
                     <li class="list-group-item"><a href="https://aijishu.com/u/zoomquiet">
@@ -389,7 +409,8 @@
         <img src="https://www.qiniu.com/assets/logo-zh-dbef5f389fb045c60f710d4d4e6225e9015c1684b1a1f7b81e000b952581dcd4.png"
         width="90">
 <!--
-    <img src="http://docs.upyun.com/img/upyun_logo.png">
+    <a href="http://www.upyun.com/">
+        <img src="http://docs.upyun.com/img/upyun_logo.png">
 -->        
         </a>
     提供CDN及云存储服务

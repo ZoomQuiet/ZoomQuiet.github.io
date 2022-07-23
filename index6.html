@@ -18,15 +18,12 @@
             <meta property="og:url" content="https://blog.zoomquiet.io"/>
             <meta property="og:description" content=""/>
 
-    <!-- Bootstrap 
-
-        <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
     <link href="https://blog.zoomquiet.io/theme/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://blog.zoomquiet.io/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="https://blog.zoomquiet.io/theme/css/pygments/github.css" rel="stylesheet">
     <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/style.css" type="text/css"/>
-
-    -->
 
     <!-- add emojify into Pelican 
     <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/emojify.min.css" type="text/css" />
@@ -35,9 +32,8 @@
 -->
 
 
-    <!-- JavaScript plugins (requires jQuery) 
+    <!-- JavaScript plugins (requires jQuery) -->
     <script src="//code.jquery.com/jquery.min.js"></script>
-    -->
 
         <link href="https://blog.zoomquiet.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title=" ATOM Feed"/>
@@ -45,229 +41,154 @@
             <!--
     { include 'includes/ga.html' }
             -->
-
-<style type="text/css">
-.container {
-
-    padding: 5px 18px;
-}
-
-</style>
-
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <!--
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
+            <!--
 <a href="https://blog.zoomquiet.io" class="navbar-brand"></a>
             -->
-<table border="0" width="98%">
-    <tr>
-<td>
-    <a href="https://blog.zoomquiet.io" class="navbar-brand">
+<a href="https://blog.zoomquiet.io" class="navbar-brand">
     <img src="https://blog.zoomquiet.io/theme/logo.png"/>
     
     <span class="violet-site">.io </span>
-
-</td>
-        
-<td>
-            <ul style="list-style: none;" class="nav navbar-nav">
-                    <li style="display: inline;"><a href="http://zoomquiet.io">大妈</a></li>
-                    <li style="display: inline;"><a href="https://py.101.camp/">课程</a></li>
-                    <li style="display: inline;"><a href="https://t.zsxq.com/iaIEQ3N">星球</a></li>
-                    <li style="display: inline;"><a href="/pages/friendly-links.html">友链</a></li>
-                    <li style="display: inline;"><a href="/pages/affiliate.html">好物</a></li>
-                    <li style="display: inline;"><a href="/pages/zoomquiet.html">关于</a></li>
-              
-
-              
-            </ul>
-    
-</td>
-<td align="right" width="10%">
-                <ul style="list-style: none;">
-                <li style="display: inline;"><a href="https://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
-
-                <li style="display: inline;"><a href="https://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
-            </ul>
-
-</td>
-    </tr>
-</table>
 </a>            
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://zoomquiet.io">大妈</a></li>
+                    <li><a href="https://py.101.camp/">课程</a></li>
+                    <li><a href="https://t.zsxq.com/iaIEQ3N">星球</a></li>
+                    <li><a href="/pages/friendly-links.html">友链</a></li>
+                    <li><a href="/pages/affiliate.html">好物</a></li>
+                    <li><a href="/pages/zoomquiet.html">关于</a></li>
+              
+
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
+
+                <li><a href="https://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
 </nav>
-
-<hr/>
-
 <!-- /.navbar -->
 <div class="container">
     <div class="row">
         <div class="col-lg-9">
             <article>
-                <h2><a href="https://blog.zoomquiet.io/fix-subl-package-installation.html">修复 subl3&nbsp;包安装</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
-<p>突然: <code>cmd+shift+P</code> 选择 <code>Package Control: install package</code> 时,一直:</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>There are no packages available for installation</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>当然就是解决呗:</p>
-<ul>
-<li>各种官方都有吼</li>
-<li><a href="https://packagecontrol.io/docs/troubleshooting">Troubleshooting - Package Control</a></li>
-<li><a href="https://github.com/wbond/package_control/issues/959#issuecomment-168447848">There are no packages available for installation - Package Control of …</a></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/fix-subl-package-installation.html">more ...</a>
+                <h2><a href="https://blog.zoomquiet.io/ann-murmur-0.html">公告/ 呢喃:收集&nbsp;私人片段</a></h2>
+                <div class="summary"><p><span class="caps">ANN</span>/ what is&nbsp;MurMur</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/ann-murmur-0.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/131023-why0base-indexing-python.html">Python&nbsp;列表为毛从0开始索引?</a></h2>
-                <div class="summary">
-<p><a href="https://plus.google.com/115212051037621986145/posts/YTUxbXYZyfi">I was asked on Twitter why Python uses 0-based indexing,…</a></p>
-<p>老爹当年也很是积累使用 G+ 的,
-公开回答了很多价值问题… 能看一眼少一眼了…</p>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>Google+ 帐号将于 2019 …</p></blockquote></blockquote></blockquote>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/131023-why0base-indexing-python.html">more ...</a>
+                <h2><a href="https://blog.zoomquiet.io/200301-ZoomQuiet-MurMur-collection.html">呢喃/&nbsp;20.3</a></h2>
+                <div class="summary"><p>MurMur/ daily historic card writing, collection in&nbsp;2020.3</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/200301-ZoomQuiet-MurMur-collection.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">如何自在定义 macOS&nbsp;截屏文件名?</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
-<ul>
-<li>默认系统截屏工具输出图片是:<ul>
-<li>到桌面</li>
-<li>文件名: <code>屏幕快照 2019-02-13 17.17.32.png</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<ul>
-<li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
-<li><code>screenshot …</code></li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html">more ...</a>
+                <h2><a href="https://blog.zoomquiet.io/oldtouch-historic-jianshu-end.html">钩陈/&nbsp;被jianshu认证了</a></h2>
+                <div class="summary"><p>OldTouch/ zoomquiet blocked by jiansho for <span class="caps">NULL</span></p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/oldtouch-historic-jianshu-end.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="https://blog.zoomquiet.io/rime4gitchat.html">如何配置 rIME 支持 GitChat&nbsp;规范?</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
-<ul>
-<li>新年了, 发现有 <code>长徦式学习症</code> , 很多不敢肥家被逼婚的程序猿, 宁可呆在公司一边值班一边刷课</li>
-<li>同时, GitChat 也空降新领导, 启 …</li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/rime4gitchat.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/jump-into-ssl.html">如何持证 (<span class="caps">SSL</span>)&nbsp;开车</a></h2>
-                <div class="summary">
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
-<p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let’s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国</a></p>
-<p>被成功安利…</p>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
-<p>因各种网站发布的年代, 使用技术各不相同, 但是好在都 …</p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-ssl.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/180501-L10E01-ryb-wars.html"><span class="caps">L10E01</span>🐙/&nbsp;红黄蓝~虐童战纪</a></h2>
-                <div class="summary"><h1 id="l10e01"><span class="caps">L10E01</span>🐙红黄蓝 ~ 虐童战纪<a class="headerlink" href="#l10e01" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>背景
-~ 阐述 记录/问题/事件/&#8230;&nbsp;发生的背景</p>
-<p>10万字写书计划活动</p>
-</blockquote>
-<ul>
-<li>大纲要求：请包含【标题】、【副标题】、【目录】三部分内 …</li></ul>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/180501-L10E01-ryb-wars.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/180220-book-ai-historic.html">内圈梗集锦(人工智能简史)书评</a></h2>
-                <div class="summary">
-<p>版权归作者所有,任何形式转载请联系作者. </p>
-<div class="highlight"><pre><span></span><code><span class="err">作者</span><span class="o">:</span><span class="n">Zoom</span><span class="o">.</span><span class="na">Quiet</span><span class="o">(</span><span class="err">来自豆瓣</span><span class="o">)</span><span class="w"></span>
-<span class="err">来源</span><span class="o">:</span><span class="n">https</span><span class="o">://</span><span class="n">book</span><span class="o">.</span><span class="na">douban</span><span class="o">.</span><span class="na">com</span><span class="sr">/review/9167418/</span><span class="w"></span>
-</code></pre></div>
-<p>是也乎,(￣▽￣)</p>
-<p>现在技术类图书有一种不好的 …</p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/180220-book-ai-historic.html">more ...</a>
+                <h2><a href="https://blog.zoomquiet.io/oldtouch-historic-cpug.html">钩陈/&nbsp;CPUG故事</a></h2>
+                <div class="summary"><p>OldTouch/ about <span class="caps">CPUG</span> history with&nbsp;zoomquiet</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/oldtouch-historic-cpug.html">more ...</a>
                 </div>
             </article>
             <hr/>
 
-        <ul style="list-style: none;" class="pagination">
-                <li style="display: inline;" class="prev"><a href="https://blog.zoomquiet.io/index5.html">&laquo;</a>
+        <ul class="pagination">
+                <li class="prev"><a href="https://blog.zoomquiet.io/index5.html">&laquo;</a>
                 </li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index.html">1</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index2.html">2</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index3.html">3</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index4.html">4</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index5.html">5</a></li>
-                <li style="display: inline;" class="active"><a
+                <li class="active"><a
                         href="https://blog.zoomquiet.io/index6.html">6</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index7.html">7</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index8.html">8</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index9.html">9</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index10.html">10</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index11.html">11</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index12.html">12</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index13.html">13</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index14.html">14</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index15.html">15</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index16.html">16</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index17.html">17</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index18.html">18</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index19.html">19</a></li>
-                <li style="display: inline;" class=""><a
+                <li class=""><a
                         href="https://blog.zoomquiet.io/index20.html">20</a></li>
-                <li style="display: inline;" class="next"><a
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index21.html">21</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index22.html">22</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index23.html">23</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index24.html">24</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index25.html">25</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index26.html">26</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index27.html">27</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index28.html">28</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index29.html">29</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index30.html">30</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index31.html">31</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index32.html">32</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index33.html">33</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index34.html">34</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/index35.html">35</a></li>
+                <li class="next"><a
                         href="https://blog.zoomquiet.io/index7.html">&raquo;</a></li>
         </ul>
 
@@ -373,16 +294,11 @@
 -->
 
     <section>
-
-<table border="0" width="98%">
-    <tr >
-<td colspan="2">
-        <ul style="list-style: none;" class="list-group list-group-flush">
+        <ul class="list-group list-group-flush">
 
             <li class="list-group-item"><h4>
                 <i class="icon-th icon-large"></i>Categories</h4></li>
-                <li style="display: inline;" class="list-group-item">
-                    &emsp;
+                <li class="list-group-item">
                     <a href="https://blog.zoomquiet.io/category/ann.html">
                         <i class="icon-folder-open icon-large"></i>ANN
                     </a>
@@ -390,8 +306,7 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li style="display: inline;" class="list-group-item">
-                    &emsp;
+                <li class="list-group-item">
                     <a href="https://blog.zoomquiet.io/category/imho.html">
                         <i class="icon-folder-open icon-large"></i>IMHO
                     </a>
@@ -399,8 +314,7 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li style="display: inline;" class="list-group-item">
-                    &emsp;
+                <li class="list-group-item">
                     <a href="https://blog.zoomquiet.io/category/murmur.html">
                         <i class="icon-folder-open icon-large"></i>MurMur
                     </a>
@@ -408,8 +322,7 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li style="display: inline;" class="list-group-item">
-                    &emsp;
+                <li class="list-group-item">
                     <a href="https://blog.zoomquiet.io/category/oldtouch.html">
                         <i class="icon-folder-open icon-large"></i>OldTouch
                     </a>
@@ -417,8 +330,7 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-                <li style="display: inline;" class="list-group-item">
-                    &emsp;
+                <li class="list-group-item">
                     <a href="https://blog.zoomquiet.io/category/pythonic.html">
                         <i class="icon-folder-open icon-large"></i>Pythonic
                     </a>
@@ -426,13 +338,7 @@
                         <i class="icon-rss-sign"></i>
                     </a>
                 </li>
-        </ul>
-</td>
-    </tr>
 
-    <tr>
-<td width="42%" valign="top">
-            <ul style="list-style: none;" class="list-group list-group-flush">
                 <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
 <!--
                     <li class="list-group-item"><a href="https://ZoomQuiet.io">
@@ -468,13 +374,6 @@
                     <li class="list-group-item-zip">
                         <a href="https://www.zhihu.com/people/zoomquiet"><i
                             class="icon-知乎-sign icon-large"></i>知乎
-                    </a></li>
-<!--
-                    <li class="list-group-item"><a href="https://juejin.im/user/5aa4848951882577b45ea1fe">
--->
-                    <li class="list-group-item-zip">
-                        <a href="https://juejin.im/user/5aa4848951882577b45ea1fe"><i
-                            class="icon-掘金-sign icon-large"></i>掘金
                     </a></li>
 <!--
                     <li class="list-group-item"><a href="https://aijishu.com/u/zoomquiet">
@@ -526,11 +425,14 @@
                             class="icon-旧曰-sign icon-large"></i>旧曰
                     </a></li>
 
+ 
+
         </ul>
-</td>
-<td valign="top">
+    </section>
+
+
 <section>
-<ul style="list-style: none;" class="list-group-zip">
+<ul class="list-group-zip">
     <li class="list-group-item">
         <h4><i class="icon-tint icon-large"></i>Powerded By</h4></li>
 
@@ -606,134 +508,17 @@
 
 </ul>
 </section>
-</td>
-    </tr>
-</table>
-
-
-<!--
-
-        <ul style="list-style: none;" class="list-group list-group-flush">
-
-            <li class="list-group-item"><h4>
-                <i class="icon-th icon-large"></i>Categories</h4></li>
-                <li class="list-group-item">
-                    <a href="https://blog.zoomquiet.io/category/ann.html">
-                        <i class="icon-folder-open icon-large"></i>ANN
-                    </a>
-                    <a href="https://blog.zoomquiet.io/feeds/ann.atom.xml">
-                        <i class="icon-rss-sign"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://blog.zoomquiet.io/category/imho.html">
-                        <i class="icon-folder-open icon-large"></i>IMHO
-                    </a>
-                    <a href="https://blog.zoomquiet.io/feeds/imho.atom.xml">
-                        <i class="icon-rss-sign"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://blog.zoomquiet.io/category/murmur.html">
-                        <i class="icon-folder-open icon-large"></i>MurMur
-                    </a>
-                    <a href="https://blog.zoomquiet.io/feeds/murmur.atom.xml">
-                        <i class="icon-rss-sign"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://blog.zoomquiet.io/category/oldtouch.html">
-                        <i class="icon-folder-open icon-large"></i>OldTouch
-                    </a>
-                    <a href="https://blog.zoomquiet.io/feeds/oldtouch.atom.xml">
-                        <i class="icon-rss-sign"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="https://blog.zoomquiet.io/category/pythonic.html">
-                        <i class="icon-folder-open icon-large"></i>Pythonic
-                    </a>
-                    <a href="https://blog.zoomquiet.io/feeds/pythonic.atom.xml">
-                        <i class="icon-rss-sign"></i>
-                    </a>
-                </li>
-
-                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
-                    <li class="list-group-item-zip">
-                        <a href="https://ZoomQuiet.io"><i
-                            class="icon-Root-sign icon-large"></i>Root
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="http://weekly.pychina.org/"><i
-                            class="icon-蟒周刊-sign icon-large"></i>蟒周刊
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="https://du.101.camp/duw/"><i
-                            class="icon-怼周报-sign icon-large"></i>怼周报
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="https://segmentfault.com/u/zoomquiet"><i
-                            class="icon-思否-sign icon-large"></i>思否
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="https://www.zhihu.com/people/zoomquiet"><i
-                            class="icon-知乎-sign icon-large"></i>知乎
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="https://juejin.im/user/5aa4848951882577b45ea1fe"><i
-                            class="icon-掘金-sign icon-large"></i>掘金
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="https://aijishu.com/u/zoomquiet"><i
-                            class="icon-极术-sign icon-large"></i>极术
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="https://my.oschina.net/zoomquiet"><i
-                            class="icon-开源中国-sign icon-large"></i>开源中国
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="https://github.com/ZoomQuiet"><i
-                            class="icon-GitHub-sign icon-large"></i>GitHub
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="https://gitlab.com/ZoomQuiet"><i
-                            class="icon-gitlab-sign icon-large"></i>gitlab
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="http://weibo.com/zoomquiet"><i
-                            class="icon-weibo-sign icon-large"></i>weibo
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="http://wiki.zoomquiet.io"><i
-                            class="icon-维基-sign icon-large"></i>维基
-                    </a></li>
-                    <li class="list-group-item-zip">
-                        <a href="http://blog.zoomquiet.org/pyblosxom/"><i
-                            class="icon-旧曰-sign icon-large"></i>旧曰
-                    </a></li>
-
- 
-
-        </ul>
-    </section>
-
--->
-
 
 </aside>        </div>
     
     </div>
 </div>
 
-<!-- Include all compiled plugins (below), or include individual files as needed 
+<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://blog.zoomquiet.io/theme/js/bootstrap.min.js"></script>
 
--->
-
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) 
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="https://blog.zoomquiet.io/theme/js/respond.min.js"></script>
-
--->
 
 
 

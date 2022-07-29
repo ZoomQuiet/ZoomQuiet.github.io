@@ -1,5 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- MurMur</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/murmur.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-07-10T10:50:56+08:00</updated><entry><title>呢喃s/ 21.03</title><link href="https://blog.zoomquiet.io/210301-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2021-03-01T20:42:00+08:00</published><updated>2022-07-10T10:50:56+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2021-03-01:/210301-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2021.03&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-202103"&gt;呢喃 at 2021.03&lt;a class="headerlink" href="#at-202103" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- MurMur</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/murmur.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-07-29T16:34:33+08:00</updated><entry><title>7niu 鉴黄故事</title><link href="https://blog.zoomquiet.io/220727-qiniu-block-matter.html" rel="alternate"></link><published>2022-07-26T20:42:00+08:00</published><updated>2022-07-29T16:34:33+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-07-26:/220727-qiniu-block-matter.html</id><summary type="html">&lt;p&gt;MurMur/ Yellow Content Identification&amp;nbsp;matter&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;无奈的神奇&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;file:///Users/zoomq/mnt/KuaiPan/zScrapBook/ZqSKM/data/20131021173330/index.html&lt;/p&gt;
+&lt;p&gt;从 05 年开始, 就使用 FireFox 一个插件: &lt;a href="http://www.xuldev.org/scrapbook/"&gt;ScrapBook :: Firefox Extension&lt;/a&gt;
+来收集有兴趣的网页内容到本地,
+并通过 Python 编写的脚本来自动化发布分享到网络中,
+比如:
+&lt;a href="http://skm.zoomquiet.top/tree/"&gt;{ZqSKM} index tree export into iFrame - ScrapBook Collection by Zoom.Quiet&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;无意中, 也就将很多消失的网站以及内容, 聚集到自己的个人网站中;&lt;/p&gt;
+&lt;p&gt;同时, 也背负上了这种历史内容的法律责任;&lt;/p&gt;
+&lt;h3 id="matter"&gt;matter&lt;a class="headerlink" href="#matter" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;并不是第一次&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;收到邮件通知
+&lt;img alt="220726" src="https://ipic.zoomquiet.top/2022-07-29-zshot%202022-07-29%2016.26.19.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;对应的文章:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://skm.zoomquiet.top/data/20131021173330/index.html"&gt;BJD娃娃制作全过程__付濯雅_百度空间&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;收集自 2013.10.21: http://hi.baidu.com/fzorya/item/1ed17bfe41312b643d198b31&lt;/p&gt;
+&lt;p&gt;对应违规的图片是: 
+&lt;img alt="060d39f6c8d9f2475e600817.jpg" src="https://ipic.zoomquiet.top/2022-07-29-zshot%202022-07-29%2016.28.36.jpg"/&gt;&lt;/p&gt;
+&lt;h3 id="murmur"&gt;MurMur&lt;a class="headerlink" href="#murmur" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这就比较囧了…
+应该是触发了 7niu 的鉴黄机制, 发现图片中疑似皮肤的面积比较大, 
+而且还露点了…于是自动从源头关闭了访问, 并邮件警告, 要求发布人主动清除, 并标记本次警告行为,免责…&lt;/p&gt;
+&lt;p&gt;也就是说:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;随着法令/规的进化, 过往没违规的内容, 现在不一定&lt;/li&gt;
+&lt;li&gt;无论在哪儿公开, 都有统一的合规机制, 说你违规你就违规&lt;/li&gt;
+&lt;li&gt;违规必查, 违规必纠…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么问题来了, 我们如何说,如何写, 如何发布, 可以永久避免被 违规 呢?&lt;/p&gt;
+&lt;p&gt;答案应该很明显了…&lt;/p&gt;
+&lt;h3 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;220729 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 发布&lt;/li&gt;
+&lt;li&gt;220728 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 增补&lt;/li&gt;
+&lt;li&gt;220726 &lt;span class="caps"&gt;ZQ&lt;/span&gt; init.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category><category term="scrapbook"></category></entry><entry><title>7-22 诈骗案始末</title><link href="https://blog.zoomquiet.io/220722-bilk-story-why-and-how.html" rel="alternate"></link><published>2022-07-22T23:42:00+08:00</published><updated>2022-07-29T16:16:46+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-07-22:/220722-bilk-story-why-and-how.html</id><summary type="html">&lt;p&gt;MurMur/ net bilk story&amp;nbsp;why&amp;amp;how&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;魔怔了…&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id="_2"&gt;过程&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;2022.7.22 15:42 左右, 正在忙, 突然收到一通固话:
+(0731)8896 7662, 自称客服务, 说出我的姓名, 
+并称我的 &lt;span class="caps"&gt;JD&lt;/span&gt; 金条服务, 
+利率过高, 不吻合国家规定要清除; 可找不到关闭入口, &lt;/p&gt;
+&lt;p&gt;然后说, 这可能是当初没有选择可自主关闭选项;
+接着指导打开网址, 接入银保监会客服进行检验:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;https://中国银保监会客服中心.co&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意是 .co 不是 .com; 进入的客服在手机上看起来也算正规&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;https://chatlink.mstatik.com/widget/standalone.html?eid=3aed432078615b8febeed692814d5fda&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;输入查询后, 给出一个私人征信结果, 安全度不高:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="个人征信" src="https://ipic.zoomquiet.top/2022-07-27-zshot%202022-07-27%2017.10.53.jpg"/&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当时感觉哪里有不对,还专门搜索并看了一下官网&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;中国人民银行征信中心&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;http://www.pbccrc.org.cn/zxzx/grzx/list.shtml&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;虽然没找到 私人征信 入口, 总算看起来是有组织的;&lt;/p&gt;
+&lt;p&gt;然后, 说电话太长时间指引我进入一个 dingding 会议, 有很多人在其中, 开始进一步引导:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要想解除违规金融产品&lt;/li&gt;
+&lt;li&gt;要通过 微众银行 全部帐号走帐, 完成结清&lt;/li&gt;
+&lt;li&gt;具体过程大致是:&lt;ul&gt;
+&lt;li&gt;先向 中国人民银行征信中心 客服说明情况&lt;/li&gt;
+&lt;li&gt;然后 从微信搜索 &lt;code&gt;微粒贷&lt;/code&gt; 完成贷款&lt;/li&gt;
+&lt;li&gt;再从 &lt;code&gt;天眼查企业工业查询&lt;/code&gt; 获得帐号, 转帐过去&lt;/li&gt;
+&lt;li&gt;等待内部结清&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比如要逐字输入的情况是:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本人 &lt;span class="caps"&gt;XXXX&lt;/span&gt; 对接中国银联安全认证帐户 免息免则 归还 深圳前海微众银行股份有限公司 借款额 40000 元整 获取银行电子发票及个人结清证明&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而从 &lt;code&gt;天眼查企业工业查询&lt;/code&gt; 获得的帐号, 看起来也是标准的企业财会帐号;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="曹" src="https://ipic.zoomquiet.top/2022-07-27-zshot%202022-07-27%2017.24.45.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;中间反复强调:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们是 &lt;code&gt;微众银行&lt;/code&gt; 不得以要逐一清除违规金融产品&lt;/li&gt;
+&lt;li&gt;全程不收费&lt;/li&gt;
+&lt;li&gt;全程录音/像, 上报国家&lt;/li&gt;
+&lt;li&gt;所有认证口令,密码, 不要说出来&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;各种正规, 中间涉及的操作是我以往从来没接触过的, 注意力就从为什么要贷款变成, 如何协助银行完成国家要求的操作…&lt;/p&gt;
+&lt;p&gt;甚至于, 中间要求下载 &lt;code&gt;乐播视频&lt;/code&gt; , 通过临时直播来远程分享手机屏幕, 都照作了;&lt;/p&gt;
+&lt;p&gt;内心只有一个念头, 赶紧完成好回去编程; 就这样一个小时里经过复杂的操作…:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;16:26 从微粒贷借得 4万元, 转帐给: 周竹雅 浦发银行 6259 5847 0941 7933&lt;/li&gt;
+&lt;li&gt;16:41 从微粒贷借得 3.5万, 转帐给: 王礼超 邮政银行 6217 9958 4006 4373 053&lt;/li&gt;
+&lt;li&gt;17:20 从信用卡提现 2万元, 转帐给: 曹冬生 建设银行 6217 0020 6005 9732 72&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;甚至于中间有个部门会议, 中断后, 还继续…&lt;/p&gt;
+&lt;p&gt;理由是, 微信中绑定的6张银行卡, 过往都可能意外绑定了违规金融产品, 需要逐一清理;&lt;/p&gt;
+&lt;p&gt;可是从来没有折腾过理财产品, 所以, 格外艰难, 各种产品都不允许我贷款, 
+中间还问过几次, 为什么要我来贷款? 也立即义正严辞的给出了包含专业术语的回答…&lt;/p&gt;
+&lt;p&gt;最后, 是老婆回家一看情景, 立即报警, 才中止了这次诈骗.&lt;/p&gt;
+&lt;p&gt;而所在辖区警察根本不知道这种诈骗怎么处理, 给出无效指示,
+最后还是直接问了网警, 才知道有个专门的 &lt;code&gt;珠海市打击治理电信网络新型违法犯罪中心&lt;/code&gt;, 
+也就是 &lt;code&gt;反诈中心&lt;/code&gt;, 过去才知道要 48小时核检才能进入, 
+又反复折腾后, 好容易进入, 笔录又反复进行了3小时, 到凌晨1点, 才完成所有流程;
+隔天, 才短信通知受理;&lt;/p&gt;
+&lt;p&gt;接下来紧张的解绑/改口令/…打银行流水, 核检, 再去中心提交…&lt;/p&gt;
+&lt;p&gt;和 &lt;code&gt;微粒贷&lt;/code&gt; 协商, 才知道, 人家也不过是代理银行产品, 根本无从改变,
+提前还款, 才过了两天, 前后两笔贷款, 就已经产生了将近60元利息…一身身冷汗…&lt;/p&gt;
+&lt;h3 id="_3"&gt;反思&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;为什么就这么听话去徣銭, 还转帐给不认识的人呢?&lt;/p&gt;
+&lt;p&gt;脱离了那个场景, 回想起来处处是疑点, 而且诈骗团伙也非常小心:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;app: dingding&lt;/li&gt;
+&lt;li&gt;app: 乐播视频&lt;/li&gt;
+&lt;li&gt;小程序: &lt;code&gt;微粒贷&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;小程序: &lt;code&gt;天眼查企业工业查询&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;都是正常公开服务/应用, 只是都利用了临时入口, 或是说辞来引导受害人自行操作,
+在银行以及徣款方看来, 完全是正常行为;&lt;/p&gt;
+&lt;p&gt;而几个配套的网站:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;https://中国银保监会客服中心.co&lt;/li&gt;
+&lt;li&gt;客服:&lt;ul&gt;
+&lt;li&gt;https://chatlink.mstatik.com/widget/standalone.html?eid=3aed432078615b8febeed692814d5fda&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;中国人民银行征信中心 http://www.pbccrc.org.cn/zxzx/grzx/list.shtml&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;才是诈骗团伙准备的道具, 配合笃定又不得以的语气和理由, 
+以及持续紧张的指令, 导致注意力, 从判定为什么要这么作, 变成如何作才能完成任务,
+甚至于, 一张一张银行卡, 对应的一个一个银行 app 应用中的操作, 都变成了探索任务…&lt;/p&gt;
+&lt;p&gt;每次有所警觉, 也都有正义的术语来引开注意力, 毕竟一般人反感别人认为自己不懂,
+所以, 自动脑补了很多理由, 而无睱从整体上思考, 为什么要徣銭, 为什么又立即转帐给不认识的人…&lt;/p&gt;
+&lt;p&gt;回想自己的行为, 简直就象被附了身, 不由自主蒙头操作的机械…&lt;/p&gt;
+&lt;h3 id="_4"&gt;原则&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;还是金牛座的老婆给出的原则靠谱:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;凡是转帐/徣銭, 都是诈骗&lt;/li&gt;
+&lt;li&gt;没人愿意花几小时来解决你自己的问题…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以及, 国家反诈中心 app , 立即安装吧…&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请上苍保佑吃完了饭的程序猿们…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;220726 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 完成&lt;/li&gt;
+&lt;li&gt;220723 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 增补&lt;/li&gt;
+&lt;li&gt;220722 &lt;span class="caps"&gt;ZQ&lt;/span&gt; init.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category><category term="debug"></category></entry><entry><title>呢喃s/ 21.03</title><link href="https://blog.zoomquiet.io/210301-ZoomQuiet-MurMur-collection.html" rel="alternate"></link><published>2021-03-01T20:42:00+08:00</published><updated>2022-07-10T10:50:56+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2021-03-01:/210301-ZoomQuiet-MurMur-collection.html</id><summary type="html">&lt;p&gt;MurMur/ daily historic card writing, collection in&amp;nbsp;2021.03&lt;/p&gt;</summary><content type="html">&lt;h2 id="at-202103"&gt;呢喃 at 2021.03&lt;a class="headerlink" href="#at-202103" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不为什么, 就这么开始了日历卡连载&lt;/p&gt;
 &lt;/blockquote&gt;

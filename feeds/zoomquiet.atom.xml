@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- ZoomQuiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-08-19T18:42:00+08:00</updated><entry><title>开源生活实录.1.LAMP之辉</title><link href="https://blog.zoomquiet.io/220817-flossstyle-1.html" rel="alternate"></link><published>2022-08-19T18:42:00+08:00</published><updated>2022-08-19T16:34:09+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-19:/220817-flossstyle-1.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+1&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;魔都打怪&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- ZoomQuiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-08-20T16:18:00+08:00</updated><entry><title>开源生活实录.1.LAMP之辉</title><link href="https://blog.zoomquiet.io/220817-flossstyle-1.html" rel="alternate"></link><published>2022-08-19T18:42:00+08:00</published><updated>2022-08-20T16:18:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-19:/220817-flossstyle-1.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+1&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;魔都打怪&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;书接上回&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;从常州切换回软件行业, 
 在老同学推荐下, 面试成功, 转战上海,&lt;/p&gt;
 &lt;p&gt;当时能力:&lt;/p&gt;
@@ -13,6 +16,9 @@
 &lt;li&gt;&lt;span class="caps"&gt;JAVA&lt;/span&gt;/Delhpi/Pascal/C/C++/…都是知道, 不会具体使用&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="trace"&gt;trace&lt;a class="headerlink" href="#trace" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回忆轨迹&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;有位同班同学, 毕业就准备结婚, 老婆是上海人, 第一时间进入上海一家软件公司,
 很努力, 很快变成经理, 就拉了一把;&lt;/p&gt;
 &lt;p&gt;虽然祖藉是上海, 但是, 家里亲戚都没什么社会资源, 
@@ -30,13 +36,190 @@
 并没有后来标准 &lt;span class="caps"&gt;CMS&lt;/span&gt; 系统那么成熟的权限/角色/排版/插件/…子系统;&lt;/p&gt;
 &lt;p&gt;不过, 为了完成这个任务, 拓展出的 &lt;span class="caps"&gt;LAMP&lt;/span&gt; 技能, 
 算是真正进入了 &lt;span class="caps"&gt;FLOSS&lt;/span&gt; 世界;&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;LAMP&lt;/span&gt; 就是当年提出最佳建站技术组合的简称:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;L&lt;/strong&gt;inux ~ 一般是 Redhat &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;apache ~ 作为web 服务器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;M&lt;/strong&gt;ySQL ~ 作为数据库服务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;P&lt;/strong&gt;&lt;span class="caps"&gt;HP&lt;/span&gt; ~ 作为应用开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为 &lt;span class="caps"&gt;ASP&lt;/span&gt; 涉及到 微软一系列系统/软件的商业版权要求,
+只有政府大项目才用, 
+一般普通动态应用网站, 基于 &lt;strong&gt;&lt;span class="caps"&gt;LAMP&lt;/span&gt;&lt;/strong&gt; 足够,
+当然, 后来这种组合也进行了拓展:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LAMPs ~ 可以用 Perl/Python/.. 其它语言来开发&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LNMP&lt;/span&gt; ~ 用 Nginx+Python 组合, 是后来更加习惯的&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;知道这个组合概念, 是从 Redhat 光盘开始的,
+大学毕业时, 通过 &lt;strong&gt;上网冲浪&lt;/strong&gt; (那时对上网探查资料的别称),
+知道 Linux 在流行, 但是, 并没什么渠道可以获得能方便安装的版本,
+那时, 标准安装是 Slackware 15张2吋软盘进行依次安装, 复杂到不可想象;&lt;/p&gt;
+&lt;p&gt;毕业时, 和同学合资买了张 Redhat linux 4.2? 光盘,
+但是, 并没什么机会安装使用, 最后带到上海,
+在公司一台闲置的普通 &lt;span class="caps"&gt;PC&lt;/span&gt; 机上安装成功;
+应该只有680M硬盘空间, &lt;span class="caps"&gt;MMX&lt;/span&gt; 芯片,
+好在那时也没有什么大型软件可以在 linux 中安装,
+配合公司专线上网不用拨号, 用了两个星期才断断续续安装成功;&lt;/p&gt;
+&lt;p&gt;那时, 宿舍离公司自行车要一小时, 所以, 基本作习是这样的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;工作日, 7点起床, 8点左右到公司&lt;ul&gt;
+&lt;li&gt;5点半下班后, 在食堂或是周边吃点儿&lt;/li&gt;
+&lt;li&gt;新闻联播开始时, 回到桌前开始折腾&lt;/li&gt;
+&lt;li&gt;23:00 左右回到宿舍, 看看其它什么就睡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;周末, 10点起床, 11点左右到公司&lt;ul&gt;
+&lt;li&gt;磨蹭一会就到午饭时间了&lt;/li&gt;
+&lt;li&gt;吃好, 回到桌前开始折腾&lt;/li&gt;
+&lt;li&gt;23:00 左右回到宿舍, 看看其它什么就睡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也就是基本上每周有40个小时业余时间投入到 开源技术学习中, 为什么这么积极呢?&lt;/p&gt;
+&lt;p&gt;因为没有资料, 很多时候要自己先翻译出来官方对应文档, 再尝试, 失败后对应查资料尝试解决;&lt;/p&gt;
+&lt;p&gt;注意, 那时 Google 和其它搜索引擎刚刚发布, 都没有很好搜索效果;
+特别是中文开发资料, 能去交流的只有少数几个技术论坛, &lt;span class="caps"&gt;BBS&lt;/span&gt; 是那时主要交流场景;
+&lt;span class="caps"&gt;IRC&lt;/span&gt; + mailling-list, 是关键技术讨论空间;&lt;/p&gt;
+&lt;p&gt;那时, 还没有足够英文自信, 问技术问题也只敢去中文论坛, 再从中文技术论坛的友情链接找到其它相关的技术论坛…&lt;/p&gt;
+&lt;p&gt;就象蚂蚁一般一点点儿在互联网迷雾中摸索;&lt;/p&gt;
+&lt;p&gt;为什么学习 &lt;span class="caps"&gt;PHP&lt;/span&gt; 呢? 其实就是市场需要, 老同学, 接了单, 公司其它人不会,
+就教唆俺一起学, 然后就可以独立接单够收入了;&lt;/p&gt;
+&lt;p&gt;结果, 一入坑, 才发现, 原来并不是一个语言的事儿, 
+其实, 大家目标都是建立功能站, 而那时, 最有市场的其实就是 Web1.0 时代标准的信息发布站,
+讲道理其实, 一个 Wordpress 就足够了, 
+可惜那时 i18N 技术还不成熟, 想折腾出一个中文化完备, 而且有所有期待功能的企业官网并不那么简单;
+类似的还有 Xoop/Drupal/… &lt;span class="caps"&gt;CMS&lt;/span&gt; 应用框架, 都在宣传自己是最灵活的框架;&lt;/p&gt;
+&lt;p&gt;不过, 在一个半封闭网络环境中, 想快速用软盘从其它机器下载复制过来有关组件再安装/编译,
+太难了,
+印象中, 因为自己工作内容, 一直和 &lt;span class="caps"&gt;XML&lt;/span&gt;/&lt;span class="caps"&gt;XSL&lt;/span&gt; 打交道,
+所以, 先选择 Nucleus &lt;span class="caps"&gt;CMS&lt;/span&gt; 来构建了自己第一个私人网站: zqstudio.org ;
+这个 &lt;span class="caps"&gt;CMS&lt;/span&gt; 系统神奇在关键配置/样式, 全使用 &lt;span class="caps"&gt;XML&lt;/span&gt; 来定义和管理;&lt;/p&gt;
+&lt;p&gt;不过, 那时, 还没有 blog 概念, 有了网站也不知道发布什么内容为好;
+只是通过建立个人网站, 算是对 &lt;strong&gt;&lt;span class="caps"&gt;LAMP&lt;/span&gt;&lt;/strong&gt; 技术栈完整构建发布一个功能网站有了全面了解;&lt;/p&gt;
+&lt;p&gt;也因此, 拓展了社会网络:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给一家户外运动社团, 帮忙构建了 &lt;span class="caps"&gt;BBS&lt;/span&gt;, 以便发布户外项目消息, 因此有了一定可控主机资源&lt;/li&gt;
+&lt;li&gt;给一些 cosplay 社团, 帮忙提供摄影, 以及月刊打样服务, 因此认识了一批绘画师, 其中 俪欢 老师现在都有联系&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以说, 开源技术自主学习, 
+不仅带来了事业拓展, 也变成了单身青年在大城市中探索的信心;&lt;/p&gt;
+&lt;p&gt;只是, 那时, 还没有意识到 &lt;span class="caps"&gt;FLOSS&lt;/span&gt;/自由,开源软件文化的威力,
+还是一名: “我自豪, 我用盗版软件” 的 &lt;code&gt;白嫖党&lt;/code&gt;;&lt;/p&gt;
+&lt;p&gt;直到遇见 Python…&lt;/p&gt;
+&lt;p&gt;整体上线索关系是这样的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0: 学PHP, 作网站&lt;/li&gt;
+&lt;li&gt;1: 知道 &lt;span class="caps"&gt;CMS&lt;/span&gt; 概念, 挖掘出一系列 &lt;span class="caps"&gt;CMS&lt;/span&gt; 系统&lt;/li&gt;
+&lt;li&gt;2: 然后所有 &lt;span class="caps"&gt;CMS&lt;/span&gt; 系统社区都在歌唱 Plone 才是 &lt;span class="caps"&gt;CMS&lt;/span&gt; 之神&lt;/li&gt;
+&lt;li&gt;3: 进一步发现 Plone 是基于 Zope 构建的&lt;/li&gt;
+&lt;li&gt;4: 又经过学习才知道 Zope 是 Python 开发的&lt;/li&gt;
+&lt;li&gt;5: 那么想用好 Plone 自然得先学会 Python 并掌握 Zope&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然, 这是事后以上帝视角整理后的逻辑,
+当年, 中间也夹杂了各种旁路探索, 
+比如当时无意中找到的网页: &lt;a href="http://web.archive.org/web/20030205031354/http://cdtzx.51.net/pimage/programs.htm"&gt;程序设计语言介绍/2002.6.21&lt;/a&gt;
+其中介绍的所有语言, 都去尝试学习使用过,
+结果只有 Python 和那时自身兴趣有关联, 从而真正上手;&lt;/p&gt;
+&lt;p&gt;而这个上手过程并不简单,
+比如, 记忆中人生第一个可运行的 Python 工具是:&lt;/p&gt;
+&lt;p&gt;天气预报网络自动抓取工具/getSHwunderground,
+简单说是就从 https://www.wunderground.com/ 网站自动抓取上海地区的天气数据,
+在 &lt;span class="caps"&gt;CLI&lt;/span&gt;/终端 上整理为中文, 汇报出来;&lt;/p&gt;
+&lt;p&gt;当时基于 Python 1.5, 在 windows &lt;span class="caps"&gt;NT&lt;/span&gt; 环境中开发,
+成体系的建功立业资料, 只有一本:
+&lt;a href="https://book.douban.com/subject/3948354/"&gt;Python学习手册 (Mark Lutz) 第一版&lt;/a&gt;
+而且, 人家示例代码都运行在 mac 环境中, 
+其中要突破的坑, 现在想也就几个, 当年整整用了一个月的业余时间…&lt;/p&gt;
+&lt;p&gt;过程中, 可能最大的收获是认识了中国 Python 社区中关键的两位人物,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Limodou, UliPad/UliWeb 创始人&lt;/li&gt;
+&lt;li&gt;老潘, CZUG社区/润普公司 创始人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;就是在 &lt;span class="caps"&gt;CZUG&lt;/span&gt; 吵起来而认识的, 记忆中是个什么事儿呢?
+俺在 &lt;span class="caps"&gt;CZUG&lt;/span&gt; 中讨论 Zope/Python 的学习, 感谢 &lt;span class="caps"&gt;CZUG&lt;/span&gt; 提供一个免费社区空间,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;发现背后主持公司叫 &lt;code&gt;润普&lt;/code&gt; , 感觉这是 Zope 的谐音,建议, &lt;code&gt;润璞&lt;/code&gt; 更加好;&lt;/li&gt;
+&lt;li&gt;Linodou 反对, 认为这种难以念出来的字对公司发展不好&lt;/li&gt;
+&lt;li&gt;俺就引用各种理论来反驳&lt;/li&gt;
+&lt;li&gt;老潘 不时出来维护气氛&lt;/li&gt;
+&lt;li&gt;…我们仨儿, 几乎占了每个月, &lt;span class="caps"&gt;CZUG&lt;/span&gt; 论坛上1/3 的流量&lt;/li&gt;
+&lt;li&gt;可以说不吵不相识&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;过程中, 老潘也认识了 zoomquiet 这个ID,
+甚至于开放了部分网站权限,
+也就将以往积累的前端技能, 为 &lt;span class="caps"&gt;CZUG&lt;/span&gt; 定制了几款皮肤, 比如其中一款:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://0.zoomquiet.top/CPyUG/zoomquiet-design-collection/2004-0930-effeBDragon.png"&gt;2004-0930-effeBDragon.png (899×431)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中那个龙标的 logo 设计稿:
+&lt;a href="http://0.zoomquiet.top/CPyUG/zoomquiet-design-collection/2004-0930-Zdragon-cloud-exp.png"&gt;Zdragon-cloud&lt;/a&gt;
+就是用&lt;code&gt;盗版&lt;/code&gt; Coredraw 完成的;&lt;/p&gt;
+&lt;p&gt;类似折腾其实, 发现在很多社区中,
+其中多数社区现在早已从互联网中消失, 
+当然, 其中的大人物, 依然活跃在世界各地;&lt;/p&gt;
+&lt;p&gt;从上海得以北漂北京的关键人事就是: &lt;a href="https://wiki.woodpecker.org.cn/moin/HD"&gt;&lt;span class="caps"&gt;HD&lt;/span&gt;&lt;/a&gt;,
+当时, 也只知道是国内 Python 大佬,
+曾经在移动公司短信网关上, 用Python 完成重要系统;&lt;/p&gt;
+&lt;p&gt;应该也是在 &lt;span class="caps"&gt;CZUG&lt;/span&gt; 中认识的,
+&lt;span class="caps"&gt;HD&lt;/span&gt; 不怎么说教, 只是发布项目, 号召大家来尝试,
+但是, 很积极回答具体技术问题;&lt;/p&gt;
+&lt;p&gt;首先在大家倡议下, 
+俺主动承担新近社区: 啄木鸟社区的邮件列表构建任务,
+在已经慢慢熟悉的 redhat 系统中,
+在公司闲置 &lt;span class="caps"&gt;PC&lt;/span&gt; 机上, 安装了 Mailman 系统,
+从各种 Python 相关 &lt;span class="caps"&gt;BBS&lt;/span&gt; 论坛版块中宣传,
+很快就有 200+ 订阅,
+每天讨论各种 Python 开发问题;
+(后来此列表由 exoweb.com 公司赞助, 迁移为 python-chinese@lists.python.cn)&lt;/p&gt;
+&lt;p&gt;进一步, 又主动安装 moinmoin 维基系统,
+通过公司网关解析, 使用临时域名发布出来, 供给大家积累议题/资料;&lt;/p&gt;
+&lt;p&gt;并进一步, 参与了其中一个通用模板组件的开发:
+&lt;a href="https://wiki.woodpecker.org.cn/moin/Otter"&gt;Otter - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;
+就是用 Python 合理对 &lt;span class="caps"&gt;XML&lt;/span&gt; 模板进行解析以及修改;
+算是进一步夯实了当时并不熟练的 Python 开发技能;&lt;/p&gt;
+&lt;p&gt;神奇的是, 经过一次线上会议答辩:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="OtTXMLengine" src="https://ipic.zoomquiet.top/2022-08-20-OtTXMLengine.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;配合用 Coredraw 绘制的解析过程图谱,
+通过 &lt;span class="caps"&gt;QQ&lt;/span&gt; 语音给大家解说明白思想和代码;&lt;/p&gt;
+&lt;p&gt;没想到这次普通的社区项目沟通会议, 其实是 &lt;span class="caps"&gt;SINA&lt;/span&gt; 面试考察,
+因此获得了职位, 得以进入大型 &lt;span class="caps"&gt;IT&lt;/span&gt; 公司去接触不同的世界.&lt;/p&gt;
 &lt;h3 id="summary"&gt;summary&lt;a class="headerlink" href="#summary" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小结&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在上海几年, 无知者无畏, 完全好奇心驱动下, 
+持续自学, 慢慢恢复自学能力,
+通过 开源技术, 结识开源社区/人物/项目,
+通过义务贡献, 参与具体工程,
+无意中入得关键人物法眼,
+在自身现实社会渠道之外, 闯出全新道路;&lt;/p&gt;
+&lt;p&gt;这一切是因为什么, 后来才慢慢明白, 
+只是, 当时反复看的电影, 并没有将所有关联融合起来:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://woodpecker.up.zoomquiet.top/media/020215-RevolutionOS.rmvb"&gt;操作系统革命/RevolutionOS&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有关链接&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://nucleuscms.org/docs/"&gt;Nucleus Documentation v3.2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.plone.org/intro/index.html#what-does-plone-mean-how-is-it-pronounced"&gt;Plone - The Open Source &lt;span class="caps"&gt;CMS&lt;/span&gt; — Plone Documentation v5.2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://zope.readthedocs.io/en/latest/operation.html#special-access-user-accounts"&gt;Zope documentation — Zope documentation 5.3 documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://book.douban.com/subject/1096066/"&gt;Zope指南 (豆瓣)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://learning-python.com/about-lp1e.html"&gt;About “Learning Python, 1st Edition”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://web.archive.org/web/20030205031354/http://cdtzx.51.net/pimage/programs.htm"&gt;程序设计语言介绍/2002.6.21&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://web.archive.org/web/20040605125007/http://www.czug.org/Members/Zoomq"&gt;中文Zope用户组(&lt;span class="caps"&gt;CZUG&lt;/span&gt;) - Zoomq’s ContentPanels&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.list.org/"&gt;&lt;span class="caps"&gt;GNU&lt;/span&gt; Mailman&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;220819 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 发布&lt;/li&gt;
 &lt;li&gt;220818 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 规划&lt;/li&gt;
 &lt;li&gt;220817 &lt;span class="caps"&gt;ZQ&lt;/span&gt; init.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category><category term="FLOSS"></category></entry><entry><title>开源生活实录.0.从哪儿知道的?</title><link href="https://blog.zoomquiet.io/220817-flossstyle-0.html" rel="alternate"></link><published>2022-08-17T18:42:00+08:00</published><updated>2022-08-19T10:49:36+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-17:/220817-flossstyle-0.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+0&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;私人开源小传?&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category><category term="FLOSS"></category></entry><entry><title>开源生活实录.0.从哪儿知道的?</title><link href="https://blog.zoomquiet.io/220817-flossstyle-0.html" rel="alternate"></link><published>2022-08-17T18:42:00+08:00</published><updated>2022-08-20T15:32:01+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-17:/220817-flossstyle-0.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+0&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;私人开源小传?&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;印象中大三时, 给 Yahoo! 目录作志愿者维护日本漫画资源链接时, 就算已经接触了开源文化;-)&lt;/p&gt;
@@ -64,7 +247,7 @@
 实在是太 &lt;span class="caps"&gt;COOL&lt;/span&gt; 了,
 其中各种基本数学/物理/化学/.. 推导/实验过程,
 大大震惊自己原始知识树, 
-从此坚信: “学好理化数, 天下任我行”;&lt;/p&gt;
+从此坚信: “学好数理化, 走遍天下我不怕”;&lt;/p&gt;
 &lt;p&gt;转眼到了大学, 果然也是理工科, 进入 江苏石油化工学院(今: 常州大学) 计算机系, 成为第一届学生;&lt;/p&gt;
 &lt;p&gt;当年课程设置是标准: “计算机科学及应用”,
 只是, 科学偏重, 应用为少, 以致毕业时, 并不知道如何从0开始完成一个软件.&lt;/p&gt;
@@ -99,6 +282,10 @@
 &lt;p&gt;算是毕业一年后, 通过自学, 真正理解是什么软件, 以及如何开展软件构建;
 可以说, 前20多年的准备,
 是接下来去上海工作时, 进入开源世界的必要条件了…&lt;/p&gt;
+&lt;h3 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://0.zoomquiet.top/CPyUG/zoomquiet-design-collection/1999-1-4-CLAMP-saintWar.jpg"&gt;&lt;span class="caps"&gt;CLAMP&lt;/span&gt;-saintWar&lt;/a&gt; 99年用 Illstartor 9.1 完成的习作, 用以设计岗位招聘&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;220817 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 发布&lt;/li&gt;

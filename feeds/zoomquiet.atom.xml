@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- ZoomQuiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-08-20T16:18:00+08:00</updated><entry><title>开源生活实录.1.LAMP之辉</title><link href="https://blog.zoomquiet.io/220817-flossstyle-1.html" rel="alternate"></link><published>2022-08-19T18:42:00+08:00</published><updated>2022-08-20T16:18:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-19:/220817-flossstyle-1.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+1&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;魔都打怪&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- ZoomQuiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-08-20T19:44:57+08:00</updated><entry><title>开源生活实录.1.LAMP之辉</title><link href="https://blog.zoomquiet.io/220817-flossstyle-1.html" rel="alternate"></link><published>2022-08-19T18:42:00+08:00</published><updated>2022-08-20T19:44:24+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-19:/220817-flossstyle-1.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+1&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;魔都打怪&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;书接上回&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="/220817-flossstyle-0.html"&gt;开源生活实录.0.从哪儿知道的?&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;从常州切换回软件行业, 
 在老同学推荐下, 面试成功, 转战上海,&lt;/p&gt;
 &lt;p&gt;当时能力:&lt;/p&gt;
@@ -219,7 +220,7 @@
 &lt;li&gt;220819 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 发布&lt;/li&gt;
 &lt;li&gt;220818 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 规划&lt;/li&gt;
 &lt;li&gt;220817 &lt;span class="caps"&gt;ZQ&lt;/span&gt; init.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category><category term="FLOSS"></category></entry><entry><title>开源生活实录.0.从哪儿知道的?</title><link href="https://blog.zoomquiet.io/220817-flossstyle-0.html" rel="alternate"></link><published>2022-08-17T18:42:00+08:00</published><updated>2022-08-20T15:32:01+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-17:/220817-flossstyle-0.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+0&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;私人开源小传?&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category><category term="FLOSS"></category></entry><entry><title>开源生活实录.0.从哪儿知道的?</title><link href="https://blog.zoomquiet.io/220817-flossstyle-0.html" rel="alternate"></link><published>2022-08-17T18:42:00+08:00</published><updated>2022-08-20T19:44:57+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-17:/220817-flossstyle-0.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+0&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;私人开源小传?&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;印象中大三时, 给 Yahoo! 目录作志愿者维护日本漫画资源链接时, 就算已经接触了开源文化;-)&lt;/p&gt;
@@ -286,6 +287,8 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://0.zoomquiet.top/CPyUG/zoomquiet-design-collection/1999-1-4-CLAMP-saintWar.jpg"&gt;&lt;span class="caps"&gt;CLAMP&lt;/span&gt;-saintWar&lt;/a&gt; 99年用 Illstartor 9.1 完成的习作, 用以设计岗位招聘&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;下一篇:&lt;/p&gt;
+&lt;p&gt;&lt;a href="/220817-flossstyle-1.html"&gt;开源生活实录.1.LAMP之辉&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;220817 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 发布&lt;/li&gt;

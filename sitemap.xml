@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/index.html</loc>
-<lastmod>2022-08-20T16:18:25-00:00</lastmod>
+<lastmod>2022-08-20T19:45:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2022-08-20T16:18:25-00:00</lastmod>
+<lastmod>2022-08-20T19:45:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2022-08-20T16:18:25-00:00</lastmod>
+<lastmod>2022-08-20T19:45:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2022-08-20T16:18:25-00:00</lastmod>
+<lastmod>2022-08-20T19:45:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -54,14 +54,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/220817-flossstyle-1.html</loc>
-<lastmod>2022-08-20T16:18:00+08:00</lastmod>
+<lastmod>2022-08-20T19:44:24+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/220817-flossstyle-0.html</loc>
-<lastmod>2022-08-20T15:32:01+08:00</lastmod>
+<lastmod>2022-08-20T19:44:57+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1181,7 +1181,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/category/murmur.html</loc>
-<lastmod>2022-08-20T16:18:00+08:06</lastmod>
+<lastmod>2022-08-20T19:44:57+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1202,21 +1202,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/dama.html</loc>
-<lastmod>2022-08-20T16:18:00+08:06</lastmod>
+<lastmod>2022-08-20T19:44:57+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/logging.html</loc>
-<lastmod>2022-08-20T16:18:00+08:06</lastmod>
+<lastmod>2022-08-20T19:44:57+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/floss.html</loc>
-<lastmod>2022-08-20T16:18:00+08:06</lastmod>
+<lastmod>2022-08-20T19:44:57+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1993,7 +1993,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2022-08-20T16:18:00+08:06</lastmod>
+<lastmod>2022-08-20T19:44:57+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

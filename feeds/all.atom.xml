@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-08-21T22:42:56+08:00</updated><entry><title>开源生活实录.2.GNU之魂</title><link href="https://blog.zoomquiet.io/220820-flossstyle-2.html" rel="alternate"></link><published>2022-08-20T21:42:00+08:00</published><updated>2022-08-21T22:42:56+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-20:/220820-flossstyle-2.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+2&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;帝国升级&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-08-21T22:43:53+08:00</updated><entry><title>开源生活实录.2.GNU之魂</title><link href="https://blog.zoomquiet.io/220820-flossstyle-2.html" rel="alternate"></link><published>2022-08-20T21:42:00+08:00</published><updated>2022-08-21T22:43:53+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-20:/220820-flossstyle-2.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+2&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;帝国升级&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -115,7 +115,7 @@
 &lt;p&gt;于是用 Python 编写了转换脚本, 将 Scrapbook 本地形成的索引数据(就是 &lt;span class="caps"&gt;XML&lt;/span&gt;, 巧了这不熟悉嘛)转换为标准 html 索引页,
 然后, 就可以共享到自己的网站中了:&lt;/p&gt;
 &lt;p&gt;经过几次迭代后变成这样:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://ipic.zoomquiet.top/2022-08-21-scrapbook-pub-zoomquiet.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="scrapbook" src="https://ipic.zoomquiet.top/2022-08-21-scrapbook-pub-zoomquiet.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;这样就可以将自己收集到的认为靠谱的网页原始资料随时共享出来;&lt;/p&gt;
 &lt;p&gt;没想到这一行为, 触发了首次互联网侵权事件:&lt;/p&gt;
 &lt;ul&gt;
@@ -169,7 +169,7 @@
 进而后来作为社区顾问, 帮助庄老师建立 教育大发现社区/sociallearnlab.org ;&lt;/p&gt;
 &lt;p&gt;又从 Issac Mao 认识 &lt;code&gt;Keso&lt;/code&gt; 大叔, 以及他在自己家定期举行的 5g 沙龙:
 (因为地点固定在 现代远大园B区8-5g 房, 所以, 命名5g, 不是通讯协议的5g)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://ipic.zoomquiet.top/2022-08-21-060315bj5gparty.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="060315bj5gparty" src="https://ipic.zoomquiet.top/2022-08-21-060315bj5gparty.jpg"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;用高端 &lt;span class="caps"&gt;DC&lt;/span&gt; 抓拍的, 就是 keso&lt;/li&gt;
 &lt;li&gt;&lt;span class="caps"&gt;PS&lt;/span&gt;: 背对镜头, 一头油发的, 是霍矩&lt;/li&gt;
@@ -181,12 +181,12 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;还有从会课中知道的 Ubuntu 6.10 release party
-&lt;img alt="" src="https://ipic.zoomquiet.top/2022-08-21-061103UBUNTU-release-party.jpg"/&gt;
+&lt;img alt="release" src="https://ipic.zoomquiet.top/2022-08-21-061103UBUNTU-release-party.jpg"/&gt;
 (2006.11.2 中科院自动化研究所, 举行)&lt;/p&gt;
 &lt;p&gt;当然, 少不了见活老爹:
-&lt;img alt="" src="https://ipic.zoomquiet.top/2022-08-21-2007GDD-guido.jpg"/&gt;&lt;/p&gt;
+&lt;img alt="guido" src="https://ipic.zoomquiet.top/2022-08-21-2007GDD-guido.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;2007 年, &lt;span class="caps"&gt;GDD&lt;/span&gt;/Google Develop Day 北京场, 首次见到老爹, &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://ipic.zoomquiet.top/2022-08-21-070601GDD-guido.jpg"/&gt;
+&lt;p&gt;&lt;img alt="guido" src="https://ipic.zoomquiet.top/2022-08-21-070601GDD-guido.jpg"/&gt;
 (当然, 是有合影的, 猜猜哪位是 大妈?&lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;PS&lt;/span&gt;: &lt;span class="caps"&gt;CPUG&lt;/span&gt; logo 左边前排, 就是 &lt;code&gt;Limodou&lt;/code&gt;)&lt;/p&gt;
 &lt;p&gt;当然, 最激动的, 还是见到 &lt;span class="caps"&gt;RMS&lt;/span&gt; 本尊:

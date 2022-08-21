@@ -1,5 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-08-20T19:44:57+08:00</updated><entry><title>开源生活实录.1.LAMP之辉</title><link href="https://blog.zoomquiet.io/220817-flossstyle-1.html" rel="alternate"></link><published>2022-08-19T18:42:00+08:00</published><updated>2022-08-20T19:44:24+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-19:/220817-flossstyle-1.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+1&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;魔都打怪&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-08-21T22:42:56+08:00</updated><entry><title>开源生活实录.2.GNU之魂</title><link href="https://blog.zoomquiet.io/220820-flossstyle-2.html" rel="alternate"></link><published>2022-08-20T21:42:00+08:00</published><updated>2022-08-21T22:42:56+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-20:/220820-flossstyle-2.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+2&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;帝国升级&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;书接上回&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/220817-flossstyle-0.html"&gt;开源生活实录.0.从哪儿知道的?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/220817-flossstyle-1.html"&gt;开源生活实录.1.LAMP之辉&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从上海到北京, 是完全意外的转进,
+算是参与技术社区的福利, 通过学习产生问题,
+通过提问认识高人, 又通过项目证明自己能力, 从而获得机会入职更高平台…&lt;/p&gt;
+&lt;p&gt;当时能力起点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt;/&lt;span class="caps"&gt;CSS&lt;/span&gt;/Javascript 中级, 能完成简单组件, 安装复杂末年&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LAMP&lt;/span&gt; 组合技术初级, 知道如何从无到有完成一个简单 &lt;span class="caps"&gt;CMS&lt;/span&gt; 系统&lt;/li&gt;
+&lt;li&gt;个人项目管理中级, 能自主持续完成一个工程从探索到交付全过程&lt;/li&gt;
+&lt;li&gt;Python 初级, 少量工具脚本经验&lt;/li&gt;
+&lt;li&gt;Office 高级, Word 系列用了不下5个版本, 各种排版技能都摸过&lt;/li&gt;
+&lt;li&gt;Lisp/Haskell/Smalltalk/.. 仅仅知道属于不同范式的开发语言&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="trace"&gt;trace&lt;a class="headerlink" href="#trace" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回忆轨迹&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;离开上海印象最深的, 不是和各种社会关系告别, 而是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;信用卡的钱, 不还清是会利流利的...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;有了信用卡后, 根据短信通知, 每个月只还最低还款额,
+感觉占了便宜, 结果想清帐离开时, 才告之要还清以往所有欠款,
+结果导致人到北京时, 身上只有2千元, 只好先借住中学同学家;&lt;/p&gt;
+&lt;p&gt;事实证明, 不经过社会毒打光靠自学, 很难高速成长的哈…&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SINA&lt;/span&gt; 毕竟是大公司, 制度比较完备, 虽然没有食堂, 但是, 工资比上海高,
+那时北京消费还没现在这么神奇, 稳定下来后, 生活节奏也就恢复成类似上海的;&lt;/p&gt;
+&lt;p&gt;原先老同学家在机场附近, &lt;span class="caps"&gt;SINA&lt;/span&gt; 大厦在北四环西, 
+每天早上能开车送到北四环东, 晚上打车要40多, 公交只到22:00, 还得转车, 要一个多小时,
+开始两个月很累, 后来部门经理所在滑雪论坛中认识一位姐姐, 出租自己单位分的单身房,
+就在国安家属小区, 距离 &lt;span class="caps"&gt;SINA&lt;/span&gt; 大厦, 自行车就一刻钟, 还有食堂…&lt;/p&gt;
+&lt;p&gt;于是, 基本上:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;工作日, 7点半起床, 8点左右到公司&lt;ul&gt;
+&lt;li&gt;6点班后, 在周边吃点儿&lt;/li&gt;
+&lt;li&gt;新闻联播开始时, 回到桌前开始折腾&lt;/li&gt;
+&lt;li&gt;23:00 左右回到宿舍, 刷点美剧就睡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;周末, 10点起床, 11点左右到公司&lt;ul&gt;
+&lt;li&gt;磨蹭一会就到午饭时间了&lt;/li&gt;
+&lt;li&gt;吃好, 回到桌前开始折腾&lt;/li&gt;
+&lt;li&gt;23:00 左右回到宿舍, 刷点美剧就睡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然, 开始参与社区管理后, 周末一般都花在社区活动/组织/参与/…之上了;&lt;/p&gt;
+&lt;p&gt;招募俺的 &lt;span class="caps"&gt;HD&lt;/span&gt; 直属领导是 &lt;code&gt;"波仔"&lt;/code&gt;, 海归派, 对 &lt;span class="caps"&gt;FLOSS&lt;/span&gt;/自由,开源软件很理解,
+对 &lt;span class="caps"&gt;HD&lt;/span&gt; 通过深刻定制 FreeBSD 系统来提高单机容易, 降低整体成本很支持,
+而 &lt;span class="caps"&gt;HD&lt;/span&gt; 又是啄木鸟Python技术社区创始人, 手下一批小伙伴也是通过各种技术社区挖来的,
+当时 邮件技术部 可能是 &lt;span class="caps"&gt;SINA&lt;/span&gt; 内部最 geek 的部门;&lt;/p&gt;
+&lt;p&gt;因为技术不够, 所以, 被分配到过程改进小组, 负责整理开发过程, 配套流程支持系统, 
+逐步提高开发效能(放到今天, 可以认为是 “内源”管理委员会类似组织);&lt;/p&gt;
+&lt;p&gt;前后除了整理一系列开发规范并监察执行之外:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用 &lt;span class="caps"&gt;PHP&lt;/span&gt; 开发了 CVSHelper ~ &lt;span class="caps"&gt;CVS&lt;/span&gt; 仓库助手, 并因此获得年度新人奖&lt;/li&gt;
+&lt;li&gt;用 Python/CherryPy 框架, 开发 Frog/研发任务管理 原型, 败给 &lt;code&gt;清风&lt;/code&gt; 同时用 &lt;span class="caps"&gt;JAVA&lt;/span&gt; 开发的版本, 因为他选择的一组框架(Hibernate全家桶)都很完备,有企业级应用先例&lt;/li&gt;
+&lt;li&gt;在 moinmoin 基础上, 开发了一系列小插件, 将普通 wiki 系统, 拓展为包含 &lt;span class="caps"&gt;BBS&lt;/span&gt;/看板/…各种能力的CMS平台&lt;ul&gt;
+&lt;li&gt;具体可参考公开分享&lt;/li&gt;
+&lt;li&gt;幻灯: &lt;a href="http://s5.zoomquiet.top/050703-MoinMoin/index.html"&gt;Wiki 与 MoinMoin 导览&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;启动 &lt;span class="caps"&gt;SEO&lt;/span&gt; 工程, 用 Python 对每天日志进行可视化数据图表生成&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不过, 最大的转变应该是从开源资源单向受益者变成了,有意识的主动贡献者;&lt;/p&gt;
+&lt;p&gt;其中最大的拐点是发生在一次文档探查中:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要整理软件系统上线详细流程, 发现一篇 FreeBSD 社区的发布工程说明书, 大为震惊, 这简直太完备了&lt;/li&gt;
+&lt;li&gt;进一步探查, 才发现 FreeBSD 的 &lt;span class="caps"&gt;UNIX&lt;/span&gt; 文化源头有个意外分支: &lt;span class="caps"&gt;GNU&lt;/span&gt; 精神&lt;/li&gt;
+&lt;li&gt;然后就看到了 &lt;a href="https://www.gnu.org/philosophy/philosophy.html"&gt;&lt;span class="caps"&gt;GNU&lt;/span&gt; 工程的哲学 - &lt;span class="caps"&gt;GNU&lt;/span&gt; 工程 - 自由软件基金会&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;当然, 当年并没有中文版本, 但是, &lt;span class="caps"&gt;GNU&lt;/span&gt; 的定义漫画是看的懂的:&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;GNU&lt;/span&gt; ~&amp;gt; &lt;span class="caps"&gt;GNU&lt;/span&gt; is Not &lt;span class="caps"&gt;UNIX&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;唉? 这么淘气的嘛? 在一个术语的解释中包含自身, 导致这将是一个永远循环的解释进程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;接着看完一系列 &lt;span class="caps"&gt;GPL&lt;/span&gt; 扫盲文档, 可以说, 瞬间变成了 &lt;code&gt;自由软件原教旨主义者&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对自己以往 “我自豪, 我用盗版” 的行为深沉懊悔… 开始行动:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;业余时间, 慢慢将所有在 Windows &lt;span class="caps"&gt;NT&lt;/span&gt; 中使用的日常软件都切换为跨平台开源软件, 比如:&lt;ul&gt;
+&lt;li&gt;浏览器 -&amp;gt; FireFox&lt;/li&gt;
+&lt;li&gt;编辑器 -&amp;gt; Leo&lt;/li&gt;
+&lt;li&gt;资源管理器 -&amp;gt; muCommander&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;结果发现 &lt;a href="http://cathayan.org/equivalentsoft-zh-cn.html"&gt;Windows软件在Linux上的等价/替代/模仿软件列表. (Official site of the table)&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;进而关注到  &lt;a href="http://blog.cathayan.org/item/2356"&gt;cathayan/Blog on 27th Floor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;又通过文章知道了 &lt;a href="https://blog.youxu.info/2008/09/10/gtd-by-cli/"&gt;完全用命令行工作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;对应工具探索时又挖掘到: &lt;a href="http://woodpecker.up.zoomquiet.top/graspOnline/learn.tsinghua.edu.cn/homepage/2001315450/idx.html"&gt;王珢&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;哗, 世界一下子以非凡的线索打开;
+以往收集这种关键网页的办法是利用 &lt;span class="caps"&gt;IE&lt;/span&gt; 专用集成网页格式 .mht,
+但是, 本地目录形式管理越来越多的网页并不友好, 何况还得使用专用浏览器打开;
+这个问题后来想用书签来解决, 可发现, 网站并不永久存在, 很多没多久就消失在互联网中;&lt;/p&gt;
+&lt;p&gt;所以, 挖掘 FireFox 的插件, 最终定位到一款神奇的作品: ScrapBook ,
+可以将网页抓取到本地, 并在浏览器内部构建一个树形目录, 以便随时查阅;&lt;/p&gt;
+&lt;p&gt;进一步发现, 抓取到本地的网页其实就是一个个的目录, 每个目录的 index.html 就是原先网页,其它则是网页对应在线资源,
+也就是说 Scrapbook 基于浏览器原有功能, 完成网页内容解析并排版后,
+将其所有资源保存到本地, 并对应修改所有链接为本地相对路径, 从而可以近乎 100% 的从本地还原网页内容, 而不用每次都依赖网络来下载;&lt;/p&gt;
+&lt;p&gt;于是用 Python 编写了转换脚本, 将 Scrapbook 本地形成的索引数据(就是 &lt;span class="caps"&gt;XML&lt;/span&gt;, 巧了这不熟悉嘛)转换为标准 html 索引页,
+然后, 就可以共享到自己的网站中了:&lt;/p&gt;
+&lt;p&gt;经过几次迭代后变成这样:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://ipic.zoomquiet.top/2022-08-21-scrapbook-pub-zoomquiet.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;这样就可以将自己收集到的认为靠谱的网页原始资料随时共享出来;&lt;/p&gt;
+&lt;p&gt;没想到这一行为, 触发了首次互联网侵权事件:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;因为平时工作要和其它部门沟通&lt;/li&gt;
+&lt;li&gt;为了在家无法访问公司内网时, 也可以查询到对应分机, 就将内部通讯录给 Scrapbook 了&lt;/li&gt;
+&lt;li&gt;结果,被有心人看到, 针对性电话广告进来, 安全部门追查, 才发布是从我的私人网站泄漏的&lt;/li&gt;
+&lt;li&gt;立即责令删除, 这才发现, 互联网并不都是开放/友好的, &lt;/li&gt;
+&lt;li&gt;从此对内外资料有了个自学分离习惯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;北京, 毕竟是中国互联网中心, 各种资源/大会/社区一直很多, 但是, 以往并没感觉自己有机会可以进入;&lt;/p&gt;
+&lt;p&gt;改变是从创立 &lt;a href="https://wiki.woodpecker.org.cn/moin/CPUG"&gt;&lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt; 开始的,
+之前说过, &lt;span class="caps"&gt;HD&lt;/span&gt; 创立的 啄木鸟 Python 技术社区, 是以他私人注册的 woodpecker.org.cn 域名为核心建立起来的,
+但是, 毕竟 &lt;span class="caps"&gt;HD&lt;/span&gt; 又担当 &lt;span class="caps"&gt;SINA&lt;/span&gt; 关键部门主管, 平时并没有太多时间参与社区活动,
+确立周末利用 &lt;span class="caps"&gt;SINA&lt;/span&gt; 顶层会议室, 来进行线下技术分享活动的主要形式后,
+基本上都是俺来定期组织,
+几次后, 大家感觉 &lt;code&gt;啄木鸟&lt;/code&gt; 这个名字和 Python 关联不大,
+就提议学习 &lt;span class="caps"&gt;BLUG&lt;/span&gt;/北京 Linux 用户组, 创立专门社区, 来组织大家学习/实践/推广 Python 技术;&lt;/p&gt;
+&lt;p&gt;是的, 这个提议人, 就是赞助邮件列表服务的 exoweb.com 公司成员,
+这家公司是外国人创立的, 创始人 &lt;code&gt;白熊&lt;/code&gt; , 同时也是 &lt;span class="caps"&gt;BLUG&lt;/span&gt; 创始人,
+后来在各种全球技术活动中, 都不时能见到这位 &lt;code&gt;白熊&lt;/code&gt; 同志;&lt;/p&gt;
+&lt;p&gt;2005.7.30 &lt;a href="https://wiki.woodpecker.org.cn/moin/BPUG/2005-07-30"&gt;CPUG及BPUG 成立大会&lt;/a&gt;
+之后, 相继也成立了其它城市的 &lt;code&gt;*PUG&lt;/code&gt; 社区,
+不过, 只有北京的用户组, 可以维持每个月举行一次线下 &lt;code&gt;会课&lt;/code&gt;(会议+课程) 活动;
+在京期间, 俺前后组织了40+期会课, 以此为线索串联起来各种社区软件/作品/活动/人物;&lt;/p&gt;
+&lt;p&gt;比如: &lt;a href="https://wiki.woodpecker.org.cn/moin/BPUG/2006-03-26"&gt;CPUG第六次.豆瓣发展现状&lt;/a&gt;
+就是阿北对豆瓣的一次宣传, 
+也正是之前 05年9月, 一次会课中,大家才知道这个网站是全栈 Python 技术开发的,
+立即注册体验, 几乎可以说豆瓣在中国的线下正式发布就是在 &lt;span class="caps"&gt;BPUG&lt;/span&gt; 会课中;
+所以, 大家的 豆瓣ID 都很靠谱前;
+比如, 俺就是总第30位注册豆瓣的成员, 可以从豆瓣帐号头像的 &lt;span class="caps"&gt;ID&lt;/span&gt; 序号证明: https://img9.doubanio.com/icon/ul1000030-2.jpg&lt;/p&gt;
+&lt;p&gt;又比如, Python 核心编程第2版, 骗书事件:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://devrel.zoomquiet.top/data/20080704230201/index.html"&gt;《Python 核心编程》应属于社区翻译 - Nicholas_Ding - JavaEye技术网站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;就是 宋吉广 参与会课期间提出社区翻译出版 Python 技术图书&lt;/li&gt;
+&lt;li&gt;但是, 完成后, 归为自己的翻译作品&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当时因为举证困难, 咨询相关法律人士后, 不得不放弃上述;
+但是, 过程中形成的在线图书协作流程/工具链/经验,
+倒是变成社区知识,
+进一步转化为后来其它原创图书,
+比如:  &lt;a href="https://book.douban.com/subject/3884108/"&gt;可爱的Python (2009)&lt;/a&gt;
+图书工程在: &lt;a href="https://wiki.woodpecker.org.cn/moin/ObpLovelyPython"&gt;ObpLovelyPython - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;还有: &lt;a href="https://wiki.woodpecker.org.cn/moin/BPUG/2005-11-18"&gt;CPUG第四次 北京师范会课&lt;/a&gt;
+就是通过会课, 吸引来进行互联网成人教育研究的 庄秀丽 老师, 进而受邀去分享:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;幻灯: &lt;a href="http://woodpecker.up.zoomquiet.top/classes/0511-FreedomDiscuss/FreedomCPUG/s5.html"&gt;漫谈自由与开源+啄木鸟开源社区介绍&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;录音: &lt;a href="http://org.up.zoomquiet.top/ztapes/wav4zoomq/051120-FreedomDiscuss.mp3"&gt;051120-FreedomDiscuss.mp3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;又通过 庄秀丽 知道 毛向辉/Issca Mao, 主办的 &lt;span class="caps"&gt;CBC&lt;/span&gt;/中国Blog大会, 接触到开放内容/网络思想, 也进行过网络会议讨论,&lt;/p&gt;
+&lt;p&gt;比如, &lt;a href="http://woodpecker.up.zoomquiet.top/classes/WeKnow-050226-Isaac.mp3"&gt;WeKnow-050226-Isaac&lt;/a&gt;, 
+进而后来作为社区顾问, 帮助庄老师建立 教育大发现社区/sociallearnlab.org ;&lt;/p&gt;
+&lt;p&gt;又从 Issac Mao 认识 &lt;code&gt;Keso&lt;/code&gt; 大叔, 以及他在自己家定期举行的 5g 沙龙:
+(因为地点固定在 现代远大园B区8-5g 房, 所以, 命名5g, 不是通讯协议的5g)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://ipic.zoomquiet.top/2022-08-21-060315bj5gparty.jpg"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用高端 &lt;span class="caps"&gt;DC&lt;/span&gt; 抓拍的, 就是 keso&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PS&lt;/span&gt;: 背对镜头, 一头油发的, 是霍矩&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PPS&lt;/span&gt;: 在沙龙中, 认识 &lt;code&gt;叶子&lt;/code&gt; , 参与首次开源数字杂志的创办&lt;ul&gt;
+&lt;li&gt;或是说众筹, 出200元认了半页版面&lt;/li&gt;
+&lt;li&gt;内容就是自己的ID 解析图谱&lt;/li&gt;
+&lt;li&gt;大图查阅 &lt;a href="http://0.zoomquiet.top/CPyUG/zoomquiet-design-collection/2006-0627-50ren-ZoomQuiet.600dpi.png"&gt;2006-0627-50ren-ZoomQuiet.600dpi.png&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;还有从会课中知道的 Ubuntu 6.10 release party
+&lt;img alt="" src="https://ipic.zoomquiet.top/2022-08-21-061103UBUNTU-release-party.jpg"/&gt;
+(2006.11.2 中科院自动化研究所, 举行)&lt;/p&gt;
+&lt;p&gt;当然, 少不了见活老爹:
+&lt;img alt="" src="https://ipic.zoomquiet.top/2022-08-21-2007GDD-guido.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;2007 年, &lt;span class="caps"&gt;GDD&lt;/span&gt;/Google Develop Day 北京场, 首次见到老爹, &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://ipic.zoomquiet.top/2022-08-21-070601GDD-guido.jpg"/&gt;
+(当然, 是有合影的, 猜猜哪位是 大妈?&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;PS&lt;/span&gt;: &lt;span class="caps"&gt;CPUG&lt;/span&gt; logo 左边前排, 就是 &lt;code&gt;Limodou&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;当然, 最激动的, 还是见到 &lt;span class="caps"&gt;RMS&lt;/span&gt; 本尊:
+&lt;a href="https://ipic.zoomquiet.top/2019-09-10-080530bj-rms-zeuux.jpg"&gt;with &lt;span class="caps"&gt;RMS&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进而才知道, 同事 &lt;code&gt;徐继哲/Bill Xu&lt;/code&gt; 是资深 &lt;span class="caps"&gt;GNU&lt;/span&gt; 社区成员,
+一直负责 &lt;span class="caps"&gt;RMS&lt;/span&gt; 在中国各种活动的对接,
+这下, 又一个长期参与的社区又被触发出来, 这就是 &lt;a href="http://www.zeuux.org/"&gt;“哲思社区”&lt;/a&gt;;
+是 &lt;code&gt;徐继哲&lt;/code&gt; 创办的自由软件文化宣传社区, 
+上线时, 俺从 &lt;span class="caps"&gt;CPUG&lt;/span&gt; 社区列表, 导出8000+订阅邮箱, 导入数据, 帮助完成社区的冷启动….&lt;/p&gt;
+&lt;h3 id="summary"&gt;summary&lt;a class="headerlink" href="#summary" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小结&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;平台真的很重要, 以及进入平台后, 保持学习/积极, 持续进步, 更加重要;&lt;/p&gt;
+&lt;p&gt;在北京, 基于一份儿稳定的工作, 以及当地丰富的社会资源, 
+以 &lt;span class="caps"&gt;FLOSS&lt;/span&gt;/自由,开源技术社区成员身份, 慢慢形成三个主要线索:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python 技术推广, &lt;span class="caps"&gt;CPUG&lt;/span&gt; 社区系列&lt;/li&gt;
+&lt;li&gt;开源社区治理推广, 从 教育大发现社区开始&lt;/li&gt;
+&lt;li&gt;FLOSS布道师, 从 &lt;span class="caps"&gt;ZEUUX&lt;/span&gt; 社区开始&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每个方向, 都不断发现新课题/问题/任务/知识/技能/…,
+都需要持续实践, 和更多的人联合/协作/共创/…&lt;/p&gt;
+&lt;p&gt;感觉时间一下子不够用了, 怎么办?&lt;/p&gt;
+&lt;h3 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有关链接&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://cherrypy.dev/"&gt;CherryPy — A Minimalist Python Web Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FreeBSD 发布工程&lt;/li&gt;
+&lt;li&gt;历史版本: &lt;a href="http://scm.zoomquiet.top/data/20050606105135/index.html"&gt;FreeBSD Release Engineering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;当前版本: &lt;a href="https://docs.freebsd.org/en/articles/releng/#_footnotedef_2"&gt;Legacy FreeBSD Release Engineering | FreeBSD Documentation Portal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.gnu.org/philosophy/philosophy.html"&gt;&lt;span class="caps"&gt;GNU&lt;/span&gt; 工程的哲学 - &lt;span class="caps"&gt;GNU&lt;/span&gt; 工程 - 自由软件基金会&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wiki.woodpecker.org.cn/moin/CPUG"&gt;&lt;span class="caps"&gt;CPUG&lt;/span&gt; - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.zeuux.org/"&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;哲思社区”&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://devrel.zoomquiet.top/data/20060921215100/index.html"&gt;Bill Xu：Richard Stallman和自由软件运动！&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.ruanyifeng.com/blog/2010/08/an_apology_to_bill_xu.html"&gt;致徐继哲先生的道歉声明 - 阮一峰的网络日志&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.101.camp/dm/190914-teestory/"&gt;&lt;span class="caps"&gt;DM9&lt;/span&gt;:苦短衫的故事 — 蟒营™ 怂怼录&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://woodpecker.up.zoomquiet.top/graspOnline/learn.tsinghua.edu.cn/homepage/2001315450/idx.html"&gt;Yin Wang’s Homepage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://web.archive.org/web/20041230205624/http://www.isaacmao.com/2004/12/29/"&gt;Isaac Mao(毛向辉)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://web.archive.org/web/20190830085640/http://blog.donews.com/keso/"&gt;对牛乱弹琴 | Playin’ with &lt;span class="caps"&gt;IT&lt;/span&gt; - 洪波的偏见 | keso.me&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://leoeditor.com/"&gt;Leo’s Home Page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.mucommander.com/"&gt;muCommander - file manager&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.xuldev.org/scrapbook/"&gt;ScrapBook :: Firefox Extension&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://zoomquiet.io/collection.html"&gt;ZoomQuiet.io -&amp;gt; collection {by gen4dot2htm.py vv.190718 at:190911 18:13:08,805091}&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://read.douban.com/ebook/1499455/?dcs=subject-rec&amp;amp;dcm=douban&amp;amp;dct=3948354"&gt;Python源码剖析 - 陈儒 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://book.douban.com/subject/3884108/"&gt;可爱的Python (&lt;span class="caps"&gt;ZEUUX&lt;/span&gt;)&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.douban.com/people/1001560/?_i=10890128V3HIHB"&gt;清风₿Ξ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fe.bnu.edu.cn/pc/cms1info/resume/50/116"&gt;庄秀丽 硕士生导师&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://sites.google.com/site/bioteahouse/memberpage/liubaofei/xue-xi-bi-ji/jiao-yu-da-fa-xian-she-qu-jiao-yan-huan-jing-can-kao-fang-an"&gt;教育大发现社区教研环境参考方案 - 生物教学茶吧&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;下一篇:  &lt;a href="/220821-flossstyle-3.html"&gt;开源生活实录.3.GTD之始&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;220820 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 发布&lt;/li&gt;
+&lt;li&gt;220819 &lt;span class="caps"&gt;ZQ&lt;/span&gt; init.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category><category term="FLOSS"></category></entry><entry><title>开源生活实录.1.LAMP之辉</title><link href="https://blog.zoomquiet.io/220817-flossstyle-1.html" rel="alternate"></link><published>2022-08-19T18:42:00+08:00</published><updated>2022-08-21T22:42:44+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-19:/220817-flossstyle-1.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+1&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;魔都打怪&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -216,6 +470,7 @@
 &lt;li&gt;&lt;a href="https://www.list.org/"&gt;&lt;span class="caps"&gt;GNU&lt;/span&gt; Mailman&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;下一篇: &lt;a href="/220820-flossstyle-2.html"&gt;开源生活实录.2.GNU之魂&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;220819 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 发布&lt;/li&gt;
 &lt;li&gt;220818 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 规划&lt;/li&gt;

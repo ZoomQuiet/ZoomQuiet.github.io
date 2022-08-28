@@ -1,5 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-08-21T22:47:31+08:00</updated><entry><title>开源生活实录.2.GNU之魂</title><link href="https://blog.zoomquiet.io/220820-flossstyle-2.html" rel="alternate"></link><published>2022-08-20T21:42:00+08:00</published><updated>2022-08-21T22:47:31+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-20:/220820-flossstyle-2.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+2&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;帝国升级&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2022-08-28T17:16:21+08:00</updated><entry><title>开源生活实录.3.GTD之始</title><link href="https://blog.zoomquiet.io/220822-flossstyle-3.html" rel="alternate"></link><published>2022-08-22T22:42:00+08:00</published><updated>2022-08-28T17:16:21+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-22:/220822-flossstyle-3.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+3&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;时间知识&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;书接上回&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/220817-flossstyle-0.html"&gt;开源生活实录.0.从哪儿知道的?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/220817-flossstyle-1.html"&gt;开源生活实录.1.LAMP之辉&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/220820-flossstyle-2.html"&gt;开源生活实录.2.GNU之魂&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当时能力起点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大厂经历&lt;/li&gt;
+&lt;li&gt;过程改进经验&lt;/li&gt;
+&lt;li&gt;开源技术社区构建/运营经历&lt;/li&gt;
+&lt;li&gt;全栈技能基础&lt;/li&gt;
+&lt;li&gt;演讲/主持入门&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="trace"&gt;trace&lt;a class="headerlink" href="#trace" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回忆轨迹&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从北京南下珠海, 其实也和社区有关;
+上次是通过参与社区项目, 从而无意间通过面试, 获得机会;
+这次, 则是通过社区朋友内推, 获得机会;
+这位朋友就是 Albert Lee, 当初一起去由阿北面试,
+他去了豆瓣成为第5位员工,
+俺选择留在 &lt;span class="caps"&gt;SINA&lt;/span&gt;,
+没几年, 他先去了 金山, 
+然后, 推荐了俺, 就又这么混在了一起;&lt;/p&gt;
+&lt;p&gt;(&lt;span class="caps"&gt;PS&lt;/span&gt;: 在SINA 中和俺 &lt;span class="caps"&gt;PK&lt;/span&gt; 开发相同系统的 清风, 后来也去了豆瓣, 呆的时间更长,
+而且成为著名 &lt;code&gt;北京吃喝玩乐组&lt;/code&gt; 创始人, 经历丰富到不得不写本书来纪念,
+进而变成创业项目冷启动关系社会资源, 
+当然, 创业启动资金不是豆瓣资金, 而是 &lt;span class="caps"&gt;BTC&lt;/span&gt; 投资成功…)&lt;/p&gt;
+&lt;p&gt;不过, 来到珠海, 初印象最深的, 不是雷总, 而是中国的人事制度;
+参考: &lt;a href="https://du.101.camp/2017-11/untouchable/"&gt;虚空间~不可接触之嗯哼 ~ DebugUself with &lt;span class="caps"&gt;DAMA&lt;/span&gt; ;-)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;入职一年后, 才真正捋清楚自己人事关系, 精密操作将档案艰难调入 金山 的集体户口;
+虽然这和日常学习/工作没什么关系, 
+但是, 想到毕业这么多年, 金山竟然才是第一家正式落户的企业, 很是感觉稳妥,
+作事儿, 也就有更加长远的规划;&lt;/p&gt;
+&lt;p&gt;其中最长远的规划是敢于结婚了,
+之前, 在大学里不敢考驾照和宣称不结婚, 
+其实都是因为看不到未来可能的发展,
+感觉自己能自由学习技术, 用手艺养活自己已经不易, 其它的不敢设想;&lt;/p&gt;
+&lt;p&gt;到了珠海, 金山软件, 一切好象都可以想象了;
+结果, 头一年, 9月到岗, 当年 金山春节联欢晚会 总导演就注意到俺的活跃,
+然后硬件就怀孕结婚, 给一众亲戚吓的…&lt;/p&gt;
+&lt;p&gt;不过, 工作/生活 稳定后, 社区也更加丰富;&lt;/p&gt;
+&lt;p&gt;原有计划只是将 &lt;span class="caps"&gt;ZPUG&lt;/span&gt;/珠三角Python用户组 带起来;
+参考: &lt;a href="https://wiki.woodpecker.org.cn/moin/ZPyUG"&gt;ZPyUG - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原本计划每个月组织一次,
+后来发现珠三角地区各城市文化不相同,
+那时去广州还得走长途汽车, 远程协商成本也高, 就变成不定期进行;&lt;/p&gt;
+&lt;p&gt;意外发现, 原先上海 &lt;span class="caps"&gt;ZCUG&lt;/span&gt; 创始人老潘也南下广州, 这下就有了熟人;
+接着, 因为场地原因, 联系上 刘鑫 老师, 借用所在北大青鸟教室举行了两次 &lt;span class="caps"&gt;ZPUG&lt;/span&gt; 会课,
+就把人给推荐到自己部门里, 彻底变成全职 &lt;strong&gt;Pythoneer&lt;/strong&gt; 了 ;-)&lt;/p&gt;
+&lt;p&gt;当然, 在金山软件中, 也是大力使用开源技术,
+比如, 给研发团队提供的项目管理平台, 就是基于 Trac 系统来定制的,
+自然也给各技术部门作过宣传,
+同时也根据 &lt;span class="caps"&gt;XP&lt;/span&gt;/极限编程 思想, 率先在部门进行站立会议等等制度;&lt;/p&gt;
+&lt;p&gt;也就引起 &lt;code&gt;式伟办公室&lt;/code&gt; 的关注, 进而发现刚刚成立的 &lt;span class="caps"&gt;ECUG&lt;/span&gt;/Eerlang China User Group,
+也就是后来创立 &lt;strong&gt;7牛&lt;/strong&gt; 的许式伟, 
+刚刚成立的金山研究室, 当时在探索云存储产品,
+发现, 想建立大规模分布式系统, 当前世界上只有 Erlang 语言可以轻易作到,
+带领部门一起探索时, 也就顺便创建了社区,
+俺又有长期技术社区组织经验, 也就自然加入, 帮忙筹办当年叫 &lt;code&gt;Erlounge&lt;/code&gt; 的年会;&lt;/p&gt;
+&lt;p&gt;前几期大会官网, 其实是用俺推荐的 t2t/&lt;a href="https://txt2tags.org/"&gt;txt2tags&lt;/a&gt; 来快速撰写和发布的;&lt;/p&gt;
+&lt;p&gt;后来流行起来, 变成主流的 Markdown, 其实只是结构化文本中一个方案,
+在 md 出现之前, 早已有很多优秀的方案在推行,
+比如: &lt;strong&gt;reStructuredText&lt;/strong&gt;/新结构化文本, Python 领域各种项目文档, 就是使用基于 rst 的 Shpinx 文档工具进行的;&lt;/p&gt;
+&lt;p&gt;俺知道 rST 是因为在查 Django 文档时, 
+注意到 寻求静态化网站工具时, 发现 &lt;strong&gt;rtfd&lt;/strong&gt;/&lt;a href="https://readthedocs.org/"&gt;Read the Docs&lt;/a&gt; 文档服务,
+是很多开源项目官方文档托管平台,
+进而发现 &lt;a href="https://www.sphinx-doc.org/en/master/"&gt;Sphinx documentation&lt;/a&gt;工具,
+进一步知道 &lt;strong&gt;reStructuredText&lt;/strong&gt;,
+对比之前 MoinMoin 中内置的简易结构化文本,
+感觉 rST 更加强大, 也更加复杂, 可平时用以快速记录/发布的, 
+并不需要 rST 以 LaTex 为对标, 可以直接编译出精美图书这种能力,
+所以, 才开始有目的的探寻这种工具是什么类型, 是否有其它更加简单的?&lt;/p&gt;
+&lt;p&gt;根据08年找到的一篇综述:
+&lt;a href="http://floss.zoomquiet.top/data/20080709233551/index.html"&gt;文档工具 · Osmond.&lt;span class="caps"&gt;CN&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;知道标签文本和结构化文本的差异,
+也发现了 AsciiDoc/textile/Markdown/txt2tags/..
+其中, txt2tags 是位巴西小哥创建的,
+和其它结构化文本相比, t2t(txt2tags的缩写), 可以用一种格式, 自由输出到其它多种格式文本,
+感觉很占便宜, 就先学习使用起来, 进而尝试使用在所有场合;&lt;/p&gt;
+&lt;p&gt;比如私人 blog,
+就选择了 &lt;a href="https://pyblosxom.github.io/"&gt;PyBlosxom - &lt;span class="caps"&gt;THE&lt;/span&gt; Python-Based Flatfile Blog Engine&lt;/a&gt;
+因为这是唯一解析 t2t 又是用 Python 开发的静态网站引擎;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://org.zoomquiet.io/pyblosxom/category-index.html"&gt;Zoom.Quiet’s PyBlosxom blogging&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;早年统一使用 zoomquiet.org 来发布&lt;/li&gt;
+&lt;li&gt;后来 13年参加 Google I/O 大会时, 发现 Google 域名服务提前发布 .io 域名, 就迁移到 zoomquiet.io 了&lt;/li&gt;
+&lt;li&gt;t2t 虽然好, 但是, 世界大势已经是 .md 为主,&lt;/li&gt;
+&lt;li&gt;也就将引擎迁移为 &lt;a href="https://getpelican.com/"&gt;Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;类似这种出于自身需求, 不断探索/学习/贡献/…而自然进入的社区有很多;&lt;/p&gt;
+&lt;p&gt;比如:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;t2t 是贡献了简体文档翻译, 而列在官网 &lt;a href="https://txt2tags.org/team/index.html"&gt;txt2tags team&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;探索个人桌面维基时, 找到了 TiddlyWiki, 也翻译了其中一个版本的简体界面翻译&lt;ul&gt;
+&lt;li&gt;虽然没有列在官网&lt;/li&gt;
+&lt;li&gt;却因为对 TiddlyWiki 熟悉, 从而成为 OpenResty 早期文档维护者之一&lt;/li&gt;
+&lt;li&gt;进而和春哥熟悉, 进一步无意中将 锤子科技和 OpenResty 关联起来, 促成锤子第二次发布会门票捐助给了 OpenResty&lt;/li&gt;
+&lt;li&gt;又因为这事儿, 又和负责对接此事儿的 iOpenResty 社区创始人 温铭 熟悉&lt;/li&gt;
+&lt;li&gt;进一步参与了 &lt;span class="caps"&gt;APISIX&lt;/span&gt; 的创业, 社区宣传…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;从 Erlang 到参与 &lt;span class="caps"&gt;ECUG&lt;/span&gt; 大会筹办&lt;ul&gt;
+&lt;li&gt;从而认识 许式伟, 进而现在很多社区媒体资料, 都以社区联盟的方式, 免费使用 7牛 &lt;span class="caps"&gt;CDN&lt;/span&gt; 服务&lt;/li&gt;
+&lt;li&gt;后来 老许 发现 Erlang 实在太另类, 自行创建 CErl 语言,但是, 完成之时, 发现和 Golang 基本一致&lt;/li&gt;
+&lt;li&gt;于是义无反顾的投入 Golang 怀抱,并以 0.9 版本就完成了 7牛核心业务代码&lt;/li&gt;
+&lt;li&gt;只是此时 &lt;span class="caps"&gt;ECUG&lt;/span&gt; Con. 已经办了5届不好改名, 于是建议, 修改定义就好&lt;ul&gt;
+&lt;li&gt;从 Elrang China User Group&lt;/li&gt;
+&lt;li&gt;变为 Effective Cloud User Group/ 实效云用户组&lt;/li&gt;
+&lt;li&gt;缩写不变, 含义更加广泛, 完成兼容升级 ;-)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;又从 Erlang 知道了函式语言这个全新领域, 顺着社区相相互链接, 接连学习探索了&lt;ul&gt;
+&lt;li&gt;Lisp ~ 所有开发语言之祖&lt;/li&gt;
+&lt;li&gt;Haskell ~ 学术型函式语言&lt;/li&gt;
+&lt;li&gt;Scheme ~ 入门级函式语言&lt;/li&gt;
+&lt;li&gt;Clojure ~ 运行在 &lt;span class="caps"&gt;JVM&lt;/span&gt; 上的函式语言&lt;/li&gt;
+&lt;li&gt;Elixir ~ Erlang 的现代化语言&lt;/li&gt;
+&lt;li&gt;…一路上也分别在各个对应社区中认识了不少中国工程师&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其实, 开源世界, 也并不只有技术,
+进入金山是受命创立 &lt;code&gt;过程改进中心&lt;/code&gt;,
+从原先纯粹的工程师, 变成部门 leader 琐事增多,
+同时又成家, 育儿;
+等于是事业/爱好/家庭综合在一起, 又都得高效完成;&lt;/p&gt;
+&lt;p&gt;开始对时间管理上心, 进一步发现 &lt;strong&gt;&lt;span class="caps"&gt;GTD&lt;/span&gt;&lt;/strong&gt;/”Get Things Done” 思想, 
+以及工具, 发现, 这也有对应推广社区;
+从中, 认识了 陈一斌 , 那时他还在上学, 后来入职 iFanr 也变成全新咨询/投资社区的新入口;&lt;/p&gt;
+&lt;p&gt;特别是09年, 负责对接 &lt;strong&gt;2009年哲思自由软件峰会&lt;/strong&gt;,
+又一次见到 &lt;span class="caps"&gt;RMS&lt;/span&gt; 活人, 看到这个大胡子纯粹又快乐的状态,很是羡慕;&lt;/p&gt;
+&lt;p&gt;(现场录音:
+&lt;a href="http://0.zoomquiet.top/zeuux/091017-pm-summit-REC013-RMS.ogg"&gt;091017-pm-summit-&lt;span class="caps"&gt;REC013&lt;/span&gt;-&lt;span class="caps"&gt;RMS&lt;/span&gt;.ogg&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;当时给列席的广东省有关领导的开幕辞, 是这么写的:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RMS&lt;/span&gt; 被全球程序员尊称为自由软件教皇，因为是他在 1984年独自发起 GNU运动,通过精心设计的GPL软件许可证体系，巧妙的利用版权法，定义出了能够永久保卫软件以下四个自由度的完整的哲学／法律／技术世界:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;出于任何目的，运行软件的自由。&lt;/li&gt;
+&lt;li&gt;学习软件如何工作，以及为了满足自己的需要修改软件的自由。（显然，这个自由度的前提是能够访问软件的源代码）&lt;/li&gt;
+&lt;li&gt;为了帮助你的邻居，将软件拷贝给他的自由。&lt;/li&gt;
+&lt;li&gt;为了能够让整个社团受益，公开发行改进之后的软件的自由。（显然，这个自由度的前提是能够访问软件的源代码）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;到今天,自由软件经历26年的发展，已经几乎涵盖所有的IT技术领域，从操作系统、编译器、到数据库、中间件、应用服务器、计算机语言、超级计算机、嵌入式系统等等;当下的热门技术和理念，比如：云计算、SaaS、Android系统、Chrome &lt;span class="caps"&gt;OS&lt;/span&gt;、开放源代码等等，也都与自由软件有着千丝万缕的联系; 由于自由软件通过精心设计的法律许可证,确保了开发者和用户同时都拥有运行、学习、修改和发行软件四种全方位的自由;从而保证了自由软件无限发展的可能性;近年兴起的开源运动在自由软件基础之上,创造性的弱化了”发行软件”的自由要求后,以一种开发/经营模式的姿态,快速抢占了不少专有软件的商业市场, 同时也保有了自由软件社区的活力;&lt;/p&gt;
+&lt;p&gt;中国在IT领域先天落后于国外一个时代,我们要想多/快/好/省的发展高新技术产业,就必须充分利用自由软件的巨量技术积累,学习开源运动的经营模式,利用法律和社区的力量来保卫我们的创新成果!而要想作到以上几点,首先就得深入理解自由软件本身;&lt;/p&gt;
+&lt;p&gt;在这一软件由自由软件引发的软件革命浪潮中, &lt;span class="caps"&gt;GNU&lt;/span&gt;/Linux 是最炫丽的明星,通过 Linux 内核包装了几千种自由以及商业软件形成了一大批各有特色的发行版,以其高度的可定制性,可扩展性,以及可适应性,快速进入了几乎所有行业;近年Top 500超级计算机排名中,大部分安装的都是定制后的 &lt;span class="caps"&gt;GNU&lt;/span&gt;/Linux 操作系统,已经很说明问题了;由于 &lt;span class="caps"&gt;GNU&lt;/span&gt;/Linux  是以一种松散的社区组织形式进行开发的,而各种发行版又是各个厂商自行组织力量进行集成和发行的,这其中有比较复杂的技术/以及法律问题; 要借力 &lt;span class="caps"&gt;GNU&lt;/span&gt;/Linux 的技术优势快速发展我们自己的产业, 就得深入GNU/Linux 的世界,理解其发源,发展,社区生态;&lt;/p&gt;
+&lt;p&gt;正是在丰富的使用GPL许可证发行的自由软件帮助下，互联网产业才得以发展起来，因为广大开发／运营商，可以免费使用高质量的自由软件来开发／发布／运营各种类型的网站／网络服务;&lt;/p&gt;
+&lt;p&gt;当前所有发展中国家都在积极组织和支持自由软件社区/企业,因为只有这样才可能绕过发达国家积累的软件技术壁垒,通过和全球自由软件开发者联合,共同分享知识/技术,在自由软件基础上发展吻合国情的软件产业,才是发达国家软件厂商无法压制的发展模式;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;结合反复看的著名文章: &lt;a href="http://devrel.zoomquiet.top/data/20110617102755/index.html"&gt;如何成为一名黑客&lt;/a&gt;
+其实, 也就明白了自己值得积累的方向,
+作为一名合格的 hacker 可以在社区中有以下贡献:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;撰写代码&lt;/li&gt;
+&lt;li&gt;编写测试&lt;/li&gt;
+&lt;li&gt;组织文档&lt;/li&gt;
+&lt;li&gt;帮忙运营&lt;/li&gt;
+&lt;li&gt;宣传布道&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;自己性格比较喜新厌旧, 不过写作/沟通/组织/…还算有热情,
+那么, 作为社区经理/布道师, 还是足以担当的;&lt;/p&gt;
+&lt;p&gt;当然, 那时, 还没有 Evangelist/布道师, 社区经理 概念,
+但是, 不影响自己开始下意识的向这个方向努力…&lt;/p&gt;
+&lt;h3 id="summary"&gt;summary&lt;a class="headerlink" href="#summary" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小结&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;刚刚到珠海,可以说叕是一个全新开始,
+也可以说, 只是一次空间变化;&lt;/p&gt;
+&lt;p&gt;开源技术社区, 随着参与的时间积累, 越来越多社区通过原先认识的人物, 产生了关联, 自己业余时间需要选入的社区也越来越多;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;ZPUG&lt;/span&gt; ~ Python 技术推广社区&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;ECUG&lt;/span&gt; ~ Erlang 技术推广社区&lt;ul&gt;
+&lt;li&gt;后来孵化出: &lt;a href="https://github.com/ZoomQuiet/erlbattle"&gt;恶狼战役/erlbattle&lt;/a&gt; &lt;span class="caps"&gt;AI&lt;/span&gt; 对战游戏社区&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;ZEUUX&lt;/span&gt; ~ 自由软件推广社区&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;FDD&lt;/span&gt;/自由软件日 ~ Ubuntu 等自由软件推广社区, 每年尽力参与大学城中的活动, 现场分享 Python 等故事&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SLL&lt;/span&gt;/教育大发现社区 ~ 作为顾问参与各种活动/项目发起和设计&lt;/li&gt;
+&lt;li&gt;Leo ~ 文学化编辑器, 作为长期老用户, 一直在分享各种系统中安装使用经验给作者&lt;/li&gt;
+&lt;li&gt;Techparty ~ 珠三角技术沙龙, 09年创立, &lt;span class="caps"&gt;ZPUG&lt;/span&gt; 合并进入, 变成珠海主持人&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如何合理安排, 即便是使用 &lt;span class="caps"&gt;GTD&lt;/span&gt; 等等工具, 也慢慢发现, 一个人其实, 真的不可能全部全情投入, 怎么办?&lt;/p&gt;
+&lt;p&gt;是的, 发挥组织的力量, 让社区可以自行发展才是正确的…&lt;/p&gt;
+&lt;p&gt;&lt;img alt="map-think" src="http://0.zoomquiet.top/ZQCollection/map/zqbook-map-think.png"/&gt;&lt;/p&gt;
+&lt;p&gt;这是到09年, 因为社区触发的各种城市/工具/事件/…图谱&lt;/p&gt;
+&lt;h3 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有关链接&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/albertlee"&gt;albertlee (Albert Lee)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://du.101.camp/2017-11/untouchable/"&gt;虚空间~不可接触之嗯哼 ~ DebugUself with &lt;span class="caps"&gt;DAMA&lt;/span&gt; ;-)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wiki.woodpecker.org.cn/moin/ZPyUG"&gt;ZPyUG - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://code.google.com/archive/p/ecug/wikis/ChinaErloungeII.wiki"&gt;ecug - ChinaErloungeII.&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://code.google.com/archive/p/ecug/wikis/ChinaErloungeII.wiki"&gt;Google Code Archive - ecug - ChinaErloungeII.wiki.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://txt2tags.org/"&gt;txt2tags&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://txt2tags.org/team/index.html"&gt;txt2tags team&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pyblosxom.github.io/"&gt;PyBlosxom - &lt;span class="caps"&gt;THE&lt;/span&gt; Python-Based Flatfile Blog Engine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://readthedocs.org/"&gt;首页 | Read the Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#tables"&gt;reStructuredText — Sphinx documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://getpelican.com/"&gt;Pelican – A Python Static Site Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://tiddlywiki.com/"&gt;TiddlyWiki — a non-linear personal web notebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://openresty.org/cn/"&gt;OpenResty® - 中文官方站&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://apisix.apache.org/zh/"&gt;Apache &lt;span class="caps"&gt;APISIX&lt;/span&gt;® — Cloud-Native &lt;span class="caps"&gt;API&lt;/span&gt; Gateway&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.ifanr.com/author/yibie"&gt;陈一斌 | 爱范儿&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.zeuux.com/event/content/60/photo/"&gt;2009年哲思自由软件峰会－珠海站－金山公司 - 哲思&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://devrel.zoomquiet.top/data/20110617102755/index.html"&gt;如何成为一名黑客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;下一篇: ???&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;220828 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 发布&lt;/li&gt;
+&lt;li&gt;220822 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 增补&lt;/li&gt;
+&lt;li&gt;220819 &lt;span class="caps"&gt;ZQ&lt;/span&gt; init.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="MurMur"></category><category term="dama"></category><category term="logging"></category><category term="FLOSS"></category></entry><entry><title>开源生活实录.2.GNU之魂</title><link href="https://blog.zoomquiet.io/220820-flossstyle-2.html" rel="alternate"></link><published>2022-08-20T21:42:00+08:00</published><updated>2022-08-22T21:19:26+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2022-08-20:/220820-flossstyle-2.html</id><summary type="html">&lt;p&gt;MurMur/ &lt;span class="caps"&gt;FLOSS&lt;/span&gt; lifestyle&amp;nbsp;logging+2&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;帝都升级&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -249,7 +485,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="logging"&gt;logging&lt;a class="headerlink" href="#logging" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;下一篇:  &lt;a href="/220821-flossstyle-3.html"&gt;开源生活实录.3.GTD之始&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下一篇:  &lt;a href="/220822-flossstyle-3.html"&gt;开源生活实录.3.GTD之始&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;220820 &lt;span class="caps"&gt;ZQ&lt;/span&gt; 发布&lt;/li&gt;
 &lt;li&gt;220819 &lt;span class="caps"&gt;ZQ&lt;/span&gt; init.&lt;/li&gt;
@@ -706,7 +942,8 @@
 &lt;h2 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;马上第7届 COSCon(中国开源年会) 将在线举行,
 因为 2019年在上海 COSCon , 有过”从容”的 &lt;code&gt;闪电演讲&lt;/code&gt;,
-所以本次大会, 被指定为 &lt;code&gt;闪电演讲&lt;/code&gt; 联 …&lt;/p&gt;</summary><content type="html">
+所以本次大会, 被指定为 &lt;code&gt;闪电演讲&lt;/code&gt; 联合出品人,
+另 …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;马上第7届 COSCon(中国开源年会) 将在线举行,
 因为 2019年在上海 COSCon , 有过”从容”的 &lt;code&gt;闪电演讲&lt;/code&gt;,
@@ -1781,7 +2018,8 @@ $ leo6lanch
 &lt;p&gt;13年入的 &lt;span class="caps"&gt;MBP&lt;/span&gt; 坑,
 当时 17吋 顶配, 在 &lt;span class="caps"&gt;MACAO&lt;/span&gt; 实体店拿的;
 16年初突然不可用, 
-(后来检查才发现, 是长期使用功率不匹配的电源才反 …&lt;/p&gt;</summary><content type="html">
+(后来检查才发现, 是长期使用功率不匹配的电源才反复导致主板出问题)
+急忙去 …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;13年入的 &lt;span class="caps"&gt;MBP&lt;/span&gt; 坑,
 当时 17吋 顶配, 在 &lt;span class="caps"&gt;MACAO&lt;/span&gt; 实体店拿的;
@@ -13474,7 +13712,11 @@ jianshu&amp;nbsp;是有盈收压力的,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;第6夜是俺发起的议题&lt;/li&gt;
 &lt;li&gt;没想到是个错误的议题, 几句聊明白后&lt;/li&gt;
-&lt;li&gt;引发出更加有意思的讨论 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;li&gt;引发出更加有意思的讨论…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_2"&gt;触发&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中追本溯源 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://shimo.im/docs/KWxwgtpwGQxYv6Gw"&gt;鼠年话开源-系列主题网聊&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -14080,7 +14322,7 @@ django项目的文件超过数百个了 ‘
 &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Pythonic"></category><category term="python"></category><category term="howto"></category><category term="leo"></category><category term="doc"></category></entry><entry><title>[S03E23] 我的人生七年</title><link href="https://blog.zoomquiet.io/190712-GC4-S03E23-42UP.html" rel="alternate"></link><published>2019-07-12T20:42:00+08:00</published><updated>2020-07-19T12:39:12+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2019-07-12:/190712-GC4-S03E23-42UP.html</id><summary type="html">&lt;h1 id="s03e23"&gt;[&lt;span class="caps"&gt;S03E23&lt;/span&gt;] 我的人生七年&lt;a class="headerlink" href="#s03e23" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;p&gt;假设你是纪录片导演迈克尔，从7岁开始，每隔7年拍摄你自己的生活，现在为这部纪录片写出分集大纲 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;h1 id="s03e23"&gt;[&lt;span class="caps"&gt;S03E23&lt;/span&gt;] 我的人生七年&lt;a class="headerlink" href="#s03e23" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;假设你是纪录片导演迈克尔，从7岁开始，每隔7年拍摄你自己的生活，现在为这部纪录片写出分集大纲，分别是：7 Up， 14 Up， 21 Up， 28&amp;nbsp;Up……直 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;h1 id="s03e23"&gt;[&lt;span class="caps"&gt;S03E23&lt;/span&gt;] 我的人生七年&lt;a class="headerlink" href="#s03e23" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;假设你是纪录片导演迈克尔，从7岁开始，每隔7年拍摄你自己的生活，现在为这部纪录片写出分集大纲，分别是：7 Up， 14 Up， 21 Up， 28&amp;nbsp;Up……直到你的上一个7的倍数年。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -14501,7 +14743,7 @@ django项目的文件超过数百个了 ‘
 &lt;h2 id="goal"&gt;goal&lt;a class="headerlink" href="#goal" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;当年在 Linux 中,是可以自由定义输出的, 俺期望是:&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;screenshot …&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;li&gt;&lt;code&gt;screenshot_190213-17 …&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;默认系统截屏工具输出图片是:&lt;ul&gt;
@@ -15208,7 +15450,8 @@ vim ScreenCapture.strings
 &lt;p&gt;10万字写书计划活动&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;大纲要求：请包含【标题】、【副标题】、【目录】三部分内 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1 id="l10e01"&gt;&lt;span class="caps"&gt;L10E01&lt;/span&gt;🐙红黄蓝 ~ 虐童战纪&lt;a class="headerlink" href="#l10e01" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;li&gt;大纲要求：请包含【标题】、【副标题】、【目录】三部分内容，题材不限&lt;/li&gt;
+&lt;li&gt;提交日 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1 id="l10e01"&gt;&lt;span class="caps"&gt;L10E01&lt;/span&gt;🐙红黄蓝 ~ 虐童战纪&lt;a class="headerlink" href="#l10e01" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;背景
 ~ 阐述 记录/问题/事件/&amp;#8230;&amp;nbsp;发生的背景&lt;/p&gt;
@@ -15877,7 +16120,8 @@ we can reach every corner in the world.
 &lt;/blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;电脑 ~&amp;nbsp;computer&lt;/li&gt;
-&lt;li&gt;软件 …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h1 id="gc4l02e05"&gt;&lt;span class="caps"&gt;GC4L02E05&lt;/span&gt;🐙汉语引进的&lt;a class="headerlink" href="#gc4l02e05" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;li&gt;软件 ~&amp;nbsp;software&lt;/li&gt;
+&lt;li&gt;内存 ~&amp;nbsp;memory …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h1 id="gc4l02e05"&gt;&lt;span class="caps"&gt;GC4L02E05&lt;/span&gt;🐙汉语引进的&lt;a class="headerlink" href="#gc4l02e05" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~&amp;nbsp;小组和合版本&lt;/p&gt;
 &lt;p&gt;三镁化二镧复联小队成员:&lt;/p&gt;
 &lt;table&gt;
@@ -16152,7 +16396,7 @@ we can reach every corner in the world.
 &lt;p&gt;是的, 必须作个广告:
 报名链接:&lt;strong&gt;&lt;a href="http://h5.xiaoeknow.com/content_page/eyJ0eXBlIjozLCJyZXNvdXJjZV90eXBlIjoiIiwicmVzb3VyY2VfaWQiOiIiLCJwcm9kdWN0X2lkIjoicF81OWZhODE4NWE2YzhiX01wN3RlSUpBIiwiYXBwX2lkIjoiYXBwUnJ4VWtkSG84MDU3Iiwic2hhcmVfdXNlcl9pZCI6InVfNTlmYzNjMjA2Y2I1N19uc3Q3UUZndTJDIiwic2hhcmVfdHlwZSI6NX0"&gt;好中文写作课&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;明晩(2017-11-10)20:00 开始的42分钟里
-将亲 …&lt;/p&gt;</summary><content type="html">&lt;hr/&gt;
+将亲声嗯哼 …&lt;/p&gt;</summary><content type="html">&lt;hr/&gt;
 
 &lt;h1 id="_1"&gt;冲破&lt;code&gt;海洋般的微笑&lt;/code&gt;~好中文写作课私人体验&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;是的, 必须作个广告:
@@ -16288,7 +16532,8 @@ we can reach every corner in the world.
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;5年前也听录了一次 春哥的分享:&lt;a href="http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.html"&gt;由Lua 粘合的Nginx生态环境&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;然后, 神奇的引发了各 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;li&gt;然后, 神奇的引发了各种后来的然后&lt;/li&gt;
+&lt;li&gt;去年, 在 &lt;span class="caps"&gt;NGINX&lt;/span&gt; 大会 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;h1 id="building-business-systems-with-dsls-for-nginx-openresty"&gt;Building Business Systems with DSLs for &lt;span class="caps"&gt;NGINX&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; OpenResty&lt;a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~ 来自春哥的分享&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -17088,7 +17333,7 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 &lt;/blockquote&gt;
 &lt;h2 id="_1"&gt;坏塌&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;丫的,李雷发明的 &lt;code&gt;代笔机&lt;/code&gt; 坏了,
-收了我10个鸡腿的饭票,&amp;nbsp;在我终于需要给出份儿情书时,却 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="gc4s19e51-as-the-writer"&gt;&lt;span class="caps"&gt;GC4S19E51&lt;/span&gt;🐙 as the writer&lt;a class="headerlink" href="#gc4s19e51-as-the-writer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+收了我10个鸡腿的饭票,&amp;nbsp;在我终于需要给出份儿情书时,却拿不出一篇能 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="gc4s19e51-as-the-writer"&gt;&lt;span class="caps"&gt;GC4S19E51&lt;/span&gt;🐙 as the writer&lt;a class="headerlink" href="#gc4s19e51-as-the-writer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;当写作成为能源时…&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -17953,7 +18198,7 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 &lt;h2 id="_1"&gt;无意蓄水 垒世界&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;大学前, 一直生活在兰州某处军工企业的福利区;
 小学前, 就开始挖掘职工图书馆了;
-三年级 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="s12e0123"&gt;&lt;span class="caps"&gt;S12E01&lt;/span&gt;:23世纪:学校&lt;a class="headerlink" href="#s12e0123" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+三年级前, 所 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="s12e0123"&gt;&lt;span class="caps"&gt;S12E01&lt;/span&gt;:23世纪:学校&lt;a class="headerlink" href="#s12e0123" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id="_1"&gt;无意蓄水 垒世界&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;大学前, 一直生活在兰州某处军工企业的福利区;
 小学前, 就开始挖掘职工图书馆了;
@@ -20454,7 +20699,8 @@ become the master
 &lt;h2 id="init"&gt;init&lt;a class="headerlink" href="#init" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;伊甸2046 基础设备已投放, over&amp;#8221;
 &amp;#8220;允许启动 A 主控单元, over&amp;#8221;
-&amp;#8220;启动完成, 我们可以回家了吧? over …&lt;/p&gt;</summary><content type="html">&lt;h1 id="s05e01-aes"&gt;&lt;span class="caps"&gt;S05E01&lt;/span&gt;: A,E和S&lt;a class="headerlink" href="#s05e01-aes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&amp;#8220;启动完成, 我们可以回家了吧? over&amp;#8221;
+&amp;#8220;不能 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="s05e01-aes"&gt;&lt;span class="caps"&gt;S05E01&lt;/span&gt;: A,E和S&lt;a class="headerlink" href="#s05e01-aes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;(冥卫三南极智能资源站)&lt;/p&gt;
 &lt;h2 id="init"&gt;init&lt;a class="headerlink" href="#init" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;伊甸2046 基础设备已投放, over&amp;#8221;
@@ -20517,7 +20763,7 @@ become the master
 &lt;li&gt;三稿: .5h&amp;nbsp;2200+字&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_1"&gt;荣归圣零&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&amp;lt;冥王星面向地球一 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="s04e15-23"&gt;&lt;span class="caps"&gt;S04E15&lt;/span&gt;: 无之诗篇23&lt;a class="headerlink" href="#s04e15-23" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&amp;lt;冥王星面向地球一方 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="s04e15-23"&gt;&lt;span class="caps"&gt;S04E15&lt;/span&gt;: 无之诗篇23&lt;a class="headerlink" href="#s04e15-23" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;累积:&amp;nbsp;11+年&lt;/li&gt;
 &lt;li&gt;酝酿: 2天,&amp;nbsp;决定继续剧本大纲&lt;/li&gt;
@@ -20640,7 +20886,7 @@ become the master
 &lt;li&gt;&lt;code&gt;GC4&lt;/code&gt; 是&amp;#8221;好中文的样子&amp;#8221;写作自训班的缩写&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;g56&lt;/code&gt; 是嗯哼成的小组&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;在第一课 &lt;code&gt;S01-此开卷第一回.pdf&lt;/code&gt; 分享中提及的&amp;nbsp;圣经 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="gc4g56"&gt;GC4g56: 和合技~强释&lt;a class="headerlink" href="#gc4g56" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;在第一课 &lt;code&gt;S01-此开卷第一回.pdf&lt;/code&gt; 分享中提及的&amp;nbsp;圣经和合本成书技 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="gc4g56"&gt;GC4g56: 和合技~强释&lt;a class="headerlink" href="#gc4g56" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;GC4&lt;/code&gt; 是&amp;#8221;好中文的样子&amp;#8221;写作自训班的缩写&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;g56&lt;/code&gt; 是嗯哼成的小组&lt;/li&gt;
@@ -20897,7 +21143,10 @@ become the master
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;枯藤老树昏鸦
 小桥流水人家
 古道西风瘦马
-夕阳西下, 断肠人 ~~~ 想炒饭 …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h1 id="s03e05g56-3a4"&gt;S03E05g56: 3页A4纸 难以失败的蛋炒饭教程&lt;a class="headerlink" href="#s03e05g56-3a4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+夕阳西下, 断肠人 ~~~ 想炒饭!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;寒冷的 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="s03e05g56-3a4"&gt;S03E05g56: 3页A4纸 难以失败的蛋炒饭教程&lt;a class="headerlink" href="#s03e05g56-3a4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~ V4.3.1742 issue&amp;nbsp;嗯哼版&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;枯藤老树昏鸦
 小桥流水人家
@@ -20992,7 +21241,7 @@ become the master
 &lt;li&gt;&lt;span class="caps"&gt;GC4&lt;/span&gt; 是 &lt;code&gt;好中文的样子&lt;/code&gt; 写作班的代号&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;S03E05&lt;/code&gt; 是第3次作业编号&lt;/li&gt;
 &lt;li&gt;要求5人组队来完成作业,&lt;code&gt;g56&lt;/code&gt; 是小组编号&lt;/li&gt;
-&lt;li&gt;幸好第一时 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1 id="gc4s03e05g56"&gt;GC4S03E05g56:嗯哼 复盘&lt;a class="headerlink" href="#gc4s03e05g56" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;li&gt;幸好第一时间有人拉俺入队,&amp;nbsp;在第一时间免 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1 id="gc4s03e05g56"&gt;GC4S03E05g56:嗯哼 复盘&lt;a class="headerlink" href="#gc4s03e05g56" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class="caps"&gt;GC4&lt;/span&gt; 是 &lt;code&gt;好中文的样子&lt;/code&gt; 写作班的代号&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;S03E05&lt;/code&gt; 是第3次作业编号&lt;/li&gt;
@@ -21667,7 +21916,7 @@ become the master
 &lt;p&gt;160625, 一个平常的早晨, 俺的世界崩溃了一大坨…
 5年前老婆大人开恩准购的: 高配版, 8G, 512G+256G &lt;span class="caps"&gt;SSD&lt;/span&gt; 的MBP 15吋 无法开机!&lt;/p&gt;
 &lt;h1 id="_2"&gt;溃&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;立即去 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;立即去当地 &lt;span class="caps"&gt;APPLE&lt;/span&gt; 维修中心,从机械硬盘 …&lt;/p&gt;</summary><content type="html">
 &lt;h1 id="_1"&gt;崩&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;160625, 一个平常的早晨, 俺的世界崩溃了一大坨…
 5年前老婆大人开恩准购的: 高配版, 8G, 512G+256G &lt;span class="caps"&gt;SSD&lt;/span&gt; 的MBP 15吋 无法开机!&lt;/p&gt;
@@ -22087,7 +22336,9 @@ Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;蠎样 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;蠎样:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;v&lt;/span&gt; &lt;span class="nv"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;my_list&lt;/span&gt;:
+    &lt;span class="nv"&gt;print …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
 &lt;p&gt;来自 @nedbat 的分享:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://nedbatchelder.com/text/iter.html"&gt;Ned Batchelder: Loop Like A Native&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;迭代基础&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -23152,7 +23403,8 @@ Overwrite the outline node?&lt;/p&gt;
 &lt;p&gt;~&amp;nbsp;世界梦&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;因为: &lt;a href="http://cici19891.gitbooks.io/mybook/content/part1/note1.html"&gt;“未来伴侣”——终身服务的性爱机器人 | mybook&lt;/a&gt;
-~ 来自 &lt;code&gt;开智微课.写作旗舰班&lt;/code&gt; 魔都 &lt;strong&gt;腿长&lt;/strong&gt;&amp;nbsp;的一篇习作,引 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;blockquote&gt;
+~ 来自 &lt;code&gt;开智微课.写作旗舰班&lt;/code&gt; 魔都 &lt;strong&gt;腿长&lt;/strong&gt;&amp;nbsp;的一篇习作,引发&amp;#8230;&lt;/li&gt;
+&lt;li&gt;发自: &lt;a href="http://wiki.zoomquiet.io/sifi/1999-10-05-dream-world"&gt;Dream …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;[99年sifi旧作]Dream&amp;nbsp;World&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="dream-world"&gt;Dream World&lt;a class="headerlink" href="#dream-world" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
@@ -23730,7 +23982,9 @@ Overwrite the outline node?&lt;/p&gt;
 &lt;p&gt;~&amp;nbsp;记录一次失败的神烦&lt;/p&gt;
 &lt;h2 id="_1"&gt;事发现场&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;大妈整理了我的草案然后发布到zhgdg的wiki,接着填坑时间到&amp;nbsp;:) &lt;/p&gt;
-&lt;p&gt;大妈说这个 …&lt;/p&gt;</summary><content type="html">&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;大妈说这个坑是: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;规章文案中都 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;h1 id="14"&gt;14小时反省分析&lt;a class="headerlink" href="#14" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~&amp;nbsp;记录一次失败的神烦&lt;/p&gt;
 &lt;h2 id="_1"&gt;事发现场&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
@@ -24599,7 +24853,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;p&gt;&lt;img alt="141212-ask-binghe.lisp.jpg（JPEG 图像，1024x650 像素）" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-ask-binghe.lisp.jpg?imageView2/2/w/512"&gt;&lt;/p&gt;
 &lt;p&gt;人称伞哥的传奇人物: &lt;a href="http://www.ituring.com.cn/article/553"&gt;田春&lt;/a&gt;&amp;nbsp;怎么应对的呢?&amp;#8230;&lt;/p&gt;
 &lt;p&gt;来源: &lt;a href="http://weibo.com/1929185323/BAfMov9Vt?type=comment#_rnd1418287455937"&gt;田春冰河 &amp;#8216;s&amp;nbsp;Weibo_Weibo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;揭晓答案前, 俺忍不住,&amp;nbsp;得推荐一下古 …&lt;/p&gt;</summary><content type="html">&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;揭晓答案前, 俺忍不住,&amp;nbsp;得推荐一下古今 …&lt;/p&gt;</summary><content type="html">&lt;h2 id="toc"&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;h1 id="_1"&gt;论如何艺术的骂人&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="141212-ask-binghe.lisp.jpg（JPEG 图像，1024x650 像素）" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-ask-binghe.lisp.jpg?imageView2/2/w/512"&gt;&lt;/p&gt;
 &lt;p&gt;人称伞哥的传奇人物: &lt;a href="http://www.ituring.com.cn/article/553"&gt;田春&lt;/a&gt;&amp;nbsp;怎么应对的呢?&amp;#8230;&lt;/p&gt;
@@ -24908,7 +25162,7 @@ Qt 当然从来也没有内置过. 所以,&lt;/p&gt;
 &lt;p&gt;人称伞哥的传奇人物: &lt;a href="http://www.ituring.com.cn/article/553"&gt;田春&lt;/a&gt; 怎么应对的呢?…&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;来源: &lt;a href="http://weibo.com/1929185323/BAfMov9Vt?type=comment#_rnd1418287455937"&gt;田春冰河 ‘s Weibo_Weibo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;揭晓答案前, 俺忍不住, 得推荐一下古今中外有关骂人相关 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;揭晓答案前, 俺忍不住, 得推荐一下古今中外有关骂人相关的 …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;&lt;img alt="141212-ask-binghe.lisp.jpg(JPEG 图像,1024x650 像素)" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-ask-binghe.lisp.jpg?imageView2/2/w/512"/&gt;&lt;/p&gt;
 &lt;p&gt;人称伞哥的传奇人物: &lt;a href="http://www.ituring.com.cn/article/553"&gt;田春&lt;/a&gt; 怎么应对的呢?…&lt;/p&gt;
 &lt;!--more--&gt;
@@ -25441,7 +25695,7 @@ People writing songs that voices never shared, no one dared disturb the sound of
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;!--more--&gt;
 &lt;p&gt;&lt;img alt="53809965gw1emk7au8650j20xr0w3tat" src="http://ww4.sinaimg.cn/large/53809965gw1emk7au8650j20xr0w3tat.jpg"/&gt;&lt;/p&gt;
-&lt;h2 id="_1"&gt;慢 …&lt;/h2&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;慢慢 …&lt;/h2&gt;</summary><content type="html">
 &lt;p&gt;&lt;img alt="529.jpg (175×260)" src="http://m.ms10010.com/image/pic/201205/thumb/529.jpg"/&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;And in the naked light I saw ten thousand people, maybe more. 
 People talking without speaking, people hearing without listening. 
@@ -25681,7 +25935,7 @@ People writing songs that voices never shared, no one dared disturb the sound of
 &lt;p&gt;&lt;a href="http://www.36kr.com/p/2934.html"&gt;OhLife:抛弃你的日记本吧!来自Y Combinator的第三个项目 | 36氪&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;当年 36Kr 就分析 OhLife 面临着几大问题:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;由于网站内容涉及隐私,完全保 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;li&gt;由于网站内容涉及隐私,完全保密,因此该网站很 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;p&gt;&lt;img alt="ohlife" src="http://a.36krcnd.com/photo/5dfa0868b7808b19b22eb4617a374923.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://www.36kr.com/p/2934.html"&gt;OhLife:抛弃你的日记本吧!来自Y Combinator的第三个项目 | 36氪&lt;/a&gt;&lt;/p&gt;
@@ -25968,7 +26222,7 @@ Out[2]: 10
 &lt;p&gt;&lt;img alt="gnupg-infographic1" src="https://tonghuix.io/wp-content/uploads/2014/06/gnupg-infographic1.png"/&gt;&lt;/p&gt;
 &lt;h2 id="changlog"&gt;Changlog&lt;a class="headerlink" href="#changlog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;140916 转发 &lt;a href="https://tonghuix.io/2014/06/email-selfdefence-gnupg/#"&gt;使用 GnuPG 进行电子邮件的自我防御[FSF信息图中译] » Open …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;li&gt;140916 转发 &lt;a href="https://tonghuix.io/2014/06/email-selfdefence-gnupg/#"&gt;使用 GnuPG 进行电子邮件的自我防御[FSF信息图中译] » Open Source Geek | 爱开源 …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;p&gt;&lt;img alt="infographic" src="https://static.fsf.org/nosvn/enc-dev0/img/en/infographic-button.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://emailselfdefense.fsf.org/en/mac.html"&gt;Email Self-Defense - a guide to fighting surveillance with GnuPG encryption&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;原主忒啰嗦了!&lt;/p&gt;
@@ -26057,7 +26311,7 @@ Out[2]: 10
 &lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill"&gt;我的学习&amp;amp;工具&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;从06年,就将个人网络资料收集/整理/发布,
 切换为主力使用 &lt;a href="http://www.xuldev.org/scrapbook/"&gt;ScrapBook&lt;/a&gt; .&lt;/p&gt;
-&lt;p&gt;这一下子就8年过去了,常用系统也 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;这一下子就8年过去了,常用系统也从 Ubuntu 切换为 …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill"&gt;我的学习&amp;amp;工具&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;从06年,就将个人网络资料收集/整理/发布,
@@ -26589,7 +26843,7 @@ _chaos/scrapbook_reDevRel.rdf
 &lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;是本好书…&lt;/p&gt;
 &lt;p&gt;为什么知道这书呢? 因为翻译 &lt;a href="http://weekly.pychina.org/"&gt;|蠎周刊 |汇集全球蠎事儿 !-)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;经常见到各种 Pandas 配合其它纯Python …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;经常见到各种 Pandas 配合其它纯Python 模块折腾出来 …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="s27157694.jpg(JPEG 图像,300x300 像素)" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;
@@ -26703,7 +26957,7 @@ alias canopy="source \
 &lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://s5.zoomquiet.io/"&gt;s5.zoomquiet.io&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="_2"&gt;问题&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;忽然发现生成的代 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;忽然发现生成的代码颜色 …&lt;/p&gt;</summary><content type="html">
 &lt;h1 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:&lt;/p&gt;
@@ -26867,7 +27121,10 @@ alias canopy="source \
 &lt;p&gt;…&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;不要 …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;p&gt;不要: &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;php&lt;/li&gt;
+&lt;li&gt;mysql …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h1 id="issue"&gt;Issue&lt;a class="headerlink" href="#issue" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
@@ -28171,7 +28428,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;li&gt;起初ZEUUX 作TEE 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;然后,就没有然后了&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;后来, 好容易一个 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
+&lt;p&gt;后来, 好容易一个蠎 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;起初ZEUUX 作TEE 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;然后,就没有然后了&amp;#8230;&lt;/li&gt;
@@ -29420,7 +29677,7 @@ THURSDAY, OCTOBER 24, 2013
 &lt;p&gt;&lt;img alt="oss" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png"&gt;&lt;/p&gt;
 &lt;p&gt;其实也是欠稿一篇, 先是忽悠朋友完成了作文:
 &lt;a href="http://zhuanlan.zhihu.com/zhuangbiaowei/19576637"&gt;企业开源杂谈 — 思考IT —&amp;nbsp;知乎专栏&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;然 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="oss"&gt;企业进行OSS的好处&lt;a class="headerlink" href="#oss" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;然后,又引发了 …&lt;/p&gt;</summary><content type="html">&lt;h1 id="oss"&gt;企业进行OSS的好处&lt;a class="headerlink" href="#oss" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;~中国绝大多数IT企业&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="oss" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*2m0OBPBnBJu0WrobbfnBkg.png"&gt;&lt;/p&gt;
 &lt;p&gt;其实也是欠稿一篇, 先是忽悠朋友完成了作文:
@@ -29862,7 +30119,9 @@ implementation in collections.deque you’ll probably end up missing the library
 &lt;li&gt;140618 偶遇抄转&lt;/li&gt;
 &lt;/ul&gt;</content><category term="IMHO"></category><category term="Jacob"></category><category term="Pythoneer"></category><category term="Zh"></category></entry><entry><title>探讨 信息化社会中 中国传统思想的作用</title><link href="https://blog.zoomquiet.io/issue-chinese-for-internet.html" rel="alternate"></link><published>1998-01-01T11:17:00+08:00</published><updated>2020-01-31T16:42:10+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,1998-01-01:/issue-chinese-for-internet.html</id><summary type="html">&lt;p&gt;(&lt;code&gt;是也乎:&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;这是大学选修课:&lt;code&gt;科学史&lt;/code&gt; 的论文,
-算是自个儿思想的黑历史…总算能有足够的心力来直面互联网时代前的5毛思想 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;(&lt;code&gt;是也乎:&lt;/code&gt;&lt;/p&gt;
+算是自个儿思想的黑历史…总算能有足够的心力来直面互联网时代前的5毛思想了… )&lt;/p&gt;
+
+&lt;p&gt;~ 不远的 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;(&lt;code&gt;是也乎:&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;这是大学选修课:&lt;code&gt;科学史&lt;/code&gt; 的论文,
 算是自个儿思想的黑历史…总算能有足够的心力来直面互联网时代前的5毛思想了… )&lt;/p&gt;
 

@@ -732,7 +732,8 @@ $ leo6lanch
 &lt;p&gt;13年入的 &lt;span class="caps"&gt;MBP&lt;/span&gt; 坑,
 当时 17吋 顶配, 在 &lt;span class="caps"&gt;MACAO&lt;/span&gt; 实体店拿的;
 16年初突然不可用, 
-(后来检查才发现, 是长期使用功率不匹配的电源才反 …&lt;/p&gt;</summary><content type="html">
+(后来检查才发现, 是长期使用功率不匹配的电源才反复导致主板出问题)
+急忙去 …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;13年入的 &lt;span class="caps"&gt;MBP&lt;/span&gt; 坑,
 当时 17吋 顶配, 在 &lt;span class="caps"&gt;MACAO&lt;/span&gt; 实体店拿的;
@@ -1883,7 +1884,7 @@ django项目的文件超过数百个了 ‘
 &lt;h2 id="goal"&gt;goal&lt;a class="headerlink" href="#goal" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;当年在 Linux 中,是可以自由定义输出的, 俺期望是:&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;screenshot …&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;li&gt;&lt;code&gt;screenshot_190213-17 …&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;h2 id="bg"&gt;&lt;span class="caps"&gt;BG&lt;/span&gt;&lt;a class="headerlink" href="#bg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;默认系统截屏工具输出图片是:&lt;ul&gt;
@@ -2414,7 +2415,8 @@ vim ScreenCapture.strings
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;5年前也听录了一次 春哥的分享:&lt;a href="http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.html"&gt;由Lua 粘合的Nginx生态环境&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;然后, 神奇的引发了各 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;li&gt;然后, 神奇的引发了各种后来的然后&lt;/li&gt;
+&lt;li&gt;去年, 在 &lt;span class="caps"&gt;NGINX&lt;/span&gt; 大会 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;h1 id="building-business-systems-with-dsls-for-nginx-openresty"&gt;Building Business Systems with DSLs for &lt;span class="caps"&gt;NGINX&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; OpenResty&lt;a class="headerlink" href="#building-business-systems-with-dsls-for-nginx-openresty" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;~ 来自春哥的分享&lt;/p&gt;
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -3268,7 +3270,7 @@ Lua 也不是个好形式, 以及其它现有的所有命令式通用开发语�
 &lt;p&gt;160625, 一个平常的早晨, 俺的世界崩溃了一大坨…
 5年前老婆大人开恩准购的: 高配版, 8G, 512G+256G &lt;span class="caps"&gt;SSD&lt;/span&gt; 的MBP 15吋 无法开机!&lt;/p&gt;
 &lt;h1 id="_2"&gt;溃&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;立即去 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;立即去当地 &lt;span class="caps"&gt;APPLE&lt;/span&gt; 维修中心,从机械硬盘 …&lt;/p&gt;</summary><content type="html">
 &lt;h1 id="_1"&gt;崩&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;160625, 一个平常的早晨, 俺的世界崩溃了一大坨…
 5年前老婆大人开恩准购的: 高配版, 8G, 512G+256G &lt;span class="caps"&gt;SSD&lt;/span&gt; 的MBP 15吋 无法开机!&lt;/p&gt;
@@ -3581,7 +3583,9 @@ Linux-&amp;gt;Mac 时,几乎,没有什么感觉;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;蠎样 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;蠎样:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;v&lt;/span&gt; &lt;span class="nv"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;my_list&lt;/span&gt;:
+    &lt;span class="nv"&gt;print …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
 &lt;p&gt;来自 @nedbat 的分享:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://nedbatchelder.com/text/iter.html"&gt;Ned Batchelder: Loop Like A Native&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;迭代基础&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -5765,7 +5769,7 @@ Out[2]: 10
 &lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill"&gt;我的学习&amp;amp;工具&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;从06年,就将个人网络资料收集/整理/发布,
 切换为主力使用 &lt;a href="http://www.xuldev.org/scrapbook/"&gt;ScrapBook&lt;/a&gt; .&lt;/p&gt;
-&lt;p&gt;这一下子就8年过去了,常用系统也 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;这一下子就8年过去了,常用系统也从 Ubuntu 切换为 …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;参考:&lt;a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill"&gt;我的学习&amp;amp;工具&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;从06年,就将个人网络资料收集/整理/发布,
@@ -6297,7 +6301,7 @@ _chaos/scrapbook_reDevRel.rdf
 &lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;是本好书…&lt;/p&gt;
 &lt;p&gt;为什么知道这书呢? 因为翻译 &lt;a href="http://weekly.pychina.org/"&gt;|蠎周刊 |汇集全球蠎事儿 !-)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;经常见到各种 Pandas 配合其它纯Python …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;经常见到各种 Pandas 配合其它纯Python 模块折腾出来 …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="s27157694.jpg(JPEG 图像,300x300 像素)" src="http://img3.douban.com/lpic/s27157694.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://book.douban.com/subject/25779298/"&gt;利用Python进行数据分析&lt;/a&gt;&lt;/p&gt;
@@ -6411,7 +6415,7 @@ alias canopy="source \
 &lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://s5.zoomquiet.io/"&gt;s5.zoomquiet.io&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="_2"&gt;问题&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;忽然发现生成的代 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;忽然发现生成的代码颜色 …&lt;/p&gt;</summary><content type="html">
 &lt;h1 id="_1"&gt;背景&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html"&gt;rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:&lt;/p&gt;
@@ -6575,7 +6579,10 @@ alias canopy="source \
 &lt;p&gt;…&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;不要 …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;p&gt;不要: &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;php&lt;/li&gt;
+&lt;li&gt;mysql …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;p&gt;&lt;a href="http://blog.zoomquiet.io/cbi-zq-install.html"&gt;CBInstallfest 的体验&lt;/a&gt;
 之后,总是要一步步完成心目中的 家服务器&lt;/p&gt;
 &lt;h1 id="issue"&gt;Issue&lt;a class="headerlink" href="#issue" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
@@ -7879,7 +7886,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;li&gt;起初ZEUUX 作TEE 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;然后,就没有然后了&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;后来, 好容易一个 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
+&lt;p&gt;后来, 好容易一个蠎 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;一切开始自2006年!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;起初ZEUUX 作TEE 只是为了好玩,而且 Gudio 很喜欢: 有照片为证&lt;a href="http://wiki.woodpecker.org.cn/moin/ObpLovelyPython/LpyAttachZoomq#A.2BTrpyaQ-"&gt;ObpLovelyPython/LpyAttachZoomq - Woodpecker Wiki for &lt;span class="caps"&gt;CPUG&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;然后,就没有然后了&amp;#8230;&lt;/li&gt;

@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/index.html</loc>
-<lastmod>2023-05-20T10:57:31-00:00</lastmod>
+<lastmod>2023-05-20T11:11:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2023-05-20T10:57:31-00:00</lastmod>
+<lastmod>2023-05-20T11:11:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2023-05-20T10:57:31-00:00</lastmod>
+<lastmod>2023-05-20T11:11:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2023-05-20T10:57:31-00:00</lastmod>
+<lastmod>2023-05-20T11:11:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -54,7 +54,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/230519-1024code101.html</loc>
-<lastmod>2023-05-20T10:54:29+08:00</lastmod>
+<lastmod>2023-05-20T11:11:42+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1230,7 +1230,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/category/imho.html</loc>
-<lastmod>2023-05-20T10:54:29+08:06</lastmod>
+<lastmod>2023-05-20T11:11:42+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1258,21 +1258,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/dama.html</loc>
-<lastmod>2023-05-20T10:54:29+08:06</lastmod>
+<lastmod>2023-05-20T11:11:42+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/ide.html</loc>
-<lastmod>2023-05-20T10:54:29+08:06</lastmod>
+<lastmod>2023-05-20T11:11:42+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/saas.html</loc>
-<lastmod>2023-05-20T10:54:29+08:06</lastmod>
+<lastmod>2023-05-20T11:11:42+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2084,7 +2084,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2023-05-20T10:54:29+08:06</lastmod>
+<lastmod>2023-05-20T11:11:42+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>    Python 101: Writing a cleanup&nbsp;script
+    <title>    Python 101: Writing a cleanup script
 / 是也乎(￣▽￣)
 / ZoomQuiet.io    </title>
 
@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="py101-cleanup-script"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/py101-cleanup-script.html"/>
-            <meta property="og:description" content="Python 101: Writing a cleanup script | Bite Sized Python Tips So hi there guys! I hope you are fine. So what is in this post? Today we will be writing a cleanup script. The idea for this post came from Mike Driscol who recently wrote a very useful post about …"/>
+            <meta property="og:description" content="Python 101: Writing a cleanup script | Bite Sized Python Tips So hi there guys! I hope you are fine. So what is in this post? Today we will be writing a cleanup script. The idea for this post came from Mike Driscol who recently wrote a very useful post about …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -92,7 +92,7 @@
             <header class="page-header">
                 <h1>
                     <a href="https://blog.zoomquiet.io/py101-cleanup-script.html">
-                        Python 101: Writing a cleanup&nbsp;script
+                        Python 101: Writing a cleanup script
                     </a>
                 </h1>
             </header>
@@ -129,14 +129,14 @@
 </footer><!-- /.post-info -->                    </div>
                 </div>
 
-                <p><a href="http://freepythontips.wordpress.com/2014/01/23/python-101-writing-a-cleanup-script/">Python 101: Writing a cleanup script | Bite Sized Python&nbsp;Tips</a></p>
-<p>So hi there guys! I hope you are fine. So what is in this post? Today we will be writing a cleanup script. The idea for this post came from Mike Driscol who recently wrote a very useful post about writing a cleanup script in python. So how is my post different from his post? In my post I will be using path.py. When I used path.py for the first time I just fell in love with&nbsp;it.</p>
+                <p><a href="http://freepythontips.wordpress.com/2014/01/23/python-101-writing-a-cleanup-script/">Python 101: Writing a cleanup script | Bite Sized Python Tips</a></p>
+<p>So hi there guys! I hope you are fine. So what is in this post? Today we will be writing a cleanup script. The idea for this post came from Mike Driscol who recently wrote a very useful post about writing a cleanup script in python. So how is my post different from his post? In my post I will be using path.py. When I used path.py for the first time I just fell in love with it.</p>
 <h2 id="installing-pathpy">Installing path.py:<a class="headerlink" href="#installing-pathpy" title="Permanent link">&para;</a></h2>
 <p>So there are several ways for installing path.py. Path.py may be installed using setuptools or distribute or pip:
 easy_install path.py
-The latest release is always updated to the Python Package Index. The source code is hosted on&nbsp;Github.</p>
+The latest release is always updated to the Python Package Index. The source code is hosted on Github.</p>
 <h2 id="finding-the-number-of-files-in-a-directory">Finding the number of files in a directory:<a class="headerlink" href="#finding-the-number-of-files-in-a-directory" title="Permanent link">&para;</a></h2>
-<p>So our first task is to find the number of files present in a directory. In this example we will not iterate over subdirectories instead we will just count the number of files present in the top level directory. This one is simple. Here is my&nbsp;solution:</p>
+<p>So our first task is to find the number of files present in a directory. In this example we will not iterate over subdirectories instead we will just count the number of files present in the top level directory. This one is simple. Here is my solution:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span> 
 <span class="c1">#Replace DIRECTORY with your required directory</span>
@@ -145,7 +145,7 @@ The latest release is always updated to the Python Package Index. The source cod
 <span class="nb">print</span> <span class="n">num_files</span>
 </code></pre></div>
 
-<p>In this script we first of all imported the path module. Then we set the num_file variable to 0. This variable is going to keep count for the number of files in our directory. Then we call the path function with a directory name. Firthermore we iterate over the files present in the root of our directory and increment the num_files variable. Finally we print the value of num_files variable. Here is a litle bit modified version of this script which outputs the number of subdirectories present in the root of our&nbsp;directory.</p>
+<p>In this script we first of all imported the path module. Then we set the num_file variable to 0. This variable is going to keep count for the number of files in our directory. Then we call the path function with a directory name. Firthermore we iterate over the files present in the root of our directory and increment the num_files variable. Finally we print the value of num_files variable. Here is a litle bit modified version of this script which outputs the number of subdirectories present in the root of our directory.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span> 
 <span class="c1">#Replace DIRECTORY with your required directory</span>
@@ -155,7 +155,7 @@ The latest release is always updated to the Python Package Index. The source cod
 </code></pre></div>
 
 <h2 id="finding-the-number-of-files-recursively-in-a-directory">Finding the number of files recursively in a directory:<a class="headerlink" href="#finding-the-number-of-files-recursively-in-a-directory" title="Permanent link">&para;</a></h2>
-<p>That was easy! Wasn&#8217;t it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in&nbsp;Python.</p>
+<p>That was easy! Wasn't it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in Python.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="n">file_count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">dir_count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -172,9 +172,9 @@ The latest release is always updated to the Python Package Index. The source cod
     <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
 </code></pre></div>
 
-<p>print &#8220;Total number of files == {0}&#8221;.format(file_count)
-print &#8220;Total number of directories == {0}&#8221;.format(dir_count)
-That was again very easy. Now what if we want to pretty print the directory names? I know there are some terminal one-liners but here we are talking about Python only. Lets see how we can achieve&nbsp;that.</p>
+<p>print "Total number of files == {0}".format(file_count)
+print "Total number of directories == {0}".format(dir_count)
+That was again very easy. Now what if we want to pretty print the directory names? I know there are some terminal one-liners but here we are talking about Python only. Lets see how we can achieve that.</p>
 <div class="highlight"><pre><span></span><code><span class="n">files_loc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{}</span><span class="w"></span>
 <span class="n">file_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
 <span class="n">dir_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
@@ -201,19 +201,19 @@ That was again very easy. Now what if we want to pretty print the directory name
 <span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;|&quot;</span><span class="w"></span>
 </code></pre></div>
 
-<p>There is nothing fancy here. In this script we are just pretty printing a directory and the files it contains. Now lets&nbsp;continue.</p>
+<p>There is nothing fancy here. In this script we are just pretty printing a directory and the files it contains. Now lets continue.</p>
 <h2 id="deleting-a-specific-file-from-a-directory">Deleting a specific file from a directory:<a class="headerlink" href="#deleting-a-specific-file-from-a-directory" title="Permanent link">&para;</a></h2>
-<p>So lets suppose we have a file called this_file_sucks.py. Now how do we delete it. Lets make this seranio more real by saying that we do not know in which directory it is placed. Its simple to solve this problem as well. Just go to the top level directory and execute this&nbsp;script:</p>
+<p>So lets suppose we have a file called this_file_sucks.py. Now how do we delete it. Lets make this seranio more real by saying that we do not know in which directory it is placed. Its simple to solve this problem as well. Just go to the top level directory and execute this script:</p>
 <p>from path import path
-d = path(<span class="caps">DIRECTORY</span>)</p>
+d = path(DIRECTORY)</p>
 <h1 id="replace-directory-with-your-desired-directory">replace directory with your desired directory<a class="headerlink" href="#replace-directory-with-your-desired-directory" title="Permanent link">&para;</a></h1>
 <p>for i in d.walk():
     if i.isfile():
-        if i.name == &#8216;php.py&#8217;:
+        if i.name == 'php.py':
             i.remove()
-In the above script I did not implement any logging and error handling. That is left as an exercise for the&nbsp;reader.</p>
+In the above script I did not implement any logging and error handling. That is left as an exercise for the reader.</p>
 <h2 id="deleting-files-based-on-their-extension">Deleting files based on their extension<a class="headerlink" href="#deleting-files-based-on-their-extension" title="Permanent link">&para;</a></h2>
-<p>Just suppose you want to remove all the &#8216;.pyc&#8217; files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in&nbsp;path.py.</p>
+<p>Just suppose you want to remove all the '.pyc' files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in path.py.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
 <span class="n">files</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">walkfiles</span><span class="p">(</span><span class="s2">&quot;*.pyc&quot;</span><span class="p">)</span>
@@ -224,9 +224,9 @@ In the above script I did not implement any logging and error handling. That is 
 </code></pre></div>
 
 <h2 id="deleting-files-based-on-their-size">Deleting files based on their size:<a class="headerlink" href="#deleting-files-based-on-their-size" title="Permanent link">&para;</a></h2>
-<p>So another interesting scenario. What if we want to delete those files which exceed 5Mb&nbsp;size?</p>
-<p><code>NOTE:</code> There is a difference between Mb and <span class="caps">MB</span>. I will be covering Mb here. 
-Is it possible with path.py? Yes it is! So here is a script which does this&nbsp;work:</p>
+<p>So another interesting scenario. What if we want to delete those files which exceed 5Mb size?</p>
+<p><code>NOTE:</code> There is a difference between Mb and MB. I will be covering Mb here. 
+Is it possible with path.py? Yes it is! So here is a script which does this work:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">d</span> <span class="o">=</span> <span class="nv">path</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">./</span><span class="s1">&#39;</span><span class="ss">)</span>
 <span class="nv">del_size</span> <span class="o">=</span> <span class="mi">4522420</span>
 <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">d</span>.<span class="nv">walk</span><span class="ss">()</span>:
@@ -237,9 +237,9 @@ Is it possible with path.py? Yes it is! So here is a script which does this&nbsp
             <span class="nv">i</span>.<span class="nv">remove</span><span class="ss">()</span>
 </code></pre></div>
 
-<p>So we saw how we can remove files based on their&nbsp;size.</p>
+<p>So we saw how we can remove files based on their size.</p>
 <h2 id="deleting-files-based-on-their-last-access-time">Deleting files based on their last access time<a class="headerlink" href="#deleting-files-based-on-their-last-access-time" title="Permanent link">&para;</a></h2>
-<p>In this part we will take a look on how to delete files based on their last access time. I have written the code below to achieve this target. Just change the number of days to anything you like. This script will remove the files which were last modified before the <span class="caps">DAYS</span>&nbsp;variable.</p>
+<p>In this part we will take a look on how to delete files based on their last access time. I have written the code below to achieve this target. Just change the number of days to anything you like. This script will remove the files which were last modified before the DAYS variable.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
@@ -259,12 +259,12 @@ Is it possible with path.py? Yes it is! So here is a script which does this&nbsp
 <span class="nb">print</span> <span class="n">removed</span>
 </code></pre></div>
 
-<p>So we have also learned how to remove files based on their last modified time. If you want to delete files based on last access time just change i.mtime to i.atime and you will be good to&nbsp;go.</p>
+<p>So we have also learned how to remove files based on their last modified time. If you want to delete files based on last access time just change i.mtime to i.atime and you will be good to go.</p>
 <h2 id="goodbye">Goodbye<a class="headerlink" href="#goodbye" title="Permanent link">&para;</a></h2>
-<p>So that was it. I hope you liked the post. In the end I would like to make a public apology that my English is not good so you may find some grammar mistakes. You are requested to email them to me so that I can improve my English. If you liked this post then don&#8217;t forget to follow me on twitter and facebook. A retweet won&#8217;t hurt either! If you want to send me a pm then use this&nbsp;email.</p>
+<p>So that was it. I hope you liked the post. In the end I would like to make a public apology that my English is not good so you may find some grammar mistakes. You are requested to email them to me so that I can improve my English. If you liked this post then don't forget to follow me on twitter and facebook. A retweet won't hurt either! If you want to send me a pm then use this email.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
-<li>140125 翻译 Weekly issue:99.5&nbsp;时发现,转抄学习</li>
+<li>140125 翻译 Weekly issue:99.5 时发现,转抄学习</li>
 </ul>
 
             </div>

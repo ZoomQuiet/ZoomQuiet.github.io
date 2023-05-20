@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>    拙见/&nbsp;DNS之殇
+    <title>    拙见/ DNS之殇
 / 是也乎(￣▽￣)
 / ZoomQuiet.io    </title>
 
@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="imho-murmur-dns-sad-story"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/imho-murmur-dns-sad-story.html"/>
-            <meta property="og:description" content="MurMur/ DNS in china is one kinds of sadding song"/>
+            <meta property="og:description" content="MurMur/ DNS in china is one kinds of sadding song"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -92,7 +92,7 @@
             <header class="page-header">
                 <h1>
                     <a href="https://blog.zoomquiet.io/imho-murmur-dns-sad-story.html">
-                        拙见/&nbsp;DNS之殇
+                        拙见/ DNS之殇
                     </a>
                 </h1>
             </header>
@@ -131,51 +131,52 @@
 
                 <p>这是大妈在 <strong>ZoomQuiet</strong> 的第<strong>011</strong>篇原创</p>
 <blockquote>
-<p>普通程序老猿一则感叹&#8230;</p>
+<p>普通程序老猿一则感叹...</p>
 </blockquote>
 <hr>
 <h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>自从能家庭上网,&nbsp;我们就一直和网络服务供应商在斗智斗勇;</p>
-<p>最早 瀛海威&nbsp;的互联网广告是:</p>
+<p>自从能家庭上网, 我们就一直和网络服务供应商在斗智斗勇;</p>
+<p>最早 瀛海威 的互联网广告是:</p>
 <div class="highlight"><pre><span></span><code>中国人离信息高速公路有多远
 ———向北1500米
 </code></pre></div>
 
-<p>现在想,&nbsp;是真的良心&#8230;</p>
+<p>现在想, 是真的良心...</p>
 <hr>
 <h2 id="_2">现象<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>gitlab.com&nbsp;每天不同时段打开的速度完全不同</li>
-<li>github-pages&nbsp;发布的静态网站经常无法打开</li>
-<li>git pull&nbsp;工作仓库有时说仓库不存在</li>
-<li>&#8230;</li>
+<li>gitlab.com 每天不同时段打开的速度完全不同</li>
+<li>github-pages 发布的静态网站经常无法打开</li>
+<li>git pull 工作仓库有时说仓库不存在</li>
+<li>...</li>
 </ul>
 <p>而家中的互联网接入有这么几个:</p>
 <ul>
-<li>移动宽带, 手机158套餐送的, 很多年了, 也自动升级到 500M 光纤, 配 Nighthawk R7000&nbsp;无线路由器</li>
-<li>移动宽带, 手机98套餐送的, 很多年了, 也自动升级到 300M 光纤, 原配 <span class="caps">TP</span>-Link&nbsp;无线路由器</li>
-<li>广东有线宽带, 电视台强行升级, 原配杂牌 <span class="caps">AP</span></li>
-<li>华为 mifi , 自驾旅游时用, 配置飞猫物联网流量卡,&nbsp;600G/月</li>
+<li>移动宽带, 手机158套餐送的, 很多年了, 也自动升级到 500M 光纤, 配 Nighthawk R7000 无线路由器</li>
+<li>移动宽带, 手机98套餐送的, 很多年了, 也自动升级到 300M 光纤, 原配 TP-Link 无线路由器</li>
+<li>广东有线宽带, 电视台强行升级, 原配杂牌 AP</li>
+<li>华为 mifi , 自驾旅游时用, 配置飞猫物联网流量卡, 600G/月</li>
 </ul>
 <hr>
 <h2 id="_3">嗯哼<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>101.camp 是无意中在 naemcheap 抢到的域名, 用 github-pages 发布,
-基于 cloudflare&nbsp;进行加速.</p>
-<p>没想到除了 mifi 其它基本无法打开,&nbsp;感觉不对味儿.</p>
-<p>追查了一下, 发现, cloudflare 发布的公共 <span class="caps">DNS</span> 服务:&nbsp;1.1.1.1 </p>
+基于 cloudflare 进行加速.</p>
+<p>没想到除了 mifi 其它基本无法打开,
+感觉不对味儿.</p>
+<p>追查了一下, 发现, cloudflare 发布的公共 DNS 服务: 1.1.1.1 </p>
 <ul>
-<li>除了 mifi 无线接入电脑后, 可以 Ping&nbsp;通</li>
-<li>其它所有 wifi 热点, 接入后,&nbsp;根本不解析</li>
-<li>这就很说明问题了&#8230;</li>
+<li>除了 mifi 无线接入电脑后, 可以 Ping 通</li>
+<li>其它所有 wifi 热点, 接入后, 根本不解析</li>
+<li>这就很说明问题了...</li>
 </ul>
 <p><img alt="R7000" src="http://ydlj.zoomquiet.top/ipic/2020-03-31-cfgAP.jpg"></p>
 <blockquote>
-<p>追查了一下国内可用公共 <span class="caps">DNS</span> 服务,&nbsp;在路由器上配置</p>
+<p>追查了一下国内可用公共 DNS 服务, 在路由器上配置</p>
 </blockquote>
 <p><img alt="cnPUBDNS" src="http://ydlj.zoomquiet.top/ipic/2020-03-31-cnPUBDNS.jpg"></p>
-<p>对比, 无法配置 <span class="caps">AP</span>&nbsp;的有线宽带:</p>
+<p>对比, 无法配置 AP 的有线宽带:</p>
 <p><img alt="cnNOMDNS" src="http://ydlj.zoomquiet.top/ipic/2020-03-31-cnNOMDNS.jpg"></p>
-<p>以及一直可以访问, 但是很慢的 mifi&nbsp;:</p>
+<p>以及一直可以访问, 但是很慢的 mifi :</p>
 <p><img alt="mifi" src="http://ydlj.zoomquiet.top/ipic/2020-03-31-mifi.jpg"></p>
 <hr>
 <h2 id="_4">所以<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
@@ -185,42 +186,42 @@
 <span class="n">天天向上</span>
 </code></pre></div>
 
-<p>这儿的 <code>好</code>, 是四声,&nbsp;自己喜欢的事儿.</p>
+<p>这儿的 <code>好</code>, 是四声, 自己喜欢的事儿.</p>
 <p>什么是不惑?</p>
 <blockquote>
 <p>从心所欲不逾距</p>
 </blockquote>
-<p>也就是说, 将欲望本身进行 hacking ,&nbsp;从源头清除可能触发和谐的念头.</p>
-<p>那么,&nbsp;具体怎么作呢?</p>
-<p>这是另外一个系列的嗯哼了&#8230;</p>
+<p>也就是说, 将欲望本身进行 hacking , 从源头清除可能触发和谐的念头.</p>
+<p>那么, 具体怎么作呢?</p>
+<p>这是另外一个系列的嗯哼了...</p>
 <hr>
 <h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.iplaysoft.com/p/cloudflare-dns">1.1.1.1 好记牛逼 - Cloudflare 推出全球平均速度最快的 <span class="caps">DNS</span>！ - 异次元软件下载</a><ul>
-<li><a href="https://www.iplaysoft.com/news/2773">腾讯旗下 DNSPod 也推出公共 <span class="caps">DNS</span> 解析服务 Public <span class="caps">DNS</span>+ -&nbsp;异次元软件下载</a></li>
-<li><a href="https://www.iplaysoft.com/alidns.html">阿里公共 <span class="caps">DNS</span> 解析服务器 - 上网加速、无广告、无劫持、全国高速节点、低延迟响应 -&nbsp;异次元软件下载</a></li>
+<li><a href="https://www.iplaysoft.com/p/cloudflare-dns">1.1.1.1 好记牛逼 - Cloudflare 推出全球平均速度最快的 DNS！ - 异次元软件下载</a><ul>
+<li><a href="https://www.iplaysoft.com/news/2773">腾讯旗下 DNSPod 也推出公共 DNS 解析服务 Public DNS+ - 异次元软件下载</a></li>
+<li><a href="https://www.iplaysoft.com/alidns.html">阿里公共 DNS 解析服务器 - 上网加速、无广告、无劫持、全国高速节点、低延迟响应 - 异次元软件下载</a></li>
 </ul>
 </li>
-<li>&#8230;</li>
+<li>...</li>
 <li>豆列:<a href="https://www.douban.com/doulist/119293075/">蟒营™101.camp</a></li>
 </ul>
-<p>文中链接感谢<a href="https://linux.cn/static/tools/a.html">&#8220;文章助手&#8221;的助手</a> 的支持,
-(来自 <a href="(https://linux.cn/article-11850-1.html)">LINUX中国</a>&nbsp;的小应用)</p>
+<p>文中链接感谢<a href="https://linux.cn/static/tools/a.html">"文章助手"的助手</a> 的支持,
+(来自 <a href="(https://linux.cn/article-11850-1.html)">LINUX中国</a> 的小应用)</p>
 <ul>
-<li>点击, 将自动跳入小应用,&nbsp;并复制链接到剪贴板</li>
-<li>然后, 打开浏览器, 复制到地址栏,&nbsp;就能访问了</li>
-<li>好处,&nbsp;避开了微信内置特殊浏览器的有关屏蔽策略</li>
-<li>问题, 操作复杂了, 要打开手机上的浏览器,&nbsp;如果在桌面微信则无法使用</li>
+<li>点击, 将自动跳入小应用, 并复制链接到剪贴板</li>
+<li>然后, 打开浏览器, 复制到地址栏, 就能访问了</li>
+<li>好处, 避开了微信内置特殊浏览器的有关屏蔽策略</li>
+<li>问题, 操作复杂了, 要打开手机上的浏览器, 如果在桌面微信则无法使用</li>
 </ul>
-<p><span class="caps">JD</span> 下单链接 -&gt; 点击后再打开浏览器复制到地址栏访问 -&gt;&nbsp;俺能获得少许佣金:</p>
+<p>JD 下单链接 -&gt; 点击后再打开浏览器复制到地址栏访问 -&gt; 俺能获得少许佣金:</p>
 <ul>
 <li><a href="https://union-click.jd.com/jdc?e=&amp;p=AyIGZRNdEgMTDlEbXCUHEANXGlgSCxsOUysfSlpMWGVCHlBDUAxLBQNQVk4YCQQAQB1AWQkFHUVBRhkSQw9THUJVEEMFSgxUVxZPI0AOFwVRGVoWBRsOXB1rC2RaQQNlDEFhZ0NcT159dhtGKX5bUw4eN1QrWxQDEQVWGFkXBSI3VRxrVGwXBl0cXiUDIgdRElkdBxIAUxhcFwsiAFUSa35cTFs1XwNBRyI3ZRhrJTISN1YrGXsBQVcFElNCARMPAU5eEVIVD1wfDxMDFQcBTwkQVkJXUytZFAMWDg%3D%3D">寻路中国&amp;江城(共2册)</a></li>
-<li>&#8230;</li>
+<li>...</li>
 </ul>
 <hr>
 <blockquote>
 <blockquote>
-<p><span class="caps">NN</span>&nbsp;3969</p>
+<p>NN 3969</p>
 </blockquote>
 </blockquote>
 <p>好文笔,感叹号年度配额: <strong>1/3</strong></p>

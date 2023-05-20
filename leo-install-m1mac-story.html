@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>    M1macOS 下 Leo&nbsp;复活故事
+    <title>    M1macOS 下 Leo 复活故事
 / 是也乎(￣▽￣)
 / ZoomQuiet.io    </title>
 
@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="leo-install-m1mac-story"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/leo-install-m1mac-story.html"/>
-            <meta property="og:description" content="Background¶ 背景 Leo 是文学化编辑环境, 由 EKR/令老爷子 单人为主长期维护的优秀开发/编撰/思考/…环境; 从 05 年上手以来, 一直在各种场 …"/>
+            <meta property="og:description" content="Background¶ 背景 Leo 是文学化编辑环境, 由 EKR/令老爷子 单人为主长期维护的优秀开发/编撰/思考/...环境; 从 05 年上手以来, 一直在各种场 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -92,7 +92,7 @@
             <header class="page-header">
                 <h1>
                     <a href="https://blog.zoomquiet.io/leo-install-m1mac-story.html">
-                        M1macOS 下 Leo&nbsp;复活故事
+                        M1macOS 下 Leo 复活故事
                     </a>
                 </h1>
             </header>
@@ -137,11 +137,11 @@
 <li><a href="#troubles">Troubles</a></li>
 <li><a href="#goal">Goal</a></li>
 <li><a href="#tracing">Tracing</a><ul>
-<li><a href="#pyenv">尝试 PyENV</a></li>
-<li><a href="#miniconda">尝试 miniconda</a></li>
+<li><a href="#pyenv">尝试 PyENV</a></li>
+<li><a href="#miniconda">尝试 miniconda</a></li>
 <li><a href="#pyqt">PyQt</a></li>
 <li><a href="#_1">混合安装:</a><ul>
-<li><a href="#ps"><span class="caps">PS</span>:</a></li>
+<li><a href="#ps">PS:</a></li>
 </ul>
 </li>
 </ul>
@@ -157,34 +157,34 @@
 <blockquote>
 <p>背景</p>
 </blockquote>
-<p>Leo 是文学化编辑环境, 由 <span class="caps">EKR</span>/令老爷子 单人为主长期维护的优秀开发/编撰/思考/…环境;
+<p>Leo 是文学化编辑环境, 由 EKR/令老爷子 单人为主长期维护的优秀开发/编撰/思考/...环境;
 从 05 年上手以来, 一直在各种场景中欢快的使用,
-历经 WindownsNT/Ubuntu/<span class="caps">MAC</span> 到现在的 macOS 12.* ,
-可以说, 依托 Python 的跨平台属性, 一直能相对平滑的迁移;</p>
-<p>比如: <a href="https://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme custom</a></p>
-<p>事实上官方文档中: <a href="http://leoeditor.com/installing.html#installing-leo-on-macos-10-7-lion-and-later">Installing Leo — Leo 6.6.2 documentation</a> ~ Installing Leo on MacOs 10.7 (Lion) 部分其实就是俺的笔记转化而成的.</p>
-<p>为解决本地开发测试, 并尽可能复用运行时到相似的工程中, 以往选择的管理工具是 <a href="https://github.com/pyenv/pyenv">pyenv/pyenv: Simple Python version management</a></p>
-<p>参考:<a href="https://testdriven.io/blog/python-environments/">Modern Python Environments - dependency and workspace management | TestDriven.io</a></p>
+历经 WindownsNT/Ubuntu/MAC 到现在的 macOS 12.* ,
+可以说, 依托 Python 的跨平台属性, 一直能相对平滑的迁移;</p>
+<p>比如: <a href="https://blog.zoomquiet.io/leo5theme.html">Leo 5.2 theme custom</a></p>
+<p>事实上官方文档中: <a href="http://leoeditor.com/installing.html#installing-leo-on-macos-10-7-lion-and-later">Installing Leo — Leo 6.6.2 documentation</a> ~ Installing Leo on MacOs 10.7 (Lion) 部分其实就是俺的笔记转化而成的.</p>
+<p>为解决本地开发测试, 并尽可能复用运行时到相似的工程中, 以往选择的管理工具是 <a href="https://github.com/pyenv/pyenv">pyenv/pyenv: Simple Python version management</a></p>
+<p>参考:<a href="https://testdriven.io/blog/python-environments/">Modern Python Environments - dependency and workspace management | TestDriven.io</a></p>
 <p><img alt="Modern Python Environments" src="https://ipic.zoomquiet.top/2022-05-29-PyEnvironments-vs.jpg"/></p>
 <p>以往形成的习惯是:</p>
 <ul>
-<li>用 PyENV 安装不同版本 Python 运行时, 毕竟不同工程部署在不同目标主机中, 对 Python 版本依赖不同</li>
+<li>用 PyENV 安装不同版本 Python 运行时, 毕竟不同工程部署在不同目标主机中, 对 Python 版本依赖不同</li>
 <li>基于 PyENV 的自动绑定机制, 在对应目录中通过指令 <code>pyenv local [指定运行时别名]</code> <ul>
-<li>就可以记忆绑定关系, 之后嘦进入相关目录, 将自动完成运行时切换</li>
+<li>就可以记忆绑定关系, 之后嘦进入相关目录, 将自动完成运行时切换</li>
 <li>不必须象其它工具要人工明确运行激活指令</li>
 </ul>
 </li>
-<li>进入对应环境后, 使用 pip 进行标准模块依赖管理</li>
+<li>进入对应环境后, 使用 pip 进行标准模块依赖管理</li>
 </ul>
 <p>整体上可以达成效果:</p>
 <ul>
-<li>本地和生产环境能部署相同 PyENV 环境</li>
-<li>支持不同版本 Python 运行时</li>
-<li>支持不同项目有自己的模块依赖树, 和其它工程隔离</li>
-<li>支持不同工程, 如果领域接近, 可以绑定其它项目的 PyENV 环境, 节省相同模块的反复安装</li>
-<li>…即: Python 运行时版本/项目目录/工程依赖 三者能相对独立配置/管理<ul>
-<li>而且, 值得强调的是, 对于配置好的环境, cd 进入时, 自动完成切换</li>
-<li>同时, 所有定制运行环境, 统一安装在指定目录中, 和工程目录无关, 不必专门进行 git 忽略配置</li>
+<li>本地和生产环境能部署相同 PyENV 环境</li>
+<li>支持不同版本 Python 运行时</li>
+<li>支持不同项目有自己的模块依赖树, 和其它工程隔离</li>
+<li>支持不同工程, 如果领域接近, 可以绑定其它项目的 PyENV 环境, 节省相同模块的反复安装</li>
+<li>...即: Python 运行时版本/项目目录/工程依赖 三者能相对独立配置/管理<ul>
+<li>而且, 值得强调的是, 对于配置好的环境, cd 进入时, 自动完成切换</li>
+<li>同时, 所有定制运行环境, 统一安装在指定目录中, 和工程目录无关, 不必专门进行 git 忽略配置</li>
 </ul>
 </li>
 </ul>
@@ -192,35 +192,35 @@
 <blockquote>
 <p>问题</p>
 </blockquote>
-<p>不过, 在今年初升级硬件为芯片为 M1max 全新 <span class="caps">MBP</span> 后, 就一直有问题:</p>
-<p>参考: <a href="https://blog.zoomquiet.io/211114m1max-re-inti-mbp">如何安定进入 M1maxMBP / 是也乎(￣▽￣) / ZoomQuiet.io</a></p>
+<p>不过, 在今年初升级硬件为芯片为 M1max 全新 MBP 后, 就一直有问题:</p>
+<p>参考: <a href="https://blog.zoomquiet.io/211114m1max-re-inti-mbp">如何安定进入 M1maxMBP / 是也乎(￣▽￣) / ZoomQuiet.io</a></p>
 <p>虽然当时幸运的使用官方迁移工具, 将几乎 94.2% 的环境和数据都自动迁移成功;
 由于底层芯片不同, 以往 Python 本地运行时环境虽然能用,
-但是, 无法进一步安装新版本 Python 运行时, 以及升级 Leo 到最新版本…</p>
+但是, 无法进一步安装新版本 Python 运行时, 以及升级 Leo 到最新版本...</p>
 <p>具体的:</p>
 <ul>
 <li>原先在 Intel 芯片中安装/配置好的 PyENV 环境可以运行<ul>
-<li>但是, 无法安装新版本 Python 环境</li>
-<li>也无法正常使用对应环境中的 pip 安装新模块</li>
+<li>但是, 无法安装新版本 Python 环境</li>
+<li>也无法正常使用对应环境中的 pip 安装新模块</li>
 </ul>
 </li>
 <li>原先在 Intel 芯片中安装/配置好的 miniconda 环境可以运行<ul>
 <li>但是, <code>conda info</code> 报错</li>
 </ul>
 </li>
-<li>..感觉只有一组很小的 snap 可以使用, 已经不是两个完备可控的 Python 运行时管理环境了</li>
+<li>..感觉只有一组很小的 snap 可以使用, 已经不是两个完备可控的 Python 运行时管理环境了</li>
 </ul>
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>目标</p>
 </blockquote>
-<p>恢复本地 Python 环境的控制:</p>
+<p>恢复本地 Python 环境的控制:</p>
 <ul>
-<li>可以自如安装多种版本 Python 运行时</li>
-<li>可以针对不同工程绑定不同模块依赖树, 当然, 也可以复用相同的</li>
+<li>可以自如安装多种版本 Python 运行时</li>
+<li>可以针对不同工程绑定不同模块依赖树, 当然, 也可以复用相同的</li>
 <li>可以安装运行最新 Leo 版本<ul>
-<li>当前可用是 5.9-b2</li>
-<li>官方已经是 6.6.2 了</li>
+<li>当前可用是 5.9-b2</li>
+<li>官方已经是 6.6.2 了</li>
 </ul>
 </li>
 </ul>
@@ -232,39 +232,39 @@
 <p><img alt="screenfetch" src="https://ipic.zoomquiet.top/2022-05-29-220529-screenfetch.jpg"/></p>
 <h3 id="pyenv">尝试 PyENV<a class="headerlink" href="#pyenv" title="Permanent link">¶</a></h3>
 <ul>
-<li>先在 <code>~/.bash_profile</code> 中注释掉所有 PyENV 相关的配置,</li>
+<li>先在 <code>~/.bash_profile</code> 中注释掉所有 PyENV 相关的配置,</li>
 <li>将 <code>~/.pyenv</code> 移动为 <code>~/_pyenv</code></li>
 <li>根据官方指引: <a href="https://github.com/pyenv/pyenv">pyenv/pyenv: Simple Python version management</a> 重新安装<ul>
-<li>而且事先根据 <a href="https://github.com/pyenv/pyenv/wiki#suggested-build-environment">Home · pyenv/pyenv Wiki</a> 的建议</li>
-<li>重新安装了 Python 编译依赖</li>
+<li>而且事先根据 <a href="https://github.com/pyenv/pyenv/wiki#suggested-build-environment">Home · pyenv/pyenv Wiki</a> 的建议</li>
+<li>重新安装了 Python 编译依赖</li>
 </ul>
 </li>
 </ul>
-<p>一切正常, 其实依赖通过 brew 安装的 python@3.9 完成自举</p>
+<p>一切正常, 其实依赖通过 brew 安装的 python@3.9 完成自举</p>
 <div class="highlight"><pre><span></span><code>Python 3.9.8 (main, Nov 10 2021, 03:55:42)
 [Clang 13.0.0 (clang-1300.0.29.3)] on darwin
 </code></pre></div>
 <p>可惜, 尝试通过 <code>pyenv install</code> 指令来安装其它版本 Python 环境,
-都撞到编译失败, 反复探索, 网上给的招儿都用过, 还是无法解决.</p>
+都撞到编译失败, 反复探索, 网上给的招儿都用过, 还是无法解决.</p>
 <h3 id="miniconda">尝试 miniconda<a class="headerlink" href="#miniconda" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>怀疑 PyENV 准备的编译脚本都是针对 Intel 背景的</p>
+<p>怀疑 PyENV 准备的编译脚本都是针对 Intel 背景的</p>
 </blockquote>
-<p>所以, 重新将目光投向 Anaconda, 要知道这个项目已经不仅仅可以管理 Python 环境, 而且其它各种运行时环境都可以管理, 包含 rust/haskell/… 都可以通过 conda 指令一致性部署, 
-而且事先经过不同平台的针对性预编译, 不用在本地折腾, 直接下载, 展开就可用;</p>
-<p>而且, 进入 conda 运行时环境后, 可以继续用 conda 指令安装相关模块, 也可以用 pip 来从 PyPI 下载安装…</p>
-<p>唯一不如 PyENV 的就是 conda 环境, 必须手工激活, 无法自动绑定;</p>
+<p>所以, 重新将目光投向 Anaconda, 要知道这个项目已经不仅仅可以管理 Python 环境, 而且其它各种运行时环境都可以管理, 包含 rust/haskell/... 都可以通过 conda 指令一致性部署, 
+而且事先经过不同平台的针对性预编译, 不用在本地折腾, 直接下载, 展开就可用;</p>
+<p>而且, 进入 conda 运行时环境后, 可以继续用 conda 指令安装相关模块, 也可以用 pip 来从 PyPI 下载安装...</p>
+<p>唯一不如 PyENV 的就是 conda 环境, 必须手工激活, 无法自动绑定;</p>
 <p>之前 miniconda 是手工安装的, 现在已经有全新 arm 版本 brew 环境了,
-参考: <a href="https://sspai.com/post/63935#!">在 M1 芯片 Mac 上使用 Homebrew - 少数派</a></p>
+参考: <a href="https://sspai.com/post/63935#!">在 M1 芯片 Mac 上使用 Homebrew - 少数派</a></p>
 <p>标准安装:</p>
 <div class="highlight"><pre><span></span><code>abrew install miniconda
 </code></pre></div>
-<p>因为进行了多 homebrew 环境配置:</p>
+<p>因为进行了多 homebrew 环境配置:</p>
 <ul>
-<li>ibrew 指向旧系统迁移过来的 Intel 版本 homebrew</li>
-<li>abrew 指向全新安装的 <span class="caps">ARM</span> 版本 homebrew</li>
+<li>ibrew 指向旧系统迁移过来的 Intel 版本 homebrew</li>
+<li>abrew 指向全新安装的 ARM 版本 homebrew</li>
 </ul>
-<p>然后, 就可以探查当前支持那些 Python 版本了:</p>
+<p>然后, 就可以探查当前支持那些 Python 版本了:</p>
 <div class="highlight"><pre><span></span><code>$ conda search <span class="s2">"^Python</span>$<span class="s2">"</span>
 Loading channels: <span class="k">done</span>
 <span class="c1"># Name                       Version           Build  Channel</span>
@@ -282,21 +282,21 @@ python                        <span class="m">3</span>.10.0      hbdb9e5c_5  pkg
 python                        <span class="m">3</span>.10.3      hbdb9e5c_5  pkgs/main
 python                        <span class="m">3</span>.10.4      hbdb9e5c_0  pkgs/main
 </code></pre></div>
-<p>安装一个 Leo 专用的环境:</p>
+<p>安装一个 Leo 专用的环境:</p>
 <div class="highlight"><pre><span></span><code>$ conde create -n leo3811 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8.11
 </code></pre></div>
 <p>通过指令进入:</p>
 <div class="highlight"><pre><span></span><code>$ conda activate leo3811
 </code></pre></div>
-<p>通过事先安装 <code>pip_search</code> 可以搜索出配置的PyPI 镜像是否包含 Leo:</p>
+<p>通过事先安装 <code>pip_search</code> 可以搜索出配置的PyPI 镜像是否包含 Leo:</p>
 <p><img alt="pip_search" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-28%2000.07.02.jpg"/></p>
-<p>通过 pip 安装 Leo:</p>
+<p>通过 pip 安装 Leo:</p>
 <div class="highlight"><pre><span></span><code>$ pip install leo
 </code></pre></div>
 <p><img alt="PyQt" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-28%2000.07.22.jpg"/></p>
 <p>过程中, 可以观察到很多编译错误, 
 但是, 安装脚本足够聪明, 可以逐一版本降低来尝试最终兼容;
-安装完成后, 尝试运行:</p>
+安装完成后, 尝试运行:</p>
 <div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">leo</span>
 <span class="n">leoQt</span><span class="o">.</span><span class="n">py</span><span class="p">:</span> <span class="n">can</span> <span class="ow">not</span> <span class="n">fully</span> <span class="kn">import</span> <span class="nn">PyQt5.</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
@@ -322,26 +322,26 @@ python                        <span class="m">3</span>.10.4      hbdb9e5c_0  pkg
     <span class="n">qt_version</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QT_VERSION_STR</span>
 <span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">'QtCore'</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
 </code></pre></div>
-<p>没招, 问 Leo 官方 mailling-list: https://groups.google.com/d/msgid/leo-editor</p>
-<p>不久, tbp100.tp@gmail.com 建议:</p>
+<p>没招, 问 Leo 官方 mailling-list: https://groups.google.com/d/msgid/leo-editor</p>
+<p>不久, tbp100.tp@gmail.com 建议:</p>
 <blockquote>
-<p>this looks like a problem with Qt or PyQt, not leo per se. possibilities:</p>
+<p>this looks like a problem with Qt or PyQt, not leo per se. possibilities:</p>
 </blockquote>
 <ul>
-<li>try to install PyQt6 on its own (without the rest of leo);</li>
-<li>try to install an earlier version of PyQt6, if you can figure out which ones are available;</li>
-<li>try installing PyQt5 instead of PyQt6 (Leo can use either one); </li>
-<li>install python 3.9 and see whether PyQt6 or PyQt5 will install without errors.</li>
+<li>try to install PyQt6 on its own (without the rest of leo);</li>
+<li>try to install an earlier version of PyQt6, if you can figure out which ones are available;</li>
+<li>try installing PyQt5 instead of PyQt6 (Leo can use either one); </li>
+<li>install python 3.9 and see whether PyQt6 or PyQt5 will install without errors.</li>
 </ul>
 <h3 id="pyqt">PyQt<a class="headerlink" href="#pyqt" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>想起来 Qt 是个神奇的东西…</p>
+<p>想起来 Qt 是个神奇的东西...</p>
 </blockquote>
-<p>之前进行桌面开发时, PyQt 就不能简单安装, 对应搜索</p>
-<p>国内用户首先要配置 conda 源:</p>
+<p>之前进行桌面开发时, PyQt 就不能简单安装, 对应搜索</p>
+<p>国内用户首先要配置 conda 源:</p>
 <div class="highlight"><pre><span></span><code>$ conda config --set show_channel_urls yes
 </code></pre></div>
-<p>生成 <code>~/.condarc</code> 文件后对应修改, 比如俺当前是:</p>
+<p>生成 <code>~/.condarc</code> 文件后对应修改, 比如俺当前是:</p>
 <div class="highlight"><pre><span></span><code><span class="n">auto_activate_base</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
 <span class="n">report_errors</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
 <span class="n">show_channel_urls</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
@@ -492,29 +492,29 @@ leo3911                  /opt/homebrew/Caskroom/miniconda/base/envs/leo3911
 <span class="n">Proceed</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">y</span><span class="o">]/</span><span class="n">n</span><span class="p">)</span><span class="vm">?</span><span class="w"></span>
 </code></pre></div>
 <blockquote>
-<p>$ pip install leo</p>
+<p>$ pip install leo</p>
 </blockquote>
 <p><img alt="PyQtWebEngine" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-29%2021.41.02.jpg"/></p>
-<p>也有安装失败, 持续自动降级现象…</p>
+<p>也有安装失败, 持续自动降级现象...</p>
 <p>最终成功安装了:</p>
 <ul>
-<li>Successfully built lazy-object-proxy wrapt tornado</li>
-<li>Installing collected packages: zipp, wrapt, typing-extensions, traitlets, pytz, pyrsistent, MarkupSafe, lazy-object-proxy, dialite, attrs, webruntime, tornado, tomli, sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, snowballstemmer, pscript, platformdirs, mccabe, jupyter-core, jsonschema, Jinja2, isort, importlib-metadata, imagesize, fastjsonschema, docutils, dill, babel, astroid, alabaster, sphinx, six, pylint, pyflakes, nbformat, future, flexx, leo</li>
-<li>Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 alabaster-0.7.12 astroid-2.11.5 attrs-21.4.0 babel-2.10.1 dialite-0.5.3 dill-0.3.5.1 docutils-0.17.1 fastjsonschema-2.15.3 flexx-0.8.4 future-0.18.2 imagesize-1.3.0 importlib-metadata-4.11.4 isort-5.10.1 jsonschema-4.5.1 jupyter-core-4.10.0 lazy-object-proxy-1.7.1 leo-5.9 mccabe-0.7.0 nbformat-5.4.0 platformdirs-2.5.2 pscript-0.7.7 pyflakes-2.4.0 pylint-2.13.9 pyrsistent-0.18.1 pytz-2022.1 six-1.16.0 snowballstemmer-2.2.0 sphinx-4.5.0 sphinxcontrib-applehelp-1.0.2 sphinxcontrib-devhelp-1.0.2 sphinxcontrib-htmlhelp-2.0.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.3 sphinxcontrib-serializinghtml-1.1.5 tomli-2.0.1 tornado-6.1 traitlets-5.2.1.post0 typing-extensions-4.2.0 webruntime-0.5.8 wrapt-1.14.1 zipp-3.8.0</li>
+<li>Successfully built lazy-object-proxy wrapt tornado</li>
+<li>Installing collected packages: zipp, wrapt, typing-extensions, traitlets, pytz, pyrsistent, MarkupSafe, lazy-object-proxy, dialite, attrs, webruntime, tornado, tomli, sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, snowballstemmer, pscript, platformdirs, mccabe, jupyter-core, jsonschema, Jinja2, isort, importlib-metadata, imagesize, fastjsonschema, docutils, dill, babel, astroid, alabaster, sphinx, six, pylint, pyflakes, nbformat, future, flexx, leo</li>
+<li>Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 alabaster-0.7.12 astroid-2.11.5 attrs-21.4.0 babel-2.10.1 dialite-0.5.3 dill-0.3.5.1 docutils-0.17.1 fastjsonschema-2.15.3 flexx-0.8.4 future-0.18.2 imagesize-1.3.0 importlib-metadata-4.11.4 isort-5.10.1 jsonschema-4.5.1 jupyter-core-4.10.0 lazy-object-proxy-1.7.1 leo-5.9 mccabe-0.7.0 nbformat-5.4.0 platformdirs-2.5.2 pscript-0.7.7 pyflakes-2.4.0 pylint-2.13.9 pyrsistent-0.18.1 pytz-2022.1 six-1.16.0 snowballstemmer-2.2.0 sphinx-4.5.0 sphinxcontrib-applehelp-1.0.2 sphinxcontrib-devhelp-1.0.2 sphinxcontrib-htmlhelp-2.0.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.3 sphinxcontrib-serializinghtml-1.1.5 tomli-2.0.1 tornado-6.1 traitlets-5.2.1.post0 typing-extensions-4.2.0 webruntime-0.5.8 wrapt-1.14.1 zipp-3.8.0</li>
 </ul>
-<p>但是, 运行时报出神奇错误:</p>
+<p>但是, 运行时报出神奇错误:</p>
 <div class="highlight"><pre><span></span><code>$ leo
 Sorry, <span class="s2">"python"</span> cannot be run on this version of macOS. Qt requires macOS <span class="m">11</span>.1.0 or later, you have macOS <span class="m">10</span>.16.0.
 </code></pre></div>
 <h3 id="_1">混合安装:<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>果断 M1 环境中当前还是 brew 体系最靠谱</p>
+<p>果断 M1 环境中当前还是 brew 体系最靠谱</p>
 </blockquote>
-<p>参考: <a href="https://www.zhihu.com/question/437075754/answer/1993415429">MacBook Pro m1版本怎么安装python 的pyqt5？ - 知乎</a></p>
+<p>参考: <a href="https://www.zhihu.com/question/437075754/answer/1993415429">MacBook Pro m1版本怎么安装python 的pyqt5？ - 知乎</a></p>
 <ul>
-<li>先用 <code>abrew install pyqt@5</code> 完成针对 <span class="caps">ARM</span> 环境的 Qt 安装</li>
+<li>先用 <code>abrew install pyqt@5</code> 完成针对 ARM 环境的 Qt 安装</li>
 <li>然后将对应安装好的 lib 手工复制到对应 conda 环境中<ul>
-<li>比如, 重新创建专用环境</li>
+<li>比如, 重新创建专用环境</li>
 <li><code>conda create  -n leo3912 python=3.9.12</code></li>
 </ul>
 </li>
@@ -535,7 +535,7 @@ PyQtNetworkAuth-5.15.5.dist-info
 PyQtPurchasing-5.15.5.dist-info
 </code></pre></div>
 <p>从官方 <a href="https://github.com/leo-editor/leo-editor/releases/latest">Latest</a> 链接中下载最新原代码包, 部署到 <code>/opt/bin</code></p>
-<p>然后, 在对应环境中调用:</p>
+<p>然后, 在对应环境中调用:</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">conda</span><span class="p">:</span><span class="w"> </span><span class="n">leo3912</span><span class="p">)</span><span class="w"></span>
 <span class="o">$</span><span class="w"> </span><span class="n">python</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">leo</span><span class="o">/</span><span class="n">launchLeo</span><span class="o">.</span><span class="n">py</span><span class="w"></span>
 
@@ -618,7 +618,7 @@ PyQtPurchasing-5.15.5.dist-info
 <span class="n">wrote</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/.</span><span class="n">leo</span><span class="o">/.</span><span class="n">leoRecentFiles</span><span class="o">.</span><span class="n">txt</span><span class="w"></span>
 </code></pre></div>
 <p><img alt="Leo 6.6.2" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-29%2022.10.10-1.jpg"/></p>
-<p>可以正常启动后, 将指令包装为一个别名:</p>
+<p>可以正常启动后, 将指令包装为一个别名:</p>
 <p><code>~/.bash_profile</code> 中追加:</p>
 <div class="highlight"><pre><span></span><code>alias leo6lanch="python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"
 </code></pre></div>
@@ -626,8 +626,8 @@ PyQtPurchasing-5.15.5.dist-info
 <div class="highlight"><pre><span></span><code>$ conda activate leo3912
 $ leo6lanch
 </code></pre></div>
-<h4 id="ps"><span class="caps">PS</span>:<a class="headerlink" href="#ps" title="Permanent link">¶</a></h4>
-<p>如果以上安装 leo 后, 直接在 conda 环境中运行, 将发现:</p>
+<h4 id="ps">PS:<a class="headerlink" href="#ps" title="Permanent link">¶</a></h4>
+<p>如果以上安装 leo 后, 直接在 conda 环境中运行, 将发现:</p>
 <div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w">  </span><span class="n">leo</span><span class="w"></span>
 <span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">last</span><span class="p">):</span><span class="w"></span>
 <span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/bin/leo"</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="w"></span>
@@ -640,25 +640,26 @@ $ leo6lanch
 </code></pre></div>
 <p>经过代码探查发现, <code>time.clock()</code> 已经在 Py3.8 之后废弃,
 也就是说, Leo 最新版本中一定不包含这种函式,
-即, pip 安装过程中为了兼容, 自动降级到某个老版本中了… 经过探查:</p>
+即, pip 安装过程中为了兼容, 自动降级到某个老版本中了...
+经过探查:</p>
 <p>/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/leo/core/leoVersion.py</p>
-<p>果断写着 <code>5.9-b2</code> , 是19年的版本;</p>
+<p>果断写着 <code>5.9-b2</code> , 是19年的版本;</p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>小结</p>
 </blockquote>
-<p>看起来复杂, 其实只是探查了各种可能性后, 才知道如何可以合理的在 M1 芯片的 macOS 环境中安装 Leo:</p>
+<p>看起来复杂, 其实只是探查了各种可能性后, 才知道如何可以合理的在 M1 芯片的 macOS 环境中安装 Leo:</p>
 <ul>
 <li>基于 arm 版本 homebrew 安装 <code>PyQt@5</code></li>
-<li>基于 miniconda 的 Py3.9 环境安装其它依赖</li>
+<li>基于 miniconda 的 Py3.9 环境安装其它依赖</li>
 <li>基于 官方源代码中的 <code>launchLeo.py</code> 来启动</li>
 </ul>
 <p>具体关键指令:</p>
 <ul>
-<li>abrew install PyQt@5</li>
+<li>abrew install PyQt@5</li>
 <li>abrew install miniconda<ul>
 <li>注意, 正式使用前, 要运行: <code>conda init bash</code></li>
-<li>参考: <a href="https://docs.conda.io/projects/conda/en/latest/dev-guide/deep-dive-activation.html">Deep dive: conda init and activate — conda 4.13.0.post1+0adcd595 documentation</a></li>
+<li>参考: <a href="https://docs.conda.io/projects/conda/en/latest/dev-guide/deep-dive-activation.html">Deep dive: conda init and activate — conda 4.13.0.post1+0adcd595 documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -679,10 +680,10 @@ $ leo6lanch
 <span class="c1"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span><span class="w"></span>
 </code></pre></div>
 <ul>
-<li>用 conda info 检验当前环境是否正常</li>
+<li>用 conda info 检验当前环境是否正常</li>
 <li>然后, 创建 Leo 专用环境:<ul>
-<li>conda create  -n leo3912 python=3.9.12</li>
-<li>注意, 当前 brew 环境中默认安装的是 <code>python@3.9</code> 环境, 所以, 对应 conda 环境也应该是 3.9 以上的</li>
+<li>conda create  -n leo3912 python=3.9.12</li>
+<li>注意, 当前 brew 环境中默认安装的是 <code>python@3.9</code> 环境, 所以, 对应 conda 环境也应该是 3.9 以上的</li>
 </ul>
 </li>
 <li>手工将 PyQt 包从 brew 环境中复制到 conda 对应环境中, 例如:<ul>
@@ -690,9 +691,9 @@ $ leo6lanch
 <li>到 <code>/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/</code></li>
 </ul>
 </li>
-<li>手工从 github 中下载部署最新 Leo 源代码</li>
+<li>手工从 github 中下载部署最新 Leo 源代码</li>
 <li>然后, 从 conda 环境中调用 <code>launchLeo.py</code> 即可</li>
-<li>可以正常启动后, 将指令包装为一个别名:</li>
+<li>可以正常启动后, 将指令包装为一个别名:</li>
 </ul>
 <p><code>~/.bash_profile</code> 中追加:</p>
 <div class="highlight"><pre><span></span><code>alias leo6lanch="python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"
@@ -703,12 +704,12 @@ $ leo6lanch
 </code></pre></div>
 <h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
 <ul>
-<li>220529 整理为文章</li>
-<li>220528 miniconda 成功</li>
-<li>220527 决定重来</li>
-<li>220506 再尝试, 未果</li>
-<li>220401 尝试, 未果</li>
-<li>211113 触发, 存疑</li>
+<li>220529 整理为文章</li>
+<li>220528 miniconda 成功</li>
+<li>220527 决定重来</li>
+<li>220506 再尝试, 未果</li>
+<li>220401 尝试, 未果</li>
+<li>211113 触发, 存疑</li>
 </ul>
 
             </div>

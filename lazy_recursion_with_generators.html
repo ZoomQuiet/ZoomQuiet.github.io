@@ -139,29 +139,30 @@
 <li><a href="#_5">递归和集合</a></li>
 <li><a href="#_6">问题来了</a></li>
 <li><a href="#_7">解决方案</a></li>
-<li><a href="#yield-from">奖励: yield from</a></li>
+<li><a href="#yield-from">奖励: yield from</a></li>
 <li><a href="#_8">脚注</a></li>
 </ul>
 </li>
 <li><a href="#refer">refer.</a></li>
-<li><a href="#-understanding-all-of-python-through-its-builtins">- Understanding all of Python, through its builtins</a></li>
+<li><a href="#-understanding-all-of-python-through-its-builtins">- Understanding all of Python, through its builtins</a></li>
 </ul>
 </div>
     </nav>
 
                 
 <h2 id="background">background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
-<p>原文: <a href="https://tushar.lol/post/recursive-generators/">Lazy recursion, with generators</a></p>
-<p>来自 <a href="https://weekly.pychina.org/issue/issue-569.html">蠎周刊 PyCoder 569 ~蠎周刊 ~汇集全球蠎事儿 ;-)</a> 的推荐</p>
+<p>原文: <a href="https://tushar.lol/post/recursive-generators/">Lazy recursion, with generators</a></p>
+<p>来自 <a href="https://weekly.pychina.org/issue/issue-569.html">蠎周刊 PyCoder 569 ~蠎周刊 ~汇集全球蠎事儿 ;-)</a> 的推荐</p>
 <h2 id="_1">快译<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>此文, 准备研究 Python 的生成器, 并用之来也又和并递归代码的内存使用;</p>
+<p>此文, 准备研究 Python 的生成器,
+并用之来也又和并递归代码的内存使用;</p>
 <h3 id="_2">当代码调用自己时<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>When the code calls itself</p>
+<p>When the code calls itself</p>
 </blockquote>
 <p>你知道什么是递归;
 就是函数调用自己,
-如果要复习一下, 先看个示例:</p>
+如果要复习一下, 先看个示例:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># base case</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -171,7 +172,7 @@
     <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
 <p>要理解调用自身是如何工作的,
-这是 factorial(5) 过程分解:</p>
+这是 factorial(5) 过程分解:</p>
 <div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -181,12 +182,12 @@
 <span class="o">=</span> <span class="mi">120</span>
 </code></pre></div>
 <p>1 的值来自 factorial(1),
-然后返回调用栈时继续乘以 2,3 等等;</p>
+然后返回调用栈时继续乘以 2,3 等等;</p>
 <h3 id="_3">何必呢?<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>Why bother?</p>
+<p>Why bother?</p>
 </blockquote>
-<p>以上递归当然可以宑成 for 循环:</p>
+<p>以上递归当然可以宑成 for 循环:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">product</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -197,7 +198,8 @@
 <p>那为什么要费心写成递归呢?</p>
 <p>事实上, 某些逻辑本质上就是递归的;
 一个很好的实例就是打印出文件夹中所有路径,
-就象 find 指令作的那样; 这是我一个项目中相关代码:</p>
+就象 find 指令作的那样;
+这是我一个项目中相关代码:</p>
 <div class="highlight"><pre><span></span><code>$ find ./src
 ./src
 ./src/pylox
@@ -213,23 +215,26 @@
 ./src/pylox/py.typed
 ./src/pylox/parser.py
 </code></pre></div>
-<p>find 工作原理相当简单; 以下是把不即出文件夹所有内容的流程:</p>
+<p>find 工作原理相当简单;
+以下是把不即出文件夹所有内容的流程:</p>
 <ul>
 <li>打印文件夹路径</li>
 <li>获得文件夹中所有东西</li>
 <li>对于文件夹中每个项目:<ul>
-<li>如果是个文件, 就打印出文件的路径</li>
-<li>我哪来就是文件夹, 打印出这个子文件夹中的所有内容</li>
+<li>如果是个文件, 就打印出文件的路径</li>
+<li>我哪来就是文件夹, 打印出这个子文件夹中的所有内容</li>
 </ul>
 </li>
 </ul>
 <p>请注意, 最后一条指令(打印子文件夹中的所有内容)
-只是原始任务的一小部分; 递归就非常适合此类任务;</p>
+只是原始任务的一小部分;
+递归就非常适合此类任务;</p>
 <h3 id="_4">编程时间<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>Time to code</p>
+<p>Time to code</p>
 </blockquote>
-<p>让我们将这些指令转化为代码; 将使用一个假设的文件结构进行检验;</p>
+<p>让我们将这些指令转化为代码;
+将使用一个假设的文件结构进行检验;</p>
 <p>模拟以下树形结构:</p>
 <div class="highlight"><pre><span></span><code>$ tree /
 /
@@ -245,7 +250,7 @@
         └── gcc
             └── x86_64-linux-gnu
 </code></pre></div>
-<p>Python 代码的话:</p>
+<p>Python 代码的话:</p>
 <div class="highlight"><pre><span></span><code><span class="n">file_tree</span> <span class="o">=</span> <span class="p">[</span><span class="s1">''</span><span class="p">,</span> <span class="p">[</span>
     <span class="p">[</span><span class="s1">'etc'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'passwd'</span><span class="p">,</span> <span class="s1">'shadow'</span><span class="p">]],</span>
     <span class="p">[</span><span class="s1">'usr'</span><span class="p">,</span> <span class="p">[</span>
@@ -289,19 +294,22 @@
 /usr/lib/gcc/x86_64-linux-gnu
 Fairly straightforward.
 </code></pre></div>
-<p>转折点来了: 你会如何让这个函数返回所有路径呢?</p>
+<p>转折点来了:
+你会如何让这个函数返回所有路径呢?</p>
 <h3 id="_5">递归和集合<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>Recursion and collection</p>
+<p>Recursion and collection</p>
 </blockquote>
-<p>浰不编写递归代码来收集一些数据是很常见的; 必须收集所有文件大又得那而不是将其打印出来就是一个明显的实例;</p>
+<p>浰不编写递归代码来收集一些数据是很常见的;
+必须收集所有文件大又得那而不是将其打印出来就是一个明显的实例;</p>
 <p>为此,我们嘦进行相当小的更改:</p>
 <p>该函数现在将返回路径列表;
 这是递归的一个重要区别,
 因为,函数之前没有返回任何东西;
 我们将追加到路径列表, 而不是打印出内容;
 这就将接收子路径作为返回值,
-而不是仅仅进行递归调用, 并将所有返回追加到最终答案数据集中;</p>
+而不是仅仅进行递归调用,
+并将所有返回追加到最终答案数据集中;</p>
 <p>这是修改后的代码:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_paths_recursive</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="p">()):</span>
     <span class="n">paths</span> <span class="o">=</span> <span class="p">[]</span>
@@ -334,25 +342,26 @@ Fairly straightforward.
 </code></pre></div>
 <h3 id="_6">问题来了<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>The problem</p>
+<p>The problem</p>
 </blockquote>
 <p>如果收集很多文件夹, 问题就出现了;
 如果你的目录中有数千或是数百万个文件和文件夹,
 将所有文件和文件夹存储在一个列表中, 
-可能就很麻烦, 原因有两个:</p>
+可能就很麻烦, 原因有两个:</p>
 <ul>
-<li>你的内存使用会随机飊升;列表可以增长到多大是没有限制的,因此,从技术上讲, 你甚至可能耗尽内存;</li>
-<li>如果你只关心文件中的几个项目,那你就不走运了 —- 算法会找出每个子文件夹,然后,你才能对结果数据作些其它事儿;</li>
+<li>你的内存使用会随机飊升;列表可以增长到多大是没有限制的,因此,从技术上讲, 你甚至可能耗尽内存;</li>
+<li>如果你只关心文件中的几个项目,那你就不走运了 --- 算法会找出每个子文件夹,然后,你才能对结果数据作些其它事儿;</li>
 </ul>
 <p>本质上,这是种急性评估的算法;
 避免存储所有数据的唯一方法就是直接在函数内部执行任务,
 就像我们在直接打印时作的那样;
-但是, 这又强烈的将我们的代码和业务进行了耦合;</p>
+但是, 这又强烈的将我们的代码和业务进行了耦合;</p>
 <h3 id="_7">解决方案<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>The solution</p>
+<p>The solution</p>
 </blockquote>
-<p>所以,总结一下我们的问题: 我们想要对任意文件路径运行任意需要的执行任何代码;</p>
+<p>所以,总结一下我们的问题:
+我们想要对任意文件路径运行任意需要的执行任何代码;</p>
 <p>任务可能是将其打印出来,又或是将其存储到列表中或是其它:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_paths_recursive</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="p">()):</span>
     <span class="n">name</span><span class="p">,</span> <span class="n">contents</span> <span class="o">=</span> <span class="n">folder</span>
@@ -370,8 +379,10 @@ Fairly straightforward.
 
     <span class="k">return</span> <span class="n">paths</span>
 </code></pre></div>
-<p>Python 已经为我们提供了一个非常强大的结构来解决这一问题, 就是生成器;</p>
-<p>可以可能在其它一些上下文中听说过生成器, 例如:</p>
+<p>Python 已经为我们提供了一个非常强大的结构来解决这一问题,
+就是生成器;</p>
+<p>可以可能在其它一些上下文中听说过生成器,
+例如:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">gen</span><span class="p">():</span>
     <span class="k">yield</span> <span class="mi">10</span>
     <span class="k">yield</span> <span class="mi">20</span>
@@ -385,7 +396,7 @@ Fairly straightforward.
 <span class="c1"># Got: 10</span>
 </code></pre></div>
 <p>但是, 关于生成器有一个鲜为人知的事实:
-人家可以在代码中两点间移动你的 evaluation;</p>
+人家可以在代码中两点间移动你的 evaluation;</p>
 <p>我的意思是这样的:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">gen</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Start!"</span><span class="p">)</span>
@@ -403,7 +414,7 @@ Fairly straightforward.
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Doing things with </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">..."</span><span class="p">)</span>
 </code></pre></div>
-<p>你可以看到执行是如何在 gen() 和 for 循环间来回进行的:</p>
+<p>你可以看到执行是如何在 gen() 和 for 循环间来回进行的:</p>
 <div class="highlight"><pre><span></span><code>$ py a.py
 Start!
 Doing things with <span class="m">1</span>...
@@ -415,7 +426,7 @@ Done.
 </code></pre></div>
 <p>这正是我们在本例中需要的:
 每当我们有新路径时, 我们都需要执行上下文返回给主代码;
-所以, 我们可以将生成器的控制权交给循环:</p>
+所以, 我们可以将生成器的控制权交给循环:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_paths_generator</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="p">()):</span>
     <span class="n">name</span><span class="p">,</span> <span class="n">contents</span> <span class="o">=</span> <span class="n">folder</span>
     <span class="n">path</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
@@ -430,7 +441,7 @@ Done.
                 <span class="k">yield</span> <span class="n">subpath</span>
 </code></pre></div>
 <p>现在, 最好的部分来了,
-我们可以创建原始用例, 打印和储存列表都很容易:</p>
+我们可以创建原始用例, 打印和储存列表都很容易:</p>
 <div class="highlight"><pre><span></span><code>$ python -i find.py
 &gt;&gt;&gt; <span class="k">for</span> path <span class="k">in</span> get_paths_generator<span class="o">(</span>file_tree<span class="o">)</span>:
 ...     print<span class="o">(</span>path<span class="o">)</span>
@@ -453,13 +464,13 @@ Done.
 <span class="s1">'/usr/lib/gcc'</span>, <span class="s1">'/usr/lib/gcc/x86_64-linux-gnu'</span><span class="o">]</span>
 </code></pre></div>
 <p>这种解决方案要灵活的多,
-并且, 永远不会像原先方案那样出现急切求值问题;</p>
+并且, 永远不会像原先方案那样出现急切求值问题;</p>
 <h3 id="yield-from">奖励: yield from<a class="headerlink" href="#yield-from" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>Bonus: yield from</p>
+<p>Bonus: yield from</p>
 </blockquote>
 <p>原先使用 append 来存储路径的代码可以进行一儿改进:
-你可以使用 list.extend, 而不是编写一个 for 循环来逐一追加每个子路径:</p>
+你可以使用 list.extend, 而不是编写一个 for 循环来逐一追加每个子路径:</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1"># ...</span>
     <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">contents</span><span class="p">:</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
@@ -471,7 +482,7 @@ Done.
             <span class="n">paths</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">get_paths_recursive</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">path</span><span class="p">))</span>
 </code></pre></div>
 <p>两样的事儿, 可以在我们的生成器解决方案中完成, 
-使用 yield from gen():</p>
+使用 yield from gen():</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_paths_generator</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="p">()):</span>
     <span class="n">name</span><span class="p">,</span> <span class="n">contents</span> <span class="o">=</span> <span class="n">folder</span>
     <span class="n">path</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
@@ -484,16 +495,16 @@ Done.
         <span class="k">else</span><span class="p">:</span>
             <span class="k">yield from</span> <span class="n">get_paths_generator</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
 </code></pre></div>
-<p>yield from 将产另外一个生成器中所有的值, 一个接一个;</p>
+<p>yield from 将产另外一个生成器中所有的值, 一个接一个;</p>
 <h3 id="_8">脚注<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>Footer</p>
 </blockquote>
 <p>以上, 希望你发现使用生成器来改进 Python 中新(和旧)递归代码;
 另外, James Powell 有过一个很给力的演讲:
-<a href="https://www.youtube.com/watch?v=XEn_99daJro">Python Generators || James Powell - YouTube</a></p>
+<a href="https://www.youtube.com/watch?v=XEn_99daJro">Python Generators || James Powell - YouTube</a></p>
 <p>有关生成器如何拓展出更多的想法,
-如果你有兴趣的话, 值得看看;</p>
+如果你有兴趣的话, 值得看看;</p>
 <h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
 <p>每一位认真的技术 blogger 都有很多值得精读的积累,比如这位<a href="https://snippets.live/">Tushar Sadhwani</a>的:</p>
 <h2 id="-understanding-all-of-python-through-its-builtins">- <a href="https://tushar.lol/post/builtins/" title="Understanding all of Python, through its builtins">Understanding all of Python, through its builtins</a><a class="headerlink" href="#-understanding-all-of-python-through-its-builtins" title="Permanent link">¶</a></h2>

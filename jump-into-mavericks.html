@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>    from Lion jump into&nbsp;Mavericks
+    <title>    from Lion jump into Mavericks
 / 是也乎(￣▽￣)
 / ZoomQuiet.io    </title>
 
@@ -92,7 +92,7 @@
             <header class="page-header">
                 <h1>
                     <a href="https://blog.zoomquiet.io/jump-into-mavericks.html">
-                        from Lion jump into&nbsp;Mavericks
+                        from Lion jump into Mavericks
                     </a>
                 </h1>
             </header>
@@ -140,10 +140,10 @@
 <li><a href="#pyenvvirtualenv">Pyenv+VirtualEnv</a></li>
 </ul>
 </li>
-<li><a href="#qt-for-leo">Qt for Leo</a></li>
+<li><a href="#qt-for-leo">Qt for Leo</a></li>
 </ul>
 </li>
-<li><a href="#sshfs">伟光大的 sshfs</a></li>
+<li><a href="#sshfs">伟光大的 sshfs</a></li>
 </ul>
 </li>
 <li><a href="#changelog">Changelog</a></li>
@@ -156,34 +156,39 @@
 <p>得承认是被 老池的文章忽悠到了, 
 而且, 10.9 免费了, 进一步的通过OS 提高了电池/内存的使用效率,
 最关键的,在 <a href="http://techparty.org/events/2013/12/29/et-ecugcon-sz/">无责任报道~ECUG2013Con</a> 中提及过的,
-有好基友,已经折腾过,明确从 10.7 直升没有问题!</p>
-<p>于是一个月黑风高的晚上…</p>
+有好基友,已经折腾过,明确从 10.7 直升没有问题!</p>
+<p>于是一个月黑风高的晚上...</p>
 <h1 id="_2">回顾<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
-<p>宏观上没有想象的复杂,因为真心作到了零配置! 几乎所有非第三方的配置,都继承了下来不用折腾!</p>
+<p>宏观上没有想象的复杂,因为真心作到了零配置!
+几乎所有非第三方的配置,都继承了下来不用折腾!</p>
 <p>唯三的折腾:</p>
 <ol>
-<li>Python 环境</li>
-<li>Qt 环境</li>
+<li>Python 环境</li>
+<li>Qt 环境</li>
 <li>sshfs</li>
 </ol>
 <p>严正推荐:</p>
-<p><a href="file:///Users/zoomq/mnt/%E5%BF%AB%E7%9B%98/zScrapBook/ZqFLOSS/data/20131230190257/index.html">Mavericksでbrew upgradeしたらハマった話</a></p>
+<p><a href="file:///Users/zoomq/mnt/%E5%BF%AB%E7%9B%98/zScrapBook/ZqFLOSS/data/20131230190257/index.html">Mavericksでbrew upgradeしたらハマった話</a></p>
 <p>等等日文的相关纪要非常实在,直觉,顺序合理,值得,多参考.</p>
 <h2 id="python-qt-for-leo">Python + Qt for Leo<a class="headerlink" href="#python-qt-for-leo" title="Permanent link">¶</a></h2>
 <p>大家知道俺是 <a href="http://wiki.woodpecker.org.cn/moin/LiterateProgramming">文学化编程</a>
 的拥趸,
-所以,一直使用 <a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">Leo</a> 作为主要编程环境的,</p>
+所以,一直使用 <a href="http://wiki.woodpecker.org.cn/moin/LeoEnvironment">Leo</a>
+作为主要编程环境的,</p>
 <p>10.9 以后 Python 不内置安装了,
-Qt 当然从来也没有内置过. 所以,</p>
+Qt 当然从来也没有内置过.
+所以,</p>
 <h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">¶</a></h3>
 <p>当然,系统的用 <code>brew install python</code> 了,</p>
 <p>而其它各种项目开发时,就要综合使用</p>
 <h4 id="pyenvvirtualenv">Pyenv+VirtualEnv<a class="headerlink" href="#pyenvvirtualenv" title="Permanent link">¶</a></h4>
-<p>Pyenv 是这样一种神器:</p>
+<p>Pyenv 是这样一种神器:</p>
 <p>完全的面向shell
-  通过环境变量的自动配置 形成复合Python版本共存</p>
+  通过环境变量的自动配置
+  形成复合Python版本共存</p>
 <p>VirtualEnv 有 Pyenv 的插件
-所以,可以利用已安装好的环境,快速复制出项目专用的, 结果,引发了滥用,特别舒服的那种:</p>
+所以,可以利用已安装好的环境,快速复制出项目专用的,
+结果,引发了滥用,特别舒服的那种:</p>
 <div class="highlight"><pre><span></span><code>$ pyenv versions
 * system <span class="o">(</span><span class="nb">set</span> by /Users/zoomq/.pyenv/version<span class="o">)</span>
   <span class="m">2</span>.7.3
@@ -232,15 +237,15 @@ Qt 当然从来也没有内置过. 所以,</p>
 <span class="n">ValueError</span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">list</span><span class="w"></span>
 </code></pre></div>
 <p>指定具体版本,尝试,直到可以顺利安装出可用的就好.</p>
-<p>严正表扬一下 ‘Yamashita, Yuu`</p>
+<p>严正表扬一下 'Yamashita, Yuu`</p>
 <ul>
-<li><a href="https://github.com/yyuu/pyenv/issues/95#issuecomment-31392999">How to config pyenv’s pip ? · Issue #95 · yyuu/pyenv</a></li>
+<li><a href="https://github.com/yyuu/pyenv/issues/95#issuecomment-31392999">How to config pyenv's pip ? · Issue #95 · yyuu/pyenv</a></li>
 <li>绝对认真的回答了俺的提问,虽然不了了之,但是,一个常用工具的作者,可以如此关注一个不是问题的问题,实在太勤勉了,必须学习!</li>
 </ul>
 <h3 id="qt-for-leo">Qt for Leo<a class="headerlink" href="#qt-for-leo" title="Permanent link">¶</a></h3>
 <p>参考:</p>
 <ul>
-<li><a href="http://support.apple.com/kb/HT5293">About X11 and <span class="caps">OS</span> X</a></li>
+<li><a href="http://support.apple.com/kb/HT5293">About X11 and OS X</a></li>
 <li><a href="http://xquartz.macosforge.org/landing/">XQuartz</a></li>
 </ul>
 <p>以及:</p>
@@ -257,8 +262,9 @@ Determining the layout of your Qt installation...
 
 READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
 </code></pre></div>
-<p>多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,</p>
-<p>然后, Leo 只是一堆 Py 脚本下载下来, 修订一下别名指向就好:</p>
+<p>多多 Google 吧,很标准的环境驱动, Qt 官方提供了的,</p>
+<p>然后, Leo 只是一堆 Py 脚本下载下来,
+修订一下别名指向就好:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># ~/.bashrc for running Leo</span>
 <span class="nb">alias</span> <span class="nv">leolanch</span><span class="o">=</span><span class="s2">"python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"</span>
 </code></pre></div>
@@ -302,12 +308,13 @@ READ THIS: https://github.com/Homebrew/homebrew/wiki/troubleshooting
 </code></pre></div>
 <p>具体哪个管用,俺也没整明白,
 反正,怎么折腾,
-都是可以正当加载上 <code>Plan</code> 的内核库, 然后就可以对家庭服务器的所有硬盘,远程加载为本地目录了..</p>
+都是可以正当加载上 <code>Plan</code> 的内核库,
+然后就可以对家庭服务器的所有硬盘,远程加载为本地目录了..</p>
 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h1>
 <ul>
-<li>140616 再次精简,算是发布</li>
-<li>140505 快速简述完成</li>
-<li>140110 起意,总结</li>
+<li>140616 再次精简,算是发布</li>
+<li>140505 快速简述完成</li>
+<li>140110 起意,总结</li>
 </ul>
 
             </div>

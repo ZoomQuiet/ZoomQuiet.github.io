@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- ANN</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/ann.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2020-03-05T15:45:00+08:00</updated><entry><title>公告/ 呢喃:收集 私人片段</title><link href="https://blog.zoomquiet.io/ann-murmur-0.html" rel="alternate"></link><published>2020-03-02T10:42:00+08:00</published><updated>2020-03-05T15:35:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-02:/ann-murmur-0.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;ANN&lt;/span&gt;/ what is&amp;nbsp;MurMur&lt;/p&gt;</summary><content type="html">&lt;p&gt;终于还是得在公众号嗯哼,&amp;nbsp;其它渠道都主动和谐了;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- ANN</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/ann.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2020-03-05T15:45:00+08:00</updated><entry><title>公告/ 呢喃:收集 私人片段</title><link href="https://blog.zoomquiet.io/ann-murmur-0.html" rel="alternate"></link><published>2020-03-02T10:42:00+08:00</published><updated>2020-03-05T15:35:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-03-02:/ann-murmur-0.html</id><summary type="html">&lt;p&gt;ANN/ what is MurMur&lt;/p&gt;</summary><content type="html">&lt;p&gt;终于还是得在公众号嗯哼, 其它渠道都主动和谐了;&lt;/p&gt;
 &lt;p&gt;那么先厘定的当然是栏目了;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;事不过三
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -7,55 +7,57 @@
 &lt;p&gt;原先就想三个:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;公告 ~ ANNouncement
-​- 拙见 ~ &lt;span class="caps"&gt;IMHO&lt;/span&gt;(In My Humble&amp;nbsp;Opinion)&lt;/li&gt;
-&lt;li&gt;钩陈 ~&amp;nbsp;OldTouch&lt;/li&gt;
+​- 拙见 ~ IMHO(In My Humble Opinion)&lt;/li&gt;
+&lt;li&gt;钩陈 ~ OldTouch&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;但是,&amp;nbsp;42才是世界全部奥妙哪&amp;#8230;&lt;/p&gt;
+&lt;p&gt;但是, 42才是世界全部奥妙哪...&lt;/p&gt;
 &lt;p&gt;我等凡人, 还是多尝试近似小值: &lt;code&gt;4.2&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;所以,&amp;nbsp;追加一则:&lt;/p&gt;
+&lt;p&gt;所以, 追加一则:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;呢喃 ~ MurMur
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;根源 -&amp;gt; &lt;a href="https://zhuanlan.zhihu.com/laiyh"&gt;一个小老板的呢喃 -&amp;nbsp;知乎&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;根源 -&amp;gt; &lt;a href="https://zhuanlan.zhihu.com/laiyh"&gt;一个小老板的呢喃 - 知乎&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;专栏作者: 赖勇浩 ,
-也是 &lt;a href="https://union-click.jd.com/jdc?e=&amp;amp;p=AyIGZRprFQIXDlYdXBUyVlgNRQQlW1dCFFlQCxxKQgFHREkdSVJKSQVJHFRXFk9FUlpGQUpLCVBaTFhbXQtWVmpSWRtbEAsRAVIbaw8CFkwGUDNqYhJhL2QzFF4QYj0BC2UOHjdUK1sUAxEFVhhZFwUiN1Uca0NsEgZUGloUBxMDVitaJQIWDlcbWxQGFwdSGlMlBRIOZXAFS15yQw1PHiUyIgRlK2sVMhE3F3VfEgMQVFVMDhYAQQVQSFxGCxICVBIPEAEaVAJIDhFVFTdXGloRCw%3D%3D"&gt;&amp;#8220;编写高质量代码:改善Python程序的91个建议&amp;#8221;&lt;/a&gt; 作者;
-更加是 珠三角技术沙龙(techparty.org)主席;&amp;nbsp;又是连续创业者&amp;#8230;&lt;/p&gt;
-&lt;p&gt;可能是俺认识的所有技术专家中,&amp;nbsp;文笔绝佳人物;&lt;/p&gt;
+也是 &lt;a href="https://union-click.jd.com/jdc?e=&amp;amp;p=AyIGZRprFQIXDlYdXBUyVlgNRQQlW1dCFFlQCxxKQgFHREkdSVJKSQVJHFRXFk9FUlpGQUpLCVBaTFhbXQtWVmpSWRtbEAsRAVIbaw8CFkwGUDNqYhJhL2QzFF4QYj0BC2UOHjdUK1sUAxEFVhhZFwUiN1Uca0NsEgZUGloUBxMDVitaJQIWDlcbWxQGFwdSGlMlBRIOZXAFS15yQw1PHiUyIgRlK2sVMhE3F3VfEgMQVFVMDhYAQQVQSFxGCxICVBIPEAEaVAJIDhFVFTdXGloRCw%3D%3D"&gt;"编写高质量代码:改善Python程序的91个建议"&lt;/a&gt; 作者;
+更加是 珠三角技术沙龙(techparty.org)主席;
+又是连续创业者...&lt;/p&gt;
+&lt;p&gt;可能是俺认识的所有技术专家中, 文笔绝佳人物;&lt;/p&gt;
 &lt;p&gt;他用 &lt;code&gt;呢喃&lt;/code&gt; 来指代了这么一类原创内容:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;真原创&lt;/li&gt;
 &lt;li&gt;真心话&lt;/li&gt;
 &lt;li&gt;真小确幸&lt;/li&gt;
-&lt;li&gt;真&amp;#8230;&lt;/li&gt;
+&lt;li&gt;真...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;真切却很微小的思绪, 除了能记述自己私人的瞬间感想外, 
-难以界定能对社会有什么帮助,&amp;nbsp;但是,就是想嗯哼出来&amp;#8230;&lt;/p&gt;
-&lt;p&gt;所以,&amp;nbsp;俺也是:&lt;/p&gt;
+难以界定能对社会有什么帮助,
+但是,就是想嗯哼出来...&lt;/p&gt;
+&lt;p&gt;所以, 俺也是:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;除了正式决议要公告外&lt;/li&gt;
 &lt;li&gt;一些具体成型的吐糟后&lt;/li&gt;
 &lt;li&gt;值得回思的上古事件等&lt;/li&gt;
-&lt;li&gt;&amp;#8230;还是有些无法分类, 近乎 &lt;code&gt;others&lt;/code&gt; 的文字&lt;/li&gt;
+&lt;li&gt;...还是有些无法分类, 近乎 &lt;code&gt;others&lt;/code&gt; 的文字&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;也一起用 &lt;code&gt;呢喃&lt;/code&gt; 吧&amp;#8230;&lt;/p&gt;
+&lt;p&gt;也一起用 &lt;code&gt;呢喃&lt;/code&gt; 吧...&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;文中链接感谢&lt;a href="https://linux.cn/static/tools/a.html"&gt;&amp;#8220;文章助手&amp;#8221;的助手&lt;/a&gt; 的支持,
-(来自 &lt;a href="(https://linux.cn/article-11850-1.html)"&gt;LINUX中国&lt;/a&gt;&amp;nbsp;的小应用)&lt;/p&gt;
+&lt;p&gt;文中链接感谢&lt;a href="https://linux.cn/static/tools/a.html"&gt;"文章助手"的助手&lt;/a&gt; 的支持,
+(来自 &lt;a href="(https://linux.cn/article-11850-1.html)"&gt;LINUX中国&lt;/a&gt; 的小应用)&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;点击, 将自动跳入小应用,&amp;nbsp;并复制链接到剪贴板&lt;/li&gt;
-&lt;li&gt;然后, 打开浏览器, 复制到地址栏,&amp;nbsp;就能访问了&lt;/li&gt;
-&lt;li&gt;好处,&amp;nbsp;避开了微信内置特殊浏览器的有关屏蔽策略&lt;/li&gt;
-&lt;li&gt;问题, 操作复杂了, 要打开手机上的浏览器,&amp;nbsp;如果在桌面微信则无法使用&lt;/li&gt;
+&lt;li&gt;点击, 将自动跳入小应用, 并复制链接到剪贴板&lt;/li&gt;
+&lt;li&gt;然后, 打开浏览器, 复制到地址栏, 就能访问了&lt;/li&gt;
+&lt;li&gt;好处, 避开了微信内置特殊浏览器的有关屏蔽策略&lt;/li&gt;
+&lt;li&gt;问题, 操作复杂了, 要打开手机上的浏览器, 如果在桌面微信则无法使用&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;span class="caps"&gt;JD&lt;/span&gt; 下单链接 -&amp;gt; 点击后再打开浏览器复制到地址栏访问 -&amp;gt;&amp;nbsp;俺能获得少许佣金:&lt;/p&gt;
+&lt;p&gt;JD 下单链接 -&amp;gt; 点击后再打开浏览器复制到地址栏访问 -&amp;gt; 俺能获得少许佣金:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://union-click.jd.com/jdc?e=&amp;amp;p=AyIGZRprFQIXDlYdXBUyVlgNRQQlW1dCFFlQCxxKQgFHREkdSVJKSQVJHFRXFk9FUlpGQUpLCVBaTFhbXQtWVmpSWRtbEAsRAVIbaw8CFkwGUDNqYhJhL2QzFF4QYj0BC2UOHjdUK1sUAxEFVhhZFwUiN1Uca0NsEgZUGloUBxMDVitaJQIWDlcbWxQGFwdSGlMlBRIOZXAFS15yQw1PHiUyIgRlK2sVMhE3F3VfEgMQVFVMDhYAQQVQSFxGCxICVBIPEAEaVAJIDhFVFTdXGloRCw%3D%3D"&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;编写高质量代码:改善Python程序的91个建议&amp;#8221;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://union-click.jd.com/jdc?e=&amp;amp;p=AyIGZRprFQIXDlYdXBUyVlgNRQQlW1dCFFlQCxxKQgFHREkdSVJKSQVJHFRXFk9FUlpGQUpLCVBaTFhbXQtWVmpSWRtbEAsRAVIbaw8CFkwGUDNqYhJhL2QzFF4QYj0BC2UOHjdUK1sUAxEFVhhZFwUiN1Uca0NsEgZUGloUBxMDVitaJQIWDlcbWxQGFwdSGlMlBRIOZXAFS15yQw1PHiUyIgRlK2sVMhE3F3VfEgMQVFVMDhYAQQVQSFxGCxICVBIPEAEaVAJIDhFVFTdXGloRCw%3D%3D"&gt;"编写高质量代码:改善Python程序的91个建议"&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3940&lt;/p&gt;
+&lt;p&gt;NN 3940&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好文笔,感叹号年度配额: &lt;strong&gt;1/3&lt;/strong&gt;&lt;/p&gt;
@@ -71,37 +73,37 @@
 &lt;span class="n"&gt;历史吐糟&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Chaos42&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;订阅号&lt;/span&gt; &lt;span class="n"&gt;PythoniCamp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="logging"></category></entry><entry><title>公告/ 叕重新开始的大妈</title><link href="https://blog.zoomquiet.io/ann-dama-aaaagain.html" rel="alternate"></link><published>2020-02-23T10:42:00+08:00</published><updated>2020-03-05T15:35:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-02-23:/ann-dama-aaaagain.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;ANN&lt;/span&gt;/ what is &lt;span class="caps"&gt;DAMA&lt;/span&gt;, and why starting again again and again with&amp;nbsp;again&lt;/p&gt;</summary><content type="html">&lt;h1 id="_1"&gt;公告/ 叕重新开始的大妈&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="logging"></category></entry><entry><title>公告/ 叕重新开始的大妈</title><link href="https://blog.zoomquiet.io/ann-dama-aaaagain.html" rel="alternate"></link><published>2020-02-23T10:42:00+08:00</published><updated>2020-03-05T15:35:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-02-23:/ann-dama-aaaagain.html</id><summary type="html">&lt;p&gt;ANN/ what is DAMA, and why starting again again and again with again&lt;/p&gt;</summary><content type="html">&lt;h1 id="_1"&gt;公告/ 叕重新开始的大妈&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;这是大妈在 &lt;code&gt;ZoomQuiet&lt;/code&gt; 的第&lt;strong&gt;000&lt;/strong&gt;篇原创文章&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="_2"&gt;背景&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;公众号,&amp;nbsp;之前在管理的有:&lt;/p&gt;
+&lt;p&gt;公众号, 之前在管理的有:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;订阅号: ChinaPyUG&lt;ul&gt;
-&lt;li&gt;2011 注册的第一个公众号,&amp;nbsp;因为不常用丢失了&lt;/li&gt;
+&lt;li&gt;2011 注册的第一个公众号, 因为不常用丢失了&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;GDG珠海 (订阅号: &lt;span class="caps"&gt;GDG&lt;/span&gt;-ZhuHai)&lt;ul&gt;
-&lt;li&gt;2013&amp;nbsp;年注册的第二个公众号&lt;/li&gt;
+&lt;li&gt;GDG珠海 (订阅号: GDG-ZhuHai)&lt;ul&gt;
+&lt;li&gt;2013 年注册的第二个公众号&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;全国大会: PyChina (订阅号: &lt;strong&gt;PyChinaOrg&lt;/strong&gt;)&lt;ul&gt;
-&lt;li&gt;2014 年注册的最后一个公众号, 配合&amp;nbsp;PyCon中国大会&lt;/li&gt;
+&lt;li&gt;2014 年注册的最后一个公众号, 配合 PyCon中国大会&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;历史吐糟: Chaos42 (订阅号 PythoniCamp)&lt;ul&gt;
-&lt;li&gt;2014 年工作需要, 拉同事注册的&amp;nbsp;DevRel &lt;/li&gt;
-&lt;li&gt;2018 年蟒营™课程需要, 重新启用, 改名为&amp;nbsp;蟒营101camp&lt;/li&gt;
-&lt;li&gt;2020 年疫情触发了一系列私人思考文章, 但是, 无论哪个社区公众号都不合适发布,于是, 再次变更为现在的&amp;nbsp;Chaos42&lt;/li&gt;
+&lt;li&gt;2014 年工作需要, 拉同事注册的 DevRel &lt;/li&gt;
+&lt;li&gt;2018 年蟒营™课程需要, 重新启用, 改名为 蟒营101camp&lt;/li&gt;
+&lt;li&gt;2020 年疫情触发了一系列私人思考文章, 但是, 无论哪个社区公众号都不合适发布,于是, 再次变更为现在的 Chaos42&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;TFUG珠海 (订阅号: ZH_TFUG)&lt;ul&gt;
-&lt;li&gt;2019&amp;nbsp;和朋友一起运营&lt;/li&gt;
+&lt;li&gt;2019 和朋友一起运营&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;公开课程: 蟒营 (订阅号: &lt;strong&gt;Mainium&lt;/strong&gt;)&lt;ul&gt;
-&lt;li&gt;2019&amp;nbsp;年决心正式运营蟒营™网课&lt;/li&gt;
-&lt;li&gt;终于正式注册了公司(昩因®)后,&amp;nbsp;对应注册的企业订阅号&lt;/li&gt;
+&lt;li&gt;2019 年决心正式运营蟒营™网课&lt;/li&gt;
+&lt;li&gt;终于正式注册了公司(昩因®)后, 对应注册的企业订阅号&lt;/li&gt;
 &lt;li&gt;而且对应注册了 &lt;code&gt;蟒营™&lt;/code&gt; 商标&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -110,107 +112,109 @@
 &lt;h2 id="_3"&gt;现象&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;公众号, 俺一向认为是有有关部门监管的, 封闭的信息发布渠道,
 比自己发布的专有 blog 要受限的多, 
-而且限于微信内置的专有浏览器, 根本不允许外部链接,&amp;nbsp;其实隔离自互联网之外;&lt;/p&gt;
-&lt;p&gt;所以,&amp;nbsp;以往都是为了配合社区的宣传而不得不使用;&lt;/p&gt;
+而且限于微信内置的专有浏览器, 根本不允许外部链接, 
+其实隔离自互联网之外;&lt;/p&gt;
+&lt;p&gt;所以, 以往都是为了配合社区的宣传而不得不使用;&lt;/p&gt;
 &lt;p&gt;从来没想过用公众号来发布自己的思考/感情;&lt;/p&gt;
 &lt;p&gt;可是, 没想到, 这次春节被 &lt;code&gt;新冠肺炎(NCP/2019-nCoV)&lt;/code&gt; 激发的几个系列:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(8篇) 新冠肺炎(&lt;span class="caps"&gt;NCP&lt;/span&gt;)正确应对姿势&lt;/li&gt;
-&lt;li&gt;(4篇)&amp;nbsp;如何应对,就是不愿意上班的心情?&lt;/li&gt;
-&lt;li&gt;(3篇)&amp;nbsp;科学&amp;#8217;摸鱼&amp;#8217;指北&lt;/li&gt;
+&lt;li&gt;(8篇) 新冠肺炎(NCP)正确应对姿势&lt;/li&gt;
+&lt;li&gt;(4篇) 如何应对,就是不愿意上班的心情?&lt;/li&gt;
+&lt;li&gt;(3篇) 科学'摸鱼'指北&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;完全是自觉隔离期间, 应网友预约, 写了出来,出乎意料,&amp;nbsp;反响热烈, &lt;/p&gt;
-&lt;p&gt;而且, 有赞赏直接给最高额度的, 吓一大跳,&amp;nbsp;赶忙问:&amp;#8221;是否点错了?&amp;#8221;&lt;/p&gt;
+&lt;p&gt;完全是自觉隔离期间, 应网友预约, 写了出来,出乎意料, 反响热烈, &lt;/p&gt;
+&lt;p&gt;而且, 有赞赏直接给最高额度的, 吓一大跳, 赶忙问:"是否点错了?"&lt;/p&gt;
 &lt;p&gt;准备退钱呢, 结果人家说等你吐糟很久了, 
-这种文章对自己有&lt;strong&gt;定神丸&lt;/strong&gt;一般的作用云云&amp;#8230;&lt;/p&gt;
+这种文章对自己有&lt;strong&gt;定神丸&lt;/strong&gt;一般的作用云云...&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="_4"&gt;分析&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;嗯哼? 看来不知不觉中, 自己的吐糟能力,&amp;nbsp;也终于进化到足以触及人心的程度了,&lt;/p&gt;
-&lt;p&gt;而且, 随着订阅人数超过 500 人,&amp;nbsp;发现还能启动流量功能,&lt;/p&gt;
+&lt;p&gt;嗯哼? 看来不知不觉中, 自己的吐糟能力, 也终于进化到足以触及人心的程度了,&lt;/p&gt;
+&lt;p&gt;而且, 随着订阅人数超过 500 人, 发现还能启动流量功能,&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;虽然,&amp;nbsp;自动插入的广告看很有些膈应, &lt;/li&gt;
-&lt;li&gt;但是,&amp;nbsp;这是真正的被动收入哪;&lt;/li&gt;
-&lt;li&gt;原本, 在俺的计划中, 第一笔被动收入是在完成有关系统后,&amp;nbsp;拼命持续优化出足够流量时才可能有的;&lt;/li&gt;
+&lt;li&gt;虽然, 自动插入的广告看很有些膈应, &lt;/li&gt;
+&lt;li&gt;但是, 这是真正的被动收入哪;&lt;/li&gt;
+&lt;li&gt;原本, 在俺的计划中, 第一笔被动收入是在完成有关系统后, 拼命持续优化出足够流量时才可能有的;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;看来,&amp;nbsp;真小看了微信生态超过8亿用户的现实;&lt;/p&gt;
+&lt;p&gt;看来, 真小看了微信生态超过8亿用户的现实;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="_5"&gt;对策&lt;a class="headerlink" href="#_5" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;那么,&amp;nbsp;就认真开始呗; &lt;/p&gt;
-&lt;p&gt;反正, 在社区/课程/开发之余,&amp;nbsp;以往每天也都在各种群吐糟;&lt;/p&gt;
-&lt;p&gt;现在嘦成系列的将大家关心的话题, 认真吐糟,&amp;nbsp;就有被动收入!&lt;/p&gt;
+&lt;p&gt;那么, 就认真开始呗; &lt;/p&gt;
+&lt;p&gt;反正, 在社区/课程/开发之余, 以往每天也都在各种群吐糟;&lt;/p&gt;
+&lt;p&gt;现在嘦成系列的将大家关心的话题, 认真吐糟, 就有被动收入!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;简直太正能量了;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;只是,&amp;nbsp;问题在:&lt;/p&gt;
+&lt;p&gt;只是, 问题在:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;没有真正可以长期运营的,&amp;nbsp;格调匹配的公众号来用&lt;/li&gt;
+&lt;li&gt;没有真正可以长期运营的, 格调匹配的公众号来用&lt;/li&gt;
 &lt;li&gt;以往公众号都是配给社区运营的, &lt;ul&gt;
-&lt;li&gt;唯一那个硬迁移到企业订阅号后, 叒闲置下来的,&amp;nbsp;注册主体是旧同事&lt;/li&gt;
-&lt;li&gt;如果当前这个&lt;strong&gt;&amp;#8220;吐糟&amp;#8221;计划&lt;/strong&gt;,&amp;nbsp;想长期进行,&lt;/li&gt;
-&lt;li&gt;还是得主体在左近的,&amp;nbsp;有些认证的事儿好处理.&lt;/li&gt;
+&lt;li&gt;唯一那个硬迁移到企业订阅号后, 叒闲置下来的, 注册主体是旧同事&lt;/li&gt;
+&lt;li&gt;如果当前这个&lt;strong&gt;"吐糟"计划&lt;/strong&gt;, 想长期进行,&lt;/li&gt;
+&lt;li&gt;还是得主体在左近的, 有些认证的事儿好处理.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;好再经提醒, 明确了:&lt;ul&gt;
-&lt;li&gt;俺家里领导自己的公众号(&lt;code&gt;花毛笔&lt;/code&gt;),&amp;nbsp;就是长期闲置状态;&lt;/li&gt;
-&lt;li&gt;一说即通, 那就重新装修,&amp;nbsp;这就开始吧.&lt;/li&gt;
+&lt;li&gt;俺家里领导自己的公众号(&lt;code&gt;花毛笔&lt;/code&gt;), 就是长期闲置状态;&lt;/li&gt;
+&lt;li&gt;一说即通, 那就重新装修, 这就开始吧.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id="_6"&gt;以及&lt;a class="headerlink" href="#_6" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;叕, 读作 &lt;code&gt;zhuó&lt;/code&gt;,&amp;nbsp;本意是连缀,如:&lt;/p&gt;
+&lt;p&gt;叕, 读作 &lt;code&gt;zhuó&lt;/code&gt;, 本意是连缀,如:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;quot;圣人之思脩,愚人之思叕&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;只是,&amp;nbsp;日常俺任性的转用其字形喻义:&lt;/p&gt;
+&lt;p&gt;只是, 日常俺任性的转用其字形喻义:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;又 ~&amp;nbsp;再1次&lt;/li&gt;
-&lt;li&gt;双 ~&amp;nbsp;又2次&lt;/li&gt;
-&lt;li&gt;叒 ~&amp;nbsp;又3次&lt;/li&gt;
-&lt;li&gt;叕 ~&amp;nbsp;又4次&lt;/li&gt;
-&lt;li&gt;敠 ~&amp;nbsp;又5次&lt;/li&gt;
+&lt;li&gt;又 ~ 再1次&lt;/li&gt;
+&lt;li&gt;双 ~ 又2次&lt;/li&gt;
+&lt;li&gt;叒 ~ 又3次&lt;/li&gt;
+&lt;li&gt;叕 ~ 又4次&lt;/li&gt;
+&lt;li&gt;敠 ~ 又5次&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;所以, 作为一头数字游民,&amp;nbsp;大妈本体在这世上历数是真的4次迁徙了:&lt;/p&gt;
+&lt;p&gt;所以, 作为一头数字游民, 大妈本体在这世上历数是真的4次迁徙了:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;出生在兰州, 第一次迁徙到常州,&amp;nbsp;接触到网络&lt;/li&gt;
-&lt;li&gt;第二次, 从常州迁徙到上海,&amp;nbsp;证明自己可以独立生存&lt;/li&gt;
-&lt;li&gt;第三次, 从上海迁徙到北京,&amp;nbsp;证明自己并无商业潜力&lt;/li&gt;
-&lt;li&gt;第四次, 从北京迁徙到珠海,&amp;nbsp;证明自己技术潜力还成&lt;/li&gt;
+&lt;li&gt;出生在兰州, 第一次迁徙到常州, 接触到网络&lt;/li&gt;
+&lt;li&gt;第二次, 从常州迁徙到上海, 证明自己可以独立生存&lt;/li&gt;
+&lt;li&gt;第三次, 从上海迁徙到北京, 证明自己并无商业潜力&lt;/li&gt;
+&lt;li&gt;第四次, 从北京迁徙到珠海, 证明自己技术潜力还成&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;同时,&amp;nbsp;也是私人发言场景的迁移:&lt;/p&gt;
+&lt;p&gt;同时, 也是私人发言场景的迁移:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;大学前,&amp;nbsp;通过信件通过手写和笔友交流&lt;/li&gt;
-&lt;li&gt;工作后,&amp;nbsp;通过邮件加入技术社区和网友交流&lt;/li&gt;
-&lt;li&gt;有域名, 通过私人网站, 通过 blog&amp;nbsp;默默和世界对话&lt;/li&gt;
-&lt;li&gt;第四次, 固定一个私人公众号,&amp;nbsp;在微信生态圈中和怼友们主题化交流&lt;/li&gt;
+&lt;li&gt;大学前, 通过信件通过手写和笔友交流&lt;/li&gt;
+&lt;li&gt;工作后, 通过邮件加入技术社区和网友交流&lt;/li&gt;
+&lt;li&gt;有域名, 通过私人网站, 通过 blog 默默和世界对话&lt;/li&gt;
+&lt;li&gt;第四次, 固定一个私人公众号, 在微信生态圈中和怼友们主题化交流&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;这次, 不知道能坚守多久, 全看 微信&amp;nbsp;小龙哥能坚持多久了.&lt;/p&gt;
+&lt;p&gt;这次, 不知道能坚守多久, 全看 微信 小龙哥能坚持多久了.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="ps"&gt;&lt;span class="caps"&gt;PS&lt;/span&gt;:&lt;a class="headerlink" href="#ps" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="ps"&gt;PS:&lt;a class="headerlink" href="#ps" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不完全过往私人吐槽线路&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;作为一名热爱互联网的程序猿, 从94年进入大学接触到互联网后,&amp;nbsp;就一直本能的对所有免费数据/发布渠道有冲动;&lt;/p&gt;
-&lt;p&gt;总是对各种新发布的 &lt;span class="caps"&gt;SNS&lt;/span&gt;/&lt;span class="caps"&gt;CMS&lt;/span&gt; 工具/服务/平台/&amp;#8230; 有研究试用,
+&lt;p&gt;作为一名热爱互联网的程序猿, 从94年进入大学接触到互联网后,
+就一直本能的对所有免费数据/发布渠道有冲动;&lt;/p&gt;
+&lt;p&gt;总是对各种新发布的 SNS/CMS 工具/服务/平台/... 有研究试用,
 以致日积月累, 自己都不清楚自己在网络中留下了多少痕迹;
-甚至于, 想过发动网友, 一起探索的, 结果用了两年多,&amp;nbsp;还是没探查穷尽;&lt;/p&gt;
+甚至于, 想过发动网友, 一起探索的, 结果用了两年多, 还是没探查穷尽;&lt;/p&gt;
 &lt;p&gt;既然, 要重新开始一个长期锚点吐槽了, 那么, 以往折腾过的线路就值得清点一下,
-以便大家知道哪些是真大妈,&amp;nbsp;哪些是李鬼:-}&lt;/p&gt;
-&lt;p&gt;域名,&amp;nbsp;没折腾太多:&lt;/p&gt;
+以便大家知道哪些是真大妈, 哪些是李鬼:-}&lt;/p&gt;
+&lt;p&gt;域名, 没折腾太多:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;私用:&lt;ul&gt;
-&lt;li&gt;zqstudio.org ~ 03&amp;nbsp;年左右短期临时使用&lt;/li&gt;
-&lt;li&gt;zoomquiet.org ~&amp;nbsp;04年注册,一直是个人网站主入口&lt;/li&gt;
-&lt;li&gt;momoko.in ~ 10年, 为自己家注册,&amp;nbsp;发布家庭笔记&lt;/li&gt;
-&lt;li&gt;zoomquiet.io ~ 13年, Google I/O 大会期间趁优惠抢到,&amp;nbsp;迁移为个人网站入口&lt;/li&gt;
-&lt;li&gt;zoomquiet.top ~ 17年, 为7niu/upyun 的CDN 使用,不得不注册 aliyun 全家桶,并备案,&amp;nbsp;专门用来绑定国内资源&lt;/li&gt;
+&lt;li&gt;zqstudio.org ~ 03 年左右短期临时使用&lt;/li&gt;
+&lt;li&gt;zoomquiet.org ~ 04年注册,一直是个人网站主入口&lt;/li&gt;
+&lt;li&gt;momoko.in ~ 10年, 为自己家注册, 发布家庭笔记&lt;/li&gt;
+&lt;li&gt;zoomquiet.io ~ 13年, Google I/O 大会期间趁优惠抢到, 迁移为个人网站入口&lt;/li&gt;
+&lt;li&gt;zoomquiet.top ~ 17年, 为7niu/upyun 的CDN 使用,不得不注册 aliyun 全家桶,并备案, 专门用来绑定国内资源&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;社区:&lt;ul&gt;
-&lt;li&gt;zhgdg.org ~ 13年, GDG珠海成立时,配合注册,&amp;nbsp;一直私人支付各种费用&lt;/li&gt;
-&lt;li&gt;DevRel.info ~ 14年, 配合公司开发者关系部门工作注册,&amp;nbsp;17年过期&lt;/li&gt;
-&lt;li&gt;&lt;span class="caps"&gt;TFUG&lt;/span&gt;.world ~ 19年, TFUG珠海成立时,&amp;nbsp;配合注册&lt;/li&gt;
-&lt;li&gt;101.camp ~ 18年, 无意中抢到, 变成&amp;nbsp;蟒营™系列课程主域名&lt;/li&gt;
+&lt;li&gt;zhgdg.org ~ 13年, GDG珠海成立时,配合注册, 一直私人支付各种费用&lt;/li&gt;
+&lt;li&gt;DevRel.info ~ 14年, 配合公司开发者关系部门工作注册, 17年过期&lt;/li&gt;
+&lt;li&gt;TFUG.world ~ 19年, TFUG珠海成立时, 配合注册&lt;/li&gt;
+&lt;li&gt;101.camp ~ 18年, 无意中抢到, 变成 蟒营™系列课程主域名&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;企业:&lt;ul&gt;
@@ -334,7 +338,7 @@
 &lt;h2 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://101.camp/"&gt;蟒营™101.camp 开源网络课程框架&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://py.101.camp/"&gt;蟒营™ Python&amp;nbsp;入门班第5期&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://py.101.camp/"&gt;蟒营™ Python 入门班第5期&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -342,7 +346,7 @@
 &lt;p&gt;是也乎,(￣▽￣)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3932&lt;/p&gt;
+&lt;p&gt;NN 3932&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好文笔,感叹号年度配额: &lt;strong&gt;1/3&lt;/strong&gt;&lt;/p&gt;
@@ -351,16 +355,16 @@
 &lt;p&gt;就是四处 &lt;code&gt;是也乎,(￣▽￣)&lt;/code&gt; 的那个大妈:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;私自嗯哼: ZoomQuiet (订阅号 &lt;strong&gt;ZoomQuiet42&lt;/strong&gt;)&lt;/li&gt;
-&lt;li&gt;公开课程: &lt;strong&gt;蟒营&lt;/strong&gt; (订阅号:&amp;nbsp;Mainium)&lt;/li&gt;
-&lt;li&gt;全国大会: PyChina (订阅号:&amp;nbsp;PyChinaOrg)&lt;/li&gt;
+&lt;li&gt;公开课程: &lt;strong&gt;蟒营&lt;/strong&gt; (订阅号: Mainium)&lt;/li&gt;
+&lt;li&gt;全国大会: PyChina (订阅号: PyChinaOrg)&lt;/li&gt;
 &lt;li&gt;本地社区: &lt;ul&gt;
-&lt;li&gt;GDG珠海 (订阅号: &lt;span class="caps"&gt;GDG&lt;/span&gt;-ZhuHai)&lt;/li&gt;
-&lt;li&gt;TFUG珠海 (订阅号:&amp;nbsp;ZH_TFUG)&lt;/li&gt;
+&lt;li&gt;GDG珠海 (订阅号: GDG-ZhuHai)&lt;/li&gt;
+&lt;li&gt;TFUG珠海 (订阅号: ZH_TFUG)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;历史吐糟: Chaos42 (订阅号&amp;nbsp;PythoniCamp)&lt;/li&gt;
+&lt;li&gt;历史吐糟: Chaos42 (订阅号 PythoniCamp)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="logging"></category></entry><entry><title>公告/ 拙见</title><link href="https://blog.zoomquiet.io/ann-imho-0.html" rel="alternate"></link><published>2020-02-22T11:42:00+08:00</published><updated>2020-03-05T15:45:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-02-22:/ann-imho-0.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;ANN&lt;/span&gt;/ what is &lt;span class="caps"&gt;IMHO&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;叕流浪到一个公众号, 期望定居,&amp;nbsp;重新开始嗯哼;&lt;/p&gt;
+&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="logging"></category></entry><entry><title>公告/ 拙见</title><link href="https://blog.zoomquiet.io/ann-imho-0.html" rel="alternate"></link><published>2020-02-22T11:42:00+08:00</published><updated>2020-03-05T15:45:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-02-22:/ann-imho-0.html</id><summary type="html">&lt;p&gt;ANN/ what is IMHO&lt;/p&gt;</summary><content type="html">&lt;p&gt;叕流浪到一个公众号, 期望定居, 重新开始嗯哼;&lt;/p&gt;
 &lt;p&gt;那么先厘定的当然是栏目了;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;事不过三
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -368,53 +372,55 @@
 &lt;p&gt;就三个:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;公告
-​-&amp;nbsp;拙见&lt;/li&gt;
+​- 拙见&lt;/li&gt;
 &lt;li&gt;钩陈&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;公告&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;不用说, 就是 ANNouncement, 各种正式通知,&amp;nbsp;给自己和读者以及永远注视着我们的系统背后的有关部门们;&lt;/p&gt;
+&lt;p&gt;不用说, 就是 ANNouncement, 各种正式通知, 
+给自己和读者以及永远注视着我们的系统背后的有关部门们;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;拙见&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;其实就是 &lt;span class="caps"&gt;IMHO&lt;/span&gt;(In My Humble Opinion)&amp;nbsp;这一网络常用缩写的翻译:&lt;/p&gt;
+&lt;p&gt;其实就是 IMHO(In My Humble Opinion) 这一网络常用缩写的翻译:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;恕我直言&lt;/li&gt;
 &lt;li&gt;依拙之见&lt;/li&gt;
 &lt;li&gt;依我所见&lt;/li&gt;
 &lt;li&gt;依愚人之见&lt;/li&gt;
 &lt;li&gt;依鄙人之见&lt;/li&gt;
-&lt;li&gt;&amp;#8230; &lt;/li&gt;
+&lt;li&gt;... &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;准备将自己各种问题思考过程记述并公开出来,
 类似这次春节被 &lt;code&gt;新冠肺炎(NCP/2019-nCoV)&lt;/code&gt; 激发的几个系列:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(8篇) 新冠肺炎(&lt;span class="caps"&gt;NCP&lt;/span&gt;)正确应对姿势&lt;/li&gt;
-&lt;li&gt;(4篇)&amp;nbsp;如何应对,就是不愿意上班的心情?&lt;/li&gt;
-&lt;li&gt;(3篇) 科学&amp;#8217;摸鱼&amp;#8217;指北&amp;nbsp;0~2&lt;/li&gt;
+&lt;li&gt;(8篇) 新冠肺炎(NCP)正确应对姿势&lt;/li&gt;
+&lt;li&gt;(4篇) 如何应对,就是不愿意上班的心情?&lt;/li&gt;
+&lt;li&gt;(3篇) 科学'摸鱼'指北 0~2&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;发现任何一个问题, 真的要认真分析, 尝试回答, 都不是一个简单的事儿;
 而多数网络中的文章,只是丢出一个非常标题党的问题, 
-立即, 用一篇文章,罗列数据/图片/表情包,&amp;nbsp;以及一句断言式的结论就完成了回答;&lt;/p&gt;
-&lt;p&gt;并成功引爆转发和关注, 形成 10万+&amp;nbsp;大V文章;&lt;/p&gt;
-&lt;p&gt;这不是不行,&amp;nbsp;而是不怎么合俺自己的偏好;&lt;/p&gt;
+立即, 用一篇文章,罗列数据/图片/表情包, 
+以及一句断言式的结论就完成了回答;&lt;/p&gt;
+&lt;p&gt;并成功引爆转发和关注, 形成 10万+ 大V文章;&lt;/p&gt;
+&lt;p&gt;这不是不行, 而是不怎么合俺自己的偏好;&lt;/p&gt;
 &lt;p&gt;那么, 既然没有对味儿的思考记录, 
 就公开自己的呗, 反正在思考了, 公开出来但求, &lt;code&gt;抛砖引玉&lt;/code&gt; 哈?&lt;/p&gt;
-&lt;p&gt;其实,公开了,&amp;nbsp;才发现有几个作用:&lt;/p&gt;
+&lt;p&gt;其实,公开了, 才发现有几个作用:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;梳理自己思考,&amp;nbsp;形成可讨论的输出&lt;/li&gt;
-&lt;li&gt;提供问题的私人思考方式和过程,&amp;nbsp;给有需要的朋友参考&lt;/li&gt;
-&lt;li&gt;演示普通人如何结构化思考, 以及过程, 为面对问题难以进行深入分析的朋友,&amp;nbsp;提供思维上的脚手架&lt;/li&gt;
-&lt;li&gt;以自己认真的姿态,&amp;nbsp;来安定一小片儿被爆文挑拨起来的焦虑&lt;/li&gt;
-&lt;li&gt;&amp;#8230;&lt;/li&gt;
+&lt;li&gt;梳理自己思考, 形成可讨论的输出&lt;/li&gt;
+&lt;li&gt;提供问题的私人思考方式和过程, 给有需要的朋友参考&lt;/li&gt;
+&lt;li&gt;演示普通人如何结构化思考, 以及过程, 为面对问题难以进行深入分析的朋友, 提供思维上的脚手架&lt;/li&gt;
+&lt;li&gt;以自己认真的姿态, 来安定一小片儿被爆文挑拨起来的焦虑&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以上&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;是也乎,(￣▽￣)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3931&lt;/p&gt;
+&lt;p&gt;NN 3931&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
@@ -422,22 +428,22 @@
 &lt;p&gt;就是四处 &lt;code&gt;是也乎,(￣▽￣)&lt;/code&gt; 的那个大妈:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;私自嗯哼: Zoom.Quiet (订阅号 &lt;strong&gt;ZoomQuiet42&lt;/strong&gt;)&lt;/li&gt;
-&lt;li&gt;公开课程: 蟒营 (订阅号:&amp;nbsp;Mainium)&lt;/li&gt;
+&lt;li&gt;公开课程: 蟒营 (订阅号: Mainium)&lt;/li&gt;
 &lt;li&gt;全国大会: PyChina (订阅号: &lt;strong&gt;PyChinaOrg&lt;/strong&gt;)&lt;/li&gt;
-&lt;li&gt;本地社区: GDG珠海 (订阅号: &lt;span class="caps"&gt;GDG&lt;/span&gt;-ZhuHai)&lt;/li&gt;
+&lt;li&gt;本地社区: GDG珠海 (订阅号: GDG-ZhuHai)&lt;/li&gt;
 &lt;li&gt;本地社区: &lt;ul&gt;
-&lt;li&gt;GDG珠海 (订阅号: &lt;span class="caps"&gt;GDG&lt;/span&gt;-ZhuHai)&lt;/li&gt;
-&lt;li&gt;TFUG珠海 (订阅号:&amp;nbsp;ZH_TFUG)&lt;/li&gt;
+&lt;li&gt;GDG珠海 (订阅号: GDG-ZhuHai)&lt;/li&gt;
+&lt;li&gt;TFUG珠海 (订阅号: ZH_TFUG)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;历史吐糟: Chaos42 (订阅号&amp;nbsp;PythoniCamp)&lt;/li&gt;
+&lt;li&gt;历史吐糟: Chaos42 (订阅号 PythoniCamp)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="Category"></category></entry><entry><title>公告/ 钩陈</title><link href="https://blog.zoomquiet.io/ann-oldtouch-0.html" rel="alternate"></link><published>2020-02-22T10:42:00+08:00</published><updated>2020-03-05T15:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-02-22:/ann-oldtouch-0.html</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;ANN&lt;/span&gt;/ what is&amp;nbsp;OldTouch&lt;/p&gt;</summary><content type="html">&lt;p&gt;叕流浪到一个公众号, 期望定居,&amp;nbsp;重新开始嗯哼;&lt;/p&gt;
+&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="Category"></category></entry><entry><title>公告/ 钩陈</title><link href="https://blog.zoomquiet.io/ann-oldtouch-0.html" rel="alternate"></link><published>2020-02-22T10:42:00+08:00</published><updated>2020-03-05T15:42:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2020-02-22:/ann-oldtouch-0.html</id><summary type="html">&lt;p&gt;ANN/ what is OldTouch&lt;/p&gt;</summary><content type="html">&lt;p&gt;叕流浪到一个公众号, 期望定居, 重新开始嗯哼;&lt;/p&gt;
 &lt;p&gt;那么先厘定的当然是栏目了;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;事不过三
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;就三个:&amp;nbsp;公告/拙见/钩陈&lt;/p&gt;
+&lt;p&gt;就三个: 公告/拙见/钩陈&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;钩陈&lt;/p&gt;
@@ -445,20 +451,20 @@
 &lt;p&gt;其实是两个词的组合:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;勾陈 ,  古代星宿名,源于中国人民对远古的星辰自然崇拜,是古代中国神话和天文学结合的产物. 勾陈为上古六神之中,与腾蛇同属土. &lt;ul&gt;
-&lt;li&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;荆州占&amp;#8221;曰:&amp;#8221;钩陈,天子大司马,钩陈者,黄龙之位也.&amp;nbsp;&amp;#8220;&lt;/li&gt;
-&lt;li&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;易冒&amp;#8221;:&amp;#8221;勾陈之象,实名麒麟,位居中央,权司戊日. &lt;/li&gt;
-&lt;li&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;星经&amp;#8221;:&amp;#8221;钩陈六星在五帝下.&amp;nbsp;&amp;#8220;&lt;/li&gt;
-&lt;li&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;步天歌&amp;#8221;:&amp;#8221;勾陈六星六甲前,天皇独在勾陈里.&amp;nbsp;&amp;#8220;&lt;/li&gt;
-&lt;li&gt;在&amp;#8221;奇门遁甲&amp;#8221;,勾陈被纳入八神之一,值符,腾蛇,太阴,勾陈,白虎,六合,玄武,九地,九天. &lt;/li&gt;
-&lt;li&gt;&amp;#8230;&lt;/li&gt;
-&lt;li&gt;史书上所记&amp;#8221;句陈,勾陈,钩陈&amp;#8221;,均为&amp;#8221;勾陈&amp;#8221;. &lt;/li&gt;
-&lt;li&gt;英文Curved&amp;nbsp;Array,星官名,属紫微垣,共6星,4星即小熊座α,δ,ε,ζ;2星在仙王座. &lt;/li&gt;
-&lt;li&gt;同时: 勾陈,&amp;nbsp;在药材中又是[雄黄]的别称. &lt;/li&gt;
+&lt;li&gt;"荆州占"曰:"钩陈,天子大司马,钩陈者,黄龙之位也. "&lt;/li&gt;
+&lt;li&gt;"易冒":"勾陈之象,实名麒麟,位居中央,权司戊日. &lt;/li&gt;
+&lt;li&gt;"星经":"钩陈六星在五帝下. "&lt;/li&gt;
+&lt;li&gt;"步天歌":"勾陈六星六甲前,天皇独在勾陈里. "&lt;/li&gt;
+&lt;li&gt;在"奇门遁甲",勾陈被纳入八神之一,值符,腾蛇,太阴,勾陈,白虎,六合,玄武,九地,九天. &lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;史书上所记"句陈,勾陈,钩陈",均为"勾陈". &lt;/li&gt;
+&lt;li&gt;英文Curved Array,星官名,属紫微垣,共6星,4星即小熊座α,δ,ε,ζ;2星在仙王座. &lt;/li&gt;
+&lt;li&gt;同时: 勾陈, 在药材中又是[雄黄]的别称. &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;钩沉, &lt;ul&gt;
-&lt;li&gt;一词语出&amp;#8221;易经·系辞&amp;#8221;:&amp;#8221;探赜(音zé)索隐,钩深致远,以定天下之吉凶,成天下之亹亹者,莫大乎蓍龟.&amp;nbsp;&amp;#8220;&lt;/li&gt;
-&lt;li&gt;释义:探求繁杂的物象,索求幽隐的事理,钩求深远的道术,使人获致远大的前途,以决定天下的吉凶,成就天下勤勉的事业的,没有比卜筮所用的&amp;#8221;蓍草&amp;#8221;和&amp;#8221;龟甲&amp;#8221;更伟大的了.&amp;nbsp;)&lt;/li&gt;
+&lt;li&gt;一词语出"易经·系辞":"探赜(音zé)索隐,钩深致远,以定天下之吉凶,成天下之亹亹者,莫大乎蓍龟. "&lt;/li&gt;
+&lt;li&gt;释义:探求繁杂的物象,索求幽隐的事理,钩求深远的道术,使人获致远大的前途,以决定天下的吉凶,成就天下勤勉的事业的,没有比卜筮所用的"蓍草"和"龟甲"更伟大的了. )&lt;/li&gt;
 &lt;li&gt;指探索深奥的道理或散失的内容&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -467,21 +473,21 @@
 &lt;ul&gt;
 &lt;li&gt;勾联陈旧的故事,&lt;ul&gt;
 &lt;li&gt;将以往的常识,&lt;/li&gt;
-&lt;li&gt;现在大家忽略的人/故事/技术/工具/项目/&amp;#8230;&lt;/li&gt;
-&lt;li&gt;阐述清楚,&amp;nbsp;作为参考&lt;/li&gt;
+&lt;li&gt;现在大家忽略的人/故事/技术/工具/项目/...&lt;/li&gt;
+&lt;li&gt;阐述清楚, 作为参考&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;没想到 &lt;code&gt;勾陈&lt;/code&gt; 是位星君&lt;/li&gt;
 &lt;li&gt;而俺想表述的类型, 是 &lt;code&gt;钩沉&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;沉和陈,&amp;nbsp;俺还是意向陈旧的陈&lt;/li&gt;
-&lt;li&gt;但是, 钩又的确比勾,&amp;nbsp;来的形象&lt;/li&gt;
+&lt;li&gt;沉和陈, 俺还是意向陈旧的陈&lt;/li&gt;
+&lt;li&gt;但是, 钩又的确比勾, 来的形象&lt;/li&gt;
 &lt;li&gt;那么,就任性组合为 &lt;strong&gt;钩陈&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;作为私人栏目代号了&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;另两个就是:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;公告 -&amp;gt; &lt;strong&gt;&lt;span class="caps"&gt;ANN&lt;/span&gt;&lt;/strong&gt;ouncement&lt;/li&gt;
-&lt;li&gt;拙见 -&amp;gt; &lt;strong&gt;&lt;span class="caps"&gt;IMHO&lt;/span&gt;&lt;/strong&gt;(In My Humble&amp;nbsp;Opinion)&lt;/li&gt;
+&lt;li&gt;公告 -&amp;gt; &lt;strong&gt;ANN&lt;/strong&gt;ouncement&lt;/li&gt;
+&lt;li&gt;拙见 -&amp;gt; &lt;strong&gt;IMHO&lt;/strong&gt;(In My Humble Opinion)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;已经在 &lt;code&gt;菜单/栏目&lt;/code&gt; 中有关链接说明了.&lt;/p&gt;
 &lt;p&gt;以上&lt;/p&gt;
@@ -489,7 +495,7 @@
 &lt;p&gt;是也乎,(￣▽￣)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;span class="caps"&gt;NN&lt;/span&gt;&amp;nbsp;3931&lt;/p&gt;
+&lt;p&gt;NN 3931&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
@@ -497,68 +503,72 @@
 &lt;p&gt;就是四处 &lt;code&gt;是也乎,(￣▽￣)&lt;/code&gt; 的那个大妈:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;私自嗯哼: Zoom.Quiet (订阅号 &lt;strong&gt;ZoomQuiet42&lt;/strong&gt;)&lt;/li&gt;
-&lt;li&gt;公开课程: 蟒营 (订阅号:&amp;nbsp;Mainium)&lt;/li&gt;
+&lt;li&gt;公开课程: 蟒营 (订阅号: Mainium)&lt;/li&gt;
 &lt;li&gt;全国大会: PyChina (订阅号: &lt;strong&gt;PyChinaOrg&lt;/strong&gt;)&lt;/li&gt;
-&lt;li&gt;本地社区: GDG珠海 (订阅号: &lt;span class="caps"&gt;GDG&lt;/span&gt;-ZhuHai)&lt;/li&gt;
+&lt;li&gt;本地社区: GDG珠海 (订阅号: GDG-ZhuHai)&lt;/li&gt;
 &lt;li&gt;本地社区: &lt;ul&gt;
-&lt;li&gt;GDG珠海 (订阅号: &lt;span class="caps"&gt;GDG&lt;/span&gt;-ZhuHai)&lt;/li&gt;
-&lt;li&gt;TFUG珠海 (订阅号:&amp;nbsp;ZH_TFUG)&lt;/li&gt;
+&lt;li&gt;GDG珠海 (订阅号: GDG-ZhuHai)&lt;/li&gt;
+&lt;li&gt;TFUG珠海 (订阅号: ZH_TFUG)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;历史吐糟: Chaos42 (订阅号&amp;nbsp;PythoniCamp)&lt;/li&gt;
+&lt;li&gt;历史吐糟: Chaos42 (订阅号 PythoniCamp)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="Category"></category></entry><entry><title>关联 PRESSone</title><link href="https://blog.zoomquiet.io/bind-press-one.html" rel="alternate"></link><published>2017-09-10T08:42:00+08:00</published><updated>2019-03-31T09:47:35+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-09-10:/bind-press-one.html</id><content type="html">
+&lt;hr&gt;</content><category term="ANN"></category><category term="ann"></category><category term="define"></category><category term="Category"></category></entry><entry><title>关联 PRESSone</title><link href="https://blog.zoomquiet.io/bind-press-one.html" rel="alternate"></link><published>2017-09-10T08:42:00+08:00</published><updated>2019-03-31T09:47:35+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2017-09-10:/bind-press-one.html</id><content type="html">
 &lt;p&gt;https://press.one/p/v?s=daa9a127693ab0fde9141b894ff9f0dc452c33fc166f0e97252420b83a33088e6c67f5d44f63860c218859c099557d42908cbb8059ebfe92765636dbaaf654710&amp;amp;h=90f1dab4c8b24b6502c03cdf067a279d8a672ae229cc405e171f57c0d45613f7&amp;amp;a=6263e76c1e5ac3196975ad5fa05f458f49633f5c&amp;amp;f=P1&amp;amp;v=3&lt;/p&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;190331 ZoomQuiet init.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="ANN"></category><category term="pre"></category><category term="blockchain"></category></entry><entry><title>How to from Jekyll jump into Pelican</title><link href="https://blog.zoomquiet.io/jekyll-to-pelican.html" rel="alternate"></link><published>2013-12-19T10:42:00+08:00</published><updated>2016-04-07T03:19:47+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-19:/jekyll-to-pelican.html</id><summary type="html">
+&lt;li&gt;190331 ZoomQuiet init.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="ANN"></category><category term="pre"></category><category term="blockchain"></category></entry><entry><title>How to from Jekyll jump into Pelican</title><link href="https://blog.zoomquiet.io/jekyll-to-pelican.html" rel="alternate"></link><published>2013-12-19T10:42:00+08:00</published><updated>2016-04-07T03:19:47+08:00</updated><author><name>Zoom.Quiet</name></author><id>tag:blog.zoomquiet.io,2013-12-19:/jekyll-to-pelican.html</id><summary type="html">
 &lt;h1 id="jekyll-pelican"&gt;如何从 Jekyll 转进入 Pelican&lt;a class="headerlink" href="#jekyll-pelican" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;简述静态网站从 Jekyll 环境中迁移为 纯 Python 
-&lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;…&lt;/p&gt;
+&lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;...&lt;/p&gt;
 &lt;p&gt;&lt;img alt=";" src="https://0.gravatar.com/avatar/0cb9d9d7e6b152d24d2b78c6464502a6?d=https%3A%2F%2Fidenticons.github.com%2Fc0b8694f59232c6681a92c4c9fec3e18.png&amp;amp;r=x&amp;amp;s=440"/&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;为毛&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;社区在发展, 原先的 蠎周刊,为方便,使用了 gitcafe 内置的 Jekyll 服 …&lt;/p&gt;</summary><content type="html">
 &lt;h1 id="jekyll-pelican"&gt;如何从 Jekyll 转进入 Pelican&lt;a class="headerlink" href="#jekyll-pelican" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;简述静态网站从 Jekyll 环境中迁移为 纯 Python 
-&lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;…&lt;/p&gt;
+&lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;...&lt;/p&gt;
 &lt;p&gt;&lt;img alt=";" src="https://0.gravatar.com/avatar/0cb9d9d7e6b152d24d2b78c6464502a6?d=https%3A%2F%2Fidenticons.github.com%2Fc0b8694f59232c6681a92c4c9fec3e18.png&amp;amp;r=x&amp;amp;s=440"/&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;为毛&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;社区在发展, 原先的 蠎周刊,为方便,使用了 gitcafe 内置的 Jekyll 服务,
-所以,其实在使用 Ruby 自动编译和发布.&lt;/p&gt;
-&lt;p&gt;总是感觉不够纯粹 Pythonic …&lt;/p&gt;
-&lt;p&gt;故而, 下决心完成迁移&lt;/p&gt;
+所以,其实在使用 Ruby 自动编译和发布.&lt;/p&gt;
+&lt;p&gt;总是感觉不够纯粹 Pythonic ...&lt;/p&gt;
+&lt;p&gt;故而, 下决心完成迁移&lt;/p&gt;
 &lt;h1 id="_2"&gt;整体&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;忽然发现,俺感觉很直觉的事儿,也写了文档, 但是,其它人真正首次上手全然一头雾水…&lt;/p&gt;
+&lt;p&gt;忽然发现,俺感觉很直觉的事儿,也写了文档,
+但是,其它人真正首次上手全然一头雾水...&lt;/p&gt;
 &lt;p&gt;所以
-&lt;a href="http://xiaolai.github.io/alpha/on-learning/"&gt;学习学习再学习 - xiaolai&lt;/a&gt; 提出的,俺实在无法同意更多..&lt;/p&gt;
+&lt;a href="http://xiaolai.github.io/alpha/on-learning/"&gt;学习学习再学习 - xiaolai&lt;/a&gt;
+提出的,俺实在无法同意更多..&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Impossible_staircase" src="http://upload.wikimedia.org/wikipedia/commons/3/34/Impossible_staircase.svg"/&gt;&lt;/p&gt;
-&lt;p&gt;这是最难的知识结构——它往往看起来跟线性结构没什么区别，但，最终令人迷惑，甚至懊恼。 用最直白的话来描述，就是：&lt;/p&gt;
+&lt;p&gt;这是最难的知识结构——它往往看起来跟线性结构没什么区别，但，最终令人迷惑，甚至懊恼。
+用最直白的话来描述，就是：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;初级的知识需要对高级知识深入了解才能真正深入了解
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;——你看看这句话多拗口就多少有点概念了。&lt;/p&gt;
-&lt;p&gt;所以,还是按照 easy 模式来, 先简单的说,再往死里说折腾的技术细节…&lt;/p&gt;
+&lt;p&gt;所以,还是按照 easy 模式来,
+先简单的说,再往死里说折腾的技术细节...&lt;/p&gt;
 &lt;h2 id="_3"&gt;已知条件&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://help.github.com/articles/user-organization-and-project-pages"&gt;User, Organization and Project Pages&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://help.github.com/articles/user-organization-and-project-pages"&gt;User, Organization and Project Pages&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;github 的 所谓 &lt;code&gt;pages&lt;/code&gt; 服务的本质:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;云端的 Jekell 服务&lt;/li&gt;
+&lt;li&gt;云端的 Jekell 服务&lt;/li&gt;
 &lt;li&gt;对约定的仓库,感知变化时,就尝试进行编译&lt;/li&gt;
-&lt;li&gt;并自动完成发布(现在是到 github.io)&lt;/li&gt;
+&lt;li&gt;并自动完成发布(现在是到 github.io)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这里的约定仓库,只有两种情况:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;用户/组织: &lt;ul&gt;
-&lt;li&gt;比如, 注册成的用户/组织 为 https://github.com/foo&lt;/li&gt;
+&lt;li&gt;比如, 注册成的用户/组织 为 https://github.com/foo&lt;/li&gt;
 &lt;li&gt;则, github 尝试进行 &lt;code&gt;pages&lt;/code&gt; 发布的仓库为:&lt;/li&gt;
 &lt;li&gt;https://github.com/foo/foo.github.io&lt;/li&gt;
-&lt;li&gt;发布到: https://foo.github.io&lt;/li&gt;
+&lt;li&gt;发布到:  https://foo.github.io&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;项目&lt;ul&gt;
-&lt;li&gt;任意一个项目仓库,比如, https://github.com/foo/foobar&lt;/li&gt;
+&lt;li&gt;任意一个项目仓库,比如, https://github.com/foo/foobar&lt;/li&gt;
 &lt;li&gt;则, githuba 支持自动对此仓库的 &lt;code&gt;gh-pages&lt;/code&gt; 分支进行 &lt;code&gt;pages&lt;/code&gt; 编译&lt;/li&gt;
-&lt;li&gt;而发布为: https://foo.github.io/foobar&lt;/li&gt;
+&lt;li&gt;而发布为: https://foo.github.io/foobar&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -567,7 +577,8 @@
 Python 世界中大堆静态网站发布工具中的一个,
 为毛选中这个?
 只是因为 42分钟里,大妈将其折腾起来了,
-而且官方的文档/案例/样式,的确足够丰富, 给人信心…&lt;/p&gt;
+而且官方的文档/案例/样式,的确足够丰富,
+给人信心...&lt;/p&gt;
 &lt;p&gt;而其本身对网站的约定非常简单:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;配置好 &lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/li&gt;
@@ -575,17 +586,18 @@ Python 世界中大堆静态网站发布工具中的一个,
 &lt;li&gt;一键命令编译完成静态网络的生成,组织到 &lt;code&gt;output&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_4"&gt;所以?方案!&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;基于以上的整体理解, 就可以决策怎么基于 github 的 &lt;code&gt;pages&lt;/code&gt; 服务, 来进行免费的网站发布了;&lt;/p&gt;
+&lt;p&gt;基于以上的整体理解, 就可以决策怎么基于 github 的 &lt;code&gt;pages&lt;/code&gt; 服务,
+来进行免费的网站发布了;&lt;/p&gt;
 &lt;p&gt;目测也就两招:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在用户/组织 的 &lt;code&gt;pages&lt;/code&gt; 仓库中直接部署 Pelican 工程&lt;ul&gt;
 &lt;li&gt;只是要在根目录部署一个自动跳转到 &lt;code&gt;output&lt;/code&gt; 子目录的 &lt;code&gt;index.html&lt;/code&gt; 页面&lt;/li&gt;
 &lt;li&gt;以便发布后可以略过根目录来访问编译结果的内容&lt;/li&gt;
-&lt;li&gt;发布成 https://foo.github.io/output&lt;/li&gt;
+&lt;li&gt;发布成 https://foo.github.io/output&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;用两个仓库, 将用户/组织 的 &lt;code&gt;pages&lt;/code&gt; 仓库部署为 &lt;code&gt;output&lt;/code&gt; 子目录&lt;ul&gt;
-&lt;li&gt;这样就能自动发布为 https://foo.github.io&lt;/li&gt;
+&lt;li&gt;这样就能自动发布为 https://foo.github.io&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -599,17 +611,17 @@ Python 世界中大堆静态网站发布工具中的一个,
 &lt;li&gt;qpython-android.github.io &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;先在 &lt;code&gt;qpython-android.pelican&lt;/code&gt; 中测试确认好 pelical 工程可用,并尝试编译&lt;/li&gt;
+&lt;li&gt;先在 &lt;code&gt;qpython-android.pelican&lt;/code&gt; 中测试确认好 pelical 工程可用,并尝试编译&lt;/li&gt;
 &lt;li&gt;一切正确的话,将 &lt;code&gt;qpython-android.github.io&lt;/code&gt; 复制覆盖为 &lt;code&gt;qpython-android.pelican/output&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;以后,日常的维护就再也不需要 &lt;code&gt;qpython-android.github.io&lt;/code&gt; 了!&lt;ol&gt;
-&lt;li&gt;进入 &lt;code&gt;qpython-android.pelican/content&lt;/code&gt; 创建/增补/修订 文章&lt;/li&gt;
+&lt;li&gt;进入 &lt;code&gt;qpython-android.pelican/content&lt;/code&gt; 创建/增补/修订 文章&lt;/li&gt;
 &lt;li&gt;回到 &lt;code&gt;qpython-android.pelican&lt;/code&gt; 执行 &lt;code&gt;fab build&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;本地到 &lt;code&gt;output&lt;/code&gt; 打开对应页面检查效果&lt;/li&gt;
 &lt;li&gt;还是在 &lt;code&gt;qpython-android.pelican&lt;/code&gt; 执行 &lt;code&gt;fab pub2hub&lt;/code&gt; &lt;ul&gt;
-&lt;li&gt;完成对 &lt;code&gt;qpython-android.github.io&lt;/code&gt; 仓库实际的 push &lt;/li&gt;
-&lt;li&gt;即, 发布成网站: http://qpython-android.github.io&lt;/li&gt;
+&lt;li&gt;完成对 &lt;code&gt;qpython-android.github.io&lt;/code&gt; 仓库实际的 push &lt;/li&gt;
+&lt;li&gt;即, 发布成网站: http://qpython-android.github.io&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;最后,在 &lt;code&gt;qpython-android.pelican&lt;/code&gt; 进行正常的 &lt;code&gt;git add-&amp;gt;ci-&amp;gt;pu&lt;/code&gt;&lt;ul&gt;
@@ -621,16 +633,16 @@ Python 世界中大堆静态网站发布工具中的一个,
 &lt;/ol&gt;
 &lt;p&gt;收功!&lt;/p&gt;
 &lt;h1 id="_6"&gt;细节&lt;a class="headerlink" href="#_6" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;然后, 再分享俺的折腾过程…&lt;/p&gt;
+&lt;p&gt;然后, 再分享俺的折腾过程...&lt;/p&gt;
 &lt;h2 id="_7"&gt;过程&lt;a class="headerlink" href="#_7" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;整体上,其实就三步:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;选择一个 theme ,完成本地 demo 整明白怎么使用 Pelican&lt;/li&gt;
-&lt;li&gt;将原先 Jekyll 格式的文章声明部分文本, 批量转化为 Pelican 的&lt;/li&gt;
+&lt;li&gt;选择一个 theme ,完成本地 demo 整明白怎么使用 Pelican&lt;/li&gt;
+&lt;li&gt;将原先 Jekyll 格式的文章声明部分文本, 批量转化为 Pelican 的&lt;/li&gt;
 &lt;li&gt;改进发布流程,自动化&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="theme"&gt;theme&lt;a class="headerlink" href="#theme" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;综合对比了官网收集的一堆样式,选择了 &lt;a href="https://github.com/DandyDev/pelican-bootstrap3"&gt;DandyDev&lt;/a&gt; 的,根据说明,立即就完成了编译,本地检阅 ;-)&lt;/p&gt;
+&lt;p&gt;综合对比了官网收集的一堆样式,选择了 &lt;a href="https://github.com/DandyDev/pelican-bootstrap3"&gt;DandyDev&lt;/a&gt; 的,根据说明,立即就完成了编译,本地检阅 ;-)&lt;/p&gt;
 &lt;h3 id="meta"&gt;meta&lt;a class="headerlink" href="#meta" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;果断使用 Python 脚本,快速完成转换
 &lt;a href="https://gitcafe.com/CPyUG/weekly/blob/master/_plugins/jekyll2pelican.py"&gt;jekyll2pelican.py&lt;/a&gt;&lt;/p&gt;
@@ -640,7 +652,8 @@ Python 世界中大堆静态网站发布工具中的一个,
 &lt;li&gt;参考: &lt;a href="https://gitcafe.com/CPyUG/weekly/blob/master/fabfile.py"&gt;fabfile.py&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;定制了 &lt;code&gt;pub2cafe&lt;/code&gt; 完成自动化发布&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;因为 &lt;code&gt;gitcafe&lt;/code&gt; 只有用户同名-pages 服务,所以,对于当前 &lt;code&gt;蠎周刊&lt;/code&gt; 的 Pelican 工程, 用两个仓库,配合完成:&lt;/p&gt;
+&lt;p&gt;因为 &lt;code&gt;gitcafe&lt;/code&gt; 只有用户同名-pages 服务,所以,对于当前 &lt;code&gt;蠎周刊&lt;/code&gt; 的 Pelican 工程,
+用两个仓库,配合完成:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;https://github.com/qpython-android/qpython-android.pelican.git
     +- ..
     +- pelicanconf.py   主配置文件
@@ -652,22 +665,24 @@ Python 世界中大堆静态网站发布工具中的一个,
     +- .gitignore       配置忽略 output 目录
     +- ...
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;这样一来,目录,就不用进入 &lt;code&gt;output&lt;/code&gt; 目录进行 git 操作了 平时的发布流程就是:&lt;/p&gt;
+&lt;p&gt;这样一来,目录,就不用进入 &lt;code&gt;output&lt;/code&gt; 目录进行 git 操作了
+平时的发布流程就是:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在 &lt;code&gt;content&lt;/code&gt; 目录对应分类子目录中创建 &lt;code&gt;*.md&lt;/code&gt; 文本,组织文章&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;fab build&lt;/code&gt; 完成编译,本地检阅文章效果&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git add . &amp;amp;&amp;amp; git ci &amp;amp;&amp;amp; git pu&lt;/code&gt; 将增补提交&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fab pub2cafe&lt;/code&gt; 自动完成进入 &lt;code&gt;output&lt;/code&gt; 后的一系列 git 操作&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fab pub2cafe&lt;/code&gt; 自动完成进入 &lt;code&gt;output&lt;/code&gt; 后的一系列 git 操作&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;对应的 配置中:&lt;/p&gt;
+&lt;p&gt;对应的 配置中:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;#DELETE_OUTPUT_DIRECTORY = True&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;就绝对不能打开注释
-不然 &lt;code&gt;output&lt;/code&gt; 目录清除,就没有了 &lt;code&gt;.git&lt;/code&gt; 也就无法发布了…&lt;/p&gt;
+不然 &lt;code&gt;output&lt;/code&gt; 目录清除,就没有了 &lt;code&gt;.git&lt;/code&gt; 也就无法发布了...&lt;/p&gt;
 &lt;h2 id="_8"&gt;坑&lt;a class="headerlink" href="#_8" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;整个过程中,遇到没有找到文档的小麻烦,自个儿解决了的….&lt;/p&gt;
-&lt;h3 id="disqus"&gt;&lt;span class="caps"&gt;DISQUS&lt;/span&gt;&lt;a class="headerlink" href="#disqus" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;果断遇到了 &lt;span class="caps"&gt;DISQUS&lt;/span&gt; 配置了,不生效的问题,上下折腾, 才发现很多人都遇到了这个问题, 追踪到代码:&lt;/p&gt;
+&lt;p&gt;整个过程中,遇到没有找到文档的小麻烦,自个儿解决了的....&lt;/p&gt;
+&lt;h3 id="disqus"&gt;DISQUS&lt;a class="headerlink" href="#disqus" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;果断遇到了 DISQUS 配置了,不生效的问题,上下折腾, 才发现很多人都遇到了这个问题,
+追踪到代码:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;//... pelican-themes/pelican-bootstrap3/templates/includes/comments.html&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="c1"&gt;//...&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;disqus_shortname&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'{{ DISQUS_SITENAME }}'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// required: replace example with your forum shortname&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
@@ -676,7 +691,7 @@ Python 世界中大堆静态网站发布工具中的一个,
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;才发现 &lt;code&gt;SITEURL&lt;/code&gt; 的配置是决定性的,
 一定要同 &lt;code&gt;DISQUS&lt;/code&gt; 申请时的一致;
-本地编译后, 看一眼源代码,就知道是否靠谱了…&lt;/p&gt;
+本地编译后, 看一眼源代码,就知道是否靠谱了...&lt;/p&gt;
 &lt;h3 id="pages"&gt;pages&lt;a class="headerlink" href="#pages" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;突然发现 &lt;code&gt;content/pages&lt;/code&gt; 目录中的文本,是种特殊文章,不但可以出现在导航,而且使用专用的模板,
 所以,默认是没有 &lt;code&gt;DISQUS&lt;/code&gt; 槽接的!&lt;/p&gt;
@@ -689,7 +704,7 @@ Python 世界中大堆静态网站发布工具中的一个,
 &lt;p&gt;一时手賎,打开了:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;CATEGORY_FEED_ATOM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;'feeds/%s.atom.xml'&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;结果,发现不能在模板里简单的完成分类子 &lt;span class="caps"&gt;RSS&lt;/span&gt; 的链接!&lt;/p&gt;
+&lt;p&gt;结果,发现不能在模板里简单的完成分类子 RSS 的链接!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"icon-th icon-large"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Categories&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h4&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 {% for cat, null in categories %}
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"list-group-item"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -703,36 +718,38 @@ Python 世界中大堆静态网站发布工具中的一个,
 {% endfor %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;因为这儿的 &lt;code&gt;{{ cat }}&lt;/code&gt; 是分类的名称,可能包含大小写字母,
-而配置指导下生成的 &lt;span class="caps"&gt;RSS&lt;/span&gt; 文件是全小写的…&lt;/p&gt;
+而配置指导下生成的 RSS 文件是全小写的...&lt;/p&gt;
 &lt;p&gt;纠结了一会儿,也没有查到对应的文档,突然想到各种内置对象都有的 &lt;code&gt;sulg&lt;/code&gt; 属性!&lt;/p&gt;
-&lt;p&gt;于是就猜对了…
+&lt;p&gt;于是就猜对了...
 参考:
 &lt;a href="https://gitcafe.com/CPyUG/weekly/blob/master/_themes/pelican-bootstrap3/templates/includes/sidebar.html#L22"&gt;includes/sidebar.html#22&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="author"&gt;author&lt;a class="headerlink" href="#author" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;原样式作者因为是个人网站,所以,无所谓 &lt;code&gt;Author&lt;/code&gt; 的信息,
 但是,作为社区用共笔环境,就必须有所体现,
-在 &lt;a href="https://gitcafe.com/CPyUG/weekly/blob/master/_themes/pelican-bootstrap3/templates/includes/article_info.html"&gt;includes / article_info.html&lt;/a&gt; 先打开作者的属性输出,&lt;/p&gt;
+在 &lt;a href="https://gitcafe.com/CPyUG/weekly/blob/master/_themes/pelican-bootstrap3/templates/includes/article_info.html"&gt;includes / article_info.html&lt;/a&gt;
+先打开作者的属性输出,&lt;/p&gt;
 &lt;p&gt;然后,从别的 theme 工程中抄一个模板:
 &lt;a href="https://gitcafe.com/CPyUG/weekly/blob/master/_themes/pelican-bootstrap3/templates/author.html"&gt;author.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;即好!&lt;/p&gt;
-&lt;h3 id="toc"&gt;&lt;span class="caps"&gt;TOC&lt;/span&gt;&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;是的,以往 rST/t2t 时,甚至于 Word 时都有的 &lt;/p&gt;
+&lt;h3 id="toc"&gt;TOC&lt;a class="headerlink" href="#toc" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;是的,以往 rST/t2t 时,甚至于 Word 时都有的 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;TOC ~ 章节索引
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;肿么可以没有?!&lt;/p&gt;
-&lt;p&gt;果断: &lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/extract_toc"&gt;pelican-plugins/extract_toc at master · getpelican/pelican-plugins&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;只是这货竟然是依赖 &lt;code&gt;beautifulsoup4&lt;/code&gt; 的! 对于非 &lt;code&gt;UNIX/Linux/MAC&lt;/code&gt; 用户而言, 人艰不拆哪!!!&lt;/p&gt;
+&lt;p&gt;果断: &lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/extract_toc"&gt;pelican-plugins/extract_toc at master · getpelican/pelican-plugins&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;只是这货竟然是依赖 &lt;code&gt;beautifulsoup4&lt;/code&gt; 的! 对于非 &lt;code&gt;UNIX/Linux/MAC&lt;/code&gt; 用户而言,
+人艰不拆哪!!!&lt;/p&gt;
 &lt;h2 id="_9"&gt;参考:&lt;a class="headerlink" href="#_9" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://riku.gitcafe.com/pelican-gitcafe.html"&gt;使用 Pelican + GitCafe Page 创建 Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.imley.net/2013/01/03/disqus-thread-url-issue/#content"&gt;吐槽一下DISQUS的thread链接错误问题 | Ley’s blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://raichev.net/blohg-to-pelican.html"&gt;Alex Raichev - Blog - Blohg to Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://riku.gitcafe.com/pelican-gitcafe.html"&gt;使用 Pelican + GitCafe Page 创建 Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.imley.net/2013/01/03/disqus-thread-url-issue/#content"&gt;吐槽一下DISQUS的thread链接错误问题 | Ley's blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://raichev.net/blohg-to-pelican.html"&gt;Alex Raichev - Blog - Blohg to Pelican&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;160120 ZoomQuiet re-deploy in sora&lt;/li&gt;
-&lt;li&gt;140127 ZoomQuiet 增补宏观理解&lt;/li&gt;
-&lt;li&gt;140120 ZoomQuiet 复制到 QPython 的 Pelican 工程&lt;/li&gt;
-&lt;li&gt;131219 ZoomQuiet 为 &lt;a href="https://gitcafe.com/CPyUG/weekly/blob/master/README.md"&gt;CPyUG/weekly - GitCafe&lt;/a&gt; 创建&lt;/li&gt;
+&lt;li&gt;160120 ZoomQuiet re-deploy in sora&lt;/li&gt;
+&lt;li&gt;140127 ZoomQuiet 增补宏观理解&lt;/li&gt;
+&lt;li&gt;140120 ZoomQuiet 复制到 QPython 的 Pelican 工程&lt;/li&gt;
+&lt;li&gt;131219 ZoomQuiet 为 &lt;a href="https://gitcafe.com/CPyUG/weekly/blob/master/README.md"&gt;CPyUG/weekly - GitCafe&lt;/a&gt; 创建&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;…&lt;/p&gt;</content><category term="ANN"></category><category term="howto"></category><category term="pelican"></category></entry></feed>
+&lt;p&gt;...&lt;/p&gt;</content><category term="ANN"></category><category term="howto"></category><category term="pelican"></category></entry></feed>

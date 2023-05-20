@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>    Python&nbsp;中的字典调度模式
+    <title>    Python 中的字典调度模式
 / 是也乎(￣▽￣)
 / ZoomQuiet.io    </title>
 
@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="230209-dict-dispatch-pattern-in-python"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/230209-dict-dispatch-pattern-in-python.html"/>
-            <meta property="og:description" content="Pythonic/ 字典的神奇功能"/>
+            <meta property="og:description" content="Pythonic/ 字典的神奇功能"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -92,7 +92,7 @@
             <header class="page-header">
                 <h1>
                     <a href="https://blog.zoomquiet.io/230209-dict-dispatch-pattern-in-python.html">
-                        Python&nbsp;中的字典调度模式
+                        Python 中的字典调度模式
                     </a>
                 </h1>
             </header>
@@ -131,28 +131,30 @@
     <nav class="toc">
     <div class="toc">
 <ul>
-<li><a href="#lambda">使用 Lambda 函数</a></li>
+<li><a href="#lambda">使用 Lambda 函数</a></li>
 <li><a href="#_1">使用适当的功能</a></li>
 <li><a href="#_2">默认结果</a></li>
 <li><a href="#_3">传参</a></li>
 <li><a href="#_4">真实世界</a></li>
 <li><a href="#_5">访问者模式</a></li>
 <li><a href="#_6">小结</a></li>
-<li><a href="#ps"><span class="caps">PS</span>:</a></li>
+<li><a href="#ps">PS:</a></li>
 </ul>
 </div>
     </nav>
 
                 
-<p>原文: <a href="https://martinheinz.dev/blog/90">Dictionary Dispatch Pattern in Python | Martin Heinz | Personal Website <span class="amp">&amp;</span> Blog</a></p>
+<p>原文: <a href="https://martinheinz.dev/blog/90">Dictionary Dispatch Pattern in Python | Martin Heinz | Personal Website &amp; Blog</a></p>
 <p>是否曾经写过一堆 if/else 或是一个巨大的 match/case ,
-其中所有语句只是为了匹配一值, 想知道如何将这种事儿简洁又可读嘛?</p>
+其中所有语句只是为了匹配一值, 想知道如何将这种事儿简洁又可读嘛?</p>
 <p>如果这种场景,那么 字典调度模式 可能就是适合的工具;
-通过字典分派,可以通过简单的查找 Python 的字典来替代任何条件组, 而且有很多姿势可以搞…</p>
-<p>If so, then dictionary dispatch pattern might be a tool for you. With dictionary dispatch we can replace any block of conditionals with a simple lookup into Python’s dict- here’s how it works…</p>
+通过字典分派,可以通过简单的查找 Python 的字典来替代任何条件组,
+而且有很多姿势可以搞...</p>
+<p>If so, then dictionary dispatch pattern might be a tool for you. With dictionary dispatch we can replace any block of conditionals with a simple lookup into Python's dict- here's how it works...</p>
 <h2 id="lambda">使用 Lambda 函数<a class="headerlink" href="#lambda" title="Permanent link">¶</a></h2>
-<p>字典分派的整个思想是我们可以根据变量的值运行不同的函数, 而不是对每个值使用条件语句来指向不同函数;</p>
-<p>如果没有字典调度, 我们将不得不使用 if/else 或是 match/case 判别块:</p>
+<p>字典分派的整个思想是我们可以根据变量的值运行不同的函数,
+而不是对每个值使用条件语句来指向不同函数;</p>
+<p>如果没有字典调度, 我们将不得不使用 if/else 或是 match/case 判别块:</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span>
 <span class="n">operation</span> <span class="o">=</span> <span class="s2">"add"</span>
 
@@ -170,7 +172,7 @@
         <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
 </code></pre></div>
 <p>虽然这样在 if 或是 case 数量少感觉还成,
-但是,随着选项数量的增加, 可能就变得冗长难以阅读和维护了;</p>
+但是,随着选项数量的增加, 可能就变得冗长难以阅读和维护了;</p>
 <p>作为替代,我们可以进行以下转化:</p>
 <div class="highlight"><pre><span></span><code><span class="n">functions</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"add"</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span>
@@ -185,16 +187,16 @@
 </code></pre></div>
 <p>实现字典分派最简单方式就是使用 lambda 函数;
 在原来的, 我们将每个 lambda 函数分配给字典的一个键;
-然后, 就可以通过查找键名并选择性的传入参数来调用到该函数(行内匿名声明的);</p>
+然后, 就可以通过查找键名并选择性的传入参数来调用到该函数(行内匿名声明的);</p>
 <p>当你的操作可以用单行代码表示时,
-使用 lambda 是合适的, 但是, 通常使用适当的 Python 函数才是可行的…</p>
+使用 lambda 是合适的, 但是, 通常使用适当的 Python 函数才是可行的...</p>
 <p>(<code>是也乎</code>:</p>
-<p>不过,也不一定,参考: <a href="https://pycoders.com/link/10308/web">flatliner-src: 将 Python 程序转换为一行代码</a></p>
-<p>真的有项目可以自动将任何函数一键转化为由 lambda 串接的一行代码.</p>
+<p>不过,也不一定,参考: <a href="https://pycoders.com/link/10308/web">flatliner-src: 将 Python 程序转换为一行代码</a></p>
+<p>真的有项目可以自动将任何函数一键转化为由 lambda 串接的一行代码.</p>
 <p>)</p>
 <h2 id="_1">使用适当的功能<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>lambda 函数非常适合简单的情况,
-但是, 你可能希望分派需要多行代码的函数:</p>
+但是, 你可能希望分派需要多行代码的函数:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 
@@ -214,9 +216,10 @@
 <p>使用适当函数时, 唯一的区别是必须在字典之外定义,
 毕竟 Python 暂时不允许内联函数定义;
 虽然, 这看起来有点儿烦, 可读性也差,
-但是, 在我看来, 这也迫使你编写更加清晰/可测试的代码;</p>
+但是, 在我看来, 这也迫使你编写更加清晰/可测试的代码;</p>
 <h2 id="_2">默认结果<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>如果你使用此东西方来模拟 match/case 语句, 那么应该考虑在字典键不存在时使用默认值:</p>
+<p>如果你使用此东西方来模拟 match/case 语句,
+那么应该考虑在字典键不存在时使用默认值:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 
 <span class="n">cases</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">a</span><span class="p">:</span> <span class="s2">"Invalid option"</span><span class="p">,</span> <span class="p">{</span>
@@ -230,13 +233,15 @@
 <span class="c1"># Invalid option</span>
 </code></pre></div>
 <p>这段代码利用了 defaultdict,
-第一个参数指定了 “默认工厂”,
+第一个参数指定了 "默认工厂",
 这是一个在找不到匹配键时调用的函数;
-你也可能注意到在此,使用了两个 lambda 函数 —- 第一个是用来捕获传递过来的任意数量参数, 第二个是因为我们需要返回一个可以调用的函数;</p>
-<p>This snippet leverages defaultdict, who’s first argument specifies the “default factory”, which is a function that will be called when key is not found. You will notice that we used 2 lambda functions here - first is there to catch any number of arguments passed to it, and the second is there because we need to return a callable.</p>
+你也可能注意到在此,使用了两个 lambda 函数 --- 第一个是用来捕获传递过来的任意数量参数,
+第二个是因为我们需要返回一个可以调用的函数;</p>
+<p>This snippet leverages defaultdict, who's first argument specifies the "default factory", which is a function that will be called when key is not found. You will notice that we used 2 lambda functions here - first is there to catch any number of arguments passed to it, and the second is there because we need to return a callable.</p>
 <h2 id="_3">传参<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>我们已经在前述所有示例中看到,
-将参数传递给字典中的函数非常简单, 得是不是,如果你想在将参数传递给函数之前对其进行操作应该如何呢?</p>
+将参数传递给字典中的函数非常简单,
+得是不是,如果你想在将参数传递给函数之前对其进行操作应该如何呢?</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">handle_event</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Handling event in 'handler_event' with </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">e</span>
@@ -264,9 +269,9 @@
 <span class="c1"># different value</span>
 </code></pre></div>
 <p>第一个选项是用 lambda 函数, 
-允许我们 — 例如 — 在参数载荷(payload)中查找特定键, 如上所示;</p>
-<p>另一种选择是使用 parital 来”冻结”参数,
-但是, 这要求你在定义字典之前拥有参数/载荷(payload):</p>
+允许我们 -- 例如 -- 在参数载荷(payload)中查找特定键, 如上所示;</p>
+<p>另一种选择是使用 parital 来"冻结"参数,
+但是, 这要求你在定义字典之前拥有参数/载荷(payload):</p>
 <div class="highlight"><pre><span></span><code><span class="n">event</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"some-key"</span><span class="p">:</span> <span class="s2">"value"</span><span class="p">,</span>
     <span class="s2">"some-other-key"</span><span class="p">:</span> <span class="s2">"different value"</span><span class="p">,</span>
@@ -287,7 +292,7 @@
 <h2 id="_4">真实世界<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <p>到目前为止,我们只实验了类似 hallo-world 级别的示例;
 字典分派在现实世界中有很多用例,
-所以, 让我们游览一些:</p>
+所以, 让我们游览一些:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># parse_args.py</span>
 <span class="kn">import</span> <span class="nn">argparse</span>
 
@@ -319,10 +324,10 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
 </code></pre></div>
-<p>首先是解析 <span class="caps">CLI</span> 参数;
-这里我们使用内置的 argparse 模块来创建一个简单的 <span class="caps">CLI</span> 应用程序;
-此处的得碊主要包含定义字典和为 <span class="caps">CLI</span> 设置 3 个可能的参数;</p>
-<p>从 <span class="caps">CLI</span> 调用时,我们将获得以下内容:</p>
+<p>首先是解析 CLI 参数;
+这里我们使用内置的 argparse 模块来创建一个简单的 CLI 应用程序;
+此处的得碊主要包含定义字典和为 CLI 设置 3 个可能的参数;</p>
+<p>从 CLI 调用时,我们将获得以下内容:</p>
 <div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">parse_args</span><span class="o">.</span><span class="n">py</span>
 <span class="c1"># usage: parse_args.py [-h] {add,mul} x y</span>
 <span class="c1"># parse_args.py: error: the following arguments are required: operation, x, y</span>
@@ -336,11 +341,11 @@
 <p>如果指定了操作(add 或是 mul)以及 2 个数字参数,
 则参数将解析到 args 变量中;
 然后, 从字典调用函数时,使用这些秋粮和 args.operation ,
-最后将其结果分配给 answer 变量;</p>
+最后将其结果分配给 answer 变量;</p>
 <p>另外一个使用字典调度的实际案例,
-是对许多不同的传入事件作出反应 — 例如 — 来自 webhook,
-又或是来自 GitHub 的拉取请求事件:</p>
-<p>Another practical example of using dictionary dispatch is reacting to many different incoming events - for example - from a webhook, such as pull request events from GitHub:</p>
+是对许多不同的传入事件作出反应 -- 例如 -- 来自 webhook,
+又或是来自 GitHub 的拉取请求事件:</p>
+<p>Another practical example of using dictionary dispatch is reacting to many different incoming events - for example - from a webhook, such as pull request events from GitHub:</p>
 <div class="highlight"><pre><span></span><code><span class="n">event</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"action"</span><span class="p">:</span> <span class="s2">"opened"</span><span class="p">,</span>
   <span class="s2">"pull_request"</span><span class="p">:</span> <span class="p">{</span>
@@ -363,7 +368,7 @@
 </code></pre></div>
 <p>GitHub 拉取事件可以指定许多不同的操作,
 例如: assigned,edited, labeled, 等等;
-这里, 我们尝试实现 4 种最常见的字典调度:</p>
+这里, 我们尝试实现 4 种最常见的字典调度:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">opened</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Processing with action 'opened': </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="o">...</span>
@@ -393,7 +398,8 @@
 <p>我们为每个动作类型定义一个单独的函数,
 以便我们可以分别处理每个案例;
 在此示例中,我们直接将整个有效载荷传递给所有函数,
-但是,我们可以在传递事件载荷之前对其进行操作, 正如前述所示:</p>
+但是,我们可以在传递事件载荷之前对其进行操作,
+正如前述所示:</p>
 <h2 id="_5">访问者模式<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
 <p>最后, 虽然简单的字典通常足够了,
 但是, 如果你需要更加健壮的解决方案, 可以应用 <code>访问者模式</code>:</p>
@@ -425,27 +431,30 @@
 <p>该东西方是通过首先构建一个具有访问功能的 Visitor 父类来实现的;
 此函数自动调用名称匹配模式为 <code>visit_&lt;ACTION&gt;</code> 的函数;
 然后,
-这些单独的功能由子类实现, 其中每个功能本质上都充当了 “字典” 里其中一个 “键”;
+这些单独的功能由子类实现, 其中每个功能本质上都充当了 "字典" 里其中一个 "键";
 最后, 要使用这个模式/类,
-嘦调用 visit 方法, 并让类测定调用哪个函数就好;</p>
+嘦调用 visit 方法, 并让类测定调用哪个函数就好;</p>
 <h2 id="_6">小结<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
 <p>避免条件判定是使事情变得简单可靠的方法,
-但是, 这并不意味着我们应该尝试将字典分派硬塞到需要条件判定的每段代码中;</p>
+但是, 这并不意味着我们应该尝试将字典分派硬塞到需要条件判定的每段代码中;</p>
 <p>其实,这种模式有很好的用例, 比如说非常长的条件语句链;
-又如果, 你因为某些原因无法使用不支持 match/case 的 Python 版本;</p>
-<p>此外, 字典本身是可以动态改变的, 比如,通过追加键或是更改值(函数),这是普通条件语句无法实现的;</p>
+又如果, 你因为某些原因无法使用不支持 match/case 的 Python 版本;</p>
+<p>此外, 字典本身是可以动态改变的,
+比如,通过追加键或是更改值(函数),这是普通条件语句无法实现的;</p>
 <p>最后, 即便你不想使用字典(表)调度,
 熟悉这一模式也是好的,
 因为,在某些时候你很可能会遇到使用这一模式的代码,
-那时你能看得懂, 就很不错呢. 😉</p>
-<h2 id="ps"><span class="caps">PS</span>:<a class="headerlink" href="#ps" title="Permanent link">¶</a></h2>
+那时你能看得懂, 就很不错呢. 😉</p>
+<h2 id="ps">PS:<a class="headerlink" href="#ps" title="Permanent link">¶</a></h2>
 <p>一般都是在对一组相似场景中要进行不同决策时,
 需要使用 字典分派, 
-而且, 直接使用, 比用 访问者模式 的类要来的简洁, 而且也节省内存;</p>
+而且, 直接使用, 比用 访问者模式 的类要来的简洁,
+而且也节省内存;</p>
 <p>经验中, 唯一要注意的, 就是这组函数, 最好能有统一的参数形式,
-否则, 调试起来很容易出问题;</p>
+否则, 调试起来很容易出问题;</p>
 <p>另外, match/case 毕竟是语言级别的内建语法,
-比手工用 字典来进行分派要流畅的多, 能用还是多用;</p>
+比手工用 字典来进行分派要流畅的多,
+能用还是多用;</p>
 
             </div>
             <!-- /.entry-content -->

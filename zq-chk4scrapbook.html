@@ -160,17 +160,17 @@
 </li>
 <li><a href="#_15">时间帐单</a></li>
 <li><a href="#140708-scrapbook">140708 ScrapBook 分库</a><ul>
-<li><a href="#2h-click">+2H click</a></li>
+<li><a href="#2h-click">+2H click</a></li>
 <li><a href="#2h">+2H 实际清减</a><ul>
 <li><a href="#lxml">lxml</a></li>
 <li><a href="#untangle">untangle</a></li>
 <li><a href="#xmltodict">xmltodict</a></li>
-<li><a href="#4h">4H 折腾明白了:</a></li>
-<li><a href="#2">2小时 目录对比</a></li>
-<li><a href="#140710-1804">140710 18:04</a></li>
+<li><a href="#4h">4H 折腾明白了:</a></li>
+<li><a href="#2">2小时 目录对比</a></li>
+<li><a href="#140710-1804">140710 18:04</a></li>
 </ul>
 </li>
-<li><a href="#todo"><span class="caps">TODO</span></a></li>
+<li><a href="#todo">TODO</a></li>
 </ul>
 </li>
 </ul>
@@ -181,8 +181,9 @@
 <h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>参考:<a href="http://wiki.woodpecker.org.cn/moin/ZqStudy/MyLearningSkill">我的学习&amp;工具</a></p>
 <p>从06年,就将个人网络资料收集/整理/发布,
-切换为主力使用 <a href="http://www.xuldev.org/scrapbook/">ScrapBook</a> .</p>
-<p>这一下子就8年过去了,常用系统也从 Ubuntu 切换为 <span class="caps">MAC</span>, 收集的本地网页也超过了8万个,早已被迫进行了分库.</p>
+切换为主力使用 <a href="http://www.xuldev.org/scrapbook/">ScrapBook</a> .</p>
+<p>这一下子就8年过去了,常用系统也从 Ubuntu 切换为 MAC,
+收集的本地网页也超过了8万个,早已被迫进行了分库.</p>
 <p>自动发布的</p>
 <ul>
 <li>http://floss.zoomquiet.io</li>
@@ -190,16 +191,18 @@
 </ul>
 <p>也成为一些朋友常常挖掘的资料库.</p>
 <p>可以说, ScrapBook 在 everynote 流行之前,就成功的解决了俺主要的在线网页资料为主的,
-外部知识仓库的收集/整理/组合/复用/发布 等等基本功能/服务.</p>
-<p>而且, 也通过Python ,完成了辅助的小脚本工具,配合 个人主机/7牛CDN, 完成了自动化的差异发布.</p>
+外部知识仓库的收集/整理/组合/复用/发布 等等基本功能/服务.</p>
+<p>而且, 也通过Python ,完成了辅助的小脚本工具,配合 个人主机/7牛CDN,
+完成了自动化的差异发布.</p>
 <h3 id="_2">可是!<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<p>参考: <a href="http://blog.zoomquiet.io/livin-scrapbook.html">ScrapBook 生存指南</a></p>
+<p>参考: <a href="http://blog.zoomquiet.io/livin-scrapbook.html">ScrapBook 生存指南</a></p>
 <ul>
-<li>从去年开始, 本地 <code>FLOSS</code> 仓库,就已经无法正常进行标准搜索了,一搜索,整个 FireFox 就僵死.</li>
-<li>而且,从其它仓库切换进入 <span class="caps">FLOSS</span> 时,要等待半分钟以上…</li>
+<li>从去年开始, 本地 <code>FLOSS</code> 仓库,就已经无法正常进行标准搜索了,一搜索,整个 FireFox 就僵死.</li>
+<li>而且,从其它仓库切换进入 FLOSS 时,要等待半分钟以上...</li>
 </ul>
 <h2 id="_3">期待<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>实在太常用,所以,无法忍,而且也不打算切换到 everynote 什么的其它平台上, 作为一头合格的程序猿,就是要自个儿折腾通透哪!</p>
+<p>实在太常用,所以,无法忍,而且也不打算切换到 everynote 什么的其它平台上,
+作为一头合格的程序猿,就是要自个儿折腾通透哪!</p>
 <p>所以,先决定目标:</p>
 <ol>
 <li>通过进一步拿合理分仓库,有效减少每个仓库包含的网页数量</li>
@@ -209,7 +212,7 @@
 </ol>
 <p>总之就是要加速,无论本地/远程</p>
 <h3 id="_4">数据结构<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
-<p>为了大家平滑的理解折腾之处,先简要说明一下 ScrapBook 的数据结构:</p>
+<p>为了大家平滑的理解折腾之处,先简要说明一下 ScrapBook 的数据结构:</p>
 <div class="highlight"><pre><span></span><code>XX仓库/     对应 Multi-ScrapBook 开启后,不同的Book
   +- data   实际本地网页存放入口, 类似 20050205102119 的子目录
   +- tree   导出目录树后的 html 入口
@@ -306,11 +309,12 @@ $ ls ZqFLOSS/data/ <span class="p">|</span> wc
   -&gt; zqSCM   
   -&gt; zqPythonic
 </code></pre></div>
-<p>先在仓库中,根据拆分目标,将内容树收纳到对应的目录中, 以便复制,加载后,快速删除.</p>
+<p>先在仓库中,根据拆分目标,将内容树收纳到对应的目录中,
+以便复制,加载后,快速删除.</p>
 <h4 id="pax">pax<a class="headerlink" href="#pax" title="Permanent link">¶</a></h4>
 <p><code>pax</code> 是个好工具,原先习惯性的用 <code>cp</code> 那叫个慢!
 搜索才知道,大量小文件的迁移就应该用 <code>pax</code>
-于是简单的起个背景周末跑吧….</p>
+于是简单的起个背景周末跑吧....</p>
 <div class="highlight"><pre><span></span><code>$ du -hs *
 ...
 <span class="m">5</span>.7G    ZqDevRel
@@ -327,7 +331,7 @@ $ ls ZqFLOSS/data/ <span class="p">|</span> wc
 ...
 </code></pre></div>
 <p>体积占用激增3倍!</p>
-<p>然后,逐一用 ScrapBook 加载新的目录</p>
+<p>然后,逐一用 ScrapBook 加载新的目录</p>
 <h4 id="_7">手工删除目录树<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
 <p>再对比几个仓库的体积:</p>
 <div class="highlight"><pre><span></span><code>~/KuaiPan/zScrapBook
@@ -354,15 +358,15 @@ $ ls zqSCM/data/ | wc -l
 </code></pre></div>
 <h4 id="_8">严正的不科学!<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
 <p>手工折腾了半天,却发现几乎没有释放多少空间出来,
-好象总是有 20000 左右的目录,是不存在的页面节点…</p>
+好象总是有 20000 左右的目录,是不存在的页面节点...</p>
 <h3 id="_9">解析<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
 <p>首先,</p>
 <h3 id="_10">重构<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
-<p><a href="https://github.com/martinblech/xmltodict/issues/14">xml containing 1 child · Issue #14 · martinblech/xmltodict</a></p>
+<p><a href="https://github.com/martinblech/xmltodict/issues/14">xml containing 1 child · Issue #14 · martinblech/xmltodict</a></p>
 <p><code>dict_constructor</code></p>
 <h3 id="_11">删除<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
 <h2 id="_12">回顾<a class="headerlink" href="#_12" title="Permanent link">¶</a></h2>
-<p><span class="caps">JS</span> 在 FireFox 的确不给力哪…</p>
+<p>JS 在 FireFox 的确不给力哪...</p>
 <div class="highlight"><pre><span></span><code>$ du -hs *
 ...
 957M  ZqDevRel
@@ -380,8 +384,8 @@ $ ls zqSCM/data/ | wc -l
 <span class="m">1</span>.4G  zqSCM
 564M  zqSMM
 </code></pre></div>
-<p>为什么,在 700M 的 zqCoder 仓库中无法搜索,但是, 3.4G 的ZqSKM 中就可以?!</p>
-<p>认真对比,从重建的空仓库的 .rdf 中,发现:</p>
+<p>为什么,在 700M 的 zqCoder 仓库中无法搜索,但是, 3.4G 的ZqSKM 中就可以?!</p>
+<p>认真对比,从重建的空仓库的 .rdf 中,发现:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;RDF:Seq</span> <span class="na">RDF:about=</span><span class="s">"urn:scrapbook:search"</span><span class="nt">&gt;</span>
 ....
 <span class="nt">&lt;/RDF:Seq&gt;</span>
@@ -412,21 +416,21 @@ $ ls zqSCM/data/ | wc -l
 24.5H+ 自然时间, 3+天业余时间
 </code></pre></div>
 <ul>
-<li>140909 才算完成一个可以看的版本</li>
-<li>140711 完成所有功能,启动文档回顾</li>
+<li>140909 才算完成一个可以看的版本</li>
+<li>140711 完成所有功能,启动文档回顾</li>
 </ul>
 <h1 id="140708-scrapbook">140708 ScrapBook 分库<a class="headerlink" href="#140708-scrapbook" title="Permanent link">¶</a></h1>
 <h2 id="2h-click">+2H click<a class="headerlink" href="#2h-click" title="Permanent link">¶</a></h2>
-<p>果然,清查出有大量, <span class="caps">FLOSS</span> 中当初没有合理清除的节点
-从 <span class="caps">ROOT</span> 引发的树中挂不上的</p>
+<p>果然,清查出有大量, FLOSS 中当初没有合理清除的节点
+从 ROOT 引发的树中挂不上的</p>
 <h2 id="2h">+2H 实际清减<a class="headerlink" href="#2h" title="Permanent link">¶</a></h2>
-<p><a href="http://amoffat.github.io/sh/">sh 1.08 — sh v1.08 documentation</a></p>
+<p><a href="http://amoffat.github.io/sh/">sh 1.08 — sh v1.08 documentation</a></p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sh</span> <span class="kn">import</span> <span class="n">rm</span>
 <span class="o">...</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">rm</span><span class="p">(</span><span class="s2">"-Rfv"</span><span class="p">,</span> <span class="n">del_dir</span><span class="p">))</span>
 </code></pre></div>
 <ul>
-<li>用 sh 删除目录</li>
+<li>用 sh 删除目录</li>
 </ul>
 <p>:</p>
 <div class="highlight"><pre><span></span><code>    tree_nodes:  3574
@@ -439,7 +443,7 @@ $ ls reDevRel/data/ | wc -l
     2996
 </code></pre></div>
 <ul>
-<li>用 lxml/模板 重构 rdf</li>
+<li>用 lxml/模板 重构 rdf</li>
 </ul>
 <p>人肉来总是感觉不对,</p>
 <p>尝试:</p>
@@ -454,7 +458,8 @@ $ ls reDevRel/data/ | wc -l
 <span class="o">&lt;</span><span class="n">open</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="s1">'_chaos/scraotools_reDevRel.pkl'</span><span class="o">,</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="s1">'wb'</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x100666ed0</span><span class="o">&gt;</span><span class="w"></span>
 <span class="w">        </span><span class="n">exp_level_idx</span><span class="o">()</span><span class="w"> </span><span class="n">RUNed</span><span class="o">~</span><span class="w"> </span><span class="mf">2263.57079</span><span class="w"> </span><span class="n">ms</span><span class="w"></span>
 </code></pre></div>
-<p>快,但是,无法Dump,而且书写不直觉, 要将 “:” 变成 “_” obj.RDF_RDF.RDF_Description</p>
+<p>快,但是,无法Dump,而且书写不直觉, 要将 ":" 变成 "_"
+    obj.RDF_RDF.RDF_Description</p>
 <div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">open</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="s1">'_chaos/scraotools_reDevRel.pkl'</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="s1">'wb'</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x100769ed0</span><span class="o">&gt;</span><span class="w"></span>
 <span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">last</span><span class="p">):</span><span class="w"></span>
 <span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">"scraptools/zq_chk4scrap.py"</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">457</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="w"></span>
@@ -484,7 +489,7 @@ $ ls reDevRel/data/ | wc -l
 <span class="w">        </span><span class="na">exp_level_idx() RUNed~ 4997.31612 ms</span><span class="w"></span>
 </code></pre></div>
 <p>慢,但是,能 dump 而且书写直觉
-    doc[‘<span class="caps">RDF</span>:<span class="caps">RDF</span>’][‘<span class="caps">RDF</span>:Seq’]</p>
+    doc['RDF:RDF']['RDF:Seq']</p>
 <div class="highlight"><pre><span></span><code><span class="k">[u'RDF:RDF']</span><span class="w"></span>
 <span class="na">RDF:Seq         579</span><span class="w"></span>
 <span class="na">RDF:Description     24190</span><span class="w"></span>
@@ -492,14 +497,14 @@ $ ls reDevRel/data/ | wc -l
 <span class="na">&lt;open file '_chaos/scraotools_reDevRel.pkl', mode 'wb' at 0x10f26d420&gt;</span><span class="w"></span>
 <span class="w">        </span><span class="na">exp_level_idx() RUNed~ 16878.75390 ms</span><span class="w"></span>
 </code></pre></div>
-<p>同时,能反写出XML 来!</p>
+<p>同时,能反写出XML 来!</p>
 <p>主要问题是行为不统一!</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;RDF:Seq</span> <span class="na">RDF:about=</span><span class="s">"urn:scrapbook:item20070113201921"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;RDF:li</span> <span class="na">RDF:resource=</span><span class="s">"urn:scrapbook:item20070113201940"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;RDF:li</span> <span class="na">RDF:resource=</span><span class="s">"urn:scrapbook:item20070113201941"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/RDF:Seq&gt;</span>
 </code></pre></div>
-<p>时 唯一的 <span class="caps">RDF</span>:Li 不是 List!!</p>
+<p>时 唯一的 RDF:Li 不是 List!!</p>
 <div class="highlight"><pre><span></span><code><span class="n">K2SEQ</span><span class="o">[</span><span class="n">crt_id</span><span class="o">]&gt;</span><span class="nl">RDF</span><span class="p">:</span><span class="n">Li</span><span class="w"> </span><span class="n">OrderedDict</span><span class="p">(</span><span class="o">[</span><span class="n">(u'@RDF:resource', u'urn:scrapbook:item20070113201921')</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
 <span class="n">K2SEQ</span><span class="o">[</span><span class="n">crt_id</span><span class="o">][</span><span class="n">'RDF:li'</span><span class="o">]</span><span class="p">.</span><span class="nf">len</span><span class="o">::</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 <span class="w">    </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="s1">'collections.OrderedDict'</span><span class="o">&gt;</span><span class="w"></span>
@@ -512,7 +517,7 @@ $ ls reDevRel/data/ | wc -l
 <span class="n">K2SEQ</span><span class="o">[</span><span class="n">crt_id</span><span class="o">][</span><span class="n">'RDF:li'</span><span class="o">]</span><span class="p">.</span><span class="nf">len</span><span class="o">::</span><span class="w"> </span><span class="mi">9</span><span class="w"></span>
 <span class="w">    </span><span class="o">&lt;</span><span class="n">type</span><span class="w"> </span><span class="s1">'list'</span><span class="o">&gt;</span><span class="w"></span>
 </code></pre></div>
-<p><a href="https://github.com/martinblech/xmltodict/issues/67">odd parse for same xml structure · Issue #67 · martinblech/xmltodict</a></p>
+<p><a href="https://github.com/martinblech/xmltodict/issues/67">odd parse for same xml structure · Issue #67 · martinblech/xmltodict</a></p>
 <h3 id="4h">4H 折腾明白了:<a class="headerlink" href="#4h" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w"> </span><span class="n">python</span><span class="w"> </span><span class="n">scraptools</span><span class="o">/</span><span class="n">zq_chk4scrap</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="n">reDevRel</span><span class="o">/</span><span class="w"></span>
 <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="err">快盘</span><span class="o">/</span><span class="n">zScrapBook</span><span class="o">/</span><span class="n">reDevRel</span><span class="o">/</span><span class="n">scrapbook</span><span class="o">.</span><span class="n">rdf</span><span class="w"></span>
@@ -659,8 +664,9 @@ _chaos/scrapbook_reDevRel.rdf
 <span class="w">        </span><span class="n">re_xmltodict_rdf</span><span class="p">()</span><span class="w"> </span><span class="n">RUNed</span><span class="o">~</span><span class="w"> </span><span class="mf">8694.52500</span><span class="w"> </span><span class="n">ms</span><span class="w"></span>
 </code></pre></div>
 <h3 id="2">2小时 目录对比<a class="headerlink" href="#2" title="Permanent link">¶</a></h3>
-<p>sh-&gt;ls 出来时,</p>
-<p>是 <span class="caps">STDOUT</span> 有隐藏字符! 兰色…居然没有意识到!</p>
+<p>sh-&gt;ls 出来时,</p>
+<p>是 STDOUT 有隐藏字符!
+兰色...居然没有意识到!</p>
 <div class="highlight"><pre><span></span><code><span class="mf">20041214101930</span><span class="w"></span>
 <span class="o">&lt;</span><span class="n">type</span><span class="w"> </span><span class="err">'</span><span class="n">str</span><span class="err">'</span><span class="o">&gt;</span><span class="w"></span>
 <span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">last</span><span class="p">):</span><span class="w"></span>
@@ -673,18 +679,18 @@ _chaos/scrapbook_reDevRel.rdf
 <h3 id="140710-1804">140710 18:04<a class="headerlink" href="#140710-1804" title="Permanent link">¶</a></h3>
 <p>完成初步完备流程:</p>
 <ul>
-<li>从原始 scrapbook.rdf 读入为 Py 对象</li>
-<li>模拟肉眼巡查, walk 出显示的合法内容数据集</li>
-<li>加入其它辅助KV 节点,写为中间工作 .pkl</li>
-<li>加载 工作 .pkl 到内存</li>
+<li>从原始 scrapbook.rdf 读入为 Py 对象</li>
+<li>模拟肉眼巡查, walk 出显示的合法内容数据集</li>
+<li>加入其它辅助KV 节点,写为中间工作 .pkl</li>
+<li>加载 工作 .pkl 到内存</li>
 <li>对比原始 .rdf 数据中的节点和 walk 出来有效的,逐一清除无效的<ul>
 <li>必须,尝试多次,直到清除干净</li>
-<li>为毛…?</li>
+<li>为毛...?</li>
 </ul>
 </li>
-<li>对比实际目录和有效节点ID 的关系,将无效的,mv 到其它目录完成净化</li>
+<li>对比实际目录和有效节点ID 的关系,将无效的,mv 到其它目录完成净化</li>
 </ul>
-<h2 id="todo"><span class="caps">TODO</span><a class="headerlink" href="#todo" title="Permanent link">¶</a></h2>
+<h2 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">¶</a></h2>
 <ul>
 <li>解决反复清查的问题</li>
 <li>提高效率</li>

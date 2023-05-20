@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>    How to install Leo under M1 chip macOS&nbsp;12.*
+    <title>    How to install Leo under M1 chip macOS 12.*
 / 是也乎(￣▽￣)
 / ZoomQuiet.io    </title>
 
@@ -92,7 +92,7 @@
             <header class="page-header">
                 <h1>
                     <a href="https://blog.zoomquiet.io/leo-install-m1mac-summary.html">
-                        How to install Leo under M1 chip macOS&nbsp;12.*
+                        How to install Leo under M1 chip macOS 12.*
                     </a>
                 </h1>
             </header>
@@ -144,33 +144,33 @@
                 
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
 <p>base <a href="http://leoeditor.com/installing.html#installing-leo-on-macos-10-7-lion-and-later">Installing Leo — Leo 6.6.2 documentation</a> 
-can not installing Leo on MacOs 12.4 with M1max chip:</p>
+can not installing Leo on MacOs 12.4 with M1max chip:</p>
 <p><img alt="screenfetch" src="https://ipic.zoomquiet.top/2022-05-29-220529-screenfetch.jpg"/></p>
 <h2 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">¶</a></h2>
 <blockquote>
-<p>only for M1 chip Mac Book Pro</p>
+<p>only for M1 chip Mac Book Pro</p>
 </blockquote>
-<p>base <span class="caps">ARM</span> support Homebrew, check version:</p>
+<p>base ARM support Homebrew, check version:</p>
 <div class="highlight"><pre><span></span><code>$ abrew --version
 Homebrew <span class="m">3</span>.4.11
 Homebrew/homebrew-core <span class="o">(</span>git revision b8f03171990<span class="p">;</span> last commit <span class="m">2022</span>-05-27<span class="o">)</span>
 Homebrew/homebrew-cask <span class="o">(</span>git revision 7cd05aa248<span class="p">;</span> last commit <span class="m">2022</span>-05-27<span class="o">)</span>
 </code></pre></div>
 <blockquote>
-<p><span class="caps">PS</span>: </p>
+<p>PS: </p>
 </blockquote>
-<p>base alias for Intel and <span class="caps">ARM</span> verions (<code>~/.bash_profile</code>):</p>
+<p>base alias for Intel and ARM verions (<code>~/.bash_profile</code>):</p>
 <div class="highlight"><pre><span></span><code>alias abrew='/opt/homebrew/bin/brew '
 alias ibrew='/usr/local/bin/brew '
 </code></pre></div>
-<p>install moniconda:</p>
+<p>install moniconda:</p>
 <div class="highlight"><pre><span></span><code>$ abrew install miniconda
 </code></pre></div>
-<p>initialization it:</p>
+<p>initialization it:</p>
 <div class="highlight"><pre><span></span><code>$ conda init bash
 </code></pre></div>
-<p><span class="caps">SEE</span>: <a href="https://docs.conda.io/projects/conda/en/latest/dev-guide/deep-dive-activation.html">Deep dive: conda init and activate — conda 4.13.0.post1+0adcd595 documentation</a></p>
-<p>will <code>~/.bash_profile</code> fund like:</p>
+<p>SEE: <a href="https://docs.conda.io/projects/conda/en/latest/dev-guide/deep-dive-activation.html">Deep dive: conda init and activate — conda 4.13.0.post1+0adcd595 documentation</a></p>
+<p>will <code>~/.bash_profile</code> fund like:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span><span class="w"></span>
 <span class="c1"># !! Contents within this block are managed by 'conda init' !!</span><span class="w"></span>
 <span class="n">__conda_setup</span><span class="o">=</span><span class="s2">"$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.bash' 'hook' 2&gt; /dev/null)"</span><span class="w"></span>
@@ -186,14 +186,14 @@ alias ibrew='/usr/local/bin/brew '
 <span class="n">unset</span><span class="w"> </span><span class="n">__conda_setup</span><span class="w"></span>
 <span class="c1"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span><span class="w"></span>
 </code></pre></div>
-<p>install PyQt:</p>
+<p>install PyQt:</p>
 <div class="highlight"><pre><span></span><code><span class="n">$</span><span class="w"> </span><span class="n">abrew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">PyQt</span><span class="mi">@5</span><span class="w"></span>
 </code></pre></div>
 <p>base <code>conda info</code> check miniconda is working;
-and create Leo special environment:</p>
+and create Leo special environment:</p>
 <div class="highlight"><pre><span></span><code>$ conda create  -n leo3912 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9.12
 </code></pre></div>
-<p>check result:</p>
+<p>check result:</p>
 <div class="highlight"><pre><span></span><code>$ conda env list
 conda env list
 /opt/homebrew/Caskroom/miniconda/base/lib/python3.9/site-packages/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils.
@@ -203,11 +203,11 @@ conda env list
 base                  *  /opt/homebrew/Caskroom/miniconda/base
 leo3912                  /opt/homebrew/Caskroom/miniconda/base/envs/leo3912
 </code></pre></div>
-<p>copy PyQt packets from brew to miniconda:</p>
+<p>copy PyQt packets from brew to miniconda:</p>
 <p>such as:
     + from <code>/opt/homebrew/Cellar/pyqt@5/5.15.6/lib/python3.9/site-packages/</code> 
     + to <code>/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/</code></p>
-<p>need all of them:</p>
+<p>need all of them:</p>
 <div class="highlight"><pre><span></span><code>PyQt3D-5.15.5.dist-info
 PyQt5
 PyQt5-5.15.6.dist-info
@@ -219,17 +219,17 @@ PyQtPurchasing-5.15.5.dist-info
 </code></pre></div>
 <p>and download Leo Source code release from <a href="https://github.com/leo-editor/leo-editor/releases/latest">Latest</a> </p>
 <p>deploy into right path, such as <code>/opt/bin/leo</code></p>
-<p>and into conda environment install leo:</p>
+<p>and into conda environment install leo:</p>
 <div class="highlight"><pre><span></span><code>$ conda activate leo3912
 $ pip install leo
 </code></pre></div>
-<p>will got some error, but is ok, can suto install these:</p>
+<p>will got some error, but is ok, can suto install these:</p>
 <ul>
-<li>Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 alabaster-0.7.12 astroid-2.11.5 attrs-21.4.0 babel-2.10.1 dialite-0.5.3 dill-0.3.5.1 docutils-0.17.1 fastjsonschema-2.15.3 flexx-0.8.4 future-0.18.2 imagesize-1.3.0 importlib-metadata-4.11.4 isort-5.10.1 jsonschema-4.5.1 jupyter-core-4.10.0 lazy-object-proxy-1.7.1 leo-5.9 mccabe-0.7.0 nbformat-5.4.0 platformdirs-2.5.2 pscript-0.7.7 pyflakes-2.4.0 pylint-2.13.9 pyrsistent-0.18.1 pytz-2022.1 six-1.16.0 snowballstemmer-2.2.0 sphinx-4.5.0 sphinxcontrib-applehelp-1.0.2 sphinxcontrib-devhelp-1.0.2 sphinxcontrib-htmlhelp-2.0.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.3 sphinxcontrib-serializinghtml-1.1.5 tomli-2.0.1 tornado-6.1 traitlets-5.2.1.post0 typing-extensions-4.2.0 webruntime-0.5.8 wrapt-1.14.1 zipp-3.8.0</li>
+<li>Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 alabaster-0.7.12 astroid-2.11.5 attrs-21.4.0 babel-2.10.1 dialite-0.5.3 dill-0.3.5.1 docutils-0.17.1 fastjsonschema-2.15.3 flexx-0.8.4 future-0.18.2 imagesize-1.3.0 importlib-metadata-4.11.4 isort-5.10.1 jsonschema-4.5.1 jupyter-core-4.10.0 lazy-object-proxy-1.7.1 leo-5.9 mccabe-0.7.0 nbformat-5.4.0 platformdirs-2.5.2 pscript-0.7.7 pyflakes-2.4.0 pylint-2.13.9 pyrsistent-0.18.1 pytz-2022.1 six-1.16.0 snowballstemmer-2.2.0 sphinx-4.5.0 sphinxcontrib-applehelp-1.0.2 sphinxcontrib-devhelp-1.0.2 sphinxcontrib-htmlhelp-2.0.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.3 sphinxcontrib-serializinghtml-1.1.5 tomli-2.0.1 tornado-6.1 traitlets-5.2.1.post0 typing-extensions-4.2.0 webruntime-0.5.8 wrapt-1.14.1 zipp-3.8.0</li>
 </ul>
 <p>notice: for some reason, installed is leo-5.9, one old verion;
 so means , 
-now under conda environment need can call leo with hand deploy verion:</p>
+now under conda environment need can call leo with hand deploy verion:</p>
 <div class="highlight"><pre><span></span><code><span class="o">(</span><span class="nt">conda</span><span class="o">:</span><span class="w"> </span><span class="nt">leo3912</span><span class="o">)</span><span class="w"></span>
 <span class="o">$</span><span class="w"> </span><span class="nt">python</span><span class="w"> </span><span class="o">/</span><span class="nt">opt</span><span class="o">/</span><span class="nt">bin</span><span class="o">/</span><span class="nt">leo</span><span class="o">/</span><span class="nt">launchLeo</span><span class="p">.</span><span class="nc">py</span><span class="w"></span>
 
@@ -265,34 +265,34 @@ now under conda environment need can call leo with hand deploy verion:</p>
 <code>~/.bash_profile</code> add:</p>
 <div class="highlight"><pre><span></span><code>alias leo6lanch="python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"
 </code></pre></div>
-<p>finally start-up leo need two commands:</p>
+<p>finally start-up leo need two commands:</p>
 <div class="highlight"><pre><span></span><code>$ conda activate leo3912
 $ leo6lanch
 </code></pre></div>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <blockquote>
-<p>only for macOS 12.* with M1 chip</p>
+<p>only for macOS 12.* with M1 chip</p>
 </blockquote>
 <ul>
-<li>base installed arm Homebrew, and miniconda</li>
-<li>usage brew install Qt and PyQt</li>
-<li>usage conda create environment for Leo</li>
-<li><span class="caps">ATTENTION</span>:<ul>
-<li>copy PyQt packets from brew to conda an first</li>
-<li>so usage pip install leo in auto</li>
+<li>base installed arm Homebrew, and miniconda</li>
+<li>usage brew install Qt and PyQt</li>
+<li>usage conda create environment for Leo</li>
+<li>ATTENTION:<ul>
+<li>copy PyQt packets from brew to conda an first</li>
+<li>so usage pip install leo in auto</li>
 </ul>
 </li>
-<li>download latest Leo from github</li>
-<li>finally from conda environment’s Python call the <code>launchLeo.py</code></li>
+<li>download latest Leo from github</li>
+<li>finally from conda environment's Python call the <code>launchLeo.py</code></li>
 </ul>
 <h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
 <ul>
-<li>220529 publish as blog</li>
-<li>220528 miniconda + abrew can work</li>
-<li>220527 error mix, had to try again</li>
-<li>220506 try again, not fix yet</li>
-<li>220401 try re-install PyENV, not work</li>
-<li>211113 jump into M1max , fund some chaos</li>
+<li>220529 publish as blog</li>
+<li>220528 miniconda + abrew can work</li>
+<li>220527 error mix, had to try again</li>
+<li>220506 try again, not fix yet</li>
+<li>220401 try re-install PyENV, not work</li>
+<li>211113 jump into M1max , fund some chaos</li>
 </ul>
 
             </div>

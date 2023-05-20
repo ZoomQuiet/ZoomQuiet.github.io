@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>    如何配置 rIME 支持 GitChat&nbsp;规范?
+    <title>    如何配置 rIME 支持 GitChat 规范?
 / 是也乎(￣▽￣)
 / ZoomQuiet.io    </title>
 
@@ -92,7 +92,7 @@
             <header class="page-header">
                 <h1>
                     <a href="https://blog.zoomquiet.io/rime4gitchat.html">
-                        如何配置 rIME 支持 GitChat&nbsp;规范?
+                        如何配置 rIME 支持 GitChat 规范?
                     </a>
                 </h1>
             </header>
@@ -133,7 +133,7 @@
     <nav class="toc">
     <div class="toc">
 <ul>
-<li><a href="#bg"><span class="caps">BG</span></a></li>
+<li><a href="#bg">BG</a></li>
 <li><a href="#goal">goal</a></li>
 <li><a href="#logging">logging</a><ul>
 <li><a href="#sed">sed</a></li>
@@ -148,29 +148,29 @@
     </nav>
 
                 
-<h2 id="bg"><span class="caps">BG</span><a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<h2 id="bg">BG<a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
 <ul>
-<li>新年了, 发现有 <code>长徦式学习症</code> , 很多不敢肥家被逼婚的程序猿, 宁可呆在公司一边值班一边刷课</li>
-<li>同时, GitChat 也空降新领导, 启动叕一波作者鼓动</li>
-<li>所以, 响应号召, 尝试分享这年几点感触</li>
-<li>只是, 没想到, 对提交文章, 有了细致要求, 任何一点不达标, 直接退稿, 不允许发布</li>
+<li>新年了, 发现有 <code>长徦式学习症</code> , 很多不敢肥家被逼婚的程序猿, 宁可呆在公司一边值班一边刷课</li>
+<li>同时, GitChat 也空降新领导, 启动叕一波作者鼓动</li>
+<li>所以, 响应号召, 尝试分享这年几点感触</li>
+<li>只是, 没想到, 对提交文章, 有了细致要求, 任何一点不达标, 直接退稿, 不允许发布</li>
 <li>虽然, 申述说:<ul>
-<li>通过配置输入法, 已经有15年从来不用中文标点了</li>
+<li>通过配置输入法, 已经有15年从来不用中文标点了</li>
 <li>不仅在编程时杜绝了因为中文标点引发血案</li>
-<li>同时, 也促使行文更加国际化, 也从来没因为标点而引发误解</li>
-<li>但是, GitChat 方面不认为这是读者可以接受的</li>
-<li>其它作者也劝:”从了吧, 您就…”</li>
+<li>同时, 也促使行文更加国际化, 也从来没因为标点而引发误解</li>
+<li>但是, GitChat 方面不认为这是读者可以接受的</li>
+<li>其它作者也劝:"从了吧, 您就..."</li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>所以…</p>
+<p>所以...</p>
 </blockquote>
 <h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
 <ul>
-<li>找到配置, 恢复全角标点输入</li>
+<li>找到配置, 恢复全角标点输入</li>
 <li>同时兼容以往全部半角标点输入习惯</li>
-<li>进一步, 是否可以用工具来完成自动化修改?</li>
+<li>进一步, 是否可以用工具来完成自动化修改?</li>
 </ul>
 <h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
 <blockquote>
@@ -178,7 +178,7 @@
 </blockquote>
 <h3 id="sed">sed<a class="headerlink" href="#sed" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="https://gist.github.com/ZoomQuiet/53439dd21c60a935e793">i hate Chinese symbol! so usage: zhmark2en.sh pwd FILEexNAME</a></li>
+<li><a href="https://gist.github.com/ZoomQuiet/53439dd21c60a935e793">i hate Chinese symbol! so usage: zhmark2en.sh pwd FILEexNAME</a></li>
 <li>早年开始实行全半角标点后, 自然的基于 bash 编写了小工具<ul>
 <li>可以自动用自己指定规则</li>
 <li>替换批量文本文件中所有全角标点</li>
@@ -186,7 +186,7 @@
 </li>
 <li>自然首先尝试基于之, 反转规则:<ul>
 <li>还用之前输入习惯</li>
-<li>只是提交前, 用工具自动替换所有半角标点为编辑们渴望和依赖的中文标点</li>
+<li>只是提交前, 用工具自动替换所有半角标点为编辑们渴望和依赖的中文标点</li>
 </ul>
 </li>
 </ul>
@@ -197,14 +197,14 @@
 <li>首先, 中文标点有很大一批是成对却不同形状 <code>""　"　"</code><ul>
 <li>原先工具替换时是统一替换为同一形状</li>
 <li>比如,无论 <code>"</code> 或是 <code>"</code> 都嗯哼为 <code>"</code></li>
-<li>现在想相反, 远没那么简单</li>
+<li>现在想相反, 远没那么简单</li>
 </ul>
 </li>
-<li>另外, 原先替换的目标字符在 <span class="caps">ASCII</span> 范畴, 无论什么编码都兼容<ul>
-<li>现在则不同, 中文标点只存在少数几种编码中</li>
-<li>用 shell 脚本强行修改后</li>
-<li>引发编码混乱, 文本直接乱码了</li>
-<li>强行转换回 <span class="caps">UTF</span>-8 依然有很大比例有吞字现象</li>
+<li>另外, 原先替换的目标字符在 ASCII 范畴, 无论什么编码都兼容<ul>
+<li>现在则不同, 中文标点只存在少数几种编码中</li>
+<li>用 shell 脚本强行修改后</li>
+<li>引发编码混乱, 文本直接乱码了</li>
+<li>强行转换回 UTF-8 依然有很大比例有吞字现象</li>
 </ul>
 </li>
 </ul>
@@ -212,11 +212,11 @@
 <blockquote>
 <p>只能回到输入法本身来定制了</p>
 </blockquote>
-<p>好在 <a href="https://rime.im/"><span class="caps">RIME</span> - 中州韻輸入法引擎</a> 本身就是高度可定制的</p>
+<p>好在 <a href="https://rime.im/">RIME - 中州韻輸入法引擎</a> 本身就是高度可定制的</p>
 <ul>
-<li>参考: <a href="https://github.com/ZoomQuiet/ZqBXM/tree/master/Rime-Squirrel">ZqBXM/Rime-Squirrel at master · ZoomQuiet/ZqBXM</a></li>
+<li>参考: <a href="https://github.com/ZoomQuiet/ZqBXM/tree/master/Rime-Squirrel">ZqBXM/Rime-Squirrel at master · ZoomQuiet/ZqBXM</a></li>
 <li>发现当年关键几处配置</li>
-<li>小心尝试几次, 便搞定</li>
+<li>小心尝试几次, 便搞定</li>
 </ul>
 <p>:</p>
 <div class="highlight"><pre><span></span><code>/Users/zoomq/Library/Rime/
@@ -243,7 +243,7 @@
 <ul>
 <li>原先 rIME 配合私制 <code>表形码</code> 进行写作和编程时, 行为很简洁:<ul>
 <li><code>control+空格</code>　切换到 <code>鼠鬚管</code> (中州韻 输入法平台 macOS 版本代号)<ul>
-<li>随便输入就好…</li>
+<li>随便输入就好...</li>
 </ul>
 </li>
 <li>如果有大段英文输入, 不想触发中文选字<ul>
@@ -263,24 +263,24 @@
 <li>输入 markdown 相关结构字符时, 又必须:<ul>
 <li><code>shift</code> 切换为中文输入模式</li>
 <li>再用 <code>shift+空格</code> 切换为到 <code>半角</code> 标点</li>
-<li>此时, 类似 <code>+ - &gt;</code> 以及空格/tab 都是 <span class="caps">ASCII</span> 式, markdown 可理解的</li>
+<li>此时, 类似 <code>+ - &gt;</code> 以及空格/tab 都是 ASCII 式, markdown 可理解的</li>
 </ul>
 </li>
 <li>输入英文单词/术语时, 又必须:<ul>
 <li><code>shift</code> 切换为中文输入模式</li>
 <li>再用 <code>shift+空格</code> 切换为到 <code>半角</code> 标点</li>
-<li>再用 <code>shift</code> 切换为 en 输入模式</li>
-<li>此时, 才能输入正常 <span class="caps">ASCII</span> 字符</li>
+<li>再用 <code>shift</code> 切换为 en 输入模式</li>
+<li>此时, 才能输入正常 ASCII 字符</li>
 <li>否则是类似 <code>ＡＳＣＩＩ</code>　全角英文</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p>综上, rIME 支持灵活丰富的输入模式:</p>
+<p>综上, rIME 支持灵活丰富的输入模式:</p>
 <ul>
-<li>可是为了灵活, 不得不劳累用户显式指令切换模式</li>
-<li>同时, 从法理上不同输入模式中, <span class="caps">ASCII</span> 字符形态是不兼容</li>
+<li>可是为了灵活, 不得不劳累用户显式指令切换模式</li>
+<li>同时, 从法理上不同输入模式中, ASCII 字符形态是不兼容</li>
 <li>而 GitChat 编辑又要求在同一篇文章中:<ul>
 <li>不同格式标点,空格</li>
 <li>和不同形式字符</li>
@@ -288,36 +288,36 @@
 </ul>
 </li>
 <li>导致至少多出一倍毫无必要的击键操作</li>
-<li>以及, 和以往主要输入行为完全不同的心智判定损耗</li>
+<li>以及, 和以往主要输入行为完全不同的心智判定损耗</li>
 <li>可以说, 是 <code>GitChat 式工伤</code></li>
 </ul>
 <h2 id="refer">refer<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://gitbook.cn/books/5c47da3ef79c0c1f90492403/index.html">Chat 发布与写作指南</a></li>
+<li><a href="https://gitbook.cn/books/5c47da3ef79c0c1f90492403/index.html">Chat 发布与写作指南</a></li>
 <li><a href="http://w3c.github.io/clreq/zh/">中文排版需求</a><ul>
-<li><a href="http://devrel.zoomquiet.top/data/20150402184838/index.html">从”中文排版规范”开始</a></li>
-<li>对比: <a href="https://www.w3.org/TR/jlreq/">Requirements for Japanese Text Layout</a></li>
+<li><a href="http://devrel.zoomquiet.top/data/20150402184838/index.html">从"中文排版规范"开始</a></li>
+<li>对比: <a href="https://www.w3.org/TR/jlreq/">Requirements for Japanese Text Layout</a></li>
 </ul>
 </li>
 <li><a href="https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.md#%E7%A9%BA%E6%A0%BC">中文文案排版指北</a><ul>
-<li><a href="https://github.com/vinta/pangu.js?utm_source=www.appinn.com">vinta/pangu.js: 為什麼你們就是不能加個空格呢?</a></li>
+<li><a href="https://github.com/vinta/pangu.js?utm_source=www.appinn.com">vinta/pangu.js: 為什麼你們就是不能加個空格呢?</a></li>
 </ul>
 </li>
 <li><a href="https://mp.weixin.qq.com/s/Vu-20r7_LCTToyaOeli7tg">全角半角碎碎念 - The Type</a><ul>
 <li><code>...可见,中文的标点符号既可以是'全宽'的也可以是'半宽'的,'中文＝全角'完全是技术问题导致的误解.</code></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%85%A8%E5%BD%A2%E5%92%8C%E5%8D%8A%E5%BD%A2">全角和半角 - 维基百科,自由的百科全书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%85%A8%E5%BD%A2%E5%92%8C%E5%8D%8A%E5%BD%A2">全角和半角 - 维基百科,自由的百科全书</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="sayeahooo">Sayeahooo<a class="headerlink" href="#sayeahooo" title="Permanent link">¶</a></h2>
 <ul>
-<li>h 资料搜索理解</li>
-<li>2d gitlab 尝试/生效</li>
+<li>h 资料搜索理解</li>
+<li>2d gitlab 尝试/生效</li>
 <li>4h github 嗯哼<ul>
-<li>3h 域名迁移尝试</li>
+<li>3h 域名迁移尝试</li>
 </ul>
 </li>
-<li>2h 截屏,文档嗯哼…</li>
+<li>2h 截屏,文档嗯哼...</li>
 </ul>
 
             </div>

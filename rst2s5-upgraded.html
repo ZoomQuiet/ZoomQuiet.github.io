@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>    rst2s5&nbsp;小折腾
+    <title>    rst2s5 小折腾
 / 是也乎(￣▽￣)
 / ZoomQuiet.io    </title>
 
@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="rst2s5-upgraded"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/rst2s5-upgraded.html"/>
-            <meta property="og:description" content="背景¶ rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging 所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了: s5.zoomquiet.io 问题¶ 忽然发现生成的代码颜色 …"/>
+            <meta property="og:description" content="背景¶ rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet&#39;s PyBlosxom blogging 所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了: s5.zoomquiet.io 问题¶ 忽然发现生成的代码颜色很 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -92,7 +92,7 @@
             <header class="page-header">
                 <h1>
                     <a href="https://blog.zoomquiet.io/rst2s5-upgraded.html">
-                        rst2s5&nbsp;小折腾
+                        rst2s5 小折腾
                     </a>
                 </h1>
             </header>
@@ -143,20 +143,20 @@
 
                 
 <h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html">rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet’s PyBlosxom blogging</a></p>
-<p>所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:</p>
+<p><a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html">rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet's PyBlosxom blogging</a></p>
+<p>所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:</p>
 <p><a href="http://s5.zoomquiet.io/">s5.zoomquiet.io</a></p>
 <h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
 <p>忽然发现生成的代码颜色很奇怪,在黑色背景中,很多元素几乎看不见</p>
 <h1 id="_3">分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
-<p>4年前的生成脚本,和最新 pygments 接口不匹配了,,,</p>
+<p>4年前的生成脚本,和最新 pygments 接口不匹配了,,,</p>
 <h1 id="_4">解决<a class="headerlink" href="#_4" title="Permanent link">¶</a></h1>
 <p>参考:</p>
 <ul>
-<li><a href="http://pygments.org/docs/rstdirective/">Using Pygments in ReST documents — Pygments</a></li>
-<li><a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/">Using rst for presentations</a></li>
-<li><a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html">rst2s5 with syntax highlighting</a></li>
-<li><a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files">python - Where can I find a gallery of Pygments <span class="caps">CSS</span> files - Super User</a></li>
+<li><a href="http://pygments.org/docs/rstdirective/">Using Pygments in ReST documents — Pygments</a></li>
+<li><a href="http://morgangoose.com/blog/2010/09/12/using-rst-for-presentations/">Using rst for presentations</a></li>
+<li><a href="http://hackmap.blogspot.com/2009/10/rst2s5-with-syntax-highlighting.html">rst2s5 with syntax highlighting</a></li>
+<li><a href="http://superuser.com/questions/374509/where-can-i-find-a-gallery-of-pygments-css-files">python - Where can I find a gallery of Pygments CSS files - Super User</a></li>
 </ul>
 <p>对比:</p>
 <ul>
@@ -172,14 +172,14 @@
 <span class="p">)</span>
 </code></pre></div>
 <p>搞掂!</p>
-<p>另外,也随手变更了一下注册的 <code>directive</code> ~ 指令:</p>
+<p>另外,也随手变更了一下注册的 <code>directive</code> ~ 指令:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Register the directive with docutils.</span>
 <span class="c1">#rst.directives.register_directive('code-block', code_block)</span>
 <span class="c1">#rst.roles.register_local_role('code-block', code_role)</span>
 <span class="n">rst</span><span class="o">.</span><span class="n">directives</span><span class="o">.</span><span class="n">register_directive</span><span class="p">(</span><span class="s1">'sourcecode'</span><span class="p">,</span> <span class="n">code_block</span><span class="p">)</span>
 <span class="n">rst</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">register_local_role</span><span class="p">(</span><span class="s1">'sourcecode'</span><span class="p">,</span> <span class="n">code_role</span><span class="p">)</span>
 </code></pre></div>
-<p>这样俺在 Leo 中写:</p>
+<p>这样俺在 Leo 中写:</p>
 <p><img alt="140507-rst2s5-source.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-source.png"/></p>
 <p>就可以一键生成为幻灯中的:</p>
 <p><img alt="140507-rst2s5-slide.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140507-rst2s5-slide.png"/></p>

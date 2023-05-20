@@ -134,23 +134,23 @@
     <div class="toc">
 <ul>
 <li><a href="#_1">迭代基础</a><ul>
-<li><a href="#list-elements">list ⇒ elements</a></li>
-<li><a href="#strings-characters">Strings ⇒ characters</a></li>
-<li><a href="#dicts-keys">Dicts ⇒ keys</a></li>
-<li><a href="#files-lines">Files ⇒ lines</a></li>
+<li><a href="#list-elements">list ⇒ elements</a></li>
+<li><a href="#strings-characters">Strings ⇒ characters</a></li>
+<li><a href="#dicts-keys">Dicts ⇒ keys</a></li>
+<li><a href="#files-lines">Files ⇒ lines</a></li>
 <li><a href="#_2">标准库中有趣的迭代</a></li>
 <li><a href="#_3">其它的迭代形式</a></li>
 </ul>
 </li>
 <li><a href="#_4">基本设问</a><ul>
 <li><a href="#q">Q: 如何获得索引号?</a><ul>
-<li><a href="#enumerate">enumerate() 制造好用的值对</a></li>
-<li><a href="#vs">迭代 vs 索引</a></li>
+<li><a href="#enumerate">enumerate() 制造好用的值对</a></li>
+<li><a href="#vs">迭代 vs 索引</a></li>
 </ul>
 </li>
 <li><a href="#q_1">Q: 如何对两个列表循环?</a><ul>
-<li><a href="#zip">zip() 生成弱对关系循环</a></li>
-<li><a href="#dict">dict() 是接收一对流的</a></li>
+<li><a href="#zip">zip() 生成弱对关系循环</a></li>
+<li><a href="#dict">dict() 是接收一对流的</a></li>
 <li><a href="#_5">最赞</a></li>
 </ul>
 </li>
@@ -159,13 +159,13 @@
 <li><a href="#_6">自制迭代</a><ul>
 <li><a href="#_7">生成自有迭代</a></li>
 <li><a href="#_8">生成器</a><ul>
-<li><a href="#evens-generator">Evens generator</a></li>
+<li><a href="#evens-generator">Evens generator</a></li>
 <li><a href="#_9">对迭代提炼</a></li>
 </ul>
 </li>
 <li><a href="#q_2">Q: 如何从两层循环中退出?</a><ul>
-<li><a href="#a">A: 合并循环</a></li>
-<li><a href="#better">Better: 单元迭代</a></li>
+<li><a href="#a">A: 合并循环</a></li>
+<li><a href="#better">Better: 单元迭代</a></li>
 </ul>
 </li>
 </ul>
@@ -173,7 +173,7 @@
 <li><a href="#_10">底层迭代</a><ul>
 <li><a href="#_11">迭代基层操作</a></li>
 <li><a href="#_12">构造自制对象可迭代</a><ul>
-<li><a href="#iter">iter 生成器</a></li>
+<li><a href="#iter">iter 生成器</a></li>
 </ul>
 </li>
 </ul>
@@ -185,8 +185,8 @@
     </nav>
 
                 
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
+<p>来自 @nedbat 的分享:</p>
+<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
 <h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>C样:</p>
 <div class="highlight"><pre><span></span><code><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
@@ -212,7 +212,7 @@
 <li>可 <code>iterable</code> 的对象可以生成值流</li>
 <li>对迭代对象的每次操作</li>
 <li>由对象决定是什么值</li>
-<li>Python 中太多对象可以直接迭代的…</li>
+<li>Python 中太多对象可以直接迭代的...</li>
 </ul>
 <h3 id="list-elements">list ⇒ elements<a class="headerlink" href="#list-elements" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="nv">e</span> <span class="nv">in</span> [<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>, <span class="mi">4</span>]:
@@ -404,7 +404,7 @@ dict(zip(names, heights))
     <span class="nv">do_something</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>
 </code></pre></div>
 <h3 id="_8">生成器<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
-<p>函式返回一个值 —&gt; 生成器生成一个流</p>
+<p>函式返回一个值 --&gt; 生成器生成一个流</p>
 <div class="highlight"><pre><span></span><code><span class="nv">def</span> <span class="nv">hello_world</span><span class="ss">()</span>:
     <span class="nv">yield</span> <span class="s2">"</span><span class="s">Hello</span><span class="s2">"</span>
     <span class="nv">yield</span> <span class="s2">"</span><span class="s">world</span><span class="s2">"</span>
@@ -425,7 +425,7 @@ dict(zip(names, heights))
     <span class="nv">do_something</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>
 </code></pre></div>
 <h4 id="_9">对迭代提炼<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
-<p>~ Abstracting your iteration</p>
+<p>~ Abstracting your iteration</p>
 <div class="highlight"><pre><span></span><code><span class="nv">f</span> <span class="o">=</span> <span class="nv">open</span><span class="ss">(</span><span class="s2">"</span><span class="s">my_config.ini</span><span class="s2">"</span><span class="ss">)</span>
 <span class="k">for</span> <span class="nv">line</span> <span class="nv">in</span> <span class="nv">f</span>:
     <span class="nv">line</span> <span class="o">=</span> <span class="nv">line</span>.<span class="nv">strip</span><span class="ss">()</span>
@@ -491,12 +491,13 @@ dict(zip(names, heights))
 </code></pre></div>
 <h2 id="_10">底层迭代<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
 <ul>
-<li>可迭代: 能生成迭代 Iterable: produces an iterator</li>
+<li>可迭代: 能生成迭代 Iterable: produces an iterator</li>
 <li>
-<p>迭代器: 生成一个值流 Iterator: produces a stream of values</p>
+<p>迭代器: 生成一个值流 Iterator: produces a stream of values</p>
 <p>iterator = iter(iterable)  # iterable.<strong>iter</strong>()
 value = next(iterator)     # iterator.next() or .<strong>next</strong>()
-value = next(iterator) …</p>
+value = next(iterator)
+...</p>
 </li>
 </ul>
 <p>迭代器仅有一个操作: <code>next()</code></p>
@@ -545,13 +546,13 @@ value = next(iterator) …</p>
 <h2 id="_13">(￣▽￣)<a class="headerlink" href="#_13" title="Permanent link">¶</a></h2>
 <ul>
 <li>迭代无处不在</li>
-<li>Python 内置了干净强大的模型支持迭代</li>
+<li>Python 内置了干净强大的模型支持迭代</li>
 <li>抽象和定制你的迭代吧!</li>
 </ul>
 <h2 id="_14">是也乎<a class="headerlink" href="#_14" title="Permanent link">¶</a></h2>
 <ul>
-<li>160613 空先发</li>
-<li>160531 动念</li>
+<li>160613 空先发</li>
+<li>160531 动念</li>
 </ul>
 
             </div>

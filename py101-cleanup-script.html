@@ -175,30 +175,30 @@ The latest release is always updated to the Python Package Index. The source cod
 <p>print "Total number of files == {0}".format(file_count)
 print "Total number of directories == {0}".format(dir_count)
 That was again very easy. Now what if we want to pretty print the directory names? I know there are some terminal one-liners but here we are talking about Python only. Lets see how we can achieve that.</p>
-<div class="highlight"><pre><span></span><code><span class="n">files_loc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{}</span><span class="w"></span>
-<span class="n">file_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="n">dir_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">walk</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">isfile</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">dirname</span><span class="p">().</span><span class="n">basename</span><span class="p">()</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">files_loc</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="n">files_loc</span><span class="o">[</span><span class="n">i.dirname().basename()</span><span class="o">]</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">basename</span><span class="p">())</span><span class="w"></span>
-<span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
-<span class="w">            </span><span class="n">files_loc</span><span class="o">[</span><span class="n">i.dirname().basename()</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
-<span class="w">            </span><span class="n">files_loc</span><span class="o">[</span><span class="n">i.dirname().basename()</span><span class="o">]</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">basename</span><span class="p">())</span><span class="w"></span>
-<span class="w">        </span><span class="n">file_count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">    </span><span class="n">elif</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">isdir</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">        </span><span class="n">dir_count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
-<span class="w">        </span><span class="n">pass</span><span class="w"></span>
-<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">files_loc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{}</span>
+<span class="n">file_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">dir_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">walk</span><span class="p">()</span><span class="err">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">isfile</span><span class="p">()</span><span class="err">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">dirname</span><span class="p">().</span><span class="n">basename</span><span class="p">()</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">files_loc</span><span class="p">:</span>
+<span class="w">            </span><span class="n">files_loc</span><span class="o">[</span><span class="n">i.dirname().basename()</span><span class="o">]</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">basename</span><span class="p">())</span>
+<span class="w">        </span><span class="k">else</span><span class="err">:</span>
+<span class="w">            </span><span class="n">files_loc</span><span class="o">[</span><span class="n">i.dirname().basename()</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span>
+<span class="w">            </span><span class="n">files_loc</span><span class="o">[</span><span class="n">i.dirname().basename()</span><span class="o">]</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">basename</span><span class="p">())</span>
+<span class="w">        </span><span class="n">file_count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="n">elif</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">isdir</span><span class="p">()</span><span class="err">:</span>
+<span class="w">        </span><span class="n">dir_count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">else</span><span class="err">:</span>
+<span class="w">        </span><span class="n">pass</span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
 
-<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">files_loc</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;|---&quot;</span><span class="o">+</span><span class="n">i</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">files_loc</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
-<span class="w">        </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;|   |&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;|   `---&quot;</span><span class="o">+</span><span class="n">i</span><span class="w"></span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;|&quot;</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">files_loc</span><span class="p">:</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;|---&quot;</span><span class="o">+</span><span class="n">i</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">files_loc</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="err">:</span>
+<span class="w">        </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;|   |&quot;</span>
+<span class="w">        </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;|   `---&quot;</span><span class="o">+</span><span class="n">i</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="ss">&quot;|&quot;</span>
 </code></pre></div>
 
 <p>There is nothing fancy here. In this script we are just pretty printing a directory and the files it contains. Now lets continue.</p>
@@ -227,14 +227,14 @@ In the above script I did not implement any logging and error handling. That is 
 <p>So another interesting scenario. What if we want to delete those files which exceed 5Mb size?</p>
 <p><code>NOTE:</code> There is a difference between Mb and MB. I will be covering Mb here. 
 Is it possible with path.py? Yes it is! So here is a script which does this work:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">d</span> <span class="o">=</span> <span class="nv">path</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">./</span><span class="s1">&#39;</span><span class="ss">)</span>
-<span class="nv">del_size</span> <span class="o">=</span> <span class="mi">4522420</span>
-<span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">d</span>.<span class="nv">walk</span><span class="ss">()</span>:
-    <span class="k">if</span> <span class="nv">i</span>.<span class="nv">isfile</span><span class="ss">()</span>:
-        <span class="k">if</span> <span class="nv">i</span>.<span class="nv">size</span> <span class="o">&gt;</span> <span class="nv">del_size</span>:
-        <span class="sc">#4522420</span> <span class="nv">is</span> <span class="nv">approximately</span> <span class="nv">equal</span> <span class="nv">to</span> <span class="mi">4</span>.<span class="mi">1</span><span class="nv">Mb</span>
-        #<span class="nv">Change</span> <span class="nv">it</span> <span class="nv">to</span> <span class="nv">your</span> <span class="nv">desired</span> <span class="nv">size</span>
-            <span class="nv">i</span>.<span class="nv">remove</span><span class="ss">()</span>
+<div class="highlight"><pre><span></span><code>d = path(&#39;./&#39;)
+del_size = 4522420
+for i in d.walk():
+    if i.isfile():
+        if i.size &gt; del_size:
+        #4522420 is approximately equal to 4.1Mb
+        #Change it to your desired size
+            i.remove()
 </code></pre></div>
 
 <p>So we saw how we can remove files based on their size.</p>

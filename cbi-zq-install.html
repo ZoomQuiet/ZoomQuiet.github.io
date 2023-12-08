@@ -283,19 +283,19 @@ Run 'do-release-upgrade' to upgrade to it.
 <p>这倒底是升级呢? 还是不升级呢?!</p>
 <h3 id="ip">IP<a class="headerlink" href="#ip" title="Permanent link">¶</a></h3>
 <p>修订: <code>/etc/network/interfaces</code> 为:</p>
-<div class="highlight"><pre><span></span><code>auto lo eth0
-iface lo inet loopback
+<div class="highlight"><pre><span></span><code>auto<span class="w"> </span>lo<span class="w"> </span>eth0
+iface<span class="w"> </span>lo<span class="w"> </span>inet<span class="w"> </span>loopback
 <span class="c1">#iface eth0 inet dhcp</span>
-iface eth0 inet static
+iface<span class="w"> </span>eth0<span class="w"> </span>inet<span class="w"> </span>static
 
-address <span class="m">192</span>.168.0.111
-gateway <span class="m">192</span>.168.0.1
-netmask <span class="m">255</span>.255.255.0
-network <span class="m">192</span>.168.0.0
-broadcast <span class="m">192</span>.168.0.255
+address<span class="w"> </span><span class="m">192</span>.168.0.111
+gateway<span class="w"> </span><span class="m">192</span>.168.0.1
+netmask<span class="w"> </span><span class="m">255</span>.255.255.0
+network<span class="w"> </span><span class="m">192</span>.168.0.0
+broadcast<span class="w"> </span><span class="m">192</span>.168.0.255
 </code></pre></div>
 <p>重启网络:</p>
-<div class="highlight"><pre><span></span><code>/etc/init.d/networking restart
+<div class="highlight"><pre><span></span><code>/etc/init.d/networking<span class="w"> </span>restart
 </code></pre></div>
 <p>就将原先每次重启时,可能变化的动态 IP 变成内网的静态 IP 了</p>
 <h3 id="connection-refused">Connection refused<a class="headerlink" href="#connection-refused" title="Permanent link">¶</a></h3>
@@ -304,36 +304,36 @@ broadcast <span class="m">192</span>.168.0.255
 <p>果断 Google 发布,是常见问题!</p>
 <p><a href="http://askubuntu.com/questions/30080/how-to-solve-connection-refused-errors-in-ssh-connection">openssh - How to solve 'Connection refused' errors in SSH connection? - Ask Ubuntu</a></p>
 <p>完全无法相信自个儿的眼睛! 竟然是因为根本没有 <code>sshd</code> 进程运行的原因!</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get install openssh-server openssh-client
-sudo /etc/init.d/ssh start
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>openssh-server<span class="w"> </span>openssh-client
+sudo<span class="w"> </span>/etc/init.d/ssh<span class="w"> </span>start
 </code></pre></div>
 <p>再尝试</p>
-<div class="highlight"><pre><span></span><code>$ ssh <span class="m">192</span>.168.0.111
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ssh<span class="w"> </span><span class="m">192</span>.168.0.111
 </code></pre></div>
 <p>一切正常了!</p>
 <h3 id="ftab">ftab<a class="headerlink" href="#ftab" title="Permanent link">¶</a></h3>
 <p>看CB3 的硬件参数,应该有8G 内置空间的, 但是查询:</p>
-<div class="highlight"><pre><span></span><code>$ df -h
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       <span class="m">2</span>.0G 1019M  907M  <span class="m">53</span>% /
-devtmpfs        913M  <span class="m">4</span>.0K  913M   <span class="m">1</span>% /dev
-none            <span class="m">4</span>.0K     <span class="m">0</span>  <span class="m">4</span>.0K   <span class="m">0</span>% /sys/fs/cgroup
-none            183M  160K  183M   <span class="m">1</span>% /run
-none            <span class="m">5</span>.0M     <span class="m">0</span>  <span class="m">5</span>.0M   <span class="m">0</span>% /run/lock
-none            913M     <span class="m">0</span>  913M   <span class="m">0</span>% /run/shm
-none            100M     <span class="m">0</span>  100M   <span class="m">0</span>% /run/user
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>df<span class="w"> </span>-h
+Filesystem<span class="w">      </span>Size<span class="w">  </span>Used<span class="w"> </span>Avail<span class="w"> </span>Use%<span class="w"> </span>Mounted<span class="w"> </span>on
+/dev/root<span class="w">       </span><span class="m">2</span>.0G<span class="w"> </span>1019M<span class="w">  </span>907M<span class="w">  </span><span class="m">53</span>%<span class="w"> </span>/
+devtmpfs<span class="w">        </span>913M<span class="w">  </span><span class="m">4</span>.0K<span class="w">  </span>913M<span class="w">   </span><span class="m">1</span>%<span class="w"> </span>/dev
+none<span class="w">            </span><span class="m">4</span>.0K<span class="w">     </span><span class="m">0</span><span class="w">  </span><span class="m">4</span>.0K<span class="w">   </span><span class="m">0</span>%<span class="w"> </span>/sys/fs/cgroup
+none<span class="w">            </span>183M<span class="w">  </span>160K<span class="w">  </span>183M<span class="w">   </span><span class="m">1</span>%<span class="w"> </span>/run
+none<span class="w">            </span><span class="m">5</span>.0M<span class="w">     </span><span class="m">0</span><span class="w">  </span><span class="m">5</span>.0M<span class="w">   </span><span class="m">0</span>%<span class="w"> </span>/run/lock
+none<span class="w">            </span>913M<span class="w">     </span><span class="m">0</span><span class="w">  </span>913M<span class="w">   </span><span class="m">0</span>%<span class="w"> </span>/run/shm
+none<span class="w">            </span>100M<span class="w">     </span><span class="m">0</span><span class="w">  </span>100M<span class="w">   </span><span class="m">0</span>%<span class="w"> </span>/run/user
 </code></pre></div>
 <p>不对哪,肿么只有2G 的空间?</p>
-<div class="highlight"><pre><span></span><code>$ sudo fdisk -l
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>fdisk<span class="w"> </span>-l
 
-Disk /dev/nand: <span class="m">7700</span> MB, <span class="m">7700742144</span> bytes
-<span class="m">255</span> heads, <span class="m">63</span> sectors/track, <span class="m">936</span> cylinders, total <span class="m">15040512</span> sectors
-<span class="nv">Units</span> <span class="o">=</span> sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
-Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
-I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
-Disk identifier: 0x00000000
+Disk<span class="w"> </span>/dev/nand:<span class="w"> </span><span class="m">7700</span><span class="w"> </span>MB,<span class="w"> </span><span class="m">7700742144</span><span class="w"> </span>bytes
+<span class="m">255</span><span class="w"> </span>heads,<span class="w"> </span><span class="m">63</span><span class="w"> </span>sectors/track,<span class="w"> </span><span class="m">936</span><span class="w"> </span>cylinders,<span class="w"> </span>total<span class="w"> </span><span class="m">15040512</span><span class="w"> </span>sectors
+<span class="nv">Units</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sectors<span class="w"> </span>of<span class="w"> </span><span class="m">1</span><span class="w"> </span>*<span class="w"> </span><span class="nv">512</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+Sector<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>logical/physical<span class="o">)</span>:<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes<span class="w"> </span>/<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+I/O<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>minimum/optimal<span class="o">)</span>:<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes<span class="w"> </span>/<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+Disk<span class="w"> </span>identifier:<span class="w"> </span>0x00000000
 
-Disk /dev/nand doesn<span class="s1">'t contain a valid partition table</span>
+Disk<span class="w"> </span>/dev/nand<span class="w"> </span>doesn<span class="s1">'t contain a valid partition table</span>
 
 <span class="s1">Disk /dev/nanda: 67 MB, 67108864 bytes</span>
 <span class="s1">255 heads, 63 sectors/track, 8 cylinders, total 131072 sectors</span>
@@ -351,16 +351,16 @@ Disk /dev/nand doesn<span class="s1">'t contain a valid partition table</span>
 <span class="s1">I/O size (minimum/optimal): 512 bytes / 512 bytes</span>
 <span class="s1">Disk identifier: 0x00000000</span>
 
-<span class="s1">Disk /dev/nandb doesn'</span>t contain a valid partition table
+<span class="s1">Disk /dev/nandb doesn'</span>t<span class="w"> </span>contain<span class="w"> </span>a<span class="w"> </span>valid<span class="w"> </span>partition<span class="w"> </span>table
 
-Disk /dev/nandc: <span class="m">5469</span> MB, <span class="m">5469372416</span> bytes
-<span class="m">255</span> heads, <span class="m">63</span> sectors/track, <span class="m">664</span> cylinders, total <span class="m">10682368</span> sectors
-<span class="nv">Units</span> <span class="o">=</span> sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
-Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
-I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
-Disk identifier: 0x00000000
+Disk<span class="w"> </span>/dev/nandc:<span class="w"> </span><span class="m">5469</span><span class="w"> </span>MB,<span class="w"> </span><span class="m">5469372416</span><span class="w"> </span>bytes
+<span class="m">255</span><span class="w"> </span>heads,<span class="w"> </span><span class="m">63</span><span class="w"> </span>sectors/track,<span class="w"> </span><span class="m">664</span><span class="w"> </span>cylinders,<span class="w"> </span>total<span class="w"> </span><span class="m">10682368</span><span class="w"> </span>sectors
+<span class="nv">Units</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sectors<span class="w"> </span>of<span class="w"> </span><span class="m">1</span><span class="w"> </span>*<span class="w"> </span><span class="nv">512</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+Sector<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>logical/physical<span class="o">)</span>:<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes<span class="w"> </span>/<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+I/O<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>minimum/optimal<span class="o">)</span>:<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes<span class="w"> </span>/<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+Disk<span class="w"> </span>identifier:<span class="w"> </span>0x00000000
 
-Disk /dev/nandc doesn<span class="err">'</span>t contain a valid partition table
+Disk<span class="w"> </span>/dev/nandc<span class="w"> </span>doesn<span class="err">'</span>t<span class="w"> </span>contain<span class="w"> </span>a<span class="w"> </span>valid<span class="w"> </span>partition<span class="w"> </span>table
 </code></pre></div>
 <p>果然有 <code>/dev/nandc</code> 没有挂上;</p>
 <p>于是,先建立文件系统:</p>

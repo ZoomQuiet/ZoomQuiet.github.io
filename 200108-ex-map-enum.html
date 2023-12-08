@@ -182,40 +182,40 @@
 <p>首先得完成基于 Plug 的 API 服务,
 这其中最关键的是从 GET/POST 协议请求中获得 Slack 转发过来的用户指令;</p>
 <p>官方文档中 demo 形似:</p>
-<div class="highlight"><pre><span></span><code><span class="n">defmodule</span><span class="w"> </span><span class="n">Example</span><span class="p">.</span><span class="n">Plug</span><span class="p">.</span><span class="n">VerifyRequest</span><span class="w"> </span><span class="n">do</span><span class="w"></span>
-<span class="w">  </span><span class="n">defmodule</span><span class="w"> </span><span class="n">IncompleteRequestError</span><span class="w"> </span><span class="n">do</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">defmodule</span><span class="w"> </span><span class="n">Example</span><span class="p">.</span><span class="n">Plug</span><span class="p">.</span><span class="n">VerifyRequest</span><span class="w"> </span><span class="n">do</span>
+<span class="w">  </span><span class="n">defmodule</span><span class="w"> </span><span class="n">IncompleteRequestError</span><span class="w"> </span><span class="n">do</span>
 <span class="w">    </span><span class="nv">@moduledoc</span><span class="w"> </span><span class="ss">"""</span>
 <span class="ss">    Error raised when a required field is missing.</span>
-<span class="ss">    """</span><span class="w"></span>
+<span class="ss">    """</span>
 
-<span class="w">    </span><span class="n">defexception</span><span class="w"> </span><span class="nl">message</span><span class="p">:</span><span class="w"> </span><span class="ss">""</span><span class="w"></span>
-<span class="w">  </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="n">defexception</span><span class="w"> </span><span class="nl">message</span><span class="p">:</span><span class="w"> </span><span class="ss">""</span>
+<span class="w">  </span><span class="k">end</span>
 
-<span class="w">  </span><span class="n">def</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="n">options</span><span class="p">),</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">options</span><span class="w"></span>
+<span class="w">  </span><span class="n">def</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="n">options</span><span class="p">),</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">options</span>
 
-<span class="w">  </span><span class="n">def</span><span class="w"> </span><span class="k">call</span><span class="p">(</span><span class="o">%</span><span class="n">Plug</span><span class="p">.</span><span class="n">Conn</span><span class="err">{</span><span class="nl">request_path</span><span class="p">:</span><span class="w"> </span><span class="k">path</span><span class="err">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p">)</span><span class="w"> </span><span class="n">do</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">opts</span><span class="o">[</span><span class="n">:paths</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">verify_request</span><span class="err">!</span><span class="p">(</span><span class="n">conn</span><span class="p">.</span><span class="n">params</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="o">[</span><span class="n">:fields</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">conn</span><span class="w"></span>
-<span class="w">  </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="n">def</span><span class="w"> </span><span class="k">call</span><span class="p">(</span><span class="o">%</span><span class="n">Plug</span><span class="p">.</span><span class="n">Conn</span><span class="err">{</span><span class="nl">request_path</span><span class="p">:</span><span class="w"> </span><span class="k">path</span><span class="err">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p">)</span><span class="w"> </span><span class="n">do</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">opts</span><span class="o">[</span><span class="n">:paths</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">verify_request</span><span class="err">!</span><span class="p">(</span><span class="n">conn</span><span class="p">.</span><span class="n">params</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="o">[</span><span class="n">:fields</span><span class="o">]</span><span class="p">)</span>
+<span class="w">    </span><span class="n">conn</span>
+<span class="w">  </span><span class="k">end</span>
 
-<span class="w">  </span><span class="n">defp</span><span class="w"> </span><span class="n">verify_request</span><span class="err">!</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="w"> </span><span class="n">fields</span><span class="p">)</span><span class="w"> </span><span class="n">do</span><span class="w"></span>
-<span class="w">    </span><span class="n">verified</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">      </span><span class="n">params</span><span class="w"></span>
-<span class="w">      </span><span class="o">|&gt;</span><span class="w"> </span><span class="k">Map</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span><span class="w"></span>
-<span class="w">      </span><span class="o">|&gt;</span><span class="w"> </span><span class="n">contains_fields</span><span class="vm">?</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">defp</span><span class="w"> </span><span class="n">verify_request</span><span class="err">!</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="w"> </span><span class="n">fields</span><span class="p">)</span><span class="w"> </span><span class="n">do</span>
+<span class="w">    </span><span class="n">verified</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="n">params</span>
+<span class="w">      </span><span class="o">|&gt;</span><span class="w"> </span><span class="k">Map</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="w">      </span><span class="o">|&gt;</span><span class="w"> </span><span class="n">contains_fields</span><span class="vm">?</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span>
 
-<span class="w">    </span><span class="n">unless</span><span class="w"> </span><span class="n">verified</span><span class="p">,</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">raise</span><span class="p">(</span><span class="n">IncompleteRequestError</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="n">unless</span><span class="w"> </span><span class="n">verified</span><span class="p">,</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">raise</span><span class="p">(</span><span class="n">IncompleteRequestError</span><span class="p">)</span>
+<span class="w">  </span><span class="k">end</span>
 
-<span class="w">  </span><span class="n">defp</span><span class="w"> </span><span class="n">contains_fields</span><span class="vm">?</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span><span class="w"> </span><span class="n">fields</span><span class="p">),</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">Enum</span><span class="p">.</span><span class="ow">all</span><span class="vm">?</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">1</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">keys</span><span class="p">))</span><span class="w"></span>
-<span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="n">defp</span><span class="w"> </span><span class="n">contains_fields</span><span class="vm">?</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span><span class="w"> </span><span class="n">fields</span><span class="p">),</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">Enum</span><span class="p">.</span><span class="ow">all</span><span class="vm">?</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">1</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">keys</span><span class="p">))</span>
+<span class="k">end</span>
 </code></pre></div>
 <p>对应检验请求可以是:</p>
-<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w"> </span><span class="n">curl</span><span class="w"> </span><span class="n">localhost</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">upload</span><span class="err">?</span><span class="n">content</span><span class="o">=</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">mimetype</span><span class="o">=</span><span class="n">bar</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w"> </span><span class="n">curl</span><span class="w"> </span><span class="n">localhost</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">upload</span><span class="err">?</span><span class="n">content</span><span class="o">=</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">mimetype</span><span class="o">=</span><span class="n">bar</span>
 </code></pre></div>
 <p>问题是:</p>
-<div class="highlight"><pre><span></span><code><span class="o">...</span><span class="w"></span>
-<span class="o">|&gt;</span><span class="w"> </span><span class="n">contains_fields</span><span class="o">?(</span><span class="n">fields</span><span class="o">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="o">...</span>
+<span class="o">|&gt;</span><span class="w"> </span><span class="n">contains_fields</span><span class="o">?(</span><span class="n">fields</span><span class="o">)</span>
 </code></pre></div>
 <ul>
 <li>提供的函式只是对所有 URI 参数键进行检验, 如果缺少了则报错,</li>
@@ -225,7 +225,7 @@
 <div class="highlight"><pre><span></span><code>IO.inspect(params)
 </code></pre></div>
 <p>请求触发后终端输出:</p>
-<div class="highlight"><pre><span></span><code><span class="c">%{"cnt" =&gt; "foo", "mmt" =&gt; "bar"}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">%{"cnt" =&gt; "foo", "mmt" =&gt; "bar"}</span>
 </code></pre></div>
 <p>是标准 Map 对象.</p>
 <h2 id="try">try<a class="headerlink" href="#try" title="Permanent link">¶</a></h2>
@@ -238,13 +238,13 @@
 </blockquote>
 <p>所以:</p>
 <div class="highlight"><pre><span></span><code><span class="n">defp</span><span class="w"> </span><span class="n">echo_vars</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span><span class="w"> </span><span class="n">fields</span><span class="p">)</span><span class="w"> </span><span class="n">do</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Enum</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span><span class="w"> </span><span class="n">fn</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">IO</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"chk. as #{keys} ;-)"</span><span class="p">)</span><span class="w"></span>
-<span class="n">end</span><span class="w"></span>
+<span class="w">    </span><span class="n">Enum</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span><span class="w"> </span><span class="n">fn</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">IO</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="n">end</span><span class="p">)</span>
+<span class="w">    </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"chk. as #{keys} ;-)"</span><span class="p">)</span>
+<span class="n">end</span>
 </code></pre></div>
 <p>但是, 各种出错, 因为这时, 传入的 keys 是只有请求 Map 中的键;</p>
 <p>那么:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Enum</span><span class="p">.</span><span class="n">each</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">fn</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">IO</span><span class="p">.</span><span class="n">puts</span><span class="p">(</span><span class="nf">Map</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="kd">end)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">Enum</span><span class="p">.</span><span class="n">each</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">fn</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">IO</span><span class="p">.</span><span class="n">puts</span><span class="p">(</span><span class="nf">Map</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="kd">end)</span>
 </code></pre></div>
 <ul>
 <li>跳出 verified = params ... 的处理流水线;</li>
@@ -266,19 +266,19 @@
 <div class="highlight"><pre><span></span><code>iex(1)&gt; string_key_map = %{"foo" =&gt; "bar", "hello" =&gt; "world"}
 </code></pre></div>
 <p>%{"foo" =&gt; "bar", "hello" =&gt; "world"}</p>
-<div class="highlight"><pre><span></span><code><span class="n">iex</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">string_key_map</span><span class="p">,</span><span class="w"> </span><span class="n">into</span><span class="p">:</span><span class="w"> </span><span class="c">%{}, do: {String.to_atom(key), val}</span><span class="w"></span>
-<span class="c">%{foo: "bar", hello: "world"}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">iex</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">string_key_map</span><span class="p">,</span><span class="w"> </span><span class="n">into</span><span class="p">:</span><span class="w"> </span><span class="c">%{}, do: {String.to_atom(key), val}</span>
+<span class="c">%{foo: "bar", hello: "world"}</span>
 </code></pre></div>
 <p>虽说这是 Comprehensions 概念的通常使用,
 但是, 发现, for 这个操作, 和 Python 中的完全一致哪,
 于是:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">defp</span><span class="w"> </span><span class="n">echo_vars</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="w"> </span><span class="n">do</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="n">do</span><span class="w"></span>
-<span class="w">      </span><span class="c1">#IO.inspect(key)</span><span class="w"></span>
-<span class="w">      </span><span class="c1">#IO.inspect(val)</span><span class="w"></span>
-<span class="w">      </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"each -&gt; #{key}=&gt;#{val} ;-)"</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">end</span><span class="w"></span>
-<span class="w">  </span><span class="n">end</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">defp</span><span class="w"> </span><span class="n">echo_vars</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="w"> </span><span class="n">do</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="n">do</span>
+<span class="w">      </span><span class="c1">#IO.inspect(key)</span>
+<span class="w">      </span><span class="c1">#IO.inspect(val)</span>
+<span class="w">      </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"each -&gt; #{key}=&gt;#{val} ;-)"</span><span class="p">)</span>
+<span class="w">    </span><span class="n">end</span>
+<span class="w">  </span><span class="n">end</span>
 </code></pre></div>
 <p>简直和 Python 中解包行为完全一致...</p>
 <p>可是: <a href="https://learnxinyminutes.com/docs/zh-cn/elixir-cn/">Learn elixir in Y Minutes</a>

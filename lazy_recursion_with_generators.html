@@ -200,7 +200,7 @@
 一个很好的实例就是打印出文件夹中所有路径,
 就象 find 指令作的那样;
 这是我一个项目中相关代码:</p>
-<div class="highlight"><pre><span></span><code>$ find ./src
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>find<span class="w"> </span>./src
 ./src
 ./src/pylox
 ./src/pylox/tokens.py
@@ -236,19 +236,19 @@
 <p>让我们将这些指令转化为代码;
 将使用一个假设的文件结构进行检验;</p>
 <p>模拟以下树形结构:</p>
-<div class="highlight"><pre><span></span><code>$ tree /
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>tree<span class="w"> </span>/
 /
-├── etc
-│   ├── passwd
-│   └── shadow
-└── usr
-    ├── bin
-    │   ├── cat
-    │   └── ls
-    └── lib
-        ├── my_lib
-        └── gcc
-            └── x86_64-linux-gnu
+├──<span class="w"> </span>etc
+│<span class="w">   </span>├──<span class="w"> </span>passwd
+│<span class="w">   </span>└──<span class="w"> </span>shadow
+└──<span class="w"> </span>usr
+<span class="w">    </span>├──<span class="w"> </span>bin
+<span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>cat
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>ls
+<span class="w">    </span>└──<span class="w"> </span>lib
+<span class="w">        </span>├──<span class="w"> </span>my_lib
+<span class="w">        </span>└──<span class="w"> </span>gcc
+<span class="w">            </span>└──<span class="w"> </span>x86_64-linux-gnu
 </code></pre></div>
 <p>Python 代码的话:</p>
 <div class="highlight"><pre><span></span><code><span class="n">file_tree</span> <span class="o">=</span> <span class="p">[</span><span class="s1">''</span><span class="p">,</span> <span class="p">[</span>
@@ -279,7 +279,7 @@
 <span class="n">print_paths_recursive</span><span class="p">(</span><span class="n">file_tree</span><span class="p">)</span>
 </code></pre></div>
 <p>以及输出:</p>
-<div class="highlight"><pre><span></span><code>$ python find.py
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>find.py
 
 /etc
 /etc/passwd
@@ -292,7 +292,7 @@
 /usr/lib/my_lib
 /usr/lib/gcc
 /usr/lib/gcc/x86_64-linux-gnu
-Fairly straightforward.
+Fairly<span class="w"> </span>straightforward.
 </code></pre></div>
 <p>转折点来了:
 你会如何让这个函数返回所有路径呢?</p>
@@ -334,11 +334,11 @@ Fairly straightforward.
 <span class="nb">print</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span>
 </code></pre></div>
 <p>输出:</p>
-<div class="highlight"><pre><span></span><code>$ python find.py
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>find.py
 
-<span class="o">[</span><span class="s1">''</span>, <span class="s1">'/etc'</span>, <span class="s1">'/etc/passwd'</span>, <span class="s1">'/etc/shadow'</span>, <span class="s1">'/usr'</span>, <span class="s1">'/usr/bin'</span>,
-<span class="s1">'/usr/bin/cat'</span>, <span class="s1">'/usr/bin/ls'</span>, <span class="s1">'/usr/lib'</span>, <span class="s1">'/usr/lib/my_lib'</span>,
-<span class="s1">'/usr/lib/gcc'</span>, <span class="s1">'/usr/lib/gcc/x86_64-linux-gnu'</span><span class="o">]</span>
+<span class="o">[</span><span class="s1">''</span>,<span class="w"> </span><span class="s1">'/etc'</span>,<span class="w"> </span><span class="s1">'/etc/passwd'</span>,<span class="w"> </span><span class="s1">'/etc/shadow'</span>,<span class="w"> </span><span class="s1">'/usr'</span>,<span class="w"> </span><span class="s1">'/usr/bin'</span>,
+<span class="s1">'/usr/bin/cat'</span>,<span class="w"> </span><span class="s1">'/usr/bin/ls'</span>,<span class="w"> </span><span class="s1">'/usr/lib'</span>,<span class="w"> </span><span class="s1">'/usr/lib/my_lib'</span>,
+<span class="s1">'/usr/lib/gcc'</span>,<span class="w"> </span><span class="s1">'/usr/lib/gcc/x86_64-linux-gnu'</span><span class="o">]</span>
 </code></pre></div>
 <h3 id="_6">问题来了<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
 <blockquote>
@@ -415,13 +415,13 @@ Fairly straightforward.
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Doing things with </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">..."</span><span class="p">)</span>
 </code></pre></div>
 <p>你可以看到执行是如何在 gen() 和 for 循环间来回进行的:</p>
-<div class="highlight"><pre><span></span><code>$ py a.py
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>py<span class="w"> </span>a.py
 Start!
-Doing things with <span class="m">1</span>...
-Now we<span class="err">'</span>re calculating stuff <span class="k">in</span> gen<span class="o">()</span>
-Doing things with <span class="m">45</span>...
-Last value!
-Doing things with <span class="m">42</span>...
+Doing<span class="w"> </span>things<span class="w"> </span>with<span class="w"> </span><span class="m">1</span>...
+Now<span class="w"> </span>we<span class="err">'</span>re<span class="w"> </span>calculating<span class="w"> </span>stuff<span class="w"> </span><span class="k">in</span><span class="w"> </span>gen<span class="o">()</span>
+Doing<span class="w"> </span>things<span class="w"> </span>with<span class="w"> </span><span class="m">45</span>...
+Last<span class="w"> </span>value!
+Doing<span class="w"> </span>things<span class="w"> </span>with<span class="w"> </span><span class="m">42</span>...
 Done.
 </code></pre></div>
 <p>这正是我们在本例中需要的:
@@ -442,9 +442,9 @@ Done.
 </code></pre></div>
 <p>现在, 最好的部分来了,
 我们可以创建原始用例, 打印和储存列表都很容易:</p>
-<div class="highlight"><pre><span></span><code>$ python -i find.py
-&gt;&gt;&gt; <span class="k">for</span> path <span class="k">in</span> get_paths_generator<span class="o">(</span>file_tree<span class="o">)</span>:
-...     print<span class="o">(</span>path<span class="o">)</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>-i<span class="w"> </span>find.py
+&gt;&gt;&gt;<span class="w"> </span><span class="k">for</span><span class="w"> </span>path<span class="w"> </span><span class="k">in</span><span class="w"> </span>get_paths_generator<span class="o">(</span>file_tree<span class="o">)</span>:
+...<span class="w">     </span>print<span class="o">(</span>path<span class="o">)</span>
 
 /etc
 /etc/passwd
@@ -458,10 +458,10 @@ Done.
 /usr/lib/gcc
 /usr/lib/gcc/x86_64-linux-gnu
 
-&gt;&gt;&gt; list<span class="o">(</span>get_paths_generator<span class="o">(</span>file_tree<span class="o">))</span>
-<span class="o">[</span><span class="s1">''</span>, <span class="s1">'/etc'</span>, <span class="s1">'/etc/passwd'</span>, <span class="s1">'/etc/shadow'</span>, <span class="s1">'/usr'</span>, <span class="s1">'/usr/bin'</span>,
-<span class="s1">'/usr/bin/cat'</span>, <span class="s1">'/usr/bin/ls'</span>, <span class="s1">'/usr/lib'</span>, <span class="s1">'/usr/lib/my_lib'</span>,
-<span class="s1">'/usr/lib/gcc'</span>, <span class="s1">'/usr/lib/gcc/x86_64-linux-gnu'</span><span class="o">]</span>
+&gt;&gt;&gt;<span class="w"> </span>list<span class="o">(</span>get_paths_generator<span class="o">(</span>file_tree<span class="o">))</span>
+<span class="o">[</span><span class="s1">''</span>,<span class="w"> </span><span class="s1">'/etc'</span>,<span class="w"> </span><span class="s1">'/etc/passwd'</span>,<span class="w"> </span><span class="s1">'/etc/shadow'</span>,<span class="w"> </span><span class="s1">'/usr'</span>,<span class="w"> </span><span class="s1">'/usr/bin'</span>,
+<span class="s1">'/usr/bin/cat'</span>,<span class="w"> </span><span class="s1">'/usr/bin/ls'</span>,<span class="w"> </span><span class="s1">'/usr/lib'</span>,<span class="w"> </span><span class="s1">'/usr/lib/my_lib'</span>,
+<span class="s1">'/usr/lib/gcc'</span>,<span class="w"> </span><span class="s1">'/usr/lib/gcc/x86_64-linux-gnu'</span><span class="o">]</span>
 </code></pre></div>
 <p>这种解决方案要灵活的多,
 并且, 永远不会像原先方案那样出现急切求值问题;</p>

@@ -222,9 +222,9 @@ still believe that the earth is flat and make all kinds of theories to prove it.
 </code></pre></div>
 <p>You send a message ifTrue: to a Boolean object, passing as an argument a block of code to be executed if and only if the Boolean receiver is true.</p>
 <p>First of all, if you really have a well-designed language, you shouldn't be wanting to define your own control structures. As a seasoned Lisp/Scheme programmer, I have seen many custom-designed control structures (such as the various looping macros) over the years, but none of them turned out to be good ideas. I'd rather write slightly longer and more verbose code in the vanilla language than to learn those weird control structures. Second, if you are really genius enough to have invented another good control structure, the late binding feature of Smalltalk probably won't provide you the necessary power for defining it. The power of functions as an abstraction tool is limited. It is strictly less powerful than Lisp/Scheme's macros. Third, this feature of Smalltalk is not really a novel approach and it has a big problem. A similar but more beautiful conditional construct had been defined in lambda calculus since before computer science was born:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">TRUE</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λx.λy.x</span><span class="w"></span>
-<span class="nv">FALSE</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λx.λy.y</span><span class="w"></span>
-<span class="nv">IF</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λb.λt.λf.b</span><span class="w"> </span><span class="no">t</span><span class="w"> </span><span class="nv">f</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nv">TRUE</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λx.λy.x</span>
+<span class="nv">FALSE</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λx.λy.y</span>
+<span class="nv">IF</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λb.λt.λf.b</span><span class="w"> </span><span class="no">t</span><span class="w"> </span><span class="nv">f</span>
 </code></pre></div>
 <p>This is very beautiful and can be done in any functional language, but why none of the functional languages implement conditionals this way? Because when you see an expression IF b t f, you will have no idea whether it is a conditional or not, because IF can be redefined in the program. Also because IF is just a function, it may also accept unexpected values other than TRUE or FALSE. This may happen to make the conditional construct work but cause trouble later on. This is called "unintentional semantics". This kind of bug can be very hard to track down.</p>
 <p>This approach also makes compiler and static analysis hard. When the compiler sees IF b t f, it no longer knows that it is a conditional and thus optimize it that way. It has to treat it as a usual function call. Similarly when the type checker sees it, it doesn't know what type to expect for b, because it may not be a conditional at all. The above argument against the lambda calculus can easily be adapted to Smalltalk.</p>
@@ -442,9 +442,9 @@ Smalltalk 的延迟绑定功能,也难以提供足够的能力来定义它.
 <p>第三,Smalltalk 这一特性并不是新东西,而且包含了一个重大问题.
 类似的但更加优美的控制结构,
 在计算机科学诞生前就已经由 lambda演算科学定义出来了:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">TRUE</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λx.λy.x</span><span class="w"></span>
-<span class="nv">FALSE</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λx.λy.y</span><span class="w"></span>
-<span class="nv">IF</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λb.λt.λf.b</span><span class="w"> </span><span class="no">t</span><span class="w"> </span><span class="nv">f</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nv">TRUE</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λx.λy.x</span>
+<span class="nv">FALSE</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λx.λy.y</span>
+<span class="nv">IF</span><span class="w"> </span><span class="nb">=</span><span class="w"> </span><span class="nv">λb.λt.λf.b</span><span class="w"> </span><span class="no">t</span><span class="w"> </span><span class="nv">f</span>
 </code></pre></div>
 <p>这是非常漂亮的,可以用任何语言实现的,
 但是为毛没有任何一个函式语言以这种方式来实现条件语句?

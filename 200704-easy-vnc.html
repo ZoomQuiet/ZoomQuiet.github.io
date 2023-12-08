@@ -202,26 +202,26 @@
 <p>回归 FLOSS 社区内置方案吧...</p>
 </blockquote>
 <p>安装标准 vnc 服务:</p>
-<div class="highlight"><pre><span></span><code>$ sudo apt install vnc4server xfce4 xfce4-goodies
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vnc4server<span class="w"> </span>xfce4<span class="w"> </span>xfce4-goodies
 </code></pre></div>
 <p>配置访问口令:</p>
-<div class="highlight"><pre><span></span><code>$ vncpasswd
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>vncpasswd
 </code></pre></div>
 <p>指定启动桌面 ~/.vnc/xstartup :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
-startxfce4 <span class="p">&amp;</span>
+startxfce4<span class="w"> </span><span class="p">&amp;</span>
 </code></pre></div></td></tr></table></div>
 <p>并启用配置:</p>
-<div class="highlight"><pre><span></span><code>$ chmod +x ~/.vnc/xstartup
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>~/.vnc/xstartup
 </code></pre></div>
 <p>启动服务:</p>
-<div class="highlight"><pre><span></span><code>$ vnc4server
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>vnc4server
 </code></pre></div>
 <p>检验状态:</p>
-<div class="highlight"><pre><span></span><code>$ ss -ltn
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ss<span class="w"> </span>-ltn
 ...
-LISTEN      <span class="m">0</span>      <span class="m">5</span>            *:5901                     *:*
+LISTEN<span class="w">      </span><span class="m">0</span><span class="w">      </span><span class="m">5</span><span class="w">            </span>*:5901<span class="w">                     </span>*:*
 </code></pre></div>
 <blockquote>
 <p>注意: 如果有防火墙的话, 要打开 5901 的访问</p>

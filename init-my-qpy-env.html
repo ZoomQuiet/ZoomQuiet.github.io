@@ -336,9 +336,9 @@
 <div class="highlight"><pre><span></span><code><span class="c1"># cd /storage/sdcard0/com.hipipal.qpyplus/projects/chaos/ </span>
 <span class="c1"># /data/data/com.hipipal.qpyplus/files/bin/python hollo.py</span>
 
-Could not find platform independent libraries &lt;prefix&gt;
-Consider setting <span class="nv">$PYTHONHOME</span> to &lt;prefix&gt;<span class="o">[</span>:&lt;exec_prefix&gt;<span class="o">]</span>
-ImportError: No module named site
+Could<span class="w"> </span>not<span class="w"> </span>find<span class="w"> </span>platform<span class="w"> </span>independent<span class="w"> </span>libraries<span class="w"> </span>&lt;prefix&gt;
+Consider<span class="w"> </span>setting<span class="w"> </span><span class="nv">$PYTHONHOME</span><span class="w"> </span>to<span class="w"> </span>&lt;prefix&gt;<span class="o">[</span>:&lt;exec_prefix&gt;<span class="o">]</span>
+ImportError:<span class="w"> </span>No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span>site
 </code></pre></div>
 <p>果断没有那么简单, 检查一下系统环境:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">_</span><span class="o">=</span>/system/xbin/env
@@ -355,7 +355,7 @@ ImportError: No module named site
 <span class="nv">SHELL</span><span class="o">=</span>/system/bin/sh
 <span class="nv">TERM</span><span class="o">=</span>vt100
 <span class="nv">SSH_TTY</span><span class="o">=</span>/dev/pts/1
-<span class="nv">SSH_CONNECTION</span><span class="o">=</span>::ffff:192.168.0.103 <span class="m">64228</span> ::ffff:192.168.0.100 <span class="m">22</span>
+<span class="nv">SSH_CONNECTION</span><span class="o">=</span>::ffff:192.168.0.103<span class="w"> </span><span class="m">64228</span><span class="w"> </span>::ffff:192.168.0.100<span class="w"> </span><span class="m">22</span>
 <span class="nv">HOME</span><span class="o">=</span>/data/data/berserker.android.apps.sshdroid/home
 <span class="nv">ANDROID_BOOTLOGO</span><span class="o">=</span><span class="m">1</span>
 </code></pre></div>
@@ -396,13 +396,13 @@ ImportError: No module named site
 <p>作者看俺这么努力的折腾从内部机密放送俺最新开发版本,兴奋的安装上:</p>
 <p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-new-version.jpg"/></p>
 <p>然后,再运行...</p>
-<div class="highlight"><pre><span></span><code>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-  File <span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/projects/chaos/hollo.py"</span>, line <span class="m">3</span>, <span class="k">in</span> &lt;module&gt;
-    <span class="nv">droid</span> <span class="o">=</span> androidhelper.Android<span class="o">()</span>
-  File <span class="s2">"tubelib/sl4a.py"</span>, line <span class="m">34</span>, <span class="k">in</span> __init__
-    self.conn <span class="o">=</span> socket.create_connection<span class="o">(</span>addr<span class="o">)</span>
-  File <span class="s2">"/home/river/android-sdk/workplace/python-for-android/build/python-install/lib/python2.7/socket.py"</span>, line <span class="m">571</span>, <span class="k">in</span> create_connection
-socket.error: <span class="o">[</span>Errno <span class="m">111</span><span class="o">]</span> Connection refused
+<div class="highlight"><pre><span></span><code>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/projects/chaos/hollo.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">    </span><span class="nv">droid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>androidhelper.Android<span class="o">()</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"tubelib/sl4a.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">34</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>__init__
+<span class="w">    </span>self.conn<span class="w"> </span><span class="o">=</span><span class="w"> </span>socket.create_connection<span class="o">(</span>addr<span class="o">)</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/home/river/android-sdk/workplace/python-for-android/build/python-install/lib/python2.7/socket.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">571</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>create_connection
+socket.error:<span class="w"> </span><span class="o">[</span>Errno<span class="w"> </span><span class="m">111</span><span class="o">]</span><span class="w"> </span>Connection<span class="w"> </span>refused
 </code></pre></div>
 <p><code>/home/river/android-sdk/workplace</code> 囧rz...</p>
 <p>什么东西?! 怎么超出来原作的本地目录了?!</p>
@@ -476,25 +476,25 @@ without android titlebar (fullscreen)
 - 每次都要全部清除,或是人工清除?
 - 不用这么 Naive ,参考:<a href="http://floss.qiniudn.com/data/20130327153058/index.html">SSH Warning: the RSA host key for differs from the key for the IP address - zhangp专栏</a></p>
 <p>一行解决:</p>
-<div class="highlight"><pre><span></span><code>$ sed -i -e <span class="s1">'36d'</span> ~/.ssh/known_hosts
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span>-e<span class="w"> </span><span class="s1">'36d'</span><span class="w"> </span>~/.ssh/known_hosts
 </code></pre></div>
 <h4 id="fabric"><a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation">Fabric</a><a class="headerlink" href="#fabric" title="Permanent link">¶</a></h4>
 <p>非 <code>C/S</code> 结构的脚本化自动部署工具!</p>
 <p>嘦在本地安装好<a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation">Fabric</a>
 再在本地工程目录中放一个 <code>fabfile.py</code>, 就可以:</p>
-<div class="highlight"><pre><span></span><code>$ fab ?
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>fab<span class="w"> </span>?
 
-Warning: Command<span class="o">(</span>s<span class="o">)</span> not found:
-    ?
+Warning:<span class="w"> </span>Command<span class="o">(</span>s<span class="o">)</span><span class="w"> </span>not<span class="w"> </span>found:
+<span class="w">    </span>?
 
-Available commands:
+Available<span class="w"> </span>commands:
 
-    env         print Android sys. env
-    genenv      gen qpy need env into: /storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profile
-    pushproj    scp all .py into Android QPython projects dir
-    qpy         main develop tools, auto upload and running <span class="k">in</span> Android
-    qpy_run_it  fab qpy_run_it:script<span class="o">=</span>MY.py
-    uname       print Android sys. info.
+<span class="w">    </span>env<span class="w">         </span>print<span class="w"> </span>Android<span class="w"> </span>sys.<span class="w"> </span>env
+<span class="w">    </span>genenv<span class="w">      </span>gen<span class="w"> </span>qpy<span class="w"> </span>need<span class="w"> </span>env<span class="w"> </span>into:<span class="w"> </span>/storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profile
+<span class="w">    </span>pushproj<span class="w">    </span>scp<span class="w"> </span>all<span class="w"> </span>.py<span class="w"> </span>into<span class="w"> </span>Android<span class="w"> </span>QPython<span class="w"> </span>projects<span class="w"> </span>dir
+<span class="w">    </span>qpy<span class="w">         </span>main<span class="w"> </span>develop<span class="w"> </span>tools,<span class="w"> </span>auto<span class="w"> </span>upload<span class="w"> </span>and<span class="w"> </span>running<span class="w"> </span><span class="k">in</span><span class="w"> </span>Android
+<span class="w">    </span>qpy_run_it<span class="w">  </span>fab<span class="w"> </span>qpy_run_it:script<span class="o">=</span>MY.py
+<span class="w">    </span>uname<span class="w">       </span>print<span class="w"> </span>Android<span class="w"> </span>sys.<span class="w"> </span>info.
 </code></pre></div>
 <p>日常,无论折腾多少个项目,都可以统一部署此脚本到目录中,
 <a href="https://gist.github.com/ZoomQuiet/8645207">Fabric for QPython auto upload/running script/collect log etc... from local through SSH</a></p>
@@ -523,30 +523,30 @@ Available commands:
 <a href="https://gist.github.com/ZoomQuiet/8645207">fabfile.py</a>
 脚本,但是涉及的工具还是很多的,
 所以, 整体上,最终可用的组合关系是:</p>
-<div class="highlight"><pre><span></span><code><span class="k">[[Android in mobile]]</span><span class="w"></span>
-<span class="w">    </span><span class="na">+- /etc/profile -&gt; ln -s</span><span class="w"></span>
-<span class="w">    </span><span class="na">|                  V</span><span class="w"></span>
-<span class="w">    </span><span class="na">|                  V</span><span class="w"></span>
-<span class="w">    </span><span class="na">|    /storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profil</span><span class="w"></span>
-<span class="w">    </span><span class="na">|                  ^</span><span class="w"></span>
-<span class="w">    </span><span class="na">|                  ^</span><span class="w"></span>
-<span class="w">    </span><span class="na">+- QPython -&gt; gen_qpy_env.py</span><span class="w"></span>
-<span class="w">    </span><span class="na">|    .../projects/MyProject</span><span class="w"></span>
-<span class="w">    </span><span class="na">|             ^</span><span class="w"></span>
-<span class="w">    </span><span class="na">|             ^</span><span class="w"></span>
-<span class="w">    </span><span class="na">|             ^</span><span class="w"></span>
-<span class="w">    </span><span class="na">`- SSHDriod + id_rsa.pub</span><span class="w"></span>
-<span class="w">              </span><span class="na">^</span><span class="w"></span>
-<span class="w">              </span><span class="na">^   scp,and run()</span><span class="w"></span>
-<span class="w">              </span><span class="na">^</span><span class="w"></span>
-<span class="w">        </span><span class="na">/-&gt; base fabfile.py</span><span class="w"></span>
-<span class="w">        </span><span class="na">|</span><span class="w"></span>
-<span class="w">    </span><span class="na">+- Fabric</span><span class="w"></span>
-<span class="w">    </span><span class="na">+- pip</span><span class="w"></span>
-<span class="w">    </span><span class="na">+- Python</span><span class="w"></span>
-<span class="w">    </span><span class="na">|</span><span class="w"></span>
-<span class="k">[[MBP in local]]</span><span class="w"></span>
-<span class="na">all in same wifi net domain</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">[[Android in mobile]]</span>
+<span class="w">    </span><span class="na">+- /etc/profile -&gt; ln -s</span>
+<span class="w">    </span><span class="na">|                  V</span>
+<span class="w">    </span><span class="na">|                  V</span>
+<span class="w">    </span><span class="na">|    /storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profil</span>
+<span class="w">    </span><span class="na">|                  ^</span>
+<span class="w">    </span><span class="na">|                  ^</span>
+<span class="w">    </span><span class="na">+- QPython -&gt; gen_qpy_env.py</span>
+<span class="w">    </span><span class="na">|    .../projects/MyProject</span>
+<span class="w">    </span><span class="na">|             ^</span>
+<span class="w">    </span><span class="na">|             ^</span>
+<span class="w">    </span><span class="na">|             ^</span>
+<span class="w">    </span><span class="na">`- SSHDriod + id_rsa.pub</span>
+<span class="w">              </span><span class="na">^</span>
+<span class="w">              </span><span class="na">^   scp,and run()</span>
+<span class="w">              </span><span class="na">^</span>
+<span class="w">        </span><span class="na">/-&gt; base fabfile.py</span>
+<span class="w">        </span><span class="na">|</span>
+<span class="w">    </span><span class="na">+- Fabric</span>
+<span class="w">    </span><span class="na">+- pip</span>
+<span class="w">    </span><span class="na">+- Python</span>
+<span class="w">    </span><span class="na">|</span>
+<span class="k">[[MBP in local]]</span>
+<span class="na">all in same wifi net domain</span>
 </code></pre></div>
 <h3 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">¶</a></h3>
 <p>然后, 有个比较顺心的 QPython 折腾环境了,
@@ -555,26 +555,26 @@ Available commands:
 <p>没有 pip 的世界是艰难的世界,所以,,,</p>
 <p><a href="http://www.pip-installer.org/en/latest/installing.html">Installation — pip 1.5.2 documentation</a></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># python get-pip.py</span>
-Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-  File <span class="s2">"get-pip.py"</span>, line <span class="m">21343</span>, <span class="k">in</span> &lt;module&gt;
-    import bz2
-ImportError: No module named bz2
+Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"get-pip.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">21343</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">    </span>import<span class="w"> </span>bz2
+ImportError:<span class="w"> </span>No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span>bz2
 </code></pre></div>
 <p>那么回到老方式, <code>setuptools-&gt;easy_install pip-&gt;pip</code>
 <a href="https://pypi.python.org/pypi/setuptools#installation-instructions">setuptools 2.1 : Python Package Index</a></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># python ez_setup.py</span>
-Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-2.1.tar.gz
-Extracting <span class="k">in</span> /storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8
-Now working <span class="k">in</span> /storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1
-Installing Setuptools
-Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-  File <span class="s2">"setup.py"</span>, line <span class="m">28</span>, <span class="k">in</span> &lt;module&gt;
-    from setuptools.command.test import <span class="nb">test</span> as _test
-  File <span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1/setuptools/command/test.py"</span>, line <span class="m">6</span>, <span class="k">in</span> &lt;module&gt;
-    from unittest import TestLoader, main
-ImportError: No module named unittest
-Something went wrong during the installation.
-See the error message above.
+Downloading<span class="w"> </span>https://pypi.python.org/packages/source/s/setuptools/setuptools-2.1.tar.gz
+Extracting<span class="w"> </span><span class="k">in</span><span class="w"> </span>/storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8
+Now<span class="w"> </span>working<span class="w"> </span><span class="k">in</span><span class="w"> </span>/storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1
+Installing<span class="w"> </span>Setuptools
+Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"setup.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">28</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">    </span>from<span class="w"> </span>setuptools.command.test<span class="w"> </span>import<span class="w"> </span><span class="nb">test</span><span class="w"> </span>as<span class="w"> </span>_test
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1/setuptools/command/test.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">    </span>from<span class="w"> </span>unittest<span class="w"> </span>import<span class="w"> </span>TestLoader,<span class="w"> </span>main
+ImportError:<span class="w"> </span>No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span>unittest
+Something<span class="w"> </span>went<span class="w"> </span>wrong<span class="w"> </span>during<span class="w"> </span>the<span class="w"> </span>installation.
+See<span class="w"> </span>the<span class="w"> </span>error<span class="w"> </span>message<span class="w"> </span>above.
 </code></pre></div>
 <p>好吧,只能先放下了, 
 但是,没有 pip 怎么安装上 <a href="http://mercurial.selenic.com/">Mercurial</a> 呢?</p>
@@ -615,10 +615,10 @@ See the error message above.
 <p>哈哈! 一切如愿!</p>
 <h2 id="_11">专题体例:<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
 <p>QPy 的大妈们曰了:  每个专题应该包括 </p>
-<div class="highlight"><pre><span></span><code><span class="nv">Introduction</span>, 
-<span class="nv">getting</span> <span class="nv">start</span><span class="ss">(</span><span class="k">include</span> <span class="nv">sample</span> <span class="nv">better</span><span class="ss">)</span>, 
-<span class="nv">packages</span>, 
-<span class="nv">videos</span> <span class="ss">(</span><span class="nv">searched</span> <span class="nb">result</span> <span class="nv">from</span> <span class="nv">youtube</span> <span class="nv">or</span> <span class="nv">directly</span> <span class="nv">video</span> <span class="nv">link</span> <span class="ss">)</span>
+<div class="highlight"><pre><span></span><code><span class="nx">Introduction</span><span class="p">,</span><span class="w"> </span>
+<span class="nx">getting</span><span class="w"> </span><span class="nx">start</span><span class="p">(</span><span class="nx">include</span><span class="w"> </span><span class="nx">sample</span><span class="w"> </span><span class="nx">better</span><span class="p">),</span><span class="w"> </span>
+<span class="nx">packages</span><span class="p">,</span><span class="w"> </span>
+<span class="nx">videos</span><span class="w"> </span><span class="p">(</span><span class="nx">searched</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">youtube</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">directly</span><span class="w"> </span><span class="nx">video</span><span class="w"> </span><span class="nx">link</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <p>好吧,慢慢来,,,下次专注 Bottle 结合 QPython 实现可用随身小工具.</p>
 <h2 id="_12">时间帐单:<a class="headerlink" href="#_12" title="Permanent link">¶</a></h2>

@@ -149,7 +149,7 @@ Nick Coghlan
 <p>While many of the issues they encountered were inherent in the complexity of teaching programming, a few seemed like things that could be avoided.</p>
 <h2 id="getting-floating-point-results-from-integer-division">Getting floating point results from integer division<a class="headerlink" href="#getting-floating-point-results-from-integer-division" title="Permanent link">¶</a></h2>
 <p>In Python 2, integer division copies C in truncating the answer by default:</p>
-<div class="highlight"><pre><span></span><code>$ python -c <span class="s2">"print(3/4)"</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"print(3/4)"</span>
 <span class="m">0</span>
 </code></pre></div>
 <p>Promoting to floating point requires type coercion, a command line flag or a future import:</p>
@@ -161,37 +161,37 @@ Nick Coghlan
 <span class="mf">0.75</span>
 </code></pre></div>
 <p>Python 3 just does the right thing by default, so one way to avoid the problem entirely is to teach Python 3 instead of Python 2:</p>
-<div class="highlight"><pre><span></span><code>$ python3 -c <span class="s2">"print(3/4)"</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">"print(3/4)"</span>
 <span class="m">0</span>.75
 </code></pre></div>
 <p>(In both Python 2 and 3, the <code>//</code> floor division operator explicitly requests truncating division when it is desired)</p>
 <h2 id="common-python-23-syntax-for-printing-values">Common Python 2/3 syntax for printing values<a class="headerlink" href="#common-python-23-syntax-for-printing-values" title="Permanent link">¶</a></h2>
 <p>I've been using Python 2 and 3 in parallel for more than 8 years now (while Python 3.0 was released in 2008, the project started in earnest a couple of years earlier than that, while Python 2.5 was still in development).</p>
 <p>One essential trick I have learned in order to make regularly switching back and forth feasible is to limit myself to the common print syntax that works the same in both versions: passing a single argument surrounded by parentheses.</p>
-<div class="highlight"><pre><span></span><code>$ python -c <span class="s1">'print("Hello world!")'</span>
-Hello world!
-$ python3 -c <span class="s1">'print("Hello world!")'</span>
-Hello world!
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">'print("Hello world!")'</span>
+Hello<span class="w"> </span>world!
+$<span class="w"> </span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">'print("Hello world!")'</span>
+Hello<span class="w"> </span>world!
 </code></pre></div>
 <p>If I need to pass multiple arguments, I'll use string formatting, rather than the implicit concatenation feature.</p>
-<div class="highlight"><pre><span></span><code>$ python -c <span class="s1">'print("{} {}{}".format("Hello", "world", "!"))'</span>
-Hello world!
-$ python3 -c <span class="s1">'print("{} {}{}".format("Hello", "world", "!"))'</span>
-Hello world!
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">'print("{} {}{}".format("Hello", "world", "!"))'</span>
+Hello<span class="w"> </span>world!
+$<span class="w"> </span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">'print("{} {}{}".format("Hello", "world", "!"))'</span>
+Hello<span class="w"> </span>world!
 </code></pre></div>
 <p>Rather than doing this, the Software Carpentry material that was used at the bootcamp I attended used the legacy Python 2 only <code>print</code> syntax extensively, causing examples that otherwise would have worked fine in either version to fail for students that happened to be running Python 3. Adopting the shared syntax for printing values could be enough to make the course largely version independent.</p>
 <h2 id="distinguishing-between-returning-and-printing-values">Distinguishing between returning and printing values<a class="headerlink" href="#distinguishing-between-returning-and-printing-values" title="Permanent link">¶</a></h2>
 <p>One problem noted both at the bootcamp and by presenters at PyCon Australia was the challenge of teaching students the difference between printing and returning values. The problem is the "Print" part of the Read-Eval-Print-Loop provided by Python's interactive interpreter:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">def</span> <span class="nv">print_arg</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; def print_arg(x):
+<span class="k">...</span>     print(x)
 ...
-<span class="o">&gt;&gt;&gt;</span> <span class="nv">def</span> <span class="nv">return_arg</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>:
-...     <span class="k">return</span> <span class="nv">x</span>
+&gt;&gt;&gt; def return_arg(x):
+<span class="k">...</span>     return x
 ...
-<span class="o">&gt;&gt;&gt;</span> <span class="nv">print_arg</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>
-<span class="mi">10</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nv">return_arg</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>
-<span class="mi">10</span>
+&gt;&gt;&gt; print_arg(10)
+10
+&gt;&gt;&gt; return_arg(10)
+10
 </code></pre></div>
 <p>There's no obvious difference in output at the interactive prompt, especially for types like numbers where the results of <code>str</code> and <code>repr</code> are the same. Even when they're different, those differences may not be obvious to a student:</p>
 <div class="highlight"><pre><span></span><code>&gt;&gt;&gt; print_arg("Hello world")
@@ -223,8 +223,8 @@ In [2]: 10
 Out[2]: 10
 </code></pre></div>
 <p>Secondly, it has an optional "autocall" feature that allows a user to tell IPython to automatically add the missing parentheses to a function call if the user leaves them out:</p>
-<div class="highlight"><pre><span></span><code>$ ipython3 --autocall<span class="o">=</span><span class="m">1</span> -c <span class="s2">"print 10"</span>
--&gt; print<span class="o">(</span><span class="m">10</span><span class="o">)</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ipython3<span class="w"> </span>--autocall<span class="o">=</span><span class="m">1</span><span class="w"> </span>-c<span class="w"> </span><span class="s2">"print 10"</span>
+-&gt;<span class="w"> </span>print<span class="o">(</span><span class="m">10</span><span class="o">)</span>
 <span class="m">10</span>
 </code></pre></div>
 <p>This is a general purpose feature that allows users to make their IPython sessions behave more like languages that don't have first class functions (most notably, IPython's autocall feature closely resembles MATLAB's "command syntax" notation for calling functions).</p>

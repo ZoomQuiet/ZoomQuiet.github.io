@@ -197,16 +197,16 @@ MAC OS X 环境推荐安装 epd_free-7.3-2-macosx-i386.dmg
 </ul>
 <p>果断下载,安装...</p>
 <p>各种不对味儿,原来自动在 <code>~/.bash_profile</code></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Setting PATH for EPD_free-7.3-2</span><span class="w"></span>
-<span class="c1"># The orginal version is saved in .bash_profile.pysave</span><span class="w"></span>
-<span class="n">PATH</span><span class="o">=</span><span class="s2">"/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"</span><span class="w"></span>
-<span class="k">export</span><span class="w"> </span><span class="n">PATH</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Setting PATH for EPD_free-7.3-2</span>
+<span class="c1"># The orginal version is saved in .bash_profile.pysave</span>
+<span class="n">PATH</span><span class="o">=</span><span class="s2">"/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"</span>
+<span class="k">export</span><span class="w"> </span><span class="n">PATH</span>
 </code></pre></div>
 <p>而且是按照系统框架来安装到 <code>/Library/Frameworks/Python.framework</code> 的
 可是, Mavericks 以后,没有默认Python 了哪,俺已经同时用 <code>brew</code> 管理系统 Python,
 <code>pyenv</code> 管理开发 Python ,先不说体积:</p>
-<div class="highlight"><pre><span></span><code>$ du -hs /Library/Frameworks/Python.framework/Versions
-425M    /Library/Frameworks/Python.framework/Versions
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>du<span class="w"> </span>-hs<span class="w"> </span>/Library/Frameworks/Python.framework/Versions
+425M<span class="w">    </span>/Library/Frameworks/Python.framework/Versions
 </code></pre></div>
 <p>居然第一个案例就跑不起来!</p>
 <p><code>import pandas</code> 有报错...</p>
@@ -216,15 +216,15 @@ MAC OS X 环境推荐安装 epd_free-7.3-2-macosx-i386.dmg
 体积也从 74M 爆涨为 <code>235Mb</code></p>
 <p>不过,是一派标准的 MAC 软件包了,非常流畅,也有GUI 的引导界面,</p>
 <p>然后 <code>~/.bash_profile</code> 追加的是:</p>
-<div class="highlight"><pre><span></span><code># <span class="nv">Added</span> <span class="nv">by</span> <span class="nv">Canopy</span> <span class="nv">installer</span> <span class="nv">on</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">03</span>
-# <span class="nv">VIRTUAL_ENV_DISABLE_PROMPT</span> <span class="nv">can</span> <span class="nv">be</span> <span class="nv">set</span> <span class="nv">to</span> <span class="s1">''</span> <span class="nv">to</span> <span class="nv">make</span> <span class="nv">bashprompt</span> <span class="k">show</span> <span class="nv">that</span> <span class="nv">Canopy</span> <span class="nv">is</span> <span class="nv">active</span>, <span class="nv">otherwise</span> <span class="mi">1</span>
-<span class="nv">VIRTUAL_ENV_DISABLE_PROMPT</span><span class="o">=</span><span class="mi">1</span> <span class="nv">source</span> \ 
-<span class="o">/</span><span class="nv">Users</span><span class="o">/</span><span class="nv">zoomq</span><span class="o">/</span><span class="nv">Library</span><span class="o">/</span><span class="nv">Enthought</span><span class="o">/</span><span class="nv">Canopy_64bit</span><span class="o">/</span><span class="nv">User</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">activate</span>
+<div class="highlight"><pre><span></span><code><span class="gh">#</span> Added by Canopy installer on 2014-06-03
+<span class="gh">#</span> VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
+VIRTUAL_ENV_DISABLE_PROMPT=1 source \ 
+/Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate
 </code></pre></div>
 <p>那就简单了,使用标准的 <code>VirtualEnv</code> 来包装的话,就不用将系统Python 环境永久性的迁移为
 <code>Canopy</code> 的了,</p>
 <p>简单的 在 <code>~/.bashrc</code> 定义一个别称:</p>
-<div class="highlight"><pre><span></span><code># Added by Canopy installer on 2014-06-03
+<div class="highlight"><pre><span></span><code><span class="gh">#</span> Added by Canopy installer on 2014-06-03
 alias canopy="source \
 /Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate"
 </code></pre></div>

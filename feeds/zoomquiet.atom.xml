@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- ZoomQuiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2024-01-24T16:45:51+08:00</updated><entry><title>程序猿AIGC"工具包"</title><link href="https://blog.zoomquiet.io/240123-aigc-x-zhuhai-toolkit4developer.html" rel="alternate"></link><published>2024-01-23T19:42:00+08:00</published><updated>2024-01-24T16:45:51+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2024-01-23:/240123-aigc-x-zhuhai-toolkit4developer.html</id><summary type="html">&lt;p&gt;Pythonic/ 通用AI辅助心法&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- ZoomQuiet</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/zoomquiet.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2024-01-24T16:58:00+08:00</updated><entry><title>程序猿AIGC"工具包"</title><link href="https://blog.zoomquiet.io/240123-aigc-x-zhuhai-toolkit4developer.html" rel="alternate"></link><published>2024-01-23T19:42:00+08:00</published><updated>2024-01-24T16:58:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2024-01-23:/240123-aigc-x-zhuhai-toolkit4developer.html</id><summary type="html">&lt;p&gt;Pythonic/ 通用AI辅助心法&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;作为 AIGCx珠海 创始人, 经常要回应联盟倡议, 完成各种串联任务;&lt;/p&gt;
 &lt;p&gt;这不来了一个: &lt;code&gt;🎃程序员AIGC工具包编写&lt;/code&gt;&lt;/p&gt;
@@ -739,6 +739,9 @@ HTTP ERROR 403&lt;/li&gt;
 &lt;p&gt;至此, 其实一个随时查询指定城市天气的 MVP 工具已经开发完成, 只是要允许外网可以访问, 这已经不是开发问题, 而是发布和运维问题了...在直播视频中进行了另外的尝试, 已经超出 AIGC 辅助开发的话题, 就此打住&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="serveo" src="https://ipic.zoomquiet.top/2024-01-24-zshot%202024-01-23%2020.44.10.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;直播视频中, 是跳到了 HK 的主机中, 重新运行工程,
+就可以访问对应服务了...&lt;/p&gt;
 &lt;h2 id="summary"&gt;summary&lt;a class="headerlink" href="#summary" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;最小最实用 🎃程序员AIGC工具包&lt;/p&gt;

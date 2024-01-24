@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/index.html</loc>
-<lastmod>2024-01-24T16:52:16-00:00</lastmod>
+<lastmod>2024-01-24T16:58:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/archives.html</loc>
-<lastmod>2024-01-24T16:52:16-00:00</lastmod>
+<lastmod>2024-01-24T16:58:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tags.html</loc>
-<lastmod>2024-01-24T16:52:16-00:00</lastmod>
+<lastmod>2024-01-24T16:58:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/categories.html</loc>
-<lastmod>2024-01-24T16:52:16-00:00</lastmod>
+<lastmod>2024-01-24T16:58:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -54,7 +54,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/240123-aigc-x-zhuhai-toolkit4developer.html</loc>
-<lastmod>2024-01-24T16:45:51+08:00</lastmod>
+<lastmod>2024-01-24T16:58:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1265,28 +1265,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/category/pythonic.html</loc>
-<lastmod>2024-01-24T16:45:51+08:06</lastmod>
+<lastmod>2024-01-24T16:58:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/python.html</loc>
-<lastmod>2024-01-24T16:45:51+08:06</lastmod>
+<lastmod>2024-01-24T16:58:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/aigc.html</loc>
-<lastmod>2024-01-24T16:45:51+08:06</lastmod>
+<lastmod>2024-01-24T16:58:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.zoomquiet.io/tag/pythonic.html</loc>
-<lastmod>2024-01-24T16:45:51+08:06</lastmod>
+<lastmod>2024-01-24T16:58:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2119,7 +2119,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.zoomquiet.io/author/zoomquiet.html</loc>
-<lastmod>2024-01-24T16:45:51+08:06</lastmod>
+<lastmod>2024-01-24T16:58:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="pydata-0-mavericks"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/pydata-0-mavericks.html"/>
-            <meta property="og:description" content="背景¶ 利用Python进行数据分析 是本好书... 为什么知道这书呢? 因为翻译 |蠎周刊 |汇集全球蠎事儿 !-) 经常见到各种 Pandas 配合其它纯Python 模块折腾出来 …"/>
+            <meta property="og:description" content="  背景 探索 pyenv EPD free Canopy   结论 Changelog   背景¶  利用Python进行数据分析 是本好书... 为什么知道这书呢? 因为翻译 |蠎周刊 |汇集全球蠎事儿 !-) 经常见到各种 Pandas 配 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -130,8 +130,8 @@
 		<a href="https://blog.zoomquiet.io/tag/mavericks.html">mavericks</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#_1">背景</a></li>
 <li><a href="#_2">探索</a><ul>
@@ -144,11 +144,8 @@
 <li><a href="#changelog">Changelog</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p><img alt="s27157694.jpg(JPEG 图像,300x300 像素)" src="http://img3.douban.com/lpic/s27157694.jpg"/></p>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><img alt="s27157694.jpg(JPEG 图像,300x300 像素)" src="http://img3.douban.com/lpic/s27157694.jpg"></p>
 <p><a href="http://book.douban.com/subject/25779298/">利用Python进行数据分析</a></p>
 <p>是本好书...</p>
 <p>为什么知道这书呢? 因为翻译 <a href="http://weekly.pychina.org/">|蠎周刊 |汇集全球蠎事儿 !-)</a></p>
@@ -160,7 +157,7 @@
 但是,好书就是好书,有点小贵,</p>
 <p>最近有了台 GALAXY TAB3, 所以,能上 Kindle 了,于是,发现 z.cn 上电子书有了,
 响应 @老赵的号召,立即收入!</p>
-<h2 id="_2">探索<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h2 id="_2">探索<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>正如,Python 所有领域的自学,有一个稳定,随时有反馈的环境是最重要的...</p>
 <p>但是,作者的话,真心不能都相信哪!</p>
 <div class="highlight"><pre><span></span><code>...如果你恰好使用 Python 3.2 大部分示例是可以完整运行的
@@ -168,8 +165,9 @@
 MAC OS X 环境推荐安装 epd_free-7.3-2-macosx-i386.dmg
 ...
 </code></pre></div>
+
 <p>于是...</p>
-<h3 id="pyenv">pyenv<a class="headerlink" href="#pyenv" title="Permanent link">¶</a></h3>
+<h3 id="pyenv">pyenv<a class="headerlink" href="#pyenv" title="Permanent link">&para;</a></h3>
 <p>先尝试 Python 3.2 环境:</p>
 <ul>
 <li><code>$ pyenv install 3.2</code> 成功</li>
@@ -183,12 +181,12 @@ MAC OS X 环境推荐安装 epd_free-7.3-2-macosx-i386.dmg
 <li>一样败在 <code>$ pip install pandas</code></li>
 <li>宏大的 <code>Matplotlib</code> 手工安装成功了的哪....</li>
 </ul>
-<h3 id="epd-free">EPD free<a class="headerlink" href="#epd-free" title="Permanent link">¶</a></h3>
+<h3 id="epd-free">EPD free<a class="headerlink" href="#epd-free" title="Permanent link">&para;</a></h3>
 <p>好吧,看来数据分析的系列模块也不是那么简单可以安装的,
 所以,</p>
 <p><a href="https://enthought.com/products/epd/free/">Enthought Python Distribution Free</a></p>
 <p>嗯嗯嗯? </p>
-<p><img alt="canopy-logo" src="https://enthought.com/static/img/canopy-logo.png"/></p>
+<p><img alt="canopy-logo" src="https://enthought.com/static/img/canopy-logo.png"></p>
 <p>什么东西,不是说 <code>EPD free</code> 嘛?</p>
 <p>直接搜索:</p>
 <ul>
@@ -199,39 +197,43 @@ MAC OS X 环境推荐安装 epd_free-7.3-2-macosx-i386.dmg
 <p>各种不对味儿,原来自动在 <code>~/.bash_profile</code></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Setting PATH for EPD_free-7.3-2</span>
 <span class="c1"># The orginal version is saved in .bash_profile.pysave</span>
-<span class="n">PATH</span><span class="o">=</span><span class="s2">"/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"</span>
+<span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}&quot;</span>
 <span class="k">export</span><span class="w"> </span><span class="n">PATH</span>
 </code></pre></div>
+
 <p>而且是按照系统框架来安装到 <code>/Library/Frameworks/Python.framework</code> 的
 可是, Mavericks 以后,没有默认Python 了哪,俺已经同时用 <code>brew</code> 管理系统 Python,
 <code>pyenv</code> 管理开发 Python ,先不说体积:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>du<span class="w"> </span>-hs<span class="w"> </span>/Library/Frameworks/Python.framework/Versions
 425M<span class="w">    </span>/Library/Frameworks/Python.framework/Versions
 </code></pre></div>
+
 <p>居然第一个案例就跑不起来!</p>
 <p><code>import pandas</code> 有报错...</p>
-<h3 id="canopy">Canopy<a class="headerlink" href="#canopy" title="Permanent link">¶</a></h3>
+<h3 id="canopy">Canopy<a class="headerlink" href="#canopy" title="Permanent link">&para;</a></h3>
 <p>回到官方下载: <a href="https://enthought.com/store/">Enthought Store</a></p>
 <p>老老实实的下载推荐的 <code>canopy-1.4.0-osx-64.dmg</code>
 体积也从 74M 爆涨为 <code>235Mb</code></p>
 <p>不过,是一派标准的 MAC 软件包了,非常流畅,也有GUI 的引导界面,</p>
 <p>然后 <code>~/.bash_profile</code> 追加的是:</p>
 <div class="highlight"><pre><span></span><code><span class="gh">#</span> Added by Canopy installer on 2014-06-03
-<span class="gh">#</span> VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
+<span class="gh">#</span> VIRTUAL_ENV_DISABLE_PROMPT can be set to &#39;&#39; to make bashprompt show that Canopy is active, otherwise 1
 VIRTUAL_ENV_DISABLE_PROMPT=1 source \ 
 /Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate
 </code></pre></div>
+
 <p>那就简单了,使用标准的 <code>VirtualEnv</code> 来包装的话,就不用将系统Python 环境永久性的迁移为
 <code>Canopy</code> 的了,</p>
 <p>简单的 在 <code>~/.bashrc</code> 定义一个别称:</p>
 <div class="highlight"><pre><span></span><code><span class="gh">#</span> Added by Canopy installer on 2014-06-03
-alias canopy="source \
-/Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate"
+alias canopy=&quot;source \
+/Users/zoomq/Library/Enthought/Canopy_64bit/User/bin/activate&quot;
 </code></pre></div>
+
 <p>随时调用 <code>canopy</code> 就可以进入了..</p>
-<h2 id="_3">结论<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h2 id="_3">结论<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>最终拥有了和书中有一致反应的环境:</p>
-<p><img alt="140604-pydata-canopy.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140604-pydata-canopy.png"/></p>
+<p><img alt="140604-pydata-canopy.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/140604-pydata-canopy.png"></p>
 <p>参考:</p>
 <ul>
 <li>
@@ -253,7 +255,7 @@ alias canopy="source \
 <p>Mavericks 对 Python 框架的调整,也的确有其原由的...</p>
 <p>当然,好书要配合好代码,</p>
 <p>及时 fork 一个自个儿可以折腾的: <a href="https://github.com/OpenBookProjects/pydata-book">OpenBookProjects/pydata-book</a></p>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h2>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>140603 完成环境探索,总结</li>
 <li>140527 <a href="http://www.amazon.cn/gp/product/B00KD7Q7U2/ref=oh_d__o00_details_o00__i00?ie=UTF8&amp;psc=1">"利用Python进行数据分析" Wes McKinney, 唐学韬 (Kindle电子书)</a></li>

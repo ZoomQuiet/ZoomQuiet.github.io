@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="091110_jacob-what2write"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/091110_jacob-what2write.html"/>
-            <meta property="og:description" content="Tech docs can take a bunch of different forms ranging from high-level overviews, to step-by-step walkthroughs, to auto-generated API documentation. Unfortunately, no single format works for all users; there&#39;s huge differences in the way that people learn, so a well-documented project needs to provide many different forms of documentation. At …"/>
+            <meta property="og:description" content="  Tutorials Topical guides Reference Don&#39;t. What&#39;s next Changlog   Tech docs can take a bunch of different forms ranging from high-level overviews, to step-by-step walkthroughs, to auto-generated API documentation. Unfortunately, no single format works for all users; there&#39;s huge differences in the way that people learn, so a well-documented project needs …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -128,8 +128,8 @@
 		<a href="https://blog.zoomquiet.io/tag/zh.html">Zh</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#tutorials">Tutorials</a></li>
 <li><a href="#topical-guides">Topical guides</a></li>
@@ -139,9 +139,6 @@
 <li><a href="#changlog">Changlog</a></li>
 </ul>
 </div>
-    </nav>
-
-                
 <p>Tech docs can take a bunch of different forms ranging from high-level overviews, to step-by-step walkthroughs, to auto-generated API documentation. Unfortunately, no single format works for all users; there's huge differences in the way that people learn, so a well-documented project needs to provide many different forms of documentation.</p>
 <p>At a high level, you can break down the different types of documentation you need to provide into three different formats:</p>
 <ul>
@@ -150,7 +147,7 @@
 -low-level, deep-dive reference material.</li>
 </ul>
 <p>Let's look at each in turn.</p>
-<h2 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link">¶</a></h2>
+<h2 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link">&para;</a></h2>
 <p>Good tutorials are a must as they're usually the first thing someone sees when trying out a new piece of tech. First impressions are incredibly important: that rush of success as you work through a good tutorial will likely color your future opinions about the project.</p>
 <p>Django's tutorial is frankly a bit musty at this point and is probably due for at least a light refresh, but it hits all the important points. A good tutorial should:</p>
 <ul>
@@ -172,7 +169,7 @@
 <p>A couple of projects with really good tutorials to check out for inspiration are 
 <a href="http://love2d.org/documentation?page=documentation">LOVE</a> and 
 <a href="http://lamsonproject.com/docs/getting_started.html">Lamson</a>.</p>
-<h2 id="topical-guides">Topical guides<a class="headerlink" href="#topical-guides" title="Permanent link">¶</a></h2>
+<h2 id="topical-guides">Topical guides<a class="headerlink" href="#topical-guides" title="Permanent link">&para;</a></h2>
 <p>This is the meat of your documentation. Once somebody's learned (from a tutorial) the high-level concepts, they're going to need to dive into the details of some area or another. Any documentation worth its salt is going to have a whole bunch of these – Django's got about 35 different topical guides, covering each conceptual area (e.g. models, sessions, testing, etc.)</p>
 <p>These don't need to cover every single configuration option or function argument – that's what reference material is for – but each guide (or section, or chapter, depending on how things are organized) needs to take a pretty deep dive into its respective area.</p>
 <p>The main goal for topical coverage should be <code>comprehensiveness</code>. The reader ought to come away from a close read feeling very comfortable with the topic in question. They should feel that they know the vast majority of the possible options, and more importantly they should understand how all the concepts fit together.</p>
@@ -182,7 +179,7 @@
 <a href="http://svnbook.red-bean.com/">Subversion Book</a>
 is a great example – but only when the book is continuously maintained available for free.</p>
 <p>There's a particularly pernicious anti-pattern in documentation where tutorials are provided for free but the real documentation is only available for purchase. At best that's lazy and sloppy; at worst it's downright evil. Free software needs free documentation. If you've got otherwise you should be ashamed of yourself.</p>
-<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <p>Finally, you need complete reference for all the public APIs your project provides. These should be designed for those who already know how to use some API, but need to look up the exact arguments some function takes, or how a particular setting influences behavior, etc.</p>
 <p>It's important to point out that reference material is not in any way a substitute for good tutorials and guides! Great reference material on the foo.baz package does readers no good whatsoever if they don't know the name of the package they're looking for.</p>
 <p><a href="http://docs.python.org/">Python's documentation</a></p>
@@ -193,13 +190,13 @@ module: it's great reference material, explaining exactly what's in the module, 
 implementation in collections.deque you'll probably end up missing the library entirely.</p>
 <p>Think of guides and reference as partners: guides give you the "why," and reference gives you the "how." Following the deque example, some sort of "guide to data structures in Python" could give an overview of all the different types of data structures in Python (be they built-in or standard library), linking off to the documentation for each module and type for the complete details.</p>
 <p>It's really tempting to use an auto-documentation tool like Javadoc or RDoc for reference material.</p>
-<h2 id="dont">Don't.<a class="headerlink" href="#dont" title="Permanent link">¶</a></h2>
+<h2 id="dont">Don't.<a class="headerlink" href="#dont" title="Permanent link">&para;</a></h2>
 <p>Auto-generated documentation is almost worthless. At best it's a slightly improved version of simply browsing through the source, but most of the time it's easier just to read the source than to navigate the bullshit that these autodoc tools produce. About the only thing auto-generated documentation is good for is filling printed pages when contracts dictate delivery of a certain number of pages of documentation. I feel a particularly deep form of rage every time I click on a "documentation" link and see auto-generated documentation.</p>
 <p>There's no substitute for documentation written, organized, and edited by hand.</p>
 <p>I'll even go further and say that auto-generated documentation is worse than useless: it lets maintainers fool themselves into thinking they have documentation, thus putting off actually writing good reference by hand. If you don't have documentation just admit to it. Maybe a volunteer will offer to write some! But don't lie and give me that auto-documentation crap.</p>
-<h2 id="whats-next">What's next<a class="headerlink" href="#whats-next" title="Permanent link">¶</a></h2>
+<h2 id="whats-next">What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <p>Now that I've covered what to write, I'll move into how to write. Tomorrow I'll start going into the actual mechanics of writing good, readable technical prose.</p>
-<h2 id="changlog">Changlog<a class="headerlink" href="#changlog" title="Permanent link">¶</a></h2>
+<h2 id="changlog">Changlog<a class="headerlink" href="#changlog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>1406?? </li>
 <li>140618 偶遇抄转</li>

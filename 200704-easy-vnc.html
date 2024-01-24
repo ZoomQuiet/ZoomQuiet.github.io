@@ -132,8 +132,8 @@
 		<a href="https://blog.zoomquiet.io/tag/macos.html">macOS</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#bg">BG.</a></li>
 <li><a href="#problems">problems</a></li>
@@ -143,10 +143,7 @@
 <li><a href="#logging">logging</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<h2 id="bg">BG.<a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<h2 id="bg">BG.<a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
 <p>很早就有这种需求:</p>
 <p>比如当年参与开发浏览器时,
 对应工程是 windows only 的,
@@ -164,7 +161,7 @@
 </ul>
 <p>问题是, 对于私人商用非常敏感,
 用的时间长点儿, 就判定为非法商用直接断掉了.</p>
-<h2 id="problems">problems<a class="headerlink" href="#problems" title="Permanent link">¶</a></h2>
+<h2 id="problems">problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
 <p>然后, 也尝试过各种其它通用类 VNC 工具:</p>
 <ul>
 <li>X2Go 安装失败</li>
@@ -182,7 +179,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="asking">asking<a class="headerlink" href="#asking" title="Permanent link">¶</a></h2>
+<h2 id="asking">asking<a class="headerlink" href="#asking" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>搜索才发现, 这是常见问题...</p>
 </blockquote>
@@ -197,45 +194,53 @@
 </ul>
 <p>也就是说, 俺用俺自己的主机, 就得向厂商老实汇报思想, 否则断你没商量.</p>
 <p>俺为什么要这么贱?</p>
-<h2 id="fixed">fixed<a class="headerlink" href="#fixed" title="Permanent link">¶</a></h2>
+<h2 id="fixed">fixed<a class="headerlink" href="#fixed" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>回归 FLOSS 社区内置方案吧...</p>
 </blockquote>
 <p>安装标准 vnc 服务:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vnc4server<span class="w"> </span>xfce4<span class="w"> </span>xfce4-goodies
 </code></pre></div>
+
 <p>配置访问口令:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>vncpasswd
 </code></pre></div>
+
 <p>指定启动桌面 ~/.vnc/xstartup :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
 startxfce4<span class="w"> </span><span class="p">&amp;</span>
 </code></pre></div></td></tr></table></div>
+
 <p>并启用配置:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>~/.vnc/xstartup
 </code></pre></div>
+
 <p>启动服务:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>vnc4server
 </code></pre></div>
+
 <p>检验状态:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>ss<span class="w"> </span>-ltn
 ...
 LISTEN<span class="w">      </span><span class="m">0</span><span class="w">      </span><span class="m">5</span><span class="w">            </span>*:5901<span class="w">                     </span>*:*
 </code></pre></div>
+
 <blockquote>
 <p>注意: 如果有防火墙的话, 要打开 5901 的访问</p>
 </blockquote>
 <p>macOS 本地代理端口:</p>
 <div class="highlight"><pre><span></span><code>༄  ssh -L 5901:127.0.0.1:5901 -C -N -l &lt;主机用户&gt; &lt;主机IP&gt;
 </code></pre></div>
+
 <p>(也就是将 Linux 主机上的 :5901 用 SSH 工具映射为本地 :5901)</p>
-<p><img alt="连接" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.37.01.jpg"/></p>
+<p><img alt="连接" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.37.01.jpg"></p>
 <p>使用本地端口:</p>
 <div class="highlight"><pre><span></span><code>vnc://localhost:5901
 </code></pre></div>
+
 <p><strong>Bazinga</strong></p>
-<p><img alt="win7vbox" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.39.36.jpg"/></p>
+<p><img alt="win7vbox" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.39.36.jpg"></p>
 <ul>
 <li>Ubuntu 中安装 vncserver 以及 xfce4 桌面</li>
 <li>Ubuntu 中启动 vncserver</li>
@@ -248,7 +253,7 @@ LISTEN<span class="w">      </span><span class="m">0</span><span class="w">     
 </li>
 </ul>
 <p>而且速度比之前各种 VNC 工具要快, 充分发挥了本地网络能力.</p>
-<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
+<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://linuxconfig.org/vnc-server-on-ubuntu-18-04-bionic-beaver-linux">VNC server on Ubuntu 18.04 Bionic Beaver Linux - LinuxConfig.org</a></li>
 <li><a href="https://cat.pdx.edu/platforms/mac/remote-access/vnc-to-linux/">VNC from Mac to Linux – Computer Action Team</a></li>
@@ -257,7 +262,7 @@ LISTEN<span class="w">      </span><span class="m">0</span><span class="w">     
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-14-04">How to Install and Configure VNC on Ubuntu 14.04 | DigitalOcean</a></li>
 <li>...</li>
 </ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
 <ul>
 <li>200725 zoomquiet pub</li>
 <li>200704 zoomquiet 解决</li>

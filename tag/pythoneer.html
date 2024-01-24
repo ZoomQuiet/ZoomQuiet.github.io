@@ -89,69 +89,85 @@
         <div class="col-lg-9">
             <article>
                 <h2><a href="https://blog.zoomquiet.io/160619-protocol4dying.html">最后的协议</a></h2>
-                <div class="summary">
+                <div class="summary"><div class="toc">
 <ul>
-<li>来自: <a href="https://www.facebook.com/notes/%E8%91%89%E4%BF%A1%E6%BA%90/%E8%87%A8%E7%B5%82%E5%8D%94%E5%AE%9Aa-protocol-for-dying/10153556546128601">臨終協定(A Protocol for Dying)</a></li>
-<li>原文: <a href="http://hintjens.com/blog:115">A Protocol for Dying - Hintjens.com</a></li>
+<li><a href="#_1">事情是怎麼發生的?</a></li>
+<li><a href="#_2">與臨終者交談</a></li>
+<li><a href="#bob">Bob的責任</a></li>
+<li><a href="#_3">向孩子們解釋</a><ul>
+<li><a href="#_4">安樂死</a></li>
 </ul>
-<p>(<code>是也乎:</code></p>
-<p>ZeroMQ 是最成功的工业化的消息管理平台.
-作者能如此平静的离开, 又留下 …</p>
+</li>
+<li><a href="#_5">我對這整件事情的感覺</a></li>
+<li><a href="#_6">替孩子們著想</a></li>
+<li><a href="#_7">譯文結束</a><ul>
+<li><a href="#_8">譯後語:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul>
+<li>来自: <a href="https://www.facebook.com/notes/%E8%91%89%E4%BF%A1%E6%BA%90/%E8%87%A8%E7%B5%82%E5%8D%94%E5%AE%9Aa-protocol-for-dying/10153556546128601">臨 …</a></li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/160619-protocol4dying.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
-                <div class="summary">
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>C样:</p>
-<div class="highlight"><pre><span></span><code><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
-<span class="k">while</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="err">:</span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span>
-<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
-</code></pre></div>
-<p>偏门:</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="err">:</span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span>
-</code></pre></div>
-<p>蠎样:</p>
-<div class="highlight"><pre><span></span><code>for v in my_list:
-    print …</code></pre></div>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#_1">迭代基础</a><ul>
+<li><a href="#list-elements">list ⇒ elements</a></li>
+<li><a href="#strings-characters">Strings ⇒ characters</a></li>
+<li><a href="#dicts-keys">Dicts ⇒ keys</a></li>
+<li><a href="#files-lines">Files ⇒ lines</a></li>
+<li><a href="#_2">标准库中有趣的迭代</a></li>
+<li><a href="#_3">其它的迭代形式</a></li>
+</ul>
+</li>
+<li><a href="#_4">基本设问</a><ul>
+<li><a href="#q">Q: 如何获得索引号?</a><ul>
+<li><a href="#enumerate">enumerate() 制造好用的值对</a></li>
+<li><a href="#vs">迭代 …</a></li></ul></li></ul></li></ul></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/141212-pop-is-evil.html">流行之恶</a></h2>
-                <div class="summary">
-<p><img alt="popular_science_logo.png" src="http://zoomq.qiniudn.com/ZQCollection/logo/popular_science_logo.png?watermark/2/text/Wm9vbS5RdWlldA==/fill/V2hpdGU=/fontsize/320/dissolve/85|imageView2/2/w/320"/></p>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#_1">背景</a></li>
+<li><a href="#_2">厘定</a></li>
+<li><a href="#_3">分析</a></li>
+<li><a href="#_4">是也乎</a></li>
+<li><a href="#change-log">Change log</a></li>
+</ul>
+</div>
+<p><img alt="popular_science_logo.png" src="http://zoomq.qiniudn.com/ZQCollection/logo/popular_science_logo.png?watermark/2/text/Wm9vbS5RdWlldA==/fill/V2hpdGU=/fontsize/320/dissolve/85|imageView2/2/w/320"></p>
 <div class="highlight"><pre><span></span><code>hello,
     你觉得有生命力流行的东西就是好的么,
     俗话说祸害遗千年... 
-    从汉语来看,楚辞也很棒,可是也式微了,
-你怎么想?
-</code></pre></div>
-<!--more-->
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>俺被 …</p>
+    从汉语来看,楚辞也很棒,可是也 …</code></pre></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/141212-pop-is-evil.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/141212-hierarchy-of-disagreement.html">论如何艺术的骂人</a></h2>
-                <div class="summary">
-<p><img alt="141212-ask-binghe.lisp.jpg(JPEG 图像,1024x650 像素)" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-ask-binghe.lisp.jpg?imageView2/2/w/512"/></p>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#_1">是也乎</a></li>
+<li><a href="#change-log">Change log</a></li>
+</ul>
+</div>
+<p><img alt="141212-ask-binghe.lisp.jpg(JPEG 图像,1024x650 像素)" src="http://zoomq.qiniudn.com/ZQCollection/snap/141212-ask-binghe.lisp.jpg?imageView2/2/w/512"></p>
 <p>人称伞哥的传奇人物: <a href="http://www.ituring.com.cn/article/553">田春</a>
 怎么应对的呢?...</p>
 <!--more-->
+
 <p>来源: <a href="http://weibo.com/1929185323/BAfMov9Vt?type=comment#_rnd1418287455937">田春冰河 's Weibo_Weibo</a></p>
-<p>揭晓答案前, 俺忍不住, 得推荐一下古今中外有关骂人相关的 …</p>
+<p>揭晓答案前, 俺忍不住, 得推荐一下古今中外有关 …</p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/141212-hierarchy-of-disagreement.html">more ...</a>
                 </div>
             </article>

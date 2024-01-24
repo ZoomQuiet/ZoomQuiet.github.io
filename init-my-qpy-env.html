@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="init-my-qpy-env"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/init-my-qpy-env.html"/>
-            <meta property="og:description" content="背景¶ QPython 知道有两年了,是看 Head First Python(中文版) (豆瓣) 时,发现竟然有 SL4A 这种神器! Google 果断是业界良心哪, 可惜: 从Downloads 可以看出 ,已经停 …"/>
+            <meta property="og:description" content="  背景 目标 环境准入 硬件   探索 上传 SSH BusyBox   运行 BETA乱入 QPython头声明     qpy:webapp: qpy:fullscreen qpy://localhost:8080 自动 Fabric 日志   结论 TODO pip RESTful &#34;OneRing&#34;   专题体例: 时间帐单: Changelog     背景¶ QPython …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -130,8 +130,8 @@
 		<a href="https://blog.zoomquiet.io/tag/ssh.html">ssh</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#_1">背景</a></li>
 <li><a href="#_2">目标</a></li>
@@ -173,10 +173,7 @@
 </li>
 </ul>
 </div>
-    </nav>
-
-                
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>QPython 知道有两年了,是看 <a href="http://book.douban.com/subject/10561367/">Head First Python(中文版) (豆瓣)</a> 时,发现竟然有 
 <a href="http://code.google.com/p/android-scripting/">SL4A</a></p>
 <p>这种神器! Google 果断是业界良心哪,
@@ -200,7 +197,7 @@
 <li><a href="http://www.appannie.com/apps/amazon-appstore/top/china/education/">App Annie 的应用商店数据|Amazon排行榜中国 - Education - 2014年1月27日</a></li>
 <li><a href="http://www.douban.com/group/topic/17095466/">让Python在Android系统上飞一会儿:第一节 在手机上...</a></li>
 </ul>
-<h2 id="_2">目标<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h2 id="_2">目标<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>哪,俺是 Pythoneer ,不是 JAVA 党,
 更加是 <code>IDE 去死去死团</code> 的骨灰成员.</p>
 <p>很辛苦的攒銭搞到了 
@@ -215,7 +212,7 @@
 <li>在手机上真实操作,同时有远程日志可以实时观察,确认问题</li>
 </ol>
 <p>以上循环</p>
-<h2 id="_3">环境准入<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h2 id="_3">环境准入<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>对了,以下记述充斥了各种非科普性描述,
 为了误入的小伙伴不被意外恶心到,得交待一下适合继续阅读的条件:</p>
 <ol>
@@ -227,7 +224,7 @@
 <li>42 分钟, 当前的空闲时间,能够专注以下描述,不会片面的抽取文字就来吼俺 <code>图样图森破</code> 什么的..</li>
 <li>42 秒, 明确以上条件 <code>42%</code> 吻合,即可继续 ;-)</li>
 </ol>
-<h3 id="_4">硬件<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<h3 id="_4">硬件<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>手机: 电信协议 三星 Note2 N7108ZMDMF1:</p>
 <ul>
 <li>Android 4.1.1 JRO03C</li>
@@ -249,17 +246,17 @@
 <li>ASP,Basic,C,C++,Clojure,Erlang,Forth,Factor,Go,Haskell,JS,JAVA,Lisp,Node,PHP,Python,Pascal,XSLT,REBOL,Rust,,,少量经验</li>
 <li>精通26字母, Cnglish 熟练</li>
 </ul>
-<h2 id="_5">探索<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<h2 id="_5">探索<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>根据策划的流程,在原作者的帮助下,进行了高强度的折腾,
 经过连续 27 小时探索,基本爽了起来:</p>
-<h3 id="_6">上传<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<h3 id="_6">上传<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>Android 呢,就是 Linux 哪,当然应该用 <code>scp</code> 安全上传了!</p>
 <p>目测,要依次解决:</p>
 <ol>
 <li>手机上的 <code>SSH</code> 守护在哪儿,怎么启动</li>
 <li>脚本应该上传到哪儿 QPython 才能识别?</li>
 </ol>
-<h4 id="ssh">SSH<a class="headerlink" href="#ssh" title="Permanent link">¶</a></h4>
+<h4 id="ssh">SSH<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h4>
 <p>搜索就有:</p>
 <ul>
 <li><a href="http://gailly.net/android/android-tips.html">Android tips</a></li>
@@ -269,7 +266,7 @@
 <p>经过快速的尝试,
 明确 <code>SSHDroid</code> 最简洁可用,
 那就上:</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-sshdroid.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-sshdroid.jpg"></p>
 <ul>
 <li>安装,配置都没有什么可说的</li>
 <li>只是,非专业版,只能用口令登录,先忍着</li>
@@ -277,8 +274,9 @@
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">androidhelper</span>
 <span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
-<span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="sa">u</span><span class="s1">'Hello, Username!是也乎 ;-)'</span><span class="p">)</span>
+<span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;Hello, Username!是也乎 ;-)&#39;</span><span class="p">)</span>
 </code></pre></div>
+
 <p>上传到哪儿呢?!</p>
 <p>快速翻找一下,明确几个关键路径:</p>
 <ul>
@@ -305,7 +303,8 @@
     +- projects   俺的QPy 项目入口
     +- scripts    俺的QPy 脚本入口
 </code></pre></div>
-<h4 id="busybox">BusyBox<a class="headerlink" href="#busybox" title="Permanent link">¶</a></h4>
+
+<h4 id="busybox">BusyBox<a class="headerlink" href="#busybox" title="Permanent link">&para;</a></h4>
 <p>等等! SSH 上来后,各种不适应,这什么 shell 环境哪,连 <code>less</code>, <code>tail</code>, <code>vi</code> 都没有
 好意思说自个儿是 <code>Linux</code> 嘛?!</p>
 <p>搜索才知道,这货叫 <code>ash</code></p>
@@ -314,18 +313,19 @@
 <li>所以,程序猿有 <a href="http://www.busybox.net/">BusyBox</a></li>
 <li>一安装,批量将大堆习惯的工具,灌到 <code>system/xbin/</code></li>
 </ul>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-busybox-tail.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-busybox-tail.jpg"></p>
 <p>这样,才能远程观察, QPython 项目目录中,
 若隐若现的 <code>.run.log</code> 明显发生什么问题,
 快速增补一行:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">androidhelper</span>
 <span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
-<span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="sa">u</span><span class="s1">'Hello, Username!是也乎 ;-)'</span><span class="p">)</span>
+<span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;Hello, Username!是也乎 ;-)&#39;</span><span class="p">)</span>
 </code></pre></div>
+
 <p>就能运行成功,跳出最简单的发布公告框了!</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-hollo.jpg"/></p>
-<h3 id="_7">运行<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-hollo.jpg"></p>
+<h3 id="_7">运行<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>好了,进入下一个阶段: <code>怎么让 QPyhon 如系统命令一样在 ash 环境中调用我们的脚本?</code></p>
 <p>目测,要依次解决:</p>
 <ol>
@@ -340,6 +340,7 @@ Could<span class="w"> </span>not<span class="w"> </span>find<span class="w"> </s
 Consider<span class="w"> </span>setting<span class="w"> </span><span class="nv">$PYTHONHOME</span><span class="w"> </span>to<span class="w"> </span>&lt;prefix&gt;<span class="o">[</span>:&lt;exec_prefix&gt;<span class="o">]</span>
 ImportError:<span class="w"> </span>No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span>site
 </code></pre></div>
+
 <p>果断没有那么简单, 检查一下系统环境:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">_</span><span class="o">=</span>/system/xbin/env
 <span class="nv">RANDOM</span><span class="o">=</span><span class="m">25396</span>
@@ -359,6 +360,7 @@ ImportError:<span class="w"> </span>No<span class="w"> </span>module<span class=
 <span class="nv">HOME</span><span class="o">=</span>/data/data/berserker.android.apps.sshdroid/home
 <span class="nv">ANDROID_BOOTLOGO</span><span class="o">=</span><span class="m">1</span>
 </code></pre></div>
+
 <p>跟 Python 没一毛钱关系,怪不得跑不了;
 吼了俩位爷,才知道: <a href="http://wiki.qpython.org/hacker/">QPython Hackers</a>
 果断是依赖大堆系统环境变量的,
@@ -368,7 +370,7 @@ ImportError:<span class="w"> </span>No<span class="w"> </span>module<span class=
 <a href="https://gist.github.com/ZoomQuiet/8642464">gen_qpy_env.py</a></p>
 <p><code>注意:</code> 这货一定要加载到 QPython 中,用脚本形式来跑,
 如果也是从后台 shell 环境中跑,是获得不了主要关键参数的!</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-gen-profile.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-gen-profile.jpg"></p>
 <p>然后!? 肿么,让 shell 环境每次都能自动加载上这堆配置?</p>
 <p>综合,搜索来的相关说明:</p>
 <ul>
@@ -381,29 +383,32 @@ ImportError:<span class="w"> </span>No<span class="w"> </span>module<span class=
 <span class="c1"># ln -s /storage/sdcard0/com.hipipal.qpyplus/projects/qpy_profile /etc/profile</span>
 <span class="c1"># mount -o remount,ro /dev/block/mtdblock3 /system</span>
 </code></pre></div>
+
 <p>再关闭,重启 <code>SSHDroid</code> 后,远程登入,测试:</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-this-zen.png"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-this-zen.png"></p>
 <p>然后,远程人工从 shell 调用</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># cd /storage/sdcard0/com.hipipal.qpyplus/projects/chaos/ </span>
 <span class="c1"># /data/data/com.hipipal.qpyplus/files/bin/python hollo.py</span>
 </code></pre></div>
+
 <p>手机无论在什么桌面,都能跳出来俺的 <code>hollo.py</code> 运行结果:</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-console-hollo.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-console-hollo.jpg"></p>
 <p>然后,本地,习惯性的,就可以用 <a href="http://tmux.sourceforge.net/">tmux</a> 同时
 观察/管理本地以及远程的开发/测试/运行情况了:</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-tumx.png"/></p>
-<h4 id="beta">BETA乱入<a class="headerlink" href="#beta" title="Permanent link">¶</a></h4>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-tumx.png"></p>
+<h4 id="beta">BETA乱入<a class="headerlink" href="#beta" title="Permanent link">&para;</a></h4>
 <p>作者看俺这么努力的折腾从内部机密放送俺最新开发版本,兴奋的安装上:</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-new-version.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-new-version.jpg"></p>
 <p>然后,再运行...</p>
 <div class="highlight"><pre><span></span><code>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
-<span class="w">  </span>File<span class="w"> </span><span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/projects/chaos/hollo.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;/storage/sdcard0/com.hipipal.qpyplus/projects/chaos/hollo.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
 <span class="w">    </span><span class="nv">droid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>androidhelper.Android<span class="o">()</span>
-<span class="w">  </span>File<span class="w"> </span><span class="s2">"tubelib/sl4a.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">34</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>__init__
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;tubelib/sl4a.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">34</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>__init__
 <span class="w">    </span>self.conn<span class="w"> </span><span class="o">=</span><span class="w"> </span>socket.create_connection<span class="o">(</span>addr<span class="o">)</span>
-<span class="w">  </span>File<span class="w"> </span><span class="s2">"/home/river/android-sdk/workplace/python-for-android/build/python-install/lib/python2.7/socket.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">571</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>create_connection
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;/home/river/android-sdk/workplace/python-for-android/build/python-install/lib/python2.7/socket.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">571</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>create_connection
 socket.error:<span class="w"> </span><span class="o">[</span>Errno<span class="w"> </span><span class="m">111</span><span class="o">]</span><span class="w"> </span>Connection<span class="w"> </span>refused
 </code></pre></div>
+
 <p><code>/home/river/android-sdk/workplace</code> 囧rz...</p>
 <p>什么东西?! 怎么超出来原作的本地目录了?!</p>
 <p>再问,才知道:</p>
@@ -416,18 +421,18 @@ socket.error:<span class="w"> </span><span class="o">[</span>Errno<span class="w
 <ul>
 <li>
 <p>从项目中打开脚本:
-<img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-proj.jpg"/></p>
+<img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-proj.jpg"></p>
 </li>
 <li>
 <p>从 QEditor 中运行
-<img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-run.jpg"/></p>
+<img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-run.jpg"></p>
 </li>
 <li>
 <p>在 console 中生成:
-<img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-gen-again.jpg"/></p>
+<img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140127-qpy-env-gen-again.jpg"></p>
 </li>
 </ul>
-<h4 id="qpython">QPython头声明<a class="headerlink" href="#qpython" title="Permanent link">¶</a></h4>
+<h4 id="qpython">QPython头声明<a class="headerlink" href="#qpython" title="Permanent link">&para;</a></h4>
 <p>参考: <a href="http://wiki.qpython.org/doc/program_guide/#qpython-header">Programming Guide</a></p>
 <p>脚本第一行的不同声明,将由 QPython 智能识别给予不同的运行环境,一定要理解:</p>
 <ul>
@@ -437,16 +442,16 @@ socket.error:<span class="w"> </span><span class="o">[</span>Errno<span class="w
 <li>没有 <code>#qpy:*</code> 的是指基于 <a href="http://kylelk.github.io/html-examples/androidhelper.html">SL4A</a> 的GUI 依赖环境</li>
 <li>
 <p>2014 追加支持的</p>
-<h1 id="qpywebapp">qpy:webapp:<app title=""><a class="headerlink" href="#qpywebapp" title="Permanent link">¶</a></app></h1>
-<h1 id="qpyfullscreen">qpy:fullscreen<a class="headerlink" href="#qpyfullscreen" title="Permanent link">¶</a></h1>
-<h1 id="qpylocalhost8080">qpy://localhost:8080<a class="headerlink" href="#qpylocalhost8080" title="Permanent link">¶</a></h1>
+<h1 id="qpywebapp">qpy:webapp:<app title><a class="headerlink" href="#qpywebapp" title="Permanent link">&para;</a></h1>
+<h1 id="qpyfullscreen">qpy:fullscreen<a class="headerlink" href="#qpyfullscreen" title="Permanent link">&para;</a></h1>
+<h1 id="qpylocalhost8080">qpy://localhost:8080<a class="headerlink" href="#qpylocalhost8080" title="Permanent link">&para;</a></h1>
 <p>"""
 Launching the web service on localhost:8080 
 without android titlebar (fullscreen)
 """</p>
 </li>
 </ul>
-<h3 id="_8">自动<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<h3 id="_8">自动<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>好了,进入最后一个阶段: <code>怎么让所有的上传-&gt;配置-&gt;运行-&gt;日志收集 全部自动化一键完成?</code></p>
 <p>目测,要依次解决:</p>
 <ol>
@@ -476,9 +481,10 @@ without android titlebar (fullscreen)
 - 每次都要全部清除,或是人工清除?
 - 不用这么 Naive ,参考:<a href="http://floss.qiniudn.com/data/20130327153058/index.html">SSH Warning: the RSA host key for differs from the key for the IP address - zhangp专栏</a></p>
 <p>一行解决:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span>-e<span class="w"> </span><span class="s1">'36d'</span><span class="w"> </span>~/.ssh/known_hosts
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;36d&#39;</span><span class="w"> </span>~/.ssh/known_hosts
 </code></pre></div>
-<h4 id="fabric"><a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation">Fabric</a><a class="headerlink" href="#fabric" title="Permanent link">¶</a></h4>
+
+<h4 id="fabric"><a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation">Fabric</a><a class="headerlink" href="#fabric" title="Permanent link">&para;</a></h4>
 <p>非 <code>C/S</code> 结构的脚本化自动部署工具!</p>
 <p>嘦在本地安装好<a href="http://docs.fabfile.org/en/1.5/index.html#usage-documentation">Fabric</a>
 再在本地工程目录中放一个 <code>fabfile.py</code>, 就可以:</p>
@@ -496,6 +502,7 @@ Available<span class="w"> </span>commands:
 <span class="w">    </span>qpy_run_it<span class="w">  </span>fab<span class="w"> </span>qpy_run_it:script<span class="o">=</span>MY.py
 <span class="w">    </span>uname<span class="w">       </span>print<span class="w"> </span>Android<span class="w"> </span>sys.<span class="w"> </span>info.
 </code></pre></div>
+
 <p>日常,无论折腾多少个项目,都可以统一部署此脚本到目录中,
 <a href="https://gist.github.com/ZoomQuiet/8645207">Fabric for QPython auto upload/running script/collect log etc... from local through SSH</a></p>
 <p>只要定制一两只参数, 平时的开发流程就变成了:</p>
@@ -504,12 +511,13 @@ Available<span class="w"> </span>commands:
 <li><code>fab qpy:script=当前调试的主脚本.py</code> 一键上传手机,并自动运行</li>
 <li>在手机上真实操作,明确效果</li>
 </ol>
-<h4 id="_9">日志<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
+<h4 id="_9">日志<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>目测同最初设想的理想开发流程相比:</p>
 <div class="highlight"><pre><span></span><code>1. 本地用喜爱的编辑环境进行代码撰写
 2. 一键上传手机,并自动运行
 3. 在手机上真实操作,同时有远程日志可以实时观察,确认问题
 </code></pre></div>
+
 <p>只差一个运行日志的实时观察了哪,,,</p>
 <p>本来想着很简洁的:</p>
 <ul>
@@ -518,7 +526,7 @@ Available<span class="w"> </span>commands:
 </ul>
 <p>结果,不得不提交个 Issue:</p>
 <p><a href="https://github.com/qpython-android/QPython.org/issues/2">.run.log is odd · Issue #2 · qpython-android/QPython.org</a></p>
-<h2 id="_10">结论<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
+<h2 id="_10">结论<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>虽然, 最后集中成了一份儿 
 <a href="https://gist.github.com/ZoomQuiet/8645207">fabfile.py</a>
 脚本,但是涉及的工具还是很多的,
@@ -548,18 +556,20 @@ Available<span class="w"> </span>commands:
 <span class="k">[[MBP in local]]</span>
 <span class="na">all in same wifi net domain</span>
 </code></pre></div>
-<h3 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">¶</a></h3>
+
+<h3 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h3>
 <p>然后, 有个比较顺心的 QPython 折腾环境了,
 就可以进一步的折腾各种想玩/能玩能玩的了!</p>
-<h3 id="pip">pip<a class="headerlink" href="#pip" title="Permanent link">¶</a></h3>
+<h3 id="pip">pip<a class="headerlink" href="#pip" title="Permanent link">&para;</a></h3>
 <p>没有 pip 的世界是艰难的世界,所以,,,</p>
 <p><a href="http://www.pip-installer.org/en/latest/installing.html">Installation — pip 1.5.2 documentation</a></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># python get-pip.py</span>
 Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
-<span class="w">  </span>File<span class="w"> </span><span class="s2">"get-pip.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">21343</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;get-pip.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">21343</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
 <span class="w">    </span>import<span class="w"> </span>bz2
 ImportError:<span class="w"> </span>No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span>bz2
 </code></pre></div>
+
 <p>那么回到老方式, <code>setuptools-&gt;easy_install pip-&gt;pip</code>
 <a href="https://pypi.python.org/pypi/setuptools#installation-instructions">setuptools 2.1 : Python Package Index</a></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># python ez_setup.py</span>
@@ -568,18 +578,19 @@ Extracting<span class="w"> </span><span class="k">in</span><span class="w"> </sp
 Now<span class="w"> </span>working<span class="w"> </span><span class="k">in</span><span class="w"> </span>/storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1
 Installing<span class="w"> </span>Setuptools
 Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
-<span class="w">  </span>File<span class="w"> </span><span class="s2">"setup.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">28</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;setup.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">28</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
 <span class="w">    </span>from<span class="w"> </span>setuptools.command.test<span class="w"> </span>import<span class="w"> </span><span class="nb">test</span><span class="w"> </span>as<span class="w"> </span>_test
-<span class="w">  </span>File<span class="w"> </span><span class="s2">"/storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1/setuptools/command/test.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;/storage/sdcard0/com.hipipal.qpyplus/cache/tmpCpG6N8/setuptools-2.1/setuptools/command/test.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
 <span class="w">    </span>from<span class="w"> </span>unittest<span class="w"> </span>import<span class="w"> </span>TestLoader,<span class="w"> </span>main
 ImportError:<span class="w"> </span>No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span>unittest
 Something<span class="w"> </span>went<span class="w"> </span>wrong<span class="w"> </span>during<span class="w"> </span>the<span class="w"> </span>installation.
 See<span class="w"> </span>the<span class="w"> </span>error<span class="w"> </span>message<span class="w"> </span>above.
 </code></pre></div>
+
 <p>好吧,只能先放下了, 
 但是,没有 pip 怎么安装上 <a href="http://mercurial.selenic.com/">Mercurial</a> 呢?</p>
 <p>有了 <a href="http://mercurial.selenic.com/">Hg</a> 才真正海阔天空了呢...</p>
-<h3 id="restful-onering">RESTful "OneRing"<a class="headerlink" href="#restful-onering" title="Permanent link">¶</a></h3>
+<h3 id="restful-onering">RESTful "OneRing"<a class="headerlink" href="#restful-onering" title="Permanent link">&para;</a></h3>
 <p>不知道大家记得 <a href="http://code.google.com/p/onering-desktop/wiki/OneRing">OneRing</a>
 卟?!</p>
 <p>豆瓣首席架构师/布道官/CTO 洪教授 亲手玩的项目:</p>
@@ -588,6 +599,7 @@ See<span class="w"> </span>the<span class="w"> </span>error<span class="w"> </sp
 用Javascript编写交互逻辑,
 同时提供用写web后端的技术编写后台逻辑!
 </code></pre></div>
+
 <p>但素,现在有了 QPython 完全可以0成本山寨一个移动版的 MyRing 了哪:</p>
 <p>呼应各种本地的 <a href="http://floss.qiniudn.com/data/20110818160723/index.html">RESTful</a>
 请求,总是要有一个内置的web 服务的,</p>
@@ -597,31 +609,33 @@ See<span class="w"> </span>the<span class="w"> </span>error<span class="w"> </sp
 <div class="highlight"><pre><span></span><code><span class="c1">#qpy:console</span>
 <span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">template</span>
 
-<span class="nd">@route</span><span class="p">(</span><span class="s1">'/hello/&lt;name&gt;'</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello/&lt;name&gt;&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">'&lt;b&gt;Hello {{name}}&lt;/b&gt;!'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">&#39;&lt;b&gt;Hello {{name}}&lt;/b&gt;!&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 
-<span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+<span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
 </code></pre></div>
+
 <p>因为是要守护在后台长期运行的,所以用 <code>#qpy:console</code> 标定</p>
 <p>可惜:</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-error.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-error.jpg"></p>
 <p>原来:</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-install-wsgi.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-install-wsgi.jpg"></p>
 <p>然后:</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-running.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-running.jpg"></p>
 <p>没有然后:</p>
-<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-hello.jpg"/></p>
+<p><img alt="snap4qpy" src="http://0.zoomquiet.top/CPyUG/QPython/snap/140126-qpy-bottle-hello.jpg"></p>
 <p>哈哈! 一切如愿!</p>
-<h2 id="_11">专题体例:<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
+<h2 id="_11">专题体例:<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <p>QPy 的大妈们曰了:  每个专题应该包括 </p>
 <div class="highlight"><pre><span></span><code><span class="nx">Introduction</span><span class="p">,</span><span class="w"> </span>
 <span class="nx">getting</span><span class="w"> </span><span class="nx">start</span><span class="p">(</span><span class="nx">include</span><span class="w"> </span><span class="nx">sample</span><span class="w"> </span><span class="nx">better</span><span class="p">),</span><span class="w"> </span>
 <span class="nx">packages</span><span class="p">,</span><span class="w"> </span>
 <span class="nx">videos</span><span class="w"> </span><span class="p">(</span><span class="nx">searched</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">youtube</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">directly</span><span class="w"> </span><span class="nx">video</span><span class="w"> </span><span class="nx">link</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
+
 <p>好吧,慢慢来,,,下次专注 Bottle 结合 QPython 实现可用随身小工具.</p>
-<h2 id="_12">时间帐单:<a class="headerlink" href="#_12" title="Permanent link">¶</a></h2>
+<h2 id="_12">时间帐单:<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <p>简单回顾一下整个从完全小白到折腾出当前扫盲文章的时间投入:</p>
 <ul>
 <li>1H: 动心,所有相关资料收集,概览</li>
@@ -633,7 +647,7 @@ See<span class="w"> </span>the<span class="w"> </span>error<span class="w"> </sp
 </ul>
 <p><code>18H</code> 总计可统计的大块时间, 其它基本有几乎相同的沟通时间,用在
 通过 微信/邮件/github 等等方式沟通</p>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h2>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>171011 ZQ 迁移到 .io 私人域名中<ul>
 <li>官方文档-&gt; <a href="http://www.qpython.org/document.html">Welcome to read the QPython guide! — QPython 0.9 documentation</a></li>

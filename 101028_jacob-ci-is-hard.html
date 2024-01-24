@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="101028_jacob-ci-is-hard"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/101028_jacob-ci-is-hard.html"/>
-            <meta property="og:description" content="Buildbot, the venerable Python continuous integration server, has the reputation of being complex and difficult to set up. After spending a couple of weeks deep in Buildbot land, I&#39;ve come to the conclusion that this reputation, while true, is only partially deserved. That is, Buildbot is complex, but only if …"/>
+            <meta property="og:description" content="  Part 1: Background Changlog   Buildbot, the venerable Python continuous integration server, has the reputation of being complex and difficult to set up. After spending a couple of weeks deep in Buildbot land, I&#39;ve come to the conclusion that this reputation, while true, is only partially deserved. That is, Buildbot is …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -128,16 +128,13 @@
 		<a href="https://blog.zoomquiet.io/tag/zh.html">Zh</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#part-1-background">Part 1: Background</a></li>
 <li><a href="#changlog">Changlog</a></li>
 </ul>
 </div>
-    </nav>
-
-                
 <p><a href="http://buildbot.net/">Buildbot</a>, 
 the venerable Python 
 <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a>
@@ -149,7 +146,7 @@ has the best one I've run across – but none of these examples make much sense 
 <p>So I'm here to fill that gap. In this series of posts – I think I'm looking at five parts – I'll explain this "Buildbot is a CI framework" view, delve into Buildbot's architecture, and then walk through the complicated-but-worth-the-effort CI sever I've built for Django.</p>
 <p>By way of disclaimer I should mention I'm anything but a Buildbot expert. I'm almost certainly Doing Things Entirely Wrong. I may or may not be using public APIs as I've simply trolled through Buildbot's source until I found something that did what I wanted. However, what I've got here on the other side makes me pretty damn happy, and I want to show it off.</p>
 <p>Here, then, is</p>
-<h2 id="part-1-background">Part 1: Background<a class="headerlink" href="#part-1-background" title="Permanent link">¶</a></h2>
+<h2 id="part-1-background">Part 1: Background<a class="headerlink" href="#part-1-background" title="Permanent link">&para;</a></h2>
 <p>We've been looking for a CI solution for Django for quite some time. Over the years we've tried a bunch of different tools: Buildbot, 
 <a href="http://cruisecontrol.sourceforge.net/">CruiseControl</a>
 , 
@@ -159,6 +156,7 @@ has the best one I've run across – but none of these examples make much sense 
 <p>This led me to my first big CI revelation: </p>
 <div class="highlight"><pre><span></span><code>CI is hard.
 </code></pre></div>
+
 <p>There's any number of "simple" CI tools out there...  and they appear to work for exactly two projects (the project the tool was built to test, and the CI server itself, natch). The general purpose tools – Hudson, Buildbot, CruiseControl, etc. – are big, complicated, and heavily opinionated. This is a clear sign that we're in a space where even the basic tenets of the problem can't be agreed upon by all parties. CI is one of those problems that's hard because there really isn't a good core set of needs to be abstracted. Nearly every project has very different CI needs.</p>
 <p>[This is part of what makes Buildbot so complicated: I think it's actually trying pretty hard to be completely agnostic and allow any kind of continuous integration system you could think up. If Buildbot was more opinionated it could drop some of the layers of abstraction, but because it's trying so hard to be everything to everyone it ends up being crazy complex. I've not decided if this is admirable or crazy. Both, perhaps.]</p>
 <p>So what are Django's needs? What make CI hard for us?</p>
@@ -188,7 +186,7 @@ has the best one I've run across – but none of these examples make much sense 
 <p>Every out-of-the-box CI system I examined failed to give me that workflow. Most failed on the "heterogeneous" requirement. That includes Buildbot. I knew, however, that a few projects – PyPy, Chrome, and Python itself – were using Buildbot to some success against similar issues, and I knew that Buildbot had recently gained the ability to deal with cloud computing. Finally, since Buildbot's written in Python I was fairly confidant in my own ability to hack it to pieces if necessary.</p>
 <p>Well, a couple of weeks later, I'm there: I have a Buildbot-based system that's doing exactly what I described above. I'm still not 100% sure this is the solution, but it's a solution, and it's working.</p>
 <p>The rest of this series will dive into the code. Next time, we'll look at an overview of Buildbot's architecture and configuration, and I'll explain my Buildbot-is-a-framework revelation in more detail.</p>
-<h2 id="changlog">Changlog<a class="headerlink" href="#changlog" title="Permanent link">¶</a></h2>
+<h2 id="changlog">Changlog<a class="headerlink" href="#changlog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>1406?? </li>
 <li>140618 偶遇抄转</li>

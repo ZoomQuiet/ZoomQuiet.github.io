@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="how2rename-mac-screen-shot"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/how2rename-mac-screen-shot.html"/>
-            <meta property="og:description" content="BG¶ 默认系统截屏工具输出图片是: 到桌面 文件名: 屏幕快照 2019-02-13 17.17.32.png goal¶ 当年在 Linux 中,是可以自由定义输出的, 俺期望是: screenshot_190213-17 …"/>
+            <meta property="og:description" content="  BG goal logging 格式 命名 ScreenCapture.strings Automator bash   refer Sayeahooo   BG¶  默认系统截屏工具输出图片是: 到桌面 文件名: 屏幕快照 2019-02-13 17.17.32.png    goal¶  当年在 Linux 中,是可 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -128,8 +128,8 @@
 		<a href="https://blog.zoomquiet.io/tag/scm.html">SCM</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#bg">BG</a></li>
 <li><a href="#goal">goal</a></li>
@@ -145,10 +145,7 @@
 <li><a href="#sayeahooo">Sayeahooo</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<h2 id="bg">BG<a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<h2 id="bg">BG<a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
 <ul>
 <li>默认系统截屏工具输出图片是:<ul>
 <li>到桌面</li>
@@ -156,7 +153,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
 <ul>
 <li>当年在 Linux 中,是可以自由定义输出的, 俺期望是:<ul>
 <li><code>screenshot_190213-17.17.32.jpg</code></li>
@@ -164,44 +161,49 @@
 </li>
 <li>现在怎么作到?</li>
 </ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>记要尝试过程</p>
 </blockquote>
-<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<h3 id="_1">格式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>defaults<span class="w"> </span>write<span class="w"> </span>com.apple.screencapture<span class="w"> </span><span class="nb">type</span><span class="w"> </span>jpg
 $<span class="w"> </span>killall<span class="w"> </span>SystemUIServer
 </code></pre></div>
+
 <p>以上即可</p>
-<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<h3 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>defaults<span class="w"> </span>write<span class="w"> </span>com.apple.screencapture<span class="w"> </span>name<span class="w"> </span>screenshot
 $<span class="w"> </span>killall<span class="w"> </span>SystemUIServer
 </code></pre></div>
+
 <p>以上只能变成:</p>
 <div class="highlight"><pre><span></span><code>screenshot 2019-02-13 17.17.32.jpg
 </code></pre></div>
-<h3 id="screencapturestrings">ScreenCapture.strings<a class="headerlink" href="#screencapturestrings" title="Permanent link">¶</a></h3>
+
+<h3 id="screencapturestrings">ScreenCapture.strings<a class="headerlink" href="#screencapturestrings" title="Permanent link">&para;</a></h3>
 <p>以往可以进行的</p>
 <div class="highlight"><pre><span></span><code>sudo su
 cd /System/Library/CoreServices/SystemUIServer.app/Contents/Resources/Spanish.lpro 
 plutil -convert xml1 ScreenCapture.strings
 vim ScreenCapture.strings
 </code></pre></div>
+
 <p>在 macOS Sierra 10.12.6 中失败:</p>
 <ul>
 <li>无论是否是 root 身份</li>
 <li>都说系统没有权限</li>
 </ul>
-<h3 id="automator">Automator<a class="headerlink" href="#automator" title="Permanent link">¶</a></h3>
+<h3 id="automator">Automator<a class="headerlink" href="#automator" title="Permanent link">&para;</a></h3>
 <p>另外一种思路是用内置自动脚本来刷指定目录中指定文件名的文件名:</p>
 <ul>
 <li>但是, 尝试后发现, 这种可视化编程限制太多</li>
 <li>而且调整困难, 根本无法有效完成设想</li>
 </ul>
-<h3 id="bash">bash<a class="headerlink" href="#bash" title="Permanent link">¶</a></h3>
+<h3 id="bash">bash<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h3>
 <p>经检测:</p>
-<div class="highlight"><pre><span></span><code>screencapture -io ~/Desktop/screenshot_`date '+%y%m%d-%H.%M.%S'`.jpg
+<div class="highlight"><pre><span></span><code>screencapture -io ~/Desktop/screenshot_`date &#39;+%y%m%d-%H.%M.%S&#39;`.jpg
 </code></pre></div>
+
 <p>可以满足所有构想,可是:</p>
 <ul>
 <li>先要打开终端</li>
@@ -220,8 +222,8 @@ vim ScreenCapture.strings
 </li>
 <li>配合 HotKay 达成目标效果 ;-)</li>
 </ul>
-<p><img alt="screenshot_190213" src="https://ipic.zoomquiet.top/2019-02-13-screenshot_190213-23.03.43.jpg"/></p>
-<h2 id="refer">refer<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
+<p><img alt="screenshot_190213" src="https://ipic.zoomquiet.top/2019-02-13-screenshot_190213-23.03.43.jpg"></p>
+<h2 id="refer">refer<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://snowleopardtips.net/tips/everything-you-need-to-know-about-screen-captures.html">TIP: Change default screen shot filenames, format and location | Snow Leopard Tips</a><ul>
 <li><a href="https://www.tekrevue.com/tip/how-to-customize-screenshot-options-in-mac-os-x/">The Complete Guide to Mac OS X Screenshots - TekRevue</a></li>
@@ -237,7 +239,7 @@ vim ScreenCapture.strings
 </ul>
 </li>
 </ul>
-<h2 id="sayeahooo">Sayeahooo<a class="headerlink" href="#sayeahooo" title="Permanent link">¶</a></h2>
+<h2 id="sayeahooo">Sayeahooo<a class="headerlink" href="#sayeahooo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>1.5h 资料搜索理解</li>
 <li>2h 嗯哼</li>

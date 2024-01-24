@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="livin-scrapbook"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/livin-scrapbook.html"/>
-            <meta property="og:description" content="7.7G ZqFLOSS 复制改进后,为毛多了?! zoomq @ MBP111216ZQ in ~/KuaiPan/zScrapBook $ du -hs * 4.0K 7niu-devrel.json 4.0K 7niu-floss.json 4.0K 7niu-skm.json 5.5G ZqDevRel 6.4G ZqFLOSS 3.5 …"/>
+            <meta property="og:description" content="  背景 发展 问题 分析 Changelog   7.7G ZqFLOSS 复制改进后,为毛多了?! zoomq @ MBP111216ZQ in ~/KuaiPan/zScrapBook $ du -hs * 4.0K 7niu-devrel.json 4.0K 7niu-floss.json 4.0K 7niu-skm.json 5 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -128,8 +128,8 @@
 		<a href="https://blog.zoomquiet.io/tag/triggered.html">triggered</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#_1">背景</a></li>
 <li><a href="#_2">发展</a></li>
@@ -138,9 +138,6 @@
 <li><a href="#changelog">Changelog</a></li>
 </ul>
 </div>
-    </nav>
-
-                
 <p><code>7.7G    ZqFLOSS</code> 复制改进后,为毛多了?!</p>
 <div class="highlight"><pre><span></span><code><span class="n">zoomq</span><span class="w"> </span><span class="err">@</span><span class="w"> </span><span class="n">MBP111216ZQ</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
 <span class="o">$</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="o">-</span><span class="n">hs</span><span class="w"> </span><span class="o">*</span>
@@ -154,7 +151,8 @@
 <span class="w"> </span><span class="mi">14</span><span class="n">M</span><span class="w">    </span><span class="n">scraotools_ZqFLOSS</span><span class="o">.</span><span class="n">pkl</span>
 <span class="mf">1.6</span><span class="n">M</span><span class="w">    </span><span class="n">scraotools_ZqSKM</span><span class="o">.</span><span class="n">pkl</span>
 </code></pre></div>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>很久以前, 俺和大家一样,收集整理网络资源的习惯组织方式是:</p>
 <ul>
 <li>目录 (htm 抓网页)</li>
@@ -179,7 +177,7 @@
 </ol>
 <p>ScrapBook 是结合了本地目录管理+内置全文搜索的浏览器扩展工具.</p>
 <p>一切安定了起来</p>
-<h2 id="_2">发展<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h2 id="_2">发展<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>慢慢的,快速收集整理了上万个网页,才发现,好的网页内容:</p>
 <ul>
 <li>一般不长久,原始网站总是很快死亡</li>
@@ -204,7 +202,7 @@
 <li><a href="http://floss.zoomquiet.io/tree/">{ZqFLOSS} index tree exp. As HTML - ScrapBook</a></li>
 <li><a href="http://skm.zoomquiet.io/tree/">{ZqSKM} index tree exp. As HTML - ScrapBook</a></li>
 </ul>
-<h2 id="_3">问题<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h2 id="_3">问题<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>但是,突然有一天,无法在常用的 ScrapBook 界面中对标题进行搜索了
 能将整个浏览器都卡死...</p>
 <p>再查, <code>ZqFLOSS</code> 目录已经突破5万页面,索引 xml 也超过了 25 M!</p>
@@ -222,12 +220,12 @@
 </ul>
 <p>分别对数据目录,以及索引 xml 进行清查</p>
 <p>但是,只有几个丢失...</p>
-<h2 id="_4">分析<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h2 id="_4">分析<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>目测是 FireFox 升级,强行切换了JS 解析内核后,带来的少数不兼容,
 导致了对一定体积的 XML 进行内存调度时,出了问题...</p>
 <p>暂时无法解决.</p>
 <p>已经向作者吼过,看RP 了...</p>
-<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h1>
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
 <ul>
 <li>140405 无解的快速总结</li>
 <li>140217 开始回顾</li>

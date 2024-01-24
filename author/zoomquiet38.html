@@ -87,82 +87,121 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="https://blog.zoomquiet.io/rst2s5-upgraded.html">rst2s5 小折腾</a></h2>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#_1">背景</a></li>
+<li><a href="#_2">问题</a></li>
+<li><a href="#_3">分析</a></li>
+<li><a href="#_4">解决</a></li>
+</ul>
+</div>
+<h1 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p><a href="http://blog.zoomquiet.org/pyblosxom/2010/09/index.html">rst2s5 ~ 好用的S5生成宏 @ 2010-09-18 23:23 - Zoom.Quiet's PyBlosxom blogging</a></p>
+<p>所以 2011 以后所有发布的幻灯都是 rest2s5 生成的了:</p>
+<p><a href="http://s5.zoomquiet.io/">s5.zoomquiet.io</a></p>
+<h1 id="_2">问题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p>忽然发现 …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/rst2s5-upgraded.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://blog.zoomquiet.io/livin-scrapbook.html">ScrapBook 生存指南</a></h2>
-                <div class="summary">
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#_1">背景</a></li>
+<li><a href="#_2">发展</a></li>
+<li><a href="#_3">问题</a></li>
+<li><a href="#_4">分析</a></li>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+</div>
 <p><code>7.7G    ZqFLOSS</code> 复制改进后,为毛多了?!</p>
 <div class="highlight"><pre><span></span><code><span class="n">zoomq</span><span class="w"> </span><span class="err">@</span><span class="w"> </span><span class="n">MBP111216ZQ</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">~/</span><span class="n">KuaiPan</span><span class="o">/</span><span class="n">zScrapBook</span>
 <span class="o">$</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="o">-</span><span class="n">hs</span><span class="w"> </span><span class="o">*</span>
 <span class="mf">4.0</span><span class="n">K</span><span class="w">    </span><span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">devrel</span><span class="o">.</span><span class="n">json</span>
 <span class="mf">4.0</span><span class="n">K</span><span class="w">    </span><span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">floss</span><span class="o">.</span><span class="n">json</span>
 <span class="mf">4.0</span><span class="n">K</span><span class="w">    </span><span class="mi">7</span><span class="n">niu</span><span class="o">-</span><span class="n">skm</span><span class="o">.</span><span class="n">json</span>
-<span class="mf">5.5</span><span class="n">G</span><span class="w">    </span><span class="n">ZqDevRel</span>
-<span class="mf">6.4</span><span class="n">G</span><span class="w">    </span><span class="n">ZqFLOSS</span>
-<span class="mf">3.5 …</span></code></pre></div>
+<span class="mf">5 …</span></code></pre></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/livin-scrapbook.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">如何基于CB3构建家庭服务器</a></h2>
-                <div class="summary">
-<p><a href="http://blog.zoomquiet.io/cbi-zq-install.html">CBInstallfest 的体验</a>
-之后,总是要一步步完成心目中的 家服务器</p>
-<h1 id="issue">Issue<a class="headerlink" href="#issue" title="Permanent link">¶</a></h1>
-<p>基于CB3使用 lununtu-server-VGA 操作系统</p>
+                <div class="summary"><div class="toc">
 <ul>
-<li>环境:</li>
-<li>.bashrc</li>
-<li>
-<p>.inputrc</p>
-</li>
-<li>
-<p>预装: </p>
-</li>
-<li>sshd</li>
-<li>apt-fast<ul>
-<li><a href="http://www.mattparnell.com/linux/apt-fast/">Index of /linux/apt-fast</a></li>
+<li><a href="#issue">Issue</a></li>
+<li><a href="#todo">TODO</a><ul>
+<li><a href="#_1">分析</a></li>
 </ul>
 </li>
-<li>vim</li>
-<li>mc</li>
-<li>
-<p>...</p>
+<li><a href="#_2">过程</a><ul>
+<li><a href="#cb">CB 初始化</a></li>
+<li><a href="#_3">系统整顿</a><ul>
+<li><a href="#utf8">UTF8</a></li>
+</ul>
 </li>
-<li>
-<p>不要: </p>
-</li>
-<li>php</li>
-<li>mysql</li>
-<li>apache …</li></ul>
+<li><a href="#_4">数据迁移</a><ul>
+<li><a href="#_5">相关片段</a></li>
+<li><a href="#_6">外置硬盘盒</a></li>
+<li><a href="#sshfs">伟光大的 sshfs</a></li>
+<li><a href="#exfat">exFAT</a></li>
+<li><a href="#_7">系统硬盘</a><ul>
+<li><a href="#fatab">fatab</a></li>
+<li><a href="#_8">你不能在当前挂载着的分 …</a></li></ul></li></ul></li></ul></li></ul></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/cb3-howto-make-hmsrv.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/init-my-qpy-env.html">如何自在的折腾QPy</a></h2>
-                <div class="summary">
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>QPython 知道有两年了,是看 <a href="http://book.douban.com/subject/10561367/">Head First Python(中文版) (豆瓣)</a> 时,发现竟然有 
-<a href="http://code.google.com/p/android-scripting/">SL4A</a></p>
-<p>这种神器! Google 果断是业界良心哪,
-可惜: 从<a href="http://code.google.com/p/android-scripting/downloads/list">Downloads</a>
-可以看出 ,已经停 …</p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/init-my-qpy-env.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://blog.zoomquiet.io/jump-into-7niu.html">迁出RTFD.org</a></h2>
-                <div class="summary">
-<h1 id="rtfdorg">RTFD.org<a class="headerlink" href="#rtfdorg" title="Permanent link">¶</a></h1>
+                <div class="summary"><div class="toc">
 <ul>
-<li>正名 readthedocs.org</li>
-<li>别名儿 <code>RTFD</code>.org</li>
+<li><a href="#_1">背景</a></li>
+<li><a href="#_2">目标</a></li>
+<li><a href="#_3">环境准入</a><ul>
+<li><a href="#_4">硬件</a></li>
 </ul>
-<p>是一个良心服务, 自动将指定的任何一个仓库中的 Sphinx 工程,
-根据提交事件,自动同步,编译,发布.</p>
-<p>完 …</p>
-                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/jump-into-7niu.html">more ...</a>
+</li>
+<li><a href="#_5">探索</a><ul>
+<li><a href="#_6">上传</a><ul>
+<li><a href="#ssh">SSH</a></li>
+<li><a href="#busybox">BusyBox</a></li>
+</ul>
+</li>
+<li><a href="#_7">运行</a><ul>
+<li><a href="#beta">BETA乱入</a></li>
+<li><a href="#qpython">QPython头声明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#qpywebapp">qpy:webapp:</a></li>
+<li><a href="#qpyfullscreen">qpy:fullscreen</a></li>
+<li><a href="#qpylocalhost8080">qpy://localhost:8080</a><ul>
+<li><a href="#_8">自动</a><ul>
+<li><a href="#fabric">Fabric</a></li>
+<li><a href="#_9">日志</a></li>
+</ul>
+</li>
+<li><a href="#_10">结论</a><ul>
+<li><a href="#todo">TODO</a></li>
+<li><a href="#pip">pip</a></li>
+<li><a href="#restful-onering">RESTful "OneRing"</a></li>
+</ul>
+</li>
+<li><a href="#_11">专题体例:</a></li>
+<li><a href="#_12">时间帐单:</a></li>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>QPython …</p>
+                    <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/init-my-qpy-env.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -254,6 +293,8 @@
                         href="https://blog.zoomquiet.io/author/zoomquiet41.html">41</a></li>
                 <li class=""><a
                         href="https://blog.zoomquiet.io/author/zoomquiet42.html">42</a></li>
+                <li class=""><a
+                        href="https://blog.zoomquiet.io/author/zoomquiet43.html">43</a></li>
                 <li class="next"><a
                         href="https://blog.zoomquiet.io/author/zoomquiet39.html">&raquo;</a></li>
         </ul>

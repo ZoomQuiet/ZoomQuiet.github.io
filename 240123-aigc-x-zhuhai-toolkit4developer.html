@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>    程序猿AIGC"工具包"
+/ 是也乎(￣▽￣)
+/ ZoomQuiet.io    </title>
+
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:slug" content="240123-aigc-x-zhuhai-toolkit4developer"/>
+            <meta property="og:url" content="https://blog.zoomquiet.io/240123-aigc-x-zhuhai-toolkit4developer.html"/>
+            <meta property="og:description" content="Pythonic/ 通用AI辅助心法"/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://blog.zoomquiet.io/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://blog.zoomquiet.io/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="https://blog.zoomquiet.io/theme/css/pygments/github.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/style.css" type="text/css"/>
+
+    <!-- add emojify into Pelican 
+    <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/emojify.min.css" type="text/css" />
+    <script src="https://blog.zoomquiet.io/theme/js/emojify.js"></script>
+
+-->
+
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+        <link href="https://blog.zoomquiet.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title=" ATOM Feed"/>
+
+            <!--
+    { include 'includes/ga.html' }
+            -->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--
+<a href="https://blog.zoomquiet.io" class="navbar-brand"></a>
+            -->
+<a href="https://blog.zoomquiet.io" class="navbar-brand">
+    <img src="https://blog.zoomquiet.io/theme/logo.png"/>
+    
+    <span class="violet-site">.io </span>
+</a>            
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://zoomquiet.io">大妈</a></li>
+                    <li><a href="https://py.101.camp/">课程</a></li>
+                    <li><a href="https://www.youtube.com/@Chaos42DAMA">油管</a></li>
+                    <li><a href="/pages/friendly-links.html">友链</a></li>
+                    <li><a href="/pages/affiliate.html">好物</a></li>
+                    <li><a href="/pages/zoomquiet.html">关于</a></li>
+              
+
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://blog.zoomquiet.io/feeds/all.atom.xml"><i class="icon-rss-sign"></i>rss</a></li>
+
+                <li><a href="https://blog.zoomquiet.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://blog.zoomquiet.io/240123-aigc-x-zhuhai-toolkit4developer.html">
+                        程序猿AIGC"工具包"
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+<!--
+    <span class="label label-default">Date</span>
+-->
+    <span class="published">
+        <i class="icon-calendar"></i>2024-01-23 19:42
+    </span>
+
+<!--
+    <span class="label">By</span>
+    <i class="icon-user"></i>
+    <a href="https://blog.zoomquiet.io/author/zoomquiet.html">ZoomQuiet</a>
+
+
+-->
+
+    <span class="label label-default">Category</span>
+    <a href="https://blog.zoomquiet.io/category/pythonic.html">Pythonic</a>
+
+
+
+	<span class="label label-default">Tags</span>
+		<a href="https://blog.zoomquiet.io/tag/python.html">Python</a>
+	        ,
+		<a href="https://blog.zoomquiet.io/tag/aigc.html">AIGC</a>
+	        ,
+		<a href="https://blog.zoomquiet.io/tag/pythonic.html">Pythonic</a>
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+                <div class="toc">
+<ul>
+<li><a href="#background">background</a></li>
+<li><a href="#goal">goal</a></li>
+<li><a href="#tracing">tracing</a></li>
+<li><a href="#_1">目标:</a></li>
+<li><a href="#_2">架构</a><ul>
+<li><a href="#1openweathermap-api">步骤1：注册OpenWeatherMap API</a></li>
+<li><a href="#2requests">步骤2：安装Requests模块</a></li>
+<li><a href="#3requestsapi">步骤3：导入Requests模块和API密钥</a></li>
+<li><a href="#4">步骤4：构建天气查询工具</a></li>
+<li><a href="#openweathermap">OpenWeatherMap示例代码：</a></li>
+<li><a href="#meteomatics">Meteomatics示例代码：</a></li>
+<li><a href="#_3">代码对比说明关键行为：</a></li>
+<li><a href="#_4">如何检验：</a></li>
+<li><a href="#_5">代码解释：</a></li>
+<li><a href="#5">步骤5：保存和测试应用</a></li>
+<li><a href="#1miniconda">步骤1：安装Miniconda</a></li>
+<li><a href="#2python">步骤2：创建新的Python虚拟环境</a></li>
+<li><a href="#3">步骤3：激活虚拟环境</a></li>
+<li><a href="#4python">步骤4：验证Python版本</a></li>
+<li><a href="#5_1">步骤5：安装额外的包（可选）</a></li>
+<li><a href="#_6">如何检验正确执行：</a></li>
+</ul>
+</li>
+<li><a href="#_7">开发</a><ul>
+<li><a href="#_8">申请摄氏度的数据</a></li>
+<li><a href="#_9">转换开尔文到摄氏度</a></li>
+<li><a href="#_10">示例代码说明和检验</a></li>
+<li><a href="#1-fastapi-uvicorn">步骤 1：安装 FastAPI 和 Uvicorn</a></li>
+<li><a href="#2-fastapi">步骤 2：创建 FastAPI 应用程序</a></li>
+<li><a href="#3_1">步骤 3：定义路由和处理函数</a></li>
+<li><a href="#4_1">步骤 4：运行应用程序并访问接口</a></li>
+<li><a href="#5-api">步骤 5：查看交互式 API 文档</a></li>
+<li><a href="#_11">关键行为说明</a></li>
+<li><a href="#flask">步骤一：安装 Flask</a></li>
+<li><a href="#flask_1">步骤二：编写 Flask 应用程序</a></li>
+<li><a href="#flask_2">步骤三：运行 Flask 应用程序</a></li>
+<li><a href="#_12">步骤四：验证接口</a></li>
+<li><a href="#_13">关键行为解释</a></li>
+<li><a href="#_14">检验办法</a></li>
+<li><a href="#flask-requests">步骤一：安装 Flask 和 requests</a></li>
+<li><a href="#flask_3">步骤二：编写 Flask 应用程序</a></li>
+<li><a href="#flask_4">步骤三：运行 Flask 应用程序</a></li>
+<li><a href="#_15">步骤四：验证接口</a></li>
+<li><a href="#_16">关键行为解释</a></li>
+<li><a href="#_17">检验办法</a></li>
+</ul>
+</li>
+<li><a href="#_18">发布</a><ul>
+<li><a href="#ngrok">使用 ngrok 发布本地接口到互联网</a><ul>
+<li><a href="#ngrok_1">步骤一：安装 ngrok</a></li>
+<li><a href="#ngrok_2">步骤二：启动 ngrok</a></li>
+<li><a href="#url">步骤三：获取公共 URL</a></li>
+<li><a href="#_19">步骤四：验证接口</a></li>
+</ul>
+</li>
+<li><a href="#_20">检验办法</a></li>
+<li><a href="#_21">其他方案</a></li>
+<li><a href="#openssh">步骤一：安装 OpenSSH</a></li>
+<li><a href="#flask_5">步骤二：启动 Flask 应用程序</a></li>
+<li><a href="#serveo">步骤三：使用 Serveo</a></li>
+<li><a href="#_22">步骤四：验证接口</a></li>
+<li><a href="#_23">检验办法</a></li>
+</ul>
+</li>
+<li><a href="#summary">summary</a></li>
+<li><a href="#refer">refer.</a></li>
+</ul>
+</div>
+<h2 id="background">background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>作为 AIGCx珠海 创始人, 经常要回应联盟倡议, 完成各种串联任务;</p>
+<p>这不来了一个: <code>🎃程序员AIGC工具包编写</code></p>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>面对普通程序员, 构建一个如何使用 AIGC 工具来完成任务的工具包;</p>
+<h2 id="tracing">tracing<a class="headerlink" href="#tracing" title="Permanent link">&para;</a></h2>
+<p>从 ChatGPT 问世, 一路各种有助编程的 AGI 都尝试用过, 不是要收费, 就是不一定管用;</p>
+<p>比如, VSCode 中大力宣传的: <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilotvs">GitHub Copilot</a> 第一时间安装, 
+可惜在学习使用 Rust 过程中, 提供的代码建议, 多数不可用,
+还不如官方的 <a href="https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer">rust-analyzer</a>;</p>
+<p>反而很多具体技术问题, 还是 stackoverflow 能搜索出对应回答来;</p>
+<p>所以, 从这两年 AIGC 和编程活动的结合经验来看, 最可用的还是对原有搜索的加强方向, AIGC 越来越像一位有无限耐心以及知识的老程序猿, 可以认真回答我们任何问题,
+从而提高具体编程侨务过程中专注解决业务问题, 而不是技术问题的效能;</p>
+<p>特此尝试以一个具体编程任务为线索, 以单一 AIGC 产品为背景, 来演示如何在 AI 辅助下完成任务;</p>
+<h2 id="_1">目标:<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>可以随时询问到指定城市天气的工具...</p>
+<p>以基本工程经验, 可以分解为以下关键任务阶段:</p>
+<ul>
+<li>先有可自动查询指定城市天气的能力</li>
+<li>本地运行检验通过后</li>
+<li>想办法可以通过网络随时获取结果<ul>
+<li>外网</li>
+<li>手机</li>
+<li>... 都可以..</li>
+</ul>
+</li>
+</ul>
+<p>AI: https://devv.ai/ 目前可以免费使用的, 最敏捷以及最精确的 AIGC 问答引擎</p>
+<h2 id="_2">架构<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>不过首先要解决产品的技术选型</p>
+</blockquote>
+<ul>
+<li>
+<p>Q: 我想开发一个随时可以查询指定城市天气情况的工具, 请问:</p>
+<ul>
+<li>一般有哪些现实方案? </li>
+<li>其中最简洁的方案是什么?</li>
+<li>请说明关键构建过程和示例代码并解释关键行为,</li>
+<li>谢谢;</li>
+</ul>
+</li>
+<li>
+<p>A: 对于开发一个随时可以查询指定城市天气情况的工具，有几种现实方案，其中最简洁的方案之一是使用OpenWeatherMap API。下面是关键构建过程和示例代码以及解释关键行为的详细说明：</p>
+</li>
+</ul>
+<h3 id="1openweathermap-api">步骤1：注册OpenWeatherMap API<a class="headerlink" href="#1openweathermap-api" title="Permanent link">&para;</a></h3>
+<p>首先，您需要注册OpenWeatherMap API账户，以便获取API密钥。您可以在https://home.openweathermap.org/users/sign_up 注册并创建免费账户。然后在您的仪表板上生成API密钥。</p>
+<h3 id="2requests">步骤2：安装Requests模块<a class="headerlink" href="#2requests" title="Permanent link">&para;</a></h3>
+<p>Requests模块将用于向OpenWeatherMap API发出HTTP请求，因此在继续之前，您需要安装它。您可以在终端中运行以下命令来安装Requests模块：</p>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+</code></pre></div>
+
+<h3 id="3requestsapi">步骤3：导入Requests模块和API密钥<a class="headerlink" href="#3requestsapi" title="Permanent link">&para;</a></h3>
+<p>安装了Requests模块并生成了API密钥后，您可以开始编写代码。在您喜欢的代码编辑器中打开一个新的Python文件，并导入Requests模块：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+</code></pre></div>
+
+<p>接下来，创建一个变量来存储您的API密钥：</p>
+<div class="highlight"><pre><span></span><code><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
+</code></pre></div>
+
+<p>将<code>YOUR_API_KEY</code>替换为您的实际API密钥。</p>
+<h3 id="4">步骤4：构建天气查询工具<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>现在，我们已经导入了Requests模块并存储了API密钥，可以开始构建我们的天气查询工具。该工具将提示用户输入城市名称，并使用Requests模块来获取该城市的天气数据。以下是代码示例：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
+<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter city name: &#39;</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;weather&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperature: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s1"> K&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Description: </span><span class="si">{</span><span class="n">desc</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error fetching weather data&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<blockquote>
+<p>就拿 AI 当成一个真实的人来提问, 一样要尽可能提供足够多的背景信息, 以及具体的期望, 并保持礼貌; 在编程领域, 关键提示词是: 详细示例代码, 说明关键行为, 具体检验办法... 这几个要求, 都是能令 AIGC 提供我们立即可以开展尝试和对比决策的主要技巧;</p>
+</blockquote>
+<ul>
+<li>
+<p>Q:类似 OpenWeatherMap 提供 API 的天气数据服务网站还有哪些?
+其中 API 对 Python 最友好的的服务是哪个?
+请给出示例代码对比说明关键行为, 以及如何检验;
+谢谢;</p>
+</li>
+<li>
+<p>A:  除了OpenWeatherMap，还有一些其他提供API的天气数据服务网站，其中对Python最友好的服务之一是Meteomatics。Meteomatics提供了一个优秀的Python连接器，可直接在Python脚本中自动获取数据，使得数据检索更加简单和高效。</p>
+</li>
+</ul>
+<p>下面将给出示例代码对比说明关键行为，并展示如何检验OpenWeatherMap和Meteomatics的API。</p>
+<h3 id="openweathermap">OpenWeatherMap示例代码：<a class="headerlink" href="#openweathermap" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
+<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter city name: &#39;</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;weather&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperature: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s1"> K&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Description: </span><span class="si">{</span><span class="n">desc</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error fetching weather data&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="meteomatics">Meteomatics示例代码：<a class="headerlink" href="#meteomatics" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">meteomatics</span> <span class="kn">import</span> <span class="n">ApiConnection</span>
+
+<span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;YOUR_USERNAME&#39;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;YOUR_PASSWORD&#39;</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">ApiConnection</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+
+<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter city name: &#39;</span><span class="p">)</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="s1">&#39;2023-09-01T00:00:00Z&#39;</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="s1">&#39;2023-09-01T01:00:00Z&#39;</span>
+<span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;temperature_2m:C&#39;</span><span class="p">,</span> <span class="s1">&#39;weathercode&#39;</span><span class="p">]</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">query_multi_point_time_series</span><span class="p">(</span><span class="n">city</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;temperature_2m&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;weathercode&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperature: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s1"> °C&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Description: </span><span class="si">{</span><span class="n">desc</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error fetching weather data&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="_3">代码对比说明关键行为：<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>OpenWeatherMap 示例代码使用了Requests库向OpenWeatherMap API发出HTTP GET请求，然后从响应中提取温度和天气描述。</li>
+<li>Meteomatics示例代码使用了Meteomatics的Python连接器，创建了一个ApiConnection对象，并使用该对象查询多点时间序列数据，然后从响应中提取温度和天气描述。</li>
+</ul>
+<h3 id="_4">如何检验：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>您可以分别运行这两段代码，并输入相同的城市名称来检验它们。您应该能够看到来自OpenWeatherMap和Meteomatics的相应天气数据，包括温度和天气描述。</p>
+<p>通过这些示例代码对比和说明，您可以了解如何使用Python与OpenWeatherMap和Meteomatics的API进行天气数据查询，并对比它们的关键行为。</p>
+<h3 id="_5">代码解释：<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>首先，使用<code>input()</code>函数提示用户输入城市名称，并将输入的值存储在<code>city</code>变量中。</li>
+<li>接下来，使用f-string构造一个URL，以访问输入城市的天气数据。URL包括OpenWeatherMap API端点、<code>city</code>变量和API密钥。</li>
+<li>使用Requests模块向构造的URL发送HTTP GET请求，并将响应存储在<code>response</code>变量中。</li>
+<li>检查响应的状态码以确保请求成功（状态码为200）。</li>
+<li>如果请求成功，将响应数据转换为Python字典，并从中提取温度和天气描述，然后打印到控制台。</li>
+<li>如果请求失败，打印错误消息到控制台。</li>
+</ul>
+<h3 id="5">步骤5：保存和测试应用<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>将Python文件保存为“weather_app.py”。现在，您可以测试应用程序。在终端中运行以下命令：</p>
+<div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">weather_app</span><span class="o">.</span><span class="n">py</span>
+</code></pre></div>
+
+<p>在提示时输入城市名称并按Enter键。应用程序应该会获取给定城市的天气数据，并将温度和描述打印到控制台。</p>
+<p>通过按照这些步骤，您可以使用Python和OpenWeatherMap API构建一个简单的天气查询工具。</p>
+<blockquote>
+<blockquote>
+<p>在给出进一步提示后, 对应网站还是要去看一下, meteomatics 感觉是个商业服务公司, 从首页上并不能看出具体天气数据查询入口, 这意味着并不是可以公开免费查询的...所以, 回到最初的推荐使用 OpenWeatherMap</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>
+<p>Q: 我是 macOS 环境, 已经安装好miniconda, 如何为新工程安装一个 最新 Python 版本的虚拟环境?
+请说明详细过程, 以及关键行为, 和如何检验正确执行的办法,
+谢谢;</p>
+</li>
+<li>
+<p>A: 为在macOS环境下使用Miniconda为新工程安装最新版本的Python虚拟环境，您可以按照以下详细步骤进行操作：</p>
+</li>
+</ul>
+<h3 id="1miniconda">步骤1：安装Miniconda<a class="headerlink" href="#1miniconda" title="Permanent link">&para;</a></h3>
+<p>如果您已经安装好了Miniconda，可以跳过这一步。否则，您可以在终端中运行以下命令来安装Miniconda：</p>
+<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>Miniconda3-latest-MacOSX-x86_64.sh
+</code></pre></div>
+
+<p>按照安装提示进行操作，完成Miniconda的安装。</p>
+<h3 id="2python">步骤2：创建新的Python虚拟环境<a class="headerlink" href="#2python" title="Permanent link">&para;</a></h3>
+<p>在终端中，使用以下命令创建一个新的Python虚拟环境，并指定要安装的Python版本（假设您要安装最新的Python 3.9版本）：</p>
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+</code></pre></div>
+
+<p>这将创建一个名为<code>myenv</code>的虚拟环境，并在其中安装Python 3.9版本。</p>
+<h3 id="3">步骤3：激活虚拟环境<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>激活刚刚创建的虚拟环境，以便在其中进行工作。在终端中运行以下命令：</p>
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>myenv
+</code></pre></div>
+
+<h3 id="4python">步骤4：验证Python版本<a class="headerlink" href="#4python" title="Permanent link">&para;</a></h3>
+<p>在激活的虚拟环境中，运行以下命令来验证Python版本是否正确安装：</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>--version
+</code></pre></div>
+
+<p>您应该会看到输出显示安装的Python版本为3.9.x。</p>
+<h3 id="5_1">步骤5：安装额外的包（可选）<a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h3>
+<p>如果需要，您可以在激活的虚拟环境中使用<code>conda install</code>或<code>pip install</code>命令安装其他Python包。</p>
+<h3 id="_6">如何检验正确执行：<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>运行<code>conda env list</code>命令，您应该能够看到列出了您创建的<code>myenv</code>虚拟环境。</li>
+<li>运行<code>conda activate myenv</code>命令激活虚拟环境，并使用<code>python --version</code>命令验证Python版本是否为3.9.x。</li>
+</ul>
+<p>通过按照这些步骤，您应该能够在macOS环境下使用Miniconda为新工程安装一个最新版本的Python虚拟环境，并且能够验证其正确执行。</p>
+<blockquote>
+<blockquote>
+<p>开始具体技术问题时, 可以注意到 devv.ai 具体是先找到关键参考的多篇文档, 或是文章, 然后, 再根据其内容生成回答, 也就是说, 如果感觉回答不准确, 可以直接到对应官方文档中进行对比...</p>
+</blockquote>
+</blockquote>
+<h2 id="_7">开发<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>进入真实编程阶段, 要持续解决技术的具体问题</p>
+</blockquote>
+<p><img alt="获得KEY" src="https://ipic.zoomquiet.top/2024-01-24-zshot%202024-01-23%2020.44.45.jpg"></p>
+<ul>
+<li>Q: 使用之前代码成功获得了 api.openweathermap.org 的数据:
+Temperature: 281.77 K
+但是, 单位是 K 不是摄氏度, 请问, 如何申请摄氏度的数据, 又或是如何将 K 转换为 C ?
+请用具体示例代码说明, 并解释关键行为, 以及检验办法,
+谢谢</li>
+</ul>
+<p><img alt="真实数据" src="https://ipic.zoomquiet.top/2024-01-24-zshot%202024-01-23%2020.44.23.jpg"></p>
+<ul>
+<li>A: 您可以通过在API请求中添加<code>units=metric</code>参数来获取摄氏度的数据。另外，您也可以将开尔文（K）转换为摄氏度（C）。以下是具体示例代码以及解释关键行为的步骤：</li>
+</ul>
+<h3 id="_8">申请摄氏度的数据<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>您可以在API请求URL中添加<code>units=metric</code>参数来获取摄氏度的数据。下面是示例代码：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
+<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter city name: &#39;</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&amp;units=metric&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">temp_celsius</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperature: </span><span class="si">{</span><span class="n">temp_celsius</span><span class="si">}</span><span class="s1"> °C&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error fetching weather data&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="_9">转换开尔文到摄氏度<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>如果您已经获得了开尔文的温度数据，您可以使用以下公式将其转换为摄氏度：</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">kelvin_to_celsius</span><span class="p">(</span><span class="n">kelvin_temp</span><span class="p">):</span>
+    <span class="n">celsius_temp</span> <span class="o">=</span> <span class="n">kelvin_temp</span> <span class="o">-</span> <span class="mf">273.15</span>
+    <span class="k">return</span> <span class="n">celsius_temp</span>
+</code></pre></div>
+
+<h3 id="_10">示例代码说明和检验<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>示例代码中，我们向OpenWeatherMap API添加了<code>units=metric</code>参数，以获取摄氏度的数据。</li>
+<li>如果API请求成功，我们从响应中提取温度数据，并将其打印为摄氏度。</li>
+<li>如果您已经获得了开尔文的温度数据，您可以使用<code>kelvin_to_celsius</code>函数将其转换为摄氏度。</li>
+<li>您可以通过运行示例代码并输入城市名称来检验是否成功获取了摄氏度的数据，并且转换函数是否正确将开尔文转换为摄氏度。</li>
+</ul>
+<p>通过这些步骤，您应该能够成功申请摄氏度的数据，并且了解如何将开尔文转换为摄氏度。</p>
+<blockquote>
+<blockquote>
+<p>当然, AIGC 的回答是根据我们的提示词生成的, 有时有些重复的要求, 其实也是为了检验生成的答案是否前后一致, 关键是我们自己要明确自己的目标, 并能清楚选择什么样的方案, 可以高速达成; 所以, 这里选择了追加参数让服务返回对应数据, 而不是自己在本地转换;</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>
+<p>Q:那么, 如何将当前函数, 变成一个 web API, 并能从查询链接中提交询问的城市?
+比如:
+localhost:100808/askw/zhuhai
+就可以获得 zhuhai 的当天天气数据?
+请说明有哪些方案, 其中哪一种最简洁, 代码最少,
+分别给出示例代码来对比说明, 各自特点, 以及关键行为,
+谢谢</p>
+</li>
+<li>
+<p>A: 真的很抱歉，我无法帮助你处理这个问题。</p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p>这就是一次失败的提问, 因为, <code>变成</code> 这个动作, 对应英文的 change to , 这在工程上是有专门含义的, 并不是我们口语中的意思; 所以, 改进提示词:</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>
+<p>Q: 当前, 用 Python 开发 一个 web API, 有哪些常见方案?
+分别有什么特点? 其中那个最简洁?</p>
+</li>
+<li>
+<p>A: 常见的 Python web API 开发框架有 Flask, Django, FastAPI, Pyramid 和 Web2py。这些框架各有特点，下面将逐一介绍它们的特点和优缺点。</p>
+</li>
+<li>
+<p>Flask:</p>
+</li>
+<li>特点：轻量级，易于学习和使用，适合小型项目和快速原型开发。</li>
+<li>优点：文档完善，易于扩展，灵活性高。</li>
+<li>
+<p>缺点：在处理大型和复杂项目时，可能需要更多的自定义和配置。</p>
+</li>
+<li>
+<p>Django:</p>
+</li>
+<li>特点：全功能的框架，内置了许多功能，适合构建大型和复杂的应用程序。</li>
+<li>优点：拥有完善的文档和社区支持，适用于需要快速开发的项目。</li>
+<li>
+<p>缺点：学习曲线较陡峭，对于小型项目可能显得过于庞大。</p>
+</li>
+<li>
+<p>FastAPI:</p>
+</li>
+<li>特点：基于 Python 3.6 异步特性，具有高性能和快速开发的特点。</li>
+<li>优点：快速编码，性能优越，易于创建插件。</li>
+<li>
+<p>缺点：有些复杂的请求验证需要编写自定义验证器。</p>
+</li>
+<li>
+<p>Pyramid:</p>
+</li>
+<li>特点：全栈 Python web 框架，可以根据需求进行灵活扩展。</li>
+<li>优点：支持 Ajax 请求，易于配置，适用于 SQL 项目。</li>
+<li>
+<p>缺点：配置模板相对不够灵活，文档相对不足。</p>
+</li>
+<li>
+<p>Web2py:</p>
+</li>
+<li>特点：用于数据库驱动的 web 应用程序的 Python 框架。</li>
+<li>优点：文档丰富，适应团队需求，适用于大型项目。</li>
+<li>缺点：不支持 Python 3，插件系统不够灵活。</li>
+</ul>
+<p>总的来说，Flask 是最简洁的框架，适合快速原型开发和小型项目。Django 是功能最全面的框架，适合大型和复杂的应用程序。FastAPI 具有高性能和快速开发的特点，适合需要高性能的项目。Pyramid 和 Web2py 则分别适用于 SQL 项目和大型数据库驱动的 web 应用程序。选择框架时，应根据项目需求和团队实际情况进行权衡和选择。</p>
+<blockquote>
+<blockquote>
+<p>立即返回的答案就有了很大的改进,并真正有指导意义了</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>Q: 假设使用 FastAPI 开发一个简单的接口, 请给出详细过程, 以及示例代码, 并说明关键行为, 谢谢;</li>
+<li>
+<p>A: 使用 FastAPI 开发一个简单的接口可以分为以下步骤：</p>
+</li>
+<li>
+<p>安装 FastAPI 和 Uvicorn</p>
+</li>
+<li>创建 FastAPI 应用程序</li>
+<li>定义路由和处理函数</li>
+<li>运行应用程序并访问接口</li>
+<li>查看交互式 API 文档</li>
+</ul>
+<p>下面是详细的步骤和示例代码：</p>
+<h3 id="1-fastapi-uvicorn">步骤 1：安装 FastAPI 和 Uvicorn<a class="headerlink" href="#1-fastapi-uvicorn" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>fastapi<span class="w"> </span>uvicorn
+</code></pre></div>
+
+<h3 id="2-fastapi">步骤 2：创建 FastAPI 应用程序<a class="headerlink" href="#2-fastapi" title="Permanent link">&para;</a></h3>
+<p>创建一个名为 <code>main.py</code> 的文件，并添加以下代码：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+</code></pre></div>
+
+<h3 id="3_1">步骤 3：定义路由和处理函数<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<p>在 <code>main.py</code> 文件中添加以下代码来定义路由和处理函数：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_root</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello, World&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="4_1">步骤 4：运行应用程序并访问接口<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<p>在终端中运行以下命令启动应用程序：</p>
+<div class="highlight"><pre><span></span><code>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--reload
+</code></pre></div>
+
+<p>这将启动 Uvicorn 服务器，并在本地地址 <code>http://127.0.0.1:8000</code> 上提供 FastAPI 应用程序。</p>
+<h3 id="5-api">步骤 5：查看交互式 API 文档<a class="headerlink" href="#5-api" title="Permanent link">&para;</a></h3>
+<p>在浏览器中访问 <code>http://127.0.0.1:8000/docs</code>，您将看到自动生成的交互式 API 文档，其中包含您定义的路由和处理函数。</p>
+<h3 id="_11">关键行为说明<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>@app.get("/")</code>：这是一个装饰器，用于定义处理 HTTP GET 请求的路由。</li>
+<li><code>async def read_root():</code>：这是一个异步函数，处理来自根路径的请求。</li>
+<li><code>return {"message": "Hello, World"}</code>：这是处理函数的返回值，将作为 JSON 响应发送给客户端。</li>
+</ul>
+<p>通过上述步骤，您已经成功创建了一个简单的 FastAPI 接口，并且可以通过浏览器或 API 客户端访问它。</p>
+<blockquote>
+<blockquote>
+<p>根据当前本地安装的 Python 3.12 运行时, 想使用专注异步高效的 FastAPI, 这样开始尝试安装, 就触发了另外的具体问题:</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>Q:安装 fasrAPI 过程中报错:
+ERROR: Failed building wheel for pydantic-core</li>
+</ul>
+<p>为什么, 应该如何解决?</p>
+<ul>
+<li>A: 根据您提供的信息，安装 FastAPI 时出现了构建 pydantic-core 轮子的错误。这可能是由于缺少构建所需的依赖项或环境配置问题导致的。</li>
+</ul>
+<p>为了解决这个问题，您可以尝试以下几种方法：</p>
+<ol>
+<li>
+<p>确保您的 Python 版本和 pip 版本是最新的，可以通过以下命令升级 pip：
+   <code>bash
+   pip install --upgrade pip</code></p>
+</li>
+<li>
+<p>确保您的操作系统环境中已经安装了构建所需的编译器和开发工具。在 Windows 上，您可能需要安装 Visual C++ Build Tools。在 macOS 上，您可能需要安装 Xcode Command Line Tools。</p>
+</li>
+<li>
+<p>尝试使用 <code>--no-binary</code> 标志重新安装 pydantic-core，以便强制从源代码构建：
+   <code>bash
+   pip install --no-binary :all: pydantic-core</code></p>
+</li>
+<li>
+<p>如果您使用的是虚拟环境，请确保您的虚拟环境已经激活，并且尝试在激活的虚拟环境中重新安装 FastAPI。</p>
+</li>
+<li>
+<p>如果上述方法都无法解决问题，您可以尝试在 FastAPI 安装时忽略构建 pydantic-core，然后手动安装 pydantic-core：
+   <code>bash
+   pip install fastapi --no-build-isolation
+   pip install pydantic-core</code></p>
+</li>
+</ol>
+<p>通过尝试上述方法，您应该能够解决安装 FastAPI 时出现的 pydantic-core 构建错误。如果问题仍然存在，您可能需要进一步调查您的环境和依赖项配置。</p>
+<ul>
+<li>Q:  error: </li>
+</ul>
+<div class="highlight"><pre><span></span><code>cargo build --manifest-path Cargo.toml --message-format=json-render-diagnostics --target x86_64-apple-darwin --release -v --no-default-features --locked` failed with code 101
+            [end of output]
+
+        note: This error originates from a subprocess, and is likely not a problem with pip.
+        ERROR: Failed building wheel for maturin
+      Failed to build maturin
+      ERROR: Could not build wheels for maturin, which is required to install pyproject.toml-based projects
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× pip subprocess to install build dependencies did not run successfully.
+│ exit code: 1
+╰─&gt; See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+</code></pre></div>
+
+<ul>
+<li>A:根据您提供的错误信息，安装 FastAPI 时似乎出现了与构建 maturin 轮子相关的问题。这可能是由于缺少构建所需的依赖项或环境配置问题导致的。</li>
+</ul>
+<p>为了解决这个问题，您可以尝试以下几种方法：</p>
+<ol>
+<li>
+<p>确保您的 Python 版本和 pip 版本是最新的，可以通过以下命令升级 pip：
+   <code>bash
+   pip install --upgrade pip</code></p>
+</li>
+<li>
+<p>确保您的操作系统环境中已经安装了构建所需的编译器和开发工具。在 macOS 上，您可能需要安装 Xcode Command Line Tools。</p>
+</li>
+<li>
+<p>尝试在安装 FastAPI 时忽略构建 maturin，然后手动安装 maturin：
+   <code>bash
+   pip install fastapi --no-build-isolation
+   pip install maturin</code></p>
+</li>
+</ol>
+<p>关于 FastAPI 最兼容的 Python 版本，FastAPI 最兼容的 Python 版本是 Python 3.6 及以上版本。建议您使用 Python 3.6 或更高版本来开发和运行 FastAPI 应用程序。</p>
+<p>通过尝试上述方法，您应该能够解决安装 FastAPI 时出现的构建错误。如果问题仍然存在，您可能需要进一步调查您的环境和依赖项配置。</p>
+<ul>
+<li>Q: 我将 conda 虚拟环境降到  3.10 时, 还是安装出错:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">error</span><span class="p">[</span><span class="n">E0463</span><span class="p">]:</span><span class="w"> </span><span class="n">can</span><span class="s1">&#39;t find crate for `core`</span>
+<span class="w">        </span><span class="o">--&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/.</span><span class="n">cargo</span><span class="o">/</span><span class="n">registry</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">crates</span><span class="o">.</span><span class="n">io</span><span class="o">-</span><span class="mi">6</span><span class="n">f17d22bba15001f</span><span class="o">/</span><span class="n">static_assertions</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">lib</span><span class="o">.</span><span class="n">rs</span><span class="p">:</span><span class="mi">87</span><span class="p">:</span><span class="mi">1</span>
+<span class="w">         </span><span class="o">|</span>
+<span class="w">      </span><span class="mi">87</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">pub</span><span class="w"> </span><span class="n">extern</span><span class="w"> </span><span class="n">crate</span><span class="w"> </span><span class="n">core</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">_core</span><span class="p">;</span>
+<span class="w">         </span><span class="o">|</span><span class="w"> </span><span class="o">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><span class="w"> </span><span class="n">can</span><span class="s1">&#39;t find crate</span>
+<span class="w">         </span><span class="o">|</span>
+<span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">note</span><span class="p">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="err">`</span><span class="n">x86_64</span><span class="o">-</span><span class="n">apple</span><span class="o">-</span><span class="n">darwin</span><span class="err">`</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">installed</span>
+<span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">help</span><span class="p">:</span><span class="w"> </span><span class="n">consider</span><span class="w"> </span><span class="n">downloading</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="err">`</span><span class="n">rustup</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">x86_64</span><span class="o">-</span><span class="n">apple</span><span class="o">-</span><span class="n">darwin</span><span class="err">`</span>
+</code></pre></div>
+
+<p>看起来是 cargo, rust 的编译环境中, 没有 x86_64-apple-darwin 相关配置,
+但是, 我这是 platform : osx-arm64, 
+如何正确令 pydantic-core 在构建过程中使用 arm 参数?</p>
+<blockquote>
+<blockquote>
+<p>这时发现, 在 M1 macOS 本地系统环境中, FastAPI 依赖的模块, 其实是用 Rust 编译的, 这导致一系列意料外的错误, 尝试解决, 并直接进行搜索时, 发现都没有很好的解决方法, 于是决定快速切换到 Flask 纯粹 Python 方案中...</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>
+<p>Q:由于 fastAPI 安装失败, 如何使用 Flask 来开发 一个简单的接口,
+请说明详细过程, 以及示例代码, 并解释关键行为, 以及检验办法;
+谢谢</p>
+</li>
+<li>
+<p>A:为了使用 Flask 来开发一个简单的接口，您可以按照以下步骤进行操作：</p>
+</li>
+</ul>
+<h3 id="flask">步骤一：安装 Flask<a class="headerlink" href="#flask" title="Permanent link">&para;</a></h3>
+<p>首先，您需要安装 Python 3 和 pip。然后使用 pip 安装 Flask：</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask
+</code></pre></div>
+
+<h3 id="flask_1">步骤二：编写 Flask 应用程序<a class="headerlink" href="#flask_1" title="Permanent link">&para;</a></h3>
+<p>创建一个名为 <code>app.py</code> 的 Python 文件，并在其中编写 Flask 应用程序的代码。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># 创建一个简单的 GET 请求处理器</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello, World!&#39;</span>
+
+<span class="c1"># 创建一个返回 JSON 数据的接口</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/api/data&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">get_data</span><span class="p">():</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">:</span> <span class="s1">&#39;New York&#39;</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="flask_2">步骤三：运行 Flask 应用程序<a class="headerlink" href="#flask_2" title="Permanent link">&para;</a></h3>
+<p>在终端中，进入包含 <code>app.py</code> 文件的目录，并运行 Flask 应用程序：</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>app.py
+</code></pre></div>
+
+<h3 id="_12">步骤四：验证接口<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>在浏览器中访问 <code>http://127.0.0.1:5000/</code>，您应该能够看到 "Hello, World!" 的消息。然后访问 <code>http://127.0.0.1:5000/api/data</code>，您应该能够看到返回的 JSON 数据。</p>
+<h3 id="_13">关键行为解释<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>from flask import Flask, jsonify</code>：导入 Flask 框架和 jsonify 函数。</li>
+<li><code>@app.route('/')</code>：使用装饰器定义路由，指定 URL 路径。</li>
+<li><code>def hello_world():</code>：定义处理该路由的函数，返回 "Hello, World!"。</li>
+<li><code>@app.route('/api/data', methods=['GET'])</code>：定义另一个路由，指定请求方法为 GET。</li>
+<li><code>def get_data():</code>：定义处理该路由的函数，返回 JSON 数据。</li>
+<li><code>if __name__ == '__main__':</code>：确保应用程序仅在直接运行时才运行，而不是被导入到其他模块中。</li>
+</ul>
+<h3 id="_14">检验办法<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>通过访问定义的路由，可以在浏览器中或使用工具如 Postman 发送请求来验证接口的功能和返回结果。</p>
+<p>希望这些步骤和示例代码能够帮助您开始使用 Flask 来开发简单的接口。如果您有任何疑问，欢迎随时提问。</p>
+<blockquote>
+<blockquote>
+<p>本地安装很顺利:</p>
+</blockquote>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="err">𝄢</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">Flask</span>
+<span class="n">Looking</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">indexes</span><span class="p">:</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">simple</span>
+<span class="n">Collecting</span><span class="w"> </span><span class="n">Flask</span>
+<span class="w">  </span><span class="n">Downloading</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">bd</span><span class="o">/</span><span class="mi">0</span><span class="n">e</span><span class="o">/</span><span class="mf">63738e88</span><span class="n">e</span>
+<span class="w">  </span><span class="o">...</span>
+<span class="w">  </span><span class="n">Installing</span><span class="w"> </span><span class="n">collected</span><span class="w"> </span><span class="n">packages</span><span class="p">:</span><span class="w"> </span><span class="n">MarkupSafe</span><span class="p">,</span><span class="w"> </span><span class="n">itsdangerous</span><span class="p">,</span><span class="w"> </span><span class="n">click</span><span class="p">,</span><span class="w"> </span><span class="n">blinker</span><span class="p">,</span><span class="w"> </span><span class="n">Werkzeug</span><span class="p">,</span><span class="w"> </span><span class="n">Jinja2</span><span class="p">,</span><span class="w"> </span><span class="n">Flask</span>
+<span class="n">Successfully</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">Flask</span><span class="o">-</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">1</span><span class="w"> </span><span class="n">Jinja2</span><span class="o">-</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">3</span><span class="w"> </span><span class="n">MarkupSafe</span><span class="o">-</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">4</span><span class="w"> </span><span class="n">Werkzeug</span><span class="o">-</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">1</span><span class="w"> </span><span class="n">blinker</span><span class="o">-</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">0</span><span class="w"> </span><span class="n">click</span><span class="o">-</span><span class="mf">8.1</span><span class="o">.</span><span class="mi">7</span><span class="w"> </span><span class="n">itsdangerous</span><span class="o">-</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">2</span>
+</code></pre></div>
+
+<ul>
+<li>
+<p>Q: 那么,我想发布一个天气查询的接口:
+http://127.0.0.1:5000/api/w/zhuhai
+这时就可以从 http://api.openweathermap.org/data/2.5/weather?q={city}&amp;appid={api_key}&amp;units=metric
+获得数据并返回相同的 JSON 数据,
+应该如何构建, 请说明关键行为, 并给出详细代码和检验办法,
+谢谢;</p>
+</li>
+<li>
+<p>A: 为了构建一个天气查询的接口，您可以使用 Flask 来实现。以下是详细的步骤、代码和检验办法：</p>
+</li>
+</ul>
+<h3 id="flask-requests">步骤一：安装 Flask 和 requests<a class="headerlink" href="#flask-requests" title="Permanent link">&para;</a></h3>
+<p>首先，确保您已经安装了 Flask 和 requests：</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask<span class="w"> </span>requests
+</code></pre></div>
+
+<h3 id="flask_3">步骤二：编写 Flask 应用程序<a class="headerlink" href="#flask_3" title="Permanent link">&para;</a></h3>
+<p>创建一个名为 <code>app.py</code> 的 Python 文件，并在其中编写天气查询接口的代码。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># 创建天气查询接口</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/api/w/&lt;city&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">get_weather</span><span class="p">(</span><span class="n">city</span><span class="p">):</span>
+    <span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;your_api_key&#39;</span>  <span class="c1"># 请将 your_api_key 替换为您在 OpenWeatherMap 上获取的 API 密钥</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&amp;units=metric&#39;</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="n">weather_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="s1">&#39;Failed to retrieve weather data&#39;</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="flask_4">步骤三：运行 Flask 应用程序<a class="headerlink" href="#flask_4" title="Permanent link">&para;</a></h3>
+<p>在终端中，进入包含 <code>app.py</code> 文件的目录，并运行 Flask 应用程序：</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>app.py
+</code></pre></div>
+
+<h3 id="_15">步骤四：验证接口<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>在浏览器中或使用工具如 Postman，访问 <code>http://127.0.0.1:5000/api/w/zhuhai</code>，您应该能够看到返回的 JSON 天气数据。</p>
+<h3 id="_16">关键行为解释<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>@app.route('/api/w/&lt;city&gt;', methods=['GET'])</code>：定义一个带有参数的路由，<code>&lt;city&gt;</code> 是一个动态参数，用于指定城市名称。</li>
+<li><code>def get_weather(city):</code>：定义处理该路由的函数，根据传入的城市名称构建 OpenWeatherMap API 的 URL，并使用 requests 库发送 GET 请求获取天气数据。</li>
+<li><code>api_key = 'your_api_key'</code>：将 <code>your_api_key</code> 替换为您在 OpenWeatherMap 上获取的 API 密钥。</li>
+<li><code>return jsonify(weather_data)</code>：返回获取的天气数据。</li>
+</ul>
+<h3 id="_17">检验办法<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>通过访问定义的路由，可以在浏览器中或使用工具如 Postman 发送请求来验证接口的功能和返回结果。确保您能够成功获取指定城市的天气数据。</p>
+<p>希望这些步骤和示例代码能够帮助您构建天气查询接口。如果您有任何疑问，欢迎随时提问。</p>
+<p><img alt="本地接口" src="https://ipic.zoomquiet.top/2024-01-24-zshot%202024-01-23%2020.44.15.jpg"></p>
+<h2 id="_18">发布<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>最后解决产品的使用问题</p>
+</blockquote>
+<ul>
+<li>
+<p>Q: 那么, 如何将这个本地接口, 发布到互联网中?
+可以用手机浏览器来查询指定城市的天气情况?
+请说明有哪些常用方案, 哪一个最简单?
+给出具体过程, 以及检验办法,
+谢谢;</p>
+</li>
+<li>
+<p>A: 要将本地的 Flask 应用程序发布到互联网中，以便可以用手机浏览器查询指定城市的天气情况，您可以考虑以下常用方案之一：使用 ngrok。</p>
+</li>
+</ul>
+<h3 id="ngrok">使用 ngrok 发布本地接口到互联网<a class="headerlink" href="#ngrok" title="Permanent link">&para;</a></h3>
+<h4 id="ngrok_1">步骤一：安装 ngrok<a class="headerlink" href="#ngrok_1" title="Permanent link">&para;</a></h4>
+<p>首先，您需要在本地安装 ngrok。您可以从 ngrok 的官方网站 https://ngrok.com/ 下载适用于您操作系统的 ngrok 客户端，并按照说明进行安装。</p>
+<h4 id="ngrok_2">步骤二：启动 ngrok<a class="headerlink" href="#ngrok_2" title="Permanent link">&para;</a></h4>
+<p>在终端中，导航到 ngrok 安装目录，并运行以下命令启动 ngrok：</p>
+<div class="highlight"><pre><span></span><code>./ngrok<span class="w"> </span>http<span class="w"> </span><span class="m">5000</span>
+</code></pre></div>
+
+<p>假设您的 Flask 应用程序在本地运行在端口 5000 上。</p>
+<h4 id="url">步骤三：获取公共 URL<a class="headerlink" href="#url" title="Permanent link">&para;</a></h4>
+<p>启动 ngrok 后，您将会看到生成的公共 URL，类似于 <code>http://a1b2c3d4.ngrok.io</code>。这个 URL 就是您的本地应用程序在互联网上的访问地址。</p>
+<h4 id="_19">步骤四：验证接口<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<p>在手机浏览器中，输入生成的公共 URL，加上您的天气查询接口的路径，例如 <code>http://a1b2c3d4.ngrok.io/api/w/zhuhai</code>，然后您应该能够看到返回的 JSON 天气数据。</p>
+<h3 id="_20">检验办法<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>通过在手机浏览器中访问生成的公共 URL，加上您的天气查询接口的路径，来验证接口的功能和返回结果。确保您能够成功获取指定城市的天气数据。</p>
+<h3 id="_21">其他方案<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>除了 ngrok，还有一些其他方案可以将本地接口发布到互联网中，例如使用反向代理工具、部署到云服务器等。但就简单性而言，ngrok 是一个非常方便且简单易用的工具，适合快速将本地接口发布到互联网上。</p>
+<p>希望这些步骤和说明能够帮助您将本地接口发布到互联网中，并成功在手机浏览器中查询指定城市的天气情况。如果您有任何疑问，欢迎随时提问。</p>
+<blockquote>
+<blockquote>
+<p>进入任何一个新环节时, 都值得请 AIGC 给出多种方案来对比理解, 拓展常识,决策方向...</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>
+<p>Q:但是, 通过 ngrok 发布本地 5000 端口的接口后,
+访问说 您未获授权，无法查看此网页 
+这是为什么? 应该如何解决?谢谢</p>
+</li>
+<li>
+<p>A: 这个问题通常是由于 ngrok 的免费版本限制导致的。ngrok 的免费版本在使用时会分配一个随机的子域名，但是这些子域名可能会被其他人使用过或者被滥用，因此有些网络会将其标记为不安全或受限制的网站，导致出现 "403 Forbidden" 的错误。</p>
+</li>
+</ul>
+<p>为了解决这个问题，您可以考虑以下几种方法：</p>
+<ol>
+<li>
+<p><strong>购买 ngrok 的付费版本</strong>：ngrok 提供了付费版本，付费版本可以获得稳定的域名和更多的功能。购买付费版本后，您将获得一个独特的域名，避免了被其他人滥用的风险。</p>
+</li>
+<li>
+<p><strong>使用其他类似的工具</strong>：除了 ngrok，还有一些类似的工具可以将本地服务发布到互联网上，例如 localtunnel、serveo 等。您可以尝试使用其他工具来看是否能够解决这个问题。</p>
+</li>
+<li>
+<p><strong>部署到云服务器</strong>：考虑将您的应用程序部署到云服务器上，例如使用 AWS、Azure、Google Cloud 等云服务商的免费套餐。这样可以获得一个稳定的公网 IP 地址，避免了被标记为不安全的问题。</p>
+</li>
+</ol>
+<p>希望这些方法能够帮助您解决通过 ngrok 发布本地接口时出现的 "403 Forbidden" 错误。如果您有任何疑问，欢迎随时提问。</p>
+<blockquote>
+<blockquote>
+<p>当前, 要快速检验对应方案是否可行, 并随时根据反馈组织新的问题...</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>
+<p>Q : 类似 ngrok 的工具, 比如 localtunnel、serveo 等 都有哪一些?
+其中可以安装应用到 M1 芯片的 macOS 环境中的有哪一些?
+推荐使用哪一种? 为什么?</p>
+</li>
+<li>
+<p>A: 类似 ngrok 的工具有很多，其中一些比较常见的包括 localtunnel、serveo、Pagekite、ngrok2、yaler、frp 等。</p>
+</li>
+</ul>
+<p>针对 M1 芯片的 macOS 环境，可以安装并使用以下工具：</p>
+<ol>
+<li>
+<p><strong>localtunnel</strong>：localtunnel 是一个简单的工具，可以将本地的 HTTP 服务暴露到公共的互联网上。它是基于 Node.js 编写的，因此可以在 M1 芯片的 macOS 环境中运行。</p>
+</li>
+<li>
+<p><strong>serveo</strong>：serveo 是另一个类似的工具，它提供了简单易用的方式将本地服务暴露到公网。serveo 也可以在 M1 芯片的 macOS 环境中运行。</p>
+</li>
+<li>
+<p><strong>ngrok2</strong>：ngrok 的旧版本 ngrok2 也可以在 M1 芯片的 macOS 环境中运行，但需要确保安装了适用于 M1 芯片的版本。</p>
+</li>
+</ol>
+<p>推荐使用 localtunnel 或 serveo，因为它们都是轻量级的工具，易于安装和使用。同时，它们在 M1 芯片的 macOS 环境中都能够正常运行，并且提供了稳定的服务。另外，这两个工具都有良好的社区支持和文档，方便用户进行学习和使用。</p>
+<p>希望这些信息能够帮助您选择合适的工具。如果您有任何其他问题，欢迎随时提问。</p>
+<ul>
+<li>Q:看起来 serveo 更加简单, 那么, 如何用 serveo 将 flask 的 localhost:5000 接口反向代理到互联网中, 以便手机也可以访问?</li>
+<li>A: 您可以按照以下步骤使用 Serveo 将 Flask 应用程序从本地代理到互联网上，以便手机也可以访问：</li>
+</ul>
+<h3 id="openssh">步骤一：安装 OpenSSH<a class="headerlink" href="#openssh" title="Permanent link">&para;</a></h3>
+<p>确保您的计算机上安装了 OpenSSH。大多数 macOS 和 Linux 系统都会默认安装 OpenSSH。如果您使用的是 Windows 系统，您可以通过 Windows Subsystem for Linux (WSL) 安装 OpenSSH。</p>
+<h3 id="flask_5">步骤二：启动 Flask 应用程序<a class="headerlink" href="#flask_5" title="Permanent link">&para;</a></h3>
+<p>在终端中，导航到包含 Flask 应用程序的目录，并运行您的 Flask 应用程序：</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>app.py
+</code></pre></div>
+
+<h3 id="serveo">步骤三：使用 Serveo<a class="headerlink" href="#serveo" title="Permanent link">&para;</a></h3>
+<p>在终端中，运行以下命令将本地的 Flask 应用程序代理到互联网上：</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-R<span class="w"> </span><span class="m">80</span>:localhost:5000<span class="w"> </span>serveo.net
+</code></pre></div>
+
+<p>这将创建一个公共 URL，将来自互联网的流量转发到您本地的 Flask 应用程序。</p>
+<h3 id="_22">步骤四：验证接口<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>在终端中，您将看到生成的公共 URL，类似于 <code>http://your_url.serveo.net</code>。在手机浏览器中输入这个 URL，加上您的天气查询接口的路径，例如 <code>http://your_url.serveo.net/api/w/zhuhai</code>，然后您应该能够看到返回的 JSON 天气数据。</p>
+<h3 id="_23">检验办法<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>通过在手机浏览器中访问生成的公共 URL，加上您的天气查询接口的路径，来验证接口的功能和返回结果。确保您能够成功获取指定城市的天气数据。</p>
+<p>希望这些步骤能够帮助您使用 Serveo 将 Flask 应用程序代理到互联网上，以便手机也可以访问。如果您有任何疑问，欢迎随时提问。</p>
+<ul>
+<li>Q: 无法访问: 浏览器返回:
+访问 3e3a3053f4d26c87df428f3b05fb393b.serveo.net 的请求遭到拒绝您未获授权，无法查看此网页。
+HTTP ERROR 403</li>
+</ul>
+<p>在终端中, 可以看到:</p>
+<p>HTTP request from 101.32.192.28 to https://3e3a3053f4d26c87df428f3b05fb393b.serveo.net/</p>
+<p>有请求收到, 但是, 没有转发给 falsk 的服务, 这是为什么, 如何解决?
+谢谢;</p>
+<ul>
+<li>A: 这个问题可能是由于 Serveo 无法正确将流量转发到您的本地 Flask 服务导致的。这可能是由于网络配置或防火墙问题引起的。</li>
+</ul>
+<p>为了解决这个问题，您可以尝试以下方法：</p>
+<ol>
+<li>
+<p><strong>检查防火墙设置</strong>：确保您的本地计算机和网络防火墙允许来自 Serveo 的流量。有时防火墙会阻止外部流量进入本地计算机，导致无法访问您的服务。</p>
+</li>
+<li>
+<p><strong>检查网络配置</strong>：如果您在公司或学校的网络环境中，可能存在网络配置限制，导致无法从外部访问本地服务。您可以尝试在家庭网络或其他网络环境中进行测试，看是否能够解决问题。</p>
+</li>
+<li>
+<p><strong>尝试其他工具</strong>：如果问题仍然存在，您可以尝试使用其他类似的工具，例如 localtunnel 或 ngrok，看是否能够成功将本地服务代理到互联网上。</p>
+</li>
+<li>
+<p><strong>联系 Serveo 支持</strong>：如果以上方法都无法解决问题，您可以联系 Serveo 的支持团队，寻求他们的帮助和支持。</p>
+</li>
+</ol>
+<p>希望这些方法能够帮助您解决问题，成功将您的本地 Flask 服务代理到互联网上。如果您有任何其他问题，欢迎随时提问。</p>
+<blockquote>
+<blockquote>
+<p>至此, 其实一个随时查询指定城市天气的 MVP 工具已经开发完成, 只是要允许外网可以访问, 这已经不是开发问题, 而是发布和运维问题了...在直播视频中进行了另外的尝试, 已经超出 AIGC 辅助开发的话题, 就此打住</p>
+</blockquote>
+</blockquote>
+<h2 id="summary">summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>最小最实用 🎃程序员AIGC工具包</p>
+</blockquote>
+<ul>
+<li>一个稳定流畅的网络</li>
+<li>一个友好精确的类 ChatGPT 引擎, 推荐 devv.ai</li>
+<li>一个友好灵活的编辑环境, 推荐 VSCode</li>
+<li>一个清晰具体的目标, 是的目标不明确时, 是无法提出有效问题的, 没有可靠的问题/提示词, 当然也就不可能生成可靠的回答</li>
+<li>一组层次良好,前后递进的问题, 值得包含的关键词:<ul>
+<li>有哪些方案?</li>
+<li>给出具体示例代码</li>
+<li>解释关键行为</li>
+<li>说明检验办法</li>
+<li>...以及, 谢谢, 并肯定对应回答, <ul>
+<li>就算是为了人类未来, 也请保持基本礼貌</li>
+<li>其实, 这是 AIGC 引擎的魔法词, 用来加强有关参数的...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>当然, 在以上 <code>工具包</code> 中, 还隐藏了一个更加关键以及底层的能力:</p>
+<p>语文素质, 如果你本身在自然对话中, 都无法流畅的阐述自己的想法,
+那么, 面对无限耐心的知识的 AIGC , 基本上也难以获得值得参考的回答;</p>
+<p>进一步的, 在中文语文能力之上, 有英文沟通能力更加好, 一个检验方法是:</p>
+<ul>
+<li>如果你手工输入的英文, 用 google 翻译过来的中文</li>
+<li>和你手工输入的中文, 基本一致,</li>
+<li>说明, 你具有了 AI 时代思维模式, 可以用中文阐述和英文一致的思想;</li>
+</ul>
+<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>过程视频: <a href="https://studio.youtube.com/video/VbCJhD3TDtA/edit">AIGCxZhuhai[demo show]通用编程AI辅助过程 - YouTube</a></li>
+<li>代码仓库: <a href="https://github.com/AIGCx/zhuhai">AIGCx/zhuhai: demo show anything about AIGC</a></li>
+</ul>
+<p>SEE:</p>
+<ul>
+<li><a href="https://www.bmpi.dev/dev/chatgpt-development-notes/pair-programming/">我与ChatGPT结对编程的体验 · BMPI</a></li>
+<li><a href="https://baoyu.io/translations/ai/how-i-use-chatgpt-daily-scientist-coder-perspective">我每天是如何使用 ChatGPT 的（从科学家和开发者的视角） [译] | 宝玉的分享</a></li>
+<li><a href="https://missing-semester-cn.github.io/">计算机教育中缺失的一课 · the missing semester of your cs education</a></li>
+<li><a href="https://braydie.gitbooks.io/how-to-be-a-programmer/content/zh/">Introduction · How to be a Programmer</a></li>
+<li>...</li>
+</ul>
+
+            </div>
+            <!-- /.entry-content -->
+
+
+    <hr />
+    <section class="comments" id="comments">
+        <h3>Comments</h3>
+
+<script src="https://utteranc.es/client.js"
+        repo="ZoomQuiet/ZoomQuiet.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+    <hr />
+
+
+    </section>
+
+
+
+<h4><a href="https://www.youtube.com/@Chaos42DAMA">大妈的多重宇宙 - <b>YouTube</b></a></h4>
+全新自媒体系列...科学幻想,读书,说故事...
+
+<!--
+<hr />
+<h4>自怼圈/年度番新</h4>
+<img alt="DU22.8" src="https://ipic.zoomquiet.top/2022-08-19-220819DU22.8.jpeg!/fw/420" />
+<br />
+<a href="https://du.101.camp/about/">关于 ~ DebugUself with DAMA ;-)</a>
+
+![](https://ipic.zoomquiet.top/2022-03-31-220331DU6y_zip.jpg)
+<h3>蟒营®编程思维提高班 Python版/<b>第14期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
+
+<blockquote><p>
+    
+<ul>
+    <li>
+    开始报名: <b>2020.10.27</b> </li>
+    <li>
+    报名截止: <b>2020.11.22</b> </li>
+    <li>
+    正式开课: <b>2020.11.29</b> </li>
+    <li>
+    课程结束: <b>2021.01.10</b> </li>
+
+    <li>
+    介绍文章:  
+    <ul>
+        <li>
+<a href="https://blog.101.camp/nc/200811-ZoomQuiet-wtf-coding-mind/">蟒营®/ 为什么编程思维不用学就有?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">拙见/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-ZoomQuiet-fake-learnning/">蟒营®/ 伪编程学习</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-ZoomQuiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-ZoomQuiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-ZoomQuiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200630-ZoomQuiet-10py-wtf-can-coding/">蟒营®/ 到底如何算"会编程"?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200703-ZoomQuiet-10py-wtfc-0/">蟒营®/ 到底改变了什么?</a>
+        </li>
+
+        <li>
+...<a href="https://blog.101.camp/nc/">NC: 嗯哼蟒营 — 蟒营™ 怂怼录</a>
+        </li>
+    </ul>
+    </li>
+
+
+</ul>
+
+<b>扫描</b>报名:
+
+<a href="https://jinshuju.net/f/Mv5nGU">
+<img alt="101camp14py" 
+    src="http://101.zoomquiet.top/res/14py/%E8%9F%92%E8%90%A5%C2%AE%E7%BC%96%E7%A8%8B%E6%80%9D%E7%BB%B4%E6%8F%90%E9%AB%98%E7%8F%AD_14%E6%9C%9F_%E6%8A%A5%E5%90%8D%E8%A1%A8_256.png"/>
+</a>
+</p></blockquote>
+
+
+<h2>蟒营®式 原创课程</h2>
+<p>
+
+<img alt="theory101camp_v3" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-10-04-theory101camp_v3.jpg"/>
+
+</p>
+
+<blockquote>
+<p>
+    官网: <b>
+    <a href="https://py.101.camp/">py.101.camp</a>
+    </b>
+</p>
+</blockquote>
+
+
+
+<br/>
+任何问题可先进入知识星球<b>(免费)</b>咨询:
+<br/>
+<img alt="FAQ" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-02-28-FAQ101camp-qr.jpeg?imageView2/2/w/360"/>
+
+-->
+
+
+<hr />
+点击注册~> 获得 <b>100$</b> 体验券:
+<a
+    href="https://www.digitalocean.com/?refcode=e7b7cdc66376&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
+        src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg"
+        alt="DigitalOcean Referral Badge" /></a>
+
+<hr />
+
+
+<p>订阅 substack 体验古早写作:
+    <br />
+<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
+
+<!----
+    <iframe src="https://zoomquiet.substack.com/embed" width="360" 
+        style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+
+-->
+
+</p>
+
+<hr />
+
+<p>关注公众号, 持续获得相关各种嗯哼:
+    <br />
+    <img alt="zoomquiet"
+        src="https://ipic.zoomquiet.top/2021-12-27-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg!/fw/420" />
+</p>
+
+
+
+<!--
+
+    ![](https://ipic.zoomquiet.top/2022-03-31-2020-10-21-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg)
+<blockquote><p>
+    
+<ul>
+    <li>
+<a href="https://mp.weixin.qq.com/s/FqDJWQQcthEuGHAPPEzUKA">
+拙见/ 但得呢喃
+    </a></li>
+
+    <li>
+<a href="https://mp.weixin.qq.com/s/Hvu22TO1HKK2H8rnbPWcig">
+拙见/ 但得呢喃+1
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/w7m2BwIDsntnLl2vCDuP9g">
+拙见/ 但得呢喃+2
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/HXXfikoYfGV4zqf8-oOlgw">
+拙见/ 但得呢喃+3
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/uFdOHc_u9SqHPKhW9qXz7g">
+拙见/ 但得呢喃+4
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/CZUUmuZ2tDZU0gRAyTHz5w">
+拙见/ 如此平庸又如此美好
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/A-javC9noWxEUeTDaJoWiw">
+拙见/ 如何开始弛放?
+    </a></li>
+
+
+</ul>
+</p></blockquote>
+
+
+-->
+
+
+<hr />
+<h3>蟒营®编程思维提高班Python版</h3>
+**2021.01.11** 因大妈再次创业暂停定期开设, 转换为预约触发:
+
+<ul>
+    <li>
+        + 任何问题, 随时邮件提问可也:
+        <pre>askdama@googlegroups.com</pre>
+    </li>
+</ul>
+<!--
+    <li>
+        + 扫描预约入群, 学员每满 42 人即启动新一期训练营 ;-)
+    </li>
+
+    <li>
+        <img alt="101camp22.7" src="https://ipic.zoomquiet.top/2022-08-19-220819pre101camp.jpeg!/fw/420" />
+    </li>
+<h4>追问</h4>
+<blockquote>
+    <p>
+        任何问题, 随时邮件提问可也:
+        <br />
+        <i>
+            askdama@googlegroups.com
+        </i>
+    </p>
+</blockquote>
+-->
+        </article>
+    </section>
+
+
+
+    <hr/>
+    <sub>
+        Copyright 2001-2023 by Zoom.Quiet 
+        <br/>
+        Content licensed under the Creative Commons 
+        <b>attribution-noncommercial-sharealike</b> License.
+        <br/>
+        Contact me via 
+        , <code><a href="mailto:i@zoomquiet.io">mail</a> 
+            </code>
+        ,<code><a href="http://github.com/ZoomQuiet">github</a>
+            </code>
+        or
+        <code><a href="http://gitlab.com/zoomquiet">gitlab</a>
+            </code>.
+        Tip me via 
+
+<!--
+<style>.bmc-button img{width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 28px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}
+</style>
+<link href="https://fonts.lug.ustc.edu.cn/css?family=Cookie" rel="stylesheet">
+<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/zoomquiet"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+
+<style>.bmc-button img{width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 28px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}
+</style>
+<link href="https://fonts.lug.ustc.edu.cn/css?family=Cookie" rel="stylesheet">
+<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/zoomquiet"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+-->        
+
+
+<!--
+    <code><a href="https://www.gittip.com/ZoomQuiet/">gittip</a>
+            </code>.
+-->        
+||
+        <a href="http://blog.zoomquiet.io/feeds/all.atom.xml">(ATOM)</a>
+    </sub>
+
+
+        </div>
+
+        <div class="col-lg-3 well well-sm" id="sidebar">
+<aside>
+<!--
+<section>
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-asterisk icon-large"></i>Links</h4></li>
+
+    <li class="list-group-item-zip">
+        <a href="https://101.camp/">
+            蟒营™ 课程框架
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="https://py.101.camp/">
+            蟒营™Py入门班
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="https://fm.101.camp/">
+            蟒营™ 电台
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="https://blog.101.camp/">
+            蟒营™ 怂怼录
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="https://du.101.camp/">
+            蟒营™ 自怼圈
+        </a>
+    </li>
+
+
+    <li class="list-group-item-zip">
+        <a href="https://www.bmpi.dev/">
+            构建我的被动收入
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="https://yixuan.li/">
+            Yixuan · 厨娘界元老
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://www.huyuning.com/">
+            阿宁 inner space
+        </a>
+    </li>
+
+</ul>
+</section>
+-->
+
+    <section>
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4>
+                <i class="icon-th icon-large"></i>Categories</h4></li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/ann.html">
+                        <i class="icon-folder-open icon-large"></i>ANN
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/ann.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/imho.html">
+                        <i class="icon-folder-open icon-large"></i>IMHO
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/imho.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/murmur.html">
+                        <i class="icon-folder-open icon-large"></i>MurMur
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/murmur.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/oldtouch.html">
+                        <i class="icon-folder-open icon-large"></i>OldTouch
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/oldtouch.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://blog.zoomquiet.io/category/pythonic.html">
+                        <i class="icon-folder-open icon-large"></i>Pythonic
+                    </a>
+                    <a href="https://blog.zoomquiet.io/feeds/pythonic.atom.xml">
+                        <i class="icon-rss-sign"></i>
+                    </a>
+                </li>
+
+                <li class="list-group-item"><h4><i class="icon-comment icon-large"></i>Social</h4></li>
+<!--
+                    <li class="list-group-item"><a href="https://ZoomQuiet.io">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://ZoomQuiet.io"><i
+                            class="icon-Root-sign icon-large"></i>Root
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://github.com/ZoomQuiet/ZoomQuiet.io">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://github.com/ZoomQuiet/ZoomQuiet.io"><i
+                            class="icon-GitHub-sign icon-large"></i>GitHub
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://www.youtube.com/@Chaos42DAMA">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://www.youtube.com/@Chaos42DAMA"><i
+                            class="icon-大妈的多重宇宙-sign icon-large"></i>大妈的多重宇宙
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://www.douban.com/people/zoomq/">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://www.douban.com/people/zoomq/"><i
+                            class="icon-豆瓣-sign icon-large"></i>豆瓣
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="http://weekly.pychina.org/">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="http://weekly.pychina.org/"><i
+                            class="icon-蟒周刊-sign icon-large"></i>蟒周刊
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://weekly.rs.101.so/">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://weekly.rs.101.so/"><i
+                            class="icon-锈周刊-sign icon-large"></i>锈周刊
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://gitlab.com/ZoomQuiet">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://gitlab.com/ZoomQuiet"><i
+                            class="icon-gitlab-sign icon-large"></i>gitlab
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="http://wiki.woodpecker.org.cn/moin/ZoomQuiet"><i
+                            class="icon-啄木鸟-sign icon-large"></i>啄木鸟
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="http://wiki.zoomquiet.io">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="http://wiki.zoomquiet.io"><i
+                            class="icon-维基-sign icon-large"></i>维基
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="http://blog.zoomquiet.org/pyblosxom/">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="http://blog.zoomquiet.org/pyblosxom/"><i
+                            class="icon-旧曰-sign icon-large"></i>旧曰
+                    </a></li>
+<!--
+                    <li class="list-group-item"><a href="https://xhh.club/">
+-->
+                    <li class="list-group-item-zip">
+                        <a href="https://xhh.club/"><i
+                            class="icon-小红花Club-sign icon-large"></i>小红花Club
+                    </a></li>
+
+ 
+
+        </ul>
+    </section>
+
+
+<section>
+
+<!-- 230807++XHH.club suport -->
+<script type="text/javascript">
+// 可修改，摘要将显示在这个选择器选中的元素之上。
+var _xhh_selector = ".entry-content";
+
+// 以下部分不要改动
+var _xhh_service_url = 'https://xhh.club/summarize-this/';
+(function() {
+var smmr = document.createElement("script");
+smmr.src = "https://xhh.club/static/js/summarize_this.js";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(smmr, s);
+})();
+</script>
+
+<ul class="list-group-zip">
+    <li class="list-group-item">
+        <h4><i class="icon-tint icon-large"></i>Powerded By</h4></li>
+
+
+    <li class="list-group-item-zip">
+    已由
+        <a href="http://qiniu.com/">
+        <img src="https://www.qiniu.com/assets/logo-zh-dbef5f389fb045c60f710d4d4e6225e9015c1684b1a1f7b81e000b952581dcd4.png"
+        width="90">
+<!--
+    <a href="http://www.upyun.com/">
+        <img src="http://docs.upyun.com/img/upyun_logo.png">
+-->        
+        </a>
+    提供CDN及云存储服务
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://docs.getpelican.com">
+            Pelican
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <sup>theme base</sup>
+        <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">
+            pelican-bootstrap3
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.python.org/">
+            Python
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href="http://www.inkscape.org/">
+            inkscape
+        </a>
+    </li>
+
+    <li class="list-group-item-zip">
+        <a href="http://git-scm.com/">
+            Git
+        </a>
+    </li>
+<!--
+    <li class="list-group-item-zip">
+        <a href="https://gitcafe.com/CPyUG">
+            GitCafe
+        </a>
+    </li>
+
+-->
+
+
+    <li class="list-group-item-zip">
+        <a href='http://www.catb.org/hacker-emblem/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAACXBIWXMAAAsSAAALEgHS3X78AAABj0lEQVR4nOWWMYqDQBSGBa1jEbxFwEKwM6VV8AIWWkis9RI5Q1JpYWGb0jLpBDtrc4BgkQMI+y+yQ3BmdBJiNsv+kOHNZJT3+X6fo2y3W+k/ScFvv9//dhpvUhiGisi+uq6zLHNdd7VaTd7xFYnNor6uQsCO41wulzzPm6aZOavZJQSsaRqAMc6dzRskBFwUxfl8tizroVvDQr3DSSD9+Ore+YMV+irSYpjTRyUErKrqZrNBcLvdbNu+Xq/H43HyfabFhKEfCj0dsDEvEZQQMBHqXJYlAvSw3W43uZ/u/7wvwgitxHKBNGuFieBq0zRRYXRskf0DEzJXet1DIpis8NOf0jHg0+kEM+u6Dif37zCmh8MB0yf8zBRJnYk0UlL6oQiKC5ymqe/7sixXVYXTGJyM2oLWMIyu65Ik8TxvEmYykDjvJ2/zyLqguMBt22IEG+oJDyPGiBgr5N+/KC5wEAQYl8vler1GTyYnLdQWtFEUvTHJV4oLvFgs4jjuY3CSnjzu5M8/ln8Df/IB+OX6Ah776L1W8pWtAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+
+    <li class="list-group-item-zip">
+        <a href="http://zh.wikipedia.org/zh-cn/UTF-8">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAICAgICAgICAgICAgICAwMDAgIDAwQDAwMDAwQFBAQEBAQEBQUGBgcGBgUHBwgIBwcKCgoKCgoKCgoKCgoKCgr/2wBDAQMDAwQDBAcFBQcLCQcJCwwLCwsLDAwKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCAAPAEkDAREAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAABwAEBQYJA//EACsQAAAGAQMDAwQDAQAAAAAAAAECAwQFBgcIEhMRFBUAFhchIiQxGDJCRP/EABwBAQABBQEBAAAAAAAAAAAAAAAGAwQFBwgBAv/EACsRAAIBAwMDAwQDAQEAAAAAAAECAwQREgAFIQYTIgdBURQjMWEyQkNx0f/aAAwDAQACEQMRAD8AHtMqMNM/HtNg43THUlPjXFEgka14mgJdxIuJShxcvMSLqWJU5g4FTOZZ07cyC5CkKYVDH2FOJITuG41w3GSCKdYwLWDLf+gJNxG1gOSSxAA/Q46f6P6M6Uboyi3bcNomq5JO73HilxN1qHijXttVwZPJ4xxJCju7+Ns2XKWRxlkJ9Ft7LDYtwBPUl1A2mxEvzLBVRGvJsaopLJuE13i1QS4VnHiDigkqUojzIcnGY5gJYjcN8Zc1kumLNkEGNkyvz2+CcOAflb2vqVP0h6WwTtSz0XbqxNBD9O1S/fL1IpypVFrGzRPqAJGUkDty4ZhQWaR2OcoqSTZpaMHYixvGLoS7lS0WzT5VIyIQThYl5NOgMoSorKnP2rBYxU0kjnNt+hf2IfKbjvuVpGMY58njsPFSx/zPsp4A1VqOjfShYWekgjq5AYx2qeraSUmWaOBODVqoHclQFmZVF/zpotWJBzBWeyVGE0p3+JqHi/NqQuGqe2cF8mjKOR7dpNU6NXcdqhErLueFM3GiPL9U03BkfDu27FGeOoVwtr2Ue+R4DRqTYKSbfgc/gNaqnp96fR1VPS1uzTUsk+eHdmdh9swL5PBWTIncedI4s2Gcn2+HeJZHlurEqwWxzjyMoWmhtkSxZcu+N5GcHEFDPFLLxI1dixEd9aMYqCbmRcH3lbgoJT/cUdpShLNjqKmeKUVDZOkjJfgfxA+APe/trnv1U2jZNqr6F9mgMNNU0UVQFZmZrytL/LN5LHEKCAxW44+SNMeRdqyH7J4muk2rfIdik6pU/NYVpo93PxvhPxDeLpT/AI+fzyHEop0T+xXkMn0JyZvWsNECnYnyBf4V9ZaelpastdaTLqDQmIfTcjNpuXbFhHv1z8MXi90u3IUJIiRRdpIic5FeMDkLvFpof1mo56szqn7MA4zhYC7yNfj4e7y2nWltKyX3M8bso10tJe0jp8CqjpLacm7cBg2AYRABaaLLXG1tomU9PcRkakac5qr5VvbCvuowuAYKtu1WjWRiEpFNVGw0WCdlIqlKEKms3AQ67wA5Tk9NNYV+mmtg6zqAxhFwlfcQOoXDdePMY4xdWrjW7Rj6xWN0k6qNXh2Dtkr3FKmGuwj9gKn46xiKCmkoIiJCbYlX7NXzVcs0DR4yY8MMv4gfKN7i/H6+NdCdJ+pXSW3dO7ft26QVrT0hlZWp3aJQ0skpyBjq4GJ7chS7C6hpFXxdso9fMGOV3zSR/lfhtu4j4mego9NrTLyzatYizHkzybRFq3oqaJCKjMPNu0gcYKdEtgETAuOPTe6Fge5HwGX44fLIWEdv7t/y/FrDU1T1s6FSJovo60hpIpWyxZmlpxCInZ2qyxK/Tw3ufMrd8iz5RFVyHiSlzaFgr+qXDaEmgg/agLqo32TaqNZNosweIrM39IXbqkVbrqJmKomYOhvVOHpbcad80eO/PyfyLHgoQbg6u909eujN4pjTVNLWmMlW8QkbBo3WRGV46pXUq6qwKsDcasUhm3H77pxarMHwG1/CyiftyhXGrccnXu+8Y9T8JQmW1ZDyLjooXoYepdwjxp7KrdO7o3+kQ5B8fDlb4nxjHIyPP/g1j4PWboOD80ldL4SR/fb6m8c/a7qH6iskuj9mPxPAsbAZvl1s+Z8XzDWjT7DVjitHJtWyLbshOrGtVb8DU0pPFryzVwkgFKOkJyuohZQ6ZkASABIAAYBMUsm2aiqKKJxOwLu5ckfsD9D3B9taQ9Sup9o6or6R9pikipqeljp1WW2QETSWtaSS4CsouzZEg3+TUX2Xq8+kKPJk1Yac4dzjiZUsNOTg8a2mutGM2qdkod6dpE45aoODmGNa9e4If6JgX+vUBy+tdaoC8hjFzXouqrar8MngIaRlJaNYe3cjhwv5lBi2fLcoUjkNyJxrYu0xhKXZ1KACY25ppVyQxjUrDA2qv6r8Mx8/WZFlLQj/ANu5HX7Z/HLkctluJekHTPsUIU205RKP6EBD000ZqzmjGvyFhqwXTU9gD2piy5x9oLCVfG9rrX/dGryaibaHx/GIrLrIxiJAFc3+ChuKHX001kF1D001/9k="/>
+        </a>
+    </li>
+    <li class="list-group-item-zip">
+        <a href='http://creativecommons.org/licenses/by-nc-sa/2.5/cn/'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAANDQwNDQ0NDg0ODg4PEA8REREZGRkgICAhISEiIiIkJSMnKCcuMC4xMzEzMzM5Ozk7PTtBQkFCQkJDQ0NERERLTEtVVVVbXltmZmZna2dydnF3d3d9gn2AgICGhoaHh4eIiIiPkI+UmZOZmZmqqqqrsaqzuLK6v7q7u7vFxsXGysbIzMjKzsrMzMzd3d3u7u7///+uXr4hAAAA1UlEQVR42q2T2Q6CMBBFR0VUXHCritQFgXGvnf//Oa2ZNEB4UXrTl97enkxmWnAvcioDRKMtJGwJL0V8duEvWWDqGR4TR4iXfUPgbEBWCjaIj1UzYCchFYDQAgJFYoL4PHF/OVTIG7sEMLEKcAdXCtYkpa+znGQH8XL7nvOyed7VGGVgDEqbqaxD+kh6iOc7V2hjfJfxVYNqKxSRr2VGsl2ukNO85/v1hu1hO6Hch0gLCF+0HBd6yLEfe4jTvuMpp62jBS6GDt4hxnBg3rzX9Kc4FTjXG9Q1UZbZlOQyAAAAAElFTkSuQmCC"/>
+        </a>
+    </li>
+
+
+</ul>
+</section>
+
+</aside>        </div>
+    
+    </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://blog.zoomquiet.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://blog.zoomquiet.io/theme/js/respond.min.js"></script>
+
+
+
+</body>
+</html>

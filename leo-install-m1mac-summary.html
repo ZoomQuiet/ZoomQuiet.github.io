@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="leo-install-m1mac-summary"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/leo-install-m1mac-summary.html"/>
-            <meta property="og:description" content="  Background Upgrade Summary logging   Background¶ base Installing Leo — Leo 6.6.2 documentation can not installing Leo on MacOs 12.4 with M1max chip:  Upgrade¶  only for M1 chip Mac Book Pro  base ARM support Homebrew, check version: $ abrew --version Homebrew 3.4.11 Homebrew/homebrew-core (git revision b8f03171990; last …"/>
+            <meta property="og:description" content="Background¶ base Installing Leo — Leo 6.6.2 documentation can not installing Leo on MacOs 12.4 with M1max chip:  Upgrade¶  only for M1 chip Mac Book Pro  base ARM support Homebrew, check version: $ abrew --version Homebrew 3.4.11 Homebrew/homebrew-core (git revision b8f03171990; last commit 2022-05-27) Homebrew …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -130,8 +130,8 @@
 		<a href="https://blog.zoomquiet.io/tag/install.html">install</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-
-                <div class="toc">
+    <nav class="toc">
+    <div class="toc">
 <ul>
 <li><a href="#background">Background</a></li>
 <li><a href="#upgrade">Upgrade</a></li>
@@ -139,11 +139,14 @@
 <li><a href="#logging">logging</a></li>
 </ul>
 </div>
-<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+    </nav>
+
+                
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
 <p>base <a href="http://leoeditor.com/installing.html#installing-leo-on-macos-10-7-lion-and-later">Installing Leo — Leo 6.6.2 documentation</a> 
 can not installing Leo on MacOs 12.4 with M1max chip:</p>
-<p><img alt="screenfetch" src="https://ipic.zoomquiet.top/2022-05-29-220529-screenfetch.jpg"></p>
-<h2 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">&para;</a></h2>
+<p><img alt="screenfetch" src="https://ipic.zoomquiet.top/2022-05-29-220529-screenfetch.jpg"/></p>
+<h2 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>only for M1 chip Mac Book Pro</p>
 </blockquote>
@@ -153,61 +156,53 @@ Homebrew<span class="w"> </span><span class="m">3</span>.4.11
 Homebrew/homebrew-core<span class="w"> </span><span class="o">(</span>git<span class="w"> </span>revision<span class="w"> </span>b8f03171990<span class="p">;</span><span class="w"> </span>last<span class="w"> </span>commit<span class="w"> </span><span class="m">2022</span>-05-27<span class="o">)</span>
 Homebrew/homebrew-cask<span class="w"> </span><span class="o">(</span>git<span class="w"> </span>revision<span class="w"> </span>7cd05aa248<span class="p">;</span><span class="w"> </span>last<span class="w"> </span>commit<span class="w"> </span><span class="m">2022</span>-05-27<span class="o">)</span>
 </code></pre></div>
-
 <blockquote>
 <p>PS: </p>
 </blockquote>
 <p>base alias for Intel and ARM verions (<code>~/.bash_profile</code>):</p>
-<div class="highlight"><pre><span></span><code>alias abrew=&#39;/opt/homebrew/bin/brew &#39;
-alias ibrew=&#39;/usr/local/bin/brew &#39;
+<div class="highlight"><pre><span></span><code>alias abrew='/opt/homebrew/bin/brew '
+alias ibrew='/usr/local/bin/brew '
 </code></pre></div>
-
 <p>install moniconda:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>abrew<span class="w"> </span>install<span class="w"> </span>miniconda
 </code></pre></div>
-
 <p>initialization it:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>init<span class="w"> </span>bash
 </code></pre></div>
-
 <p>SEE: <a href="https://docs.conda.io/projects/conda/en/latest/dev-guide/deep-dive-activation.html">Deep dive: conda init and activate — conda 4.13.0.post1+0adcd595 documentation</a></p>
 <p>will <code>~/.bash_profile</code> fund like:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span>
-<span class="c1"># !! Contents within this block are managed by &#39;conda init&#39; !!</span>
-<span class="n">__conda_setup</span><span class="o">=</span><span class="s2">&quot;$(&#39;/opt/homebrew/Caskroom/miniconda/base/bin/conda&#39; &#39;shell.bash&#39; &#39;hook&#39; 2&gt; /dev/null)&quot;</span>
+<span class="c1"># !! Contents within this block are managed by 'conda init' !!</span>
+<span class="n">__conda_setup</span><span class="o">=</span><span class="s2">"$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.bash' 'hook' 2&gt; /dev/null)"</span>
 <span class="k">if</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="o">$</span><span class="err">?</span><span class="w"> </span><span class="o">-</span><span class="n">eq</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="n">then</span>
-<span class="w">    </span><span class="n">eval</span><span class="w"> </span><span class="s2">&quot;$__conda_setup&quot;</span>
+<span class="w">    </span><span class="n">eval</span><span class="w"> </span><span class="s2">"$__conda_setup"</span>
 <span class="k">else</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh&quot;</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="n">then</span>
-<span class="w">        </span><span class="o">.</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="s2">"/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="n">then</span>
+<span class="w">        </span><span class="o">.</span><span class="w"> </span><span class="s2">"/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"</span>
 <span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="k">export</span><span class="w"> </span><span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/bin:$PATH&quot;</span>
+<span class="w">        </span><span class="k">export</span><span class="w"> </span><span class="n">PATH</span><span class="o">=</span><span class="s2">"/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"</span>
 <span class="w">    </span><span class="n">fi</span>
 <span class="n">fi</span>
 <span class="n">unset</span><span class="w"> </span><span class="n">__conda_setup</span>
 <span class="c1"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span>
 </code></pre></div>
-
 <p>install PyQt:</p>
 <div class="highlight"><pre><span></span><code><span class="n">$</span><span class="w"> </span><span class="n">abrew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">PyQt</span><span class="mi">@5</span>
 </code></pre></div>
-
 <p>base <code>conda info</code> check miniconda is working;
 and create Leo special environment:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w">  </span>-n<span class="w"> </span>leo3912<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9.12
 </code></pre></div>
-
 <p>check result:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>list
 conda<span class="w"> </span>env<span class="w"> </span>list
 /opt/homebrew/Caskroom/miniconda/base/lib/python3.9/site-packages/_distutils_hack/__init__.py:30:<span class="w"> </span>UserWarning:<span class="w"> </span>Setuptools<span class="w"> </span>is<span class="w"> </span>replacing<span class="w"> </span>distutils.
-<span class="w">  </span>warnings.warn<span class="o">(</span><span class="s2">&quot;Setuptools is replacing distutils.&quot;</span><span class="o">)</span>
+<span class="w">  </span>warnings.warn<span class="o">(</span><span class="s2">"Setuptools is replacing distutils."</span><span class="o">)</span>
 <span class="c1"># conda environments:</span>
 <span class="c1">#</span>
 base<span class="w">                  </span>*<span class="w">  </span>/opt/homebrew/Caskroom/miniconda/base
 leo3912<span class="w">                  </span>/opt/homebrew/Caskroom/miniconda/base/envs/leo3912
 </code></pre></div>
-
 <p>copy PyQt packets from brew to miniconda:</p>
 <p>such as:
     + from <code>/opt/homebrew/Cellar/pyqt@5/5.15.6/lib/python3.9/site-packages/</code> 
@@ -222,14 +217,12 @@ PyQtDataVisualization-5.15.5.dist-info
 PyQtNetworkAuth-5.15.5.dist-info
 PyQtPurchasing-5.15.5.dist-info
 </code></pre></div>
-
 <p>and download Leo Source code release from <a href="https://github.com/leo-editor/leo-editor/releases/latest">Latest</a> </p>
 <p>deploy into right path, such as <code>/opt/bin/leo</code></p>
 <p>and into conda environment install leo:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>leo3912
 $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>leo
 </code></pre></div>
-
 <p>will got some error, but is ok, can suto install these:</p>
 <ul>
 <li>Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 alabaster-0.7.12 astroid-2.11.5 attrs-21.4.0 babel-2.10.1 dialite-0.5.3 dill-0.3.5.1 docutils-0.17.1 fastjsonschema-2.15.3 flexx-0.8.4 future-0.18.2 imagesize-1.3.0 importlib-metadata-4.11.4 isort-5.10.1 jsonschema-4.5.1 jupyter-core-4.10.0 lazy-object-proxy-1.7.1 leo-5.9 mccabe-0.7.0 nbformat-5.4.0 platformdirs-2.5.2 pscript-0.7.7 pyflakes-2.4.0 pylint-2.13.9 pyrsistent-0.18.1 pytz-2022.1 six-1.16.0 snowballstemmer-2.2.0 sphinx-4.5.0 sphinxcontrib-applehelp-1.0.2 sphinxcontrib-devhelp-1.0.2 sphinxcontrib-htmlhelp-2.0.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.3 sphinxcontrib-serializinghtml-1.1.5 tomli-2.0.1 tornado-6.1 traitlets-5.2.1.post0 typing-extensions-4.2.0 webruntime-0.5.8 wrapt-1.14.1 zipp-3.8.0</li>
@@ -240,8 +233,8 @@ now under conda environment need can call leo with hand deploy verion:</p>
 <div class="highlight"><pre><span></span><code><span class="o">(</span><span class="nt">conda</span><span class="o">:</span><span class="w"> </span><span class="nt">leo3912</span><span class="o">)</span>
 <span class="o">$</span><span class="w"> </span><span class="nt">python</span><span class="w"> </span><span class="o">/</span><span class="nt">opt</span><span class="o">/</span><span class="nt">bin</span><span class="o">/</span><span class="nt">leo</span><span class="o">/</span><span class="nt">launchLeo</span><span class="p">.</span><span class="nc">py</span>
 
-<span class="nt">setting</span><span class="w"> </span><span class="nt">leoID</span><span class="w"> </span><span class="nt">from</span><span class="w"> </span><span class="nt">os</span><span class="p">.</span><span class="nc">getenv</span><span class="o">(</span><span class="s1">&#39;USER&#39;</span><span class="o">):</span><span class="w"> </span><span class="s1">&#39;zoomq&#39;</span>
-<span class="nt">PYLINTHOME</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">now</span><span class="w"> </span><span class="s1">&#39;/Users/zoomq/Library/Caches/pylint&#39;</span><span class="w"> </span><span class="nt">but</span><span class="w"> </span><span class="nt">obsolescent</span><span class="w"> </span><span class="s1">&#39;/Users/zoomq/.pylint.d&#39;</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">found</span><span class="o">;</span><span class="w"> </span><span class="nt">you</span><span class="w"> </span><span class="nt">can</span><span class="w"> </span><span class="nt">safely</span><span class="w"> </span><span class="nt">remove</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">latter</span>
+<span class="nt">setting</span><span class="w"> </span><span class="nt">leoID</span><span class="w"> </span><span class="nt">from</span><span class="w"> </span><span class="nt">os</span><span class="p">.</span><span class="nc">getenv</span><span class="o">(</span><span class="s1">'USER'</span><span class="o">):</span><span class="w"> </span><span class="s1">'zoomq'</span>
+<span class="nt">PYLINTHOME</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">now</span><span class="w"> </span><span class="s1">'/Users/zoomq/Library/Caches/pylint'</span><span class="w"> </span><span class="nt">but</span><span class="w"> </span><span class="nt">obsolescent</span><span class="w"> </span><span class="s1">'/Users/zoomq/.pylint.d'</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">found</span><span class="o">;</span><span class="w"> </span><span class="nt">you</span><span class="w"> </span><span class="nt">can</span><span class="w"> </span><span class="nt">safely</span><span class="w"> </span><span class="nt">remove</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">latter</span>
 <span class="nt">duplicate</span><span class="o">,</span><span class="w"> </span><span class="o">(</span><span class="nt">not</span><span class="w"> </span><span class="nt">conflicting</span><span class="o">)</span><span class="w"> </span><span class="nt">key</span><span class="w"> </span><span class="nt">bindings</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">myLeoSettings</span><span class="p">.</span><span class="nc">leo</span>
 <span class="nt">all</span><span class="w">    </span><span class="nt">Alt</span><span class="o">+)</span><span class="w"> </span><span class="nt">move-past-close</span>
 <span class="nt">all</span><span class="w">    </span><span class="nt">Alt</span><span class="o">+)</span><span class="w"> </span><span class="nt">move-past-close</span>
@@ -267,19 +260,16 @@ now under conda environment need can call leo with hand deploy verion:</p>
 
 <span class="o">...</span>
 </code></pre></div>
-
-<p><img alt="Leo 6.6.2" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-29%2022.10.10-1.jpg"></p>
+<p><img alt="Leo 6.6.2" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-29%2022.10.10-1.jpg"/></p>
 <p>suggest define alias for daily, 
 <code>~/.bash_profile</code> add:</p>
-<div class="highlight"><pre><span></span><code>alias leo6lanch=&quot;python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;&quot;
+<div class="highlight"><pre><span></span><code>alias leo6lanch="python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"
 </code></pre></div>
-
 <p>finally start-up leo need two commands:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>leo3912
 $<span class="w"> </span>leo6lanch
 </code></pre></div>
-
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>only for macOS 12.* with M1 chip</p>
 </blockquote>
@@ -295,7 +285,7 @@ $<span class="w"> </span>leo6lanch
 <li>download latest Leo from github</li>
 <li>finally from conda environment's Python call the <code>launchLeo.py</code></li>
 </ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
 <ul>
 <li>220529 publish as blog</li>
 <li>220528 miniconda + abrew can work</li>

@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="cbi-zq-install"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/cbi-zq-install.html"/>
-            <meta property="og:description" content="  CBI 目标 环境 刷机 细节   问题 VGA IP Connection refused ftab 其它   TODO 参考: CbuieBoard Linux   Changelog   CBI¶ CBInstall.1 欢乐完成 记要了现场活动的情况; 当然,俺也是学员之一 …"/>
+            <meta property="og:description" content="CBI¶ CBInstall.1 欢乐完成 记要了现场活动的情况; 当然,俺也是学员之一,要交作业的,所以,俺的刷机笔记如下: 目标¶ 用CB3 替代原先的 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -132,8 +132,8 @@
 		<a href="https://blog.zoomquiet.io/tag/zq.html">ZQ</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-
-                <div class="toc">
+    <nav class="toc">
+    <div class="toc">
 <ul>
 <li><a href="#cbi">CBI</a></li>
 <li><a href="#_1">目标</a></li>
@@ -159,19 +159,22 @@
 <li><a href="#changelog">Changelog</a></li>
 </ul>
 </div>
-<h2 id="cbi">CBI<a class="headerlink" href="#cbi" title="Permanent link">&para;</a></h2>
+    </nav>
+
+                
+<h2 id="cbi">CBI<a class="headerlink" href="#cbi" title="Permanent link">¶</a></h2>
 <p><a href="http://blog.zhgdg.org/2014-01/et-cbi1/">CBInstall.1 欢乐完成</a>
 记要了现场活动的情况;</p>
 <p>当然,俺也是学员之一,要交作业的,所以,俺的刷机笔记如下:</p>
-<h2 id="_1">目标<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">目标<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>用CB3 替代原先的兼容 PC 机作家庭服务器!</p>
-<h2 id="_2">环境<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">环境<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <ul>
 <li>MBP 11年下半年版, 15吋</li>
 <li>MAC OS X 10.9 Mavericks</li>
 <li>CB3(CubieTruck) 以及套件的配件</li>
 </ul>
-<h2 id="_3">刷机<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">刷机<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>果然如宣传的,是那么简单!</p>
 <ol>
 <li>准备工具 ~ <a href="http://docs.cubieboard.org/tutorials/common/livesuit_installation_guide">LiveSuit</a> </li>
@@ -179,11 +182,11 @@
 <li>刷机</li>
 </ol>
 <p>尝试了 arch linux 的镜像,发觉进入后包管理命令,完全不熟悉,所以,只好坚持使用 Ubuntu了.</p>
-<h3 id="_4">细节<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_4">细节<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="http://docs.cubieboard.org/tutorials/common/livesuit_installation_guide">LiveSuit</a> 真心傻瓜,在MAC 上完全无碍!</li>
 </ul>
-<p><img alt="livesuit_mac" src="http://zoomq.qiniudn.com/ZHGDG/2014/140111-CBInstallfest.1/livesuit_mac.png"></p>
+<p><img alt="livesuit_mac" src="http://zoomq.qiniudn.com/ZHGDG/2014/140111-CBInstallfest.1/livesuit_mac.png"/></p>
 <ul>
 <li>
 <p>下载时,为了大家的幸福,不要下载 .img 的文件,下载压缩的 .gz 文档本地解开就好</p>
@@ -191,7 +194,7 @@
 </li>
 <li>
 <p>为了防止手指意外的摸到带电元件,应该先将赠送的PV板安装上,注意:
-<img alt="cubietruck_fel_button" src="http://dyhr.com/wp-content/uploads/Cubietruck_FEL_button-300x224.jpg"></p>
+<img alt="cubietruck_fel_button" src="http://dyhr.com/wp-content/uploads/Cubietruck_FEL_button-300x224.jpg"/></p>
 <ul>
 <li>正确的次序</li>
 <li>以及要将板上的保护膜清除</li>
@@ -226,11 +229,11 @@
 </ul>
 </li>
 </ul>
-<p><img alt="ct_default_py.png（PNG 图像，814x201 像素）" src="http://zoomq.qiniudn.com/ZHGDG/2014/140111-CBInstallfest.1/ct_default_py.png"></p>
+<p><img alt="ct_default_py.png（PNG 图像，814x201 像素）" src="http://zoomq.qiniudn.com/ZHGDG/2014/140111-CBInstallfest.1/ct_default_py.png"/></p>
 <ul>
 <li>默认安装了Python 点赞!</li>
 </ul>
-<h2 id="_5">问题<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_5">问题<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
 <ol>
 <li>
 <p>对于可以通过内核接口,调整板上 LED 灯的事儿</p>
@@ -256,8 +259,7 @@ ct-lubuntu-nand-v1.00/VGA/lubuntu-server-nand.img.gz</p>
 <div class="highlight"><pre><span></span><code>ct-lubuntu-13.06-server-nand.img.gz
 ct-vga-lubuntu-13.06-server-nand.img.gz
 </code></pre></div>
-
-<h3 id="vga">VGA<a class="headerlink" href="#vga" title="Permanent link">&para;</a></h3>
+<h3 id="vga">VGA<a class="headerlink" href="#vga" title="Permanent link">¶</a></h3>
 <p>是的,兴冲冲,回家准备接上网络,开始家庭服务器的配置!
 结果发现,5年前的液瞐屏幕接上没有反应!
 再扛来老婆的新液瞐屏也是只有间或的白色闪线,没有信号输出!</p>
@@ -275,12 +277,11 @@ ct-vga-lubuntu-13.06-server-nand.img.gz
 <div class="highlight"><pre><span></span><code>Welcome to Linaro 13.08 (GNU/Linux 3.4.61+ armv7l)
 
  * Documentation:  https://wiki.linaro.org/
-New release &#39;13.10&#39; available.
-Run &#39;do-release-upgrade&#39; to upgrade to it.
+New release '13.10' available.
+Run 'do-release-upgrade' to upgrade to it.
 </code></pre></div>
-
 <p>这倒底是升级呢? 还是不升级呢?!</p>
-<h3 id="ip">IP<a class="headerlink" href="#ip" title="Permanent link">&para;</a></h3>
+<h3 id="ip">IP<a class="headerlink" href="#ip" title="Permanent link">¶</a></h3>
 <p>修订: <code>/etc/network/interfaces</code> 为:</p>
 <div class="highlight"><pre><span></span><code>auto<span class="w"> </span>lo<span class="w"> </span>eth0
 iface<span class="w"> </span>lo<span class="w"> </span>inet<span class="w"> </span>loopback
@@ -293,13 +294,11 @@ netmask<span class="w"> </span><span class="m">255</span>.255.255.0
 network<span class="w"> </span><span class="m">192</span>.168.0.0
 broadcast<span class="w"> </span><span class="m">192</span>.168.0.255
 </code></pre></div>
-
 <p>重启网络:</p>
 <div class="highlight"><pre><span></span><code>/etc/init.d/networking<span class="w"> </span>restart
 </code></pre></div>
-
 <p>就将原先每次重启时,可能变化的动态 IP 变成内网的静态 IP 了</p>
-<h3 id="connection-refused">Connection refused<a class="headerlink" href="#connection-refused" title="Permanent link">&para;</a></h3>
+<h3 id="connection-refused">Connection refused<a class="headerlink" href="#connection-refused" title="Permanent link">¶</a></h3>
 <p>然后,配置了 <code>sudo</code> 用户,刷了初始口令,就可以离开 VGA 远程随时随地进行控制了!</p>
 <p>可是竟然反馈说: <code>Connection refused</code></p>
 <p>果断 Google 发布,是常见问题!</p>
@@ -308,13 +307,11 @@ broadcast<span class="w"> </span><span class="m">192</span>.168.0.255
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>openssh-server<span class="w"> </span>openssh-client
 sudo<span class="w"> </span>/etc/init.d/ssh<span class="w"> </span>start
 </code></pre></div>
-
 <p>再尝试</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>ssh<span class="w"> </span><span class="m">192</span>.168.0.111
 </code></pre></div>
-
 <p>一切正常了!</p>
-<h3 id="ftab">ftab<a class="headerlink" href="#ftab" title="Permanent link">&para;</a></h3>
+<h3 id="ftab">ftab<a class="headerlink" href="#ftab" title="Permanent link">¶</a></h3>
 <p>看CB3 的硬件参数,应该有8G 内置空间的, 但是查询:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>df<span class="w"> </span>-h
 Filesystem<span class="w">      </span>Size<span class="w">  </span>Used<span class="w"> </span>Avail<span class="w"> </span>Use%<span class="w"> </span>Mounted<span class="w"> </span>on
@@ -326,7 +323,6 @@ none<span class="w">            </span><span class="m">5</span>.0M<span class="w
 none<span class="w">            </span>913M<span class="w">     </span><span class="m">0</span><span class="w">  </span>913M<span class="w">   </span><span class="m">0</span>%<span class="w"> </span>/run/shm
 none<span class="w">            </span>100M<span class="w">     </span><span class="m">0</span><span class="w">  </span>100M<span class="w">   </span><span class="m">0</span>%<span class="w"> </span>/run/user
 </code></pre></div>
-
 <p>不对哪,肿么只有2G 的空间?</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>fdisk<span class="w"> </span>-l
 
@@ -337,7 +333,7 @@ Sector<span class="w"> </span>size<span class="w"> </span><span class="o">(</spa
 I/O<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>minimum/optimal<span class="o">)</span>:<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes<span class="w"> </span>/<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
 Disk<span class="w"> </span>identifier:<span class="w"> </span>0x00000000
 
-Disk<span class="w"> </span>/dev/nand<span class="w"> </span>doesn<span class="s1">&#39;t contain a valid partition table</span>
+Disk<span class="w"> </span>/dev/nand<span class="w"> </span>doesn<span class="s1">'t contain a valid partition table</span>
 
 <span class="s1">Disk /dev/nanda: 67 MB, 67108864 bytes</span>
 <span class="s1">255 heads, 63 sectors/track, 8 cylinders, total 131072 sectors</span>
@@ -355,7 +351,7 @@ Disk<span class="w"> </span>/dev/nand<span class="w"> </span>doesn<span class="s
 <span class="s1">I/O size (minimum/optimal): 512 bytes / 512 bytes</span>
 <span class="s1">Disk identifier: 0x00000000</span>
 
-<span class="s1">Disk /dev/nandb doesn&#39;</span>t<span class="w"> </span>contain<span class="w"> </span>a<span class="w"> </span>valid<span class="w"> </span>partition<span class="w"> </span>table
+<span class="s1">Disk /dev/nandb doesn'</span>t<span class="w"> </span>contain<span class="w"> </span>a<span class="w"> </span>valid<span class="w"> </span>partition<span class="w"> </span>table
 
 Disk<span class="w"> </span>/dev/nandc:<span class="w"> </span><span class="m">5469</span><span class="w"> </span>MB,<span class="w"> </span><span class="m">5469372416</span><span class="w"> </span>bytes
 <span class="m">255</span><span class="w"> </span>heads,<span class="w"> </span><span class="m">63</span><span class="w"> </span>sectors/track,<span class="w"> </span><span class="m">664</span><span class="w"> </span>cylinders,<span class="w"> </span>total<span class="w"> </span><span class="m">10682368</span><span class="w"> </span>sectors
@@ -364,9 +360,8 @@ Sector<span class="w"> </span>size<span class="w"> </span><span class="o">(</spa
 I/O<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>minimum/optimal<span class="o">)</span>:<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes<span class="w"> </span>/<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
 Disk<span class="w"> </span>identifier:<span class="w"> </span>0x00000000
 
-Disk<span class="w"> </span>/dev/nandc<span class="w"> </span>doesn<span class="err">&#39;</span>t<span class="w"> </span>contain<span class="w"> </span>a<span class="w"> </span>valid<span class="w"> </span>partition<span class="w"> </span>table
+Disk<span class="w"> </span>/dev/nandc<span class="w"> </span>doesn<span class="err">'</span>t<span class="w"> </span>contain<span class="w"> </span>a<span class="w"> </span>valid<span class="w"> </span>partition<span class="w"> </span>table
 </code></pre></div>
-
 <p>果然有 <code>/dev/nandc</code> 没有挂上;</p>
 <p>于是,先建立文件系统:</p>
 <div class="highlight"><pre><span></span><code>mkfs.ext4 /dev/nandc
@@ -383,15 +378,13 @@ Creating journal (32768 blocks):
 done
 Writing superblocks and filesystem accounting information: done
 </code></pre></div>
-
 <p>然后,不折腾,直接使用: <code>/etc/rc.local</code></p>
 <div class="highlight"><pre><span></span><code>sudo mount /dev/nandc /mnt/nandc
 </code></pre></div>
-
 <p>追加一行,完成! 这样重启时,将在最后一刻重新挂接上丢失的分区</p>
-<h3 id="_6">其它<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_6">其它<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
 <p>习惯性的安装 <code>htop</code> 一看:</p>
-<p><img alt="ct_default_deamon.png（PNG 图像，1005x709 像素）" src="http://zoomq.qiniudn.com/ZHGDG/2014/140111-CBInstallfest.1/ct_default_deamon.png"></p>
+<p><img alt="ct_default_deamon.png（PNG 图像，1005x709 像素）" src="http://zoomq.qiniudn.com/ZHGDG/2014/140111-CBInstallfest.1/ct_default_deamon.png"/></p>
 <p>目测, 这一镜像的程序猿是 <code>LAMP</code> 标准屌丝web 程序猿哪!!!</p>
 <p>按惯例, <code>server</code> 版的发行系统镜像,应该是最小运维依赖核心系统:</p>
 <ul>
@@ -404,7 +397,7 @@ Writing superblocks and filesystem accounting information: done
 </ul>
 <p>怎么也没有想到,默认是启动跑了 <code>MySQL</code>+<code>Apache</code> 这两种一般 SA 一见就删除的东西</p>
 <p>有点 <code>细思恐极</code> CB 应该及时提升自个儿 SA 的运营观念了,不能停留在上世纪了呢...</p>
-<h1 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
+<h1 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">¶</a></h1>
 <p>为了完全替代俺家原先的家庭服务器,可以支持多系统的内网络使用,
 还要折腾的事儿有:</p>
 <ol>
@@ -417,9 +410,9 @@ Writing superblocks and filesystem accounting information: done
 </ol>
 <p>...</p>
 <p>总之,要搾干 CB 的一切潜能!</p>
-<h1 id="_7">参考:<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h1>
+<h1 id="_7">参考:<a class="headerlink" href="#_7" title="Permanent link">¶</a></h1>
 <p><a href="http://dyhr.com/2013/11/22/how-to-install-lubuntu-server-on-cubietruck-from-mac-os-x/">How to install Lubuntu Server on Cubietruck from Mac OS X</a></p>
-<h2 id="cbuieboard">CbuieBoard<a class="headerlink" href="#cbuieboard" title="Permanent link">&para;</a></h2>
+<h2 id="cbuieboard">CbuieBoard<a class="headerlink" href="#cbuieboard" title="Permanent link">¶</a></h2>
 <p><a href="http://www.ifanr.com/367898">Cubieboard ：享誉国外 Linux 圈子的中国产品- 爱范儿· Beats of Bits</a>
 - <a href="http://linux-sunxi.org/Cubieboard/zh_cn">Cubieboard/zh cn - linux-sunxi.org</a></p>
 <ul>
@@ -427,7 +420,7 @@ Writing superblocks and filesystem accounting information: done
 <li><a href="http://docs.cubieboard.org/tutorials/cb3/start">Tutorials for Cubietruck</a> (cubieboard.org)</li>
 <li><a href="http://docs.cubieboard.org/faq/faqs">FAQ</a> (cubieboard.org)</li>
 </ul>
-<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
+<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="http://docs.cubieboard.org/tutorials/common/livesuit_installation_guide">LiveSuit Guide</a>  (cubieboard.org)</li>
 <li><a href="http://www.lubuntu.net/">www.lubuntu.net</a></li>
@@ -435,7 +428,7 @@ Writing superblocks and filesystem accounting information: done
 <li><a href="http://archlinuxarm.org/platforms/armv7/allwinner/cubieboard">Cubieboard | Arch Linux ARM</a></li>
 <li><a href="http://archlinuxarm.org/platforms/armv7/allwinner/cubieboard-2">Cubieboard 2 | Arch Linux ARM</a></li>
 </ul>
-<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h1>
 <ul>
 <li>140119 终于汇集了所有唠叨!</li>
 <li>140111 开始总结</li>

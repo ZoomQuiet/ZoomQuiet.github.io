@@ -128,8 +128,8 @@
 		<a href="https://blog.zoomquiet.io/tag/pythonic.html">Pythonic</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-
-                <div class="toc">
+    <nav class="toc">
+    <div class="toc">
 <ul>
 <li><a href="#background">background</a></li>
 <li><a href="#goal">goal</a></li>
@@ -199,12 +199,15 @@
 <li><a href="#refer">refer.</a></li>
 </ul>
 </div>
-<h2 id="background">background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+    </nav>
+
+                
+<h2 id="background">background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
 <p>作为 AIGCx珠海 创始人, 经常要回应联盟倡议, 完成各种串联任务;</p>
 <p>这不来了一个: <code>🎃程序员AIGC工具包编写</code></p>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
 <p>面对普通程序员, 构建一个如何使用 AIGC 工具来完成任务的工具包;</p>
-<h2 id="tracing">tracing<a class="headerlink" href="#tracing" title="Permanent link">&para;</a></h2>
+<h2 id="tracing">tracing<a class="headerlink" href="#tracing" title="Permanent link">¶</a></h2>
 <p>从 ChatGPT 问世, 一路各种有助编程的 AGI 都尝试用过, 不是要收费, 就是不一定管用;</p>
 <p>比如, VSCode 中大力宣传的: <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilotvs">GitHub Copilot</a> 第一时间安装, 
 可惜在学习使用 Rust 过程中, 提供的代码建议, 多数不可用,
@@ -213,7 +216,7 @@
 <p>所以, 从这两年 AIGC 和编程活动的结合经验来看, 最可用的还是对原有搜索的加强方向, AIGC 越来越像一位有无限耐心以及知识的老程序猿, 可以认真回答我们任何问题,
 从而提高具体编程侨务过程中专注解决业务问题, 而不是技术问题的效能;</p>
 <p>特此尝试以一个具体编程任务为线索, 以单一 AIGC 产品为背景, 来演示如何在 AI 辅助下完成任务;</p>
-<h2 id="_1">目标:<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">目标:<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>可以随时询问到指定城市天气的工具...</p>
 <p>以基本工程经验, 可以分解为以下关键任务阶段:</p>
 <ul>
@@ -227,7 +230,7 @@
 </li>
 </ul>
 <p>AI: https://devv.ai/ 目前可以免费使用的, 最敏捷以及最精确的 AIGC 问答引擎</p>
-<h2 id="_2">架构<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">架构<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>不过首先要解决产品的技术选型</p>
 </blockquote>
@@ -245,42 +248,38 @@
 <p>A: 对于开发一个随时可以查询指定城市天气情况的工具，有几种现实方案，其中最简洁的方案之一是使用OpenWeatherMap API。下面是关键构建过程和示例代码以及解释关键行为的详细说明：</p>
 </li>
 </ul>
-<h3 id="1openweathermap-api">步骤1：注册OpenWeatherMap API<a class="headerlink" href="#1openweathermap-api" title="Permanent link">&para;</a></h3>
+<h3 id="1openweathermap-api">步骤1：注册OpenWeatherMap API<a class="headerlink" href="#1openweathermap-api" title="Permanent link">¶</a></h3>
 <p>首先，您需要注册OpenWeatherMap API账户，以便获取API密钥。您可以在https://home.openweathermap.org/users/sign_up 注册并创建免费账户。然后在您的仪表板上生成API密钥。</p>
-<h3 id="2requests">步骤2：安装Requests模块<a class="headerlink" href="#2requests" title="Permanent link">&para;</a></h3>
+<h3 id="2requests">步骤2：安装Requests模块<a class="headerlink" href="#2requests" title="Permanent link">¶</a></h3>
 <p>Requests模块将用于向OpenWeatherMap API发出HTTP请求，因此在继续之前，您需要安装它。您可以在终端中运行以下命令来安装Requests模块：</p>
 <div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
 </code></pre></div>
-
-<h3 id="3requestsapi">步骤3：导入Requests模块和API密钥<a class="headerlink" href="#3requestsapi" title="Permanent link">&para;</a></h3>
+<h3 id="3requestsapi">步骤3：导入Requests模块和API密钥<a class="headerlink" href="#3requestsapi" title="Permanent link">¶</a></h3>
 <p>安装了Requests模块并生成了API密钥后，您可以开始编写代码。在您喜欢的代码编辑器中打开一个新的Python文件，并导入Requests模块：</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
 </code></pre></div>
-
 <p>接下来，创建一个变量来存储您的API密钥：</p>
-<div class="highlight"><pre><span></span><code><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">api_key</span> <span class="o">=</span> <span class="s1">'YOUR_API_KEY'</span>
 </code></pre></div>
-
 <p>将<code>YOUR_API_KEY</code>替换为您的实际API密钥。</p>
-<h3 id="4">步骤4：构建天气查询工具<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h3 id="4">步骤4：构建天气查询工具<a class="headerlink" href="#4" title="Permanent link">¶</a></h3>
 <p>现在，我们已经导入了Requests模块并存储了API密钥，可以开始构建我们的天气查询工具。该工具将提示用户输入城市名称，并使用Requests模块来获取该城市的天气数据。以下是代码示例：</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
-<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter city name: &#39;</span><span class="p">)</span>
-<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s1">'YOUR_API_KEY'</span>
+<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Enter city name: '</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">'</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span>
-    <span class="n">desc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;weather&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperature: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s1"> K&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Description: </span><span class="si">{</span><span class="n">desc</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'main'</span><span class="p">][</span><span class="s1">'temp'</span><span class="p">]</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'weather'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'description'</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Temperature: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s1"> K'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Description: </span><span class="si">{</span><span class="n">desc</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error fetching weather data&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Error fetching weather data'</span><span class="p">)</span>
 </code></pre></div>
-
 <blockquote>
 <p>就拿 AI 当成一个真实的人来提问, 一样要尽可能提供足够多的背景信息, 以及具体的期望, 并保持礼貌; 在编程领域, 关键提示词是: 详细示例代码, 说明关键行为, 具体检验办法... 这几个要求, 都是能令 AIGC 提供我们立即可以开展尝试和对比决策的主要技巧;</p>
 </blockquote>
@@ -296,56 +295,54 @@
 </li>
 </ul>
 <p>下面将给出示例代码对比说明关键行为，并展示如何检验OpenWeatherMap和Meteomatics的API。</p>
-<h3 id="openweathermap">OpenWeatherMap示例代码：<a class="headerlink" href="#openweathermap" title="Permanent link">&para;</a></h3>
+<h3 id="openweathermap">OpenWeatherMap示例代码：<a class="headerlink" href="#openweathermap" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
-<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter city name: &#39;</span><span class="p">)</span>
-<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s1">'YOUR_API_KEY'</span>
+<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Enter city name: '</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">'</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span>
-    <span class="n">desc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;weather&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperature: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s1"> K&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Description: </span><span class="si">{</span><span class="n">desc</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'main'</span><span class="p">][</span><span class="s1">'temp'</span><span class="p">]</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'weather'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'description'</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Temperature: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s1"> K'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Description: </span><span class="si">{</span><span class="n">desc</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error fetching weather data&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Error fetching weather data'</span><span class="p">)</span>
 </code></pre></div>
-
-<h3 id="meteomatics">Meteomatics示例代码：<a class="headerlink" href="#meteomatics" title="Permanent link">&para;</a></h3>
+<h3 id="meteomatics">Meteomatics示例代码：<a class="headerlink" href="#meteomatics" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">meteomatics</span> <span class="kn">import</span> <span class="n">ApiConnection</span>
 
-<span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;YOUR_USERNAME&#39;</span>
-<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;YOUR_PASSWORD&#39;</span>
+<span class="n">username</span> <span class="o">=</span> <span class="s1">'YOUR_USERNAME'</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s1">'YOUR_PASSWORD'</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">ApiConnection</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
 
-<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter city name: &#39;</span><span class="p">)</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s1">&#39;2023-09-01T00:00:00Z&#39;</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s1">&#39;2023-09-01T01:00:00Z&#39;</span>
-<span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;temperature_2m:C&#39;</span><span class="p">,</span> <span class="s1">&#39;weathercode&#39;</span><span class="p">]</span>
+<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Enter city name: '</span><span class="p">)</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="s1">'2023-09-01T00:00:00Z'</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="s1">'2023-09-01T01:00:00Z'</span>
+<span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'temperature_2m:C'</span><span class="p">,</span> <span class="s1">'weathercode'</span><span class="p">]</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">query_multi_point_time_series</span><span class="p">(</span><span class="n">city</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;temperature_2m&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">desc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;weathercode&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperature: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s1"> °C&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Description: </span><span class="si">{</span><span class="n">desc</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'temperature_2m'</span><span class="p">][</span><span class="s1">'data'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'weathercode'</span><span class="p">][</span><span class="s1">'data'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Temperature: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s1"> °C'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Description: </span><span class="si">{</span><span class="n">desc</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error fetching weather data&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Error fetching weather data'</span><span class="p">)</span>
 </code></pre></div>
-
-<h3 id="_3">代码对比说明关键行为：<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_3">代码对比说明关键行为：<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
 <ul>
 <li>OpenWeatherMap 示例代码使用了Requests库向OpenWeatherMap API发出HTTP GET请求，然后从响应中提取温度和天气描述。</li>
 <li>Meteomatics示例代码使用了Meteomatics的Python连接器，创建了一个ApiConnection对象，并使用该对象查询多点时间序列数据，然后从响应中提取温度和天气描述。</li>
 </ul>
-<h3 id="_4">如何检验：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_4">如何检验：<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
 <p>您可以分别运行这两段代码，并输入相同的城市名称来检验它们。您应该能够看到来自OpenWeatherMap和Meteomatics的相应天气数据，包括温度和天气描述。</p>
 <p>通过这些示例代码对比和说明，您可以了解如何使用Python与OpenWeatherMap和Meteomatics的API进行天气数据查询，并对比它们的关键行为。</p>
-<h3 id="_5">代码解释：<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_5">代码解释：<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
 <ul>
 <li>首先，使用<code>input()</code>函数提示用户输入城市名称，并将输入的值存储在<code>city</code>变量中。</li>
 <li>接下来，使用f-string构造一个URL，以访问输入城市的天气数据。URL包括OpenWeatherMap API端点、<code>city</code>变量和API密钥。</li>
@@ -354,11 +351,10 @@
 <li>如果请求成功，将响应数据转换为Python字典，并从中提取温度和天气描述，然后打印到控制台。</li>
 <li>如果请求失败，打印错误消息到控制台。</li>
 </ul>
-<h3 id="5">步骤5：保存和测试应用<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<h3 id="5">步骤5：保存和测试应用<a class="headerlink" href="#5" title="Permanent link">¶</a></h3>
 <p>将Python文件保存为“weather_app.py”。现在，您可以测试应用程序。在终端中运行以下命令：</p>
 <div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">weather_app</span><span class="o">.</span><span class="n">py</span>
 </code></pre></div>
-
 <p>在提示时输入城市名称并按Enter键。应用程序应该会获取给定城市的天气数据，并将温度和描述打印到控制台。</p>
 <p>通过按照这些步骤，您可以使用Python和OpenWeatherMap API构建一个简单的天气查询工具。</p>
 <blockquote>
@@ -376,32 +372,28 @@
 <p>A: 为在macOS环境下使用Miniconda为新工程安装最新版本的Python虚拟环境，您可以按照以下详细步骤进行操作：</p>
 </li>
 </ul>
-<h3 id="1miniconda">步骤1：安装Miniconda<a class="headerlink" href="#1miniconda" title="Permanent link">&para;</a></h3>
+<h3 id="1miniconda">步骤1：安装Miniconda<a class="headerlink" href="#1miniconda" title="Permanent link">¶</a></h3>
 <p>如果您已经安装好了Miniconda，可以跳过这一步。否则，您可以在终端中运行以下命令来安装Miniconda：</p>
 <div class="highlight"><pre><span></span><code>bash<span class="w"> </span>Miniconda3-latest-MacOSX-x86_64.sh
 </code></pre></div>
-
 <p>按照安装提示进行操作，完成Miniconda的安装。</p>
-<h3 id="2python">步骤2：创建新的Python虚拟环境<a class="headerlink" href="#2python" title="Permanent link">&para;</a></h3>
+<h3 id="2python">步骤2：创建新的Python虚拟环境<a class="headerlink" href="#2python" title="Permanent link">¶</a></h3>
 <p>在终端中，使用以下命令创建一个新的Python虚拟环境，并指定要安装的Python版本（假设您要安装最新的Python 3.9版本）：</p>
 <div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
 </code></pre></div>
-
 <p>这将创建一个名为<code>myenv</code>的虚拟环境，并在其中安装Python 3.9版本。</p>
-<h3 id="3">步骤3：激活虚拟环境<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<h3 id="3">步骤3：激活虚拟环境<a class="headerlink" href="#3" title="Permanent link">¶</a></h3>
 <p>激活刚刚创建的虚拟环境，以便在其中进行工作。在终端中运行以下命令：</p>
 <div class="highlight"><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>myenv
 </code></pre></div>
-
-<h3 id="4python">步骤4：验证Python版本<a class="headerlink" href="#4python" title="Permanent link">&para;</a></h3>
+<h3 id="4python">步骤4：验证Python版本<a class="headerlink" href="#4python" title="Permanent link">¶</a></h3>
 <p>在激活的虚拟环境中，运行以下命令来验证Python版本是否正确安装：</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>--version
 </code></pre></div>
-
 <p>您应该会看到输出显示安装的Python版本为3.9.x。</p>
-<h3 id="5_1">步骤5：安装额外的包（可选）<a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h3>
+<h3 id="5_1">步骤5：安装额外的包（可选）<a class="headerlink" href="#5_1" title="Permanent link">¶</a></h3>
 <p>如果需要，您可以在激活的虚拟环境中使用<code>conda install</code>或<code>pip install</code>命令安装其他Python包。</p>
-<h3 id="_6">如何检验正确执行：<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_6">如何检验正确执行：<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
 <ul>
 <li>运行<code>conda env list</code>命令，您应该能够看到列出了您创建的<code>myenv</code>虚拟环境。</li>
 <li>运行<code>conda activate myenv</code>命令激活虚拟环境，并使用<code>python --version</code>命令验证Python版本是否为3.9.x。</li>
@@ -412,11 +404,11 @@
 <p>开始具体技术问题时, 可以注意到 devv.ai 具体是先找到关键参考的多篇文档, 或是文章, 然后, 再根据其内容生成回答, 也就是说, 如果感觉回答不准确, 可以直接到对应官方文档中进行对比...</p>
 </blockquote>
 </blockquote>
-<h2 id="_7">开发<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_7">开发<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>进入真实编程阶段, 要持续解决技术的具体问题</p>
 </blockquote>
-<p><img alt="获得KEY" src="https://ipic.zoomquiet.top/2024-01-24-zshot%202024-01-23%2020.44.45.jpg"></p>
+<p><img alt="获得KEY" src="https://ipic.zoomquiet.top/2024-01-24-zshot%202024-01-23%2020.44.45.jpg"/></p>
 <ul>
 <li>Q: 使用之前代码成功获得了 api.openweathermap.org 的数据:
 Temperature: 281.77 K
@@ -424,35 +416,33 @@ Temperature: 281.77 K
 请用具体示例代码说明, 并解释关键行为, 以及检验办法,
 谢谢</li>
 </ul>
-<p><img alt="真实数据" src="https://ipic.zoomquiet.top/2024-01-24-zshot%202024-01-23%2020.44.23.jpg"></p>
+<p><img alt="真实数据" src="https://ipic.zoomquiet.top/2024-01-24-zshot%202024-01-23%2020.44.23.jpg"/></p>
 <ul>
 <li>A: 您可以通过在API请求中添加<code>units=metric</code>参数来获取摄氏度的数据。另外，您也可以将开尔文（K）转换为摄氏度（C）。以下是具体示例代码以及解释关键行为的步骤：</li>
 </ul>
-<h3 id="_8">申请摄氏度的数据<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_8">申请摄氏度的数据<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
 <p>您可以在API请求URL中添加<code>units=metric</code>参数来获取摄氏度的数据。下面是示例代码：</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
-<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter city name: &#39;</span><span class="p">)</span>
-<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&amp;units=metric&#39;</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s1">'YOUR_API_KEY'</span>
+<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Enter city name: '</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&amp;units=metric'</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-    <span class="n">temp_celsius</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperature: </span><span class="si">{</span><span class="n">temp_celsius</span><span class="si">}</span><span class="s1"> °C&#39;</span><span class="p">)</span>
+    <span class="n">temp_celsius</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'main'</span><span class="p">][</span><span class="s1">'temp'</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Temperature: </span><span class="si">{</span><span class="n">temp_celsius</span><span class="si">}</span><span class="s1"> °C'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error fetching weather data&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Error fetching weather data'</span><span class="p">)</span>
 </code></pre></div>
-
-<h3 id="_9">转换开尔文到摄氏度<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_9">转换开尔文到摄氏度<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
 <p>如果您已经获得了开尔文的温度数据，您可以使用以下公式将其转换为摄氏度：</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">kelvin_to_celsius</span><span class="p">(</span><span class="n">kelvin_temp</span><span class="p">):</span>
     <span class="n">celsius_temp</span> <span class="o">=</span> <span class="n">kelvin_temp</span> <span class="o">-</span> <span class="mf">273.15</span>
     <span class="k">return</span> <span class="n">celsius_temp</span>
 </code></pre></div>
-
-<h3 id="_10">示例代码说明和检验<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h3 id="_10">示例代码说明和检验<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
 <ul>
 <li>示例代码中，我们向OpenWeatherMap API添加了<code>units=metric</code>参数，以获取摄氏度的数据。</li>
 <li>如果API请求成功，我们从响应中提取温度数据，并将其打印为摄氏度。</li>
@@ -551,37 +541,33 @@ localhost:100808/askw/zhuhai
 <li>查看交互式 API 文档</li>
 </ul>
 <p>下面是详细的步骤和示例代码：</p>
-<h3 id="1-fastapi-uvicorn">步骤 1：安装 FastAPI 和 Uvicorn<a class="headerlink" href="#1-fastapi-uvicorn" title="Permanent link">&para;</a></h3>
+<h3 id="1-fastapi-uvicorn">步骤 1：安装 FastAPI 和 Uvicorn<a class="headerlink" href="#1-fastapi-uvicorn" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>fastapi<span class="w"> </span>uvicorn
 </code></pre></div>
-
-<h3 id="2-fastapi">步骤 2：创建 FastAPI 应用程序<a class="headerlink" href="#2-fastapi" title="Permanent link">&para;</a></h3>
+<h3 id="2-fastapi">步骤 2：创建 FastAPI 应用程序<a class="headerlink" href="#2-fastapi" title="Permanent link">¶</a></h3>
 <p>创建一个名为 <code>main.py</code> 的文件，并添加以下代码：</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
 </code></pre></div>
-
-<h3 id="3_1">步骤 3：定义路由和处理函数<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<h3 id="3_1">步骤 3：定义路由和处理函数<a class="headerlink" href="#3_1" title="Permanent link">¶</a></h3>
 <p>在 <code>main.py</code> 文件中添加以下代码来定义路由和处理函数：</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
 
-<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"/"</span><span class="p">)</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">read_root</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello, World&quot;</span><span class="p">}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">"message"</span><span class="p">:</span> <span class="s2">"Hello, World"</span><span class="p">}</span>
 </code></pre></div>
-
-<h3 id="4_1">步骤 4：运行应用程序并访问接口<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<h3 id="4_1">步骤 4：运行应用程序并访问接口<a class="headerlink" href="#4_1" title="Permanent link">¶</a></h3>
 <p>在终端中运行以下命令启动应用程序：</p>
 <div class="highlight"><pre><span></span><code>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--reload
 </code></pre></div>
-
 <p>这将启动 Uvicorn 服务器，并在本地地址 <code>http://127.0.0.1:8000</code> 上提供 FastAPI 应用程序。</p>
-<h3 id="5-api">步骤 5：查看交互式 API 文档<a class="headerlink" href="#5-api" title="Permanent link">&para;</a></h3>
+<h3 id="5-api">步骤 5：查看交互式 API 文档<a class="headerlink" href="#5-api" title="Permanent link">¶</a></h3>
 <p>在浏览器中访问 <code>http://127.0.0.1:8000/docs</code>，您将看到自动生成的交互式 API 文档，其中包含您定义的路由和处理函数。</p>
-<h3 id="_11">关键行为说明<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h3 id="_11">关键行为说明<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
 <ul>
 <li><code>@app.get("/")</code>：这是一个装饰器，用于定义处理 HTTP GET 请求的路由。</li>
 <li><code>async def read_root():</code>：这是一个异步函数，处理来自根路径的请求。</li>
@@ -648,7 +634,6 @@ error: subprocess-exited-with-error
 
 note: This error originates from a subprocess, and is likely not a problem with pip.
 </code></pre></div>
-
 <ul>
 <li>A:根据您提供的错误信息，安装 FastAPI 时似乎出现了与构建 maturin 轮子相关的问题。这可能是由于缺少构建所需的依赖项或环境配置问题导致的。</li>
 </ul>
@@ -674,16 +659,15 @@ note: This error originates from a subprocess, and is likely not a problem with 
 <ul>
 <li>Q: 我将 conda 虚拟环境降到  3.10 时, 还是安装出错:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">error</span><span class="p">[</span><span class="n">E0463</span><span class="p">]:</span><span class="w"> </span><span class="n">can</span><span class="s1">&#39;t find crate for `core`</span>
+<div class="highlight"><pre><span></span><code><span class="n">error</span><span class="p">[</span><span class="n">E0463</span><span class="p">]:</span><span class="w"> </span><span class="n">can</span><span class="s1">'t find crate for `core`</span>
 <span class="w">        </span><span class="o">--&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/.</span><span class="n">cargo</span><span class="o">/</span><span class="n">registry</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">crates</span><span class="o">.</span><span class="n">io</span><span class="o">-</span><span class="mi">6</span><span class="n">f17d22bba15001f</span><span class="o">/</span><span class="n">static_assertions</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">lib</span><span class="o">.</span><span class="n">rs</span><span class="p">:</span><span class="mi">87</span><span class="p">:</span><span class="mi">1</span>
 <span class="w">         </span><span class="o">|</span>
 <span class="w">      </span><span class="mi">87</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">pub</span><span class="w"> </span><span class="n">extern</span><span class="w"> </span><span class="n">crate</span><span class="w"> </span><span class="n">core</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">_core</span><span class="p">;</span>
-<span class="w">         </span><span class="o">|</span><span class="w"> </span><span class="o">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><span class="w"> </span><span class="n">can</span><span class="s1">&#39;t find crate</span>
+<span class="w">         </span><span class="o">|</span><span class="w"> </span><span class="o">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><span class="w"> </span><span class="n">can</span><span class="s1">'t find crate</span>
 <span class="w">         </span><span class="o">|</span>
 <span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">note</span><span class="p">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="err">`</span><span class="n">x86_64</span><span class="o">-</span><span class="n">apple</span><span class="o">-</span><span class="n">darwin</span><span class="err">`</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">installed</span>
 <span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">help</span><span class="p">:</span><span class="w"> </span><span class="n">consider</span><span class="w"> </span><span class="n">downloading</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="err">`</span><span class="n">rustup</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">x86_64</span><span class="o">-</span><span class="n">apple</span><span class="o">-</span><span class="n">darwin</span><span class="err">`</span>
 </code></pre></div>
-
 <p>看起来是 cargo, rust 的编译环境中, 没有 x86_64-apple-darwin 相关配置,
 但是, 我这是 platform : osx-arm64, 
 如何正确令 pydantic-core 在构建过程中使用 arm 参数?</p>
@@ -702,40 +686,37 @@ note: This error originates from a subprocess, and is likely not a problem with 
 <p>A:为了使用 Flask 来开发一个简单的接口，您可以按照以下步骤进行操作：</p>
 </li>
 </ul>
-<h3 id="flask">步骤一：安装 Flask<a class="headerlink" href="#flask" title="Permanent link">&para;</a></h3>
+<h3 id="flask">步骤一：安装 Flask<a class="headerlink" href="#flask" title="Permanent link">¶</a></h3>
 <p>首先，您需要安装 Python 3 和 pip。然后使用 pip 安装 Flask：</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask
 </code></pre></div>
-
-<h3 id="flask_1">步骤二：编写 Flask 应用程序<a class="headerlink" href="#flask_1" title="Permanent link">&para;</a></h3>
+<h3 id="flask_1">步骤二：编写 Flask 应用程序<a class="headerlink" href="#flask_1" title="Permanent link">¶</a></h3>
 <p>创建一个名为 <code>app.py</code> 的 Python 文件，并在其中编写 Flask 应用程序的代码。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <span class="c1"># 创建一个简单的 GET 请求处理器</span>
-<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s1">&#39;Hello, World!&#39;</span>
+    <span class="k">return</span> <span class="s1">'Hello, World!'</span>
 
 <span class="c1"># 创建一个返回 JSON 数据的接口</span>
-<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/api/data&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/api/data'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">get_data</span><span class="p">():</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">:</span> <span class="s1">&#39;New York&#39;</span><span class="p">}</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'John'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">'city'</span><span class="p">:</span> <span class="s1">'New York'</span><span class="p">}</span>
     <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
     <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
-
-<h3 id="flask_2">步骤三：运行 Flask 应用程序<a class="headerlink" href="#flask_2" title="Permanent link">&para;</a></h3>
+<h3 id="flask_2">步骤三：运行 Flask 应用程序<a class="headerlink" href="#flask_2" title="Permanent link">¶</a></h3>
 <p>在终端中，进入包含 <code>app.py</code> 文件的目录，并运行 Flask 应用程序：</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>app.py
 </code></pre></div>
-
-<h3 id="_12">步骤四：验证接口<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h3 id="_12">步骤四：验证接口<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
 <p>在浏览器中访问 <code>http://127.0.0.1:5000/</code>，您应该能够看到 "Hello, World!" 的消息。然后访问 <code>http://127.0.0.1:5000/api/data</code>，您应该能够看到返回的 JSON 数据。</p>
-<h3 id="_13">关键行为解释<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<h3 id="_13">关键行为解释<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
 <ul>
 <li><code>from flask import Flask, jsonify</code>：导入 Flask 框架和 jsonify 函数。</li>
 <li><code>@app.route('/')</code>：使用装饰器定义路由，指定 URL 路径。</li>
@@ -744,7 +725,7 @@ note: This error originates from a subprocess, and is likely not a problem with 
 <li><code>def get_data():</code>：定义处理该路由的函数，返回 JSON 数据。</li>
 <li><code>if __name__ == '__main__':</code>：确保应用程序仅在直接运行时才运行，而不是被导入到其他模块中。</li>
 </ul>
-<h3 id="_14">检验办法<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h3 id="_14">检验办法<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
 <p>通过访问定义的路由，可以在浏览器中或使用工具如 Postman 发送请求来验证接口的功能和返回结果。</p>
 <p>希望这些步骤和示例代码能够帮助您开始使用 Flask 来开发简单的接口。如果您有任何疑问，欢迎随时提问。</p>
 <blockquote>
@@ -760,7 +741,6 @@ note: This error originates from a subprocess, and is likely not a problem with 
 <span class="w">  </span><span class="n">Installing</span><span class="w"> </span><span class="n">collected</span><span class="w"> </span><span class="n">packages</span><span class="p">:</span><span class="w"> </span><span class="n">MarkupSafe</span><span class="p">,</span><span class="w"> </span><span class="n">itsdangerous</span><span class="p">,</span><span class="w"> </span><span class="n">click</span><span class="p">,</span><span class="w"> </span><span class="n">blinker</span><span class="p">,</span><span class="w"> </span><span class="n">Werkzeug</span><span class="p">,</span><span class="w"> </span><span class="n">Jinja2</span><span class="p">,</span><span class="w"> </span><span class="n">Flask</span>
 <span class="n">Successfully</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">Flask</span><span class="o">-</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">1</span><span class="w"> </span><span class="n">Jinja2</span><span class="o">-</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">3</span><span class="w"> </span><span class="n">MarkupSafe</span><span class="o">-</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">4</span><span class="w"> </span><span class="n">Werkzeug</span><span class="o">-</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">1</span><span class="w"> </span><span class="n">blinker</span><span class="o">-</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">0</span><span class="w"> </span><span class="n">click</span><span class="o">-</span><span class="mf">8.1</span><span class="o">.</span><span class="mi">7</span><span class="w"> </span><span class="n">itsdangerous</span><span class="o">-</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">2</span>
 </code></pre></div>
-
 <ul>
 <li>
 <p>Q: 那么,我想发布一个天气查询的接口:
@@ -774,12 +754,11 @@ http://127.0.0.1:5000/api/w/zhuhai
 <p>A: 为了构建一个天气查询的接口，您可以使用 Flask 来实现。以下是详细的步骤、代码和检验办法：</p>
 </li>
 </ul>
-<h3 id="flask-requests">步骤一：安装 Flask 和 requests<a class="headerlink" href="#flask-requests" title="Permanent link">&para;</a></h3>
+<h3 id="flask-requests">步骤一：安装 Flask 和 requests<a class="headerlink" href="#flask-requests" title="Permanent link">¶</a></h3>
 <p>首先，确保您已经安装了 Flask 和 requests：</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask<span class="w"> </span>requests
 </code></pre></div>
-
-<h3 id="flask_3">步骤二：编写 Flask 应用程序<a class="headerlink" href="#flask_3" title="Permanent link">&para;</a></h3>
+<h3 id="flask_3">步骤二：编写 Flask 应用程序<a class="headerlink" href="#flask_3" title="Permanent link">¶</a></h3>
 <p>创建一个名为 <code>app.py</code> 的 Python 文件，并在其中编写天气查询接口的代码。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span>
 <span class="kn">import</span> <span class="nn">requests</span>
@@ -787,41 +766,39 @@ http://127.0.0.1:5000/api/w/zhuhai
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <span class="c1"># 创建天气查询接口</span>
-<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/api/w/&lt;city&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/api/w/&lt;city&gt;'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">get_weather</span><span class="p">(</span><span class="n">city</span><span class="p">):</span>
-    <span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;your_api_key&#39;</span>  <span class="c1"># 请将 your_api_key 替换为您在 OpenWeatherMap 上获取的 API 密钥</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&amp;units=metric&#39;</span>
+    <span class="n">api_key</span> <span class="o">=</span> <span class="s1">'your_api_key'</span>  <span class="c1"># 请将 your_api_key 替换为您在 OpenWeatherMap 上获取的 API 密钥</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'http://api.openweathermap.org/data/2.5/weather?q=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&amp;appid=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&amp;units=metric'</span>
 
     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
         <span class="n">weather_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="s1">&#39;Failed to retrieve weather data&#39;</span><span class="p">})</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'error'</span><span class="p">:</span> <span class="s1">'Failed to retrieve weather data'</span><span class="p">})</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
     <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
-
-<h3 id="flask_4">步骤三：运行 Flask 应用程序<a class="headerlink" href="#flask_4" title="Permanent link">&para;</a></h3>
+<h3 id="flask_4">步骤三：运行 Flask 应用程序<a class="headerlink" href="#flask_4" title="Permanent link">¶</a></h3>
 <p>在终端中，进入包含 <code>app.py</code> 文件的目录，并运行 Flask 应用程序：</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>app.py
 </code></pre></div>
-
-<h3 id="_15">步骤四：验证接口<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h3 id="_15">步骤四：验证接口<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
 <p>在浏览器中或使用工具如 Postman，访问 <code>http://127.0.0.1:5000/api/w/zhuhai</code>，您应该能够看到返回的 JSON 天气数据。</p>
-<h3 id="_16">关键行为解释<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h3 id="_16">关键行为解释<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
 <ul>
 <li><code>@app.route('/api/w/&lt;city&gt;', methods=['GET'])</code>：定义一个带有参数的路由，<code>&lt;city&gt;</code> 是一个动态参数，用于指定城市名称。</li>
 <li><code>def get_weather(city):</code>：定义处理该路由的函数，根据传入的城市名称构建 OpenWeatherMap API 的 URL，并使用 requests 库发送 GET 请求获取天气数据。</li>
 <li><code>api_key = 'your_api_key'</code>：将 <code>your_api_key</code> 替换为您在 OpenWeatherMap 上获取的 API 密钥。</li>
 <li><code>return jsonify(weather_data)</code>：返回获取的天气数据。</li>
 </ul>
-<h3 id="_17">检验办法<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h3 id="_17">检验办法<a class="headerlink" href="#_17" title="Permanent link">¶</a></h3>
 <p>通过访问定义的路由，可以在浏览器中或使用工具如 Postman 发送请求来验证接口的功能和返回结果。确保您能够成功获取指定城市的天气数据。</p>
 <p>希望这些步骤和示例代码能够帮助您构建天气查询接口。如果您有任何疑问，欢迎随时提问。</p>
-<p><img alt="本地接口" src="https://ipic.zoomquiet.top/2024-01-24-zshot%202024-01-23%2020.44.15.jpg"></p>
-<h2 id="_18">发布<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<p><img alt="本地接口" src="https://ipic.zoomquiet.top/2024-01-24-zshot%202024-01-23%2020.44.15.jpg"/></p>
+<h2 id="_18">发布<a class="headerlink" href="#_18" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>最后解决产品的使用问题</p>
 </blockquote>
@@ -837,22 +814,21 @@ http://127.0.0.1:5000/api/w/zhuhai
 <p>A: 要将本地的 Flask 应用程序发布到互联网中，以便可以用手机浏览器查询指定城市的天气情况，您可以考虑以下常用方案之一：使用 ngrok。</p>
 </li>
 </ul>
-<h3 id="ngrok">使用 ngrok 发布本地接口到互联网<a class="headerlink" href="#ngrok" title="Permanent link">&para;</a></h3>
-<h4 id="ngrok_1">步骤一：安装 ngrok<a class="headerlink" href="#ngrok_1" title="Permanent link">&para;</a></h4>
+<h3 id="ngrok">使用 ngrok 发布本地接口到互联网<a class="headerlink" href="#ngrok" title="Permanent link">¶</a></h3>
+<h4 id="ngrok_1">步骤一：安装 ngrok<a class="headerlink" href="#ngrok_1" title="Permanent link">¶</a></h4>
 <p>首先，您需要在本地安装 ngrok。您可以从 ngrok 的官方网站 https://ngrok.com/ 下载适用于您操作系统的 ngrok 客户端，并按照说明进行安装。</p>
-<h4 id="ngrok_2">步骤二：启动 ngrok<a class="headerlink" href="#ngrok_2" title="Permanent link">&para;</a></h4>
+<h4 id="ngrok_2">步骤二：启动 ngrok<a class="headerlink" href="#ngrok_2" title="Permanent link">¶</a></h4>
 <p>在终端中，导航到 ngrok 安装目录，并运行以下命令启动 ngrok：</p>
 <div class="highlight"><pre><span></span><code>./ngrok<span class="w"> </span>http<span class="w"> </span><span class="m">5000</span>
 </code></pre></div>
-
 <p>假设您的 Flask 应用程序在本地运行在端口 5000 上。</p>
-<h4 id="url">步骤三：获取公共 URL<a class="headerlink" href="#url" title="Permanent link">&para;</a></h4>
+<h4 id="url">步骤三：获取公共 URL<a class="headerlink" href="#url" title="Permanent link">¶</a></h4>
 <p>启动 ngrok 后，您将会看到生成的公共 URL，类似于 <code>http://a1b2c3d4.ngrok.io</code>。这个 URL 就是您的本地应用程序在互联网上的访问地址。</p>
-<h4 id="_19">步骤四：验证接口<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<h4 id="_19">步骤四：验证接口<a class="headerlink" href="#_19" title="Permanent link">¶</a></h4>
 <p>在手机浏览器中，输入生成的公共 URL，加上您的天气查询接口的路径，例如 <code>http://a1b2c3d4.ngrok.io/api/w/zhuhai</code>，然后您应该能够看到返回的 JSON 天气数据。</p>
-<h3 id="_20">检验办法<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<h3 id="_20">检验办法<a class="headerlink" href="#_20" title="Permanent link">¶</a></h3>
 <p>通过在手机浏览器中访问生成的公共 URL，加上您的天气查询接口的路径，来验证接口的功能和返回结果。确保您能够成功获取指定城市的天气数据。</p>
-<h3 id="_21">其他方案<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<h3 id="_21">其他方案<a class="headerlink" href="#_21" title="Permanent link">¶</a></h3>
 <p>除了 ngrok，还有一些其他方案可以将本地接口发布到互联网中，例如使用反向代理工具、部署到云服务器等。但就简单性而言，ngrok 是一个非常方便且简单易用的工具，适合快速将本地接口发布到互联网上。</p>
 <p>希望这些步骤和说明能够帮助您将本地接口发布到互联网中，并成功在手机浏览器中查询指定城市的天气情况。如果您有任何疑问，欢迎随时提问。</p>
 <blockquote>
@@ -916,22 +892,20 @@ http://127.0.0.1:5000/api/w/zhuhai
 <li>Q:看起来 serveo 更加简单, 那么, 如何用 serveo 将 flask 的 localhost:5000 接口反向代理到互联网中, 以便手机也可以访问?</li>
 <li>A: 您可以按照以下步骤使用 Serveo 将 Flask 应用程序从本地代理到互联网上，以便手机也可以访问：</li>
 </ul>
-<h3 id="openssh">步骤一：安装 OpenSSH<a class="headerlink" href="#openssh" title="Permanent link">&para;</a></h3>
+<h3 id="openssh">步骤一：安装 OpenSSH<a class="headerlink" href="#openssh" title="Permanent link">¶</a></h3>
 <p>确保您的计算机上安装了 OpenSSH。大多数 macOS 和 Linux 系统都会默认安装 OpenSSH。如果您使用的是 Windows 系统，您可以通过 Windows Subsystem for Linux (WSL) 安装 OpenSSH。</p>
-<h3 id="flask_5">步骤二：启动 Flask 应用程序<a class="headerlink" href="#flask_5" title="Permanent link">&para;</a></h3>
+<h3 id="flask_5">步骤二：启动 Flask 应用程序<a class="headerlink" href="#flask_5" title="Permanent link">¶</a></h3>
 <p>在终端中，导航到包含 Flask 应用程序的目录，并运行您的 Flask 应用程序：</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>app.py
 </code></pre></div>
-
-<h3 id="serveo">步骤三：使用 Serveo<a class="headerlink" href="#serveo" title="Permanent link">&para;</a></h3>
+<h3 id="serveo">步骤三：使用 Serveo<a class="headerlink" href="#serveo" title="Permanent link">¶</a></h3>
 <p>在终端中，运行以下命令将本地的 Flask 应用程序代理到互联网上：</p>
 <div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-R<span class="w"> </span><span class="m">80</span>:localhost:5000<span class="w"> </span>serveo.net
 </code></pre></div>
-
 <p>这将创建一个公共 URL，将来自互联网的流量转发到您本地的 Flask 应用程序。</p>
-<h3 id="_22">步骤四：验证接口<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<h3 id="_22">步骤四：验证接口<a class="headerlink" href="#_22" title="Permanent link">¶</a></h3>
 <p>在终端中，您将看到生成的公共 URL，类似于 <code>http://your_url.serveo.net</code>。在手机浏览器中输入这个 URL，加上您的天气查询接口的路径，例如 <code>http://your_url.serveo.net/api/w/zhuhai</code>，然后您应该能够看到返回的 JSON 天气数据。</p>
-<h3 id="_23">检验办法<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<h3 id="_23">检验办法<a class="headerlink" href="#_23" title="Permanent link">¶</a></h3>
 <p>通过在手机浏览器中访问生成的公共 URL，加上您的天气查询接口的路径，来验证接口的功能和返回结果。确保您能够成功获取指定城市的天气数据。</p>
 <p>希望这些步骤能够帮助您使用 Serveo 将 Flask 应用程序代理到互联网上，以便手机也可以访问。如果您有任何疑问，欢迎随时提问。</p>
 <ul>
@@ -967,7 +941,7 @@ HTTP ERROR 403</li>
 <p>至此, 其实一个随时查询指定城市天气的 MVP 工具已经开发完成, 只是要允许外网可以访问, 这已经不是开发问题, 而是发布和运维问题了...在直播视频中进行了另外的尝试, 已经超出 AIGC 辅助开发的话题, 就此打住</p>
 </blockquote>
 </blockquote>
-<h2 id="summary">summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h2 id="summary">summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>最小最实用 🎃程序员AIGC工具包</p>
 </blockquote>
@@ -998,7 +972,7 @@ HTTP ERROR 403</li>
 <li>和你手工输入的中文, 基本一致,</li>
 <li>说明, 你具有了 AI 时代思维模式, 可以用中文阐述和英文一致的思想;</li>
 </ul>
-<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
+<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
 <ul>
 <li>过程视频: <a href="https://studio.youtube.com/video/VbCJhD3TDtA/edit">AIGCxZhuhai[demo show]通用编程AI辅助过程 - YouTube</a></li>
 <li>代码仓库: <a href="https://github.com/AIGCx/zhuhai">AIGCx/zhuhai: demo show anything about AIGC</a></li>

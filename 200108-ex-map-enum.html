@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="200108-ex-map-enum"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/200108-ex-map-enum.html"/>
-            <meta property="og:description" content="  env. problem try Hummm?! refer. Changelog   因为各种原因吧...  很早在 ECUG 就接触了 Erlang 但是, 怪异的语法,以及狭小的应用领域,一直没真正使用起来 现在, 发 …"/>
+            <meta property="og:description" content="因为各种原因吧...  很早在 ECUG 就接触了 Erlang 但是, 怪异的语法,以及狭小的应用领域,一直没真正使用起来 现在, 发现 Elixir 很好的解 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -128,8 +128,8 @@
 		<a href="https://blog.zoomquiet.io/tag/sayeahooo.html">sayeahooo</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-
-                <div class="toc">
+    <nav class="toc">
+    <div class="toc">
 <ul>
 <li><a href="#env">env.</a></li>
 <li><a href="#problem">problem</a></li>
@@ -139,6 +139,9 @@
 <li><a href="#changelog">Changelog</a></li>
 </ul>
 </div>
+    </nav>
+
+                
 <p>因为各种原因吧...</p>
 <ul>
 <li>很早在 ECUG 就接触了 Erlang<ul>
@@ -149,7 +152,7 @@
 <li>所以, 开始折腾...</li>
 <li>结果, 撞见各种值得嗯哼的事儿...</li>
 </ul>
-<h2 id="env">env.<a class="headerlink" href="#env" title="Permanent link">&para;</a></h2>
+<h2 id="env">env.<a class="headerlink" href="#env" title="Permanent link">¶</a></h2>
 <p>༄  screenfetch</p>
 <div class="highlight"><pre><span></span><code>                 <span class="s s-Atom">-/+:.</span>          <span class="s s-Atom">zoomq@</span><span class="nv">ZQ160626rMBP</span>
                 <span class="o">:</span><span class="s s-Atom">++++.</span>          <span class="nv">OS</span><span class="o">:</span> <span class="mi">64</span><span class="s s-Atom">bit</span> <span class="nv">Mac</span> <span class="nv">OS</span> <span class="nv">X</span> <span class="mf">10.12.6</span> <span class="mi">16</span><span class="nv">G2136</span>
@@ -168,12 +171,11 @@
      <span class="o">:</span><span class="s s-Atom">ooooooooooooooooooo+.</span>
       <span class="err">`</span><span class="o">:+</span><span class="s s-Atom">oo+/:-..-:/+o+/-</span>
 </code></pre></div>
-
 <ul>
 <li>Erlang/OTP 21 [erts-10.2] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [hipe]</li>
 <li>Elixir 1.9.1 (compiled with Erlang/OTP 20)</li>
 </ul>
-<h2 id="problem">problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h2>
+<h2 id="problem">problem<a class="headerlink" href="#problem" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>使用 Plug 快速开发 Slack 插件...</p>
 </blockquote>
@@ -182,11 +184,11 @@
 <p>官方文档中 demo 形似:</p>
 <div class="highlight"><pre><span></span><code><span class="n">defmodule</span><span class="w"> </span><span class="n">Example</span><span class="p">.</span><span class="n">Plug</span><span class="p">.</span><span class="n">VerifyRequest</span><span class="w"> </span><span class="n">do</span>
 <span class="w">  </span><span class="n">defmodule</span><span class="w"> </span><span class="n">IncompleteRequestError</span><span class="w"> </span><span class="n">do</span>
-<span class="w">    </span><span class="nv">@moduledoc</span><span class="w"> </span><span class="ss">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="nv">@moduledoc</span><span class="w"> </span><span class="ss">"""</span>
 <span class="ss">    Error raised when a required field is missing.</span>
-<span class="ss">    &quot;&quot;&quot;</span>
+<span class="ss">    """</span>
 
-<span class="w">    </span><span class="n">defexception</span><span class="w"> </span><span class="nl">message</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;&quot;</span>
+<span class="w">    </span><span class="n">defexception</span><span class="w"> </span><span class="nl">message</span><span class="p">:</span><span class="w"> </span><span class="ss">""</span>
 <span class="w">  </span><span class="k">end</span>
 
 <span class="w">  </span><span class="n">def</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="n">options</span><span class="p">),</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">options</span>
@@ -208,16 +210,13 @@
 <span class="w">  </span><span class="n">defp</span><span class="w"> </span><span class="n">contains_fields</span><span class="vm">?</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span><span class="w"> </span><span class="n">fields</span><span class="p">),</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">Enum</span><span class="p">.</span><span class="ow">all</span><span class="vm">?</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">1</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">keys</span><span class="p">))</span>
 <span class="k">end</span>
 </code></pre></div>
-
 <p>对应检验请求可以是:</p>
 <div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w"> </span><span class="n">curl</span><span class="w"> </span><span class="n">localhost</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">upload</span><span class="err">?</span><span class="n">content</span><span class="o">=</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">mimetype</span><span class="o">=</span><span class="n">bar</span>
 </code></pre></div>
-
 <p>问题是:</p>
 <div class="highlight"><pre><span></span><code><span class="o">...</span>
 <span class="o">|&gt;</span><span class="w"> </span><span class="n">contains_fields</span><span class="o">?(</span><span class="n">fields</span><span class="o">)</span>
 </code></pre></div>
-
 <ul>
 <li>提供的函式只是对所有 URI 参数键进行检验, 如果缺少了则报错,</li>
 <li>可是, 正确请求时, 如何获得所有参数值?</li>
@@ -225,13 +224,11 @@
 <p>先使用输出语句来探查 params 是什么数据类型:</p>
 <div class="highlight"><pre><span></span><code>IO.inspect(params)
 </code></pre></div>
-
 <p>请求触发后终端输出:</p>
-<div class="highlight"><pre><span></span><code><span class="c">%{&quot;cnt&quot; =&gt; &quot;foo&quot;, &quot;mmt&quot; =&gt; &quot;bar&quot;}</span>
+<div class="highlight"><pre><span></span><code><span class="c">%{"cnt" =&gt; "foo", "mmt" =&gt; "bar"}</span>
 </code></pre></div>
-
 <p>是标准 Map 对象.</p>
-<h2 id="try">try<a class="headerlink" href="#try" title="Permanent link">&para;</a></h2>
+<h2 id="try">try<a class="headerlink" href="#try" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>Enum.all?() 是个重要的入口</p>
 </blockquote>
@@ -242,15 +239,13 @@
 <p>所以:</p>
 <div class="highlight"><pre><span></span><code><span class="n">defp</span><span class="w"> </span><span class="n">echo_vars</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span><span class="w"> </span><span class="n">fields</span><span class="p">)</span><span class="w"> </span><span class="n">do</span><span class="w"> </span>
 <span class="w">    </span><span class="n">Enum</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span><span class="w"> </span><span class="n">fn</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">IO</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="n">end</span><span class="p">)</span>
-<span class="w">    </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;chk. as #{keys} ;-)&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"chk. as #{keys} ;-)"</span><span class="p">)</span>
 <span class="n">end</span>
 </code></pre></div>
-
 <p>但是, 各种出错, 因为这时, 传入的 keys 是只有请求 Map 中的键;</p>
 <p>那么:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Enum</span><span class="p">.</span><span class="n">each</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">fn</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">IO</span><span class="p">.</span><span class="n">puts</span><span class="p">(</span><span class="nf">Map</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="kd">end)</span>
 </code></pre></div>
-
 <ul>
 <li>跳出 verified = params ... 的处理流水线;</li>
 <li>直接追加列印处理?</li>
@@ -262,20 +257,18 @@
 </ul>
 </li>
 </ul>
-<h2 id="hummm">Hummm?!<a class="headerlink" href="#hummm" title="Permanent link">&para;</a></h2>
+<h2 id="hummm">Hummm?!<a class="headerlink" href="#hummm" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>万万没想到...</p>
 </blockquote>
 <p>无意中在 <a href="https://mlog.club/article/1923002">如何在Elixir中将映射键从字符串转换为原子 | 码农俱乐部 - Golang中国 - Go语言中文社区</a></p>
 <p>看到:</p>
-<div class="highlight"><pre><span></span><code>iex(1)&gt; string_key_map = %{&quot;foo&quot; =&gt; &quot;bar&quot;, &quot;hello&quot; =&gt; &quot;world&quot;}
+<div class="highlight"><pre><span></span><code>iex(1)&gt; string_key_map = %{"foo" =&gt; "bar", "hello" =&gt; "world"}
 </code></pre></div>
-
 <p>%{"foo" =&gt; "bar", "hello" =&gt; "world"}</p>
 <div class="highlight"><pre><span></span><code><span class="n">iex</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">string_key_map</span><span class="p">,</span><span class="w"> </span><span class="n">into</span><span class="p">:</span><span class="w"> </span><span class="c">%{}, do: {String.to_atom(key), val}</span>
-<span class="c">%{foo: &quot;bar&quot;, hello: &quot;world&quot;}</span>
+<span class="c">%{foo: "bar", hello: "world"}</span>
 </code></pre></div>
-
 <p>虽说这是 Comprehensions 概念的通常使用,
 但是, 发现, for 这个操作, 和 Python 中的完全一致哪,
 于是:</p>
@@ -283,15 +276,14 @@
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="n">do</span>
 <span class="w">      </span><span class="c1">#IO.inspect(key)</span>
 <span class="w">      </span><span class="c1">#IO.inspect(val)</span>
-<span class="w">      </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;each -&gt; #{key}=&gt;#{val} ;-)&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"each -&gt; #{key}=&gt;#{val} ;-)"</span><span class="p">)</span>
 <span class="w">    </span><span class="n">end</span>
 <span class="w">  </span><span class="n">end</span>
 </code></pre></div>
-
 <p>简直和 Python 中解包行为完全一致...</p>
 <p>可是: <a href="https://learnxinyminutes.com/docs/zh-cn/elixir-cn/">Learn elixir in Y Minutes</a>
 一句也没提及, for 这么 NB 的操作符哪...</p>
-<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
+<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://hexdocs.pm/plug/Plug.Router.html">Plug.Router — Plug v1.8.3</a><ul>
 <li><a href="http://elixirschool.com/zh-hans/lessons/specifics/plug/">Plug · Elixir School</a></li>
@@ -302,7 +294,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h2>
 <ul>
 <li>200109 .5h 配置模板,重新发布</li>
 <li>200108 .5h 输出</li>

@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="how2collaborate-with-leo"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/how2collaborate-with-leo.html"/>
-            <meta property="og:description" content="  Leo? Literate Programming collaborate problem terror story clean all historic   summary 是也乎   Leo?¶ ~ 嗯哼 研究什么是 Leo ? 非要一句话说清查的话,只能是:  纯 Python 构建的文学化编辑环境 好吧 …"/>
+            <meta property="og:description" content="Leo?¶ ~ 嗯哼 研究什么是 Leo ? 非要一句话说清查的话,只能是:  纯 Python 构建的文学化编辑环境 好吧, 那什么是 文学化编辑 ? 这事儿, 俺就 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -128,8 +128,8 @@
 		<a href="https://blog.zoomquiet.io/tag/pythonic.html">pythonic</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-
-                <div class="toc">
+    <nav class="toc">
+    <div class="toc">
 <ul>
 <li><a href="#leo">Leo?</a><ul>
 <li><a href="#literate-programming">Literate Programming</a></li>
@@ -143,7 +143,10 @@
 <li><a href="#_1">是也乎</a></li>
 </ul>
 </div>
-<h1 id="leo">Leo?<a class="headerlink" href="#leo" title="Permanent link">&para;</a></h1>
+    </nav>
+
+                
+<h1 id="leo">Leo?<a class="headerlink" href="#leo" title="Permanent link">¶</a></h1>
 <p>~ 嗯哼</p>
 <p>研究什么是 Leo ? 非要一句话说清查的话,只能是:</p>
 <ul>
@@ -164,7 +167,7 @@
 </li>
 </ul>
 <p>好吧,再次尝试一下:</p>
-<h2 id="literate-programming">Literate Programming<a class="headerlink" href="#literate-programming" title="Permanent link">&para;</a></h2>
+<h2 id="literate-programming">Literate Programming<a class="headerlink" href="#literate-programming" title="Permanent link">¶</a></h2>
 <p>~ <a href="http://wiki.woodpecker.org.cn/moin/LiterateProgramming">文学编程</a></p>
 <p>先请出 <a href="http://leoeditor.com/leo_toc.html">Leo</a> 创始人 令德华(<a href="http://leoeditor.com/ekr.html">Edward K. Ream</a>) </p>
 <p>~ 老令公 在 PyCon2013China 大会上分享的视频 <a href="http://zoomq.qiniudn.com/pychina/PyCon2013China/PyConChina2013-EKR-final-v2.mp4">PyConChina2013-EKR-intro-Leo</a></p>
@@ -184,11 +187,11 @@
 <li>这样,同时兼顾了人的自然思维表述,和严格语法要求的源代码形式 </li>
 </ul>
 </li>
-<li>是的, 这一思想源自 <img alt="Donald E. Knuth" src="http://www-cs-faculty.stanford.edu/~knuth/chop.gif">, 他原创的 WEB 语言最早实现了 文学化编程</li>
+<li>是的, 这一思想源自 <img alt="Donald E. Knuth" src="http://www-cs-faculty.stanford.edu/~knuth/chop.gif"/>, 他原创的 WEB 语言最早实现了 文学化编程</li>
 <li>Leo 则是 Python 实现的,可能是最易用的 文学化编辑/程 环境!</li>
 </ul>
-<p><img alt="Leo4" src="http://leoeditor.com/_static/Leo4-80-border.jpg"></p>
-<h2 id="collaborate-problem">collaborate problem<a class="headerlink" href="#collaborate-problem" title="Permanent link">&para;</a></h2>
+<p><img alt="Leo4" src="http://leoeditor.com/_static/Leo4-80-border.jpg"/></p>
+<h2 id="collaborate-problem">collaborate problem<a class="headerlink" href="#collaborate-problem" title="Permanent link">¶</a></h2>
 <p>~ 如果前述解释看不懂,那就对了!</p>
 <p>但是,不影响,俺的故事分享...</p>
 <p>Leo 包含的编程思想这么 bigger ,一般人在 IDE 环境中,当然是无法理解,
@@ -200,7 +203,6 @@
 <span class="n">date</span><span class="o">:</span><span class="w">   </span><span class="n">Thu</span><span class="o">,</span><span class="w"> </span><span class="n">Oct</span><span class="w"> </span><span class="mi">24</span><span class="o">,</span><span class="w"> </span><span class="mi">2013</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mi">5</span><span class="o">:</span><span class="mi">33</span><span class="w"> </span><span class="n">PM</span>
 <span class="n">subject</span><span class="o">:</span><span class="w">    </span><span class="n">How</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">collaborate</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">Leo</span>
 </code></pre></div>
-
 <p>为了讨论时,更加友好,老令公 创造了两个人事</p>
 <ul>
 <li>能享受文学化编程的 Leo 用户 称为 Leonine (L Leo users, Leonard ...)</li>
@@ -240,11 +242,10 @@
 <span class="gh">#</span>@+node:zoomq.20160416174346.4: *3* in-build
 <span class="gh">#</span>@+node:zoomq.20160416174346.5: *3* 3party
 </code></pre></div>
-
 <p>虽然吻合对应语言的注释约定 (嗯哼, Leo 可以进行任何语言的编程,不仅仅是 Py);
 其实,就是将 Leo (.leo 文件本身其实就是 xml) 中,树形节点的结构描述,
 转化为线性注释而已.</p>
-<h2 id="terror-story">terror story<a class="headerlink" href="#terror-story" title="Permanent link">&para;</a></h2>
+<h2 id="terror-story">terror story<a class="headerlink" href="#terror-story" title="Permanent link">¶</a></h2>
 <p>~ 于是, 发生了这样的恐怖故事...</p>
 <p>之前,俺知道 Leo 中有种 <code>@shadow</code> 指令</p>
 <ul>
@@ -313,7 +314,7 @@
 <li>再次 <code>git flow hotfix finish</code> 提交</li>
 <li>呜乎, 一切正常了...</li>
 </ul>
-<h2 id="clean-all">clean all<a class="headerlink" href="#clean-all" title="Permanent link">&para;</a></h2>
+<h2 id="clean-all">clean all<a class="headerlink" href="#clean-all" title="Permanent link">¶</a></h2>
 <p>~ 惊魂稍定,想起来当年的讨论...</p>
 <p>先回顾文档,发现:</p>
 <ul>
@@ -343,9 +344,9 @@
 <p><code>ರ_ರ</code> ! 
 这比,俺之前建议的,通过版本系统的 hooks 进行预处理,要更加无感知哪!
 老令公的脑洞依然给力哪!</p>
-<h2 id="historic">historic<a class="headerlink" href="#historic" title="Permanent link">&para;</a></h2>
+<h2 id="historic">historic<a class="headerlink" href="#historic" title="Permanent link">¶</a></h2>
 <p>~ <a href="http://leoeditor.com/history.html#genesis-of-clean">History of Leo — Leo 5.2 documentation</a></p>
-<p><img alt="EKR" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*yKVZtcJyfh-FHNEtXrqjPw.jpeg"> </p>
+<p><img alt="EKR" src="https://d262ilb51hltx0.cloudfront.net/max/700/1*yKVZtcJyfh-FHNEtXrqjPw.jpeg"/> </p>
 <ul>
 <li>1980 接触了 CWEB</li>
 <li>1995 决心实现类似软件</li>
@@ -364,7 +365,7 @@
 </li>
 </ul>
 <p>以及: <a href="http://leoeditor.com/leonine-world.html">The Leonine World — Leo 5.2 documentation</a></p>
-<h1 id="summary">summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<h1 id="summary">summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h1>
 <p>i store up this mail in gmail, but never try to fixed code flow EKR's point. 
 thanks for EKR's Aha, 3 years question, fixed in Leo 5.2 !
 notice this, just after terror story:</p>
@@ -455,16 +456,16 @@ Overwrite the outline node?</p>
 <li>so i had to clode all Leo windows</li>
 <li>restart Leo, so the "Recovered Nodes" auto generated</li>
 </ul>
-<h1 id="_1">是也乎<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">是也乎<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>~ 参考俺的有关演讲幻灯: <a href="http://s5rst.qiniucdn.com/131101-leo-china/index.html">Leo</a> 
 令老爷子,长达42年的编程经历,在不少成品问世,但是,除了维持生计的商业软件,
 就是 Leo 这一非常冷门的编辑器软件,
 从意动,到越来越易用,坚持了 35 年! 独自坚持完善,改进!</p>
-<p><img alt="ekr-github-leo-graphs" src="http://zoomq.qiniudn.com/ZQCollection/snap/leo/ekr-github-leo-graphs.png"></p>
+<p><img alt="ekr-github-leo-graphs" src="http://zoomq.qiniudn.com/ZQCollection/snap/leo/ekr-github-leo-graphs.png"/></p>
 <p>08年初,工程迁移到 github (<a href="https://github.com/leo-editor/leo-editor/graphs/contributors">leo-editor/leo-editor</a>)至今, 12,815 次提交中,
 依然绝大多数是 EKR push 的! </p>
 <p>也就是说,还没有另外一位程序猿,能替代已经至少60岁的 令德华(<a href="http://leoeditor.com/ekr.html">Edward K. Ream</a>), 老令公 !!!</p>
-<p><img alt="ekr2" src="http://leoeditor.com/ekr2.gif"></p>
+<p><img alt="ekr2" src="http://leoeditor.com/ekr2.gif"/></p>
 <p>只能祝 <strong>LL&amp;P</strong> 了</p>
 <p><code>live long and prosper</code></p>
 <ul>

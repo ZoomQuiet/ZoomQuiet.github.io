@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="leo-install-m1mac-story"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/leo-install-m1mac-story.html"/>
-            <meta property="og:description" content="  Background Troubles Goal Tracing 尝试 PyENV 尝试 miniconda PyQt 混合安装: PS:     Summary logging   Background¶  背景  Leo 是文学化编辑环境, 由 EKR/令老爷子 单人为主长期维护的优秀开发/编 …"/>
+            <meta property="og:description" content="Background¶  背景  Leo 是文学化编辑环境, 由 EKR/令老爷子 单人为主长期维护的优秀开发/编撰/思考/...环境; 从 05 年上手以来, 一直在各种场 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -130,8 +130,8 @@
 		<a href="https://blog.zoomquiet.io/tag/install.html">install</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-
-                <div class="toc">
+    <nav class="toc">
+    <div class="toc">
 <ul>
 <li><a href="#background">Background</a></li>
 <li><a href="#troubles">Troubles</a></li>
@@ -150,7 +150,10 @@
 <li><a href="#logging">logging</a></li>
 </ul>
 </div>
-<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+    </nav>
+
+                
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>背景</p>
 </blockquote>
@@ -162,7 +165,7 @@
 <p>事实上官方文档中: <a href="http://leoeditor.com/installing.html#installing-leo-on-macos-10-7-lion-and-later">Installing Leo — Leo 6.6.2 documentation</a> ~ Installing Leo on MacOs 10.7 (Lion) 部分其实就是俺的笔记转化而成的.</p>
 <p>为解决本地开发测试, 并尽可能复用运行时到相似的工程中, 以往选择的管理工具是 <a href="https://github.com/pyenv/pyenv">pyenv/pyenv: Simple Python version management</a></p>
 <p>参考:<a href="https://testdriven.io/blog/python-environments/">Modern Python Environments - dependency and workspace management | TestDriven.io</a></p>
-<p><img alt="Modern Python Environments" src="https://ipic.zoomquiet.top/2022-05-29-PyEnvironments-vs.jpg"></p>
+<p><img alt="Modern Python Environments" src="https://ipic.zoomquiet.top/2022-05-29-PyEnvironments-vs.jpg"/></p>
 <p>以往形成的习惯是:</p>
 <ul>
 <li>用 PyENV 安装不同版本 Python 运行时, 毕竟不同工程部署在不同目标主机中, 对 Python 版本依赖不同</li>
@@ -185,7 +188,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="troubles">Troubles<a class="headerlink" href="#troubles" title="Permanent link">&para;</a></h2>
+<h2 id="troubles">Troubles<a class="headerlink" href="#troubles" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>问题</p>
 </blockquote>
@@ -207,7 +210,7 @@
 </li>
 <li>..感觉只有一组很小的 snap 可以使用, 已经不是两个完备可控的 Python 运行时管理环境了</li>
 </ul>
-<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>目标</p>
 </blockquote>
@@ -221,13 +224,13 @@
 </ul>
 </li>
 </ul>
-<h2 id="tracing">Tracing<a class="headerlink" href="#tracing" title="Permanent link">&para;</a></h2>
+<h2 id="tracing">Tracing<a class="headerlink" href="#tracing" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>探索</p>
 </blockquote>
 <p>当前环境:</p>
-<p><img alt="screenfetch" src="https://ipic.zoomquiet.top/2022-05-29-220529-screenfetch.jpg"></p>
-<h3 id="pyenv">尝试 PyENV<a class="headerlink" href="#pyenv" title="Permanent link">&para;</a></h3>
+<p><img alt="screenfetch" src="https://ipic.zoomquiet.top/2022-05-29-220529-screenfetch.jpg"/></p>
+<h3 id="pyenv">尝试 PyENV<a class="headerlink" href="#pyenv" title="Permanent link">¶</a></h3>
 <ul>
 <li>先在 <code>~/.bash_profile</code> 中注释掉所有 PyENV 相关的配置,</li>
 <li>将 <code>~/.pyenv</code> 移动为 <code>~/_pyenv</code></li>
@@ -241,10 +244,9 @@
 <div class="highlight"><pre><span></span><code>Python 3.9.8 (main, Nov 10 2021, 03:55:42)
 [Clang 13.0.0 (clang-1300.0.29.3)] on darwin
 </code></pre></div>
-
 <p>可惜, 尝试通过 <code>pyenv install</code> 指令来安装其它版本 Python 环境,
 都撞到编译失败, 反复探索, 网上给的招儿都用过, 还是无法解决.</p>
-<h3 id="miniconda">尝试 miniconda<a class="headerlink" href="#miniconda" title="Permanent link">&para;</a></h3>
+<h3 id="miniconda">尝试 miniconda<a class="headerlink" href="#miniconda" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>怀疑 PyENV 准备的编译脚本都是针对 Intel 背景的</p>
 </blockquote>
@@ -257,14 +259,13 @@
 <p>标准安装:</p>
 <div class="highlight"><pre><span></span><code>abrew install miniconda
 </code></pre></div>
-
 <p>因为进行了多 homebrew 环境配置:</p>
 <ul>
 <li>ibrew 指向旧系统迁移过来的 Intel 版本 homebrew</li>
 <li>abrew 指向全新安装的 ARM 版本 homebrew</li>
 </ul>
 <p>然后, 就可以探查当前支持那些 Python 版本了:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s2">&quot;^Python</span>$<span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s2">"^Python</span>$<span class="s2">"</span>
 Loading<span class="w"> </span>channels:<span class="w"> </span><span class="k">done</span>
 <span class="c1"># Name                       Version           Build  Channel</span>
 python<span class="w">                        </span><span class="m">3</span>.8.11<span class="w">      </span>hbdb9e5c_5<span class="w">  </span>pkgs/main
@@ -281,22 +282,18 @@ python<span class="w">                        </span><span class="m">3</span>.10
 python<span class="w">                        </span><span class="m">3</span>.10.3<span class="w">      </span>hbdb9e5c_5<span class="w">  </span>pkgs/main
 python<span class="w">                        </span><span class="m">3</span>.10.4<span class="w">      </span>hbdb9e5c_0<span class="w">  </span>pkgs/main
 </code></pre></div>
-
 <p>安装一个 Leo 专用的环境:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>conde<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>leo3811<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8.11
 </code></pre></div>
-
 <p>通过指令进入:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>leo3811
 </code></pre></div>
-
 <p>通过事先安装 <code>pip_search</code> 可以搜索出配置的PyPI 镜像是否包含 Leo:</p>
-<p><img alt="pip_search" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-28%2000.07.02.jpg"></p>
+<p><img alt="pip_search" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-28%2000.07.02.jpg"/></p>
 <p>通过 pip 安装 Leo:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>leo
 </code></pre></div>
-
-<p><img alt="PyQt" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-28%2000.07.22.jpg"></p>
+<p><img alt="PyQt" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-28%2000.07.22.jpg"/></p>
 <p>过程中, 可以观察到很多编译错误, 
 但是, 安装脚本足够聪明, 可以逐一版本降低来尝试最终兼容;
 安装完成后, 尝试运行:</p>
@@ -304,28 +301,27 @@ python<span class="w">                        </span><span class="m">3</span>.10
 <span class="n">leoQt</span><span class="o">.</span><span class="n">py</span><span class="p">:</span> <span class="n">can</span> <span class="ow">not</span> <span class="n">fully</span> <span class="kn">import</span> <span class="nn">PyQt5.</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
 
-  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoQt.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">55</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoQt.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">55</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
     <span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">QtCore</span>
 
-<span class="ne">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">&#39;PyQt5.sip&#39;</span>
+<span class="ne">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">'PyQt5.sip'</span>
 
 
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/bin/leo&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">5</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/bin/leo"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">5</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
     <span class="kn">from</span> <span class="nn">leo.core.runLeo</span> <span class="kn">import</span> <span class="n">run</span>
-  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/runLeo.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">27</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/runLeo.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">27</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
     <span class="n">leoGlobals</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="n">leoApp</span><span class="o">.</span><span class="n">LeoApp</span><span class="p">()</span>
-  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoApp.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">334</span><span class="p">,</span> <span class="ow">in</span> <span class="fm">__init__</span>
+  <span class="n">File</span> <span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoApp.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">334</span><span class="p">,</span> <span class="ow">in</span> <span class="fm">__init__</span>
     <span class="kn">import</span> <span class="nn">leo.core.leoFrame</span> <span class="k">as</span> <span class="nn">leoFrame</span>
-  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoFrame.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">13</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoFrame.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">13</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
     <span class="kn">import</span> <span class="nn">leo.core.leoColorizer</span> <span class="k">as</span> <span class="nn">leoColorizer</span>
-  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoColorizer.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">18</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoColorizer.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">18</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
     <span class="kn">from</span> <span class="nn">leo.core.leoQt</span> <span class="kn">import</span> <span class="n">Qsci</span><span class="p">,</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtWidgets</span>
-  <span class="n">File</span> <span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoQt.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">88</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3811/lib/python3.8/site-packages/leo/core/leoQt.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">88</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
     <span class="n">qt_version</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QT_VERSION_STR</span>
-<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;QtCore&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">'QtCore'</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
 </code></pre></div>
-
 <p>没招, 问 Leo 官方 mailling-list: https://groups.google.com/d/msgid/leo-editor</p>
 <p>不久, tbp100.tp@gmail.com 建议:</p>
 <blockquote>
@@ -337,7 +333,7 @@ python<span class="w">                        </span><span class="m">3</span>.10
 <li>try installing PyQt5 instead of PyQt6 (Leo can use either one); </li>
 <li>install python 3.9 and see whether PyQt6 or PyQt5 will install without errors.</li>
 </ul>
-<h3 id="pyqt">PyQt<a class="headerlink" href="#pyqt" title="Permanent link">&para;</a></h3>
+<h3 id="pyqt">PyQt<a class="headerlink" href="#pyqt" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>想起来 Qt 是个神奇的东西...</p>
 </blockquote>
@@ -345,7 +341,6 @@ python<span class="w">                        </span><span class="m">3</span>.10
 <p>国内用户首先要配置 conda 源:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>show_channel_urls<span class="w"> </span>yes
 </code></pre></div>
-
 <p>生成 <code>~/.condarc</code> 文件后对应修改, 比如俺当前是:</p>
 <div class="highlight"><pre><span></span><code><span class="n">auto_activate_base</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="n">report_errors</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
@@ -367,7 +362,6 @@ python<span class="w">                        </span><span class="m">3</span>.10
 <span class="w">  </span><span class="n">pytorch</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/</span><span class="n">cloud</span>
 <span class="w">  </span><span class="n">simpleitk</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">aliyun</span><span class="o">.</span><span class="na">com</span><span class="sr">/anaconda/</span><span class="n">cloud</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">conda</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="n">leo3911</span><span class="w"> </span><span class="n">python</span><span class="o">=</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">11</span>
 <span class="n">Collecting</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="p">(</span><span class="n">current_repodata</span><span class="o">.</span><span class="n">json</span><span class="p">):</span><span class="w"> </span><span class="n">done</span>
 <span class="n">Solving</span><span class="w"> </span><span class="n">environment</span><span class="p">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">repodata</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">current_repodata</span><span class="o">.</span><span class="n">json</span><span class="p">,</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">retry</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="n">repodata</span><span class="w"> </span><span class="n">source</span><span class="o">.</span>
@@ -427,7 +421,6 @@ python<span class="w">                        </span><span class="m">3</span>.10
 <span class="c1">#</span>
 <span class="c1">#     $ conda deactivate</span>
 </code></pre></div>
-
 <p>检验安装成果:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w">  </span>conda<span class="w"> </span>env<span class="w"> </span>list
 <span class="c1"># conda environments:</span>
@@ -436,7 +429,6 @@ base<span class="w">                  </span>*<span class="w">  </span>/opt/home
 leo3811<span class="w">                  </span>/opt/homebrew/Caskroom/miniconda/base/envs/leo3811
 leo3911<span class="w">                  </span>/opt/homebrew/Caskroom/miniconda/base/envs/leo3911
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">conda</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">PyQt</span>
 <span class="n">Collecting</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="p">(</span><span class="n">current_repodata</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">done</span>
 <span class="n">Solving</span><span class="w"> </span><span class="nl">environment</span><span class="p">:</span><span class="w"> </span><span class="n">done</span>
@@ -499,11 +491,10 @@ leo3911<span class="w">                  </span>/opt/homebrew/Caskroom/miniconda
 
 <span class="n">Proceed</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">y</span><span class="o">]/</span><span class="n">n</span><span class="p">)</span><span class="vm">?</span>
 </code></pre></div>
-
 <blockquote>
 <p>$ pip install leo</p>
 </blockquote>
-<p><img alt="PyQtWebEngine" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-29%2021.41.02.jpg"></p>
+<p><img alt="PyQtWebEngine" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-29%2021.41.02.jpg"/></p>
 <p>也有安装失败, 持续自动降级现象...</p>
 <p>最终成功安装了:</p>
 <ul>
@@ -513,10 +504,9 @@ leo3911<span class="w">                  </span>/opt/homebrew/Caskroom/miniconda
 </ul>
 <p>但是, 运行时报出神奇错误:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>leo
-Sorry,<span class="w"> </span><span class="s2">&quot;python&quot;</span><span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>run<span class="w"> </span>on<span class="w"> </span>this<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>macOS.<span class="w"> </span>Qt<span class="w"> </span>requires<span class="w"> </span>macOS<span class="w"> </span><span class="m">11</span>.1.0<span class="w"> </span>or<span class="w"> </span>later,<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>macOS<span class="w"> </span><span class="m">10</span>.16.0.
+Sorry,<span class="w"> </span><span class="s2">"python"</span><span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>run<span class="w"> </span>on<span class="w"> </span>this<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>macOS.<span class="w"> </span>Qt<span class="w"> </span>requires<span class="w"> </span>macOS<span class="w"> </span><span class="m">11</span>.1.0<span class="w"> </span>or<span class="w"> </span>later,<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>macOS<span class="w"> </span><span class="m">10</span>.16.0.
 </code></pre></div>
-
-<h3 id="_1">混合安装:<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="_1">混合安装:<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>果断 M1 环境中当前还是 brew 体系最靠谱</p>
 </blockquote>
@@ -544,14 +534,13 @@ PyQtDataVisualization-5.15.5.dist-info
 PyQtNetworkAuth-5.15.5.dist-info
 PyQtPurchasing-5.15.5.dist-info
 </code></pre></div>
-
 <p>从官方 <a href="https://github.com/leo-editor/leo-editor/releases/latest">Latest</a> 链接中下载最新原代码包, 部署到 <code>/opt/bin</code></p>
 <p>然后, 在对应环境中调用:</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">conda</span><span class="p">:</span><span class="w"> </span><span class="n">leo3912</span><span class="p">)</span>
 <span class="o">$</span><span class="w"> </span><span class="n">python</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">leo</span><span class="o">/</span><span class="n">launchLeo</span><span class="o">.</span><span class="n">py</span>
 
-<span class="n">setting</span><span class="w"> </span><span class="n">leoID</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;USER&#39;</span><span class="p">):</span><span class="w"> </span><span class="s1">&#39;zoomq&#39;</span>
-<span class="n">PYLINTHOME</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="s1">&#39;/Users/zoomq/Library/Caches/pylint&#39;</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">obsolescent</span><span class="w"> </span><span class="s1">&#39;/Users/zoomq/.pylint.d&#39;</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">found</span><span class="p">;</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">safely</span><span class="w"> </span><span class="n">remove</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">latter</span>
+<span class="n">setting</span><span class="w"> </span><span class="n">leoID</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">'USER'</span><span class="p">):</span><span class="w"> </span><span class="s1">'zoomq'</span>
+<span class="n">PYLINTHOME</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="s1">'/Users/zoomq/Library/Caches/pylint'</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">obsolescent</span><span class="w"> </span><span class="s1">'/Users/zoomq/.pylint.d'</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">found</span><span class="p">;</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">safely</span><span class="w"> </span><span class="n">remove</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">latter</span>
 <span class="n">duplicate</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="ow">not</span><span class="w"> </span><span class="n">conflicting</span><span class="p">)</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">bindings</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">myLeoSettings</span><span class="o">.</span><span class="n">leo</span>
 <span class="n">all</span><span class="w">    </span><span class="n">Alt</span><span class="o">+</span><span class="p">)</span><span class="w"> </span><span class="n">move</span><span class="o">-</span><span class="n">past</span><span class="o">-</span><span class="n">close</span>
 <span class="n">all</span><span class="w">    </span><span class="n">Alt</span><span class="o">+</span><span class="p">)</span><span class="w"> </span><span class="n">move</span><span class="o">-</span><span class="n">past</span><span class="o">-</span><span class="n">close</span>
@@ -576,23 +565,23 @@ PyQtPurchasing-5.15.5.dist-info
 <span class="n">darwin</span>
 <span class="n">expand_css_constants</span><span class="w"> </span><span class="n">Unresolved</span><span class="w"> </span><span class="err">@</span><span class="n">constants</span>
 <span class="p">[</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_base_decoration&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_children_family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_base_border&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_base_family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@checkbox-font-family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-weight&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@status-font-family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-style&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-size&#39;</span>
+<span class="w">    </span><span class="s1">'@bookmarks_base_decoration'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@bookmarks_children_family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@bookmarks_base_border'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@bookmarks_base_family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@checkbox-font-family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-weight'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@status-font-family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-style'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-size'</span>
 <span class="p">]</span>
-<span class="n">qt</span><span class="o">.</span><span class="n">qpa</span><span class="o">.</span><span class="n">fonts</span><span class="p">:</span><span class="w"> </span><span class="n">Populating</span><span class="w"> </span><span class="n">font</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="n">aliases</span><span class="w"> </span><span class="n">took</span><span class="w"> </span><span class="mi">163</span><span class="w"> </span><span class="n">ms</span><span class="o">.</span><span class="w"> </span><span class="n">Replace</span><span class="w"> </span><span class="n">uses</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">missing</span><span class="w"> </span><span class="n">font</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="s2">&quot;Monoid Retina&quot;</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">exists</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">cost</span><span class="o">.</span>
-<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@auto 4py3ch.md&#39;</span>
-<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@auto 4py4ch.md&#39;</span>
-<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@auto 4py5ch.md&#39;</span>
-<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@auto 4py6ch.md&#39;</span>
-<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@auto 4pyend.md&#39;</span>
+<span class="n">qt</span><span class="o">.</span><span class="n">qpa</span><span class="o">.</span><span class="n">fonts</span><span class="p">:</span><span class="w"> </span><span class="n">Populating</span><span class="w"> </span><span class="n">font</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="n">aliases</span><span class="w"> </span><span class="n">took</span><span class="w"> </span><span class="mi">163</span><span class="w"> </span><span class="n">ms</span><span class="o">.</span><span class="w"> </span><span class="n">Replace</span><span class="w"> </span><span class="n">uses</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">missing</span><span class="w"> </span><span class="n">font</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="s2">"Monoid Retina"</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">exists</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">cost</span><span class="o">.</span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">'@auto 4py3ch.md'</span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">'@auto 4py4ch.md'</span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">'@auto 4py5ch.md'</span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">'@auto 4py6ch.md'</span>
+<span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="s1">'@auto 4pyend.md'</span>
 <span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">Sites</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">utility</span><span class="o">/</span><span class="n">announcer</span><span class="o">/</span><span class="n">tasks</span><span class="o">.</span><span class="n">py</span>
 <span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">Sites</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">utility</span><span class="o">/</span><span class="n">pol</span><span class="o">/</span><span class="n">camp</span><span class="o">.</span><span class="n">yaml</span>
 <span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">Sites</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">utility</span><span class="o">/</span><span class="n">pol</span><span class="o">/</span><span class="n">st</span><span class="o">.</span><span class="n">py</span>
@@ -601,65 +590,61 @@ PyQtPurchasing-5.15.5.dist-info
 <span class="ow">not</span><span class="w"> </span><span class="n">found</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/</span><span class="n">Sites</span><span class="o">/</span><span class="mf">101.</span><span class="n">camp</span><span class="o">/</span><span class="n">_course</span><span class="o">/</span><span class="mi">101</span><span class="n">camp1py</span><span class="o">/</span><span class="nb">pow</span><span class="o">/</span><span class="n">tasks</span><span class="o">.</span><span class="n">py</span>
 <span class="n">expand_css_constants</span><span class="w"> </span><span class="n">Unresolved</span><span class="w"> </span><span class="err">@</span><span class="n">constants</span>
 <span class="p">[</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_base_decoration&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_children_family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_base_border&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_base_family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@checkbox-font-family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-weight&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@status-font-family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-style&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-size&#39;</span>
+<span class="w">    </span><span class="s1">'@bookmarks_base_decoration'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@bookmarks_children_family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@bookmarks_base_border'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@bookmarks_base_family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@checkbox-font-family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-weight'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@status-font-family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-style'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-size'</span>
 <span class="p">]</span>
 <span class="n">expand_css_constants</span><span class="w"> </span><span class="n">Unresolved</span><span class="w"> </span><span class="err">@</span><span class="n">constants</span>
 <span class="p">[</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_base_decoration&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_children_family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_base_border&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@bookmarks_base_family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@checkbox-font-family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-weight&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@status-font-family&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-style&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="s1">&#39;@dialog-font-size&#39;</span>
+<span class="w">    </span><span class="s1">'@bookmarks_base_decoration'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@bookmarks_children_family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@bookmarks_base_border'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@bookmarks_base_family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@checkbox-font-family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-weight'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@status-font-family'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-style'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'@dialog-font-size'</span>
 <span class="p">]</span>
 <span class="n">wrote</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/.</span><span class="n">leo</span><span class="o">/</span><span class="n">leo</span><span class="o">.</span><span class="n">session</span>
 <span class="n">wrote</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">zoomq</span><span class="o">/.</span><span class="n">leo</span><span class="o">/.</span><span class="n">leoRecentFiles</span><span class="o">.</span><span class="n">txt</span>
 </code></pre></div>
-
-<p><img alt="Leo 6.6.2" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-29%2022.10.10-1.jpg"></p>
+<p><img alt="Leo 6.6.2" src="https://ipic.zoomquiet.top/2022-05-29-zshot%202022-05-29%2022.10.10-1.jpg"/></p>
 <p>可以正常启动后, 将指令包装为一个别名:</p>
 <p><code>~/.bash_profile</code> 中追加:</p>
-<div class="highlight"><pre><span></span><code>alias leo6lanch=&quot;python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;&quot;
+<div class="highlight"><pre><span></span><code>alias leo6lanch="python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"
 </code></pre></div>
-
 <p>日常在终端中就两步调用:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>leo3912
 $<span class="w"> </span>leo6lanch
 </code></pre></div>
-
-<h4 id="ps">PS:<a class="headerlink" href="#ps" title="Permanent link">&para;</a></h4>
+<h4 id="ps">PS:<a class="headerlink" href="#ps" title="Permanent link">¶</a></h4>
 <p>如果以上安装 leo 后, 直接在 conda 环境中运行, 将发现:</p>
 <div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w">  </span><span class="n">leo</span>
 <span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">last</span><span class="p">):</span>
-<span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/bin/leo&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/bin/leo"</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="w">    </span><span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">run</span><span class="p">())</span>
-<span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/leo/core/runLeo.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">run</span>
+<span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/leo/core/runLeo.py"</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">run</span>
 <span class="w">    </span><span class="n">g</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">loadManager</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span><span class="w"> </span><span class="n">pymacs</span><span class="p">)</span>
-<span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/leo/core/leoApp.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">2252</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">load</span>
+<span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">"/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/leo/core/leoApp.py"</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">2252</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">load</span>
 <span class="w">    </span><span class="n">t1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">()</span>
-<span class="n">AttributeError</span><span class="p">:</span><span class="w"> </span><span class="n">module</span><span class="w"> </span><span class="s1">&#39;time&#39;</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">attribute</span><span class="w"> </span><span class="s1">&#39;clock&#39;</span>
+<span class="n">AttributeError</span><span class="p">:</span><span class="w"> </span><span class="n">module</span><span class="w"> </span><span class="s1">'time'</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">attribute</span><span class="w"> </span><span class="s1">'clock'</span>
 </code></pre></div>
-
 <p>经过代码探查发现, <code>time.clock()</code> 已经在 Py3.8 之后废弃,
 也就是说, Leo 最新版本中一定不包含这种函式,
 即, pip 安装过程中为了兼容, 自动降级到某个老版本中了...
 经过探查:</p>
 <p>/opt/homebrew/Caskroom/miniconda/base/envs/leo3912/lib/python3.9/site-packages/leo/core/leoVersion.py</p>
 <p>果断写着 <code>5.9-b2</code> , 是19年的版本;</p>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>小结</p>
 </blockquote>
@@ -680,21 +665,20 @@ $<span class="w"> </span>leo6lanch
 </ul>
 <p>应该可以在 <code>~/.bash_profile</code> 中找到以下类似配置:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span>
-<span class="c1"># !! Contents within this block are managed by &#39;conda init&#39; !!</span>
-<span class="n">__conda_setup</span><span class="o">=</span><span class="s2">&quot;$(&#39;/opt/homebrew/Caskroom/miniconda/base/bin/conda&#39; &#39;shell.bash&#39; &#39;hook&#39; 2&gt; /dev/null)&quot;</span>
+<span class="c1"># !! Contents within this block are managed by 'conda init' !!</span>
+<span class="n">__conda_setup</span><span class="o">=</span><span class="s2">"$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.bash' 'hook' 2&gt; /dev/null)"</span>
 <span class="k">if</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="o">$</span><span class="err">?</span><span class="w"> </span><span class="o">-</span><span class="n">eq</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="n">then</span>
-<span class="w">    </span><span class="n">eval</span><span class="w"> </span><span class="s2">&quot;$__conda_setup&quot;</span>
+<span class="w">    </span><span class="n">eval</span><span class="w"> </span><span class="s2">"$__conda_setup"</span>
 <span class="k">else</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh&quot;</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="n">then</span>
-<span class="w">        </span><span class="o">.</span><span class="w"> </span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="s2">"/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="n">then</span>
+<span class="w">        </span><span class="o">.</span><span class="w"> </span><span class="s2">"/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"</span>
 <span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="k">export</span><span class="w"> </span><span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/homebrew/Caskroom/miniconda/base/bin:$PATH&quot;</span>
+<span class="w">        </span><span class="k">export</span><span class="w"> </span><span class="n">PATH</span><span class="o">=</span><span class="s2">"/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"</span>
 <span class="w">    </span><span class="n">fi</span>
 <span class="n">fi</span>
 <span class="n">unset</span><span class="w"> </span><span class="n">__conda_setup</span>
 <span class="c1"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span>
 </code></pre></div>
-
 <ul>
 <li>用 conda info 检验当前环境是否正常</li>
 <li>然后, 创建 Leo 专用环境:<ul>
@@ -712,15 +696,13 @@ $<span class="w"> </span>leo6lanch
 <li>可以正常启动后, 将指令包装为一个别名:</li>
 </ul>
 <p><code>~/.bash_profile</code> 中追加:</p>
-<div class="highlight"><pre><span></span><code>alias leo6lanch=&quot;python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;&quot;
+<div class="highlight"><pre><span></span><code>alias leo6lanch="python /opt/bin/leo/launchLeo.py &gt;&gt; /dev/null 2&gt;&amp;1 &amp;"
 </code></pre></div>
-
 <p>日常在终端中就两步调用:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>leo3912
 $<span class="w"> </span>leo6lanch
 </code></pre></div>
-
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
 <ul>
 <li>220529 整理为文章</li>
 <li>220528 miniconda 成功</li>

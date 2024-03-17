@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>- SWEEKLY</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/sweekly.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2024-03-18T00:44:15+08:00</updated><entry><title>世界梦续/旅程</title><link href="https://blog.zoomquiet.io/240317-wdp0.html" rel="alternate"></link><published>2024-03-17T21:42:00+08:00</published><updated>2024-03-18T00:44:15+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2024-03-17:/240317-wdp0.html</id><summary type="html">&lt;p&gt;one man,one ship,one purpose&lt;/p&gt;</summary><content type="html">&lt;h2 id="500"&gt;只有500年的旅程&lt;a class="headerlink" href="#500" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>- SWEEKLY</title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/sweekly.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2024-03-18T01:02:32+08:00</updated><entry><title>世界梦续/旅程</title><link href="https://blog.zoomquiet.io/240317-wdp0.html" rel="alternate"></link><published>2024-03-17T21:42:00+08:00</published><updated>2024-03-18T01:02:32+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2024-03-17:/240317-wdp0.html</id><summary type="html">&lt;p&gt;one man,one ship,one purpose&lt;/p&gt;</summary><content type="html">&lt;h2 id="500"&gt;只有500年的旅程&lt;a class="headerlink" href="#500" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;当英雄们踏上征程之前, 如果知道将面对什么样的危险, 多半没人敢出发;
 有时未知包含的探险感, 真的能替代对风险的理智判定, 反而造就了英雄本身...&lt;/p&gt;
@@ -38,6 +38,7 @@
 &lt;h3 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;为了在太空中通过离心力模拟地球的重力，我们需要使用以下公式来计算所需的转速：&lt;/p&gt;
 &lt;p&gt;[ F = m \cdot a ]&lt;/p&gt;
+&lt;p&gt;$ F = m \cdot a $&lt;/p&gt;
 &lt;p&gt;其中 ( F ) 是力（在这种情况下是重力加速度和离心力的组合），( m ) 是质量，( a ) 是加速度（重力加速度 ( g ) 或离心加速度 ( a_c )）。&lt;/p&gt;
 &lt;p&gt;在这种情况下，我们想要模拟的重力加速度是地球重力的0.9倍，即 ( 0.9g )。地球上的重力加速度 ( g ) 大约为 ( 9.81 \, m/s^2 )，所以 ( 0.9g ) 大约为 ( 8.829 \, m/s^2 )。&lt;/p&gt;
 &lt;p&gt;离心加速度 ( a_c ) 可以通过以下公式计算：&lt;/p&gt;

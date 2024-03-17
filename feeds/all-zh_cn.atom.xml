@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2024-03-18T01:02:32+08:00</updated><entry><title>世界梦续/旅程</title><link href="https://blog.zoomquiet.io/240317-wdp0.html" rel="alternate"></link><published>2024-03-17T21:42:00+08:00</published><updated>2024-03-18T01:02:32+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2024-03-17:/240317-wdp0.html</id><summary type="html">&lt;p&gt;one man,one ship,one purpose&lt;/p&gt;</summary><content type="html">&lt;h2 id="500"&gt;只有500年的旅程&lt;a class="headerlink" href="#500" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title></title><link href="https://blog.zoomquiet.io/" rel="alternate"></link><link href="https://blog.zoomquiet.io/feeds/all-zh_cn.atom.xml" rel="self"></link><id>https://blog.zoomquiet.io/</id><updated>2024-03-18T01:05:30+08:00</updated><entry><title>世界梦续/旅程</title><link href="https://blog.zoomquiet.io/240317-wdp0.html" rel="alternate"></link><published>2024-03-17T21:42:00+08:00</published><updated>2024-03-18T01:05:30+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2024-03-17:/240317-wdp0.html</id><summary type="html">&lt;p&gt;one man,one ship,one purpose&lt;/p&gt;</summary><content type="html">&lt;h2 id="500"&gt;只有500年的旅程&lt;a class="headerlink" href="#500" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;当英雄们踏上征程之前, 如果知道将面对什么样的危险, 多半没人敢出发;
 有时未知包含的探险感, 真的能替代对风险的理智判定, 反而造就了英雄本身...&lt;/p&gt;
@@ -38,7 +38,7 @@
 &lt;h3 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;为了在太空中通过离心力模拟地球的重力，我们需要使用以下公式来计算所需的转速：&lt;/p&gt;
 &lt;p&gt;[ F = m \cdot a ]&lt;/p&gt;
-&lt;p&gt;$ F = m \cdot a $&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(F=m \cdot a\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;其中 ( F ) 是力（在这种情况下是重力加速度和离心力的组合），( m ) 是质量，( a ) 是加速度（重力加速度 ( g ) 或离心加速度 ( a_c )）。&lt;/p&gt;
 &lt;p&gt;在这种情况下，我们想要模拟的重力加速度是地球重力的0.9倍，即 ( 0.9g )。地球上的重力加速度 ( g ) 大约为 ( 9.81 \, m/s^2 )，所以 ( 0.9g ) 大约为 ( 8.829 \, m/s^2 )。&lt;/p&gt;
 &lt;p&gt;离心加速度 ( a_c ) 可以通过以下公式计算：&lt;/p&gt;
@@ -66,7 +66,69 @@
 &lt;p&gt;或者，如果我们要将其转换为每分钟的转速 ( N )：&lt;/p&gt;
 &lt;p&gt;[ N = 0.0273 \times 60 ]&lt;/p&gt;
 &lt;p&gt;[ N \approx 1.638 \, revolutions/min ]&lt;/p&gt;
-&lt;p&gt;所以，为了在直径为600米的环形结构内侧模拟0.9G的重力加速度，这个环的转速应该是大约0.0273圈每秒，或者大约1.638圈每分钟。&lt;/p&gt;</content><category term="SWEEKLY"></category><category term="write"></category><category term="story"></category><category term="weekly"></category></entry><entry><title>程序猿AIGC"工具包"</title><link href="https://blog.zoomquiet.io/240123-aigc-x-zhuhai-toolkit4developer.html" rel="alternate"></link><published>2024-01-23T19:42:00+08:00</published><updated>2024-01-24T16:58:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2024-01-23:/240123-aigc-x-zhuhai-toolkit4developer.html</id><summary type="html">&lt;p&gt;Pythonic/ 通用AI辅助心法&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;所以，为了在直径为600米的环形结构内侧模拟0.9G的重力加速度，这个环的转速应该是大约0.0273圈每秒，或者大约1.638圈每分钟。&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="SWEEKLY"></category><category term="write"></category><category term="story"></category><category term="weekly"></category></entry><entry><title>程序猿AIGC"工具包"</title><link href="https://blog.zoomquiet.io/240123-aigc-x-zhuhai-toolkit4developer.html" rel="alternate"></link><published>2024-01-23T19:42:00+08:00</published><updated>2024-01-24T16:58:00+08:00</updated><author><name>ZoomQuiet</name></author><id>tag:blog.zoomquiet.io,2024-01-23:/240123-aigc-x-zhuhai-toolkit4developer.html</id><summary type="html">&lt;p&gt;Pythonic/ 通用AI辅助心法&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="background"&gt;background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;作为 AIGCx珠海 创始人, 经常要回应联盟倡议, 完成各种串联任务;&lt;/p&gt;
 &lt;p&gt;这不来了一个: &lt;code&gt;🎃程序员AIGC工具包编写&lt;/code&gt;&lt;/p&gt;

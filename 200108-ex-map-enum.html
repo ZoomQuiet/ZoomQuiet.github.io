@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="200108-ex-map-enum"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/200108-ex-map-enum.html"/>
-            <meta property="og:description" content="因为各种原因吧...  很早在 ECUG 就接触了 Erlang 但是, 怪异的语法,以及狭小的应用领域,一直没真正使用起来 现在, 发现 Elixir 很好的解 …"/>
+            <meta property="og:description" content="env. problem try Hummm?! refer. Changelog 因为各种原因吧... 很早在 ECUG 就接触了 Erlang 但是, 怪异的语法,以及狭小的应用领域,一直没真正使用起来 现在, 发 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -128,8 +128,8 @@
 		<a href="https://blog.zoomquiet.io/tag/sayeahooo.html">sayeahooo</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#env">env.</a></li>
 <li><a href="#problem">problem</a></li>
@@ -139,9 +139,6 @@
 <li><a href="#changelog">Changelog</a></li>
 </ul>
 </div>
-    </nav>
-
-                
 <p>因为各种原因吧...</p>
 <ul>
 <li>很早在 ECUG 就接触了 Erlang<ul>
@@ -152,7 +149,7 @@
 <li>所以, 开始折腾...</li>
 <li>结果, 撞见各种值得嗯哼的事儿...</li>
 </ul>
-<h2 id="env">env.<a class="headerlink" href="#env" title="Permanent link">¶</a></h2>
+<h2 id="env">env.<a class="headerlink" href="#env" title="Permanent link">&para;</a></h2>
 <p>༄  screenfetch</p>
 <div class="highlight"><pre><span></span><code>                 <span class="s s-Atom">-/+:.</span>          <span class="s s-Atom">zoomq@</span><span class="nv">ZQ160626rMBP</span>
                 <span class="o">:</span><span class="s s-Atom">++++.</span>          <span class="nv">OS</span><span class="o">:</span> <span class="mi">64</span><span class="s s-Atom">bit</span> <span class="nv">Mac</span> <span class="nv">OS</span> <span class="nv">X</span> <span class="mf">10.12.6</span> <span class="mi">16</span><span class="nv">G2136</span>
@@ -171,11 +168,12 @@
      <span class="o">:</span><span class="s s-Atom">ooooooooooooooooooo+.</span>
       <span class="err">`</span><span class="o">:+</span><span class="s s-Atom">oo+/:-..-:/+o+/-</span>
 </code></pre></div>
+
 <ul>
 <li>Erlang/OTP 21 [erts-10.2] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [hipe]</li>
 <li>Elixir 1.9.1 (compiled with Erlang/OTP 20)</li>
 </ul>
-<h2 id="problem">problem<a class="headerlink" href="#problem" title="Permanent link">¶</a></h2>
+<h2 id="problem">problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>使用 Plug 快速开发 Slack 插件...</p>
 </blockquote>
@@ -184,11 +182,11 @@
 <p>官方文档中 demo 形似:</p>
 <div class="highlight"><pre><span></span><code><span class="n">defmodule</span><span class="w"> </span><span class="n">Example</span><span class="p">.</span><span class="n">Plug</span><span class="p">.</span><span class="n">VerifyRequest</span><span class="w"> </span><span class="n">do</span>
 <span class="w">  </span><span class="n">defmodule</span><span class="w"> </span><span class="n">IncompleteRequestError</span><span class="w"> </span><span class="n">do</span>
-<span class="w">    </span><span class="nv">@moduledoc</span><span class="w"> </span><span class="ss">"""</span>
+<span class="w">    </span><span class="nv">@moduledoc</span><span class="w"> </span><span class="ss">&quot;&quot;&quot;</span>
 <span class="ss">    Error raised when a required field is missing.</span>
-<span class="ss">    """</span>
+<span class="ss">    &quot;&quot;&quot;</span>
 
-<span class="w">    </span><span class="n">defexception</span><span class="w"> </span><span class="nl">message</span><span class="p">:</span><span class="w"> </span><span class="ss">""</span>
+<span class="w">    </span><span class="n">defexception</span><span class="w"> </span><span class="nl">message</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;&quot;</span>
 <span class="w">  </span><span class="k">end</span>
 
 <span class="w">  </span><span class="n">def</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="n">options</span><span class="p">),</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">options</span>
@@ -210,13 +208,16 @@
 <span class="w">  </span><span class="n">defp</span><span class="w"> </span><span class="n">contains_fields</span><span class="vm">?</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span><span class="w"> </span><span class="n">fields</span><span class="p">),</span><span class="w"> </span><span class="nl">do</span><span class="p">:</span><span class="w"> </span><span class="n">Enum</span><span class="p">.</span><span class="ow">all</span><span class="vm">?</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">1</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">keys</span><span class="p">))</span>
 <span class="k">end</span>
 </code></pre></div>
+
 <p>对应检验请求可以是:</p>
 <div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w"> </span><span class="n">curl</span><span class="w"> </span><span class="n">localhost</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">upload</span><span class="err">?</span><span class="n">content</span><span class="o">=</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">mimetype</span><span class="o">=</span><span class="n">bar</span>
 </code></pre></div>
+
 <p>问题是:</p>
 <div class="highlight"><pre><span></span><code><span class="o">...</span>
 <span class="o">|&gt;</span><span class="w"> </span><span class="n">contains_fields</span><span class="o">?(</span><span class="n">fields</span><span class="o">)</span>
 </code></pre></div>
+
 <ul>
 <li>提供的函式只是对所有 URI 参数键进行检验, 如果缺少了则报错,</li>
 <li>可是, 正确请求时, 如何获得所有参数值?</li>
@@ -224,11 +225,13 @@
 <p>先使用输出语句来探查 params 是什么数据类型:</p>
 <div class="highlight"><pre><span></span><code>IO.inspect(params)
 </code></pre></div>
+
 <p>请求触发后终端输出:</p>
-<div class="highlight"><pre><span></span><code><span class="c">%{"cnt" =&gt; "foo", "mmt" =&gt; "bar"}</span>
+<div class="highlight"><pre><span></span><code><span class="c">%{&quot;cnt&quot; =&gt; &quot;foo&quot;, &quot;mmt&quot; =&gt; &quot;bar&quot;}</span>
 </code></pre></div>
+
 <p>是标准 Map 对象.</p>
-<h2 id="try">try<a class="headerlink" href="#try" title="Permanent link">¶</a></h2>
+<h2 id="try">try<a class="headerlink" href="#try" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Enum.all?() 是个重要的入口</p>
 </blockquote>
@@ -239,13 +242,15 @@
 <p>所以:</p>
 <div class="highlight"><pre><span></span><code><span class="n">defp</span><span class="w"> </span><span class="n">echo_vars</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span><span class="w"> </span><span class="n">fields</span><span class="p">)</span><span class="w"> </span><span class="n">do</span><span class="w"> </span>
 <span class="w">    </span><span class="n">Enum</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span><span class="w"> </span><span class="n">fn</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">IO</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="n">end</span><span class="p">)</span>
-<span class="w">    </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"chk. as #{keys} ;-)"</span><span class="p">)</span>
+<span class="w">    </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;chk. as #{keys} ;-)&quot;</span><span class="p">)</span>
 <span class="n">end</span>
 </code></pre></div>
+
 <p>但是, 各种出错, 因为这时, 传入的 keys 是只有请求 Map 中的键;</p>
 <p>那么:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Enum</span><span class="p">.</span><span class="n">each</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">fn</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">IO</span><span class="p">.</span><span class="n">puts</span><span class="p">(</span><span class="nf">Map</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="kd">end)</span>
 </code></pre></div>
+
 <ul>
 <li>跳出 verified = params ... 的处理流水线;</li>
 <li>直接追加列印处理?</li>
@@ -257,18 +262,20 @@
 </ul>
 </li>
 </ul>
-<h2 id="hummm">Hummm?!<a class="headerlink" href="#hummm" title="Permanent link">¶</a></h2>
+<h2 id="hummm">Hummm?!<a class="headerlink" href="#hummm" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>万万没想到...</p>
 </blockquote>
 <p>无意中在 <a href="https://mlog.club/article/1923002">如何在Elixir中将映射键从字符串转换为原子 | 码农俱乐部 - Golang中国 - Go语言中文社区</a></p>
 <p>看到:</p>
-<div class="highlight"><pre><span></span><code>iex(1)&gt; string_key_map = %{"foo" =&gt; "bar", "hello" =&gt; "world"}
+<div class="highlight"><pre><span></span><code>iex(1)&gt; string_key_map = %{&quot;foo&quot; =&gt; &quot;bar&quot;, &quot;hello&quot; =&gt; &quot;world&quot;}
 </code></pre></div>
+
 <p>%{"foo" =&gt; "bar", "hello" =&gt; "world"}</p>
 <div class="highlight"><pre><span></span><code><span class="n">iex</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">string_key_map</span><span class="p">,</span><span class="w"> </span><span class="n">into</span><span class="p">:</span><span class="w"> </span><span class="c">%{}, do: {String.to_atom(key), val}</span>
-<span class="c">%{foo: "bar", hello: "world"}</span>
+<span class="c">%{foo: &quot;bar&quot;, hello: &quot;world&quot;}</span>
 </code></pre></div>
+
 <p>虽说这是 Comprehensions 概念的通常使用,
 但是, 发现, for 这个操作, 和 Python 中的完全一致哪,
 于是:</p>
@@ -276,14 +283,15 @@
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="n">do</span>
 <span class="w">      </span><span class="c1">#IO.inspect(key)</span>
 <span class="w">      </span><span class="c1">#IO.inspect(val)</span>
-<span class="w">      </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"each -&gt; #{key}=&gt;#{val} ;-)"</span><span class="p">)</span>
+<span class="w">      </span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;each -&gt; #{key}=&gt;#{val} ;-)&quot;</span><span class="p">)</span>
 <span class="w">    </span><span class="n">end</span>
 <span class="w">  </span><span class="n">end</span>
 </code></pre></div>
+
 <p>简直和 Python 中解包行为完全一致...</p>
 <p>可是: <a href="https://learnxinyminutes.com/docs/zh-cn/elixir-cn/">Learn elixir in Y Minutes</a>
 一句也没提及, for 这么 NB 的操作符哪...</p>
-<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
+<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://hexdocs.pm/plug/Plug.Router.html">Plug.Router — Plug v1.8.3</a><ul>
 <li><a href="http://elixirschool.com/zh-hans/lessons/specifics/plug/">Plug · Elixir School</a></li>
@@ -294,7 +302,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h2>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>200109 .5h 配置模板,重新发布</li>
 <li>200108 .5h 输出</li>
@@ -326,64 +334,110 @@
 <h4><a href="https://www.youtube.com/@Chaos42DAMA">大妈的多重宇宙 - <b>YouTube</b></a></h4>
 全新自媒体系列...科学幻想,读书,说故事...
 
-
-
-<hr />
-
-
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-  <input type="hidden" name="cmd" value="_s-xclick" />
-  <input type="hidden" name="hosted_button_id" value="XFUEVEQ7WW6MA" />
-  <table>
-    <tr>
-      <td>
-        <input type="hidden" name="on0" value="支持一下"/>
-        支持一下
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <select name="os0">
-          <option value="4.2">
-            4.2
-          </option>
-          <option value="14.2">
-            14.2
-          </option>
-          <option value="24.2">
-            24.2
-          </option>
-          <option value="42">
-            42
-          </option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="hidden" name="on1" value="额外理由:"/>
-        额外理由:
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="os1" maxLength="200" />
-      </td>
-    </tr>
-  </table>
-  <input type="hidden" name="currency_code" value="USD" />
-  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="有了PayPal，您可以更安全便捷地在线付款！" alt="立即购买" />
-</form>
-
-
 <!--
-
-<p>订阅 substack 体验古早写作:
-    <br />
-<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
-
 <hr />
+<h4>自怼圈/年度番新</h4>
+<img alt="DU22.8" src="https://ipic.zoomquiet.top/2022-08-19-220819DU22.8.jpeg!/fw/420" />
+<br />
+<a href="https://du.101.camp/about/">关于 ~ DebugUself with DAMA ;-)</a>
+
+![](https://ipic.zoomquiet.top/2022-03-31-220331DU6y_zip.jpg)
+<h3>蟒营®编程思维提高班 Python版/<b>第14期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
+
+<blockquote><p>
+    
+<ul>
+    <li>
+    开始报名: <b>2020.10.27</b> </li>
+    <li>
+    报名截止: <b>2020.11.22</b> </li>
+    <li>
+    正式开课: <b>2020.11.29</b> </li>
+    <li>
+    课程结束: <b>2021.01.10</b> </li>
+
+    <li>
+    介绍文章:  
+    <ul>
+        <li>
+<a href="https://blog.101.camp/nc/200811-ZoomQuiet-wtf-coding-mind/">蟒营®/ 为什么编程思维不用学就有?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">拙见/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-ZoomQuiet-fake-learnning/">蟒营®/ 伪编程学习</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-ZoomQuiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-ZoomQuiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-ZoomQuiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200630-ZoomQuiet-10py-wtf-can-coding/">蟒营®/ 到底如何算"会编程"?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200703-ZoomQuiet-10py-wtfc-0/">蟒营®/ 到底改变了什么?</a>
+        </li>
+
+        <li>
+...<a href="https://blog.101.camp/nc/">NC: 嗯哼蟒营 — 蟒营™ 怂怼录</a>
+        </li>
+    </ul>
+    </li>
+
+
+</ul>
+
+<b>扫描</b>报名:
+
+<a href="https://jinshuju.net/f/Mv5nGU">
+<img alt="101camp14py" 
+    src="http://101.zoomquiet.top/res/14py/%E8%9F%92%E8%90%A5%C2%AE%E7%BC%96%E7%A8%8B%E6%80%9D%E7%BB%B4%E6%8F%90%E9%AB%98%E7%8F%AD_14%E6%9C%9F_%E6%8A%A5%E5%90%8D%E8%A1%A8_256.png"/>
+</a>
+</p></blockquote>
+
+
+<h2>蟒营®式 原创课程</h2>
+<p>
+
+<img alt="theory101camp_v3" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-10-04-theory101camp_v3.jpg"/>
+
+</p>
+
+<blockquote>
+<p>
+    官网: <b>
+    <a href="https://py.101.camp/">py.101.camp</a>
+    </b>
+</p>
+</blockquote>
+
+
+
+<br/>
+任何问题可先进入知识星球<b>(免费)</b>咨询:
+<br/>
+<img alt="FAQ" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-02-28-FAQ101camp-qr.jpeg?imageView2/2/w/360"/>
+
+-->
+
+
+<!----
 
 <hr />
 点击注册~> 获得 <b>100$</b> 体验券:
@@ -391,10 +445,25 @@
     href="https://www.digitalocean.com/?refcode=e7b7cdc66376&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
         src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg"
         alt="DigitalOcean Referral Badge" /></a>
-    
+
+<hr />
+
+
+<p>订阅 substack 体验古早写作:
+    <br />
+<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
+
+    <iframe src="https://zoomquiet.substack.com/embed" width="360" 
+        style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
 </p>
+-->
 
+
+
+
+
+<!--
 <hr />
 
 <p>关注公众号, 持续获得相关各种嗯哼:
@@ -403,11 +472,43 @@
         src="https://ipic.zoomquiet.top/2021-12-27-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg!/fw/420" />
 </p>
 
+    ![](https://ipic.zoomquiet.top/2022-03-31-2020-10-21-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg)
+<blockquote><p>
+    
+<ul>
+    <li>
+<a href="https://mp.weixin.qq.com/s/FqDJWQQcthEuGHAPPEzUKA">
+拙见/ 但得呢喃
+    </a></li>
+
+    <li>
+<a href="https://mp.weixin.qq.com/s/Hvu22TO1HKK2H8rnbPWcig">
+拙见/ 但得呢喃+1
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/w7m2BwIDsntnLl2vCDuP9g">
+拙见/ 但得呢喃+2
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/HXXfikoYfGV4zqf8-oOlgw">
+拙见/ 但得呢喃+3
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/uFdOHc_u9SqHPKhW9qXz7g">
+拙见/ 但得呢喃+4
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/CZUUmuZ2tDZU0gRAyTHz5w">
+拙见/ 如此平庸又如此美好
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/A-javC9noWxEUeTDaJoWiw">
+拙见/ 如何开始弛放?
+    </a></li>
 
 
-
--->
-
+</ul>
+</p></blockquote>
 
 <hr />
 <h3>蟒营®编程思维提高班Python版</h3>
@@ -419,6 +520,19 @@
         <pre>askdama@googlegroups.com</pre>
     </li>
 </ul>
+
+-->
+
+
+<hr />
+<h3>任何问题</h3>
+随时邮件提问可也:
+<pre>askdama@googlegroups.com</pre>
+
+
+<hr />
+<script src="https://liberapay.com/zoomquiet/widgets/button.js"></script>
+<noscript><a href="https://liberapay.com/zoomquiet/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 <!--
     <li>
         + 扫描预约入群, 学员每满 42 人即启动新一期训练营 ;-)

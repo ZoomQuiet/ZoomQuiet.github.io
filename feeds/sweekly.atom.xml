@@ -56,94 +56,32 @@
 &lt;/ul&gt;
 &lt;h3 id="refer"&gt;refer.&lt;a class="headerlink" href="#refer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;为了在太空中通过离心力模拟地球的重力，我们需要使用以下公式来计算所需的转速：&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(F=m \cdot a\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其中 &lt;span class="math"&gt;\(F\)&lt;/span&gt; 是力（在这种情况下是重力加速度和离心力的组合），&lt;span class="math"&gt;\(m\)&lt;/span&gt; 是质量，&lt;span class="math"&gt;\(a\)&lt;/span&gt; 是加速度（重力加速度 &lt;span class="math"&gt;\(g\)&lt;/span&gt; 或离心加速度 &lt;span class="math"&gt;\(a_c\)&lt;/span&gt;）。&lt;/p&gt;
-&lt;p&gt;在这种情况下，我们想要模拟的重力加速度是地球重力的0.9倍，即 &lt;span class="math"&gt;\(0.9g\)&lt;/span&gt;。地球上的重力加速度 &lt;span class="math"&gt;\(g\)&lt;/span&gt; 大约为 &lt;span class="math"&gt;\(9.81 \, m/s^2\)&lt;/span&gt;，所以 &lt;span class="math"&gt;\(0.9g\)&lt;/span&gt; 大约为 &lt;span class="math"&gt;\(8.829 \, m/s^2\)&lt;/span&gt;。&lt;/p&gt;
-&lt;p&gt;离心加速度 &lt;span class="math"&gt;\(a_c\)&lt;/span&gt; 可以通过以下公式计算：&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(a_c = \frac{v^2}{r}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其中 &lt;span class="math"&gt;\(v\)&lt;/span&gt; 是环形结构的线速度，&lt;span class="math"&gt;\(r\)&lt;/span&gt; 是环形结构的半径（即直径的一半）。&lt;/p&gt;
-&lt;p&gt;线速度 &lt;span class="math"&gt;\(v\)&lt;/span&gt; 与角速度 &lt;span class="math"&gt;\(\omega\)&lt;/span&gt; 有关，可以通过以下公式计算：&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(v = \omega \cdot r\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;将 &lt;span class="math"&gt;\(v\)&lt;/span&gt; 的表达式代入 &lt;span class="math"&gt;\(a_c\)&lt;/span&gt; 的公式中，我们得到：&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(a_c = \frac{(\omega \cdot r)^2}{r} = \omega^2 \cdot r\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;由于我们想要的离心加速度 &lt;span class="math"&gt;\(a_c\)&lt;/span&gt; 等于 &lt;span class="math"&gt;\(0.9g\)&lt;/span&gt;，我们可以将 &lt;span class="math"&gt;\(a_c\)&lt;/span&gt; 设置为 &lt;span class="math"&gt;\(8.829 \, m/s^2\)&lt;/span&gt; 并解出 &lt;span class="math"&gt;\(\omega\)&lt;/span&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(8.829 = \omega^2 \cdot \frac{D}{2}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其中 &lt;span class="math"&gt;\(D\)&lt;/span&gt; 是环形结构的直径，即600米。首先计算半径 &lt;span class="math"&gt;\(r\)&lt;/span&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(r = \frac{D}{2} = \frac{600}{2} = 300 \, m\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;现在我们可以解出 &lt;span class="math"&gt;\(\omega\)&lt;/span&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(8.829 = \omega^2 \cdot 300\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(\omega^2 = \frac{8.829}{300}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(\omega^2 = 0.02943\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(\omega = \sqrt{0.02943}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(\omega \approx 0.1717 \, rad/s\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;这是角速度的数值。为了将其转换为每秒旋转的圈数，我们需要知道一圈的角速度是 &lt;span class="math"&gt;\(2\pi\)&lt;/span&gt; 弧度。因此，转速 &lt;span class="math"&gt;\(n\)&lt;/span&gt; 可以通过以下公式计算：&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(n = \frac{\omega}{2\pi}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(n = \frac{0.1717}{2\pi}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(n \approx \frac{0.1717}{6.2832}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(n \approx 0.0273 \, revolutions/s\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;或者，如果我们要将其转换为每分钟的转速 &lt;span class="math"&gt;\(N\)&lt;/span&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(N = 0.0273 \times 60\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(N \approx 1.638 \, revolutions/min\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;所以，为了在直径为600米的环形结构内侧模拟0.9G的重力加速度，这个环的转速应该是大约0.0273圈每秒，或者大约1.638圈每分钟。&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content><category term="SWEEKLY"></category><category term="write"></category><category term="story"></category><category term="weekly"></category></entry></feed>
+&lt;p&gt;$F=m \cdot a$&lt;/p&gt;
+&lt;p&gt;其中 $F$ 是力（在这种情况下是重力加速度和离心力的组合），$m$ 是质量，$a$ 是加速度（重力加速度 $g$ 或离心加速度 $a_c$）。&lt;/p&gt;
+&lt;p&gt;在这种情况下，我们想要模拟的重力加速度是地球重力的0.9倍，即 $0.9g$。地球上的重力加速度 $g$ 大约为 $9.81 \, m/s^2$，所以 $0.9g$ 大约为 $8.829 \, m/s^2$。&lt;/p&gt;
+&lt;p&gt;离心加速度 $a_c$ 可以通过以下公式计算：&lt;/p&gt;
+&lt;p&gt;$a_c = \frac{v^2}{r}$&lt;/p&gt;
+&lt;p&gt;其中 $v$ 是环形结构的线速度，$r$ 是环形结构的半径（即直径的一半）。&lt;/p&gt;
+&lt;p&gt;线速度 $v$ 与角速度 $\omega$ 有关，可以通过以下公式计算：&lt;/p&gt;
+&lt;p&gt;$v = \omega \cdot r$&lt;/p&gt;
+&lt;p&gt;将 $v$ 的表达式代入 $a_c$ 的公式中，我们得到：&lt;/p&gt;
+&lt;p&gt;$a_c = \frac{(\omega \cdot r)^2}{r} = \omega^2 \cdot r$&lt;/p&gt;
+&lt;p&gt;由于我们想要的离心加速度 $a_c$ 等于 $0.9g$，我们可以将 $a_c$ 设置为 $8.829 \, m/s^2$ 并解出 $\omega$：&lt;/p&gt;
+&lt;p&gt;$8.829 = \omega^2 \cdot \frac{D}{2}$&lt;/p&gt;
+&lt;p&gt;其中 $D$ 是环形结构的直径，即600米。首先计算半径 $r$：&lt;/p&gt;
+&lt;p&gt;$r = \frac{D}{2} = \frac{600}{2} = 300 \, m$&lt;/p&gt;
+&lt;p&gt;现在我们可以解出 $\omega$：&lt;/p&gt;
+&lt;p&gt;$8.829 = \omega^2 \cdot 300$&lt;/p&gt;
+&lt;p&gt;$\omega^2 = \frac{8.829}{300}$&lt;/p&gt;
+&lt;p&gt;$\omega^2 = 0.02943$&lt;/p&gt;
+&lt;p&gt;$\omega = \sqrt{0.02943}$&lt;/p&gt;
+&lt;p&gt;$\omega \approx 0.1717 \, rad/s$&lt;/p&gt;
+&lt;p&gt;这是角速度的数值。为了将其转换为每秒旋转的圈数，我们需要知道一圈的角速度是 $2\pi$ 弧度。因此，转速 $n$ 可以通过以下公式计算：&lt;/p&gt;
+&lt;p&gt;$n = \frac{\omega}{2\pi}$&lt;/p&gt;
+&lt;p&gt;$n = \frac{0.1717}{2\pi}$&lt;/p&gt;
+&lt;p&gt;$n \approx \frac{0.1717}{6.2832}$&lt;/p&gt;
+&lt;p&gt;$n \approx 0.0273 \, revolutions/s$&lt;/p&gt;
+&lt;p&gt;或者，如果我们要将其转换为每分钟的转速 $N$：&lt;/p&gt;
+&lt;p&gt;$N = 0.0273 \times 60$&lt;/p&gt;
+&lt;p&gt;$N \approx 1.638 \, revolutions/min$&lt;/p&gt;
+&lt;p&gt;所以，为了在直径为600米的环形结构内侧模拟0.9G的重力加速度，这个环的转速应该是大约0.0273圈每秒，或者大约1.638圈每分钟。&lt;/p&gt;</content><category term="SWEEKLY"></category><category term="write"></category><category term="story"></category><category term="weekly"></category></entry></feed>

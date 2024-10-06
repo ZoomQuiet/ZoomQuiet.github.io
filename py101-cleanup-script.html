@@ -137,39 +137,39 @@ easy_install path.py
 The latest release is always updated to the Python Package Index. The source code is hosted on Github.</p>
 <h2 id="finding-the-number-of-files-in-a-directory">Finding the number of files in a directory:<a class="headerlink" href="#finding-the-number-of-files-in-a-directory" title="Permanent link">&para;</a></h2>
 <p>So our first task is to find the number of files present in a directory. In this example we will not iterate over subdirectories instead we will just count the number of files present in the top level directory. This one is simple. Here is my solution:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span> 
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">path</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">path</span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span><span class="w"> </span>
 <span class="c1">#Replace DIRECTORY with your required directory</span>
-<span class="n">num_files</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">files</span><span class="p">())</span>
+<span class="n">num_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">files</span><span class="p">())</span>
 
-<span class="nb">print</span> <span class="n">num_files</span>
+<span class="nb">print</span><span class="w"> </span><span class="n">num_files</span>
 </code></pre></div>
 
 <p>In this script we first of all imported the path module. Then we set the num_file variable to 0. This variable is going to keep count for the number of files in our directory. Then we call the path function with a directory name. Firthermore we iterate over the files present in the root of our directory and increment the num_files variable. Finally we print the value of num_files variable. Here is a litle bit modified version of this script which outputs the number of subdirectories present in the root of our directory.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span> 
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">path</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">path</span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span><span class="w"> </span>
 <span class="c1">#Replace DIRECTORY with your required directory</span>
-<span class="n">num_dirs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">dirs</span><span class="p">())</span>
+<span class="n">num_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">dirs</span><span class="p">())</span>
 
-<span class="nb">print</span> <span class="n">num_dirs</span>
+<span class="nb">print</span><span class="w"> </span><span class="n">num_dirs</span>
 </code></pre></div>
 
 <h2 id="finding-the-number-of-files-recursively-in-a-directory">Finding the number of files recursively in a directory:<a class="headerlink" href="#finding-the-number-of-files-recursively-in-a-directory" title="Permanent link">&para;</a></h2>
 <p>That was easy! Wasn't it? So now our work is to find the number of files recursively in a directory. In order to acomplish this task we are given the walk() method by path.py. This is the same as os.walk(). So lets write a simple script for recursively listing all files in a directory and its subdirectories in Python.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
-<span class="n">file_count</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">dir_count</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">path</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">path</span>
+<span class="n">file_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">dir_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
 <span class="c1">#Replace DIRECTORY with your required directory</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">walk</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">isfile</span><span class="p">():</span>
-        <span class="n">file_count</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">elif</span> <span class="n">i</span><span class="o">.</span><span class="n">isdir</span><span class="p">():</span>
-        <span class="n">dir_count</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">pass</span>
-    <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">d</span><span class="o">.</span><span class="n">walk</span><span class="p">():</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="o">.</span><span class="n">isfile</span><span class="p">():</span>
+<span class="w">        </span><span class="n">file_count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="n">i</span><span class="o">.</span><span class="n">isdir</span><span class="p">():</span>
+<span class="w">        </span><span class="n">dir_count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">pass</span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
 </code></pre></div>
 
 <p>print "Total number of files == {0}".format(file_count)
@@ -214,13 +214,13 @@ d = path(DIRECTORY)</p>
 In the above script I did not implement any logging and error handling. That is left as an exercise for the reader.</p>
 <h2 id="deleting-files-based-on-their-extension">Deleting files based on their extension<a class="headerlink" href="#deleting-files-based-on-their-extension" title="Permanent link">&para;</a></h2>
 <p>Just suppose you want to remove all the '.pyc' files from the directory. How would you go about dealing with this problem. Here is a solution which I came up with in path.py.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
-<span class="n">files</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">walkfiles</span><span class="p">(</span><span class="s2">&quot;*.pyc&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
-    <span class="nb">print</span> <span class="s2">&quot;Removed </span><span class="si">{}</span><span class="s2"> file&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-<span class="n">This</span> <span class="n">will</span> <span class="n">also</span> <span class="nb">print</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">deleted</span><span class="o">.</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">path</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">path</span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
+<span class="n">files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="o">.</span><span class="n">walkfiles</span><span class="p">(</span><span class="s2">&quot;*.pyc&quot;</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">files</span><span class="p">:</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+<span class="w">    </span><span class="nb">print</span><span class="w"> </span><span class="s2">&quot;Removed </span><span class="si">{}</span><span class="s2"> file&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">This</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="nb">print</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="ow">is</span><span class="w"> </span><span class="n">deleted</span><span class="o">.</span>
 </code></pre></div>
 
 <h2 id="deleting-files-based-on-their-size">Deleting files based on their size:<a class="headerlink" href="#deleting-files-based-on-their-size" title="Permanent link">&para;</a></h2>
@@ -240,23 +240,23 @@ for i in d.walk():
 <p>So we saw how we can remove files based on their size.</p>
 <h2 id="deleting-files-based-on-their-last-access-time">Deleting files based on their last access time<a class="headerlink" href="#deleting-files-based-on-their-last-access-time" title="Permanent link">&para;</a></h2>
 <p>In this part we will take a look on how to delete files based on their last access time. I have written the code below to achieve this target. Just change the number of days to anything you like. This script will remove the files which were last modified before the DAYS variable.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">path</span> <span class="kn">import</span> <span class="n">path</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">path</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="c1">#Change the DAYS to your liking</span>
-<span class="n">DAYS</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="n">removed</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
+<span class="n">DAYS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="n">removed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">path</span><span class="p">(</span><span class="n">DIRECTORY</span><span class="p">)</span>
 <span class="c1">#Replace DIRECTORY with your required directory</span>
-<span class="n">time_in_secs</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="n">DAYS</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">time_in_secs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">DAYS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">walk</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">isfile</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">mtime</span> <span class="o">&lt;=</span> <span class="n">time_in_secs</span><span class="p">:</span>
-            <span class="n">i</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
-            <span class="n">removed</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">d</span><span class="o">.</span><span class="n">walk</span><span class="p">():</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="o">.</span><span class="n">isfile</span><span class="p">():</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="o">.</span><span class="n">mtime</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">time_in_secs</span><span class="p">:</span>
+<span class="w">            </span><span class="n">i</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+<span class="w">            </span><span class="n">removed</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
 
-<span class="nb">print</span> <span class="n">removed</span>
+<span class="nb">print</span><span class="w"> </span><span class="n">removed</span>
 </code></pre></div>
 
 <p>So we have also learned how to remove files based on their last modified time. If you want to delete files based on last access time just change i.mtime to i.atime and you will be good to go.</p>
@@ -292,64 +292,110 @@ for i in d.walk():
 <h4><a href="https://www.youtube.com/@Chaos42DAMA">大妈的多重宇宙 - <b>YouTube</b></a></h4>
 全新自媒体系列...科学幻想,读书,说故事...
 
-
-
-<hr />
-
-
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-  <input type="hidden" name="cmd" value="_s-xclick" />
-  <input type="hidden" name="hosted_button_id" value="XFUEVEQ7WW6MA" />
-  <table>
-    <tr>
-      <td>
-        <input type="hidden" name="on0" value="支持一下"/>
-        支持一下
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <select name="os0">
-          <option value="4.2">
-            4.2
-          </option>
-          <option value="14.2">
-            14.2
-          </option>
-          <option value="24.2">
-            24.2
-          </option>
-          <option value="42">
-            42
-          </option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="hidden" name="on1" value="额外理由:"/>
-        额外理由:
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="os1" maxLength="200" />
-      </td>
-    </tr>
-  </table>
-  <input type="hidden" name="currency_code" value="USD" />
-  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="有了PayPal，您可以更安全便捷地在线付款！" alt="立即购买" />
-</form>
-
-
 <!--
-
-<p>订阅 substack 体验古早写作:
-    <br />
-<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
-
 <hr />
+<h4>自怼圈/年度番新</h4>
+<img alt="DU22.8" src="https://ipic.zoomquiet.top/2022-08-19-220819DU22.8.jpeg!/fw/420" />
+<br />
+<a href="https://du.101.camp/about/">关于 ~ DebugUself with DAMA ;-)</a>
+
+![](https://ipic.zoomquiet.top/2022-03-31-220331DU6y_zip.jpg)
+<h3>蟒营®编程思维提高班 Python版/<b>第14期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
+
+<blockquote><p>
+    
+<ul>
+    <li>
+    开始报名: <b>2020.10.27</b> </li>
+    <li>
+    报名截止: <b>2020.11.22</b> </li>
+    <li>
+    正式开课: <b>2020.11.29</b> </li>
+    <li>
+    课程结束: <b>2021.01.10</b> </li>
+
+    <li>
+    介绍文章:  
+    <ul>
+        <li>
+<a href="https://blog.101.camp/nc/200811-ZoomQuiet-wtf-coding-mind/">蟒营®/ 为什么编程思维不用学就有?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">拙见/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-ZoomQuiet-fake-learnning/">蟒营®/ 伪编程学习</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-ZoomQuiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-ZoomQuiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-ZoomQuiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200630-ZoomQuiet-10py-wtf-can-coding/">蟒营®/ 到底如何算"会编程"?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200703-ZoomQuiet-10py-wtfc-0/">蟒营®/ 到底改变了什么?</a>
+        </li>
+
+        <li>
+...<a href="https://blog.101.camp/nc/">NC: 嗯哼蟒营 — 蟒营™ 怂怼录</a>
+        </li>
+    </ul>
+    </li>
+
+
+</ul>
+
+<b>扫描</b>报名:
+
+<a href="https://jinshuju.net/f/Mv5nGU">
+<img alt="101camp14py" 
+    src="http://101.zoomquiet.top/res/14py/%E8%9F%92%E8%90%A5%C2%AE%E7%BC%96%E7%A8%8B%E6%80%9D%E7%BB%B4%E6%8F%90%E9%AB%98%E7%8F%AD_14%E6%9C%9F_%E6%8A%A5%E5%90%8D%E8%A1%A8_256.png"/>
+</a>
+</p></blockquote>
+
+
+<h2>蟒营®式 原创课程</h2>
+<p>
+
+<img alt="theory101camp_v3" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-10-04-theory101camp_v3.jpg"/>
+
+</p>
+
+<blockquote>
+<p>
+    官网: <b>
+    <a href="https://py.101.camp/">py.101.camp</a>
+    </b>
+</p>
+</blockquote>
+
+
+
+<br/>
+任何问题可先进入知识星球<b>(免费)</b>咨询:
+<br/>
+<img alt="FAQ" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-02-28-FAQ101camp-qr.jpeg?imageView2/2/w/360"/>
+
+-->
+
+
+<!----
 
 <hr />
 点击注册~> 获得 <b>100$</b> 体验券:
@@ -357,10 +403,25 @@ for i in d.walk():
     href="https://www.digitalocean.com/?refcode=e7b7cdc66376&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
         src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg"
         alt="DigitalOcean Referral Badge" /></a>
-    
+
+<hr />
+
+
+<p>订阅 substack 体验古早写作:
+    <br />
+<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
+
+    <iframe src="https://zoomquiet.substack.com/embed" width="360" 
+        style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
 </p>
+-->
 
+
+
+
+
+<!--
 <hr />
 
 <p>关注公众号, 持续获得相关各种嗯哼:
@@ -369,11 +430,43 @@ for i in d.walk():
         src="https://ipic.zoomquiet.top/2021-12-27-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg!/fw/420" />
 </p>
 
+    ![](https://ipic.zoomquiet.top/2022-03-31-2020-10-21-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg)
+<blockquote><p>
+    
+<ul>
+    <li>
+<a href="https://mp.weixin.qq.com/s/FqDJWQQcthEuGHAPPEzUKA">
+拙见/ 但得呢喃
+    </a></li>
+
+    <li>
+<a href="https://mp.weixin.qq.com/s/Hvu22TO1HKK2H8rnbPWcig">
+拙见/ 但得呢喃+1
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/w7m2BwIDsntnLl2vCDuP9g">
+拙见/ 但得呢喃+2
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/HXXfikoYfGV4zqf8-oOlgw">
+拙见/ 但得呢喃+3
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/uFdOHc_u9SqHPKhW9qXz7g">
+拙见/ 但得呢喃+4
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/CZUUmuZ2tDZU0gRAyTHz5w">
+拙见/ 如此平庸又如此美好
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/A-javC9noWxEUeTDaJoWiw">
+拙见/ 如何开始弛放?
+    </a></li>
 
 
-
--->
-
+</ul>
+</p></blockquote>
 
 <hr />
 <h3>蟒营®编程思维提高班Python版</h3>
@@ -385,6 +478,19 @@ for i in d.walk():
         <pre>askdama@googlegroups.com</pre>
     </li>
 </ul>
+
+-->
+
+
+<hr />
+<h3>任何问题</h3>
+随时邮件提问可也:
+<pre>askdama@googlegroups.com</pre>
+
+
+<hr />
+<script src="https://liberapay.com/zoomquiet/widgets/button.js"></script>
+<noscript><a href="https://liberapay.com/zoomquiet/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 <!--
     <li>
         + 扫描预约入群, 学员每满 42 人即启动新一期训练营 ;-)

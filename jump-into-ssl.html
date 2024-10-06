@@ -17,7 +17,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:slug" content="jump-into-ssl"/>
             <meta property="og:url" content="https://blog.zoomquiet.io/jump-into-ssl.html"/>
-            <meta property="og:description" content="BG¶ Let&#39;s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国 被成功安利... goal¶ 因各种网站发布的年代, 使用技术各不相同, 但是好在都能 …"/>
+            <meta property="og:description" content="BG goal logging gh-pages gl-pages domain pages waitting iPic summary refer Sayeahooo BG¶ Let&#39;s Encrypt 2019：带来更多振奋人心的新功能 - 开源中国 被成功安利... goal¶ 因各种网站发布的年代, 使用 …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://blog.zoomquiet.io/theme/css/bootstrap.min.css" type="text/css"/>
@@ -130,8 +130,8 @@
 		<a href="https://blog.zoomquiet.io/tag/ssl.html">SSL</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#bg">BG</a></li>
 <li><a href="#goal">goal</a></li>
@@ -151,20 +151,17 @@
 <li><a href="#sayeahooo">Sayeahooo</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<h2 id="bg">BG<a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<h2 id="bg">BG<a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
 <p><a href="https://mp.weixin.qq.com/s/qig7l-Tc1P6gp_Ldm2bQJg">Let's Encrypt 2019：带来更多振奋人心的新功能 - 开源中国</a></p>
 <p>被成功安利...</p>
-<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">¶</a></h2>
+<h2 id="goal">goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
 <p>因各种网站发布的年代, 使用技术各不相同, 但是好在都能依托 <code>*-pages</code> 服务快速发布:</p>
 <ul>
 <li>github/gitlab 为核心</li>
 <li>免费 SSL 认证为基础</li>
 <li>最好能一次配置长期可用</li>
 </ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
 <p>整体上, 无论在哪个 <code>*-pages</code> 平台, 要折腾的事儿相似, 就3步:</p>
 <ul>
 <li>追加配置含 <code>SSL</code> 解析能力的 DNS 服务主机 <code>A</code> 地址<ul>
@@ -177,7 +174,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">¶</a></h3>
+<h3 id="gh-pages">gh-pages<a class="headerlink" href="#gh-pages" title="Permanent link">&para;</a></h3>
 <p>原先的:</p>
 <blockquote>
 <p>༄  dig blog.zoomquiet.io +nostats +nocomments +nocmd</p>
@@ -191,6 +188,7 @@
 <span class="nt">zoomquiet</span><span class="p">.</span><span class="nc">github</span><span class="p">.</span><span class="nc">io</span><span class="o">.</span><span class="w">    </span><span class="nt">3251</span><span class="w">    </span><span class="nt">IN</span><span class="w">  </span><span class="nt">A</span><span class="w">   </span><span class="nt">185</span><span class="p">.</span><span class="nc">199</span><span class="p">.</span><span class="nc">110</span><span class="p">.</span><span class="nc">153</span>
 <span class="nt">zoomquiet</span><span class="p">.</span><span class="nc">github</span><span class="p">.</span><span class="nc">io</span><span class="o">.</span><span class="w">    </span><span class="nt">3251</span><span class="w">    </span><span class="nt">IN</span><span class="w">  </span><span class="nt">A</span><span class="w">   </span><span class="nt">185</span><span class="p">.</span><span class="nc">199</span><span class="p">.</span><span class="nc">111</span><span class="p">.</span><span class="nc">153</span>
 </code></pre></div>
+
 <ul>
 <li>暂停原先 <code>CNAME</code> -&gt; <code>ZoomQuiet.github.io.</code></li>
 <li>追加新 <code>A</code> 记录-&gt;<code>185.199.111.153</code></li>
@@ -208,10 +206,11 @@
 <span class="nt">zoomquiet</span><span class="p">.</span><span class="nc">github</span><span class="p">.</span><span class="nc">io</span><span class="o">.</span><span class="w">    </span><span class="nt">2989</span><span class="w">    </span><span class="nt">IN</span><span class="w">  </span><span class="nt">A</span><span class="w">   </span><span class="nt">185</span><span class="p">.</span><span class="nc">199</span><span class="p">.</span><span class="nc">109</span><span class="p">.</span><span class="nc">153</span>
 <span class="nt">zoomquiet</span><span class="p">.</span><span class="nc">github</span><span class="p">.</span><span class="nc">io</span><span class="o">.</span><span class="w">    </span><span class="nt">2989</span><span class="w">    </span><span class="nt">IN</span><span class="w">  </span><span class="nt">A</span><span class="w">   </span><span class="nt">185</span><span class="p">.</span><span class="nc">199</span><span class="p">.</span><span class="nc">110</span><span class="p">.</span><span class="nc">153</span>
 </code></pre></div>
+
 <p>触发对应 gh-pages 配置处 <code>CNAME</code> 冲突报警</p>
-<p><img alt="冲突报警" src="_images/ssl-gh-pages-alert-cname.png"/></p>
+<p><img alt="冲突报警" src="_images/ssl-gh-pages-alert-cname.png"></p>
 <p>删除原先 <code>blog.zoomquiet.io</code> 定制域名后, gh-pages 状态恢复:</p>
-<p><img alt="暂时默认" src="_images/ssl-gh-pages-revert-domain.png"/></p>
+<p><img alt="暂时默认" src="_images/ssl-gh-pages-revert-domain.png"></p>
 <ul>
 <li>然而, 这肯定不是俺要的效果哪...</li>
 <li>进一步的, 发现, 这是 <code>DNSPod</code> 的问题</li>
@@ -251,28 +250,29 @@
 <span class="nt">zoomquiet</span><span class="p">.</span><span class="nc">io</span><span class="o">.</span><span class="w">       </span><span class="nt">600</span><span class="w"> </span><span class="nt">IN</span><span class="w">  </span><span class="nt">NS</span><span class="w">  </span><span class="nt">f1g1ns2</span><span class="p">.</span><span class="nc">dnspod</span><span class="p">.</span><span class="nc">net</span><span class="o">.</span>
 <span class="o">...</span>
 </code></pre></div>
+
 <blockquote>
 <p>先给銭:</p>
 </blockquote>
-<p><img alt="迁移费用" src="_images/ssl-domain-transfer-pay.png"/></p>
+<p><img alt="迁移费用" src="_images/ssl-domain-transfer-pay.png"></p>
 <blockquote>
 <p>再同意...</p>
 </blockquote>
-<p><img alt="同意迁移" src="_images/ssl-domain-transfer.png"/></p>
+<p><img alt="同意迁移" src="_images/ssl-domain-transfer.png"></p>
 <ul>
 <li>而且人家立即有挽救邮件来问, 为毛走哪....</li>
 </ul>
-<p><img alt="邮件事务" src="_images/ssl-domain-transfer-flow.png"/></p>
+<p><img alt="邮件事务" src="_images/ssl-domain-transfer-flow.png"></p>
 <blockquote>
 <p>namecheap 中进行恢复</p>
 </blockquote>
-<p><img alt="旧解析" src="_images/ssl-domain-dnspod.png"/></p>
+<p><img alt="旧解析" src="_images/ssl-domain-dnspod.png"></p>
 <blockquote>
 <p>使用官方模板, 替代 <code>DNSPod</code> 代理的...</p>
 </blockquote>
-<p><img alt="解析模板" src="_images/ssl-domain-dns2namecheap.png"/></p>
-<p><img alt="生效等待" src="_images/ssl-domain-waitting.png"/></p>
-<p><img alt="迁移成功" src="_images/ssl-domain-in-namecheap.png"/></p>
+<p><img alt="解析模板" src="_images/ssl-domain-dns2namecheap.png"></p>
+<p><img alt="生效等待" src="_images/ssl-domain-waitting.png"></p>
+<p><img alt="迁移成功" src="_images/ssl-domain-in-namecheap.png"></p>
 <p>迁移并重置后:</p>
 <blockquote>
 <p>༄  dig zoomquiet.io +nostats +nocomments +nocmd</p>
@@ -282,11 +282,12 @@
 <span class="o">;</span><span class="nt">zoomquiet</span><span class="p">.</span><span class="nc">io</span><span class="o">.</span><span class="w">          </span><span class="nt">IN</span><span class="w">  </span><span class="nt">A</span>
 <span class="nt">zoomquiet</span><span class="p">.</span><span class="nc">io</span><span class="o">.</span><span class="w">       </span><span class="nt">600</span><span class="w"> </span><span class="nt">IN</span><span class="w">  </span><span class="nt">A</span><span class="w">   </span><span class="nt">172</span><span class="p">.</span><span class="nc">105</span><span class="p">.</span><span class="nc">199</span><span class="p">.</span><span class="nc">192</span>
 </code></pre></div>
+
 <ul>
 <li>然后, 逐一先将老的 几十条配置, 逐一复制到 namecheap 解析面板中</li>
 <li>然后, 按照文档要求的,配置好:</li>
 </ul>
-<p><img alt="全部OK" src="_images/ssl-domain-ko.png"/></p>
+<p><img alt="全部OK" src="_images/ssl-domain-ko.png"></p>
 <blockquote>
 <p>༄  dig blog.zoomquiet.io +nostats +nocomments +nocmd</p>
 </blockquote>
@@ -303,46 +304,49 @@
 <span class="nt">github</span><span class="p">.</span><span class="nc">io</span><span class="o">.</span><span class="w">      </span><span class="nt">698</span><span class="w"> </span><span class="nt">IN</span><span class="w">  </span><span class="nt">NS</span><span class="w">  </span><span class="nt">ns-692</span><span class="p">.</span><span class="nc">awsdns-22</span><span class="p">.</span><span class="nc">net</span><span class="o">.</span>
 <span class="o">...</span>
 </code></pre></div>
+
 <blockquote>
 <p>可以看到, 壕 github 全部用 AWS 域名服务来解析的...</p>
 </blockquote>
-<p><img alt="gh 正常" src="_images/ssl-gh-pages-ko.png"/></p>
+<p><img alt="gh 正常" src="_images/ssl-gh-pages-ko.png"></p>
 <blockquote>
 <p>此时 gi-pages 配置已经感知到一切良好</p>
 </blockquote>
-<p><img alt="证书有效" src="_images/ssl-chrome-info.png"/></p>
+<p><img alt="证书有效" src="_images/ssl-chrome-info.png"></p>
 <p>点击 chrom 域名前的小图标, 可以看到 SSL 已生效</p>
-<p><img alt="检验" src="_images/ssl-chrome-chk.png"/></p>
+<p><img alt="检验" src="_images/ssl-chrome-chk.png"></p>
 <p>当然, 原先模板中一系列资源指向老 <code>http</code> 资源都无法使用了</p>
-<p><img alt="资源丢失" src="_images/ssl-res-load-err.png"/></p>
+<p><img alt="资源丢失" src="_images/ssl-res-load-err.png"></p>
 <p>修订配置文件 <code>pelicanconf.py</code>: </p>
-<div class="highlight"><pre><span></span><code><span class="n">SITEURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'http://blog.zoomquiet.io'</span>
+<div class="highlight"><pre><span></span><code><span class="n">SITEURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;http://blog.zoomquiet.io&#39;</span>
 <span class="o">--&gt;</span>
-<span class="w">        </span><span class="s">'https://blog.zoomquiet.io'</span>
+<span class="w">        </span><span class="s">&#39;https://blog.zoomquiet.io&#39;</span>
 </code></pre></div>
+
 <p>但是, 进行 push 失败:</p>
 <div class="highlight"><pre><span></span><code><span class="err">༄</span><span class="w">  </span><span class="n">git</span><span class="w"> </span><span class="n">pu</span>
 
 <span class="k">To</span><span class="w"> </span><span class="n">github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="n">ZoomQuiet</span><span class="o">/</span><span class="n">ZoomQuiet</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span>
 <span class="w"> </span><span class="err">!</span><span class="w"> </span><span class="o">[</span><span class="n">rejected</span><span class="o">]</span><span class="w">        </span><span class="n">master</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">master</span><span class="w"> </span><span class="p">(</span><span class="k">fetch</span><span class="w"> </span><span class="k">first</span><span class="p">)</span>
-<span class="nl">error</span><span class="p">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">push</span><span class="w"> </span><span class="ow">some</span><span class="w"> </span><span class="n">refs</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s1">'git@github.com:ZoomQuiet/ZoomQuiet.github.io.git'</span>
+<span class="nl">error</span><span class="p">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">push</span><span class="w"> </span><span class="ow">some</span><span class="w"> </span><span class="n">refs</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s1">&#39;git@github.com:ZoomQuiet/ZoomQuiet.github.io.git&#39;</span>
 <span class="nl">hint</span><span class="p">:</span><span class="w"> </span><span class="n">Updates</span><span class="w"> </span><span class="n">were</span><span class="w"> </span><span class="n">rejected</span><span class="w"> </span><span class="n">because</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="k">contains</span><span class="w"> </span><span class="k">work</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">do</span>
 <span class="nl">hint</span><span class="p">:</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">locally</span><span class="p">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">usually</span><span class="w"> </span><span class="n">caused</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">another</span><span class="w"> </span><span class="n">repository</span><span class="w"> </span><span class="n">pushing</span>
 <span class="nl">hint</span><span class="p">:</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="k">ref</span><span class="p">.</span><span class="w"> </span><span class="n">You</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">integrate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="n">changes</span>
-<span class="nl">hint</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="s1">'git pull ...'</span><span class="p">)</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">pushing</span><span class="w"> </span><span class="n">again</span><span class="p">.</span>
-<span class="nl">hint</span><span class="p">:</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="s1">'Note about fast-forwards'</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="s1">'git push --help'</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">details</span><span class="p">.</span>
+<span class="nl">hint</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="s1">&#39;git pull ...&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">pushing</span><span class="w"> </span><span class="n">again</span><span class="p">.</span>
+<span class="nl">hint</span><span class="p">:</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="s1">&#39;Note about fast-forwards&#39;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="s1">&#39;git push --help&#39;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">details</span><span class="p">.</span>
 </code></pre></div>
+
 <blockquote>
 <p>因为仓库目录中 <code>CNAME</code> 文件自动构建过,和本地没同步上</p>
 </blockquote>
-<p><img alt="CNAME 重建" src="_images/ssl-domain-cname-renew.png"/></p>
+<p><img alt="CNAME 重建" src="_images/ssl-domain-cname-renew.png"></p>
 <blockquote>
 <p>再重新编译-&gt;push-&gt;等待 gh-pages 完成发布</p>
 </blockquote>
-<p><img alt="等待部署" src="_images/gh-pages-waitting.png"/></p>
+<p><img alt="等待部署" src="_images/gh-pages-waitting.png"></p>
 <p>那个褐色小点, 变成绿色对勾, 就说明一切安好...</p>
-<p><img alt="WOLA" src="_images/ssl-all-ok.png"/></p>
-<h3 id="gl-pages">gl-pages<a class="headerlink" href="#gl-pages" title="Permanent link">¶</a></h3>
+<p><img alt="WOLA" src="_images/ssl-all-ok.png"></p>
+<h3 id="gl-pages">gl-pages<a class="headerlink" href="#gl-pages" title="Permanent link">&para;</a></h3>
 <p>其实, gitlab 上网站先持证上岗的...</p>
 <p>先出示一下成果:</p>
 <blockquote>
@@ -359,21 +363,22 @@
 <span class="nt">gitlab</span><span class="p">.</span><span class="nc">io</span><span class="o">.</span><span class="w">      </span><span class="nt">48445</span><span class="w">   </span><span class="nt">IN</span><span class="w">  </span><span class="nt">NS</span><span class="w">  </span><span class="nt">ns-288</span><span class="p">.</span><span class="nc">awsdns-36</span><span class="p">.</span><span class="nc">com</span><span class="o">.</span>
 <span class="o">...</span>
 </code></pre></div>
-<h4 id="domain">domain<a class="headerlink" href="#domain" title="Permanent link">¶</a></h4>
+
+<h4 id="domain">domain<a class="headerlink" href="#domain" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>首先操作就撞到神奇形象</p>
 </blockquote>
-<p><img alt="DNSPod 升级?" src="_images/SSL-dnspod-acord-error.png"/></p>
-<p><img alt="DNSPod 冲突" src="_images/SSL-dnspod-cname-error.png"/></p>
+<p><img alt="DNSPod 升级?" src="_images/SSL-dnspod-acord-error.png"></p>
+<p><img alt="DNSPod 冲突" src="_images/SSL-dnspod-cname-error.png"></p>
 <blockquote>
 <p>不得以, 迁移回 neamcheap 来配置, 顺畅完成:</p>
 </blockquote>
-<p><img alt="neamcheap 可配" src="_images/SSL-namecheap-acords.png"/></p>
+<p><img alt="neamcheap 可配" src="_images/SSL-namecheap-acords.png"></p>
 <ul>
 <li>当然, 这波配置, 看错文档, 配置成 github 解析主机了</li>
 <li>但是, 证明 DNSPod 完全不可用了...</li>
 </ul>
-<h4 id="pages">pages<a class="headerlink" href="#pages" title="Permanent link">¶</a></h4>
+<h4 id="pages">pages<a class="headerlink" href="#pages" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>配置证书前, 得先生成, gitlab 不象 github 为用户自动生成, 得自行嗯哼</p>
 </blockquote>
@@ -387,6 +392,7 @@
 <p>然后手工给对应域名生成密匙对:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>-a<span class="w"> </span>manual<span class="w"> </span>-d<span class="w"> </span><span class="m">101</span>.camp<span class="w"> </span>--email<span class="w"> </span>zoom.quiet@gmail.com
 </code></pre></div>
+
 <ul>
 <li>注意, 这里 <code>-d</code> 参数可以叠加</li>
 <li>不过, 毎生成一个, 必须同时完成自证检验,才能继续</li>
@@ -395,7 +401,7 @@
 <blockquote>
 <p>即, 蔱根据提示完成:</p>
 </blockquote>
-<hr/>
+<hr>
 <div class="highlight"><pre><span></span><code>Create a file containing just this data:
 
 iIpSoAbePD ... 1tTDSskcHQFs
@@ -407,6 +413,7 @@ http://101.camp/.well-known/acme-challenge/iIpSoAbePDhDmGwPUDfER-Czl_bxduu2Cp6qE
 <span class="k">-</span> - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Press Enter to Continue
 </code></pre></div>
+
 <p>此时, 千万别按回车:</p>
 <ul>
 <li>得回到仓库中</li>
@@ -436,12 +443,13 @@ Press Enter to Continue
 <span class="w">   </span><span class="nx">Your</span><span class="w"> </span><span class="nx">cert</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">expire</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="mi">2019</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">23</span><span class="p">.</span><span class="w"> </span><span class="nx">To</span><span class="w"> </span><span class="nx">obtain</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">tweaked</span>
 <span class="w">   </span><span class="nx">version</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">this</span><span class="w"> </span><span class="nx">certificate</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">future</span><span class="p">,</span><span class="w"> </span><span class="nx">simply</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">certbot</span>
 <span class="w">   </span><span class="nx">again</span><span class="p">.</span><span class="w"> </span><span class="nx">To</span><span class="w"> </span><span class="nx">non</span><span class="o">-</span><span class="nx">interactively</span><span class="w"> </span><span class="nx">renew</span><span class="w"> </span><span class="o">*</span><span class="nx">all</span><span class="o">*</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">your</span><span class="w"> </span><span class="nx">certificates</span><span class="p">,</span><span class="w"> </span><span class="nx">run</span>
-<span class="w">   </span><span class="s">"certbot renew"</span>
+<span class="w">   </span><span class="s">&quot;certbot renew&quot;</span>
 <span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">If</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="nx">Certbot</span><span class="p">,</span><span class="w"> </span><span class="nx">please</span><span class="w"> </span><span class="nx">consider</span><span class="w"> </span><span class="nx">supporting</span><span class="w"> </span><span class="nx">our</span><span class="w"> </span><span class="nx">work</span><span class="w"> </span><span class="nx">by</span><span class="p">:</span>
 
-<span class="w">   </span><span class="nx">Donating</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">ISRG</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">Let</span><span class="err">'</span><span class="nx">s</span><span class="w"> </span><span class="nx">Encrypt</span><span class="p">:</span><span class="w">   </span><span class="nx">https</span><span class="p">:</span><span class="c1">//letsencrypt.org/donate</span>
+<span class="w">   </span><span class="nx">Donating</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">ISRG</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">Let</span><span class="err">&#39;</span><span class="nx">s</span><span class="w"> </span><span class="nx">Encrypt</span><span class="p">:</span><span class="w">   </span><span class="nx">https</span><span class="p">:</span><span class="c1">//letsencrypt.org/donate</span>
 <span class="w">   </span><span class="nx">Donating</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">EFF</span><span class="p">:</span><span class="w">                    </span><span class="nx">https</span><span class="p">:</span><span class="c1">//eff.org/donate-le</span>
 </code></pre></div>
+
 <p>嗯哼, 好了, 出现以上类似信息</p>
 <ul>
 <li>说明, 已经在官方注册好并检验通过私人证书了</li>
@@ -449,35 +457,35 @@ Press Enter to Continue
 <li>到时得运行 <code>certbot renew</code> 一下</li>
 </ul>
 <p>接下来正常重新配置一下 gl-pages 中的域名</p>
-<p><img alt="gl 强制嗯哼" src="_images/SSL-gl-pages-ssl.png"/></p>
+<p><img alt="gl 强制嗯哼" src="_images/SSL-gl-pages-ssl.png"></p>
 <blockquote>
 <p>打开 HTTPS 开关</p>
 </blockquote>
-<p><img alt="gl 域名上证" src="_images/SSL-gl-pages-redomain.png"/></p>
+<p><img alt="gl 域名上证" src="_images/SSL-gl-pages-redomain.png"></p>
 <blockquote>
 <p>根据提示, 从本地 <code>letsencrypt</code> 证书目录中复制出有关嗯哼就好</p>
 </blockquote>
 <ul>
 <li>当然, 别忘记重新在域名解析商, 配置新的 <code>TXT</code> 字串</li>
 </ul>
-<h4 id="waitting">waitting<a class="headerlink" href="#waitting" title="Permanent link">¶</a></h4>
+<h4 id="waitting">waitting<a class="headerlink" href="#waitting" title="Permanent link">&para;</a></h4>
 <p>首先..</p>
-<p><img alt="证件无效" src="_images/SSL-chrome-chk-CA-not.png"/></p>
+<p><img alt="证件无效" src="_images/SSL-chrome-chk-CA-not.png"></p>
 <p>然后可以看到:</p>
-<p><img alt="检验通过" src="_images/SSL-CAX3-ok.png"/></p>
+<p><img alt="检验通过" src="_images/SSL-CAX3-ok.png"></p>
 <p>接着...</p>
-<p><img alt="还未安全" src="_images/SSL-chrome-chk-CA-ok.png"/></p>
+<p><img alt="还未安全" src="_images/SSL-chrome-chk-CA-ok.png"></p>
 <p>最后...</p>
-<p><img alt="部分安全" src="_images/SSL-chrome-chk-info.png"/></p>
+<p><img alt="部分安全" src="_images/SSL-chrome-chk-info.png"></p>
 <p>这是因为有的图片/css/js 资源, 还是用 hhtp 引用的, 得升级:</p>
-<p><img alt="iPic" src="_images/ipic-http.png"/></p>
+<p><img alt="iPic" src="_images/ipic-http.png"></p>
 <p>俺采购的工具, 才发现主要图床还是 http 的</p>
 <p>追查文档:</p>
-<p><img alt="7牛有关页面" src="_images/SSL-7niu-cdn.png"/></p>
+<p><img alt="7牛有关页面" src="_images/SSL-7niu-cdn.png"></p>
 <blockquote>
 <p>对比隔壁 ...</p>
 </blockquote>
-<p><img alt="UPYUN 有关页面" src="_images/SSL-upyun-https.png"/></p>
+<p><img alt="UPYUN 有关页面" src="_images/SSL-upyun-https.png"></p>
 <p>嚓, 这不很明显, 只能选择后者了...</p>
 <ul>
 <li>当然, 又引发了欠费等等额外处置事务</li>
@@ -487,9 +495,9 @@ Press Enter to Continue
 </ul>
 </li>
 </ul>
-<p><img alt="一切安全" src="_images/SSL-chrome-chk-good.png"/></p>
+<p><img alt="一切安全" src="_images/SSL-chrome-chk-good.png"></p>
 <p>终于...收功</p>
-<h2 id="ipic">iPic<a class="headerlink" href="#ipic" title="Permanent link">¶</a></h2>
+<h2 id="ipic">iPic<a class="headerlink" href="#ipic" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>是的, mac 下 docker 工具中最接地气的了</p>
 </blockquote>
@@ -498,11 +506,11 @@ Press Enter to Continue
 <ul>
 <li>首先,在 SSL 采购界面中,点击 <code>补全</code></li>
 </ul>
-<p><img alt="补全" src="https://ipic.zoomquiet.top/2019-02-13-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-13%2016.19.48.png"/></p>
+<p><img alt="补全" src="https://ipic.zoomquiet.top/2019-02-13-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-13%2016.19.48.png"></p>
 <ul>
 <li>然后才有域名绑定界面出现, 当然的要求先备案</li>
 </ul>
-<p><img alt="SSL 配置" src="https://ipic.zoomquiet.top/2019-02-13-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-13%2016.32.44.png"/></p>
+<p><img alt="SSL 配置" src="https://ipic.zoomquiet.top/2019-02-13-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-13%2016.32.44.png"></p>
 <ul>
 <li>再回到对应云存储控制界面中, 再次绑定域名</li>
 <li>最后,参考: <a href="https://help.upyun.com/knowledge-base/cdn-https/">如何进行 HTTPS 配置？ – 又拍云-文档帮助中心</a><ul>
@@ -510,19 +518,19 @@ Press Enter to Continue
 </ul>
 </li>
 </ul>
-<p><img alt="管理" src="https://ipic.zoomquiet.top/2019-02-13-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-13%2017.17.32.png"/></p>
+<p><img alt="管理" src="https://ipic.zoomquiet.top/2019-02-13-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-13%2017.17.32.png"></p>
 <ul>
 <li>这样就完成了隐藏的云端 SSL 密匙部署, 以及空间域名绑定过程</li>
 <li>是的, 以上3张图片都是 <code>HTTPS</code> 持证资源了</li>
 </ul>
-<h2 id="summary">summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
+<h2 id="summary">summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
 <ul>
 <li>DNSPod 依然是感觉最舒服的 DNS 管理界面, 可惜彻底被放弃了, 能迁走就迁吧...<ul>
 <li>而且功能已经落后</li>
 </ul>
 </li>
 </ul>
-<p><img alt="报警" src="_images/ssl-dnspod-err.png"/></p>
+<p><img alt="报警" src="_images/ssl-dnspod-err.png"></p>
 <ul>
 <li>gitlab 比 github 要 hardcore 很多<ul>
 <li>但是, 乐趣也更多也</li>
@@ -539,7 +547,7 @@ Press Enter to Continue
 </ul>
 </li>
 </ul>
-<h2 id="refer">refer<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
+<h2 id="refer">refer<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://yixuan.li/geek/2019/01/21/howToDriveWithHTTPS/">如何持证 (HTTPS) 开车 · Yixuan</a><ul>
 <li><a href="https://help.github.com/articles/troubleshooting-custom-domains/">GitHub Pages HTTPS 设置 | 查错指南</a></li>
@@ -565,7 +573,7 @@ Press Enter to Continue
 </ul>
 </li>
 </ul>
-<h2 id="sayeahooo">Sayeahooo<a class="headerlink" href="#sayeahooo" title="Permanent link">¶</a></h2>
+<h2 id="sayeahooo">Sayeahooo<a class="headerlink" href="#sayeahooo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>1.5h 资料搜索理解</li>
 <li>2d gitlab 尝试/生效</li>
@@ -605,64 +613,110 @@ Press Enter to Continue
 <h4><a href="https://www.youtube.com/@Chaos42DAMA">大妈的多重宇宙 - <b>YouTube</b></a></h4>
 全新自媒体系列...科学幻想,读书,说故事...
 
-
-
-<hr />
-
-
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-  <input type="hidden" name="cmd" value="_s-xclick" />
-  <input type="hidden" name="hosted_button_id" value="XFUEVEQ7WW6MA" />
-  <table>
-    <tr>
-      <td>
-        <input type="hidden" name="on0" value="支持一下"/>
-        支持一下
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <select name="os0">
-          <option value="4.2">
-            4.2
-          </option>
-          <option value="14.2">
-            14.2
-          </option>
-          <option value="24.2">
-            24.2
-          </option>
-          <option value="42">
-            42
-          </option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="hidden" name="on1" value="额外理由:"/>
-        额外理由:
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="os1" maxLength="200" />
-      </td>
-    </tr>
-  </table>
-  <input type="hidden" name="currency_code" value="USD" />
-  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="有了PayPal，您可以更安全便捷地在线付款！" alt="立即购买" />
-</form>
-
-
 <!--
-
-<p>订阅 substack 体验古早写作:
-    <br />
-<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
-
 <hr />
+<h4>自怼圈/年度番新</h4>
+<img alt="DU22.8" src="https://ipic.zoomquiet.top/2022-08-19-220819DU22.8.jpeg!/fw/420" />
+<br />
+<a href="https://du.101.camp/about/">关于 ~ DebugUself with DAMA ;-)</a>
+
+![](https://ipic.zoomquiet.top/2022-03-31-220331DU6y_zip.jpg)
+<h3>蟒营®编程思维提高班 Python版/<b>第14期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
+
+<blockquote><p>
+    
+<ul>
+    <li>
+    开始报名: <b>2020.10.27</b> </li>
+    <li>
+    报名截止: <b>2020.11.22</b> </li>
+    <li>
+    正式开课: <b>2020.11.29</b> </li>
+    <li>
+    课程结束: <b>2021.01.10</b> </li>
+
+    <li>
+    介绍文章:  
+    <ul>
+        <li>
+<a href="https://blog.101.camp/nc/200811-ZoomQuiet-wtf-coding-mind/">蟒营®/ 为什么编程思维不用学就有?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">拙见/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-ZoomQuiet-fake-learnning/">蟒营®/ 伪编程学习</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-ZoomQuiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-ZoomQuiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-ZoomQuiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200630-ZoomQuiet-10py-wtf-can-coding/">蟒营®/ 到底如何算"会编程"?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200703-ZoomQuiet-10py-wtfc-0/">蟒营®/ 到底改变了什么?</a>
+        </li>
+
+        <li>
+...<a href="https://blog.101.camp/nc/">NC: 嗯哼蟒营 — 蟒营™ 怂怼录</a>
+        </li>
+    </ul>
+    </li>
+
+
+</ul>
+
+<b>扫描</b>报名:
+
+<a href="https://jinshuju.net/f/Mv5nGU">
+<img alt="101camp14py" 
+    src="http://101.zoomquiet.top/res/14py/%E8%9F%92%E8%90%A5%C2%AE%E7%BC%96%E7%A8%8B%E6%80%9D%E7%BB%B4%E6%8F%90%E9%AB%98%E7%8F%AD_14%E6%9C%9F_%E6%8A%A5%E5%90%8D%E8%A1%A8_256.png"/>
+</a>
+</p></blockquote>
+
+
+<h2>蟒营®式 原创课程</h2>
+<p>
+
+<img alt="theory101camp_v3" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-10-04-theory101camp_v3.jpg"/>
+
+</p>
+
+<blockquote>
+<p>
+    官网: <b>
+    <a href="https://py.101.camp/">py.101.camp</a>
+    </b>
+</p>
+</blockquote>
+
+
+
+<br/>
+任何问题可先进入知识星球<b>(免费)</b>咨询:
+<br/>
+<img alt="FAQ" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-02-28-FAQ101camp-qr.jpeg?imageView2/2/w/360"/>
+
+-->
+
+
+<!----
 
 <hr />
 点击注册~> 获得 <b>100$</b> 体验券:
@@ -670,10 +724,25 @@ Press Enter to Continue
     href="https://www.digitalocean.com/?refcode=e7b7cdc66376&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
         src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg"
         alt="DigitalOcean Referral Badge" /></a>
-    
+
+<hr />
+
+
+<p>订阅 substack 体验古早写作:
+    <br />
+<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
+
+    <iframe src="https://zoomquiet.substack.com/embed" width="360" 
+        style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
 </p>
+-->
 
+
+
+
+
+<!--
 <hr />
 
 <p>关注公众号, 持续获得相关各种嗯哼:
@@ -682,11 +751,43 @@ Press Enter to Continue
         src="https://ipic.zoomquiet.top/2021-12-27-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg!/fw/420" />
 </p>
 
+    ![](https://ipic.zoomquiet.top/2022-03-31-2020-10-21-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg)
+<blockquote><p>
+    
+<ul>
+    <li>
+<a href="https://mp.weixin.qq.com/s/FqDJWQQcthEuGHAPPEzUKA">
+拙见/ 但得呢喃
+    </a></li>
+
+    <li>
+<a href="https://mp.weixin.qq.com/s/Hvu22TO1HKK2H8rnbPWcig">
+拙见/ 但得呢喃+1
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/w7m2BwIDsntnLl2vCDuP9g">
+拙见/ 但得呢喃+2
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/HXXfikoYfGV4zqf8-oOlgw">
+拙见/ 但得呢喃+3
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/uFdOHc_u9SqHPKhW9qXz7g">
+拙见/ 但得呢喃+4
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/CZUUmuZ2tDZU0gRAyTHz5w">
+拙见/ 如此平庸又如此美好
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/A-javC9noWxEUeTDaJoWiw">
+拙见/ 如何开始弛放?
+    </a></li>
 
 
-
--->
-
+</ul>
+</p></blockquote>
 
 <hr />
 <h3>蟒营®编程思维提高班Python版</h3>
@@ -698,6 +799,19 @@ Press Enter to Continue
         <pre>askdama@googlegroups.com</pre>
     </li>
 </ul>
+
+-->
+
+
+<hr />
+<h3>任何问题</h3>
+随时邮件提问可也:
+<pre>askdama@googlegroups.com</pre>
+
+
+<hr />
+<script src="https://liberapay.com/zoomquiet/widgets/button.js"></script>
+<noscript><a href="https://liberapay.com/zoomquiet/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 <!--
     <li>
         + 扫描预约入群, 学员每满 42 人即启动新一期训练营 ;-)

@@ -140,20 +140,20 @@
 <h2 id="1-python-3-style-printing-in-python-2">1. Python 3-style printing in Python 2<a class="headerlink" href="#1-python-3-style-printing-in-python-2" title="Permanent link">&para;</a></h2>
 <p>One of the things that kept me from concentrating on Python was this whole version 2 - version 3 debacle. Finally I went with Python 2 because all the libraries I wanted were not 3-compatible, and I figured if I needed to, I would laboriously adjust my code later. </p>
 <p>But really, the biggest differences in everyday programming are printing and division, and now I just import from future. Now that almost all the libraries I use heavily are v3-compliant, I'll make the switch soon.</p>
-<div class="highlight"><pre><span></span><code><span class="n">mynumber</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="highlight"><pre><span></span><code><span class="n">mynumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
 
-<span class="nb">print</span> <span class="s2">&quot;Python 2:&quot;</span>
-<span class="nb">print</span> <span class="s2">&quot;The number is </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mynumber</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">mynumber</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
-<span class="nb">print</span> <span class="n">mynumber</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="w"> </span><span class="s2">&quot;Python 2:&quot;</span>
+<span class="nb">print</span><span class="w"> </span><span class="s2">&quot;The number is </span><span class="si">%d</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">mynumber</span><span class="p">)</span>
+<span class="nb">print</span><span class="w"> </span><span class="n">mynumber</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="nb">print</span><span class="w"> </span><span class="n">mynumber</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">2</span>
 
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">print_function</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">division</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Python 3:&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mynumber</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mynumber</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mynumber</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mynumber</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mynumber</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>Python 2:
@@ -166,10 +166,10 @@ The number is 5
 </code></pre></div>
 
 <p>Oh, and here's an easter egg for C programmers:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">braces</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;ipython-input-3-2aebb3fc8ecf&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
-    <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">braces</span>
-<span class="ne">SyntaxError</span><span class="p">:</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">chance</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">braces</span>
+<span class="w">  </span><span class="n">File</span><span class="w"> </span><span class="s2">&quot;&lt;ipython-input-3-2aebb3fc8ecf&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">braces</span>
+<span class="n">SyntaxError</span><span class="p">:</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">chance</span>
 </code></pre></div>
 
 <h2 id="2-enumeratelist">2. enumerate(list)<a class="headerlink" href="#2-enumeratelist" title="Permanent link">&para;</a></h2>
@@ -201,15 +201,15 @@ Chained comparison operators work!
 
 <h2 id="4-collectionscounter">4. collections.Counter<a class="headerlink" href="#4-collectionscounter" title="Permanent link">&para;</a></h2>
 <p>The collections library is, like, the best thing ever. Stackoverflow turned me on to ordered dicts early on, but I kept using a snippet to create dicts to count occurrences of results in my code. One of these days, I'll figure out a use for collections.deque.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
-<span class="kn">import</span> <span class="nn">pprint</span>
-<span class="n">mycounter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-    <span class="n">random_number</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-    <span class="n">mycounter</span><span class="p">[</span><span class="n">random_number</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">mycounter</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">Counter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">randrange</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="n">mycounter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Counter</span><span class="p">()</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+<span class="w">    </span><span class="n">random_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randrange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="w">    </span><span class="n">mycounter</span><span class="p">[</span><span class="n">random_number</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">mycounter</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="mf">0</span><span class="w"> </span><span class="mf">10</span>
@@ -241,12 +241,12 @@ Chained comparison operators work!
 <p>I used to use the os library exclusively to manipulate files; now I can even programmatically call complex command-line tools like ffmpeg for video editing</p>
 <p>(And yes, I use Windows, so do all of my clients. But I have the good grace to be embarrassed about it!)</p>
 <p>Note that the particular subprocess I picked would be much better done with the os library; I just wanted a command everyone would be familiar with. And in general, shell=True is a VERY bad idea, I put it here so that the command output would appear in the IPython notebook cell. Don't try this at home, kids!</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">subprocess</span>
-<span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="s1">&#39;dir&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
- <span class="n">Volume</span> <span class="ow">in</span> <span class="n">drive</span> <span class="n">C</span> <span class="ow">is</span> <span class="n">OS</span>
- <span class="n">Volume</span> <span class="n">Serial</span> <span class="n">Number</span> <span class="ow">is</span> <span class="p">[</span><span class="n">REDACTED</span><span class="p">]</span>
- <span class="n">Directory</span> <span class="n">of</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">David</span>\<span class="n">Documents</span>\<span class="p">[</span><span class="n">REDACTED</span><span class="p">]</span>
+<span class="w"> </span><span class="n">Volume</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">drive</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="ow">is</span><span class="w"> </span><span class="n">OS</span>
+<span class="w"> </span><span class="n">Volume</span><span class="w"> </span><span class="n">Serial</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="ow">is</span><span class="w"> </span><span class="p">[</span><span class="n">REDACTED</span><span class="p">]</span>
+<span class="w"> </span><span class="n">Directory</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">C</span><span class="p">:</span><span class="w">\</span><span class="n">Users</span><span class="w">\</span><span class="n">David</span><span class="w">\</span><span class="n">Documents</span><span class="w">\</span><span class="p">[</span><span class="n">REDACTED</span><span class="p">]</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="mf">2014</span><span class="o">-</span><span class="mf">11</span><span class="o">-</span><span class="mf">26</span><span class="w">  </span><span class="mf">06</span><span class="p">:</span><span class="mf">04</span><span class="w"> </span><span class="n">AM</span><span class="w">    </span><span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span><span class="w">          </span><span class="mf">.</span>
@@ -410,64 +410,110 @@ print(my_long_text)
 <h4><a href="https://www.youtube.com/@Chaos42DAMA">大妈的多重宇宙 - <b>YouTube</b></a></h4>
 全新自媒体系列...科学幻想,读书,说故事...
 
-
-
-<hr />
-
-
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-  <input type="hidden" name="cmd" value="_s-xclick" />
-  <input type="hidden" name="hosted_button_id" value="XFUEVEQ7WW6MA" />
-  <table>
-    <tr>
-      <td>
-        <input type="hidden" name="on0" value="支持一下"/>
-        支持一下
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <select name="os0">
-          <option value="4.2">
-            4.2
-          </option>
-          <option value="14.2">
-            14.2
-          </option>
-          <option value="24.2">
-            24.2
-          </option>
-          <option value="42">
-            42
-          </option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="hidden" name="on1" value="额外理由:"/>
-        额外理由:
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="os1" maxLength="200" />
-      </td>
-    </tr>
-  </table>
-  <input type="hidden" name="currency_code" value="USD" />
-  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="有了PayPal，您可以更安全便捷地在线付款！" alt="立即购买" />
-</form>
-
-
 <!--
-
-<p>订阅 substack 体验古早写作:
-    <br />
-<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
-
 <hr />
+<h4>自怼圈/年度番新</h4>
+<img alt="DU22.8" src="https://ipic.zoomquiet.top/2022-08-19-220819DU22.8.jpeg!/fw/420" />
+<br />
+<a href="https://du.101.camp/about/">关于 ~ DebugUself with DAMA ;-)</a>
+
+![](https://ipic.zoomquiet.top/2022-03-31-220331DU6y_zip.jpg)
+<h3>蟒营®编程思维提高班 Python版/<b>第14期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
+
+<blockquote><p>
+    
+<ul>
+    <li>
+    开始报名: <b>2020.10.27</b> </li>
+    <li>
+    报名截止: <b>2020.11.22</b> </li>
+    <li>
+    正式开课: <b>2020.11.29</b> </li>
+    <li>
+    课程结束: <b>2021.01.10</b> </li>
+
+    <li>
+    介绍文章:  
+    <ul>
+        <li>
+<a href="https://blog.101.camp/nc/200811-ZoomQuiet-wtf-coding-mind/">蟒营®/ 为什么编程思维不用学就有?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">拙见/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-ZoomQuiet-fake-learnning/">蟒营®/ 伪编程学习</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-ZoomQuiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-ZoomQuiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-ZoomQuiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200630-ZoomQuiet-10py-wtf-can-coding/">蟒营®/ 到底如何算"会编程"?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200703-ZoomQuiet-10py-wtfc-0/">蟒营®/ 到底改变了什么?</a>
+        </li>
+
+        <li>
+...<a href="https://blog.101.camp/nc/">NC: 嗯哼蟒营 — 蟒营™ 怂怼录</a>
+        </li>
+    </ul>
+    </li>
+
+
+</ul>
+
+<b>扫描</b>报名:
+
+<a href="https://jinshuju.net/f/Mv5nGU">
+<img alt="101camp14py" 
+    src="http://101.zoomquiet.top/res/14py/%E8%9F%92%E8%90%A5%C2%AE%E7%BC%96%E7%A8%8B%E6%80%9D%E7%BB%B4%E6%8F%90%E9%AB%98%E7%8F%AD_14%E6%9C%9F_%E6%8A%A5%E5%90%8D%E8%A1%A8_256.png"/>
+</a>
+</p></blockquote>
+
+
+<h2>蟒营®式 原创课程</h2>
+<p>
+
+<img alt="theory101camp_v3" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-10-04-theory101camp_v3.jpg"/>
+
+</p>
+
+<blockquote>
+<p>
+    官网: <b>
+    <a href="https://py.101.camp/">py.101.camp</a>
+    </b>
+</p>
+</blockquote>
+
+
+
+<br/>
+任何问题可先进入知识星球<b>(免费)</b>咨询:
+<br/>
+<img alt="FAQ" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-02-28-FAQ101camp-qr.jpeg?imageView2/2/w/360"/>
+
+-->
+
+
+<!----
 
 <hr />
 点击注册~> 获得 <b>100$</b> 体验券:
@@ -475,10 +521,25 @@ print(my_long_text)
     href="https://www.digitalocean.com/?refcode=e7b7cdc66376&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
         src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg"
         alt="DigitalOcean Referral Badge" /></a>
-    
+
+<hr />
+
+
+<p>订阅 substack 体验古早写作:
+    <br />
+<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
+
+    <iframe src="https://zoomquiet.substack.com/embed" width="360" 
+        style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
 </p>
+-->
 
+
+
+
+
+<!--
 <hr />
 
 <p>关注公众号, 持续获得相关各种嗯哼:
@@ -487,11 +548,43 @@ print(my_long_text)
         src="https://ipic.zoomquiet.top/2021-12-27-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg!/fw/420" />
 </p>
 
+    ![](https://ipic.zoomquiet.top/2022-03-31-2020-10-21-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg)
+<blockquote><p>
+    
+<ul>
+    <li>
+<a href="https://mp.weixin.qq.com/s/FqDJWQQcthEuGHAPPEzUKA">
+拙见/ 但得呢喃
+    </a></li>
+
+    <li>
+<a href="https://mp.weixin.qq.com/s/Hvu22TO1HKK2H8rnbPWcig">
+拙见/ 但得呢喃+1
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/w7m2BwIDsntnLl2vCDuP9g">
+拙见/ 但得呢喃+2
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/HXXfikoYfGV4zqf8-oOlgw">
+拙见/ 但得呢喃+3
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/uFdOHc_u9SqHPKhW9qXz7g">
+拙见/ 但得呢喃+4
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/CZUUmuZ2tDZU0gRAyTHz5w">
+拙见/ 如此平庸又如此美好
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/A-javC9noWxEUeTDaJoWiw">
+拙见/ 如何开始弛放?
+    </a></li>
 
 
-
--->
-
+</ul>
+</p></blockquote>
 
 <hr />
 <h3>蟒营®编程思维提高班Python版</h3>
@@ -503,6 +596,19 @@ print(my_long_text)
         <pre>askdama@googlegroups.com</pre>
     </li>
 </ul>
+
+-->
+
+
+<hr />
+<h3>任何问题</h3>
+随时邮件提问可也:
+<pre>askdama@googlegroups.com</pre>
+
+
+<hr />
+<script src="https://liberapay.com/zoomquiet/widgets/button.js"></script>
+<noscript><a href="https://liberapay.com/zoomquiet/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 <!--
     <li>
         + 扫描预约入群, 学员每满 42 人即启动新一期训练营 ;-)

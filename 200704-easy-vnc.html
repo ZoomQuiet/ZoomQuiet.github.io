@@ -132,8 +132,8 @@
 		<a href="https://blog.zoomquiet.io/tag/macos.html">macOS</a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
-    <nav class="toc">
-    <div class="toc">
+
+                <div class="toc">
 <ul>
 <li><a href="#bg">BG.</a></li>
 <li><a href="#problems">problems</a></li>
@@ -143,10 +143,7 @@
 <li><a href="#logging">logging</a></li>
 </ul>
 </div>
-    </nav>
-
-                
-<h2 id="bg">BG.<a class="headerlink" href="#bg" title="Permanent link">¶</a></h2>
+<h2 id="bg">BG.<a class="headerlink" href="#bg" title="Permanent link">&para;</a></h2>
 <p>很早就有这种需求:</p>
 <p>比如当年参与开发浏览器时,
 对应工程是 windows only 的,
@@ -164,7 +161,7 @@
 </ul>
 <p>问题是, 对于私人商用非常敏感,
 用的时间长点儿, 就判定为非法商用直接断掉了.</p>
-<h2 id="problems">problems<a class="headerlink" href="#problems" title="Permanent link">¶</a></h2>
+<h2 id="problems">problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
 <p>然后, 也尝试过各种其它通用类 VNC 工具:</p>
 <ul>
 <li>X2Go 安装失败</li>
@@ -182,7 +179,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="asking">asking<a class="headerlink" href="#asking" title="Permanent link">¶</a></h2>
+<h2 id="asking">asking<a class="headerlink" href="#asking" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>搜索才发现, 这是常见问题...</p>
 </blockquote>
@@ -197,45 +194,53 @@
 </ul>
 <p>也就是说, 俺用俺自己的主机, 就得向厂商老实汇报思想, 否则断你没商量.</p>
 <p>俺为什么要这么贱?</p>
-<h2 id="fixed">fixed<a class="headerlink" href="#fixed" title="Permanent link">¶</a></h2>
+<h2 id="fixed">fixed<a class="headerlink" href="#fixed" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>回归 FLOSS 社区内置方案吧...</p>
 </blockquote>
 <p>安装标准 vnc 服务:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vnc4server<span class="w"> </span>xfce4<span class="w"> </span>xfce4-goodies
 </code></pre></div>
+
 <p>配置访问口令:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>vncpasswd
 </code></pre></div>
+
 <p>指定启动桌面 ~/.vnc/xstartup :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
 startxfce4<span class="w"> </span><span class="p">&amp;</span>
 </code></pre></div></td></tr></table></div>
+
 <p>并启用配置:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>~/.vnc/xstartup
 </code></pre></div>
+
 <p>启动服务:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>vnc4server
 </code></pre></div>
+
 <p>检验状态:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>ss<span class="w"> </span>-ltn
 ...
 LISTEN<span class="w">      </span><span class="m">0</span><span class="w">      </span><span class="m">5</span><span class="w">            </span>*:5901<span class="w">                     </span>*:*
 </code></pre></div>
+
 <blockquote>
 <p>注意: 如果有防火墙的话, 要打开 5901 的访问</p>
 </blockquote>
 <p>macOS 本地代理端口:</p>
 <div class="highlight"><pre><span></span><code>༄  ssh -L 5901:127.0.0.1:5901 -C -N -l &lt;主机用户&gt; &lt;主机IP&gt;
 </code></pre></div>
+
 <p>(也就是将 Linux 主机上的 :5901 用 SSH 工具映射为本地 :5901)</p>
-<p><img alt="连接" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.37.01.jpg"/></p>
+<p><img alt="连接" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.37.01.jpg"></p>
 <p>使用本地端口:</p>
 <div class="highlight"><pre><span></span><code>vnc://localhost:5901
 </code></pre></div>
+
 <p><strong>Bazinga</strong></p>
-<p><img alt="win7vbox" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.39.36.jpg"/></p>
+<p><img alt="win7vbox" src="http://ydlj.zoomquiet.top/ipic/2020-07-25-ScreenShot%202020-07-25%2010.39.36.jpg"></p>
 <ul>
 <li>Ubuntu 中安装 vncserver 以及 xfce4 桌面</li>
 <li>Ubuntu 中启动 vncserver</li>
@@ -248,7 +253,7 @@ LISTEN<span class="w">      </span><span class="m">0</span><span class="w">     
 </li>
 </ul>
 <p>而且速度比之前各种 VNC 工具要快, 充分发挥了本地网络能力.</p>
-<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">¶</a></h2>
+<h2 id="refer">refer.<a class="headerlink" href="#refer" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://linuxconfig.org/vnc-server-on-ubuntu-18-04-bionic-beaver-linux">VNC server on Ubuntu 18.04 Bionic Beaver Linux - LinuxConfig.org</a></li>
 <li><a href="https://cat.pdx.edu/platforms/mac/remote-access/vnc-to-linux/">VNC from Mac to Linux – Computer Action Team</a></li>
@@ -257,7 +262,7 @@ LISTEN<span class="w">      </span><span class="m">0</span><span class="w">     
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-14-04">How to Install and Configure VNC on Ubuntu 14.04 | DigitalOcean</a></li>
 <li>...</li>
 </ul>
-<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
+<h2 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
 <ul>
 <li>200725 zoomquiet pub</li>
 <li>200704 zoomquiet 解决</li>
@@ -289,64 +294,110 @@ LISTEN<span class="w">      </span><span class="m">0</span><span class="w">     
 <h4><a href="https://www.youtube.com/@Chaos42DAMA">大妈的多重宇宙 - <b>YouTube</b></a></h4>
 全新自媒体系列...科学幻想,读书,说故事...
 
-
-
-<hr />
-
-
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-  <input type="hidden" name="cmd" value="_s-xclick" />
-  <input type="hidden" name="hosted_button_id" value="XFUEVEQ7WW6MA" />
-  <table>
-    <tr>
-      <td>
-        <input type="hidden" name="on0" value="支持一下"/>
-        支持一下
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <select name="os0">
-          <option value="4.2">
-            4.2
-          </option>
-          <option value="14.2">
-            14.2
-          </option>
-          <option value="24.2">
-            24.2
-          </option>
-          <option value="42">
-            42
-          </option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="hidden" name="on1" value="额外理由:"/>
-        额外理由:
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="os1" maxLength="200" />
-      </td>
-    </tr>
-  </table>
-  <input type="hidden" name="currency_code" value="USD" />
-  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="有了PayPal，您可以更安全便捷地在线付款！" alt="立即购买" />
-</form>
-
-
 <!--
-
-<p>订阅 substack 体验古早写作:
-    <br />
-<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
-
 <hr />
+<h4>自怼圈/年度番新</h4>
+<img alt="DU22.8" src="https://ipic.zoomquiet.top/2022-08-19-220819DU22.8.jpeg!/fw/420" />
+<br />
+<a href="https://du.101.camp/about/">关于 ~ DebugUself with DAMA ;-)</a>
+
+![](https://ipic.zoomquiet.top/2022-03-31-220331DU6y_zip.jpg)
+<h3>蟒营®编程思维提高班 Python版/<b>第14期</b> 正在报名</h3>
+<h4>精品小班/ 永久答疑</h4>
+
+<blockquote><p>
+    
+<ul>
+    <li>
+    开始报名: <b>2020.10.27</b> </li>
+    <li>
+    报名截止: <b>2020.11.22</b> </li>
+    <li>
+    正式开课: <b>2020.11.29</b> </li>
+    <li>
+    课程结束: <b>2021.01.10</b> </li>
+
+    <li>
+    介绍文章:  
+    <ul>
+        <li>
+<a href="https://blog.101.camp/nc/200811-ZoomQuiet-wtf-coding-mind/">蟒营®/ 为什么编程思维不用学就有?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200816-ZoomQuiet-wtf-online-course/">拙见/ 什么是网课?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200908-ZoomQuiet-fake-learnning/">蟒营®/ 伪编程学习</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200915-ZoomQuiet-3not-see/">蟒营®/ 视而不见</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200917-ZoomQuiet-3not-ask/">蟒营®/ 惑而不问</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200918-ZoomQuiet-3not-learn/">蟒营®/ 思而不学</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200630-ZoomQuiet-10py-wtf-can-coding/">蟒营®/ 到底如何算"会编程"?</a>
+        </li>
+
+        <li>
+<a href="https://blog.101.camp/nc/200703-ZoomQuiet-10py-wtfc-0/">蟒营®/ 到底改变了什么?</a>
+        </li>
+
+        <li>
+...<a href="https://blog.101.camp/nc/">NC: 嗯哼蟒营 — 蟒营™ 怂怼录</a>
+        </li>
+    </ul>
+    </li>
+
+
+</ul>
+
+<b>扫描</b>报名:
+
+<a href="https://jinshuju.net/f/Mv5nGU">
+<img alt="101camp14py" 
+    src="http://101.zoomquiet.top/res/14py/%E8%9F%92%E8%90%A5%C2%AE%E7%BC%96%E7%A8%8B%E6%80%9D%E7%BB%B4%E6%8F%90%E9%AB%98%E7%8F%AD_14%E6%9C%9F_%E6%8A%A5%E5%90%8D%E8%A1%A8_256.png"/>
+</a>
+</p></blockquote>
+
+
+<h2>蟒营®式 原创课程</h2>
+<p>
+
+<img alt="theory101camp_v3" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-10-04-theory101camp_v3.jpg"/>
+
+</p>
+
+<blockquote>
+<p>
+    官网: <b>
+    <a href="https://py.101.camp/">py.101.camp</a>
+    </b>
+</p>
+</blockquote>
+
+
+
+<br/>
+任何问题可先进入知识星球<b>(免费)</b>咨询:
+<br/>
+<img alt="FAQ" 
+    src="http://ydlj.zoomquiet.top/ipic/2020-02-28-FAQ101camp-qr.jpeg?imageView2/2/w/360"/>
+
+-->
+
+
+<!----
 
 <hr />
 点击注册~> 获得 <b>100$</b> 体验券:
@@ -354,10 +405,25 @@ LISTEN<span class="w">      </span><span class="m">0</span><span class="w">     
     href="https://www.digitalocean.com/?refcode=e7b7cdc66376&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
         src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg"
         alt="DigitalOcean Referral Badge" /></a>
-    
+
+<hr />
+
+
+<p>订阅 substack 体验古早写作:
+    <br />
+<a href="https://zoomquiet.substack.com/p/pycoder587">Zoom.Quiet’s Chaos42 | Substack</a>
+
+    <iframe src="https://zoomquiet.substack.com/embed" width="360" 
+        style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
 </p>
+-->
 
+
+
+
+
+<!--
 <hr />
 
 <p>关注公众号, 持续获得相关各种嗯哼:
@@ -366,11 +432,43 @@ LISTEN<span class="w">      </span><span class="m">0</span><span class="w">     
         src="https://ipic.zoomquiet.top/2021-12-27-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg!/fw/420" />
 </p>
 
+    ![](https://ipic.zoomquiet.top/2022-03-31-2020-10-21-zoomquiet-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88580.jpg)
+<blockquote><p>
+    
+<ul>
+    <li>
+<a href="https://mp.weixin.qq.com/s/FqDJWQQcthEuGHAPPEzUKA">
+拙见/ 但得呢喃
+    </a></li>
+
+    <li>
+<a href="https://mp.weixin.qq.com/s/Hvu22TO1HKK2H8rnbPWcig">
+拙见/ 但得呢喃+1
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/w7m2BwIDsntnLl2vCDuP9g">
+拙见/ 但得呢喃+2
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/HXXfikoYfGV4zqf8-oOlgw">
+拙见/ 但得呢喃+3
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/uFdOHc_u9SqHPKhW9qXz7g">
+拙见/ 但得呢喃+4
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/CZUUmuZ2tDZU0gRAyTHz5w">
+拙见/ 如此平庸又如此美好
+    </a></li>
+    <li>
+<a href="https://mp.weixin.qq.com/s/A-javC9noWxEUeTDaJoWiw">
+拙见/ 如何开始弛放?
+    </a></li>
 
 
-
--->
-
+</ul>
+</p></blockquote>
 
 <hr />
 <h3>蟒营®编程思维提高班Python版</h3>
@@ -382,6 +480,19 @@ LISTEN<span class="w">      </span><span class="m">0</span><span class="w">     
         <pre>askdama@googlegroups.com</pre>
     </li>
 </ul>
+
+-->
+
+
+<hr />
+<h3>任何问题</h3>
+随时邮件提问可也:
+<pre>askdama@googlegroups.com</pre>
+
+
+<hr />
+<script src="https://liberapay.com/zoomquiet/widgets/button.js"></script>
+<noscript><a href="https://liberapay.com/zoomquiet/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 <!--
     <li>
         + 扫描预约入群, 学员每满 42 人即启动新一期训练营 ;-)

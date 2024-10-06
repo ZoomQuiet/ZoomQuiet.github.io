@@ -96,13 +96,26 @@
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/lazy_recursion_with_generators.html">带生成器的惰性递归</a></h2>
-                <div class="summary">
-<h2 id="background">background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
-<p>原文: <a href="https://tushar.lol/post/recursive-generators/">Lazy recursion, with generators</a></p>
-<p>来自 <a href="https://weekly.pychina.org/issue/issue-569.html">蠎周刊 PyCoder 569 ~蠎周刊 ~汇集全球蠎事儿 ;-)</a> 的推荐</p>
-<h2 id="_1">快译<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>此文, 准备研究 Python 的生成器,
-并用之来也又和并递归 …</p>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#background">background</a></li>
+<li><a href="#_1">快译</a><ul>
+<li><a href="#_2">当代码调用自己时</a></li>
+<li><a href="#_3">何必呢?</a></li>
+<li><a href="#_4">编程时间</a></li>
+<li><a href="#_5">递归和集合</a></li>
+<li><a href="#_6">问题来了</a></li>
+<li><a href="#_7">解决方案</a></li>
+<li><a href="#yield-from">奖励: yield from</a></li>
+<li><a href="#_8">脚注</a></li>
+</ul>
+</li>
+<li><a href="#refer">refer.</a></li>
+<li><a href="#-understanding-all-of-python-through-its-builtins">- Understanding all of Python, through its builtins</a></li>
+</ul>
+</div>
+<h2 id="background">background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>原文: <a href="https://tushar.lol/post/recursive-generators/">Lazy recursion …</a></p>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/lazy_recursion_with_generators.html">more ...</a>
                 </div>
             </article>
@@ -116,39 +129,47 @@
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/nedbat-loop-iter.html">天然样循环</a></h2>
-                <div class="summary">
-<p>来自 @nedbat 的分享:</p>
-<p><a href="http://nedbatchelder.com/text/iter.html">Ned Batchelder: Loop Like A Native</a></p>
-<h2 id="_1">迭代基础<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>C样:</p>
-<div class="highlight"><pre><span></span><code><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
-<span class="k">while</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="err">:</span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span>
-<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
-</code></pre></div>
-<p>偏门:</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span><span class="err">:</span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="n">v</span>
-</code></pre></div>
-<p>蠎样:</p>
-<div class="highlight"><pre><span></span><code>for v in my_list:
-    print …</code></pre></div>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#_1">迭代基础</a><ul>
+<li><a href="#list-elements">list ⇒ elements</a></li>
+<li><a href="#strings-characters">Strings ⇒ characters</a></li>
+<li><a href="#dicts-keys">Dicts ⇒ keys</a></li>
+<li><a href="#files-lines">Files ⇒ lines</a></li>
+<li><a href="#_2">标准库中有趣的迭代</a></li>
+<li><a href="#_3">其它的迭代形式</a></li>
+</ul>
+</li>
+<li><a href="#_4">基本设问</a><ul>
+<li><a href="#q">Q: 如何获得索引号?</a><ul>
+<li><a href="#enumerate">enumerate() 制造好用的值对</a></li>
+<li><a href="#vs">迭代 …</a></li></ul></li></ul></li></ul></div>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/nedbat-loop-iter.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://blog.zoomquiet.io/how2collaborate-with-leo.html">如何在 Leo 中协作?!</a></h2>
-                <div class="summary">
-<h1 id="leo">Leo?<a class="headerlink" href="#leo" title="Permanent link">¶</a></h1>
+                <div class="summary"><div class="toc">
+<ul>
+<li><a href="#leo">Leo?</a><ul>
+<li><a href="#literate-programming">Literate Programming</a></li>
+<li><a href="#collaborate-problem">collaborate problem</a></li>
+<li><a href="#terror-story">terror story</a></li>
+<li><a href="#clean-all">clean all</a></li>
+<li><a href="#historic">historic</a></li>
+</ul>
+</li>
+<li><a href="#summary">summary</a></li>
+<li><a href="#_1">是也乎</a></li>
+</ul>
+</div>
+<h1 id="leo">Leo?<a class="headerlink" href="#leo" title="Permanent link">&para;</a></h1>
 <p>~ 嗯哼</p>
 <p>研究什么是 Leo ? 非要一句话说清查的话,只能是:</p>
 <ul>
 <li><code>纯 Python 构建的文学化编辑环境</code><ul>
-<li>好吧, 那什么是 <code>文学化编辑</code> ?</li>
-<li>这事儿, 俺就 …</li></ul></li></ul>
+<li>好吧 …</li></ul></li></ul>
                     <a class="btn btn-default btn-xs" href="https://blog.zoomquiet.io/how2collaborate-with-leo.html">more ...</a>
                 </div>
             </article>
